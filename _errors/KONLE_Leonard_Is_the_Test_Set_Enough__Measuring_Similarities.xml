@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KONLE_Leonard_Is_the_Test_Set_Enough__Measuring_Similarities">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Is the Test Set Enough? Measuring Similarities of German Poetry with LLMs.</title>
+                <author>
+                    <persName>
+                        <surname>Kröncke</surname>
+                        <forename>Merten</forename>
+                    </persName>
+                    <affiliation>Georg-August-Universität Göttingen</affiliation>
+                    <email>merten.kroencke@uni-goettingen.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Konle</surname>
+                        <forename>Leonard</forename>
+                    </persName>
+                    <affiliation>Julius-Maximilians-Universität Würzburg</affiliation>
+                    <email>leonardkonle@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Jannidis</surname>
+                        <forename>Fotis</forename>
+                    </persName>
+                    <affiliation>Julius-Maximilians-Universität Würzburg</affiliation>
+                    <email>fotis.jannidis@uni-wuerzburg.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Winko</surname>
+                        <forename>Simone</forename>
+                    </persName>
+                    <affiliation>Georg-August-Universität Göttingen</affiliation>
+                    <email>simone.winko@phil.uni-goettingen.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-28T13:49:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>LLM</term>
+                    <term>Poetry</term>
+                    <term>Similarity</term>
+                    <term>Annotation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>Computer science</term>
+                    <term>Humanities computing</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Abstract</head>
+                <p style="text-align: left; ">We investigate the effectiveness of LLMs in evaluating text similarity, a fundamental task in CH research. We study the similarity of German poems from different perspectives, such as content or form. Our results show that the most recent commercial flagship models are comparable to or better than supervised models (zeroshot, chain of thought).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">For years, automating tasks in digital humanities (DH) and computational literary studies (CLS) has often depended on fine-tuning models using extensive training data provided by manual annotation. The arrival of prompt-guided large language models (LLMs) like GPT-4, however, has the potential to transform this paradigm entirely. The crucial question is whether prompt-guided models can match or even surpass the performance of fine-tuned models while requiring dramatically less training data.</p>
+                <p style="text-align: left; ">Given the recent advances, it is not surprising that research on the performance of prompt-guided LLMs in various Natural Language Processing (NLP), DH and CLS tasks is rapidly expanding (e.g., 
+                    <hi rend="Hyperlink">Rebora et al. 2023; Bamman et al. 2024; Vatsal and Dubey 2024)</hi>. Our study aims to contribute to this body of work. We focus on a task that should be particularly informative: text similarity. More specifically, we investigate how well prompt-guided models are able to judge the similarity of texts - in our case, German-language poems from the 19th and 20th centuries - across multiple dimensions: content, form, style, thematized emotion, and overall similarity. The concept of similarity is of great importance to much NLP, DH and CLS research (cf. 
+                    <hi rend="Hyperlink">Hatzel et al. 2023)</hi>, and distinguishing between textual dimensions allows for a nuanced comparison of model performance. Some of our results will provide a deeper understanding of how these models engage with literary texts in general.
+                </p>
+                <p style="text-align: left; ">We build on a previous paper (
+                    <hi rend="Hyperlink">Ehrmanntraut et al. 2022)</hi> that analyzed text similarity using pre-trained or fine-tuned models based on text embeddings, but not prompt-guided LLMs. Here, we compare the performance of the best models from Ehrmanntraut et al. (2022) with newer, prompt-guided models and test whether they achieve equal or better performance.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Resources</head>
+                <p style="text-align: left; ">The corpus and annotation scheme described below are largely unchanged from Ehrmanntraut et al. (2022). Therefore, the description will be very brief, as a much more thorough discussion is already available in that paper.</p>
+                <p style="text-align: left; ">Our corpus comprises over 6,000 German-language poems from 1850 to 1920. The poems are drawn from 20 poetry anthologies published during the period under study, each curated by its editors to showcase what they regarded as the "best," "most important," or "most representative" works by contemporary poets (cf. 
+                    <hi rend="Hyperlink">Winko et al. 2022</hi>a, 
+                    <hi rend="Hyperlink">Winko et al. 2022</hi>b).
+                </p>
+                <p style="text-align: left; ">We performed a manual annotation task in which annotators examined three poems simultaneously (left, middle, and right) and judged whether the middle poem was more similar to the left than to the right, more similar to the right than to the left, or equally (un)similar to both. For each poem triple, annotators assessed similarity across five dimensions: content, emotion, style, form, and overall similarity. We annotated 780 new poem triples in addition to the 470 poem triples from Ehrmanntraut et al. (2022) consisting of 1451 individual poems. Each triple was annotated by at least two annotators. The inter-annotator-agreement, measured with Krippendorff’s alpha, is 0.57 for content, 0.66 for form, 0.34 for style, 0.43 for emotion, and 0.53 for overall. While the agreement is far from perfect, it reflects the difficulty of the task, which requires complex analysis and comparison of multiple poems simultaneously. After their individual annotations, annotators engaged in discussions to resolve their disagreements and created consensus annotations. We use a subset<ref n="1" target="ftn1"/> of the consensus annotations to evaluate the performance of the models we add in this paper (see Table 1).
+                </p>
+                <p style="text-align: left; ">Table 1: Evaluation dataset statistics.</p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Dimension</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Content</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Form</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Style</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Emotion</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Overall</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Number of triples</cell>
+                        <cell style="text-align: left;" rend="DH-Default">240</cell>
+                        <cell style="text-align: left;" rend="DH-Default">240</cell>
+                        <cell style="text-align: left;" rend="DH-Default">240</cell>
+                        <cell style="text-align: left;" rend="DH-Default">240</cell>
+                        <cell style="text-align: left;" rend="DH-Default">240</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Decision for “right” or “left” poem</cell>
+                        <cell style="text-align: left;" rend="DH-Default">140</cell>
+                        <cell style="text-align: left;" rend="DH-Default">167</cell>
+                        <cell style="text-align: left;" rend="DH-Default">102</cell>
+                        <cell style="text-align: left;" rend="DH-Default">142</cell>
+                        <cell style="text-align: left;" rend="DH-Default">154</cell>
+                    </row>
+                </table>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methods</head>
+                <p style="text-align: left; ">We want to reflect the current state of the art as closely as possible, but due to limited resources, we cannot test all available models. Our selection includes common models in three tiers from OpenAI (gpt-4o-mini, gpt-4o, gpt-o1-preview) and Anthropic (haiku-3.5, sonnet-3.5, opus-3). Additionally, we test seven freely available models (see table 2). Since the experiments in Ehrmanntraut et al. (2022) evaluate text embeddings, we decided to also include OpenAIs text-embedding-3-large.</p>
+                <p style="text-align: left; ">To reduce computational costs we do not test every combination of prompt design and model. Instead we formulate a basic prompt, that just briefly explains the task, and see which model performs best. We then try to improve the performance of only the best model by editing the prompt.<ref n="2" target="ftn2"/> We test four different strategies:
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Concept:</hi> Instead of just giving the names of the similarity dimension, we give a brief explanation, for example that "form" consists of features such as rhyme, meter, and stanza structure.
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Chain-of-Thought (CoT):</hi> The model's decision-making process is specified by a chain of instructions and should be written into the answer. Our prompt tells the model to analyze every poem individually, write a comparison in each similarity dimension and then decide what is the correct answer (see Wei et al. 2023).
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Few-Shot:</hi> The prompt includes 8 triples and their correct similarity judgement (see Brown et al. 2020).
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="bold">System Prompt:</hi> The default system prompt (e.g. “You are a helpful ai assistant”) is replaced by “You are a literary scholar working on a research project on German poetry” (Zheng et al. 2024).
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Ensemble:</hi> We collect answers from different models and use their majority vote as prediction.
+                </p>
+                <p style="text-align: left; ">We evaluate the models using balanced accuracy (the average of recall for each class). This metric was also used in Ehrmanntraut et al. (2022). In order to compare the models’ performance with that of the annotators, we calculate the accuracy of individual annotations with respect to the consensus annotation. We refer to this value as human performance.<ref n="3" target="ftn3"/> 
+                </p>
+                <p style="text-align: left; ">We start with a binary classification task, where the models are only prompted to decide whether the middle poem is more similar to the right or to the left poem, excluding the “equal” option. Most of the results of Ehrmenntraut et al. (2022) also focus on binary classification. We evaluate the results using only the "right" or "left" annotations in the consensus dataset. Later, we switch to the three-class setup and ask the models to answer either "left", "right", or "equal".</p>
+                <p style="text-align: left; ">Table 2: Performance in balanced accuracy on the consensus dataset (base prompt, two classes). We tested the models marked with * after the review phase and decided to add the results to this abstract.</p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Model</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Content</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Form</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Style</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Emotion</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Overall</cell>
+                        <cell style="text-align: left;" rend="DH-Default">MEAN</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Support</cell>
+                        <cell style="text-align: left;" rend="DH-Default">140</cell>
+                        <cell style="text-align: left;" rend="DH-Default">167</cell>
+                        <cell style="text-align: left;" rend="DH-Default">102</cell>
+                        <cell style="text-align: left;" rend="DH-Default">142</cell>
+                        <cell style="text-align: left;" rend="DH-Default">154</cell>
+                        <cell style="text-align: left;" rend="DH-Default">-</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Human</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.97</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.97</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.94</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.95</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.97</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.96</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Ehrmanntraut et al. (2022) - unsupervised<ref n="4" target="ftn4"/>
+                        </cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.71</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.64</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.71</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.70</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.73</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.70</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Ehrmanntraut et al. (2022) - supervised</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.81</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.68</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.79</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.76</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.79</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.77</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default background-color(D9D9D9)"/>
+                        <cell style="text-align: left;" rend="DH-Default background-color(D9D9D9)"/>
+                        <cell style="text-align: left;" rend="DH-Default background-color(D9D9D9)"/>
+                        <cell style="text-align: left;" rend="DH-Default background-color(D9D9D9)"/>
+                        <cell style="text-align: left;" rend="DH-Default background-color(D9D9D9)"/>
+                        <cell style="text-align: left;" rend="DH-Default background-color(D9D9D9)"/>
+                        <cell style="text-align: left;" rend="DH-Default background-color(D9D9D9)"/>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">gpt-o3*</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.86</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.88</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.86</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.76</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.88</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.85</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">gemini-2.5-flash-thinking*</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.85</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.83</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.88</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.78</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.88</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.85</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">gpt-o4-mini*</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.84</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.79</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.88</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.73</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.81</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.81</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">gemini-2.5-pro*</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.84</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.84</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.78</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.74</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.82</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.80</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">gpt-o1</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.83</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.79</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.77</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.76</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.83</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.80</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Sonnet-3.5</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.83</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.71</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.78</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.76</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.87</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.80</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Sonnet-3.7*</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.83</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.70</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.80</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.75</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.85</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.79</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">gemini-2.5-flash*</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.81</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.68</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.75</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.77</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.84</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.77</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">gpt-4.1*</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.84</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.65</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.78</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.75</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.84</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.77</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">openAI text-embedding-3-large</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.80</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.57</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.72</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.75</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.80</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.73</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">gpt-4o</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.75</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.67</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.77</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.68</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.78</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.73</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Haiku-3.5</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.7</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.61</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.72</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.68</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.74</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.69</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Opus-3</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.75</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.59</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.64</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.68</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.77</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.69</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Aya-expanse-32B</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.76</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.50</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.51</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.70</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.77</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.65</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Llama-3.1-70B-instruct</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.69</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.55</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.64</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.64</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.71</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.65</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Llama-3-SauerkrautLM-70b-Instruct</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.65</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.61</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.68</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.54</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.67</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.63</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">gpt-4o-mini</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.6</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.5</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.52</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.53</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.66</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.56</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Phi-3-medium-4k-instruct</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.53</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.50</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.54</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.49</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.54</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.52</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Mixtral-8x7B-Instruct-v0.1</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.60</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.47</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.47</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.51</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.57</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.52</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Teuken-7B-instruct-research-v0.4</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.50</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.50</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.51</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.50</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.50</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.50</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Gemma-2-27b-it</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.50</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.50</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.50</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.50</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.50</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.50</cell>
+                    </row>
+                </table>
+                <p style="text-align: left; ">Table 2 shows the performance of all models in the binary classification task prompted with the “base prompt”. The top-performing models, gpt-o1 and sonnet-3.5 (from our first line of experiments, see table caption), achieved the highest mean scores of 0.80 surpassing the supervised approach in Ehrmanntraut et al. (2022)<ref n="5" target="ftn5"/> without seeing any training data or detailed explanation of the task. The open source LLMs (aya, llama, Teuken, Phi, Gemma and Mixtral) are unfortunately not competitive. Same applies to cheaper, lightweight models (gpt-4o-mini, haiku-3.5). OpenAIs text-embeddings rank between the unsupervised and the supervised approach in Ehrmanntraut et al. (2022).
+                </p>
+                <p style="text-align: left; ">Table 3: Performance of sonnet-3.5 in balanced accuracy on the consensus dataset (two classes).</p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Prompt</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Content</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Form</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Style</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Emotion</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Overall</cell>
+                        <cell style="text-align: left;" rend="DH-Default">MEAN</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Base</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.83</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.71</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.78</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.76</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.87</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.80</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">CoT</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.88</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.83</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.80</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.76</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.86</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.83</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Concept</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.82</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.76</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.75</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.73</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.88</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.80</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Few-Shot</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.80</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.69</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.75</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.73</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.84</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.76</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">SysPrompt</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.83</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.67</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.72</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.76</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.85</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.77</cell>
+                    </row>
+                </table>
+                <p style="text-align: left; ">Table 3 compares the performance of prompt enhancing strategies to the results obtained using the base prompt.<ref n="6" target="ftn6"/> Chain-of-Thought prompting increases performance. Detailed explanations of the similarity dimensions have little effect, with the exception of “form”, and Few-Shot prompting decreases performance across the board.
+                </p>
+                <p style="text-align: left; ">Table 4: Performance in balanced accuracy on the consensus dataset (three classes).</p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Model + Prompt</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Content</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Form</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Style</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Emotion</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Overall</cell>
+                        <cell style="text-align: left;" rend="DH-Default">MEAN</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Human</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.80</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.83</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.75</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.75</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.76</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.78</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">sonnet-3.5 + Base prompt</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.60</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.47</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.59</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.50</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.58</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.55</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">sonnet-3.5 + CoT prompt</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.57</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.56</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.60</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.56</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.59</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.58</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">sonnet-3.5 + Reinforce Equal prompt</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.60</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.45</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.44</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.56</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.63</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.54</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Ensemble (sonnet, gpt-o1, gpt-4o)</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.60</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.44</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.39</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.53</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.64</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.52</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Ensemble (sonnets from table 3)</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.60</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.53</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.53</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.52</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.62</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.54</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">openAI text-embedding-3-large</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.52</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.38</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.48</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.50</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.52</cell>
+                        <cell style="text-align: left;" rend="DH-Default">0.48</cell>
+                    </row>
+                </table>
+                <p style="text-align: left; ">Table 4 shows the performance of various prompt/model combinations for the three-class task. The performance is a lot worse than for the binary task. Notably, the models answer “equal” much less often than human annotators (consensus dataset: 42% “equal”, sonnet-3.5 + Base prompt: 13% “equal”), unless prompted to consider this option more often (sonnet-3.5 + Reinforce Equal prompt: 44% “equal”), which does not, however, improve average performance. The ensemble methods perform slightly better than the base prompt on the "overall" dimension, but no better on the mean.</p>
+                <figure>
+                    <graphic n="1001" width="13.043958333333334cm" height="10.63823611111111cm" url="/tmp/tmp1jykbxyn/Pictures/28958ccca70ab3d76103fd4b9800586a.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 1: Pearson correlation of predicted similarity dimensions and overall similarity.</p>
+                <p style="text-align: left; ">We found that the improvement of Sonnet-3.5 over the 2022 results is highly correlated with the inter-annotator agreement (r=0.92). Therefore, in the following, we investigate how the behavior of the models matches human behavior.</p>
+                <p style="text-align: left; ">Figure 1 shows how strongly the model responses for each similarity dimension correlate with the responses for the overall dimension. In most cases, content correlates most strongly, followed by emotion, while style and form correlate less strongly, but still positively. The models resemble human judgement from this perspective.</p>
+                <figure>
+                    <graphic n="1002" width="11.456458333333334cm" height="11.284480555555556cm" url="/tmp/tmp1jykbxyn/Pictures/28958ccca70ab3d76103fd4b9800586a.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 2: Balanced accuracy scores on subset of poem triples (n=35) where expert and majority annotation disagree. A1-A6: Student annotators.</p>
+                <p style="text-align: left; ">We want to investigate if the judgement of the LLMs resemble the perspective of an expert or are more similar to “crowd-wisdom”. Therefore we look at cases, combining all similarity dimensions, where the majority of annotators is in conflict with an expert reader of poetry (a professor of German-language literature). We find that the commercial models gpt-o1, gpt-4o and sonnet-3.5 are leaning towards the majority vote, while aya-expanse-32B is more in line with the expert (see Fig. 2).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Discussion</head>
+                <p style="text-align: left; ">The main finding of our study is that prompt-guided LLMs without training data performed as well or better on a complex CLS task (text similarity) than fine-tuned models from 2022 trained with extensive manual annotations. Our results show that prompt-guided LLMs can be used productively in CLS.</p>
+                <p style="text-align: left; ">Most models perform best on content or overall, and worst on form. This indicates for us that the models are more capable of semantic and less capable of non-semantic analysis with respect to CLS tasks. Also, the fact that the "overall" dimension correlates most strongly with the "content" dimension suggests that the models' overall text perception focuses primarily on content (same as our annotators). Nevertheless, at least for the best performing models, style and form are still recognized relatively well.</p>
+                <p style="text-align: left; ">While the performance improvement from CoT prompting was expected, the fact that concept, few-shot, and system prompts did not improve performance (with the exception of form), and in some cases decreased it, is surprising. We can only speculate that the increasing complexity and/or length of the prompt plays a role.</p>
+                <p style="text-align: left; ">The performance on the three-class classification task is far from great. A possible reason could be that the models do not interpret the notion of 'equal (un)similarity' in the same way as the annotators. The fact that the models answered 'equal' much less often than humans may mean that they prefer to give 'decisive' answers, unless explicitly prompted to do otherwise.</p>
+                <p style="text-align: left; ">The fact that the best-performing models align more closely with the majority vote than with expert judgment suggests that the models reflect a perspective on poetry distinct from that of the highest level of domain expertise.</p>
+                <p style="text-align: left; ">As future work, we plan to extend the similarity task to different genres, e.g. prose and drama. We also think that it is worthwhile to analyze the reasoning output of the models given in the CoT responses.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                         The evaluation of the complete dataset with all models exceeds our financial resources.
+                    </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                         All prompts, code, and data can be found here: https://github.com/LeKonArD/DH25_LLM_poemsim. Since the prompts are quite long, we cannot quote them in full in the main text.
+                    </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                         This leads to a slight overestimation of human performance, since the annotators are involved in creating the consensus.
+                    </note>
+<note rend="footnote text" xml:id="ftn4" n="4">
+                                 The results are only comparable to a limited extent, as we do not use the entire dataset from Ehrmanntraut et al. (2022) for evaluation for financial reasons and we rely on consensus data only.
+                            </note>
+<note rend="footnote text" xml:id="ftn5" n="5">
+                         The best performing model in Ehrmanntraut et al. (2022), shown in Table 2, was paraphrase-XLM-R.
+                    </note>
+<note rend="footnote text" xml:id="ftn6" n="6">
+                         The following experiments are limited to sonnet-3.5, since this model was evaluated as favorably as gpt-o1, but is considerably cheaper and faster.
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Bamman, David, Kent K. Chang, Li Lucy, und Naitian Zhou. 2024. „On Classification with Large Language Models in Cultural Analytics“. In Proceedings of the Computational Humanities Research Conference 2024, 494–527. Aarhus. https://ceur-ws.org/Vol-3834/paper119.pdf.</bibl>
+                    <bibl style="text-align: left; ">Brown, Tom B., Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, u. a. 2020. „Language Models are Few-Shot Learners“. arXiv. https://doi.org/10.48550/arXiv.2005.14165.</bibl>
+                    <bibl style="text-align: left; ">Ehrmanntraut, Anton, Thora Hagen, Fotis Jannidis, Leonard Konle, Merten Kröncke, und Simone Winko. 2022. „Modeling and measuring short text similarities: On the multi-dimensional differences between German poetry of realism and modernism“, Journal of Computational Literary Studies, 1 (1).</bibl>
+                    <bibl style="text-align: left; ">Hatzel, Hans Ole, Fynn Petersen-Frey, Tim Fischer, und Chris Biemann. 2023. „Dimensions of Similarity: Towards Interpretable Dimension-Based Text Similarity“. In Frontiers in Artificial Intelligence and Applications, herausgegeben von Kobi Gal, Ann Nowé, Grzegorz J. Nalepa, Roy Fairstein, und Roxana Rădulescu. IOS Press. https://doi.org/10.3233/FAIA230372.</bibl>
+                    <bibl style="text-align: left; ">Rebora, Simone, Marina Lehmann, Anne Heumann, Wei Ding, und Gerhard Lauer. 2023. „Comparing ChatGPT to Human Raters and Sentiment Analysis Tools for German Children’s Literature“. In Proceedings of the Computational Humanities Research Conference 2023. Paris, France. https://ceur-ws.org/Vol-3558/paper3340.pdf.</bibl>
+                    <bibl style="text-align: left; ">Vatsal, Shubham, und Harsh Dubey. 2024. „A Survey of Prompt Engineering Methods in Large Language Models for Different NLP Tasks“. arXiv. https://doi.org/10.48550/arXiv.2407.12994.</bibl>
+                    <bibl style="text-align: left; ">Wei, Jason, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia, Ed Chi, Quoc Le, und Denny Zhou. 2023. „Chain-of-Thought Prompting Elicits Reasoning in Large Language Models“. arXiv. https://doi.org/10.48550/arXiv.2201.11903.</bibl>
+                    <bibl style="text-align: left; ">Winko, Simone, Leonard Konle, Merten Kröncke, und Fotis Jannidis. 2022a. „Korpusbeschreibung der Lyrikanthologien 1850-1910“. https://doi.org/10.5281/zenodo.6053972.</bibl>
+                    <bibl style="text-align: left; ">Winko, Simone, Leonard Konle, Merten Kröncke, und Fotis Jannidis. 2022b. „Lyrik-Anthologien 1850-1910“, Februar. https://doi.org/10.5281/ZENODO.6053952.</bibl>
+                    <bibl style="text-align: left; ">Zheng, Mingqian, Jiaxin Pei, Lajanugen Logeswaran, Moontae Lee, und David Jurgens. 2024. „When ‚A Helpful Assistant‘ Is Not Really Helpful: Personas in System Prompts Do Not Improve Performances of Large Language Models“. arXiv. https://doi.org/10.48550/arXiv.2311.10054.</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

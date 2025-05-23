@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KOV_CS_Tam_s_Leave_n_out__Formulaic_Language_Detection_in_Me">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Leave’n out: Formulaic Language Detection in Medieval Charters with FLAME</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Kovács</surname>
+                        <forename>Tamás</forename>
+                    </persName>
+                    <affiliation>Universität Graz, Austria</affiliation>
+                    <email>tamas.kovacs@uni-graz.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Nicolaou</surname>
+                        <forename>Anguelos</forename>
+                    </persName>
+                    <affiliation>Universität Graz, Austria</affiliation>
+                    <email>anguelos.nicolaou@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-22T10:38:51.065682828</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>formulaic language detection</term>
+                    <term>medieval charters</term>
+                    <term>computational methods</term>
+                    <term>text similarity analysis</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>natural language processing</term>
+                    <term>text mining and analysis</term>
+                    <term>Cultural studies</term>
+                    <term>History</term>
+                    <term>Informatics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Medieval charters relied heavily on formulaic language, pre-established templates for legal actions representing “
+                <hi rend="italic">conventionalised pairings of form and function</hi>” (Dabrowska, 2001, Atzenhofer-Baumgartner, 2023). However, these formulas present a moving target for modern interpretation, exhibiting significant variation across time and regions. This variability stems from several factors, including the evolution of legal practices, regional dialects, and individual scribal preferences. One legal concept is expressed differently in various historical documents. For example, Papal documents use “
+                <hi rend="italic">appellatione remota</hi>”, German Episcopal charters use “
+                <hi rend="italic">appellatione cessante</hi>”, and French ecclesiastical courts used “
+                <hi rend="italic">sine appellationis obstaculo</hi>” (Hageneder &amp; Maleczek, 2023, Quaas, 2024). Such variations complicate identifying and analyzing formulaic language in a large corpus of charters.
+            </p>
+            <p>This inherent variability poses a challenge for traditional computational analysis methods. Frequency-based methods, relying on counting identical word sequence occurrences, struggle to identify formulas expressed differently. Similarly, inconsistent spelling, grammar, and word order impede the ability of N-gram approaches to identify formulaic expressions. N-grams, which analyze sequences of 
+                <hi rend="italic">n</hi> consecutive words, are sensitive to even minor variations in the text (Shannon, 1948, Manning &amp; Schütze, 2000). Medieval scribes sometimes add case-specific details to formulas, like “
+                <hi rend="italic">causa que vertitur inter monasterium sancti Benedicti et homines ville de Capraria</hi>” (the case between St. Benedict’s monastery and Capraria villagers). Standard n-gram methods cannot recognize the resulting patterns (Korkiakangas &amp; Passarotti, 2011; Korkiakangas, 2024). This is significant because, as shown by Koolen &amp; Hoekstra (2022), such insertions were common practice, reflecting the need to adapt formulas to specific legal situations.
+            </p>
+            <p>Skip-grams offer better matching flexibility (Mikolov et al., 2013), but their local context limits their ability to capture long-range dependencies, which are crucial to understanding legal formulas. Skip-grams, which analyze sequences of words with gaps, can handle some variability but are constrained by the size of their context window. Complex legal formulas, which often involve intricate conditional statements and their consequences, might exceed typical skip-gram window sizes. Long formulas, such as “
+                <hi rend="italic">si non omnes his exequendis potueritis interesse, duo vestrum ea nichilominus exequantur,</hi>” may extend beyond typical window sizes. Consequently, the method may overlook key relationships between elements such as “
+                <hi rend="italic">si non omnes</hi>” and “
+                <hi rend="italic">duo vestrum.</hi>”
+            </p>
+            <p>To address these limitations, we introduce FLAME (
+                <ptr target="https://github.com/kreeedit/FLAME"/>), a new method employing Leave-N-Out grams (LNO-grams) for flexible pattern analysis. FLAME operates in two main stages. First, it uses a corpus-wide token encoder to transform words into integer sequences, enabling efficient pattern matching and comparison. This encoder is trained on the entire corpus to capture the relationships between words and their frequencies, allowing it to recognize similar terms even if they appear in different contexts. Second, given a text sequence of length 
+                <hi rend="italic">s</hi>, FLAME generates subsequences by omitting 
+                <hi rend="italic">n</hi> positions. This “leave-n-out” strategy allows FLAME to systematically explore text variations while preserving the formula’s core structure. For example, with 
+                <hi rend="italic">s</hi>=5 and 
+                <hi rend="italic">n</hi>=2 applied to the previous example sentence, FLAME generates patterns like [“si”, “non”, “omnes”, “”, “”] and [“si”, “”, “omnes”, “his”, “”], where “”indicates omission. This approach maintains the crucial conditional framework while allowing for variable components. The encoder tracks word relationships across the corpus, enabling identification of similar legal constructions despite varying conditions or specific details. FLAME then uses an Intersection over Union (IoU) metric on these patterns to calculate text similarity, highlighting formulas with similar core elements but different variables.
+            </p>
+            <p>FLAME’s array-based encoding further enhances this process. For each token sequence, it generates an array of integer-encoded patterns where each row represents a different skip combination, effectively capturing both continuous (n-gram-like) and discontinuous (skip-gram-like) patterns simultaneously. This unified representation allows the IoU metric to consider all possible matching patterns at once, capturing both local variations and long-range dependencies. While FLAME currently uses IoU, its framework can incorporate more nuanced similarity assessments. This could involve weighting different match types like full matches, partial matches, word order variations, and even lexical substitutions. By differentially weighting these, FLAME could capture a wider spectrum of semantic and stylistic relationships, moving beyond simple overlap to a more comprehensive evaluation of similarity.</p>
+            <p>FLAME excels at identifying what Fichtenau terms “f
+                <hi rend="italic">ormulaic flexibility</hi>”—functional equivalence despite surface variation. Its visualization component enables a distant reading technique, revealing both stable core elements and variable components in charter formulas, facilitating the study of their evolution and adaptation. FLAME improves on existing approaches by: (1) handling non-contiguous sequences through strategic token skipping; (2) identifying functional equivalence across variant expressions; and (3) distinguishing between core elements and variable insertions. Despite its advantages, FLAME has limitations. Foremost, while FLAME can identify similar formulas based on their structure and component words, it does not inherently understand their legal meaning. Further research is needed to incorporate semantic analysis and domain-specific knowledge to refine the interpretation of identified patterns. Acknowledging FLAME’s limitations, its capabilities enable broader analysis of medieval formulaic language detection and evolution. This improves our understanding of medieval legal language and practices, and supports Fichtenau’s observation (1957) that formulaic expressions were flexible compositional elements, not rigid templates.
+            </p>
+            <p>
+                <hi rend="bold">Keywords</hi>: formulaic language detection, medieval charters, computational methods, text similarity analysis
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Atzenhofer-Baumgartner, F. (2023). 
+                        <hi rend="italic">Quantifying Formulaic Flexibility of Middle High German Legal Texts</hi> [Master Thesis]. University of Graz.
+                    </bibl>
+                    <bibl>Dabrowska, E. (Ed.). (2001). From formula to schema: The acquisition of English questions. 
+                        <hi rend="italic">Cogl</hi>, 
+                        <hi rend="italic">11</hi>(1–2), 83–102. 
+                        <ptr target="https://doi.org/10.1515/cogl.2001.013"/>
+                    </bibl>
+                    <bibl>Fichtenau, H. (1957). 
+                        <hi rend="italic">Arenga: Spätantike und Mittelalter im Spiegel von Urkundenformeln</hi>. H. Böhlaus.
+                    </bibl>
+                    <bibl>FLAME 
+                        <ptr target="https://github.com/kreeedit/FLAME"/>
+                    </bibl>
+                    <bibl>Hageneder, O., &amp; Maleczek, W. (Eds.). (2023). 
+                        <hi rend="italic">Die Register Innocenz’ III: Texte und Indices: Vol. Erster Teil: Das erhaltene Registerfragment Texte und Indices</hi>. Verlag der Öterreichischen Akademie der Wissenschaften.
+                    </bibl>
+                    <bibl>Koolen, M., &amp; Hoekstra, R. (2022). 
+                        <hi rend="italic">Detecting Formulaic Language Use in Historical Administrative Corpora</hi>. Workshop on Computational Humanities Research. 
+                        <ptr target="https://www.semanticscholar.org/paper/Detecting-Formulaic-Language-Use-in-Historical-Koolen-Hoekstra/cf33b5aa24a2d22773abeee302b1a2559cbbb4e5"/>
+                    </bibl>
+                    <bibl>Korkiakangas, T. (2024). 
+                        <hi rend="italic">A linguist’s viewpoint: Formulaic language as a challenge for historical linguistics</hi>. 
+                        <ptr target="https://doi.org/10.5281/ZENODO.10461847"/>
+                    </bibl>
+                    <bibl>Korkiakangas, T., &amp; Passarotti, M. (2011). Challenges in Annotating Medieval Latin Charters. 
+                        <hi rend="italic">Journal for Language Technology and Computational Linguistics</hi>, 
+                        <hi rend="italic">26</hi>(2), 105–116. 
+                        <ptr target="https://doi.org/10.21248/jlcl.26.2011.150"/>
+                    </bibl>
+                    <bibl>Manning, C. D., &amp; Schütze, H. (2000). 
+                        <hi rend="italic">Foundations of statistical natural language processing</hi> (2e éd. avec des corrections). MIT Press.
+                    </bibl>
+                    <bibl>Mikolov, T., Sutskever, I., Chen, K., Corrado, G., &amp; Dean, J. (2013). 
+                        <hi rend="italic">Distributed Representations of Words and Phrases and their Compositionality</hi> (No. arXiv:1310.4546). arXiv. 
+                        <ptr target="https://doi.org/10.48550/arXiv.1310.4546"/>
+                    </bibl>
+                    <bibl>Quaas, F. (2024). 7 How to Write a Private Charter in the Early Middle Ages. Formulaic Writing between Uniformity and Heterogeneity. In L. C. Engh &amp; K. B. Aavitsland (Eds.), 
+                        <hi rend="italic">Standardization in the Middle Ages</hi> (pp. 175–202). De Gruyter. 
+                        <ptr target="https://doi.org/10.1515/9783110987126-008"/>
+                    </bibl>
+                    <bibl>Shannon, C. E. (1948). A Mathematical Theory of Communication. 
+                        <hi rend="italic">The Bell System Technical Journal</hi>, 
+                        <hi rend="italic">27</hi>, 379–423, 623–656.
+                    </bibl>
+                    <bibl>Vogeler, G. (2019). ‚Monasterium.net‘ – eine Infrastruktur für diplomatische Forschung. 
+                        <hi rend="italic">Das Mittelalter</hi>, 
+                        <hi rend="italic">24</hi>(1), 247–252. 
+                        <ptr target="https://doi.org/10.1515/mial-2019-0022"/>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

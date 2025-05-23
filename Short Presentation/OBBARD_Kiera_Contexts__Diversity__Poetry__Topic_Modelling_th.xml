@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="OBBARD_Kiera_Contexts__Diversity__Poetry__Topic_Modelling_th">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Contexts, Diversity, Poetry: Topic Modelling the Poetess</title>
+                <author>
+                    <persName>
+                        <surname>Obbard</surname>
+                        <forename>Kiera</forename>
+                    </persName>
+                    <affiliation>University of Guelph, Canada</affiliation>
+                    <email>kiera.m.obbard@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-16T15:38:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>the poetess</term>
+                    <term>topic modelling</term>
+                    <term>diversity</term>
+                    <term>feminist literary history</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>natural language processing</term>
+                    <term>open access methods</term>
+                    <term>Feminist studies</term>
+                    <term>History</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head> </head>
+                <p style="text-align: left; ">What can distant reading methods reveal about literary history that has hitherto remained undetected in the literary record? This question has been taken up by several scholars in the digital humanities, including Katherine Bode (2009), Ted Underwood (2019), and Susan Brown (2022), to name a few. The work of these scholars compellingly traces connections between changes in literature and historical, socio-cultural shifts by analyzing stylistic features of large text corpora. These computational studies typically attend to a single literary corpus to make claims regarding the connection between representation of gender, for example, in literature and changing views of gender roles. This paper builds on this important work and asks: what if we expand the data to include not only primary materials, but also critical and bio-critical texts? What would this combination of evidence, read via distant reading methods, reveal? </p>
+                <p style="text-align: left; ">This question is particularly important when considering women’s writing produced by the poetess tradition of nineteenth-century Britain–a mode of writing initially lost to literary history and recovered by feminist literary scholars (Feldman 1997; Looser 2000; Stewart 2019; Tompkins 1986)–because of the potential to reveal broader trends in various literary constructions of women labelled ‘poetess’, which may prove helpful in better understanding the feminization and denigration of this form of feminized writing. When making a literary inquiry into a genre of writing historically denigrated and excluded from the literary canon, what new insights might be revealed by examining and comparing key topics in primary, critical, and bio-critical data? This short paper takes this question as a starting point to ask what can be discovered about the poetess tradition–including the poetry itself, and the reception and critical writing on the tradition– when using topic modelling to conduct a distant reading of primary, critical, and bio-critical materials. </p>
+                <p style="text-align: left; ">This project builds from research conducted to locate boundary objects in a network graph of a feminist literary historical dataset derived from the ongoing 
+                    <hi rend="italic" xml:space="preserve">Orlando: A History of Women's Writing in the British Isles from the Beginnings to the Present (2006-) </hi>(“The Orlando Project”). Led by Susan Brown, our work with the 
+                    <hi rend="italic" xml:space="preserve">Orlando </hi>data involved developing a method of measuring diversity in a network graph, the Diversity Context measure, that identifies the number of different edge types associated with a node in the network and calculates a context diversity score for each node in the network (Brown et al. 2024). This work identifying boundary objects in this large knowledge graph suggests that attending to context diversity is useful for literary historical inquiry alongside, or counter to, standard social network analysis measures such as degree centrality and betweenness centrality, which tend to reinforce popularity bias. But, as my co-authors and I identify in our research, there is more work to be done in identifying diversity in the literary historical record by means of applying context via bringing together multiple streams of data.
+                </p>
+                <p style="text-align: left; ">Using primary and critical source data from 
+                    <hi rend="italic" xml:space="preserve">The Poetess Archive </hi>(
+                    <hi rend="italic">The Poetess Archive</hi>)
+                    <hi rend="italic">,</hi> critical source data on the poetess tradition discovered via JSTOR, and bio-critical data from 
+                    <hi rend="italic" xml:space="preserve">Orlando: A History of Women’s Writing in the British Isles from the Beginnings to the Present (2006-) </hi>(
+                    <hi rend="italic">Orlando: Women’s Writing</hi>), this paper will report on results of my experimentation with topic modelling as a method of getting at diversity or contexts in a large text corpora. Although this work will diverge from the earlier work with the 
+                    <hi rend="italic" xml:space="preserve">Orlando </hi>data, this research seeks to answer similarly themed questions: What difference does it make to combine primary, critical, and bio-critical data in literary historical inquiry? What does the combination of evidence reveal about the ways in which critical and bio-critical material refers to women writers? I hypothesize that approaching literary historical inquiry through the deliberate combination of evidence from a wide range of contexts can identify hidden semantic patterns across large text corpora, which can reveal new trends or encourage a re-examination of accepted narratives of the literary historical record. 
+                </p>
+                <p style="text-align: left; ">As Jo Guldi articulates, topic modelling can provide “broadbrush overviews that can lend insight about historical change in aggregate” (2023, n.p.). Using topic modelling as a method for combining evidence from a wide range of contexts also allows for a process of “differential reading” (Perloff 2004). Paul Barrett, following Tanya Clement, refers to the application of differential reading in topic modelling as a “dual-focused lens of interpretation” where “the DH critic oscillates between the computer-assisted forms of reading that treat texts as objects and the close reading practices that reframe objective data as subjective interpretation” (Barrett 2016: para. 16). Employing topic modelling to my selected corpuses allows for such a “dual-focused lens of interpretation” in which the topics identified become the ‘text’ that I close read to thematize the topics and compare results across the three corpuses I have topic modelled. </p>
+                <p style="text-align: left; ">To conduct topic modelling of the three large text corpora, I use primary and critical material from the 
+                    <hi rend="italic">Poetess Archive</hi>, courtesy of Laura Mandell, critical materials collected via JSTOR and saved to a Workspace, and bio-critical material on the poetesses extracted from 
+                    <hi rend="italic" xml:space="preserve">Orlando. </hi>My method involves cleaning and preparing the data using the NLTK and Gensim Python libraries, and using Latent Dirichlet Allocation (LDA) to identify topics in the corpora, and iterating on this process to provide higher degrees of control and specificity.
+                </p>
+                <p style="text-align: left; ">The question of diversity in the literary historical record is a complex one that requires multiple avenues of inquiry. By combining evidence from primary, critical, and bio-critical sources and conducting topic modelling on the large text corpora, this research works towards identifying new semantic patterns and deeper insights into the poetess tradition as a highly feminine, and feminizing, writing tradition largely excluded from the literary canon.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Barrett, Paul.</hi> 2016. “Paraphrasing the Paraphrase: OR What I Learned from Reading Every Issue of Canadian Literature / Littemture Canadienne and Studies in Canadian Literature / Etudes En Litterature Canadienne.” 
+                        <hi rend="italic">Canadian Literature</hi>, no. 228–229 (March), 208–208.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bode, Katherine</hi>. 2009. “Along Gender Lines: Reassessing Relationships between Australian Novels, Gender and Genre from 1930 to 2006.” 
+                        <hi rend="italic">Australian Literary Studies</hi> 24 (3/4): 79–95.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Brown, Susan</hi>. 2022. “Graphing the Poetess.” 
+                        <hi rend="italic">Victorian Review</hi> 48 (2): 194–200.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Brown, Susan, Patricia Clements, and Isobel Grundy</hi>, eds. 2024. 
+                        <hi rend="italic">Orlando: Women’s Writing in the British Isles from the Beginnings to the Present</hi>. Cambridge University Press. 
+                        <ref target="https://doi.org/orlando.cambridge.org">orlando.cambridge.org</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Brown, Susan, Kiera Obbard, John Brosz, Alliyya Mo, and Amelia Flynn.</hi> 2024. “Making Feminist Literary History with Boundary Objects.” In 
+                        <hi rend="italic">Rewriting Literary History with Algorithms</hi>. University of Illinois at Chicago.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Clement, Tanya</hi>. 2013. “Text Analysis, Data Mining, and Visualizations in Literary Scholarship.” 
+                        <hi rend="italic">Literary Studies in the Digital Age: An Evolving Anthology</hi>. 
+                        <ref target="https://dlsanthology.mla.hcommons.org/text-analysis-data-mining-and-visualizations-in-literary-scholarship/">https://dlsanthology.mla.hcommons.org/text-analysis-data-mining-and-visualizations-in-literary-scholarship/</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Feldman, Paula R.</hi> 1997. “The Poet and the Profits: Felicia Hemans and the Literary Marketplace.” 
+                        <hi rend="italic">Keats-Shelley Journal</hi> 46:148–76.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Guldi, Jo. </hi>2023. “The Measure of Influence.” In 
+                        <hi rend="italic">The Dangerous Art of Text Mining: A Methodology for Digital History</hi>, 1st ed., 272–89. Cambridge University Press. 
+                        <ref target="https://doi.org/10.1017/9781009263016">https://doi.org/10.1017/9781009263016</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Looser, Devoney</hi>. 2000. 
+                        <hi rend="italic">British Women Writers and the Writing of History, 1670-1820</hi>. Baltimore: Johns Hopkins University Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Mandell, Laura,</hi> ed. n.d. 
+                        <hi rend="italic">The Poetess Archive</hi>. Accessed June 26, 2023. 
+                        <ref target="https://poetess.dh.tamu.edu/about.html">https://poetess.dh.tamu.edu/about.html</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Perloff, Marjorie.</hi> 2004. 
+                        <hi rend="italic">Differentials: Poetry, Poetics, Pedagogy</hi>. Modern and Contemporary Poetics. Tuscaloosa: University of Alabama press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Stewart, Andrea</hi>. 2019. “‘The Limits of the Imaginable’: Women Writers’ Networks during the Long Nineteenth Century.” 
+                        <hi rend="italic">Victorian Review</hi> 45 (1): 39–57.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Taylor, Beverly.</hi> 2019. “EBB among the Nightingales: Elizabeth Barrett Browning, Felicia Hemans, and Generative Rivalry in the Poetess Tradition.” 
+                        <hi rend="italic">Women’s Writing</hi> 26 (2): 149–67. 
+                        <ref target="https://doi.org/10.1080/09699082.2019.1534650">https://doi.org/10.1080/09699082.2019.1534650</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Tompkins, Jane P.</hi> 1986. 
+                        <hi rend="italic">Sensational Designs: The Cultural Work of American Fiction, 1790-1860</hi>. New York: Oxford University Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Tran, Khuyen.</hi> 2022. “pyLDAvis: Topic Modeling Exploration Tool.” Neptune.Ai. July 21, 2022. 
+                        <ref target="https://neptune.ai/blog/pyldavis-topic-modeling-exploration-tool">https://neptune.ai/blog/pyldavis-topic-modeling-exploration-tool</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Underwood, Ted. 2019.</hi>
+                        <hi rend="italic">Distant Horizons: Digital Evidence and Literary Change</hi>. Chicago: University of Chicago Press. 
+                        <ref target="https://search.ebscohost.com/login.aspx?direct=true&amp;AuthType=shib&amp;db=nlebk&amp;AN=1941133&amp;authtype=shib&amp;site=ehost-live&amp;scope=site&amp;custid=s8912737">https://search.ebscohost.com/login.aspx?direct=true&amp;AuthType=shib&amp;db=nlebk&amp;AN=1941133&amp;authtype=shib&amp;site=ehost-live&amp;scope=site&amp;custid=s8912737</ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

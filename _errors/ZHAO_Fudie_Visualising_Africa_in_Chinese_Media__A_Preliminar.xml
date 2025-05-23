@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ZHAO_Fudie_Visualising_Africa_in_Chinese_Media__A_Preliminar">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Visualising Africa in Chinese Media: A Preliminary Computer-Assisted Study of 1950s-1980s Representation in Journal Illustrations and Book Covers</title>
+                <author>
+                    <persName>
+                        <surname>Sun (co-first author)</surname>
+                        <forename>Jodie Yuzhou</forename>
+                    </persName>
+                    <affiliation>Fudan University, China</affiliation>
+                    <email>yzs@fudan.edu.cn</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Zhao (co-first author)</surname>
+                        <forename>Fudie</forename>
+                    </persName>
+                    <affiliation>University of Oxford, United Kingdom</affiliation>
+                    <email>fudie.zhao@sant.ox.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Hu</surname>
+                        <forename>Qilin</forename>
+                    </persName>
+                    <affiliation>Fudan University, China</affiliation>
+                    <email>qlh@fudan.edu.cn</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Large Language Models (LLMs)</term>
+                    <term>Contrastive Language-Image Pre-training (CLIP)</term>
+                    <term>Bidirectional Text-Image Retrieval</term>
+                    <term>WISE Search Engine</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>image processing and analysis</term>
+                    <term>African and African American Studies</term>
+                    <term>Asian studies</term>
+                    <term>History</term>
+                    <term>I plan to attend the conference online</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>This poster presents the preliminary findings of a research project examining the visual representation of Africa in Chinese journal illustrations and book covers from the 1950s to the 1980s. In the first phase, we have completed the construction of a curated dataset, drawing from 49 Chinese-language books—including 
+                    <hi rend="italic">Du Xuan’s</hi> 《<hi rend="Chinese">西非日记》</hi>(
+                    <hi rend="italic">West Africa Diary</hi>), 
+                    <hi rend="italic">Feng Zhidan’s</hi> 《<hi rend="Chinese">西非八国漫记》</hi>(
+                    <hi rend="italic">Glimpses into West Africa</hi>), and 
+                    <hi rend="italic">Han Beiping’s</hi> 《<hi rend="Chinese">非洲夜会》</hi>(
+                    <hi rend="italic">Nights in Africa</hi>)—alongside 23 issues of 
+                    <hi rend="italic">The Call</hi>, the official English-language journal of the Afro-Asian Writers’ Bureau. Prior historical research on the Bureau and its literary networks includes studies by Sun, Yuan, and Zhang (2023), Vanhove (2019), and Yoon (2015). While previous research on the visual culture of China-Africa relations has primarily employed qualitative approaches (Suglo, 2021; Mock, 2024) and, more recently, combined qualitative and quantitative methodologies (Zheng, 2018; Huang, 2018), these studies have largely relied on manual analysis. In contrast, our approach explores how emerging machine learning models can augment historian-led interpretation. We are piloting workflows for LLM-assisted image annotation, CLIP-based semantic retrieval, and interactive search through WISE. This hybrid method not only facilitates the synthesis and verification of existing research findings, but also lays the groundwork for future large-scale analyses of Afro-Asian visual archives. Our overarching aim is to explore human-machine collaboration in the analysis of Afro-Asian image archives.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Dataset Construction</head>
+                <p>We have assembled a curated dataset of covers, illustrations, and accompanying images extracted from key Sino-African publications. These materials have been digitised, catalogued, and enriched with metadata (such as publication year, author, theme, and captions), thereby forming the foundation for subsequent semantic modelling.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Historian-Led, LLM-Assisted Annotation</head>
+                <p>Conventional computer vision models rely on fixed object categories and pretrained datasets, often trained on contemporary, Western-centric sources. Such systems lack the ability to detect the historical nuance, symbolic resonance, and cross-cultural visual vocabularies essential to interpreting Cold War-era Chinese-African imagery. On the other hand, fully manual annotation, while context-sensitive, is time-intensive and difficult to scale.</p>
+                <p>To address this, we are developing a hybrid workflow in which general-purpose large language models (LLMs)—including ChatGPT, DeepSeek, and Doubao—serve as interpretive assistants, not autonomous classifiers. The process is historian-led and research-driven: rather than applying fixed taxonomies, we use LLMs to generate contextual descriptions and symbolic interpretations in response to evolving scholarly questions.</p>
+                <p>This approach recognises a fundamental gap between the interpretive expectations of historians—who may seek to identify complex roles such as “guerrilla fighter” or ‘solidarity’—and the actual capacity of computational models, which tend to detect surface-level entities like ‘gun’ or ‘handshake’. LLMs help bridge this gap by supporting exploratory, dialogic, and interpretively deep annotation.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Semantic Retrieval through CLIP + Prompt Schema</head>
+                <p>As part of the broader multimodal turn in digital humanities, CLIP (Contrastive Language-Image Pre-training) has emerged as a key tool for analysing visual culture through AI-driven methods that align textual and visual representations in novel ways (Offert et al., 2022; Smits &amp; Wevers, 2023; Wevers &amp; Smits, 2024). We are piloting the integration of CLIP-based image embeddings with historian-curated annotations. Rather than relying on fixed-category classification, we use CLIP to calculate 
+                    <hi rend="italic">semantic proximity</hi> between images and historian-defined prompt ensembles. Instead of treating concepts such as ‘solidarity’ as static labels, we articulate them through low-level, observable visual patterns, such as:
+                </p>
+                <list type="unordered">
+                    <item>‘A group smiling and shaking hands’</item>
+                    <item>‘Workers assisting one another during collective labour’</item>
+                    <item>‘Individuals raising flags together’</item>
+                </list>
+                <p>This exploratory method supports context-sensitive, graded retrieval across conceptual dimensions including ‘solidarity’, ‘revolution’, and ‘anti-imperialism’.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Interactive Retrieval with WISE</head>
+                <p>We are currently testing WISE 
+                    <hi style="font-family:Batang">(</hi>
+                    <ref target="https://gitlab.com/vgg/wise/wise">https://gitlab.com/vgg/wise/wise</ref>
+                    <hi style="font-family:Batang">)</hi>, a multimodal retrieval interface that enables both text-to-image and image-to-image search. Instead of prioritising simple object detection, WISE retrieval sorts results according to semantic resonance with historian-defined conceptual meanings, thereby allowing researchers to search for historically significant visual motifs and patterns.
+                </p>
+                <figure>
+                    <graphic n="1001" width="15.733194444444445cm" height="7.186341666666666cm" url="/tmp/tmpkqr1cqji/Pictures/84a2f0aa8c810dc29e753c164da62f36.png" rend="inline"/>
+                </figure>
+                <p>
+                    <hi rend="italic">Figure: Demonstration of text-to-image retrieval in WISE with the query ‚‘worker‘</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion and Future Directions</head>
+                <p>In this pilot phase, we are exploring new workflows for scalable, explainable, and historian-aligned exploration of complex historical imagery. Rather than viewing machine learning models as autonomous analysts, we frame them as assistive tools for humanistic inquiry—supporting, rather than replacing, historical interpretation. Future stages will extend this framework to temporal trend analysis, style clustering, and multi-language cross-media alignment. Ultimately, our goal is not only to enhance retrieval efficiency, but also to computationally support the interpretive richness that lies at the heart of historical visual analysis.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left;">Baayen, Harald, Halteren, Hans van, &amp; Tweedie, Fiona (1996): "Outside the cave of shadows: using syntactic annotation to enhance authorship attribution", in: 
+                        <hi rend="italic">Literary and Linguistic Computing</hi> 11(3): 121–132.
+                    </bibl>
+                    <bibl>Huang, Di (2018): 
+                        <hi rend="italic">A study of book covers of foreign literary figures, 1949–1978</hi>. Master’s thesis, Central Academy of Fine Arts.
+                    </bibl>
+                    <bibl>Mock, Tara (2024): "Chinese images of Africa locked", in: 
+                        <hi rend="italic">Oxford Research Encyclopedia of African History</hi>. Oxford: Oxford University Press.
+                    </bibl>
+                    <bibl>Offert, Florian, Impett, Leonardo, Al Moubayed, Nour, Cetinic, Evlampios, Bell, Peter, Smits, Thomas, Leone, Alessandro, Watson, Matthew, Winterbottom, Thomas, Kluvanec, Daniel, Lawrence, David, Kosti, Rannveig, Wevers, Melvin, &amp; Lefranc, Laurent (2022): "CLIP and beyond: Multimodal and explainable machine learning in the digital humanities" [Panel discussion], in: 
+                        <hi rend="italic">DH2022: Responding to Asian Diversity</hi>, Tokyo, Japan (hybrid), 25–29 July 2022. Alliance of Digital Humanities Organizations (ADHO). 
+                        <ref target="https://dh-abstracts.library.virginia.edu/works/11914">https://dh-abstracts.library.virginia.edu/works/11914</ref> [Accessed 25 April 2025].
+                    </bibl>
+                    <bibl>Smits, Thomas, &amp; Wevers, Melvin (2023): "A multimodal turn in digital humanities: Using contrastive machine learning models to explore, enrich, and analyze digital visual historical collections", in: 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi> 38(3): 1267–1280. DOI: 10.1093/llc/fqad008.
+                    </bibl>
+                    <bibl>Suglo, Ignatius G. D. (2021): "Visualizing Africa in Chinese: Propaganda posters 1950–1980", in: 
+                        <hi rend="italic">Journal of Asian and African Studies</hi> 57(3): 1–18.
+                    </bibl>
+                    <bibl>Sun, Jodie Yuzhou, Yuan, Mingqing, &amp; Zhang, Lifang (2023): "Third world crossings: Afro-Asian travelogues in the early 1960s", in: 
+                        <hi rend="italic">Interventions</hi> 25(6): 846–863.
+                    </bibl>
+                    <bibl>Vanhove, Pieter (2019): "‘A world to win’: China, the Afro-Asian Writers’ Bureau, and the reinvention of world literature", in: 
+                        <hi rend="italic">Critical Asian Studies</hi> 51(2): 144–165.
+                    </bibl>
+                    <bibl>Wevers, Melvin, &amp; Smits, Thomas (2024): "Are we at a multimodal turn? Navigating AI developments for historical research" [Conference presentation slides], in: 
+                        <hi rend="italic">Intermediality and Computational Humanities Hackathon</hi>, Vienna, Austria, 14 November 2024. 
+                        <ref target="https://indico.global/event/11645/contributions/104927/attachments/48317/91448/vienna_Melvin.Wevers_Thomas.Smits.pdf">https://indico.global/event/11645/contributions/104927/attachments/48317/91448/vienna_Melvin.Wevers_Thomas.Smits.pdf</ref> [Accessed 25 April 2025].
+                    </bibl>
+                    <bibl>Yoon, Duncan M. (2015): "‘Our forces have redoubled’: World literature, postcolonialism, and the Afro-Asian Writers’ Bureau", in: 
+                        <hi rend="italic">Cambridge Journal of Postcolonial Literary Inquiry</hi> 2(2): 233–252.
+                    </bibl>
+                    <bibl>Zheng, Shuyun (2018): 
+                        <hi rend="italic">An analysis of Africa’s national image constructed by The Economist’s front covers from the perspectives of visual grammar</hi>. Master’s thesis, Zhejiang Normal University
+                        <hi style="font-family:Batang">.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">Acknowledgements: we would like to express our special thanks to Chen Siming (Fudan University) for technical advice and to Cheng Qi (Fudan University) for assistance with data curation.</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

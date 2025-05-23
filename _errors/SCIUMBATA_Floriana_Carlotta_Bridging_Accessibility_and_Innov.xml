@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SCIUMBATA_Floriana_Carlotta_Bridging_Accessibility_and_Innov">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Bridging Accessibility and Innovation: An NLP-Powered Writing Assistant for Easy and Plain Texts in Italian</title>
+                <author>
+                    <persName>
+                        <surname>Sciumbata</surname>
+                        <forename>Floriana Carlotta</forename>
+                    </persName>
+                    <affiliation>Università di Trieste, Italy</affiliation>
+                    <email>fsciumbata@units.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Tringali</surname>
+                        <forename>Luca</forename>
+                    </persName>
+                    <affiliation>Independent researcher</affiliation>
+                    <email>lucatringali90@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-22T15:13:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>easy Italian</term>
+                    <term>text simplification</term>
+                    <term>accessible writing</term>
+                    <term>writing assistant</term>
+                    <term>accessibility</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>natural language processing</term>
+                    <term>text mining and analysis</term>
+                    <term>Disability and differently-abled studies</term>
+                    <term>Education/ pedagogy</term>
+                    <term>Linguistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <hi rend="bold">1. Easy and Plain Language (EPL): Definition and Importance</hi>
+            </p>
+            <p>In Italy, the need for a citizen-centric communication has been increasingly emphasized, particularly in public administration, where texts often suffer from complex syntax, obscure vocabulary, and dense content. These challenges are exacerbated for individuals with reading difficulties, stemming from intellectual disabilities, psychiatric or neurological conditions, sensory impairments, or socio-cultural factors such as age, origin, or education level. Without simplified texts, these individuals risk losing autonomy in interacting with the world and accessing information.</p>
+            <p>Easy language (Inclusion Europe 2013; Sciumbata 2022) addresses these issues by implementing linguistic adaptations aimed at improving textual clarity and accessibility. Easy language texts feature selective and essential information arranged logically with explicit connections. Syntax is simple, using short sentences (10-15 words) with a straightforward structure of subject-verb-object. Familiar vocabulary is prioritized, often referencing Tullio De Mauro’s “Vocabolario di Base” (De Mauro 2016), including the 7,500 most frequent words of the Italian language. Importantly, easy language practices emphasize reader involvement, where individuals with intellectual disabilities participate in the drafting or review process.</p>
+            <p>On the other hand, plain language (Fortis 2003) makes written communication accessible to a broader audience with looser rules than the easy language ones. This approach enables individuals with varying literacy levels to engage independently with content, ensuring that essential information is easily understood. </p>
+            <p>While EPL texts are easier to read, creating them demands advanced writing, linguistic, and metalinguistic skills—a challenge the proposed writing assistant system (FLO) aims to address by providing targeted feedback and guidance.</p>
+            <p>
+                <hi rend="bold">2. State of the Art</hi>
+            </p>
+            <p>Global advancements in text simplification and writing assistance have yielded notable systems. Generative AI can be used for this aim, but other examples include Simplext, developed for Spanish (Saggion et al. 2015), focusing on accessible text generation, and systems like Chen et al. (2016) proposal for English, integrating text simplification strategies tailored to people with intellectual disabilities. German innovations such as Capito Digital (
+                <ref target="https://www.capito.eu/en/capitodigital/">https://www.capito.eu/en/capitodigital/</ref>), using AI to rewrite texts at varying levels of complexity—illustrate the potential of computational solutions for language accessibility. Similarly, LIREC (
+                <ref target="http://51.91.138.70/simples/">http://51.91.138.70/simples/</ref>) addresses the need for simplified French texts.
+            </p>
+            <p>For Italian, however, the field remains underdeveloped. In addition to readability assessment tools such as Read‑IT (Dell’Orletta et al. 2011) and Tint (Palmero Aprosio &amp; Moretti 2016), there are solutions geared toward educational applications—like FacilTesto (https://sd2.itd.cnr.it/?r=site/scheda&amp;id=5731)—which operate on principles distinct from easy or plain language and are now outdated; moreover, Megna et al. (2021) proposed an automatic sentence simplifier whose outputs have proven rather inadequate from a linguistic standpoint.</p>
+            <p>This gap underscores the innovation of FLO, specifically designed to support Italian-language EPL text creation while employing state-of-the-art computational methods.</p>
+            <p>
+                <hi rend="bold">3.</hi>
+                <hi rend="bold">FLO, the Writing Assistant System for Italian</hi>
+            </p>
+            <p>FLO (Facile da Leggere Online, 
+                <ref target="http://www.faciledaleggere.online">www.faciledaleggere.online</ref>) facilitates writing according to EPL Italian guidelines (Sciumbata 2022). Through a web-based interface, users receive detailed feedback on linguistic issues such as long sentences, complex syntax, uncommon verb forms and words. These issues are accompanied by suggestions for simplification, including synonyms extracted from the “Vocabolario di Base”. The system also provides readability metrics, such as the GULPease readability index (Lucisano &amp; Piemontese 1988), to help users gauge text accessibility.
+            </p>
+            <p>To enhance its functionality, the integration of advanced word embedding techniques and AI LLM models is currently under scrutiny and will be added to the already existing alpha version of FLO, which currently relies on a digital dictionary, based on Wikitionary, to find synonyms. These methodologies will be mostly used to optimize synonym selection and give the user alternative context-aware words, ensuring that they fit both contextually and semantically within the constraints of EPL. AI models also could refine feedback mechanisms, allowing the system to adapt to user-specific needs and improve over time.</p>
+            <p>FLO fulfills dual objectives, providing immediate support by identifying and addressing linguistic flaws while serving as an educational tool that enhances users’ writing skills and metalinguistic awareness.</p>
+            <p>
+                <hi rend="bold">4. System Functionality</hi>
+            </p>
+            <p>To use FLO, the user writes or pastes a text into the interface. The text is then analyzed and broken down using UDPipe2 (Straka 2018), and known errors from UDPipe2 Italian models are corrected by FLO to ensure better analysis accuracy. FLO then applies regular expressions and filters to detect writing flaws and inconsistencies. Lemmas are compared with those in the “Vocabolario di Base”, giving easy synonyms for difficult words to help users choose more accessible vocabulary. The processed text is then returned with corrections, suggestions, and relevant statistics for further improvement and evaluation.</p>
+            <p>FLO thus operates using a combination of rule-based algorithms and machine learning techniques, ensuring compliance with both easy and plain language linguistic guidelines. The system’s core components include: </p>
+            <p>1. Text Analysis via UDPipe2: This tool extracts linguistic features such as part of speech, lemmas, morphosyntactic details, and syntactic dependencies. These outputs form the basis for FLO’s analysis.</p>
+            <p>2. Error Correction and Rule Application: FLO rectifies known errors in UDPipe2 outputs and applies a tailored set of linguistic rules. Regular expressions are employed for token-level analysis, while advanced custom algorithms detect complex syntactic patterns across multiple tokens.</p>
+            <p>By leveraging machine learning models, FLO improves its ability to suggest accessible vocabulary. Word embeddings will enable the system to analyze context-sensitive word choices, ensuring that suggestions are both linguistically appropriate and semantically coherent.</p>
+            <p>
+                <hi rend="bold">5. Applications in Teaching and the Digital Humanities</hi>
+            </p>
+            <p>Beyond assisting individual users, FLO holds significant potential for broader educational and research applications. In teaching, FLO serves as a practical tool for training writers, educators, and public administrators in the principles of EPL. By offering real-time feedback and explanations, the system fosters a deeper understanding of linguistic accessibility and empowers users to apply these principles independently.</p>
+            <p>In the context of digital humanities, FLO represents an innovative application of computational linguistics to promote inclusivity. Users can use the system to analyze texts, adapting them for broader accessibility without compromising their integrity. Additionally, FLO‘s NLP-driven insights into language use provide valuable data for studying linguistic trends and accessibility challenges in various corpora, as all the data and results can be downloaded in .tsv format. </p>
+            <p>FLO also exemplifies how technology can address societal challenges, bridging the gap between linguistic expertise and digital innovation.</p>
+            <p>
+                <hi rend="bold">6. Why an Assistant Rather than an Automatic Text Generation Tool?</hi>
+            </p>
+            <p>FLO adopts a manual reviewing approach, rather than a fully automated text simplification one. While advanced AI-driven solutions can efficiently suggest changes and generate simpler content, the nuances of EPL require human judgment for optimal results. Fully automated systems may risk oversimplifying texts or suggesting alternatives that, while semantically correct, could alter the intended meaning or fail to align with user expectations. By requiring human oversight, FLO ensures that changes are contextually appropriate and reflect the desired tone and intent of the original text. The manual review process allows users to critically assess automatic suggestions, make informed decisions, and learn from feedback to enhance their writing skills. This approach aligns with the easy language philosophy, which emphasizes reader involvement and participatory practices. Thus, FLO serves not just as an automated tool but as a comprehensive support system that fosters collaboration between human users and computational technology, creating texts that meet accessibility standards while empowering users to improve their writing abilities. Basically, it does the opposite of GPT models: it trains a human being using ML data.</p>
+            <p style="text-align: left;">
+                <hi rend="bold">7. Conclusion</hi>
+            </p>
+            <p>FLO represents a significant innovation in the Italian landscape. By pipelining NLP it provides accurate suggestions, and incorporating AI technologies and word embeddings in the next future it could become even more context-aware. It facilitates the creation of accessible and linguistically effective texts while teaching users to identify and resolve common barriers to readability. </p>
+            <p>In addition to its immediate benefits for individual users, FLO has broader implications for education and the digital humanities. By promoting the adoption of EPL practices, the system supports knowledge dissemination and upholds the right to information for persons with intellectual disabilities. Its dual role as a practical tool and research resource underscores its transformative potential in fostering linguistic inclusivity.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold" xml:space="preserve">Chen, Ping / Rochford, John / Kennedy, David N. / Djamasbi, Soussan / Fay, Peter / Scott, Will </hi>(2016): “Automatic Text Simplification for People with Intellectual Disabilities”, in: Artificial Intelligence Science and Technology: 725–731. WORLD SCIENTIFIC. 
+                        <ref target="https://doi.org/10.1142/9789813206823_0091">https://doi.org/10.1142/9789813206823_0091</ref>.
+                        <lb/>
+                        <hi rend="bold" xml:space="preserve">De Mauro, Tullio </hi>(2016): “Il Nuovo Vocabolario di Base della lingua italiana”, in: L’Internazionale, 23 dicembre. 
+                        <ref target="https://www.internazionale.it/opinione/tullio-de-mauro/2016/12/23/il-nuovo-vocabolario-di-base-della-lingua-italiana">https://www.internazionale.it/opinione/tullio-de-mauro/2016/12/23/il-nuovo-vocabolario-di-base-della-lingua-italiana</ref>.
+                        <lb/>
+                        <hi rend="bold">Dell’Orletta, Felice / Montemagni, Simonetta / Venturi, Giulia (2011): “READ-IT: Assessing Readability of Italian Texts with a View to Text Simplification”</hi>, in: Proceedings of the Workshop on Speech and Language Processing for Assistive Technologies (SLPAT 2011), Edinburgh, 30 July: 73–83.
+                        <lb/>Inclusion Europe (2013): Informazioni per tutti.
+                        <lb/>
+                        <hi rend="bold">Lucisano, Pietro / Piemontese, Maria Emanuela</hi> (1988): “GULPEASE: una formula per la predizione della difficoltà dei testi in lingua italiana”, in: Scuola e città, 31 marzo.
+                        <lb/>
+                        <hi rend="bold">Megna, Angelo Luigi / Schicchi, Daniele / Lo Bosco, Giosué / Pilato, Giovanni</hi> (2021): “‘A Controllable Text Simplification System for the Italian Language”, in: 2021 IEEE 15th International Conference on Semantic Computing (ICSC): 191–194. 
+                        <ref target="https://doi.org/10.1109/ICSC50631.2021.00040">https://doi.org/10.1109/ICSC50631.2021.00040</ref>.
+                        <lb/>
+                        <hi rend="bold" xml:space="preserve">Palmero Aprosio, Alessio / Moretti, Giovanni </hi>(2016): “Italy Goes to Stanford: A Collection of CoreNLP Modules for Italian”, in: ArXiv e-prints. 
+                        <ref target="http://adsabs.harvard.edu/abs/2016arXiv160906204P">http://adsabs.harvard.edu/abs/2016arXiv160906204P</ref>.
+                        <lb/>
+                        <hi rend="bold" xml:space="preserve">Saggion, Horacio / Štajner, Sanja / Bott, Stefan / Mille, Simon / Rello, Luz / Drndarevic, Biljana </hi>(2015): “Making It Simplext: Implementation and Evaluation of a Text Simplification System for Spanish”, in: ACM Transactions on Accessible Computing 6, 4 (11 maggio): 1–36. 
+                        <ref target="https://doi.org/10.1145/2738046">https://doi.org/10.1145/2738046</ref>.
+                        <lb/>
+                        <hi rend="bold">Sciumbata, Floriana Carlotta</hi> (2022): Manuale dell’italiano facile da leggere e da capire. Come scrivere testi semplici per persone con disabilità intellettive e altre difficoltà di lettura. Florence: Franco Cesati.
+                        <lb/>
+                        <hi rend="bold">Straka, Milan</hi> (2018): “UDPipe 2.0 Prototype at CoNLL 2018 UD Shared Task”, in: Proceedings of the CoNLL 2018 Shared Task: Multilingual Parsing from Raw Text to Universal Dependencies, Brussels, Belgium: Association for Computational Linguistics: 197–207. 
+                        <ref target="https://doi.org/10.18653/v1/K18-2020">https://doi.org/10.18653/v1/K18-2020</ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

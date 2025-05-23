@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NIEKLER_Andreas_Patterns_of_Play__A_Computational_Approach_t">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Patterns of Play: A Computational Approach to Understanding Game Mechanics </title>
+                <author>
+                    <persName>
+                        <surname>Niekler</surname>
+                        <forename>Andreas</forename>
+                    </persName>
+                    <affiliation>Leipzig University, Germany</affiliation>
+                    <email>andreas.niekler@uni-leipzig.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Piontkowitz</surname>
+                        <forename>Vera</forename>
+                    </persName>
+                    <affiliation>Leipzig University, Germany</affiliation>
+                    <email>vera.piontkowitz@uni-leipzig.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Schmidt</surname>
+                        <forename>Sarah</forename>
+                    </persName>
+                    <affiliation>Leipzig University, Germany</affiliation>
+                    <email>sarah-melina-schmidt@wolks.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Borst-Graetz</surname>
+                        <forename>Janos</forename>
+                    </persName>
+                    <affiliation>Leipzig University, Germany</affiliation>
+                    <email>janos.borst@uni-leipzig.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Burghardt</surname>
+                        <forename>Manuel</forename>
+                    </persName>
+                    <affiliation>Leipzig University, Germany</affiliation>
+                    <email>manuel.burghardt@uni-leipzig.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-07T09:54:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Game Studies</term>
+                    <term>Game Patterns</term>
+                    <term>Game Walkthroughs</term>
+                    <term>Text Mining</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>semantic analysis</term>
+                    <term>text mining and analysis</term>
+                    <term>Games studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Abstract</head>
+                <p style="text-align: left; ">This study uses a computational approach to analyze game mechanics using a collection of 296 predefined mechanics. By identifying their occurrence in a large dataset of games, we reveal trends in their popularity, evolution over time, and their relationships to game genres, demonstrating the potential of the method for "computational game studies". </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction </head>
+                <p style="text-align: left; ">Game studies have traditionally used critical and hermeneutic approaches to analyze the multifaceted nature of digital games, while digital humanities often rely on quantitative and computational methods to identify patterns in large collections of cultural artifacts, including games. Bridging these disciplines, Burghardt and Piontkowitz (2024) introduced the concept of computational game studies, proposing proxies and simplifications to facilitate the quantitative study of specific aspects within games, such as language, aesthetics and music. Extending this approach, we propose the consideration of game mechanics as an additional viable feature for large-scale computational analysis. Defined by Lundgren and Björk (2003) as “any part of the rule system of a game that covers one [...] possible kind of interaction that takes place during the game,” game mechanics provide a finite (yet extensible), systematically catalogued set of features, as illustrated in resources such as the 
+                    <hi rend="italic">Patterns in Game Design</hi> database (Björk / Holopainen, 2004). Previous research on mechanics has predominantly relied on qualitative methods, focusing on limited case studies (see for example Sicart, 2008; Zagal et. al., 2008; Braithwaite, 2018). While few examples of computational game studies have focused on genre classification (Jiangh / Zheng, 2023; Faisal / Peltoniemi, 2018) and board game mechanics (Samarasinghe et al., 2021), a data-driven approach to analyzing game mechanics in digital games remains unexplored. To address this gap, we introduce a novel methodology for extracting and analyzing game mechanics at scale from unstructured walkthroughs – textual descriptions of digital games (see Newman, 2011; Nylund, 2015). Understanding game mechanics offers new perspectives on the evolution of games in relation to industry, technology, and culture by identifying quantifiable features and their interactions with these phenomena, that go beyond metadata such as genre descriptions. Our initial experiments examining pattern distribution across genres, temporal pattern trends, and game similarity based on pattern usage demonstrate the potential of this methodology to facilitate novel research directions.
+                </p>
+                <figure>
+                    <graphic n="1001" width="12cm" height="3.2394166666666666cm" url="/tmp/tmple5ofq4y/Pictures/d117516c89e78aa9e67e5eb06eeccb71.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; text-align: center;">
+                    <anchor xml:id="Ref184371749"/>Figure 1: Detail view from the UMAP visualization of the pattern embeddings.
+                </p>
+                <p style="text-align: left; ">To analyze the in-game composition of game mechanics, we aggregate the sentence-level similarity vectors for each game. To represent a game based on its most salient patterns, we first sum pattern similarities above a 0.5 threshold across all sentences for a single game. We then normalize the resulting vector to ensure that its elements sum to 1, and keep only the top 15 normalized weights, setting the rest to 0.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Game Design Patterns in Selected Games</head>
+                <p style="text-align: left; ">Next, we demonstrate that this method of mapping game design patterns allows games to be represented as vectors of patterns, facilitating various analytical applications. We chose two games from fundamentally different genres: 
+                    <hi rend="italic">Assassin's Creed</hi>, a franchise that blends historical fiction with action-adventure and stealth gameplay, and 
+                    <hi rend="italic">Civilization</hi>, a turn-based strategy game in which players lead a civilization through the ages by expanding their empire, researching technologies, and interacting with other civilizations to achieve victory. The assigned game mechanics are shown in Table 1.
+                </p>
+                <figure>
+                    <graphic n="1002" width="12.453055555555556cm" height="8.678333333333333cm" url="/tmp/tmple5ofq4y/Pictures/d117516c89e78aa9e67e5eb06eeccb71.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; text-align: center;">
+                    <anchor xml:id="Ref184372246"/>Table 1: Game design patterns for the games Civilization and Assassin’s Creed. The weights are the normalized values from the summed pattern similarities.
+                </p>
+                <p style="text-align: left; ">Table 1 demonstrates that game patterns effectively distinguish between games, enabling large-scale comparisons that reveal relationships between mechanics, individual games, and genres. Table 2 shows the distribution of six patterns across genres. Analysis of the top 100 games per pattern reveals the prevalence of certain patterns within specific genres, such as 
+                    <hi rend="italic">fog of war</hi> in strategy games or 
+                    <hi rend="italic">aim &amp; shoot</hi> in action games, suggesting that these patterns act as trigger mechanics that shape genre characteristics.
+                </p>
+                <figure>
+                    <graphic n="1003" width="15.733888888888888cm" height="3.4219444444444442cm" url="/tmp/tmple5ofq4y/Pictures/d117516c89e78aa9e67e5eb06eeccb71.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; text-align: center;">
+                    <anchor xml:id="mpemq3yjymfg"/>
+                    <anchor xml:id="Ref184373385"/>Table 2: Most popular genres by selected game patterns
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Popularity of Mechanics</head>
+                <p style="text-align: left; ">The corpus includes release year data for a subset of games, enabling analysis of the temporal distribution of game mechanics. This approach facilitates detailed investigations into the evolution and understanding of game characteristics, including trends in popularity. To analyze the prevalence of mechanics over time, we considered a mechanic present in a game if its associated value was greater than zero. We then aggregated the presence of each mechanic across all games released within the same year. Given the uneven temporal distribution within the corpus, we normalized counts by dividing by the total number of games per year. This provides a normalized measure for the popularity and distribution of game mechanics, as illustrated by the patterns of 
+                    <hi rend="italic">enemies</hi> and 
+                    <hi rend="italic">score</hi> in Figure 2.
+                </p>
+                <figure>
+                    <graphic n="1004" width="15.804444444444444cm" height="5.115277777777778cm" url="/tmp/tmple5ofq4y/Pictures/d117516c89e78aa9e67e5eb06eeccb71.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; text-align: center;">
+                    <anchor xml:id="Ref184375001"/>Figure 2: Time series analysis of the 
+                    <hi rend="italic">enemies</hi> pattern remains relatively stable, while the 
+                    <hi rend="italic">score</hi> pattern trend exhibits a decline over time.
+                </p>
+                <p style="text-align: left; ">While
+                    <hi rend="italic" xml:space="preserve"> enemies</hi> maintains stable prevalence, 
+                    <hi rend="italic">score</hi> declines over time, indicating a shift away from traditional scoring systems. However, employing heatmaps with clustered correlated time series reveal more nuanced trends across numerous mechanics, uncovering practices of game pattern usage within the industry. This approach provides deeper insight into the evolution and interplay of mechanics, as shown in Figure 3.
+                </p>
+                <figure>
+                    <graphic n="1005" width="12.57788611111111cm" height="9.289225cm" url="/tmp/tmple5ofq4y/Pictures/d117516c89e78aa9e67e5eb06eeccb71.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; text-align: center;">
+                    <anchor xml:id="Ref184375373"/>Figure 3: Heatmap visualizing the temporal prevalence of multiple game design patterns. Color intensity reflects pattern popularity.
+                </p>
+                <p style="text-align: left; ">Our analysis reveals distinct trends in the evolution of game mechanics. Persistent mechanics such as 
+                    <hi rend="italic">spawn points</hi> and 
+                    <hi rend="italic">levels</hi> maintain high prevalence, with
+                    <hi rend="italic" xml:space="preserve"> spawn points</hi> gradually increasing, suggesting later integration into game design. Conversely, 
+                    <hi rend="italic">save points</hi>, 
+                    <hi rend="italic">score</hi>, and 
+                    <hi rend="italic">power-ups</hi> decline, indicating a shift away from traditional elements. The rise of 
+                    <hi rend="italic">rewards</hi> in the 2000s and 2010s reflects a growing emphasis on player engagement through intricate reward systems and character progression. These observations highlight the dynamic evolution of game mechanics, driven by changing design philosophies, technological advances, and player expectations.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Game Similarity and Clustering</head>
+                <p style="text-align: left; ">In addition, our approach allows for similarity comparisons, which is useful for understanding genre boundaries, identifying similar games, and developing novel search functions for game libraries. Using UMAP for dimensionality reduction and DBSCAN clustering (Pedregosa et al., 2011), we show that genre information from the corpus is not consistent with similarities based on game patterns (see Figure 5). This discrepancy highlights a research opportunity to investigate the relationship between game pattern similarities and established genre concepts. Figure 4 demonstrates that pre-selected games with similar functionalities and themes have a small cosine distance, indicating a high degree of similarity.</p>
+                <figure>
+                    <graphic n="1006" width="12.358077777777778cm" height="11.596594444444445cm" url="/tmp/tmple5ofq4y/Pictures/d117516c89e78aa9e67e5eb06eeccb71.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; text-align: center;">
+                    <anchor xml:id="Ref184378120"/>Figure 4: A distance matrix of pre-selected games reveals that titles with similar genres or gameplay patterns exhibit low distances, indicating that pat-tern vectors capture properties reflecting comparable player experiences.
+                </p>
+                <figure>
+                    <graphic n="1007" width="16.51cm" height="7.161388888888889cm" url="/tmp/tmple5ofq4y/Pictures/d117516c89e78aa9e67e5eb06eeccb71.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; text-align: center;">
+                    <anchor xml:id="Ref184378135"/>Figure 5: UMAP visualization (5a) colored by genre shows diverse genre distribution across game pattern similarity structures. DBscan clustering (5b) reveals that pattern similarity transcends genre classification.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="oogmmc9ijgav"/>Constructing Game Mechanics: Pattern Cooccurrences
+                </head>
+                <p style="text-align: left; ">Analyzing game pattern connections reveals broader mechanical contexts within games. Using game pattern vectors from our corpus, we identify statistically significant co-occurrences of all game patterns and visualize them using force-directed layout graphs, with colors representing potential communities. Graph analysis reveals clusters of highly interconnected patterns, suggesting distinct mechanical systems (see Figure 6). The presence of multiple connected components suggests that our method can reveal broader relationships between game mechanics and design principles. For example, clusters related to resources and information highlight the potential for targeted analysis of specific game design choices and their underlying mechanics. The revealed structure broadly aligns with the chapter organization in Lundgren &amp; Björk’s (2003) book, validating their pattern categorization with our extensive dataset.</p>
+                <figure>
+                    <graphic n="1008" width="15.142308333333334cm" height="18.034cm" url="/tmp/tmple5ofq4y/Pictures/d117516c89e78aa9e67e5eb06eeccb71.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; text-align: center;">
+                    <anchor xml:id="Ref184378522"/>Figure 6: Graph analysis of game pattern connectivity, with magnified highly connected cliques (modularity).
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="bbpq8mwnb6w9"/>Discussion and Conclusion
+                </head>
+                <p style="text-align: left; ">While our approach is already promising, it has some limitations. The precision of mechanic identification could be improved, as the current method may be sensitive to noise in the walkthrough texts. In addition, relying on walkthroughs may introduce a bias toward mechanics that are explicitly discussed in these guides. Moreover, we only used the published game design patterns from the original CSV release, as we needed to first verify the legitimacy of the updated but unpublished patterns<ref n="1" target="ftn1"/> to maintain research credibility. Future work could explore alternative data sources, such as game design documents or player-generated content, to improve the accuracy and completeness of the extraction of game mechanics. 
+                </p>
+                <p style="text-align: left; ">Despite these limitations, our method offers a foundation for future research in computational game studies. Discrepancies between pattern similarity and genre classification call for further investigation into the complex relationship between mechanics and genre. Additionally, our approach allows for scaling existing analyses of mechanics, such as those by Zagal et al. (2008) on gameplay segmentation and Braithwaite (2018) on mechanic evolution, to larger datasets. The examination of game mechanics facilitates comprehensive investigations into their evolution, interactions with various genres and player dispositions, as well as their influence on design and user experience. This approach uncovers profound, quantifiable characteristics molded by industry trends, technological advancements, and design innovations. It transcends traditional genre classifications, offering enhanced insights into the details of game complexity, design frameworks, and the expansive cultural and economic landscapes that shape the ludological progression of digital games.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                        
+                            <ref target="http://virt10.itu.chalmers.se/index.php/Category:Patterns">http://virt10.itu.chalmers.se/index.php/Category:Patterns</ref> (Accessed: Nov 29, 2024). 
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Björk, Staffan / Jussi Holopainen</hi>. 2004. 
+                        <hi rend="italic">Patterns in Game Design</hi>. Game Development Series. Boston, Mass: Charles River Media.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Burghardt, Manuel / Vera Piontkowitz</hi>. 2024. “Computational Game Studies? Drei Annäherungsperspektiven.” In 
+                        <hi rend="italic">DHd 2024: Konferenzabstracts</hi>. Passau. 
+                        <hi rend="underline">https://doi.org/10.5281/zenodo.10698402</hi>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Braithwaite, Andrea</hi>. 2018. “WoWing Alone: The Evolution of ‘Multiplayer’ in World of Warcraft.” 
+                        <hi rend="italic">Games and Culture</hi>13 (2): 119–35. 
+                        <ref target="https://doi.org/10.1177/1555412015610246">https://doi.org/10.1177/1555412015610246</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Clearwater, David</hi>. 2011. “What Defines Video Game Genre? Thinking about Genre Study after the Great Divide.” 
+                        <hi rend="italic">Loading...</hi> 5 (8).
+                        <lb/>
+                        <ref target="https://journals.sfu.ca/loading/index.php/loading/article/view/67">https://journals.sfu.ca/loading/index.php/loading/article/view/67</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Faisal, Ali / Mirva Peltoniemi</hi>. 2018. “Establishing Video Game Genres Using Data-Driven Modeling and Product Databases.” 
+                        <hi rend="italic">Games and Culture</hi> 13 (1): 20–43. 
+                        <ref target="https://doi.org/10.1177/1555412015601541">
+                            <hi rend="underline">https://doi.org/10.1177/1555412015601541</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Jiang, Yuhang / Lukun Zheng</hi>. 2023. “Deep Learning for Video Game Genre Classification.” 
+                        <hi rend="italic">Multimedia Tools and Applications</hi> 82 (14): 21085–99. 
+                        <ref target="https://doi.org/10.1007/s11042-023-14560-5">
+                            <hi rend="underline">https://doi.org/10.1007/s11042-023-14560-5</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Lundgren, Sus / Staffan Björk</hi>. 2003. “Game Mechanics: Describing Computer-Augmented Games in Terms of Interaction.” In 
+                        <hi rend="italic">Proceedings of the 1st International Conference on Technologies for Interactive Digital Storytelling and Entertainment</hi>. Darmstadt, Germany. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Liebl, Bernhard / Burghardt, Manuel.</hi> 2020. “Shakespeare in the Vectorian Age” – An evaluation of different word embeddings and NLP parameters for the detection of Shakespeare quotes. In 
+                        <hi rend="italic">Proceedings of the The 4th Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature</hi>: 58–68. International Committee on Computational Linguistics. 
+                        <ref target="https://aclanthology.org/2020.latechclfl-1.7/">https://aclanthology.org/2020.latechclfl-1.7/</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">McInnes, Leland / John Healy / James Melvill</hi>e. 2018. “UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction.” arXiv. 
+                        <ref target="https://doi.org/10.48550/ARXIV.1802.03426">
+                            <hi rend="underline">https://doi.org/10.48550/ARXIV.1802.03426</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Newman, James</hi>. 2011. “(Not) Playing Games: Player-Produced Walkthroughs as Archival Documents of Digital Gameplay.” 
+                        <hi rend="italic">International Journal of Digital Curation</hi> 6 (2): 109–27. 
+                        <ref target="https://doi.org/10.2218/ijdc.v6i2.206">
+                            <hi rend="underline">https://doi.org/10.2218/ijdc.v6i2.206</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Nylund, Niklas</hi>. 2015. “Walkthrough and Let’s Play: Evaluating Preservation Methods for Digital Games.” In 
+                        <hi rend="italic">Proceedings of the 19th International Academic Mindtrek Conference</hi>, 55–62. Tampere Finland: ACM. 
+                        <ref target="https://doi.org/10.1145/2818187.2818283">
+                            <hi rend="underline">https://doi.org/10.1145/2818187.2818283</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Pedregosa, Fabian / Gaël Varoquaux / Alexandre Gramfort / Vincent Michel / Bertrand Thirion / Olivier Grisel / Mathieu Blondel / et al.</hi> 2011. “Scikit-Learn: Machine Learning in Python.” 
+                        <hi rend="italic">Journal of Machine Learning Research</hi> 12 (85): 2825–30.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Pellicer, Lucas F. A. O. / Taynan Maier Ferreira / Anna Helena Reali Costa. </hi>2023. “Data Augmentation Techniques in Natural Language Processing.” 
+                        <hi rend="italic">Applied Soft Computing</hi> 132 (January):109803. 
+                        <ref target="https://doi.org/10.1016/j.asoc.2022.109803">
+                            <hi rend="underline">https://doi.org/10.1016/j.asoc.2022.109803</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Reimers, Nils / Iryna Gurevych</hi>. 2019. “Sentence-BERT: Sentence Embeddings Using Siamese BERT-Networks.” In 
+                        <hi rend="italic">Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)</hi>, 3980–90. Hong Kong, China: Association for Computational Linguistics. 
+                        <ref target="https://doi.org/10.18653/v1/D19-1410">
+                            <hi rend="underline">https://doi.org/10.18653/v1/D19-1410</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Samarasinghe, Dilini / Michael Barlow / Erandi Lakshika / Timothy Lynar / Nour Moustafa / Thomas Townsend / Benjamin Turnbull</hi>. 2021. “A Data Driven Review of Board Game Design and Interactions of Their Mechanics.” 
+                        <hi rend="italic">IEEE Access</hi> 9:114051–69. 
+                        <ref target="https://doi.org/10.1109/ACCESS.2021.3103198">
+                            <hi rend="underline">https://doi.org/10.1109/ACCESS.2021.3103198</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Sicart, Miguel</hi>. 2008. “Defining Game Mechanics.” 
+                        <hi rend="italic">Game Studies</hi> 8 (2). 
+                        <ref target="https://gamestudies.org/0802/articles/sicart">
+                            <hi rend="underline">https://gamestudies.org/0802/articles/sicart</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Tiepmar, Jochen / Manuel Burghardt</hi>. 2021. “Game Walkthrough Corpus (GWTC).” Zenodo. 
+                        <ref target="https://doi.org/10.5281/ZENODO.4562336">https://doi.org/10.5281/ZENODO.4562336</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Zagal, José P. / Clara Fernández-Vara / Michael Mateas</hi>. 2008. “Rounds, Levels, and Waves: The Early Evolution of Gameplay Segmentation.” 
+                        <hi rend="italic">Games and Culture</hi> 3 (2): 175–98. 
+                        <ref target="https://doi.org/10.1177/1555412008314129">
+                            <hi rend="underline">https://doi.org/10.1177/1555412008314129</hi>
+                        </ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

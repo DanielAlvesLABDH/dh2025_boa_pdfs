@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="OGAWA_Jun_Linked_Pasts_Japan__A_Forum_for_Collaboration_onCu">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Linked Pasts Japan: A Forum for Collaboration onCultural Linked Open Data</title>
+                <author>
+                    <persName>
+                        <surname>Ogawa</surname>
+                        <forename>Jun</forename>
+                    </persName>
+                    <affiliation>The University of Tokyo</affiliation>
+                    <email>htjk6513khbk@yahoo.co.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Sekino</surname>
+                        <forename>Tatsuki</forename>
+                    </persName>
+                    <affiliation>International Research Center for Japanese Studies</affiliation>
+                    <email>sekino@nichibun.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Hashimoto</surname>
+                        <forename>Yuta</forename>
+                    </persName>
+                    <affiliation>National Museum of Japanese History</affiliation>
+                    <email>yhashimoto1984@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Miyakita</surname>
+                        <forename>Goki</forename>
+                    </persName>
+                    <affiliation>Keio Museum Commons</affiliation>
+                    <email>5ki-miyakita@kmd.keio.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Yoshiga</surname>
+                        <forename>Natsuko</forename>
+                    </persName>
+                    <affiliation>Osaka University</affiliation>
+                    <email>yoshiga.natsuko.hmt@osaka-u.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Kitamoto</surname>
+                        <forename>Asanobu</forename>
+                    </persName>
+                    <affiliation>ROIS-DS Center for Open Data in the Humanities</affiliation>
+                    <email>kitamoto@nii.ac.jp</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Linked Pasts</term>
+                    <term>Pelagios Network</term>
+                    <term>linked data</term>
+                    <term>community building</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>linked (open) data</term>
+                    <term>project design</term>
+                    <term>organization</term>
+                    <term>management</term>
+                    <term>public humanities collaborations and methods</term>
+                    <term>Cultural studies</term>
+                    <term>Galleries and museum studies</term>
+                    <term>History</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Background</head>
+                <p style="text-align: justify;">
+                    <hi style="font-size:11pt">The use of Linked Open Data (LOD) has long been a focus of discussion in Digital Humanities (DH), with various practical applications emerging over the years. Efforts have been made to curate authoritative data for places, people, or dates, as well as to develop metadata schema for resources.</hi>
+                </p>
+                <p style="text-align: justify;">
+                    <hi style="font-size:11pt">One of the major advantages of LOD lies in its ability to connect data created in diverse context, enabling broad knowledge discovery. However, achieving this in a practical setting necessitates developing systems and tools for data mapping and exchange. These processes require communication and, in many cases, collaboration among actors engaging in data creation.</hi>
+                </p>
+                <p style="text-align: justify;">
+                    <hi style="font-size:11pt" xml:space="preserve">To promote such collaboration in LOD, the </hi>
+                    <hi rend="italic">Pelagios Network</hi>
+                    <hi style="font-size:11pt" xml:space="preserve">(PN) has been organized. This community focuses on exploring methods for structuring information and developing tools [1]. Closely tied to this initiative, the annual </hi>
+                    <hi rend="italic">Linked Pasts (LP) Symposium</hi>
+                    <hi style="font-size:11pt" xml:space="preserve"> brings together researchers and practitioners involved in LOD applications in the humanities, fostering vibrant discussions on shared challenges and opportunities, often sparking innovative collaborative research and projects [2].</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>The Purpose of Linked Pasts Japan</head>
+                <p style="text-align: justify;">
+                    <hi style="font-size:11pt" xml:space="preserve">Building on these global developments, </hi>
+                    <hi rend="italic">Linked Pasts Japan (hereafter, LPJ)</hi>
+                    <hi style="font-size:11pt" xml:space="preserve"> was established to provide a platform for researchers and practitioners in Japan to exchange ideas and collaborate in the field of LOD for cultural studies [3].</hi>
+                </p>
+                <p style="text-align: justify;">
+                    <hi style="font-size:11pt">In Japan, LOD applications in the humanities are already advancing in various areas such as</hi>
+                    <hi rend="italic">JAPAN SEARCH</hi>
+                    <hi style="font-size:11pt" xml:space="preserve"> by the National Diet Library [4], the </hi>
+                    <hi rend="italic">Khirin Project</hi>
+                    <hi style="font-size:11pt" xml:space="preserve"> by the National Museum of Japanese History [5], and the “Historical Big Data" Project by the ROIS-DS Center for Open Data in the Humanities [6]. However, as discussions around these LOD related projects have largely taken place within broader contexts of digital archive, DH, or semantic web conferences, there has been no dedicated space for concentrated discussion on LOD applications in the humanities.</hi>
+                </p>
+                <p style="text-align: justify;">
+                    <hi style="font-size:11pt">Given such situation, LPJ aims to function as a hub for consolidating cultural LOD research in Japan, fostering broad collaborations. Additionally, it seeks to enhance Japan's international presence in this field by serving as a platform for disseminating domestic research developments to the global community.</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <hi rend="bold">Past Activities</hi>
+                </head>
+                <p style="text-align: justify;">
+                    <hi style="font-size:11pt" xml:space="preserve">At its inaugural </hi>
+                    <hi rend="italic">Kick-off Meeting </hi>
+                    <hi style="font-size:11pt">in March 2024, leading researchers involved in LOD-based humanities research and data construction gathered to present their work on data and infrastructure development as well as research applications [7]. Discussions also addressed the current state and challenges of LOD utilization in Japan and the missions LPJ should take.</hi>
+                </p>
+                <p style="text-align: justify;">
+                    <hi style="font-size:11pt">In September 2024, the organization held a panel discussion at the Japanese Association for Digital Humanities (JADH), featuring six co-authors of this poster [8]. The panel provided an opportunity to engage in discussions with national and international participants. Topics included regional specific issues such as calendar systems, name representations, and the unique characteristics of resources, emphasizing the importance of adapting LOD applications to regional particularities. Notably, the session revealed organic connections between different projects, as some presenters identified potential synergies in utilizing each other’s data. Concrete outcomes have already emerged, including collaborative research initiatives aimed at mapping data across projects—progress that aligns with the community's goal of fostering cooperation.</hi>
+                </p>
+                <p style="text-align: justify;">
+                    <hi style="font-size:11pt" xml:space="preserve">Looking ahead, LPJ co-hosts the 10th </hi>
+                    <hi rend="italic">LP Symposium</hi>
+                    <hi style="font-size:11pt" xml:space="preserve"> with the first </hi>
+                    <hi rend="italic">LPJ Symposium</hi>
+                    <hi style="font-size:11pt" xml:space="preserve">in December 2024 [9]. While previous events primarily targeted domestic research and community building, this symposium marks a shift toward establishing robust international communication. Participants will include partners from the PN and other prominent projects, presenting their work and engaging in discussions. Japanese contributors will showcase a range of efforts, from major projects to emerging initiatives. This event promises not only to introduce global developments to a Japanese audience but also to share Japanese research with an international community. </hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Challenges</head>
+                <p style="text-align: justify;">
+                    <hi style="font-size:11pt">LPJ is already an active and recognized community both domestically and internationally. Moving forward, it aims to further strengthen its role as a hub for the application of LOD in the humanities through the following initiatives:</hi>
+                </p>
+                <list type="unordered">
+                    <item>
+                        <hi rend="bold" style="font-size:11pt">Establishing a Solid Community</hi>
+                        <hi style="font-size:11pt" xml:space="preserve">: LPJ will regularly host study meetings and symposia to provide consistent opportunities for communication. Annual symposia, modeled after the Linked Pasts Symposium, will be a key feature. </hi>
+                    </item>
+                </list>
+                <list type="unordered">
+                    <item>
+                        <hi rend="bold" style="font-size:11pt">Collaborating with the Field of Web Engineering</hi>
+                        <hi style="font-size:11pt">: The organization will actively encourage greater participation from researchers in fields such as semantic web and ontology engineering to foster interdisciplinary collaboration.</hi>
+                    </item>
+                </list>
+                <list type="unordered">
+                    <item>
+                        <hi rend="bold" style="font-size:11pt">Strengthening International Relationships</hi>
+                        <hi style="font-size:11pt">: Along with maintaining ongoing communication with the PN and LP, LPJ will focus on building stronger ties with DH communities in East and Southeast Asia. This effort aims to create an environment where region-specific challenges in Asia can be discussed and addressed collaboratively.</hi>
+                    </item>
+                </list>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <ref target="https://pelagios.org/">
+                            <hi style="font-size:11pt">https://pelagios.org/</hi>
+                        </ref>. 
+                    </bibl>
+                    <bibl>
+                        <ref target="https://linkedpasts.hcommons.org/">
+                            <hi style="font-size:11pt">https://linkedpasts.hcommons.org/</hi>
+                        </ref>. 
+                    </bibl>
+                    <bibl>
+                        <ref target="http://codh.rois.ac.jp/sig/linked-pasts-japan/">
+                            <hi style="font-size:11pt">http://codh.rois.ac.jp/sig/linked-pasts-japan/</hi>
+                        </ref>. 
+                    </bibl>
+                    <bibl>
+                        <ref target="https://jpsearch.go.jp/about">
+                            <hi style="font-size:11pt">https://jpsearch.go.jp/about</hi>
+                        </ref>. 
+                    </bibl>
+                    <bibl>
+                        <ref target="https://www.metaresource.jp/about-khirin/">
+                            <hi style="font-size:11pt">https://www.metaresource.jp/about-khirin/</hi>
+                        </ref>. 
+                    </bibl>
+                    <bibl>
+                        <ref target="http://codh.rois.ac.jp/historical-big-data/">
+                            <hi style="font-size:11pt">http://codh.rois.ac.jp/historical-big-data/</hi>
+                        </ref>. 
+                    </bibl>
+                    <bibl>
+                        <ref target="https://sites.google.com/view/lpjkickoff/home">
+                            <hi style="font-size:11pt">https://sites.google.com/view/lpjkickoff/home</hi>
+                        </ref>. 
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:11pt" xml:space="preserve">Ogawa, J., T. Sekino, Y. Hashimoto, G. Miyakita, N. Yoshiga, and A. Kitamoto, ‘Linked Pasts Japan: A Japanese Community for Collaborating Linked Data and Historical &amp; Heritage Studies,’ </hi>
+                        <hi rend="italic" style="font-size:11pt">Proceedings of the 13</hi>
+                        <hi rend="italic superscript" style="font-size:11pt">th</hi>
+                        <hi rend="italic" style="font-size:11pt" xml:space="preserve"> Conference of Japanese Association for Digital Humanities</hi>
+                        <hi style="font-size:11pt" xml:space="preserve">, Tokyo, September 2024, pp. 12-14, </hi>
+                        <ref target="https://drive.google.com/file/d/1PTLKVuU6yEM39M7Wy4N3--BMCJ2-rGh1/view">
+                            <hi style="font-size:11pt">https://drive.google.com/file/d/1PTLKVuU6yEM39M7Wy4N3--BMCJ2-rGh1/view</hi>
+                        </ref>
+                        <hi style="font-size:11pt" xml:space="preserve">. </hi>
+                    </bibl>
+                    <bibl>
+                        <ref target="http://codh.rois.ac.jp/conference/linked-pasts-10/">
+                            <hi style="font-size:11pt">http://codh.rois.ac.jp/conference/linked-pasts-10/</hi>
+                        </ref>. 
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

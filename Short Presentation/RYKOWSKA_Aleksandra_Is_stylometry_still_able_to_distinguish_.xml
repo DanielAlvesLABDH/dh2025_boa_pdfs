@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="RYKOWSKA_Aleksandra_Is_stylometry_still_able_to_distinguish_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Is stylometry still able to distinguish between literary human and machine translation?</title>
+                <author>
+                    <persName>
+                        <surname>Rykowska</surname>
+                        <forename>Aleksandra</forename>
+                    </persName>
+                    <affiliation>Jagiellonian University in Kraków, Poland</affiliation>
+                    <email>aleksandra.rykowska@doctoral.uj.edu.pl</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T16:50:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>machine translation</term>
+                    <term>stylometry</term>
+                    <term>literary machine translation</term>
+                    <term>literary translation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>attribution studies and stylometric analysis</term>
+                    <term>Linguistics</term>
+                    <term>Literary studies</term>
+                    <term>Translation studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">The fact that machine translation quality rises on a daily basis is beyond doubt. With an increasing number of users and training data, the pace of development of machine translators (MT) available on the market comes as no surprise. The biggest leap in translation quality could be seen around 2015 when classic statistical algorithms were replaced by neural machine translators (NMT) (Kenny, 2022). Although the resulting MT is far from perfect, with many errors (Al Sharou, Specia, 2022), as well as harmful stereotypes (Rescigno, Monti, 2023).. </p>
+            <p style="text-align: left; ">The rise in popularity of MT is also resulting in an increase in MT research, especially from the perspective of error analysis (Haque, Hasanuzzaman, and Way, 2020; Carl, Toledo, Báez 2020; Freitag et al. 2021). Most of these focus on applied texts. Only a few studies on literary MT can be found. Voigt and Jurafsky (2012) studied referential cohesion and how it affects translation. Jones and Irvine (2013) translated literary excerpts and analyzed it qualitatively. Besacier and Schwartz (2015) and Toral, Wieling, and Way (2018) analyzed post-editing of French-English and Spanish-Catalan NMT. Toral and Way (2015) built a MT system tailored to Zafón and translated his novels from Spanish to Catalan. For 20% of the sentences, the MT and the HT were identical. ÓMurchú (2017) machine-translated a sci-fi novel from Scottish Gaelic to Irish but also focused on its post-editing. Taivalkoski-Shilov (2019) and Kenny and Winters (2020, 2024) tried to establish the translator's voice in MT, but mainly while comparing the differences between post-editing a MT by a translator who has previously translated the novel. Only Rybicki (2023) presented a stylometric study in which he warned that MT could possibly no longer be clearly distinguished from HT.</p>
+            <p style="text-align: left; ">Rybicki's study was carried out only on a small and rather specific corpus – it included classic French novels. This proposal aims to reconduct this study on a larger corpus, consisting of a total of 1350 texts, comprising 150 titles each of contemporary novels (the earliest novels included in the corpus date from the 19th century) originally written in Italian, Spanish, Serbian, Croatian, Greek, Japanese, Danish, Dutch, Norwegian, Swedish, Czech, Hebrew, Hungarian, and German<ref n="1" target="ftn1"/>. All texts are written in prose. Moreover, at least two books by a given author were included in the corpus, each of which had to be simultaneously translated into three languages: Polish, English, and French. Google Translate, DeepL and the official translator of the EU (
+                <ref target="https://webgate.ec.europa.eu/etranslation/">https://webgate.ec.europa.eu/etranslation/</ref>), were used for MT.
+            </p>
+            <p style="text-align: left; ">The study aims to test whether MT is now stylistically indistinguishable from HT, thanks to the increased sample of literary items and the increased number of starting languages from which individual novels were translated. The research hypothesis is that in the case of English, the indistinguishability of MT from HT will be the strongest; the boundary between the two types of translation will be stylometrically most pronounced in Polish, which represents a heavily inflected language. In addition, its presence is strongly limited in AI training data. </p>
+            <p style="text-align: left; ">The 
+                <hi rend="italic">stylo</hi> package (Eder, Rybicki, Kestemont, 2016) for R was used for the analysis. A bootstrap consensus method using cosine delta for the most frequent words (100 to 1000 MFWs) was used. The results were visualized on a dependency network made with the Gephi program (Bastian, Heymann, Jacomy, 2009). The hypothesis was confirmed that in translations from languages other than French into languages other than English, the boundary between MT and HT is also blurred. Not all authors submit to this principle. In all languages, only the authors Zafón (surprising considering the aforementioned study (Toral and Way, 2015)), Dostoevsky, and Márquez stand out, as shown on Figure 1, Figure 2, and Figure 3.
+            </p>
+            <figure>
+                <graphic n="1001" width="15.473677777777779cm" height="6.647566666666667cm" url="/tmp/tmpgvsu5cq4/Pictures/c132cda7d355d373361b2200f326b8e4.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">
+                <hi rend="italic" xml:space="preserve">Figure </hi>
+                <hi rend="italic">1</hi>
+                <hi rend="italic" xml:space="preserve"> Relations between HT and MT of Zafon's novels</hi>
+            </p>
+            <figure>
+                <graphic n="1002" width="15.991416666666666cm" height="6.238875cm" url="/tmp/tmpgvsu5cq4/Pictures/c132cda7d355d373361b2200f326b8e4.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">
+                <hi rend="italic" xml:space="preserve">Figure </hi>
+                <hi rend="italic">2</hi>
+                <hi rend="italic" xml:space="preserve"> Relations between HT and MT of Marquez novels</hi>
+            </p>
+            <figure>
+                <graphic n="1003" width="15.994944444444444cm" height="8.757708333333333cm" url="/tmp/tmpgvsu5cq4/Pictures/c132cda7d355d373361b2200f326b8e4.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">
+                <hi rend="italic" xml:space="preserve">Figure </hi>
+                <hi rend="italic">3</hi>
+                <hi rend="italic" xml:space="preserve"> Relations between HT and MT of Dostoevski's novels</hi>
+            </p>
+            <p style="text-align: left; ">Intrerestingly there are novels written by same author that do not have any strong connections between HTs but MT connects them all (see Remarque on Figure 4).</p>
+            <figure>
+                <graphic n="1004" width="15.980833333333333cm" height="6.958541666666667cm" url="/tmp/tmpgvsu5cq4/Pictures/c132cda7d355d373361b2200f326b8e4.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">
+                <hi rend="italic" xml:space="preserve">Figure </hi>
+                <hi rend="italic">4</hi>
+                <hi rend="italic" xml:space="preserve"> Relations between Remarque's translations</hi>
+            </p>
+            <p style="text-align: left; ">Contrary to the author’s assumptions, the criterion of analyticity and inflectionality of the language did not bear the expected impact on the study results –the most significant differences between HT and MT can be observed in English, whereas in Polish this boundary is blurred. This may be caused by the fact that translation engines handle inflectional sentence structures well, despite variation errors (Munkova et al., 2021). Similarly, in this case, the results of the stylometric analysis are not influenced by the presence of training data and whether the language is “well-resourced” or “low-resourced”. There is no doubt that MT is becoming increasingly similar to HT stylometrically, both in the case of a translation produced by one of the largest and best-developed translation engines (Google) or while using a translator trained on official EU texts. It seems that the biggest factor in determining whether MT will be distinguishable from HT is the complexity of the individual style of the original in the case of novels originally written in a “well-resourced” language.</p>
+            <p style="text-align: left; ">The study concludes that further analysis should be carried out, on even more extensive corpora. Ultimately, the author plans to analyze a corpus of more than 3000 texts, adding translations of novels into Lithuanian into the existing corpus. The planned research also aims to enrich the corpus with more texts originally written in minority languages and those unrelated to the Indo-European language family. However, the study presented here clearly demonstrates the correlation that literary MT needs to be investigated, as translation engines currently produce results that allow them to cheat stylometry and imitate human artistic language. The author plans to test new ways of distinguishing MT and HT based on the syntax of translated texts.</p>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                     Full list of novels included in the corpus, as well as all visualized results of the study (here the author only presented a small selection of the results) can be found under the link: 
+                        <ref target="https://github.com/aleksandra2812/StylometryMT%20">https://github.com/aleksandra2812/StylometryMT</ref>
+                    
+                </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Al Sharou, K. / Specia, L.</hi> (2022). “A Taxonomy and Study of Critical Errors in Machine Translation”. In 
+                        <hi rend="italic">Proceedings of the 23rd Annual Conference of the European Association for Machine Translation</hi>, Ghent, Belgium. European Association for Machine Translation, pp. 171–180.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Bastian M. / Heymann S. / Jacomy M. </hi>(2009). “Gephi: an open source software for exploring and manipulating networks”. 
+                        <hi rend="italic">International AAAI Conference on Weblogs and Social Media</hi>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Besacier, L. / Schwartz, L.</hi> (2015). “Automated translation of a literary work : a pilot study”. In 
+                        <hi rend="italic">Proceedings of the Fourth Workshop on Computational Linguistics for Literature</hi>. Denver, CO, pp. 114–122.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Carl, M. / Toledo Báez, M.C</hi>. (2020). “Machine translation errors and the translation process: a study across different languages”, 
+                        <hi rend="italic">The Journal of Specialised Translation</hi> 31: 107-132.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Eder, M. / Rybicki, J. / Kestemont, M.</hi> (2016). “Stylometry with R: a package for computational text analysis”. 
+                        <hi rend="italic">R Journal</hi> 8(1): 107-121. &lt;https://journal.r-project.org/archive/2016/RJ-2016-007/index.html&gt;
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Freitag, M. et al.</hi> (2021). Experts, Errors, and Context: A Large-Scale Study of Human Evaluation for Machine Translation. 
+                        <hi rend="italic">Transactions of the Association for Computational Linguistics</hi> 9: 1460–1474. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Haque, R. / Hasanuzzaman, M. / Way, A</hi>. (2020). “Analysing terminology translation errors in statistical and neural machine translation”. 
+                        <hi rend="italic">Machine Translation</hi> 34: 149–195. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kenny, D.</hi> (2022). “Human and Machine Translation. Machine translation for everyone. Empowering users in the age of artificial intelligence”. 
+                        <hi rend="italic">Translation and Multilingual Natural Language Processing 18</hi>. Berlin: Language Science Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kenny, D. / Winters, M.</hi> (2020). “Machine translation, ethics and the literary translator’s voice”. 
+                        <hi rend="italic">Fair MT: Towards ethical, sustainable Machine Translation</hi>, Special Issue of 
+                        <hi rend="italic" xml:space="preserve">Translation Spaces </hi>9(1): 123-149. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Winters, M. / Kenny D.</hi> (2024). “Mark My Keywords. A Translator-Specific Exploration of Style in Literary Machine Translation”. In Rothwell A. / Way A. / Youdale R. (eds.), 
+                        <hi rend="italic">Computer-Assisted Literary Translation</hi>. New York: Routledge. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Jones, R. / Irvine, A.</hi> (2013). “The (un)faithful machine translator”. In 
+                        <hi rend="italic">Proceedings of the 7thWorkshop on Language Technology for Cultural Heritage, Social Sciences, and Humanities</hi> (Sofia), 96–101.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <anchor xml:id="Hlk184477117"/>
+                        <hi rend="bold" xml:space="preserve">Munkova, D. / Munk, M. / Welnitzova, K. / Jakabovicova, J. </hi>(2021). “Product and Process Analysis of Machine Translation into the Inflectional Language”. 
+                        <hi rend="italic">Sage Open</hi>, 11(4). 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Ó Murchú, E. P.</hi> (2017). “Bearnaí i litríocht na Gaeilge a líonadh: Réiteach úr? (filling gaps in Irish-language literature: A novel approach)”. Presented at 
+                        <hi rend="italic">ARAN IMEALL I LÁR AN DOMHAIN: An tairseachúlacht i litríocht agus i gcultúrna hÉireann agus na hEorpa</hi> (Prague).
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Rescigno, A. A. / Monti, J.</hi> (2023). “Gender Bias in Machine Translation: a statistical evaluation of Google Translate and DeepL for English, Italian and German”. In: 
+                        <hi rend="italic">Proceedings of the International Conference HiT-IT</hi> 2: 1-11.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Rybicki, J. </hi>(2023). “Can Machine Translation of Literary Texts Fool Stylometry?” Presentation at: 
+                        <hi rend="italic">Digital Humanities Graz 2023</hi>. {Available online: https://www.youtube.com/watch?v=M17U3ZuV-TU (Accessed: 8 December 2024)}.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Taivalkoski-Shilov, K.</hi> (2019). “Ethical Issues Regarding Machine(-assisted) Translation of Literary Texts”. 
+                        <hi rend="italic" xml:space="preserve">Perspectives </hi>27(5): 689-703.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Toral, A., / Sánchez-Cartagena, V. M.</hi> (2017). ”A multifaceted evaluation of neural versus phrase-based machine translation for 9 language directions”. In 
+                        <hi rend="italic">Proceedings of the 15th Conference of the European Chapter of the Association for Computational Linguistics</hi> 1: 1063–1073.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Toral, A. / Way, A.</hi> (2015). “Translating literary text between related languages using SMT”. In 
+                        <hi rend="italic">Proceedings of the Fourth Workshop on Computational Linguistics for Literature</hi> (Denver, CO), 123–132.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Toral, A. / Way, A.</hi> (2018). “What level of quality can neural machine translation attain on literary text?” In 
+                        <hi rend="italic">Translation Quality Assessment: From Principles to Practice</hi>. J. Moorkens, S. Castilho, F. Gaspari, and S. Doherty (eds.), Berlin; Heidelberg: Springer.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Toral, A. / Wieling, M. / Way A.</hi> (2018). :Post-editing Effort of a Novel With Statistical and Neural Machine Translation”. 
+                        <hi rend="italic">Frontiers in Digital Humanities</hi> 5: 1-11.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

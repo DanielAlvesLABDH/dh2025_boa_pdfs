@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="HUBAR_KO_ODZIEJCZYK_Patryk_Preserving_Cultural_Heritage_in_t">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Preserving Cultural Heritage in the Digital Age: The Role of Software Heritage in Safeguarding Research Software</title>
+                <author>
+                    <persName>
+                        <surname>Umerle</surname>
+                        <forename>Tomasz</forename>
+                    </persName>
+                    <affiliation>The Institute of the Literary Research of the Polish Academy of Sciences</affiliation>
+                    <email>tomasz.umerle@ibl.waw.pl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Rosiński</surname>
+                        <forename>Cezary</forename>
+                    </persName>
+                    <affiliation>The Institute of the Literary Research of the Polish Academy of Sciences</affiliation>
+                    <email>cezary.rosinski@ibl.waw.pl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Hubar-Kołodziejczyk</surname>
+                        <forename>Patryk</forename>
+                    </persName>
+                    <affiliation>University of Warsaw, Poland</affiliation>
+                    <email>p.hubar@uw.edu.pl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Wołczuk</surname>
+                        <forename>Nikodem</forename>
+                    </persName>
+                    <affiliation>The Institute of the Literary Research of the Polish Academy of Sciences</affiliation>
+                    <email>nikodem.wolczuk@ibl.waw.pl</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-08T08:18:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>software heritage</term>
+                    <term>machine learning</term>
+                    <term>data annotation</term>
+                    <term>citation extraction</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>data</term>
+                    <term>object</term>
+                    <term>and artefact preservation</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>natural language processing</term>
+                    <term>Computer science</term>
+                    <term>Cultural studies</term>
+                    <term>Humanities computing</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; text-align: justify;">Research software is an essential element of the research infrastructure in digital humanities, yet its presence often remains concealed within academic publications. This lack of visibility hinders its discoverability, accessibility, and reuse, posing a significant challenge to the preservation of software heritage. The SoFAIR project addresses this issue by creating a semi-automated, machine-learning-assisted system to identify, document, and archive research software while ensuring compliance with the 
+                <hi rend="bold" xml:space="preserve">FAIR principles </hi>(Findable, Accessible, Interoperable, Reusable).
+            </p>
+            <p style="text-align: left; text-align: justify;">The preservation of software heritage is crucial as society increasingly depends on digital and cultural memory. Software serves both as a tool and a medium for accessing knowledge, and its loss would render vast amounts of data—from scientific breakthroughs to cultural artifacts—irretrievable. Software is also a cultural artifact that reflects technological progress and societal evolution. 
+                <hi rend="bold">Software Heritage</hi>, an initiative for archiving source code, safeguards future access, supports education and innovation, and promotes reproducibility in research. This ensures that the knowledge and culture embedded in software persist in a software-dependent world.
+            </p>
+            <p style="text-align: left; text-align: justify;">The SoFAIR project significantly contributes to the preservation of software heritage by addressing key challenges in findability, accessibility, interoperability, and reusability. By extracting mentions of software from scholarly articles and associating them with persistent identifiers (PIDs), the project enhances the visibility and traceability of research software. Archiving this software in the Software Heritage repository ensures its long-term availability for future researchers. Furthermore, SoFAIR promotes interoperability by utilizing metadata standards such as CodeMeta, OpenAIRE Guidelines, and RIOXX, facilitating seamless data exchange across systems</p>
+            <p style="text-align: left; text-align: justify;">By establishing a global network of open repositories linking academic papers with research software, SoFAIR facilitates long-term archiving and reuse. The project integrates and enhances tools such as GROBID, SoftCite, and research infrastructures like CORE, HAL, and Software Heritage, enabling the management of research software throughout its lifecycle. The project incorporates machine learning to extract software mentions from scholarly texts, validate these resources with their authors, and archive them with PIDs.</p>
+            <p style="text-align: left; text-align: justify;">SoFAIR also fine-tunes the SoftCite tool for software mention extraction by employing supervised machine learning techniques, such as graph-based approaches, for entity disambiguation. Robust annotation enhances training data for new research domains, improving tool performance for demonstrators and case studies.</p>
+            <p style="text-align: left; text-align: justify;">The purpose of the poster is to showcase the results of work conducted by the Institute of Literary Research of the Polish Academy of Sciences within the SoFAIR project. In its capacity as a contributor to the SoFAIR project, IBL PAN is engaged in the development of 
+                <hi rend="bold">an annotated dataset with the objective of identifying and disambiguating research software relevant to digital humanities.</hi> Commissioned by IBL PAN, this dataset will play a pivotal role in the refinement of machine learning models for automated software recognition, which will be tailored to the specific requirements of this domain. 
+            </p>
+            <p style="text-align: left; text-align: justify;">Concurrently, the Digital Humanities Centre at IBL PAN is leading key initiatives to demonstrate the value of the SoFAIR system. 
+                <hi rend="bold">A case study will evaluate the effectiveness of the system in the context of scientometric, bibliometric and cultural analyses</hi>, with a particular focus on two critical aspects. The preliminary stage of the investigation will comprise 
+                <hi rend="bold">an examination of the digital transformation within the humanities through the utilisation of the enhanced SoftCite tool</hi>. This will entail an assessment of the extent to which software is being employed in research activities within this domain. Secondly, the 
+                <hi rend="bold">evaluation of SoftCite's feasibility for the SSH Open Marketplace will explore its potential to automatically integrate resources into the European Open Science Cloud (EOSC) platform</hi>, which serves as a comprehensive catalogue of tools, datasets, publications and workflows for the humanities and social sciences. These combined endeavours serve to exemplify IBL PAN's dedication to the advancement of digital research infrastructure and the safeguarding of the software heritage that is intrinsic to humanities scholarship.
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Di Cosmo, Roberto</hi> (2020). 
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt">“</hi>
+                        </hi>Archiving and referencing source code with Software Heritage
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt">“</hi>
+                        </hi>. In: 
+                        <hi rend="italic">International Congress on Mathematical Software</hi>, 362-373. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Di Cosmo, Roberto / Gruenpeter, Morane / Marmol, Bruno / Monteil, Alain / Romary, Laurent / Sadowska, Jozefina</hi> (2020). 
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt">“</hi>
+                        </hi>Curated archiving of research software artefacts: lessons learned from the French open archive (HAL)
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt">“</hi>
+                        </hi>. in: 
+                        <hi rend="italic">IDCC 2020-International Digital Curation Conference</hi>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Knoth, Petr / Romary, Laurent / Lopez, Patrice / Di Cosmo, Roberto / Smrz, Pavel / Umerle, Tomasz / Harrison, Melissa / Monteil, Alain / Cancellieri, Matteo / Pride, David</hi> (2025). 
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt">“</hi>
+                        </hi>Making Software FAIR: A machine-assisted workflow for the research software lifecycle.
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt">“</hi>
+                        </hi>
+                        <hi rend="italic">arXiv preprint arXiv:2501.10415</hi>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Lopez, Patrice</hi> (2009). 
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt">“</hi>
+                        </hi>GROBID: Combining automatic bibliographic data recognition and term extraction for scholarship publications
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt">“</hi>
+                        </hi>. in: 
+                        <hi rend="italic">International conference on theory and practice of digital libraries</hi>, 473-474.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Lopez, Patrice / Du, Caifan / Cohoon, Johanna / Ram, Karthik / Howison, James</hi> (2021). 
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt">“</hi>
+                        </hi>Mining software entities in scientific literature: document-level ner for an extremely imbalance and large-scale task
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt">“</hi>
+                        </hi>. in: 
+                        <hi rend="italic">Proceedings of the 30th ACM International Conference on Information &amp; Knowledge Management</hi>, 3986-3995.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

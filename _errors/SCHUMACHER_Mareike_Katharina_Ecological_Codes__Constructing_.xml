@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SCHUMACHER_Mareike_Katharina_Ecological_Codes__Constructing_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Ecological Codes: Constructing Nature in Literature</title>
+                <author>
+                    <persName>
+                        <surname>Schumacher</surname>
+                        <forename>Mareike Katharina</forename>
+                    </persName>
+                    <affiliation>University of Regensburg, Germany</affiliation>
+                    <email>mareike.schumacher@ur.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Flüh</surname>
+                        <forename>Marie</forename>
+                    </persName>
+                    <affiliation>University of Hamburg, Germany</affiliation>
+                    <email>marie.flueh@uni-hamburg.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Lempp</surname>
+                        <forename>Felix</forename>
+                    </persName>
+                    <affiliation>Universität Bern, Schweiz</affiliation>
+                    <email>felix.lempp@unibe.ch</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-23T11:47:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Computational Environmental Humanities</term>
+                    <term>Ecocriticism</term>
+                    <term>Machine Learning</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>eco-criticism and environmental analysis</term>
+                    <term>natural language processing</term>
+                    <term>text mining and analysis</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Ecological Codes: Constructing Nature in Literature</head>
+                <p style="text-align: left;">
+                    <hi style="font-size:12pt">Unlike in non-digital literary research, computational analyses of ecocritical aspects in literary texts are rare. This study presents an approach that is focused on natural habitats, plants and animals in German-language literature. To find out more about the aesthetic design, representation and distribution of ‘ecological codes’––as which we understand the interplay of environmental entities in a given text as well as their distribution––we develop a classifier for animals, plants, and habitats in literary texts and apply it to 682 texts published between 1870 and 1920. In our contribution we will address two main topics: From a methodological perspective we gain insights into the operationalization of environmental phenomena in texts including a workflow for annotation, and a way of dealing with low-frequency phenomena such as environmental elements. From a thematic perspective we correlate our findings about density, diversity and design of ecological codes in 19th and 20th century literature with questions regarding gender and the history of knowledge manifested in these texts.</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Background and research interest</head>
+                <p>
+                    <hi style="font-size:12pt">While already entrenched in the English-speaking world during the 1980s, an ecocritical approach was established in the German-speaking non-digital literary studies a bit later (cf. Goodbody 1995; Morris-Keitel / Niedermeier 2000, Bühler 2016; Schmitt / Solte-Gresser 2017; Zemanek 2017; Detering 2020). However, the emergence of literary animal studies since the turn of the millennium (cf. Borgards 2016) and, more recently, plant studies (cf. Stobbe et al. 2022) are only the most obvious examples for the implementation of an ecological paradigm in German Studies. The topic of</hi>
+                    <hi rend="italic" style="font-size:12pt" xml:space="preserve">Computational </hi>
+                    <hi style="font-size:12pt">Environmental Humanities has only been taken up in the last ten years (e.g. Jörgensen 2014, Langer et al. 2021, Travis et al. 2023). This has resulted in first quantitative case studies on the role of biodiversity in literature (Langer et al. 2021, Langer et al. 2022, Piper 2022), questions of agency and personification of nature (Gius und Uglanova 2023), and sustainability (Schumacher et al. 2023, Schumacher and Gius 2023). Based on this research, we investigate the occurrences of</hi>
+                    <hi rend="italic" style="font-size:12pt">animals</hi>
+                    <hi style="font-size:12pt" xml:space="preserve">, </hi>
+                    <hi rend="italic" style="font-size:12pt">plants</hi>
+                    <hi style="font-size:12pt" xml:space="preserve"> and their</hi>
+                    <hi rend="italic" style="font-size:12pt">habitats</hi>
+                    <hi style="font-size:12pt" xml:space="preserve"> in narrative texts (1870–1920). </hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Method</head>
+                <p style="text-align: left;">
+                    <hi style="font-size:12pt">We apply a transfer learning approach that combines a large language model (gBERT) with fine-tuning using CRF algorithms (Schumacher/Flüh/Lemke 2021). This allows us to achieve fairly reliable accuracy values for the automatic classification of animals, plants and habitats in the scope of this pilot study. We work with a relatively small set of gold standard training data (150,000 tokens / 3 expert annotators). As the phenomenon turned out to be of low frequency during the training process, the preliminary work for the automation relies on relevance-driven selection of training data.</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Textcorpora</head>
+                <p style="text-align: left;">
+                    <hi style="font-size:12pt">We annotated EcoCor as a training corpus and simultaneously developed annotation guidelines following Reiter (2020). The repository consists of 31 ecocritically relevant texts from 1790 to 1920 (cf. Barkey et al. 2024). In order to identify passages that involve animals, plants, and habitats, we used a pre-classifier that was trained in preliminary studies. The final training corpus comprises 150,000 tokens consisting of 5,000 token passages from 30 EcoCor texts, each with at least two references on nature. The iterative manual annotation of the training data leads to increasing agreement values (table 1), which start with substantial values and end with a perfect match (Artstein/Poesio: 2008).</hi>
+                </p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: left;">
+                            <hi rend="bold" style="font-size:12pt">Phase of manual annotation</hi>
+                        </cell>
+                        <cell style="text-align: left;">Texts</cell>
+                        <cell style="text-align: left;">
+                            <hi rend="bold" style="font-size:12pt">Fleiss’ Kappa</hi>
+                        </cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">1</cell>
+                        <cell style="text-align: left;">
+                            <hi style="font-size:12pt">training corpus</hi>
+                        </cell>
+                        <cell style="text-align: left;">0,7656</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">2</cell>
+                        <cell style="text-align: left;">
+                            <hi style="font-size:12pt">Marlitt</hi>
+                            <hi rend="italic" style="font-size:12pt">Die zweite Frau</hi>
+                        </cell>
+                        <cell style="text-align: left;">0,7966</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">2</cell>
+                        <cell style="text-align: left;">
+                            <hi style="font-size:12pt" xml:space="preserve">Raabe </hi>
+                            <hi rend="italic" style="font-size:12pt">Pfisters Mühle</hi>
+                        </cell>
+                        <cell style="text-align: left;">0,7882</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">3</cell>
+                        <cell style="text-align: left;">
+                            <hi style="font-size:12pt" xml:space="preserve">Spyri </hi>
+                            <hi rend="italic" style="font-size:12pt">Heidis Lehr- und Wanderjahre</hi>
+                        </cell>
+                        <cell style="text-align: left;">0,8909</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">3</cell>
+                        <cell style="text-align: left;">
+                            <hi style="font-size:12pt">Loens</hi>
+                            <hi rend="italic" style="font-size:12pt">Tiergeschichten auf Forst und Flur</hi>
+                        </cell>
+                        <cell style="text-align: left;">0,8861</cell>
+                    </row>
+                </table>
+                <p style="text-align: left;">
+                    <hi rend="bold" style="font-size:12pt">Table 1: Fleiss’ Kappa for three phases of manual annotation</hi>
+                </p>
+                <p style="text-align: left;">
+                    <hi style="font-size:12pt">The test corpus consists of 20,000 token-passages taken from four texts that are relevant from an ecocritical perspective and that were written between 1870 and 1920 (see table 1). 
+                        <lb/>The analysis corpus was generated from d-Prose, a corpus of around 2,000 fictional texts (short stories and novels) covering the period 1870–1920 (Gius et al. 2021). It contains a sample of 682 texts, which has been balanced with regard to authors’ gender.
+                    </hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Performance</head>
+                <p style="text-align: left;">
+                    <hi style="font-size:12pt">The monitoring of the machine learning training shows that the automatic recognition and classification of plants, animals, and habitats in literary texts is promising. The baseline classification shows an F1 score of 0.51 on average for the training corpus. By using the transfer learning tool NTEE (Lemke et al. forthcoming), this value could be increased to 0.73 (table 2).</hi>
+                </p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: left;">Modell</cell>
+                        <cell style="text-align: left;">
+                            <hi style="font-size:12pt">F1-Score Marlitt (1874)</hi>
+                        </cell>
+                        <cell style="text-align: left;">
+                            <p style="text-align: left;">F1-Score Spyri</p>
+                            <p style="text-align: left;">(1880)</p>
+                        </cell>
+                        <cell style="text-align: left;">
+                            <p style="text-align: left;">F1-Score Raabe</p>
+                            <p style="text-align: left;">(1884)</p>
+                        </cell>
+                        <cell style="text-align: left;">
+                            <p style="text-align: left;">F1-Score Löns</p>
+                            <p style="text-align: left;">(1906-1916)</p>
+                        </cell>
+                        <cell style="text-align: left;">Durchschnitt</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">
+                            <hi style="font-size:12pt">StanfordNER / CRF (Baseline)</hi>
+                        </cell>
+                        <cell style="text-align: left;">0,5914</cell>
+                        <cell style="text-align: left;">0,5046</cell>
+                        <cell style="text-align: left;">0,5805</cell>
+                        <cell style="text-align: left;">0,3793</cell>
+                        <cell style="text-align: left;">0,51395</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">NTEE (Transfer-Learning mit BERT und CRF)</cell>
+                        <cell style="text-align: left;">0,7662</cell>
+                        <cell style="text-align: left;">0,7261</cell>
+                        <cell style="text-align: left;">0,7339</cell>
+                        <cell style="text-align: left;">0,7189</cell>
+                        <cell style="text-align: left;">0,7363</cell>
+                    </row>
+                </table>
+                <p style="text-align: center;">
+                    <hi rend="bold" style="font-size:12pt">Table 2: machine learning training results by model and test text</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Selection of findings: overall distribution, density, and terminological variance</head>
+                <p style="text-align: left;">
+                    <hi style="font-size:12pt">Most annotations fall into the 'habitat' category and there is a preference for the animals over plants which fits in with the fact that humans tend to underestimate the importance of plants for their own living environment––a phenomenon known as “plant blindness” (Wandersee / Schussler 2001). Interestingly, however, this “animal bias” is mainly attributable to texts written by men. Female authors tend to mention plants more often, which might be a consequence of the fact that around 1800 botany became part of the (middle-class) female educational canon (cf. Shteir 1989).</hi>
+                </p>
+                <p style="text-align: left;">
+                    <hi style="font-size:12pt">Calculating the relative distribution of all annotations, we can initially confirm that references to nature are a low frequency phenomenon, which on average makes up between 0.1 and 2% of tokens in the analysis corpus. There are 14 texts that fall below this range and one text does not contain any references at all. There are 67 positive outliers.</hi>
+                </p>
+                <p style="text-align: left;">
+                    <hi style="font-size:12pt">In the ecosphere of these texts, the forest is of particular importance. With regard to all three categories, there is a kind of “green noise”: comparatively high-frequency of European habitats, rather general references to animals and plants. In our contribution, we will present the central findings and our approach in more detail. In addition, we want to link the analytical results obtained in the case study with the literary studies perspective and, in particular, show how our approach is connectable to Timothy Morton's (2010) idea of the “mesh”, which he uses to describe the relationship between human and non-human life forms.</hi>
+                </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Artstein, Ron</hi> / 
+                        <hi rend="bold">Poesio, Massimo</hi> (2008): "Inter-Coder Agreement for Computational Linguistics", in: 
+                        <hi rend="italic">Computational Linguistics</hi> 34 (4): 555–596.
+                        <ref target="https://doi.org/10.1162/coli.07-034-R2">
+                            <hi rend="color(1155CC)">10.1162/coli.07-034-R2</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Barkey, Sören et al.</hi>: 
+                        <hi rend="italic">EcoCor</hi>.
+                        <ref target="https://ecocor.org/doc/credits">
+                            <hi rend="color(1155CC)">https://ecocor.org/doc/credits</hi>
+                        </ref> [letzter Zugriff 23. Juli 2024].
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Borgards, Roland</hi> (ed.) (2016): 
+                        <hi rend="italic">Tiere: kulturwissenschaftliches Handbuch</hi>. Stuttgart: J.B. Metzler Verlag.
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold" xml:space="preserve">Bühler, Benjamin </hi>(2016): 
+                        <hi rend="italic">Ecocriticism eine Einführung</hi>.Stuttgart: J.B. Metzler Verlag.
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Detering, Heinrich</hi> (2020): 
+                        <hi rend="italic">Menschen im Weltgarten: die Entdeckung der Ökologie in der Literatur von Haller bis Humboldt</hi>. 2. Auflage Göttingen: Wallstein Verlag.
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Gius, Evelyn</hi> / 
+                        <hi rend="bold">Guhr, Svenja</hi> / 
+                        <hi rend="bold">Adelmann, Benedikt</hi> (2021): 
+                        <hi rend="italic">d-Prose 1870-1920</hi>. Zenodo.
+                        <ref target="https://zenodo.org/records/5015008">
+                            <hi rend="color(1155CC)">https://zenodo.org/records/5015008</hi>
+                        </ref> [letzter Zugriff 23. Juli 2024].
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Gius, E.</hi> / 
+                        <hi rend="bold" xml:space="preserve">Uglanova, I. </hi>(2023) ‘Natur als Agens. Versuch einer computationellen Annäherung’, in R. Borgards, F. Middelhoff, and B. Thums (eds) 
+                        <hi rend="italic">Romantische Ökologien: Vielfältige Naturen um 1800</hi>. Berlin, Heidelberg: Springer, pp. 265–289. Available at:
+                        <ref target="https://doi.org/10.1007/978-3-662-67186-3_13">
+                            <hi rend="color(1155CC)">https://doi.org/10.1007/978-3-662-67186-3_13</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Goodbody, Axel</hi> (ed.) (1995): Literatur und Ökologie: Zur Einführung, in: 
+                        <hi rend="italic">Literatur und Ökologie</hi>. Amsterdam: Rodopi, S. 11-40.
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Jørgensen, Finn Arne</hi> (2014): "The Armchair Traveler’s Guide to Digital Environmental Humanities", in: 
+                        <hi rend="italic">Environmental Humanities</hi> 4 (1): 95–112.
+                        <ref target="https://doi.org/10.1215/22011919-3614944">
+                            <hi rend="color(1155CC)">10.1215/22011919-3614944</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Langer, Lars</hi> / 
+                        <hi rend="bold">Burghardt, Manuel</hi> / 
+                        <hi rend="bold">Borgards, Roland</hi> / 
+                        <hi rend="bold">Böhning-Gaese, Katrin</hi> / 
+                        <hi rend="bold">Seppelt, Ralf</hi> / 
+                        <hi rend="bold">Wirth, Christian</hi> (2021): "The rise and fall of biodiversity in literature: A comprehensive quantification of historical changes in the use of vernacular labels for biological taxa in Western creative literature", in: 
+                        <hi rend="italic">People and Nature</hi> 3 (5): 1093–1109.
+                        <ref target="https://doi.org/10.1002/pan3.10256">
+                            <hi rend="color(1155CC)">10.1002/pan3.10256</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Lemke, Marc / Sperfeld, Konrad / Zöllner, Jochen</hi> (forthcoming): “Introducing NTEE: An easy to use tool to enrich TEI files with entities based on state of the art neural networks”, in: Geiger, Bernhard / Henny-Kramer, Ulrike / Kaßner, Fabian / Lemke, Mark / Schneider, Gerlinde /  und Scholger, Martina (Ed.): 
+                        <hi rend="italic">Machine Learning and Data Mining for Digital Scholarly Editions</hi>. Norderstedt: Schriften des Instituts für Dokumentologie und Editorik 18.
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Langer, Lars</hi> / 
+                        <hi rend="bold">Burghardt, Manuel</hi> / 
+                        <hi rend="bold">Borgards, Roland</hi> / 
+                        <hi rend="bold">Böhning-Gaese, Katrin</hi> / 
+                        <hi rend="bold">Seppelt, Ralf</hi> / 
+                        <hi rend="bold">Wirth, Christian</hi> (2021): "The rise and fall of biodiversity in literature: A comprehensive quantification of historical changes in the use of vernacular labels for biological taxa in Western creative literature", in: 
+                        <hi rend="italic">People and Nature</hi> 3 (5): 1093–1109.
+                        <ref target="https://doi.org/10.1002/pan3.10256">
+                            <hi rend="color(1155CC)">10.1002/pan3.10256</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Langer, Lars</hi> / 
+                        <hi rend="bold">Burghardt, Manuel</hi> / 
+                        <hi rend="bold">Borgards, Roland</hi> / 
+                        <hi rend="bold">Köhring, Esther</hi> / 
+                        <hi rend="bold">Wirth, Christian</hi> (2022): 
+                        <hi rend="italic">Digital Environmental Humanities - Zum Potential von „Computational and Literary Biodiversity Studies“ (CoLiBiS)</hi>. Zenodo.
+                        <ref target="https://zenodo.org/records/6327941">
+                            <hi rend="color(1155CC)">https://zenodo.org/records/6327941</hi>
+                        </ref> [letzter Zugriff 19. Juli 2024].
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold" xml:space="preserve">​​Morris-Keitel, Peter / Niedermeier, Michael </hi>(eds.) (2000): 
+                        <hi rend="italic">Ökologie und literatur</hi>. (= German life and civilization v. 33) New York: P. Lang.
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Morton, Timothy</hi> (2010): 
+                        <hi rend="italic">The Ecological Thought</hi>. Cambridge: Harvard University Press.
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Piper, A.</hi> (2022) ‘Biodiversity is not declining in fiction’, 
+                        <hi rend="italic">Journal of Cultural Analytics</hi>, 7(3). Available at:
+                        <ref target="https://doi.org/10.22148/001c.38739">
+                            <hi rend="color(1155CC)">https://doi.org/10.22148/001c.38739</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Reiter, N.</hi> (2020) ‘Anleitung zur Erstellung von Annotationsrichtlinien’, in Reiter, Nils, A. Pichler, and J. Kuhn (eds) 
+                        <hi rend="italic">Reflektierte algorithmische Textanalyse</hi>. Berlin: De Gruyter, pp. 193–202. Available at:
+                        <ref target="https://doi.org/10.1515/9783110693973-009">
+                            <hi rend="color(1155CC)">https://doi.org/10.1515/9783110693973-009</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Schmitt, Claudia</hi> / 
+                        <hi rend="bold">Solte-Gresser, Christiane</hi> (eds.) (2017): 
+                        <hi rend="italic">Literatur und Ökologie: neue literatur- und kulturwissenschaftliche Perspektiven</hi>. Bielefeld: Aisthesis Verlag.
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Schumacher, Mareike Katharina</hi> / 
+                        <hi rend="bold">Flüh, Marie</hi> / 
+                        <hi rend="bold">Lemke, Marc</hi> (2022): 
+                        <hi rend="italic">The model of choice.Using pure CRF- and BERT-based classifiers for gender annotation in German fantasy fiction</hi>.
+                        <ref target="https://dh-abstracts.library.cmu.edu/works/11915">
+                            <hi rend="color(1155CC)">https://dh-abstracts.library.cmu.edu/works/11915</hi>
+                        </ref> [letzter Zugriff 5. März 2024].
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Schumacher, Mareike</hi> / 
+                        <hi rend="bold">Gius, Evelyn</hi> (2023): Uncovering principles of sustainability in literature. In: Baillot, A. (2023) „Digital Humanities 2023: Book of Abstracts“. Digital Humanities 2023. Collaboration as Opportunity. (DH2023), Zenodo. doi: 10.5281/zenodo.7961822.
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Schumacher, Mareike / Gius, Evelyn</hi> / 
+                        <hi rend="bold">Marienberg-Milikowski, Itay</hi> (2023): Stories of sustainability. In: Gilbert, S., &amp; Rockenberger, A. (2023). DHNB2023 Book of Abstracts: Sustainability: Environment, Community, Data. Zenodo. https://doi.org/10.5281/zenodo.7670464
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Shteir, Ann B.</hi> (1989): 
+                        <hi rend="italic">Botany in the Breakfast Room: Women and Early Nineteenth-Century British Plant Study</hi>. in: Abir-Ama, Pnina G. / Outram, Dorinda (eds.): 
+                        <hi rend="italic">Uneasy Careers and Intimate Lives: Women in Science, 1789-1979</hi>. Rutgers University Press. 31–43.
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Stobbe, Urte</hi> / 
+                        <hi rend="bold">Kramer, Anke</hi> / 
+                        <hi rend="bold">Wanning, Berbeli</hi> (eds.) (2022): 
+                        <hi rend="italic">Literaturen und Kulturen des Vegetabilen: Plant Studies--kulturwissenschaftliche Pflanzenforschung</hi>. (= Studies in literature, culture, and the environment volume 10) Berlin ; New York: Peter Lang.
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Travis, Charles</hi> / 
+                        <hi rend="bold">Dixon, Deborah P.</hi> / 
+                        <hi rend="bold">Bergmann, Luke</hi> / 
+                        <hi rend="bold">Legg, Robert</hi> / 
+                        <hi rend="bold">Crampsie, Arlene</hi> (eds.) (2023): 
+                        <hi rend="italic">Routledge handbook of the digital environmental humanities</hi>. Abingdon, Oxon ; New York, NY: Routledge.
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold">Wandersee, James H., / Schussler, Elisabeth E.</hi> (2001): Toward a Theory of Plant Blindness. In: 
+                        <hi rend="italic" xml:space="preserve">Plant Science Bulletin </hi>47 (1): 2–9.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Zemanek, Evi</hi> (ed.) (2017): 
+                        <hi rend="italic">Ökologische Genres: Naturästhetik - Umweltethik - Wissenspoetik</hi>. (= Umwelt und Gesellschaft Band 16) Göttingen: Vandenhoeck &amp; Ruprecht
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="HASHIMOTO_Takehiro_How_does_war_affect_Romantic_literature__">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>How does war affect Romantic literature? Topic modeling Romantic documents</title>
+                <author>
+                    <persName>
+                        <surname>Hashimoto</surname>
+                        <forename>Takehiro</forename>
+                    </persName>
+                    <affiliation>Chuo University, Japan</affiliation>
+                    <email>hast@tamacc.chuo-u.ac.jp</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T11:11:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>war</term>
+                    <term>British romanticism</term>
+                    <term>literature</term>
+                    <term>topic modeling</term>
+                    <term>influence</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>text mining and analysis</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Introduction</p>
+            <p>During the Romantic period in England, social disorders such as war, conflict, and revolution greatly influenced its literature. The peculiar social conditions brought about by war, including broken families (Walker 2009: 81), soldiers’ separation and isolation from society and the pervasive disorder (Shaw 2013: 125-134), drowned out public calls for peace by pro-war majority (Bugg 2022: 11, Watson 2003: 72). Britain in the Romantic era was geographically distant from war, so the British people learned about war indirectly through newspapers, books, or plays (Ramsay 2023: 40; Russell 1995: 17). Neil Ramsay claims that war writings increased from the 1760s to the 1830s, and strongly influencing Romantic culture (2023: 23-35). How, then, did the war affect the literature of the Romantic era? This paper aims to examine this relationship between the social situation of war and published war poetry in the Romantic period by examining changes in war topics in books published between 1740 and 1840. In this context, war refers to conflicts both between nations and within a country (i.e., civil war). The questions here are whether topic modeling can extract war topics from a large number of poems, what kind of topics are related to war, and whether the period when war poems increased can be traced. We will focus on the following three research questions:</p>
+            <p>RQ1: What vocabulary is specific to war poetry in the British Romantic period?</p>
+            <p>RQ2: Can we extract poems related to war by classifying them using topic modeling? What topics appear as war poems?</p>
+            <p>RQ3: Can we find any influence of the British Romantic social situation on war poems?</p>
+            <p>Method</p>
+            <p>In this paper, we took a two-step approach: first, we extracted vocabulary specific to war poetry as a criterion for identifying war topics, and then we conducted topic modeling to discern war poetry.</p>
+            <p>The corpus used for this study is twofold. The first is Betty Bennett's 
+                <hi rend="italic">British War Poetry in the Age of Romanticism, 1793-1815</hi> (1976; hereafter 
+                <hi rend="italic">War Poetry</hi>). 
+                <hi rend="italic">War Poetry</hi> is the first anthology of war poetry manually collected from a variety of journals and books, including both pro- and anti-war poems. Many of them are poems by women such as Amelia Opie, Charlotte Smith, and Anna Seward. They address a variety of themes such as freedom and justice, returning soldiers, orphans, impressment, and anxiety about invasion, etc. The 
+                <hi rend="italic">War Poetry</hi> is used to extract vocabulary specific to war poetry. The seconds corpus is books of poetry from the HathiTrust Digital Library. Based on the meta-dataset of poetry compiled by Ted Underwood and others (2015), we created a list of poetry books published between 1740 and 1840 in England, totaling 6055 entries. The number of books are fewer before 1800, and the dataset includes reprints (Figure 1). We used the text data for these books provided by the HathiTrust Research Center on the data capsule environment (hereafter HTRC). 
+            </p>
+            <figure>
+                <graphic n="1001" width="10.32915cm" height="6.69925cm" url="/tmp/tmp93l_33ye/Pictures/d69129a7480adac92cd8c7efbd2353a1.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left;">Figure 1: Distribution of texts over year</p>
+            <p>First, to extract the vocabulary specific to war poetry, we calculated the rate of frequency of each word in 
+                <hi rend="italic">War Poetry</hi> and in the HTRC in the same way and calculated the difference between those rates. We finally extracted the top 200 words with the highest rates. We chose this number because of OCR errors and large dataset size, doubled by the numbers of topics.
+            </p>
+            <p>Next, we performed topic modeling on the dataset using MALLET with LDA. We extracted the top 200 words for each 100 topics, and we labeled each topic. The results of topic modeling and extracted vocabulary specific to war poetry were weighted by tf-idf and compared cosine similarity to extract the top 10 topics, compensating for eyeballing inefficiency (Gillings and Hardie 2023: 541). After excluding topics unrelated to war, we identified four war topics. </p>
+            <p>Finally, we represented war-related topics visually by showing the changes in average weights each year.</p>
+            <p>Analysis and Discussion</p>
+            <p>One characteristic of specific war poetry vocabulary in the British Romantic era is that it includes both proper nouns, such as France and Nelson, and abstract nouns that prompt war, including freedom, victory, and country (RQ1). Topic modeling shows four topics similar to war vocabulary (Figure 2): 1. War (Positive, Liberty, and Justice), 2. Battle (Old Age), 3. General War (Battle), and 4. War (Triumph) (RQ2). The first topic 1. War (Positive, Liberty, and Justice) includes words such as “freedom,” “peace,” and “country,” which are remarkably frequent in 1797 and 1801-09 and from 1813 onwards. This is thus considered a representative topic in the war poetry of the Romantic period. 2. Battle (Old Age) seems to be a description of wars taking place before the 18th century, as it includes words such as “Trojan,” “shield,” and “spear.” The anxiety about invasion and fear of wars in distant places are thought to increase the number of depictions of wars from ancient times. 3. General War (Battle) includes specific words associated with battles such as “slain,” “march,” and “ranks.” The number of these words increases between 1797-98 and 1807-40, coinciding with the rise in war writings. 4. War (Triumph) includes words such as “glory,” “mighty,” and “praise.” This topic seems to draw on the outbreak of war such as the the American War of Independence or the end of Treaty of Amiens. This topic, together with 2. Battle (Old Age), suggests that the social anxiety about war increases the publication of war poems (RQ3).</p>
+            <figure>
+                <graphic n="1002" width="16.002cm" height="11.408833333333334cm" url="/tmp/tmp93l_33ye/Pictures/d69129a7480adac92cd8c7efbd2353a1.png" rend="inline"/>
+            </figure>
+            <p>Figure 2: Changes over time</p>
+            <p>Conclusion</p>
+            <p>In this paper, we extracted topics related to war from English Romantic poems and examined their impact on the poetry, showing that the social situations of war increased the number of poems. As Tabata said (2023: 290), topic modeling proved valid and useful for visualizing the relationship between war and literature in the Romantic Age. The method used in this paper can be extended to literary works in other countries or genres if war has potentially influenced books or other publications in a certain time period.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Bennett, Betty T. (1976): 
+                        <hi rend="italic">British War Poetry in the Age of Romanticism, 1793-1815</hi>. New York: Garland Publishing. 
+                    </bibl>
+                    <bibl>Bugg, John (2022): 
+                        <hi rend="italic">British Romanticism and Peace</hi>. Oxford University Press.
+                    </bibl>
+                    <bibl>Gillings, Mathew / Andrew Hardie (2023): “The interpretation of topic models for scholarly analysis: an evaluation and critique of current practice”, in: 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi>, 38, 2: 530–43. DOI: 10.1093/llc/fqac075.
+                    </bibl>
+                    <bibl>HathiTrust: 
+                        <hi rend="italic">HathiTrust Digital Library</hi>. &lt;https://www.hathitrust.org&gt; [30.04.2025].
+                    </bibl>
+                    <bibl>HathiTrust Research Center: “HTRC data capsule environment”, in: 
+                        <hi rend="italic">HathiTrust Research Center Analytics</hi>. &lt;https://analytics.hathitrust.org/capsules&gt; [30.04.2025].
+                    </bibl>
+                    <bibl>McCallum, Andrew Kachites (2002): 
+                        <hi rend="italic">MALLET: A Machine Learning for Language Toolkit</hi>. &lt;http://mallet.cs.umass.edu&gt; [30.04.2025].
+                    </bibl>
+                    <bibl>Ramsey, Neil (2023): 
+                        <hi rend="italic">Romanticism and the Biopolitics of Modern War Writing</hi>. Cambridge: Cambridge University Press.
+                    </bibl>
+                    <bibl>Russell, Gillian (1995): 
+                        <hi rend="italic">Theatres of War: Performance, Politics, and Society 1793-1815</hi>. Oxford: Clarendon Press.
+                    </bibl>
+                    <bibl>Shaw, Philip (2013): 
+                        <hi rend="italic">Suffering and Sentiment in Romantic Military Art</hi>. Farnham: Ashgate. (2016): Oxford: Routledge.
+                    </bibl>
+                    <bibl>Tabata, Tomoji (2023): “Distant reading of British classic fiction using probabilistic topic models.”, in: 
+                        <hi rend="italic">Studies in English literature. Regional branches combined issue</hi>, 16: 288–297. (in Japanese).
+                    </bibl>
+                    <bibl>Underwood, Ted / Capitanu, Boris / Organisciak, Peter / Bhattacharyya, Sayan / Auvil, Loretta / Fallaw, Colleen / Downie, J. Stephen (2015): “Word frequencies in English-language literature, 1700-1922 (0.2)”, in: 
+                        <hi rend="italic">HathiTrust Research Center</hi>. DOI: 10.13012/J8JW8BSJ. 
+                    </bibl>
+                    <bibl>Walker, Eric C (2009): 
+                        <hi rend="italic">Marriage, Writing and Romanticism: Wordsworth and Austen after War</hi>. Stanford: Stanford University Press.
+                    </bibl>
+                    <bibl>Watson, J. R (2003): 
+                        <hi rend="italic">Romanticism and War: A Study of British Romantic Period Writers and the Napoleonic Wars</hi>. Hampshire: Palgrave Macmillan.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

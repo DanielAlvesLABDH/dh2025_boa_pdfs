@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="FR_HWIRTH_Timo_Auden_in_Austria_Digital__Formalizing__interp">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Auden in Austria Digital: Formalizing &lt;interp&gt;retation in TEI/XML through RDFa</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Carloni</surname>
+                        <forename>Massimiliano</forename>
+                    </persName>
+                    <affiliation>Austrian Centre for Digital Humanities and Cultural Heritage, Austrian Academy of Sciences</affiliation>
+                    <email>massimiliano.carloni@oeaw.ac.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Frühwirth</surname>
+                        <forename>Timo</forename>
+                    </persName>
+                    <affiliation>Austrian Centre for Digital Humanities and Cultural Heritage, Austrian Academy of Sciences</affiliation>
+                    <email>timo.fruehwirth@oeaw.ac.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Mayer</surname>
+                        <forename>Sandra</forename>
+                    </persName>
+                    <affiliation>Austrian Centre for Digital Humanities and Cultural Heritage, Austrian Academy of Sciences</affiliation>
+                    <email>sandra.mayer@oeaw.ac.at</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-10T11:36:05.765903629</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>RDF</term>
+                    <term>SDE</term>
+                    <term>semantic web</term>
+                    <term>TEI/XML</term>
+                    <term>uncertainty</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data modeling</term>
+                    <term>linked (open) data</term>
+                    <term>scholarly editing and editions development</term>
+                    <term>analysis</term>
+                    <term>and methods</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>History</term>
+                    <term>Literary studies</term>
+                    <term>Philology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading2">
+                <head>Research Context</head>
+                <p>The open-access project Auden in Austria Digital (AAD, Austrian Centre for Digital Humanities and Cultural Heritage) digitally edits all materials related to British-American poet W. H. Auden (1907-1973) held by Austrian archival institutions. From 1958 to 1973, Auden spent extensive periods of time in Lower Austria, where he wrote most of his late work. Whereas the 'British Auden' and the 'American Auden' have been thoroughly studied, Auden's Austrian period has attracted scholarly attention only since the early 2000s (Brenner / Frühwirth / Mayer 2023). In the context of an emergent field of Austrian Auden Studies, AAD aims to (1) make openly accessible unpublished literary papers; (2) uncover new historical-biographical information about Auden's life and work in Austria (including his networks of social interaction and artistic collaboration) as well as about underresearched aspects of Austrian (especially queer) history after 1945.</p>
+            </div>
+            <div type="div1" rend="DH-Heading2">
+                <head>Dual Research Interest - Dual Data Requirement</head>
+                <p>This dual research interest corresponds to a dual data need: (1) philological data requirements (for precise transcriptions of texts as well as encoded structural, material, and medial features); (2) the historical-biographical “facts asserted by the transcription” (Vogeler 2019: 318) as formalized structured data. The TEI/XML modeling environment provides rich opportunities for the creation of machine-readable data and metadata through text transcription and markup. Furthermore, the AAD scholarly digital edition (SDE) formalizes document contents for further computational processing (such as for network analysis): in addition to marking up person, place, organization, and work entities, we use the TEI &lt;event&gt; element to capture not only 'external' (i.e. historical, externally documented events), but also 'internal' events – this includes communicative acts as well as professional events and travel activities, for which the edition documents are the sole sources. These offer particularly relevant insights into Auden's professional networks and social interactions.</p>
+            </div>
+            <div type="div1" rend="DH-Heading2">
+                <head>Formalization of Interpretation</head>
+                <p>What cannot be fully formalized in machine-readable format in TEI/XML is editorial interpretation. The TEI &lt;interp&gt; node can include a human-readable comment (inside &lt;desc&gt;) that may be displayed on the user interface to outline scholarly argumentation – especially in relation to identifying entities, such as persons whose names are truncated, masked, or omitted. Furthermore, the TEI Guidelines allow for the specification of &lt;certainty&gt; values as well as the &lt;respons&gt;ibility for the interpretational statement. This statement itself, however, would largely seem to elude TEI/XML formalization in such a way that is intuitively understandable outside the project-specific framework. This problem is rooted both in the orientation of the TEI Guidelines (which include no explicit focus on modeling argumentation) as well as in the underlying (hierarchical/vertical) logic of the XML modeling system.</p>
+                <p>The solution we propose builds upon the feedback we received at the DH2023 (Carloni et al. 2023) and TEI2024 (Frühwirth / Mayer 2024) conferences, and involves transcending TEI/XML to utilize the affordances of RDF. Specifically, we seek to formalize in machine-readable format editorial interpretation by way of embedding RDFa (Resource Description Framework in Attributes) – as is currently being implemented by the TEI Consortium (
+                    <ptr target="https://github.com/TEIC/TEI/issues/1860"/>) – within the TEI &lt;interp&gt; node. The following simple example illustrates our approach. In a mid-August-1964 letter to an Austrian acquaintance, Auden writes about "Gäste" (guests) currently staying at his Austrian home. On the basis of archival research, we have identified these individuals and formalized this information as follows (namespaces are declared within &lt;listPrefixDef&gt;):
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp4piipwrx/Pictures/e716e270092a9b1ec5bb6aca82394bb0.png"/>
+                    </figure>Figure 1: RDFa-enriched TEI/XML code in &lt;interp&gt; node.
+                </p>
+                <p>In a second step, a dedicated script (which builds on the tei-rdfa Python package, released by the AAD team) will fetch these RDF-modeled interpretation data and relate them to RDF-converted data extracted from the TEI &lt;bibl&gt; as well as &lt;respons&gt; and &lt;certainty&gt; elements, drawing on the semantic potentials of the CIDOC Conceptual Reference Model (CRM) – to relate the argumentation to the bibliographic source on which it is based as well as to the scholars responsible for this interpretation and its (un)certainty value. All RDF data will be served via the web application, from where they can be downloaded and fed into triple stores for further inquiry and exploration using SPARQL query language.</p>
+            </div>
+            <div type="div1" rend="DH-Heading2">
+                <head>Implications and Questions</head>
+                <p>We propose that there are several benefits to formalizing editorial argumentation as illustrated above. First, such an approach bridges the gap between, on the one hand, machine-readable textual data (markup) and document metadata and, on the other hand, interpretation metadata that would otherwise remain human-readable only. Thereby, it renders this information accessible to computational processing. Second, such formalization relies on the semantics of ontologies and controlled vocabularies, thus helping to make interpretation comprehensible beyond project limits. More generally, therefore, it works toward a productive engagement with uncertainty and argumentation in the DH. Lastly, this endeavor partakes in the state-of-the-art discourse in the community of SDE practitioners and seeks to contribute to the further development of communal standards. The open questions we would like to address are related to the restricted range of elements permitted within the scope of &lt;desc&gt; as well as to the tension between XML nesting and the semantics of (permitted) TEI elements.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Brenner, Simon / Frühwirth, </hi>
+                        <hi rend="bold">Timo /</hi>
+                        <hi rend="bold"> </hi>
+                        <hi rend="bold">Mayer,</hi>
+                        <hi rend="bold"> Sandra</hi> (2023): “Revealing ‘invisible’ poetry by W. H. Auden through computer vision: Using photometric stereo to visualize indented impressions”, in: 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi> 38, 4: 1404-1417. DOI: 10.1093/llc/fqad037.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Carloni, Massimiliano</hi>
+                        <hi rend="bold"> / Frühwirth, Timo / Grigoriou, Dimitra / Mayer, Sandra / Stoxreiter, Daniel</hi> (2023): “How to Be Non-Assertive in the ‘Assertive Edition’: Encoding Doubt in the Auden Musulin Papers”, DH2023: Collaboration as Opportunity, University of Graz, 13 July 2023. DOI: 10.5281/zenodo.8107369.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Frühwirth, Timo / </hi>
+                        <hi rend="bold">Mayer,</hi>
+                        <hi rend="bold"> </hi>
+                        <hi rend="bold">Sandra</hi> (2024): "Auden in Austria Digital: Exploring the Potentials and Limitations of the TEI Guidelines in Editing Document Contents", TEI2024: Texts, Languages and Communities, Universidad del Salvador, 25 October 2024. DOI: 10.5281/zenodo.13777738.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Vogeler, Georg</hi> (2019): “The ‘Assertive Edition’: On the Consequences of Digital Methods in Scholarly Editing for Historians”, in: 
+                        <hi rend="italic">International Journal of Digital Humanities</hi> 1, 2: 309-322. DOI: 10.1007/s42803-019-00025-5.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

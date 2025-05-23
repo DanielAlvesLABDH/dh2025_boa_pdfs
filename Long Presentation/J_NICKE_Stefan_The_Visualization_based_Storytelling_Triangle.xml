@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="J_NICKE_Stefan_The_Visualization_based_Storytelling_Triangle">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">The Visualization-based Storytelling Triangle: A Case Study on Narrating Heritage of Nazi Persecution</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Jänicke</surname>
+                        <forename>Stefan</forename>
+                    </persName>
+                    <affiliation>University of Southern Denmark, Denmark</affiliation>
+                    <email>stjaenicke@imada.sdu.dk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Østergaard</surname>
+                        <forename>Camilla Vang</forename>
+                    </persName>
+                    <affiliation>University of Southern Denmark, Denmark</affiliation>
+                    <email>caust@imada.sdu.dk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Råmark</surname>
+                        <forename>Aliisa</forename>
+                    </persName>
+                    <affiliation>Radboud University, the Netherlands</affiliation>
+                    <email>aliisa.ramark@ru.nl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Steiner</surname>
+                        <forename>Cathrin</forename>
+                    </persName>
+                    <affiliation>Fluxguide, Austria</affiliation>
+                    <email>cathrin@fluxguide.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Sommersguter</surname>
+                        <forename>Paul</forename>
+                    </persName>
+                    <affiliation>Fluxguide, Austria</affiliation>
+                    <email>paul@fluxguide.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T21:24:52.756189933</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>storytelling</term>
+                    <term>Nazi persecution</term>
+                    <term>visualization</term>
+                    <term>testimonies</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>spatial &amp; spatio-temporal analysis</term>
+                    <term>modeling and visualization</term>
+                    <term>user experience design and analysis</term>
+                    <term>Design studies</term>
+                    <term>History</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1">
+                <head>
+                    <anchor xml:id="id_docs-internal-guid-162e2d0e-7fff-ebc9-d032-ccd15e71b1f7"/>Introduction 
+                </head>
+                <p>
+                    <hi rend="color(#000000)">After the start of the Israeli-Hamas war in October 2023, we see an increase of anti-Semitic content on social media platforms </hi>
+                    <hi rend="color(#000000)">(Becker et al., 2024)</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">with implicit and direct references to the history of Nazi persecution. This not only indicates potential failures in traditional Holocaust education, it also calls for the development of new methodologies to educate on Nazi crimes, especially in times when in-person exchange with survivors get more and more rare </hi>
+                    <hi rend="color(#000000)">(Reese &amp; Stafford, 2023)</hi>
+                    <hi rend="color(#000000)">. In response to this challenge, the Horizon Europe MEMORISE project </hi>
+                    <hi rend="color(#000000)">(</hi>
+                    <hi rend="color(#000000)">MEMORISE</hi>
+                    <hi rend="color(#000000)">, 202</hi>
+                    <hi rend="color(#000000)">5)</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">designs and develops new digital tools to preserve the heritage of Nazi persecution and enable the stories of the victims to be told in intuitive, modern ways.</hi>
+                </p>
+            </div>
+            <div type="div1">
+                <head>Visualization-based Storytelling for HNP</head>
+                <p>
+                    <hi rend="color(#000000)">Digital storytelling methods have proven to be valuable assets for educational purposes </hi>
+                    <hi rend="color(#000000)">(Wu &amp; Chen, 2020)</hi>
+                    <hi rend="color(#000000)">. We recently reviewed existing visualization and storytelling tools </hi>
+                    <hi rend="color(#000000)">(Meffert et al., 2024)</hi>
+                    <hi rend="color(#000000)"> that have been designed for exploring Heritage of Nazi Persecution (HNP)</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">by referring to an existing design space for visualization-based storytelling </hi>
+                    <hi rend="color(#000000)">(</hi>
+                    <hi rend="color(#000000)">Kusnick</hi>
+                    <hi rend="color(#000000)"> et al., 2021)</hi>
+                    <hi rend="color(#000000)">. In this paper, related storytelling solutions are categorized using previous definitions of reader-driven and author-driven storytelling </hi>
+                    <hi rend="color(#000000)">(Segel &amp; Heer, </hi>
+                    <hi rend="color(#000000)">2010</hi>
+                    <hi rend="color(#000000)">)</hi>
+                    <hi rend="color(#000000)">. Whereas reader-driven storytelling is unguided and thus resembles visual exploration, author-driven storytelling stands for a purely scripted story without the ability for users to interact. Kusnick et al. extended this definition with a discussion on “Story Composition” to account for the diversity of storytelling approaches through single narrative pathway, multiple narrative pathways, multiple arrangements, and mixed narrative &amp; exploration. However, these story composition definitions as well as the original definitions by Segel &amp; Heer lead to confusions when dealing with HNP materials since they do not fully capture the methodology we actually work with. Author-driven storytelling typically refers to instances where a domain expert (e.g., narrator, content creator, historian) controls how a story is presented and navigated. Our data repository largely consists of personal documents such as diaries, testimonies and letters that already have an author. When discussing storytelling approaches in our context, we require a more precise terminology that recognizes the original contribution of the author, but also the curatorial role that the content creator plays in restructuring and presenting the content. To clarify our methodology, we introduce the </hi>
+                    <hi rend="color(#000000)">visualization-based storytelling triangle for HNP (Figure 1) to distinguish contributions from different types of story authors. </hi>
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpm4q4ocav/Pictures/75edf64b00712860f67751cfee4322d8.png"/>
+                        <head>Visualization-based storytelling triangle for HNP, a three-dimensional continuum from visitor-driven to expert- and witness-driven storytelling.</head>
+                    </figure>
+                </p>
+                <p>The triangle distinguishes three types of storytelling extremes involving three actor types:</p>
+                <list type="unordered">
+                    <item>
+                        <hi rend="bold">Visitor-driven storytelling:</hi> Like reader-driven storytelling (Segel &amp; Heer, 2010), onsite or online visitors create their own stories through operating unguided visual exploration tools. 
+                    </item>
+                    <item>
+                        <hi rend="bold">Expert-driven storytelling:</hi> Experts may include curators, historians, teachers and related actors that restructure and retell stories based on original HNP data. This allows for a more flexible and interactive presentation, such as scrolly-telling or other innovative navigation methods, where the expert decides how and in what order one or more diary contents are presented to the user.
+                    </item>
+                    <item>
+                        <hi rend="bold">Witness-driven storytelling:</hi> Witnesses report their experiences in personal documents such as diaries, testimonies or letters. Those inhere a narrative that can be used for visual storytelling purposes. A purely witness-driven visualization-based storytelling would be a straightforward visual representation of a diary in the form of a graphic novel or a film adaptation, or the visual narration of an automatically extracted narrative from a testimony.
+                    </item>
+                </list>
+                <p>The distinction between experts and witnesses is important to clarify the difference between presenting a story as originally authored by a witness and presenting a story that has been reworked and conveyed by another actor. It also creates a three-dimensional continuum that allows us to classify storytelling approaches according to the degree of user interaction (x-axis) as well as according to the influence of different types of authors (y-axis). </p>
+            </div>
+            <div type="div1">
+                <head>Visualization-based Storytelling in MEMORISE</head>
+                <p>Using the visualization-based storytelling triangle for HNP as a conceptual framework, MEMORISE develops a set of novel narration and learning tools to enhance visitor experiences. This includes tools for unguided as well as guided visual exploration of HNP, aiming to cover the entire spectrum for user engagement.</p>
+                <div type="div2">
+                    <head>Virtual Guided Tours</head>
+                    <p>
+                        <hi rend="color(#000000)">Just like human guided tours at memorial sites, we can use digital 3D models as a base to guide users through a virtual version, which allows for reconstructing objects that are not physically existing anymore. A virtual guided tour is a series of annotations of the 3D model created by an expert, who may use witness memories in this process. We have tailored virtual guided tours for the Bernburg Euthanasia Center </hi>
+                        <hi rend="color(#000000)">(Østergaard et al., 2024)</hi>
+                        <hi rend="color(#000000)">, for the Bergen-Belsen Memorial</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">Hall</hi>
+                        <hi rend="color(#000000)"> et al., 2024) </hi>
+                        <hi rend="color(#000000)">and for Ferramonti di Tarsia </hi>
+                        <hi rend="color(#000000)">(Jänicke, 2024)</hi>
+                        <hi rend="color(#000000)">. These models allow users remote visits or can be used onsite to enhance existing exhibitions. A particular focus of our project is the development of an educational concept that uses virtual 3D models as a space for reflections on HNP. Although fragments of HNP narratives are used, virtual guided tours are mainly expert-driven storytelling tools.</hi>
+                    </p>
+                    <p>
+                        <figure>
+                            <graphic url="/tmp/tmpm4q4ocav/Pictures/75edf64b00712860f67751cfee4322d8.png"/>
+                            <head>Narrated 3D models for the Bernburg, Bergen-Belsen and Ferramonti memorials.</head>
+                        </figure>
+                    </p>
+                </div>
+                <div type="div2">
+                    <head>Testimonies Explorer</head>
+                    <p>
+                        <hi rend="color(#000000)">We developed a visitor-driven, web-based storytelling application that supports the unguided exploration of testimonies of Holocaust survivors from different archives such as the USC Shoah Foundation’s Visual History Archive </hi>
+                        <hi rend="color(#000000)">(VHA, 2025)</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">and National Committee for Attending Deportees (DEGOB, </hi>
+                        <hi rend="color(#000000)">2025</hi>
+                        <hi rend="color(#000000)">)</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">through linked visual interfaces. Users can view photographs of the interviewees and navigate an interactive map where dots represent locations associated with the interviews. The size of each dot reflects the number of interviews associated with a location, intuitively showing the location’s significance. Users can filter the map based on criteria such as concentration camps, birthplaces, and other key categories. Dropdown menus provide filtering options including gender, nationality, original language, and more. We have also implemented a keyword-based search function allowing searches by, e.g., name or mentioned words. These functionalities enable in-depth exploration and easy access to interviews, making it useful for professionals, students, and curious general public users. To account for the needs of the diverse crowd, the tool is available in expert and light mode, the latter being the default for general public accessibility.</hi>
+                    </p>
+                    <p>
+                        <figure>
+                            <graphic url="/tmp/tmpm4q4ocav/Pictures/75edf64b00712860f67751cfee4322d8.png"/>
+                            <head>Testimonies Explorer for in expert mode with USC Shoah Foundation’s Visual History Archive selected, the map shows birthplaces of survivors and mentioned prisoner of war camps</head>
+                        </figure>
+                    </p>
+                </div>
+                <div type="div2">
+                    <head>Onsite Interactives: An interactive dual-screen installation of Bergen-Belsen 3D reconstruction</head>
+                    <p>This interactive installation allows the user to spatially navigate through a 3D reconstructed Bergen-Belsen concentration camp, while connecting to primary and secondary sources related to the camptime. The 3D model, further developed from previous work of Eodyne Systems and SPECS Lab (
+                        <hi rend="background-color(#ffffff)">Pacheco et al., 2015; Blancas et al., 2021</hi>), visualises the former concentration camp in the periods of 1944 and 1945, based on documented information of the camps’ structures and how they changed over time. The user can move around the model while engaging with geolocalized sources, such as testimonies, diaries and artworks of prisoners, objects found at the site and photographs from the British liberators. These are clustered as mini-exhibitions in the 3D model within different subcamps and areas of the camp and are presented in written, visual or audio form. This storytelling installation, which entails a mix of guided and unguided elements, is directed towards touristic visitors, school groups and people with personal relation to the history of the camp. One can, based on their preference, navigate through different localised exhibitions (such as Hungarian’s Camp, Camp street, Kitchen) from a top-down view, or explore the model from a ground-level and discover exhibitions as they move around. Therefore the 3D representation of the camp serves as an entry point for spatially and historically contextualised, lived experiences of prisoners. Furthermore, it encourages active engagement of the users based on the Active Learning in Digitally Enhanced Spaces (ALDES) paradigm (Verschure &amp; Wierenga, 2021).
+                    </p>
+                    <p>
+                        <figure>
+                            <graphic url="/tmp/tmpm4q4ocav/Pictures/75edf64b00712860f67751cfee4322d8.png"/>
+                            <head>Dual-screen installation at Bergen-Belsen Memorial allows navigating the former concentration camp.</head>
+                        </figure>
+                    </p>
+                </div>
+                <div type="div2">
+                    <head>Unheard Voices</head>
+                    <p>
+                        <anchor xml:id="id_docs-internal-guid-66a89d28-7fff-0058-e955-cfc34d33bd84"/>Working with a huge corpus of more than 60,000 testimonies, the "Unheard Voices" concept aims to bring attention to all testimonies, particularly those that may not have received significant recognition or attention. These voices represent smaller, often overlooked, personal stories from victims of Nazi persecution. A key element of this witness-driven storytelling concept includes dynamically reorganizing the testimonies based on how often they have been heard, giving priority to those that are less frequently engaged with. This concept encourages collective participation in ensuring that every testimony is heard at least once​. In close reading mode, users can tag quotes of survivors with categories such as food, weather, fear, or friendship, and create storyboards for educational purposes in classroom exercises.
+                    </p>
+                    <p>
+                        <figure>
+                            <graphic url="/tmp/tmpm4q4ocav/Pictures/75edf64b00712860f67751cfee4322d8.png"/>
+                            <head>“Unheard Voices” concept to engage with HNP narratives.</head>
+                        </figure>
+                    </p>
+                </div>
+            </div>
+            <div type="div1">
+                <head>Conclusion</head>
+                <p>Keeping the stories of victims of Nazi persecution alive is the main focus of the MEMORISE project. It is our mission to develop new storytelling tools that do a better job educating especially younger generations on the past and the consequences of racism, prejudice and discrimination, which continues to be one of the major social ills in the world. To make the large corpus of HNP narratives accessible to a diverse user crowd, we develop visual interfaces to be used in different settings (remote or onsite access, expert of casual user), for which the visual-storytelling triangle provides a theoretical foundation.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <anchor xml:id="id_docs-internal-guid-2f9cfd46-7fff-b63d-c952-6f24e1dd883f"/>
+                        <hi rend="color(#000000) background-color(#ffffff)bold">Becker, M. J. / Troschke, H. / Bolton, M. / Chapelan, A.</hi>
+                        <hi rend="color(#000000) background-color(#ffffff)"> </hi>
+                        <hi rend="color(#000000) background-color(#ffffff)">(2024).</hi>
+                        <hi rend="color(#000000) background-color(#ffffff)"> </hi>
+                        <hi rend="color(#000000) background-color(#ffffff)italic">Decoding Antisemitism: A Guide to Identifying Antisemitism Online</hi>
+                        <hi rend="color(#000000) background-color(#ffffff)">. Palgrave Macmillan. 2024.</hi>
+                    </bibl>
+                    <bibl>
+                        <anchor xml:id="id_docs-internal-guid-85924e57-7fff-03f6-cebc-c746db30211c"/>
+                        <hi rend="color(#000000) background-color(#ffffff)bold">Reese, C. L. / Stafford, L.</hi>
+                        <hi rend="color(#000000) background-color(#ffffff)"> (2023). “Testimony, Memorialisation and Museums: A Crisis in Holocaust Education?”. In </hi>
+                        <hi rend="color(#000000) background-color(#ffffff)italic">The Palgrave Handbook of Testimony and Culture</hi>
+                        <hi rend="color(#000000) background-color(#ffffff)"> </hi>
+                        <hi rend="color(#000000) background-color(#ffffff)">(pp. 359-382). Cham: Springer International Publishing.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000) background-color(#ffffff)bold">M</hi>
+                        <hi rend="color(#000000) background-color(#ffffff)bold">EMORISE</hi>
+                        <hi rend="color(#000000) background-color(#ffffff)"> (202</hi>
+                        <hi rend="color(#000000) background-color(#ffffff)">5</hi>
+                        <hi rend="color(#000000) background-color(#ffffff)">). </hi>
+                        <hi rend="color(#000000) background-color(#ffffff)">URL: </hi>
+                        <ptr target="https://memorise.sdu.dk/"/>
+                    </bibl>
+                    <bibl>
+                        <anchor xml:id="id_docs-internal-guid-53e4ce35-7fff-7365-24ec-e0202de98f36"/>
+                        <hi rend="color(#000000) background-color(#ffffff)bold">Wu, J. / Chen, D. T. V.</hi>
+                        <hi rend="color(#000000) background-color(#ffffff)"> (2020). “A systematic review of educational digital storytelling”. </hi>
+                        <hi rend="color(#000000) background-color(#ffffff)italic">Computers &amp; Education</hi>
+                        <hi rend="color(#000000) background-color(#ffffff)">, </hi>
+                        <hi rend="color(#000000) background-color(#ffffff)italic">147</hi>
+                        <hi rend="color(#000000) background-color(#ffffff)">, 103786.</hi>
+                    </bibl>
+                    <bibl>
+                        <anchor xml:id="id_docs-internal-guid-d77f3db2-7fff-9e11-0a47-75e42b5d4ed6"/>
+                        <hi rend="color(#000000) background-color(#ffffff)bold">Meffert, N. / Østergaard, C. V. / Jänicke, S. / Khulusi, R. / Rachow, E. / Andersen, N. S.</hi>
+                        <hi rend="color(#000000) background-color(#ffffff)"> (2024). “A Survey on Storytelling Techniques for Heritage on Nazi Persecution”. In </hi>
+                        <hi rend="color(#000000) background-color(#ffffff)italic">VISIGRAPP (1): GRAPP, HUCAPP, IVAPP</hi>
+                        <hi rend="color(#000000) background-color(#ffffff)"> </hi>
+                        <hi rend="color(#000000) background-color(#ffffff)">(pp. 603-615).</hi>
+                    </bibl>
+                    <bibl>
+                        <anchor xml:id="id_docs-internal-guid-cde64883-7fff-c1d7-0d63-6960eb44c9e2"/>
+                        <hi rend="bold">Kusnick, J. / Jänicke, S. / Doppler, C. / Seirafi, K. / Liem, J. / Windhager, F. / Mayr, E.</hi> (2021). “Report on narrative visualization techniques for OPDB data”. Technical report, European Commission.
+                    </bibl>
+                    <bibl>
+                        <lb/>
+                        <anchor xml:id="id_docs-internal-guid-20bcac63-7fff-d928-f054-ddde00321864"/>
+                        <hi rend="color(#000000)bold">Segel, E. / Heer, J.</hi>
+                        <hi rend="color(#000000)"> (2010). “Narrative visualization: Telling stories with data”. IEEE transactions on visualization and computer graphics, 16(6), 1139-1148.</hi>
+                    </bibl>
+                    <bibl>
+                        <lb/>
+                        <anchor xml:id="id_docs-internal-guid-0749691d-7fff-ff76-3c88-c2827087a513"/>
+                        <hi rend="color(#000000)bold">Østergaard, C.V. / Rachow, E. / Gebauer, J. / Jänicke, S.</hi>
+                        <hi rend="color(#000000)"> (2024). “Developing the Bernburg 3D </hi>
+                        <hi rend="color(#000000)">Model for the Digital Transformation of Euthanasia Education”. </hi>
+                        <hi rend="color(#000000)italic">Conference Abstracts of the Digital Humanities 2024.</hi>
+                    </bibl>
+                    <bibl>
+                        <lb/>
+                        <anchor xml:id="id_docs-internal-guid-1af7f43f-7fff-1dd6-2885-5f7cbdd8f56f"/>
+                        <hi rend="color(#000000)bold">Hall, C. / Stiassny, N. / Grebe, A. / López Carral, H. / Kortholt, B. / Jänicke, S.</hi>
+                        <hi rend="color(#000000)"> (2024). “Using Prisoner Artworks in 3D as an innovative multimodal entry point to engaging with Heritage of Nazi Persecution”. </hi>
+                        <hi rend="color(#000000)italic">Conference Abstracts of the Digital Humanities 2024.</hi>
+                    </bibl>
+                    <bibl>
+                        <lb/>
+                        <anchor xml:id="id_docs-internal-guid-c78f16ea-7fff-397f-64ef-eec6d1095131"/>
+                        <hi rend="color(#000000)bold">Jänicke, S.</hi>
+                        <hi rend="color(#000000)"> (2024). “Memorise: New digital approaches for Nazi persecution storytelling”. Open Access Government October 2024, pp.255-257.</hi>
+                    </bibl>
+                    <bibl>
+                        <lb/>
+                        <anchor xml:id="id_docs-internal-guid-8ec16c19-7fff-5842-3c6e-1898758e7a29"/>
+                        <hi rend="bold">VHA</hi> (2025). URL: 
+                        <ptr target="https://vha.usc.edu/home"/>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">DEGOB</hi> (2025). URL: 
+                        <ptr target="http://degob.org/"/>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#222222) background-color(#ffffff)bold">Pacheco, D. / Wierenga, S. / Omedas, P. / Oliva, L. S. / Wilbricht, S. / Billib, S. / Verschure, P. F.</hi>
+                        <hi rend="color(#222222) background-color(#ffffff)"> (2015). “A location-based Augmented Reality system for the spatial interaction with historical datasets”. In </hi>
+                        <hi rend="color(#222222) background-color(#ffffff)italic">2015 Digital Heritage</hi>
+                        <hi rend="color(#222222) background-color(#ffffff)"> </hi>
+                        <hi rend="color(#222222) background-color(#ffffff)">(Vol. 1, pp. 393-396).</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#222222) background-color(#ffffff)bold">Blancas, M. / Wierenga, S. / Ribbens, K. / Rieffe, C. / Knoch, H. / Billib, S. / Verschure, P.</hi>
+                        <hi rend="color(#222222) background-color(#ffffff)"> (2021). “Active learning in digital heritage: introducing geo-localisation, VR and AR at holocaust historical sites”. </hi>
+                        <hi rend="color(#222222) background-color(#ffffff)italic">Digital Holocaust Memory, Education and Research</hi>
+                        <hi rend="color(#222222) background-color(#ffffff)">, 145-176.</hi>
+                        <hi rend="color(#000000) background-color(#ffffff)"> </hi>
+                        <hi rend="color(#000000) background-color(#ffffff)">DOI:</hi>
+                        <hi rend="color(#000000) background-color(#ffffff)"> </hi>
+                        <ptr target="https://doi.org/10.1007/978-3-030-83496-8_7"/>
+                    </bibl>
+                    <bibl>
+                        <lb/>
+                        <anchor xml:id="id_docs-internal-guid-a50eef28-7fff-bc61-58e2-87b913a4bf23"/>
+                        <hi rend="color(#000000) background-color(#ffffff)bold">Verschure, P. F. M. J. / Wierenga, S.</hi>
+                        <hi rend="color(#000000) background-color(#ffffff)"> (2021). “Future memory: a digital humanities approach for the preservation and presentation of the history of the Holocaust and Nazi crimes”. </hi>
+                        <hi rend="color(#000000) background-color(#ffffff)italic">Holocaust Studies</hi>
+                        <hi rend="color(#000000) background-color(#ffffff)">, </hi>
+                        <hi rend="color(#000000) background-color(#ffffff)italic">28</hi>
+                        <hi rend="color(#000000) background-color(#ffffff)">(3), 331–357. </hi>
+                        <hi rend="color(#000000) background-color(#ffffff)">DOI:</hi>
+                        <hi rend="color(#333333) background-color(#ffffff)"> </hi>
+                        <ptr target="https://doi.org/10.1080/17504902.2021.1979178"/>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

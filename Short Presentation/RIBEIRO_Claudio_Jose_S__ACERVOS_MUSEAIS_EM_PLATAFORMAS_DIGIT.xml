@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="RIBEIRO_Claudio_Jose_S__ACERVOS_MUSEAIS_EM_PLATAFORMAS_DIGIT">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>ACERVOS MUSEAIS EM PLATAFORMAS DIGITAIS: interoperabilidade no caso do Museu Virtual de Instrumentos Musicais.</title>
+                <author>
+                    <persName>
+                        <surname>Balleste</surname>
+                        <forename>Adriana Olinto</forename>
+                    </persName>
+                    <affiliation>Ibict, Instituto Brasileiro de Informação em Ciência e Tecnologia, Brazil</affiliation>
+                    <email>adriballeste@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ribeiro</surname>
+                        <forename>Claudio Jose S.</forename>
+                    </persName>
+                    <affiliation>Unirio, Prof. do Programa de Pós-Graduação em Biblioteconomia, Brazil</affiliation>
+                    <email>claudio.ribeiro@unirio.br</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-24T22:10:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Acervos museais</term>
+                    <term>interoperabilidade</term>
+                    <term>museu virtual</term>
+                    <term>instrumentos musicais</term>
+                    <term>MIMO</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data</term>
+                    <term>object</term>
+                    <term>and artefact preservation</term>
+                    <term>metadata standards</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>public humanities collaborations and methods</term>
+                    <term>semantic analysis</term>
+                    <term>Communication studies</term>
+                    <term>Humanities computing</term>
+                    <term>Library &amp; information science</term>
+                    <term>Musicology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>INTRODUÇÃO</head>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt" xml:space="preserve">Esta pesquisa apresenta </hi>
+                    <anchor xml:id="Hlk171431075"/>
+                    <hi style="font-size:10pt" xml:space="preserve">o estudo prospectivo para a evolução do Museu Virtual de Instrumentos Musicais (MVIM), concebido como um espaço dinâmico em permanente expansão dedicado à preservação, memória, divulgação e recuperação de acervos de instrumentos musicais. Partimos do alinhamento com iniciativas e padrões nacionais e internacionais, tendo em vista a possibilidade de integração, convergência e interoperabilidade com plataformas nacionais e internacionais. </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">No terreno das plataformas nacionais é preciso ressaltar o esforço empreendido pelo Instituto Brasileiro de Museus (IBRAM) com a criação da plataforma Brasiliana Museus que visa promover a agregaçao dos museus brasileiros, através do uso do Tainacan, um sofware livre desenvolvido em WordPress para criação de repositórios de acervos digitais.</hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">Já no contexto das plataformas internacionais com foco em instrumentos musicais destacamos o projeto Musical Instrument Museums Online (MIMO). Esse mantém o propósito de ser um ponto único de acesso online às bases de dados museológicas dos mais importantes museus de instrumentos musicais da Europa (MIMO 2025). É o maior banco de dados de instrumentos, com mais de 64.000 itens. Seu acervo, que abrangia somente os acervos europeus, está se abrindo para acolher acervos de outros continentes.</hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">Como requisito preponderante nesse alinhamento, tem-se a interoperabilidade com outros repositórios e/ou museus. Portanto, é preciso investigar as tecnologias que permitam a plena adaptação e o acolhimento da longa jornada para organização, representação, disseminação das informações sobre os instrumentos musicais de instituições museológicas brasileiras e tratando a convergência em plataformas tecnológicas. (Guizzardi 2020) (Ribeiro / Bonino da Silva Santos / Moreira 2020)</hi>
+                </p>
+                <p style="text-align: left; ">Este trabalho propõe o arcabouço téorico-prático que possibilite o MVIM estar apto para convergir e fazer parte das iniciativas globais. A estratégia metodológica combina o uso de revisão bibliográfica e documental com o estudo de caso. Para o campo empírico, adotou-se um recorte do acervo para a avaliação de uso de metadados e a delimitação de funcionalidades. Por fim, propõe uma aproximação técnica e metodológica entre o MVIM e a Brasiliana Museus no sentido de promover a divulgação do acervo museal brasileiro internacionalmente.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>O MVIM E A ORGANIZAÇÃO DO ACERVO</head>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">O Museu Virtual de Instrumentos Musicais abarca importantes acervos brasileiros de instrumentos musicais importantes, como o do Museu Instrumental Delgado de Carvalho (MIDC) da Escola de Música da Universidade Federal do Rio de Janeiro, do Instituto Moreira Salles (IMS) e do Museu Villa-Lobos (MVL). O espaço virtual do MVIM, implementado com o Content Management System (CMS) Wordpress</hi><ref n="1" target="ftn1"/>
+                    <hi style="font-size:10pt">, conta com as seguintes seções principais: catálogo de instrumentos; catálogo de fabricantes/autores; concertos; vídeos e entrevistas com especialistas; artigos escritos por colaboradores; um espaço para notícias, curiosidades e opiniões; normas de catalogação; links para outros sites de interesse; referências bibliográficas (Ballesté / Almeida / Valentino 2021).</hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">As coleções museológicas são formadas por um conjunto de objetos materiais e imateriais que um estabelecimento ou um indivíduo se encarregou de reunir, classificar, selecionar e conservar em local seguro e em geral divulgadas para o público (Desvallés / Mairesse 2013). Essas coleções estão sendo paulatinamente divulgadas no mundo virtual, se estabelecendo como espaços de memória conectadas a plataformas digitais e redes sociais. Na prática, o ambiente digital é utilizado como meio de difusão de informações sobre o patrimônio e acabam por constituir novos suportes da memória no ciberespaço (Chaves / Morigi 2019).</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>INICIATIVAS PARA AMPLIAR A INTEROPERABILIDADE</head>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">A interoperabilidade pressupõe o uso de padrões para comunicação e representação. Apesar do MVIM ter sido concebido fazendo uso de plataforma CMS que atende a requisitos básicos de interoperabilidade, pois se alinha ao padrão</hi>
+                    <hi rend="italic" style="font-size:10pt">Dublin Core</hi>
+                    <hi style="font-size:10pt" xml:space="preserve"> (DCMI) (Crandall / Sutton / Zeng / Baker / Evans / Dolan / Chapman / Talley / Lauruhn 2017), esta investigação busca ampliar e possibilitar o compartilhamento de variadas coleções. Nesse sentido, é lícito supor que o modelo arquitetural do MVIM precisa atender os requisitos de interoperabilidade que permitam disponibilizar diretamente o seu acervo em padrões compatíveis com outras coleções em nível mundial.   </hi>
+                </p>
+                <p style="text-align: left; ">Como primeiro esforço, fez-se um breve mapeamento de metadados, tanto em relação ao conteúdo quanto em relação aos esquemas utilizados, pois é uma etapa essencial para o início desta jornada. O alinhamento de metadados utilizando o Tainacan é relativamente simples uma vez que essa solução permite a configuração livre desses campos. No entanto, no Brasiliana Museus são definidos os metadados que são coletados e/ou catalogados nos museus parceiros, buscando uma unidade de informações. </p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt" xml:space="preserve">Além disso, a solução Tainacan permite a interoperabilidade através de uma </hi>
+                    <hi rend="italic" style="font-size:10pt">API RESTful</hi>
+                    <hi style="font-size:10pt" xml:space="preserve"> que possibilita a interação entre repositórios, tanto para a ações que envolvam a escrita (gravação) quanto para coleta (leitura) (Tainacan 2024b). </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">Essas características da solução Tainacan se alinham com a proposta de padrão do MIMO na medida que essa última apresenta um conjunto de requisitos para que repositórios de instrumentos musicais sejam colhidos (</hi>
+                    <hi rend="italic" style="font-size:10pt">harvested</hi>
+                    <hi style="font-size:10pt" xml:space="preserve">) pelo agregador do MIMO. </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">O modelo de dados que descreve os instrumentos musicais presentes nas coleções das instituições participantes do projeto MIMO usa o esquema do LIDO (</hi>
+                    <hi rend="italic" style="font-size:10pt">Lightweight Information Describing Objects</hi>
+                    <hi style="font-size:10pt" xml:space="preserve">), estruturado com as camadas e containers. Tendo metadados descritivos relacionados à classificação do instrumento, identificação do instrumento, eventos e assuntos e, metadados administrativos que relacionam direitos, gravações e recursos. </hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>DISCUSSÃO</head>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt" xml:space="preserve">Assim, diante deste cenário e do alinhamento da plataforma Wordpress com o DCMI, é possível inferir que há similaridade entre a estrutura presente em esquemas diferentes de metadados, pois pode-se deduzir que sempre haverá meios de mapeá-los para garantir a interoperabilidade entre esses esquemas, compostos por rótulos e seus conteúdos. Aqui cabe registrar o uso de </hi>
+                    <hi rend="italic" style="font-size:10pt">crosswalk</hi><ref n="2" target="ftn2"/>
+                    <hi style="font-size:10pt" xml:space="preserve"> como estratégia possível para a realização desse mapeamento (Velasco Reyes et al. 2021).</hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt" xml:space="preserve">O modelo de dados que está sendo proposto para a descrição de instrumentos musicais segue o LIDO especificado em Mimo (2010a). Para tanto, os provedores de dados devem expor metadados em repositórios e converter os dados para o formato LIDO utilizando as regras de mapeamento entre o formato original e o LIDO conforme descrição em Mimo (2010b). Esses requisitos estão apoiados por um esquema de referência que se alinha e converge com diferentes modelos de interface no terreno das GLAM tais como: MUSEUMDAT </hi>
+                    <hi rend="italic" style="font-size:10pt">Working Group, CDWA Lite, Spectrum, CIDOC CRM</hi>
+                    <hi style="font-size:10pt" xml:space="preserve"> e outros.  </hi>
+                </p>
+                <p style="text-align: left; ">A integração e homogeneização de plataformas e/ou soluções são ações importantes para reduzir o esforço (tanto no aspecto do tempo dispendido quanto nos recursos financeiros associados) na manutenção e evolução dos ambientes tecnológicos adotados. Há diferentes maneiras para propor estas ações, mas, de forma ainda que preliminar, os resultados iniciais obtidos por esta pesquisa apontam para a viabilidade de tornar interoperáveis os diferentes ambientes tecnológicos. Apenas com a continuidade do projeto será possível identificar a solução mais adequada e mensurar o esforço necessário para empreendermos esta jornada.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>CONSIDERAÇÕES FINAIS</head>
+                <p style="text-align: left; ">O MVIM, que se propõe a ser um agregador de coleções brasileiras de instrumentos musicais, inicia a jornada para fazer parte da plataforma Brasiliana Museus. Nesse sentido, desenvolveu-se esta investigação para pavimentar, incialmente, a convergência entre MVIM, o portal Brasiliana Museus e a solução Tainacan. Para além dessas proposições é possível buscar também outras iniciativas nacionais e internacionais. </p>
+                <p style="text-align: left; ">Espera-se que a aproximação entre o MVIM e a Brasiliana Museus traga benefícios complementares para os dois projetos, uma vez que padrões e funcionalidades adotadas em cada uma dessas plataformas possam ser discutidas e implementadas o que será essencial para a difusão internacional das coleções museológicas brasileiras.</p>
+                <p rend="DH-Heading3" style="font-style: italic; ">Agradecimentos</p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">Projeto parcialmente apoiado por Bolsa de Produtividade CNPq (Conselho Nacional de Desenvolvimento Científico e Tecnológico – Brasil) e Bolsa CNE – Cientista do Nosso Estado/FAPERJ (Fundação Carlos Chagas Filho de Amparo à Pesquisa do Estado do Rio de Janeiro), Processo SEI E-26/204.049/2024.</hi>
+                </p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                        
+                            <hi rend="italic" style="font-size:9pt">Wordpress</hi>
+                            <hi style="font-size:9pt" xml:space="preserve"> é um CMS (</hi>
+                            <hi rend="italic" style="font-size:9pt">Content Management System</hi>
+                            <hi style="font-size:9pt">) desenvolvido em código aberto (</hi>
+                            <hi rend="italic" style="font-size:9pt">Open Source</hi>
+                            <hi style="font-size:9pt">) – essa categoria de software objetiva gestão de conteúdo digital (Ribeiro 2016).</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                        
+                            <hi style="font-size:9pt" xml:space="preserve"> Possibilidade de mapeamento entre campos origem/destino.</hi>
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Ballesté, Adriana Olinto / Almeida, Alea / Valentino, Ana Cristina</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2021): “Desafios do Museu Virtual de Instrumentos Musicais no ciberespaço“. In</hi>
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">: </hi>
+                        <hi rend="italic" style="font-size:10pt">6º Congresso Brasileiro de Iconografia Musical,</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> Universidade Estadual de Campinas, Campinas. ISSN 2318-7026 </hi>
+                        <lb/>
+                        <hi style="font-size:10pt">&lt;https://portaleventos.mus.ufba.br/index.php/CBIM_RIdIM-BR/6cbim2021/paper/viewFile/334/316&gt; [15.04.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Ballesté, Adriana Olinto / Valentino, Ana Cristina / Santos, Daniel dos</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024): “Reunião de acervos brasileiros de instrumentos musicais no Museu Virtual de Instrumentos Musicais – MVIM“. In:</hi>
+                        <hi rend="italic" style="font-size:10pt">IV Congresso ABMUS</hi>
+                        <hi style="font-size:10pt">, 2023, Santos, SP,.58-63. &lt;https://abmus.net.br/journals&gt; . [15.04.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Ballesté, Adriana / Almeida, Álea de</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2014): “Organização e representação da informação no Museu Virtual de Instrumentos Musicais – MVIM“. </hi>
+                        <hi rend="italic" style="font-size:10pt">Anais XV ENANCIB, Além das nuvens: Expandindo as fronteiras da Ciência da Informação</hi>
+                        <hi style="font-size:10pt">. Belo Horizonte: ECI/UFMG, p. 848-868.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Bar, Frank P. / Pfefferkorn, Franziska (2011)</hi>
+                        <hi style="font-size:10pt">: “The MIMO Digitisation Standard: Definition of scanning properties and recommendations for photographing musical instruments”</hi>
+                        <hi rend="italic" style="font-size:10pt">. Final version 3</hi>
+                        <hi style="font-size:10pt">. Nürnberg: MIMO ‒ Musical Instrument Museums Online.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Brasiliana Museus</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024): Sobre a Brasiliana Museus. &lt;https://brasiliana.museus.gov.br/sobre-a-brasiliana-museus/&gt;. [20.04.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Chaves, Rafael Teixeira / Morigi, Valdir José</hi>
+                        <hi style="font-size:10pt">(2019). “As Tecnologias de Informação e Comunicação e a musealização: um estudo de caso sobre o Museu das Coisas Banais.“ In:</hi>
+                        <hi rend="italic" style="font-size:10pt">Anais do XXI Encontro Nacional de Pesquisa e Pós-graduação em Ciência da Informação (XXI ENANCIB)</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">. UFSC, Florianópolis. p. 1-8. </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Crandall, Michael D. / Sutton, Stuart A. / Zeng, Marcia Lei / Baker, Thomas / Evans, Abigail / Dolan, Sean / Chapman, Joseph / Talley, David / Lauruhn, Michael</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2017): “LD4PE: A Competency-based Guide to Linked Data Principles and Practices”. </hi>
+                        <hi rend="italic" style="font-size:10pt">International Conference on Dublin Core and Metadata Applications</hi>
+                        <hi style="font-size:10pt">. &lt;https://doi.org/10.23106/dcmi.952137899&gt;. [25.02.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Desvallées, André / Mairesse, François</hi>
+                        <hi style="font-size:10pt">(2014): “Conceitos-chaves de Museologia.” Tradução: Bruno Brulon Soares e Marília Xavier Cury. &lt;http://www.icom.org.br/wp-content/uploads/2014/03/PDF_Conceitos-Chave-de-Museologia.pdf&gt;. [10.03.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Guizzardi, Giancarlo</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2020): “Ontology, ontologies and the “I” of FAIR.”</hi>
+                        <hi rend="italic" style="font-size:10pt">Data Intelligence</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 2, 1: 181-191. &lt;https://doi.org/10.1162/dint_a_00040&gt;. [25.01.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">James, Heather</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2019): “Wordpress. com (hosted) Data Curation Primer”. Disponível em: University Digital Conservancy, &lt;https://hdl.handle.net/11299/202811&gt;. [16.03.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Mimo</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2025): “Musical Instrument Museums Online”. &lt;https://mimo-international.com/MIMO/&gt;.  [25.03.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Mimo</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2010a): “Specifications of the Common Data Model for the Description of Musical Instruments”. &lt;https://mimo-international.com/documents/MIMO_Deliverable_%202.1_v1%202%20(2010-06-30).pdf&gt;. [25.03.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Mimo</hi>
+                        <hi style="font-size:10pt">(2010b): “Metadata mapping and OAI-PMH implementation guidelines”. &lt;https://mimo-international.com/documents/MIMO_WP2%20-%20D2%202%20Guidelines%20v1.0%20(2010-11-18).pdf &gt;. [25.03.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Oliveira, Amanda de Almeida</hi>
+                        <hi style="font-size:10pt">(2021): “A Experiência da difusão dos acervos dos museus Ibram: a implantação do projeto Tainacan.“</hi>
+                        <hi rend="italic" style="font-size:10pt">Museologia &amp; Interdisciplinaridade</hi>
+                        <hi style="font-size:10pt">10, Especial: 90-106, set. DOI: 10.26512/museologia.v10i19.34457. &lt;https://periodicos.unb.br/index.php/museologia/article/view/34457&gt;. [25.02.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Ribeiro, Claudio Jose Silva</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2016): “Soluções em ECM (Enterprise Content Management) e softwares para repositórios: convergência de requisitos nas atividades para gestão documental.“ In: </hi>
+                        <hi rend="italic" style="font-size:10pt">Informação &amp; Tecnologia 3</hi>
+                        <hi style="font-size:10pt">, 2:4–20. &lt;https://periodicos.ufpb.br/index.php/itec/article/view/38188&gt; . [25.02.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Ribeiro, Cláudio José Silva / Bonino da Silva Santos, Luiz Olavo Bonino / Moreira, João Luiz Rebelo</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2020): “Princípios FAIR e interoperabilidade: reprodutibilidade com o uso de modelagem conceitual orientada a ontologias.“ </hi>
+                        <hi rend="italic" style="font-size:10pt">Informação &amp; Informação</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 25, 3: 28-51,  &lt;https://doi.org/10.5433/1981-8920.2020v25n3p28&gt;. [30.03.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Siqueira, Joyce; Martins, Dalton Lopes; Lemos, Daniela Lucas da Silva</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2022): “Brasiliana museus: serviço de busca e recuperação da informação agregada dos acervos digitais do instituto brasileiro de museus. </hi>
+                        <hi rend="italic" style="font-size:10pt">XXII Encontro Nacional de Pesquisa em Ciência da Informação</hi>
+                        <hi style="font-size:10pt">. &lt;https://enancib.ancib.org/index.php/enancib/xxiienancib/paper/view/712/714&gt;. [17.03.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Tainacan</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024a): “Metadados.“ &lt;https://tainacan.github.io/tainacan-wiki/#/pt-br/metadata?id=metadados&gt;. [21.03.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Tainacan</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024b): “Plugin Directory.“ &lt;https://br.wordpress.org/plugins/tainacan/&gt;. [22.03.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Velasco Reyes, Gloria Donají et al</hi>
+                        <hi style="font-size:10pt">(2021): “El uso del estándar Object ID y del software Tainacan en la documentación museológica: experiencias desde Brasil y México.“ </hi>
+                        <hi rend="italic" style="font-size:10pt">Intervención (México DF)</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">12, 23: 258-303. </hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

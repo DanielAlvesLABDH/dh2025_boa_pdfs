@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ROE_Glenn_Exploring_intellectual_history_with_dynamic_word_e">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Exploring intellectual history with dynamic word embeddings:semantic change in 18th-century France</title>
+                <author>
+                    <persName>
+                        <surname>Roe</surname>
+                        <forename>Glenn</forename>
+                    </persName>
+                    <affiliation>ModERN Project, Sorbonne University, France</affiliation>
+                    <email>glenn.roe@sorbonne-universite.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Fedchenko</surname>
+                        <forename>Valentina</forename>
+                    </persName>
+                    <affiliation>ModERN Project, Sorbonne University, France</affiliation>
+                    <email>ilmen2005@yahoo.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Nicolosi</surname>
+                        <forename>Dario</forename>
+                    </persName>
+                    <affiliation>ModERN Project, Sorbonne University, France</affiliation>
+                    <email>dario.nicolosi.92@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-04T17:38:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>conceptual history</term>
+                    <term>distributional semantics</term>
+                    <term>dynamic embeddings</term>
+                    <term>French literary history</term>
+                    <term>18th-century studies</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>cultural analytics</term>
+                    <term>natural language processing</term>
+                    <term>semantic analysis</term>
+                    <term>Book and print history</term>
+                    <term>History</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">Language models appeared more than a decade ago, when the advent of sequential word-embedding models such as word2vec (Mikolov et al. 2013) and GloVe (Pennington et al. 2014) brought with them a revived interest in distributional semantics. Humanists and computer scientists alike began citing J. R. Firth’s now ubiquitous quip, ‘You shall know a word by the company it keeps’ (1957) as a means of explaining these vector-based representations. The Transformer architecture on which current generative large language models (LLMs) are built was first introduced in 2017 (Vaswani et al., 2017). The principal innovation of the Transformer lies in its reliance on the self-attention mechanism to model the various possible positions within sequences of inputs. This innovation marked a significant shift in text modelling practices within the humanities, moving from static to contextual embeddings.</p>
+                <p style="text-align: left; ">Interestingly, these two methods of deep learning language modelling map surprisingly well onto the two major paradigms of intellectual history, namely the Cambridge School and Reinhart Koselleck’s 
+                    <hi rend="italic">Begriffsgeschichte</hi> (Brett 2002). Embedding models like word2vec are particularly suited to Koselleck's conceptual history, as they can capture semantic changes across large corpora, revealing subtle shifts in meaning and usage over time (Verheul et al. 2022). These models can track the evolution of concepts by analyzing patterns of co-occurrence, thereby providing quantitative insights into the diachronic transformations Koselleck sought to elucidate. On the other hand, Transformer models, with their ability to process complex contextual information, align well with the Cambridge School’s emphasis on context and linguistic nuance (London 2016). By embedding texts within rich contextual layers, Transformers can presumably help scholars trace how ideas were situated within specific historical discourses.
+                </p>
+                <p style="text-align: left; ">To date, most attempts at digital intellectual history, or history of ideas, have focused mainly on static word embeddings or other more traditional statistical analyses (De Bolla, 2023). In this paper, our aim is to push forward the state-of-the-art for digital conceptual history through experiments with contextualized dynamic embeddings over a large corpus of 18th-century French books. This approach draws upon recent advances in computational semantics, leveraging LLMs to detect semantic change within historical corpora. While we emphasize expert-guided methods for term extraction and periodization in a first instance, this work paves the way for future experiments with unsupervised techniques to identify significant semantic shifts independently. </p>
+                <p style="text-align: left; ">From a theoretical perspective, we treat ‘concepts’ as dynamic clusters of meanings, whose evolution can be traced across different contexts and time periods. This approach is then mathematically expressed through recent advancements in the development of dynamic word embeddings. Indeed, recent progress in training LLMs capable of learning dynamic (specifically diachronic) word embeddings has spurred the emergence of lexical semantic change detection as a recognized NLP task (Dubossarsky et al., 2019; Kaiser et al., 2020; Schlechtweg et al., 2020; Wand and Choi, 2023; Taichi and Bollegala, 2024).</p>
+                <p style="text-align: left; ">By adapting these methodologies for the detection and evaluation of concept evolution, we can address broader, more abstract semantic entities while leveraging established technologies in lexical semantic change research. Specifically, we will apply this approach to an expansive collection of French books (encompassing both fiction and non-fiction) drawn from the 18th century, a period that is widely considered as the crucible from which modern socio-political and philosophical concepts spring forth. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Corpus Preparation and Concept Extraction</head>
+                <p style="text-align: left; ">The corpus has undergone rigorous preprocessing: texts were standardized in format and metadata, and duplicates were removed to ensure reliability<ref n="1" target="ftn1"/>. The corpus was then divided into four historical subcorpora, based on expert-determined periods noted for their internal consistency and historical relevance:
+                </p>
+                <p style="text-align: left; ">1. 1643–1720 (441159 tokens) </p>
+                <p style="text-align: left; ">2. 1721–1750 (516926 tokens) </p>
+                <p style="text-align: left; ">3. 1751–1789 (476928 tokens) </p>
+                <p style="text-align: left; ">4. 1790–1800 (780850 tokens) </p>
+                <p style="text-align: left; ">Since our aim is to capture conceptual evolution with broader generalized semantic content, rather than individual terms or lexical units, we refined our methodology to address potential polysemy. To improve the results after initial tests, domain experts reviewed the outputs and excluded overly polysemic terms such as 
+                    <hi rend="italic">état</hi> (state) and 
+                    <hi rend="italic">sens</hi> (sense), which could obscure meaningful patterns due to their broad or ambiguous usage. A preliminary list of concepts was then limited to less polysemic words (from an 18th-century perspective) such as ‘intelligence’, ‘gloire’, ‘peuple’, ‘droits’, ‘amitié’, ‘liberté’, ‘égalité’, ‘patrie’, ‘calomnie’ etc.
+                </p>
+                <p style="text-align: left; ">We also recognize that the evolution of concepts can be conflated with simple shifts in word meaning caused by changes in the sociolinguistic and cultural landscape. To minimize this risk, we worked with larger time periods. Our hypothesis is that broader time frames increase the level of generalization and help distinguish conceptual evolution from general semantic change, thereby reducing potential confusion between the two phenomena.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Experiment design and model training</head>
+                <p style="text-align: left; ">To enhance the objectivity and accuracy of our research method, we based our analysis of conceptual distributive semantics on two BERT-type large language models, a multilingual model (bert-base-multilingual-uncased) and a French-specific model (camembert-base)<ref n="2" target="ftn2"/>. This approach allowed us to compare the contextual representations generated by the models, identify which model's level of generalization was better suited to the history of ideas, and evaluate their alignment with human expertise.
+                </p>
+                <p style="text-align: left; ">Each model was fine-tuned separately on each of the four subcorpora, resulting in eight fine-tuned language models. For fine-tuning, we employed the masked language model (MLM) objective with 
+                    <hi rend="italic">Transformer-based Sequential Denoising Auto-Encoder (TSDAE)</hi>, an unsupervised pre-training method for sentence embeddings learning with a strong domain adaptation that introduces controlled noise into input sequences (e.g., token deletion or swapping) to train the model to reconstruct the original text (Wang, Reimers, and Gurevych, 2021) and improves robustness of the fine-tuned model. 
+                </p>
+                <p style="text-align: left; ">From the fine-tuned language models of both types we extracted word representations of concepts, selected by domain experts. As our corpora were tokenized using byte-pair encoding (BPE) (Kudo and Richardson, 2018), the contextual embeddings of the concepts – often split into multiple subwords by the tokenizer – were aggregated to create token-specific embeddings. We used only the last encoder output layer to create contextual representations for concepts in study. Note that these representations change depending on the context in which the token appears, meaning that the same word is assigned a distinct representation in each specific context (or sequence). For each concept a bunch of dynamic contextual embeddings was averaged to generate time-specific representations for each time period.</p>
+                <p style="text-align: left; ">We employed both quantitative and qualitative evaluations to analyze semantic change. Semantic shift between two time periods is usually quantified by calculating different types of distance between time-specific contextual embeddings of the same token (Martinc et al. 2020, Giulianelli et al., 2020; Kutuzov and Giulianelli, 2020). We adapted the method of inverted cosine similarity over word prototypes (PRT), tested in Kutuzov and Giulianelli, 2020: 127. </p>
+                <p style="text-align: left; ">This quantitative measure was complemented by a qualitative analysis performed on dynamic word representations of conceptual clusters. We used a semantic search engine based on the K-nearest neighbors algorithm to retrieve the 50 most similar words for each time-specific representation of concepts. This enabled domain specialists to assess the contextual meanings learned by the fine-tuned models and to compare the embeddings generated by the multilingual and French-specific models. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results</head>
+                <p style="text-align: left; ">Both quantitative and qualitative analysis indicate that the French-specific model (camembert-base) demonstrated superior performance in capturing the nuances of conceptual change compared to the multilingual model. The resulting quantitative results were then visualized using a heatmap for ease of interpretation (Fig. 1):</p>
+                <figure>
+                    <graphic n="1001" width="16.002cm" height="8.5344cm" url="/tmp/tmp7esxnb9z/Pictures/9fb14d8dbe79a33cb94c69ac412d3fca.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; text-align: center;">Fig. 1: PRT-measure for three concepts “amour”, “partrie””, and “nation” for the beginning, the middle and the end of the 18th c. A higher score indicates greater similarity and less semantic change in the meaning of the concept over the given time period.</p>
+                <p style="text-align: left; ">An iterative feedback-loop involving domain experts was crucial in validating our method and its results, confirming for the most part that the extracted data corresponded with historical understanding and literary interpretation. The concept of 
+                    <hi rend="italic" xml:space="preserve">amour </hi>(love), for example, exhibits a significant shift in meaning that occurs between the 17th and 18th centuries, which aligns with the transition from an aristocratic sentimental model, rooted in the gallantry and tendresse of the 
+                    <hi rend="italic">Grand Siècle</hi>, to a bourgeois model, grounded in more intimate and private principles, which finds its ultimate expression in the family. 
+                </p>
+                <p style="text-align: left; ">The variations surrounding the terms 
+                    <hi rend="italic">patrie</hi> (homeland) and 
+                    <hi rend="italic" xml:space="preserve">nation </hi>similarly reflect our understanding of the 18th century. It is well known that the concept of 
+                    <hi rend="italic">nation</hi>, which would gain immense prominence in the 19th century, underwent a new conceptualization starting with the Seven Years' War (1756–1763), during which monarchic and anti-philosophical propaganda employed it against the Anglophile cosmopolitanism of the 
+                    <hi rend="italic">Lumières</hi>. By contrast, the term 
+                    <hi rend="italic">patrie</hi>, whose etymological roots ensured greater neutrality throughout the 18th century, was subjected to intense reevaluation during the Revolutionary period, when the emergence of the 
+                    <hi rend="italic">citoyen</hi> (citizen) and the constant reference to Greek and Roman models endowed it with new significance.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Future Work</head>
+                <p style="text-align: left; ">Building on these preliminary results, we aim to experiment with unsupervised methods for term and period detection, enabling the machine to autonomously identify periods of significant semantic change and conceptual clusters that are not predetermined. Additionally, we plan to expand our analysis to include the variation of concepts according to the text genre, enhancing the generalizability of the approach.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                        
+                            <hi style="font-size:10pt" xml:space="preserve">Our corpus is drawn from the main research corpus of the ERC-funded project ModERN and includes more than 10,000 digitized books from the 17th and 18th centuries in French, including both transcribed and OCR text. See </hi>
+                            <ref target="https://modern.huma-num.fr/">
+                                <hi rend="underline color(1155CC)" style="font-size:10pt">https://modern.huma-num.fr/</hi>
+                            </ref>
+                            <hi style="font-size:10pt" xml:space="preserve">. </hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                        
+                            <hi style="font-size:10pt" xml:space="preserve"> See </hi>
+                            <ref target="HYPERLINK">
+                                <hi rend="underline color(1155CC)" style="font-size:10pt">https://huggingface.co/google-bert/bert-base-multilingual-uncased</hi>
+                            </ref>
+                            <hi style="font-size:10pt" xml:space="preserve"> and </hi>
+                            <ref target="https://huggingface.co/almanach/camembert-base">
+                                <hi rend="underline color(1155CC)" style="font-size:10pt">https://huggingface.co/almanach/camembert-base</hi>
+                            </ref>
+                            <hi style="font-size:10pt" xml:space="preserve">. </hi>
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Aida, Taichi / Bollegala, Danushka</hi> (2024): “A Semantic Distance Metric Learning approach for Lexical Semantic Change Detection”, in 
+                        <hi rend="italic">Findings of the Association for Computational Linguistics: ACL 2024</hi> 7570–7584. DOI: 10.18653/v1/2024.findings-acl.451.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Brett, Annabel</hi> (2002): “What is Intellectual History Now?”, in Cannadine, D. (ed), 
+                        <hi rend="italic">What is History Now?</hi> Palgrave Macmillan 13–31.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">De Bolla, Peter</hi> (ed) (2023): 
+                        <hi rend="italic">Explorations in the Digital History of Ideas. New Methods and Computational Approaches.</hi> Cambridge: Cambridge University Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Dubossarsky, Haim / Hengchen, Simon / Tahmasebi, Nina / Schlechtweg, Dominik</hi> (2019): “Time-Out: Temporal Referencing for Robust Modeling of Lexical Semantic Change”. in 
+                        <hi rend="italic">Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics</hi> (Volume 1: Long Papers), Florence, Italy. DOI: 10.18653/v1/P19-1044.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Firth, John Rupert</hi> (1957): “A synopsis of linguistic theory, 1930-1955, in 
+                        <hi rend="italic">Studies in linguistic analysis</hi>, Oxford: Basil Blackwell 10–32.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Giulianelli, Mario / Del Tredici, Marco / Fernández, Raquel</hi> (2020): “Analysing Lexical Semantic Change with Contextualised Word Representations”, in 
+                        <hi rend="italic">Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</hi> 3960–3973. DOI: 10.18653/v1/2020.acl-main.365.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kaiser, Jens / Schlechtweg, Dominik / Papay, Sean / Schulte im Walde, Sabine</hi> (2020): “IMS at SemEval-2020 Task 1: How Low Can You Go? Dimensionality in Lexical Semantic Change Detection”, in 
+                        <hi rend="italic">Proceedings of the Fourteenth Workshop on Semantic Evaluation</hi> 81–89. DOI: 10.18653/v1/2020.semeval-1.8.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kudo, Taku / Richardson, John</hi> (2018): “SentencePiece: A simple and language independent subword tokenizer and detokenizer for Neural Text Processing”, in 
+                        <hi rend="italic">Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing: System Demonstrations</hi> 66–71. DOI: 10.18653/v1/D18-2012. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kutuzov, Andrey / Giulianelli, Mario</hi> (2020): “UiO-UvA at SemEval-2020 Task 1: Contextualised Embeddings for Lexical Semantic Change Detection”, in 
+                        <hi rend="italic">Proceedings of the Fourteenth Workshop on Semantic Evaluation</hi> 26–134. DOI: 10.18653/v1/2020.semeval-1.14
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">London, Jennifer</hi> (2016): “Re-imagining the Cambridge School in the Age of Digital Humanities”, in 
+                        <hi rend="italic">Annual Review of Political Science</hi> 19 351–73. DOI: 10.1146/annurev-polisci-061513-115924.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Martinc, Matej / Novak, Petra Kraj / Pollak, Senja</hi> (2020): “Leveraging Contextual Embeddings for Detecting Diachronic Semantic Shift”, in 
+                        <hi rend="italic">Proceedings of the Twelfth Language Resources and Evaluation Conference</hi> 4811–4819. https://aclanthology.org/2020.lrec-1.592/.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Mikolov, Tomas / Chen, Kai / Corrado, Greg / Dean, Jeffrey</hi> (2013): “Efficient estimation of word representations in vector space”, in 
+                        <hi rend="italic">arXiv</hi> arXiv:1301.3781. DOI: 10.48550/arXiv.1301.3781.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Pennington, Jeffery / Socher, Richard / Manning, Christopher </hi>(2014): “GloVe: Global Vectors for Word Representation”. in 
+                        <hi rend="italic">Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing</hi> (EMNLP) 1532–43. DOI: 10.3115/v1/D14-1162.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Schlechtweg, Dominique / McGillivray, Barbara / Hengchen, Simon / Dubossarsky, Haim / Tahmasebi, Nina</hi> (2020): “SemEval-2020 Task 1: Unsupervised Lexical Semantic Change Detection”, in 
+                        <hi rend="italic">Proceedings of the Fourteenth Workshop on Semantic Evaluation</hi> 1–23. DOI: 10.18653/v1/2020.semeval-1.1.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Vaswani, Ashish / Shazeer, Noam / Parmar, Niki / Uszkoreit, Jakob / Jones, Llion / Gomez, Aidan N. / Kaiser, Lukasz / Polosukhin, Illia</hi> (2017): “Attention is All you Need”, in 
+                        <hi rend="italic">arXiv</hi> preprint arXiv:1706.03762. DOI: 10.48550/arXiv.1706.03762.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Verheul, Jaap / Salmi, Hannu / Riedl, Martin / Nivala, Asko / Viola, Lorella / Keck, Jana / Bell, Emily</hi> (2022): “Using word vector models to trace conceptual change over time and space in historical newspapers, 1840–1914”, in 
+                        <hi rend="italic">Digital Humanities Quarterly</hi> 16.2. https://www.digitalhumanities.org/dhq/vol/16/2/000550/000550.html.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Wang Kexin / Reimers, Nils / Gurevych, Iryna</hi> (2021): “TSDAE: Using Transformer-based Sequential Denoising Auto-Encoderfor Unsupervised Sentence Embedding Learning”, in 
+                        <hi rend="italic">Findings of the Association for Computational Linguistics: EMNLP 2021</hi> 671–688. DOI: 10.18653/v1/2021.findings-emnlp.59.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Wang, Ruiyu / Choi Matthew</hi> (2023): “Large Language Models on Lexical Semantic Change Detection: An Evaluation”, in 
+                        <hi rend="italic">ArXiv</hi> abs/2312.06002. DOIL 10.48550/arXiv.2312.06002.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

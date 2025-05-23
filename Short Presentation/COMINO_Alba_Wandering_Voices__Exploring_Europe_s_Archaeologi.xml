@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="COMINO_Alba_Wandering_Voices__Exploring_Europe_s_Archaeologi">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Wandering Voices: Exploring Europe’s Archaeological Paths on Paper</title>
+                <author>
+                    <persName>
+                        <surname>Comino</surname>
+                        <forename>Alba</forename>
+                    </persName>
+                    <affiliation>Universidad de Jaén, Spain</affiliation>
+                    <email>alba.comino2@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Travel Literature</term>
+                    <term>XML-TEI</term>
+                    <term>CIDOC-CRM</term>
+                    <term>GIS</term>
+                    <term>Archaeology</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>data modeling</term>
+                    <term>semantic analysis</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>Archaeology</term>
+                    <term>Cultural studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>The travel narrative emerged as a particularly popular literary genre in the 19th century, driven by advancements in transportation and the rise of tourism, which facilitated the international mobility of cultural elites. This phenomenon generated an extensive corpus of literature that not only documented individual experiences but also reflected the cultural and political dynamics of the period. However, Latin American authors’ narratives, mainly women’s, have often been relegated to the margins. From a historiographical perspective, there has traditionally been a focus on colonial chronicles and accounts of scientific or commercial expeditions written by European male explorers. In contrast, works by female authors have received significantly less scholarly attention (Barco Cebrián 2018; Miseres 2017; Spicer-Scalante 2012). In recent years, however, this trend has started to shift. A growing number of studies have brought visibility to the role of women travellers, especially those of European upper-middle-class origins who visited exotic territories during the Enlightenment or Victorian periods (Dolan 2001; Dutta 2020; Ghose 1998; Lafarga 2012; Morató 2001; Robinson 1994; Romero 1992; Schlick 2012; Stevenson 1982). These scholarly efforts have expanded to encompass women from diverse social classes and nationalities, who travelled to diverse geographies during other historical periods (Alzate / Doll 2014; Bailey 2019; Foster / Mills 2002; Ferrús Antón 2011; Miseres 2017).</p>
+            <p>Travel books become a source of information to study cultural heritage from a chronological, spatial and emotional perspective (Abascal 2012; Besson 2021; Ooghe 2007; Salas Álvarez 2008). This paper focuses on the viewpoints of Latin American women writers (Cáceres 1911; Camarillo 1930; Carrasquilla 2011; Echeverría1937; Matto 1909) on European archaeological heritage in the early 20th century, with a particular emphasis on archaeological sites of Classical Antiquity such as 
+                <hi rend="italic">Itálica</hi> in Spain, 
+                <hi rend="italic">Pompeii</hi> in Italy, and 
+                <hi rend="italic">Cemenelum</hi> in France. Adopting a perspective of otherness, it explores how these women engaged with these heritage places, the aspects that captured their attention, and the emotional resonances these encounters evoked in their writings. So, a comparative analysis between these women’s accounts and contemporary archaeological knowledge provides insight into how ruins were interpreted and reimagined in Latin America, a context in which references to Classical Antiquity not only supported academic data but also shaped political discourses of independence (Aguilera Durán / Valenzuela Matus, 2024; Del Molino 2024; Laird 2010; Mills 1974; Romero Recio et al. 2023).
+            </p>
+            <p>Methodologically, this study is framed within the 
+                <ref target="https://rewind-project.fcsh.unl.pt/">REWIND project</ref>, which applies Digital Humanities tools such as semantic annotation, ontological models, sentiment analysis algorithms, and Geographic Information Systems to explore the spatiotemporal coordinates of heritage and its reception, based on decolonial gender approaches (Comino 2024). This methodological proposal follows the FAIR principles with the aim of ensuring that both the workflow and the project deliverables can be used in future research. 
+            </p>
+            <p style="text-align: justify;">
+                <hi style="font-size:11pt" xml:space="preserve">The REWIND dataset corresponds to the ‘deep data’ concept (Štular / M. Belak, 2022) since the geosemantic analysis depended on working narrowly with the text because every annotation demands interpretation. This dataset was created by encoding travel books using XML markup language and the standards proposed by the </hi>
+                <ref target="https://tei-c.org/">
+                    <hi style="font-size:11pt">Text Encoding Initiative</hi>
+                </ref>
+                <hi style="font-size:11pt" xml:space="preserve">. On the one hand, a modernised diplomatic digital edition of each publication is produced, ensuring that not only the structure of the books is annotated, but also that the original formatting of the text (such as italics, capital letters, indentation, etc.) and any typographical errors are preserved. Additionally, the Spanish is adapted to the most recent edition of the </hi>
+                <hi rend="italic" style="font-size:11pt">Ortografía de la Lengua Española</hi>
+                <hi style="font-size:11pt" xml:space="preserve"> (RAE 2010), as the sentiment analysis relies on a contemporary Spanish emotion lexicon. On the other hand, tagging is used to identify people, places, objects, and events, turning each book into a database that can be queried using XQuery expressions. This annotation system allows us to differentiate all cultural heritage elements by linking them, whenever possible, with geographical coordinates through the </hi>
+                <ref target="https://www.geonames.org/">
+                    <hi style="font-size:11pt">GeoNames gazetteer</hi>
+                </ref>
+                <hi style="font-size:11pt" xml:space="preserve"> and with Linked Open Data (LOD) from </hi>
+                <ref target="https://viaf.org/">
+                    <hi style="font-size:11pt">VIAF</hi>
+                </ref>
+                <hi style="font-size:11pt" xml:space="preserve"> and </hi>
+                <ref target="https://www.wikidata.org/wiki/Wikidata:Main_Page">
+                    <hi style="font-size:11pt">Wikidata</hi>
+                </ref>
+                <hi style="font-size:11pt">. Additionally, the ROSSIO Thesaurus was used to categorise the different European cultural heritage elements through the @type attribute according to the UNESCO typology, which differentiates between intangible cultural heritage and tangible movable and immovable cultural heritage.</hi>
+            </p>
+            <p>Before encoding the text in XML-TEI, a reflection exercise was carried out on how to abstract the real world when modelling it (Ore / Øyvind, 2009). Historical narrative sources are often characterised by numerous interconnected references. For this reason, the project opted for a knowledge graph based on 
+                <ref target="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC-CRM</ref> to structure historical information in a manner compatible with the semantic web model. So, once the text was encoded in a computer-readable format, it was possible to obtain the data relating to the elements of European cultural heritage that the authors mentioned in their travel books and integrate them into the ontological model. Thus, the &lt;objectName&gt; label from XML-TEI text encoding is used for elements of material cultural heritage, which corresponds to information associated with the E22 Human-Made Object class of the ontological model. And through the @type attribute, different subclasses based on the 
+                <ref target="https://vocabs.rossio.fcsh.unl.pt/">ROSSIO Thesaurus</ref> are indicated. This categorisation facilitates ontological integration and, therefore, the use of LODs thanks to URIs. Creating semantically well-structured data from various sources is a challenging task, so this information is centralised in an index that makes it possible to refer to the same cultural object in different travel books using a unique identifier (@xml:id attribute). Finally, a sentiment analysis is carried out using R programming language, the Tidytext and Syuzhet packages, and the NRC Emotion Lexicon, to detect and evaluate the emotions present in the travel book descriptions of archaeological sites.
+            </p>
+            <p>Ultimately, this research highlights the richness and originality of these women’s narratives, contributing to an understanding of the tensions and dialogues between European cultural heritage and Latin American historical memory. It contributes to constructing a polyphonic historical discourse that moves beyond including women’s perspectives. Instead, it seeks to truly listen to the voices of non-European women who, through their commitment to feminism and sociocultural diversity, emerge as active agents in the historical narratives.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Abascal, Juan Manuel</hi> (2012). “La arqueología en los 'Viajes literarios' por España en tiempos de los Borbones”, in Almagro-Gorbea, Martín / Maier, Jorge (eds.): 
+                        <hi rend="italic">De Pompeya al Nuevo Mundo: La Corona española y la arqueología en el siglo XVIII</hi>. Madrid: Real Academia de la Historia – Patrimonio Nacional 53–69.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Aguilera Durán, Tomás / Valenzuela Matus, Carolina</hi> (2024). “Cultura clásica en las celebraciones del Centenario de la República de Chile (1910)”, in 
+                        <hi rend="italic">Iberoamericana</hi> 24, 85: 155–183. DOI: 
+                        <ref target="https://doi.org/10.18441/ibam.24.2024.85.155-183">https://doi.org/10.18441/ibam.24.2024.85.155-183</ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Alzate, Carolina / Doll, Darcie</hi> (eds.). (2014). 
+                        <hi rend="italic">Redes, alianzas y afinidades: Mujeres y escritura en América Latina. Homenaje a Montserrat Ordóñez (1941-2001)</hi>. Bogotá: Universidad de los Andes – Santiago de Chile: Universidad de Chile. 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Bailey, Brigitte</hi> (2019). 
+                        <hi rend="italic">American travel literature, gendered aesthetics, and the Italian tour, 1824–1862</hi>. Cambridge: Edinburgh University Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Barco Cebrián, Lorena Catalina</hi> (2018). “Literatura femenina de viajes: Aproximación a la visión de España en los relatos de seis escritoras foráneas”, in 
+                        <hi rend="italic">Arenal. Revista de Historia de las Mujeres</hi> 25, 2: 443–472. DOI: 
+                        <ref target="https://doi.org/10.30827/arenal.v25i2.5266">https://doi.org/10.30827/arenal.v25i2.5266</ref>
+                        <hi rend="Hyperlink">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Besson, Françoise</hi> (2021). “Travel books as landscape archaeology reports. From history to ecological responsibility: The example of British and American travellers in the Pyrenees”, in Kluiving, Sjoerd
+                        <hi rend="color(0A0A0A)" xml:space="preserve"> /</hi> Liden, Kerstin / Fredengren, Christina (eds.): 
+                        <hi rend="italic">Environmental humanities: A rethinking of landscape archaeology? Interdisciplinary academic research related to different perspectives of landscape</hi>. Leiden: Sidestone Press Academics 31–46.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Cáceres, Zoila Aurora</hi> (1911). 
+                        <hi rend="italic">Oasis de arte</hi>. Paris: Garnier Hermanos.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Camarillo, María Enriqueta</hi> (1930). 
+                        <hi rend="italic">Brujas, Lisboa, Madrid</hi>. Madrid: Espasa Calpe.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Carrasquilla, Isabel</hi> (2011). 
+                        <hi rend="italic">Impresiones de viaje escritas por una abuela para sus nietos</hi>. Medellín: Universidad EAFIT.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Comino, Alba</hi> (2024). “Intertwining narrative and technology: Reinterpreting European cultural heritage through the voices of Latin American women writers”, in 
+                        <hi rend="italic">International Journal of Humanities and Arts Computing</hi> 18, 2: 202–223. DOI: 
+                        <ref target="https://doi.org/10.3366/ijhac.2024.0333">https://doi.org/10.3366/ijhac.2024.0333</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Del Molino García, Ricardo</hi> (2024). “Grecia y Roma en la Belle Époque hispanoamericana”, in 
+                        <hi rend="italic">Revista Ciencias y Humanidades</hi> 18 2: 194–213. DOI: 
+                        <ref target="https://doi.org/10.61497/6xdyj322">https://doi.org/10.61497/6xdyj322</ref>
+                        <hi rend="Hyperlink">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Dolan, Brian</hi> (2001). 
+                        <hi rend="italic">Ladies of the Grand Tour: British women in pursuit of enlightenment and adventure in eighteenth-century Europe</hi>. New York: HarperCollins Publishers.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Dutta, Sutapa</hi> (ed.) (2020). 
+                        <hi rend="italic">British women travellers: Empire and beyond, 1770–1870</hi>. New York: Routledge.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Echeverría, Inés</hi> (1937). 
+                        <hi rend="italic">Entre dos siglos</hi>. Santiago de Chile: Ediciones Ercilla.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Ferrús Antón, Beatriz</hi> (2011). 
+                        <hi rend="italic">Mujer y literatura de viaje en el siglo XIX: Entre España y las Américas</hi>. Valencia: Universitat de València.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Foster, Shirley / Mills, Sara</hi> (eds.). (2002). 
+                        <hi rend="italic">An anthology of women’s travel writing</hi>. Manchester – New York: Manchester University Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Ghose, Indira</hi> (1998). 
+                        <hi rend="italic">Women travelers in colonial India: The power of the female gaze</hi>. New Delhi: Oxford University Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Lafarga, Francisco</hi> (2012). 
+                        <hi rend="italic">Miradas de mujer: Viajeras francesas por la España del siglo XIX</hi>. Madrid: Editorial Castalia.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Laird, Andrew</hi> (2010). “Soltar las cadenas de las cosas: Las tradiciones clásicas de Latinoamérica”, in Bocchetti, Carla (ed.): 
+                        <hi rend="italic">La influencia clásica en América Latina</hi>. Bogotá: Universidad Nacional de Colombia 11–32. 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Matto, Clorinda</hi> (1909). 
+                        <hi rend="italic">Viaje de recreo: España, Francia, Inglaterra, Italia, Suiza, Alemania</hi>. Valencia: F. Sempere.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Miles, Edwin A.</hi> (1974). “The young American nation and the classical world”, in 
+                        <hi rend="italic">Journal of the History of Ideas</hi> 35, 2: 259–274.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Miseres, Vanesa</hi> (2017). 
+                        <hi rend="italic">Mujeres en tránsito: Viaje, identidad y escritura en Sudamérica (1830-1910)</hi>. Chapel Hill: University of North Carolina Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" xml:space="preserve">Morató, Cristina </hi>(2001). 
+                        <hi rend="italic">Viajeras intrépidas y aventureras</hi>. Barcelona: Plaza &amp; Janés.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Ooghe, Bart</hi> (2007). “Mesopotamian archaeology and travel literature: Shifting relationships”, in 
+                        <hi rend="italic" xml:space="preserve">ISIMU </hi>10: 49–63. DOI: 
+                        <ref target="https://doi.org/10.15366/isimu2007.10.003">https://doi.org/10.15366/isimu2007.10.003</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Ore, Christian-Emile / Øyvind, Eide</hi> (2009). “TEI and cultural heritage ontologies: Exchange of information?”, in 
+                        <hi rend="italic">Literary &amp; Linguistic Computing</hi> 24, 2: 161–172. DOI: 
+                        <ref target="https://doi.org/10.1093/llc/fqp010">https://doi.org/10.1093/llc/fqp010</ref>
+                        <hi rend="Hyperlink">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Real Academia Española</hi> (2010). 
+                        <hi rend="italic">Ortografía de la lengua española</hi>. Madrid: Espasa-Calpe.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Robinson, Jane</hi> (ed.) (1994). 
+                        <hi rend="italic">Unsuitable for ladies: An anthology of women travelers</hi>. Oxford: Oxford University Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Romero Recio, Mirella / Salas Álvarez, Jesús / Buitrago, Laura</hi> (2023). 
+                        <hi rend="italic">Pompeya y Herculano entre dos mundos: La recepción de un mito en España y América</hi>. Roma: L'Erma di Bretschneider.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Romero, Patricia W.</hi> (1992). 
+                        <hi rend="italic">Women’s voices on West Africa: A century of travel writings</hi>. New York: M. Wiener Pub.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Salas Álvarez, Jesús</hi> (2008). “La difusión de la arqueología y del patrimonio arqueológico de Andalucía a través de la literatura ilustrada de viajes”, in 
+                        <hi rend="italic">Cuadernos Dieciochistas</hi> 9: 79–103.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Schlick, Yaël</hi> (2012). 
+                        <hi rend="italic">Feminism and the politics of travel after the Enlightenment</hi>. Lewisburg: Bucknell University Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Spicer-Scalante, Juan Pablo</hi> (2012). “Extraterritorialidad y transculturación: Recuerdos de viaje de Eduarda Mansilla”, in Sara Beatriz Guardia (ed.), 
+                        <hi rend="italic">Viajeras entre dos mundos</hi>. Dourados: Editora UFGD 461– 479.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Stevenson, Catherine Bernes</hi> (1982). 
+                        <hi rend="italic">Victorian women travel writers in Africa</hi>. Boston: Twayne Publishers.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Štular, Benjamin / Belak, Mateja</hi> (2022). “Deep data example: Zbiva, early medieval data set for the Eastern Alps”, in 
+                        <hi rend="italic">Research Data Journal for the Humanities and Social Sciences</hi> 7, 1: 1–13. DOI: 
+                        <ref target="https://doi.org/10.1163/24523666-bja10024">https://doi.org/10.1163/24523666-bja10024</ref>
+                        <hi rend="Hyperlink">.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

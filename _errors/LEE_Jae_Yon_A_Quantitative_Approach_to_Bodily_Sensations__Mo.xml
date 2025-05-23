@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LEE_Jae_Yon_A_Quantitative_Approach_to_Bodily_Sensations__Mo">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>A Quantitative Approach to Bodily Sensations: Modernist and Realist Authors in Colonial Korea </title>
+                <author>
+                    <persName>
+                        <surname>Lee</surname>
+                        <forename>Jae-Yon</forename>
+                    </persName>
+                    <affiliation>Ulsan National Institute of Science and Technology, Korea, Republic of (South Korea)</affiliation>
+                    <email>bukuwom@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ji</surname>
+                        <forename>Hae-in</forename>
+                    </persName>
+                    <affiliation>Academy of Korean Studies, Korea, Republic of (South Korea)</affiliation>
+                    <email>cihayin@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T11:55:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>computational stylistics</term>
+                    <term>Yi Sang</term>
+                    <term>Yŏm Sang-sŏp</term>
+                    <term>bodily sensations</term>
+                    <term>affective politics</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>attribution studies and stylometric analysis</term>
+                    <term>cultural analytics</term>
+                    <term>data modeling</term>
+                    <term>text mining and analysis</term>
+                    <term>Asian studies</term>
+                    <term>Cultural studies</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <hi style="font-size:12pt" xml:space="preserve">This presentation explores two renowned fiction writers from Korea's colonial period (1910-1945) through </hi>
+                <hi rend="bold">computational stylistics</hi>
+                <hi style="font-size:12pt" xml:space="preserve">. In literary studies, this approach investigates the formal and aesthetic features of texts as well as their social and historical contexts using statistical and computational approaches. Specific areas of analysis include: “style, genre, and epoch; literary topoi, plot, and character networks; narrative perspective, figure characterization, and emotion,” among others (Herrmann, Jacobs, and Piper 2021: 451). </hi>
+            </p>
+            <p rend="No Spacing">
+                <hi style="font-size:12pt">Computational stylistics in modern Korean literature has only recently begun to gain attention. Jeon (2024) analyzed how spatially derived sensations characterize the central figures in Yi Kwang-su's novels. Similarly, Kwon (2023) investigated the stylistic features shaping the stream of consciousness in Korean modernist literature during the colonial period. Interestingly, his research revealed that writers who abandoned leftist literature under the pressures of colonial censorship shared similar stream-of-consciousness stylistic traits with their peers.</hi>
+            </p>
+            <p rend="No Spacing">
+                <hi style="font-size:12pt">While previous studies have examined the relationship between space and sensation or identified shared stylistic traits among writers within the same genre through quantitative lexical analysis, we focus on classifying the language of body and mind used by two authors with distinct stylistic and thematic approaches to uncover their unique authorial characteristics. To achieve this, we compare the works of two prominent novelists active during the colonial period: Yi Sang and Yŏm Sang-sŏp.</hi>
+            </p>
+            <p rend="No Spacing">
+                <hi style="font-size:12pt">Yi Sang (1910–1937) was a modernist poet and novelist, distant from the depiction of historical or resistant figures such as independence fighters or revolutionary workers. Instead, he captured the lethargy, anxiety, and melancholy that dominated daily life through long-winded narratives. In contrast, Yŏm Sang-sŏp (1897–1963) was ideologically a moderate leftist and stylistically a realist novelist. While advocating for the legitimacy of class-based literature, he also upheld the aesthetic value of literature as art. Yŏm was particularly focused on the issue of money, a theme bridging modernity and premodernity, and depicted the rise and fall of various human characters around it. This earned him the title of "the Balzac of Korea."</hi>
+            </p>
+            <p rend="No Spacing">
+                <hi style="font-size:12pt" xml:space="preserve">This presentation applies computational stylistics to the short and long stories written by Yi and Yŏm. Specifically, we developed a custom model capable of categorizing and analyzing sensory expressions related to the body and mind, allowing us to compare the stylistic and thematic characteristics of the two authors. For this purpose, 13 of Yi’s works and 55 of Yŏm’s works were digitized for machine-readable analysis. The sensory classification model was designed with reference to Ch’oe Hyŏn-bae’s </hi>
+                <hi rend="italic" style="font-size:12pt" xml:space="preserve">Our Grammar </hi>
+                <hi style="font-size:12pt">(Uri Malbon 1935), which laid the foundation for modern Korean grammar. Based on this framework, we first constructed sensory labeling data for Yi Sang’s 13 stories.</hi>
+            </p>
+            <p rend="No Spacing" style="text-align: center;">Our Sensory Classification Model</p>
+            <table rend="rules">
+                <row>
+                    <cell style="text-align: left;" rend="No_Spacing background-color(E5E5E5)">Classification Level 1</cell>
+                    <cell style="text-align: left;" rend="No_Spacing background-color(E5E5E5)">Classification Level 2</cell>
+                    <cell style="text-align: left;" rend="No_Spacing background-color(E5E5E5)">Classification Level 3</cell>
+                    <cell style="text-align: left;" rend="No_Spacing background-color(E5E5E5)">Classification Level 4</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;" rend="No_Spacing">
+                        <p rend="No Spacing">Physical/</p>
+                        <p rend="No Spacing">Psychological</p>
+                    </cell>
+                    <cell style="text-align: left;" rend="No_Spacing">External</cell>
+                    <cell style="text-align: left;" rend="No_Spacing">Visual</cell>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                </row>
+                <row>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                    <cell style="text-align: left;" rend="No_Spacing">Auditory</cell>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                </row>
+                <row>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                    <cell style="text-align: left;" rend="No_Spacing">Olfactory</cell>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                </row>
+                <row>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                    <cell style="text-align: left;" rend="No_Spacing">Gustatory</cell>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                </row>
+                <row>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                    <cell style="text-align: left;" rend="No_Spacing">Somatosensory</cell>
+                    <cell style="text-align: left;" rend="No_Spacing">Tactile</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                    <cell style="text-align: left;" rend="No_Spacing">Thermal</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                    <cell style="text-align: left;" rend="No_Spacing">Nociceptive</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                    <cell style="text-align: left;" rend="No_Spacing">Internal</cell>
+                    <cell style="text-align: left;" rend="No_Spacing">Equilibrioception</cell>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                </row>
+                <row>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                    <cell style="text-align: left;" rend="No_Spacing">Interoceptive</cell>
+                    <cell style="text-align: left;" rend="No_Spacing"/>
+                </row>
+            </table>
+            <p rend="No Spacing">
+                <hi style="font-size:12pt">The model begins by dividing sensations into the primary level of physical and psychological categories. It then classifies them into the secondary level based on the direction of perception, distinguishing between internal and external sensations, and further connects them to individual senses at the tertiary level. Unlike other individual senses at the tertiary level, somatosensory sensations are considered to encompass more differentiated sensations, offering qualitatively distinct aspects of experience. As such, they are classified at the quaternary level and include the tactile sense, thermoception, and nociception.</hi>
+            </p>
+            <p rend="No Spacing">
+                <hi style="font-size:12pt">Using this classification framework, the dataset was constructed through the following process.</hi>
+            </p>
+            <p rend="No Spacing">
+                <hi style="font-size:12pt">1. The fiction text was divided into sentences with metadata, and sensory classification data was added, publicly shared on OSF in TSV format.</hi>
+            </p>
+            <p rend="No Spacing">
+                <hi style="font-size:12pt">2. Emotion analysis using KcELECTRA (Korean comments ELECTRA, a pre-trained ELECTRA model trained on Korean online comments for conversational text) and KOTE (Korean Online That-gul Emotions, a dataset labeled with emotions across 50,000 Korean online comments) calculated 44 emotion scores for Yi Sang's short stories. This deep learning analysis quantified modern Korean readers' average emotions for individual sentences.</hi>
+            </p>
+            <p rend="No Spacing">
+                <hi style="font-size:12pt">This model emphasizes the somatosensory sense because it was more frequently perceived as psychological rather than physical. Furthermore, the subdivision into 16 sensory categories at the quaternary level revealed that physical interoception stood out as the most significant after the visual and auditory senses. When these findings are connected to the emotion of realization or awakening, it becomes evident that the internal sense and somatosensory are meaningfully utilized to intuitively reflect the societal conditions of the time. In other words, sudden epiphanies were quantitatively shown to manifest as sensations that metaphorically "touch the skin" (Ji 2024).</hi>
+            </p>
+            <p rend="No Spacing">
+                <hi style="font-size:12pt">Our presentation aims to improve the previously explained sensory classification model and apply it to Yŏm Sang-sŏp's fiction, quantitatively identifying the stylistic and aesthetic differences in how the two authors express sensations, with a focus on the body. The body is an organic unit that embodied aspirations for independence and the ideology of resistance during the colonial period. As Michel Foucault noted, it is also the object of biopolitics and disciplinary power. With this in mind, we pay particular attention to the relationship between addresser and addressee in dialogue and to how specific bodily emotions are mediated through character networks. By examining both physical and psychological sensory responses, we aim to uncover a facet of the broader affective politics at play during the colonial era—extending beyond simple sentiment analysis.</hi>
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl rend="No Spacing">
+                        <hi style="font-size:12pt">Ch’oe, Hyŏn-bae (1937):</hi>
+                        <hi rend="italic" style="font-size:12pt">Our Grammar</hi>
+                        <hi style="font-size:12pt">. Seoul: Yŏnhŭi Chŏnmun Hakkyo Ch’ulp’anbu.</hi>
+                    </bibl>
+                    <bibl rend="No Spacing">
+                        <hi style="font-size:12pt" xml:space="preserve">Herrmann, J. Berenike, Jacobs, Arthur M. and Piper, Andrew (2021): "Computational Stylistics," in </hi>
+                        <hi rend="italic" style="font-size:12pt">Handbook of Empirical Literary Studies</hi>
+                        <hi style="font-size:12pt">, edited by Donald Kuiken and Arthur M. Jacobs, Berlin, Boston: De Gruyter 451-486.</hi>
+                    </bibl>
+                    <bibl rend="No Spacing">
+                        <hi style="font-size:12pt">Jeon, Seong-gyu (2024): “Yi Kwang-su and the map of emotions.” Proceedings. The 28</hi>
+                        <hi rend="superscript" style="font-size:12pt">th</hi>
+                        <hi style="font-size:12pt" xml:space="preserve">Ch’unwŏn Yŏn’gu Hakhoe Conference. October 19.   </hi>
+                    </bibl>
+                    <bibl rend="No Spacing">
+                        <hi style="font-size:12pt" xml:space="preserve">Ji, Hae-in (2024): “A Study on the Epiphanies in Yi Sang’s Literature: Using Digital Sense and Emotion Analysis.” </hi>
+                        <hi rend="italic" style="font-size:12pt">Sanghur Hakpo</hi>
+                        <hi style="font-size:12pt" xml:space="preserve"> 72: 753-827. </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi style="font-size:12pt" xml:space="preserve">Kwon, Eun (2023): “The quantitative stylistics and the literary history of the technique: the stream of consciousness in Korean modern novels.” </hi>
+                        <hi rend="italic" style="font-size:12pt" xml:space="preserve">Hanguk kŭndae munhak yŏn’gu </hi>
+                        <hi style="font-size:12pt">47: 73 – 106.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

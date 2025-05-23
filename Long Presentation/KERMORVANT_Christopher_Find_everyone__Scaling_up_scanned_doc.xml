@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KERMORVANT_Christopher_Find_everyone__Scaling_up_scanned_doc">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Find everyone? Scaling up scanned document automated processing of millions of census records to reconstitute the French population in the Socface project </title>
+                <author>
+                    <persName>
+                        <surname>Kermorvant</surname>
+                        <forename>Christopher</forename>
+                    </persName>
+                    <affiliation>TEKLIA, France</affiliation>
+                    <email>kermorvant@teklia.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Kesztenbaum</surname>
+                        <forename>Lionel</forename>
+                    </persName>
+                    <affiliation>INED - Institut national d'études démographiques; PSE - Paris School of Economics</affiliation>
+                    <email>lionel.kesztenbaum@ined.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Dupraz</surname>
+                        <forename>Yannick</forename>
+                    </persName>
+                    <affiliation>Université Paris Dauphine-PSL; INED - Institut national d'études démographiques</affiliation>
+                    <email>yannick.dupraz@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-05T10:16:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Historical document recognition</term>
+                    <term>handwriting recognition</term>
+                    <term>demography</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>image processing and analysis</term>
+                    <term>optical character recognition and handwriting recognition</term>
+                    <term>History</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <hi style="font-size:10pt">The tremendous increase in the capacity and quality of automated document processing has opened many avenues for historical research and numerous projects today take advantage of handwritten text recognition (HTR) to extract information from historical documents (Nockels et al. 2022). Challenges remain, however, regarding the processing of very large sets of historical documents, consisting of millions of images containing hundreds of millions of individual records. These challenges concern both the treatment of documents and the use of the extracted information by social scientists. On the one hand, extracting complex information from a very large array of archival sources requires a workflow as simple and consistent as possible. On the other hand, normalizing and distributing such a vast amount of data requires clear processes and documentation. On both sides, there are tensions arising from simply scaling up standard technologies.</hi>
+            </p>
+            <p>
+                <hi style="font-size:10pt" xml:space="preserve">We discuss these tensions and ways of solving them in the case of the SocFace project (ANR-21-CE38-0013), which aims at collecting and processing, for the first time, all surviving French censuses before WWII at the individual level. These </hi>
+                <hi rend="italic" style="font-size:10pt">listes nominatives du recensement</hi>
+                <hi style="font-size:10pt" xml:space="preserve"> were produced every five years from 1836 to 1936; organized spatially (municipality; wards, hamlets, or streets; houses; households), they summarize census information, listing each individual with some of her characteristics, e.g., name, year of birth, or occupation (Haug 1979). The sheer number of </hi>
+                <hi rend="italic" style="font-size:10pt">listes</hi>
+                <hi style="font-size:10pt">(around 25 million images from 1836 to 1936, corresponding to approximately 500 million individual records) and their dispersion over space (these records are kept in a hundred different archive repositories) have limited their use until now. To date, we have collected and prepared data for roughly a quarter of the total (26 archival repositories out of 100) and, together, they represent 6.2 million images, of which 5.4 million contain meaningful information and must be processed (the rest are title pages, summaries, etc.). We have processed 10 repositories of this total, producing 60 million records. We are taking advantage of this first pass to produce a quantitative evaluation of the model's performance, from the viewpoint of the use of these data by social scientists.</hi>
+            </p>
+            <p>The challenge of scale</p>
+            <p>
+                <hi style="font-size:10pt">Until recently, the scientific community has approached automatic document processing with a specialization of models both for the different tasks in the processing chain and for homogeneous corpora. Typically, different models are developed for page layout analysis, table recognition, handwriting recognition, and named entity extraction (Tarride, 2023, Petitpierre 2023). Furthermore, in publications, models are trained and evaluated on homogeneous corpora with very little variation in layout (Constum 2022). This specialization poses a major problem for scaling up a project such as the processing of census lists for France over 100 years. Not only is it inconceivable to develop specific models for each of the forms (20 in total), but the mass processing of several tens of millions of pages requires the use of a computer cluster, which imposes additional constraints and complexity on the sequencing of processing. For all these reasons, it is crucial to develop models as integrated as possible, i.e. capable of performing in a single pass all processing stages (table recognition and analysis, handwriting recognition, entity extraction).</hi>
+            </p>
+            <p>
+                <hi style="font-size:10pt">Here, we present the model developed for the recognition of all individual information present in census lists. This integrated model is an extension of a page level text recognition system (Coquenet 2023) that is able to: detect the position of each line of individuals in the tables; recognize handwritten text; type each item of information; and reconstruct households. In addition, the model can adapt to variations between different form layouts. We describe the deployment of this model on a supercomputer using the SLURM system.</hi>
+            </p>
+            <figure>
+                <graphic n="1001" width="12.22375cm" height="6.905625cm" url="/tmp/tmplu2hty2w/Pictures/08491f1d0ed1cf58c36022094cd7f4fe.png" rend="inline"/>
+                <head>Figure 1: Automatic information extraction from a handwritten census page.</head>
+            </figure>
+            <p>Assessing quality over millions of HTR records</p>
+            <p>
+                <hi style="font-size:10pt">Without automated transcription French historical census information would not be available to historians. But at the same time, using these methods results in a tremendous amount of data of uneven quality: some individuals might be hallucinated by the model; most text fields (e.g., place of birth or occupations) will be very noisy; some pages may have been omitted in the processing. Moving forward, we have developed various tools to assess data quality and implement corrections post-treatment. Importantly, such tools need to be designed with the intended use of the dataset in mind. For instance, for linking individuals it doesn’t matter if ‘Arnaud’ (a first name) is spelled ‘Arnaut’ or ‘Ernaud’; but it does matter if the age is 86 instead of 16. So, our tests are end-user oriented and differ depending on which problem we want to tackle.</hi>
+            </p>
+            <p>A first set of tools is related to the images themselves, without text recognition or entity extraction: since there is a fixed set of lines (individuals) on each page, bar the last (around 30 individuals on a page), we can estimate the population of a given municipality for a given year and compare it to the official figure produced at the time of the census by the administration. Large discrepancies indicate an issue with the images: some municipalities were merged, due to a mistake in metadata; some images were missed in the collecting process; some images are missing from the original archives; etc. This tool helps to pinpoint issues related to the sorting of the original source that hinder automated recognition. Simultaneously, it provides a complete picture of the image collection and its limitations, something of great interest for social scientists wishing to work with the final dataset.</p>
+            <p>
+                <hi style="font-size:10pt" xml:space="preserve">A second set of tools is directly related to estimating model quality, at various levels (lines, pages, documents). We compute a set of binary indicators for internal consistency at the line level (e.g., nobody can be 134 years old; someone with a female first name cannot have a male position in the household). At this stage, we are not concerned with the source of the error: if Julie is a son, it’s either because the first name (Julien) or the position (daughter, given that </hi>
+                <hi rend="italic" style="font-size:10pt">fils</hi>
+                <hi style="font-size:10pt" xml:space="preserve">and </hi>
+                <hi rend="italic" style="font-size:10pt" xml:space="preserve">fille </hi>
+                <hi style="font-size:10pt">are very close in French) was misread. What matters here is only that there is an error in the information that will be used by social scientists (for instance the sex ratio of children might be biased). As of now, we have 12 different tests for each line, that we average at the page level. In the end, a quarter of pages do not have any issue, many have a few issues, while a few have many issues. Systematic use of these tests helps us to locate problematic pages, identify their characteristics, e.g., years or municipalities; position in the document (is it more frequently the first, middle or last pages?); type of municipality (are large cities harder to decipher?). In the future, we will build more complex consistency tests at the household level (is there more than one wife of the household head? does the age difference between parents and children make sense?)</hi>
+            </p>
+            <p>A database to rule them all? Dissemination and documentation of the individual dataset</p>
+            <p>
+                <hi style="font-size:10pt" xml:space="preserve">Eventually, SocFace will produce a complete database of all individuals who lived in France between 1836 and 1936 (minor missing archival records). In addition, to make the most of the richness of the </hi>
+                <hi rend="italic" style="font-size:10pt">listes</hi>
+                <hi style="font-size:10pt">, records between censuses will be linked using automated methods. Then, this database could be exploited as a basis for new research in combination with other databases and sources: in the same way that the census today serves as a basis for many other surveys, the dataset of historical censuses might be mobilized to develop quantitative historical research on France in many directions. For instance, SocFace individuals and records could be connected to information available in contemporary surveys from the second half of the 20</hi>
+                <hi rend="superscript" style="font-size:10pt">th</hi>
+                <hi style="font-size:10pt" xml:space="preserve"> century; or they could be connected to other historical sources, at different levels (e.g., extracting all individuals living in a given street in a given year and looking for them in local archives; linking all military records to the census dataset).</hi>
+            </p>
+            <p>
+                <hi style="font-size:10pt" xml:space="preserve">To achieve this, in addition to the large dissemination of the dataset, very precise documentation is needed, which goes beyond the standard description of the datasets to include quality metrics and various indicators of what we don’t know (missing archives, destroyed documents, …). From the onset of the project, the distribution and dissemination of the database was organized, and specific metrics were developed to assess data quality in the simplest possible way. In addition, the data produced by the SocFace project will also be accessible to the public: thanks to FranceArchives (National French archival portal), information available on the </hi>
+                <hi rend="italic" style="font-size:10pt">listes</hi>
+                <hi style="font-size:10pt">will be disseminated in Open Access, allowing anyone to browse freely through hundreds of millions of records.</hi>
+            </p>
+        </body>
+    </text>
+</TEI>

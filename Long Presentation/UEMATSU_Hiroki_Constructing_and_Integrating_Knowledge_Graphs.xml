@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="UEMATSU_Hiroki_Constructing_and_Integrating_Knowledge_Graphs">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Constructing and Integrating Knowledge Graphs for the Koji-Ruien and Waka Databases</title>
+                <author>
+                    <persName>
+                        <surname>UEMATSU</surname>
+                        <forename>Hiroki</forename>
+                    </persName>
+                    <affiliation>The Graduate University for Advanced Studies, SOKENDAI, Japan; National Institute of Informatics</affiliation>
+                    <email>hiroki_u@nii.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>TAKEDA</surname>
+                        <forename>Hideaki</forename>
+                    </persName>
+                    <affiliation>National Institute of Informatics; The Graduate University for Advanced Studies, SOKENDAI, Japan</affiliation>
+                    <email>takeda@nii.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>YAMADA</surname>
+                        <forename>Shoji</forename>
+                    </persName>
+                    <affiliation>International Research Center for Japanese Studies; The Graduate University for Advanced Studies, SOKENDAI, Japan</affiliation>
+                    <email>shoji@nichibun.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>AIDA</surname>
+                        <forename>Mitsuru</forename>
+                    </persName>
+                    <affiliation>Japan Women’s University</affiliation>
+                    <email>aidamitsuru@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Knowledge Graph</term>
+                    <term>Linked Open Data</term>
+                    <term>Data Modeling</term>
+                    <term>Koji-Ruien</term>
+                    <term>Waka</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>data modeling</term>
+                    <term>data publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>linked (open) data</term>
+                    <term>Asian studies</term>
+                    <term>Cultural studies</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">This study aims to construct a knowledge graph for waka data cited and referenced in the Koji-Ruien, an encyclopedia compiled under the direction of the Japanese government during the Meiji and Taisho periods. By doing so, the study seeks to extract data that provides insights into the meanings and historical contexts of past events and descriptions.</p>
+                <p style="text-align: left; ">The Koji-Ruien, as an encyclopedia, includes topics derived from works such as the 
+                    <hi rend="italic">Manyo-Shu</hi> and 
+                    <hi rend="italic">Kokin Waka-Shu</hi>, and uses the 
+                    <hi rend="italic">Kojiki</hi> as a reference. These links between topics and various literary works can be viewed as a network of interconnections. However, classical texts often exist in multiple manuscript and printed editions, making it difficult to uniquely identify specific references.
+                </p>
+                <p style="text-align: left; ">To address this, waka collections were chosen as representative materials, and their variations across manuscripts and printed editions were considered when structuring the data. This study not only converted the Koji-Ruien into RDF but also published it as Linked Open Data (LOD), enabling the creation of a reusable and interoperable knowledge graph.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>The Koji-Ruien</head>
+                <p style="text-align: left; ">The Koji-Ruien is an ambitious encyclopedia project initiated by the Meiji government in 1879. Spanning 36 years of compilation, it was published between 1896 and 1914. The work consists of 1,000 volumes, comprising 350 traditional Japanese-style bound books, 51 Western-style bound books, and over 67,000 pages, with 40,354 entries.</p>
+                <p style="text-align: left; ">One of the compilers, Shigeki Nishimura, aimed to bridge the significant gap with Western powers revealed after Japan opened its borders, seeking to enhance national strength through improved academic capabilities. Nishimura adhered to the format of 
+                    <hi rend="italic">leishu</hi> (classed Chinese encyclopedia), emphasizing learning from and building upon the works of predecessors. To create a large-scale and accurate encyclopedia, the compilation of the Koji-Ruien began as a national project, utilizing excerpts from texts ranging from ancient times to the Edo period.
+                </p>
+                <p style="text-align: left; ">The Koji-Ruien integrates aspects of Western encyclopedias and traditional Eastern reference books. It comprises a readable main body divided into 30 sections and an index section. The content is organized hierarchically into “sections,” “fields,” “articles,” and “entries,” each accompanied by concise headings. Introductory explanations at the beginning of each section and field summarize the content. The entries feature citations and references from pre-modern texts, enabling readers to trace the sources used.</p>
+                <p style="text-align: left; ">To utilize the pre-modern knowledge recorded in the Koji-Ruien, institutions such as the National Institute of Japanese Literature (NIJL) and the International Research Center for Japanese Studies (Nichibunken) have published databases. These include citation and excerpt databases, as well as a full-text search database with variant character functions. Although these tools allow users to retrieve terms and read through the encyclopedia, they do not currently support in-depth analyses of its descriptions, citations, or the compilation process.</p>
+                <p style="text-align: left; ">Thus, to facilitate analyses of the hierarchical structure of headings, the relationships between citations, references, and headings, and the connections between sources and sections or fields, it is necessary to create a data model suited to the Koji-Ruien’s structure. Additionally, linking the original manuscripts of referenced works, such as waka collections and biographies, is critical. As the Koji-Ruien was compiled during the Meiji and Taisho periods, challenges arise from the use of outdated characters. For example, Nichibunken’s full-text search database addresses such issues by treating non-standard characters as images, but replacing them with Unicode or representing them in RDF remains an area for further study.</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>The Data Model of the Koji-Ruien</head>
+                    <p style="text-align: left; ">A data model for the Koji-Ruien was developed based on its headings (“sections” and “fields”), items (“articles” and “entries”), and citations and references. The headings and items reflect categories and relationships of recorded terms, while citations and references are treated as external links. Figure 1 shows the data model of Koji-Ruien.</p>
+                    <figure>
+                        <graphic n="1001" width="16.002cm" height="9.81075cm" url="/tmp/tmp6xui0ajg/Pictures/ffa9c5ef7d7338a04b030eff4754b69b.png" rend="inline"/>
+                        <head>Figure Data model of Koji-Ruien</head>
+                    </figure>
+                    <p style="text-align: left; ">“Sections” and “fields” are connected via dcterms:hasPart, whereas “articles” and “entries” provide detailed descriptions of field names. Some topics may extend only to articles or entries, with citations and references linked to these items. The Koji-Ruien is not merely a collection of entries but a work that lists references and citations. The model allows users to identify how citations were used within the referenced works and to uncover the materials that informed the creation of each topic summary.</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Waka and Waka Collections</head>
+                <p style="text-align: left; ">Waka poetry has been composed in Japan since ancient times, with notable collections including the 
+                    <hi rend="italic">Manyoshu</hi>, 
+                    <hi rend="italic">Kokin Wakashu</hi>, and even 
+                    <hi rend="italic">The Tale of Genji</hi>, which can be regarded as a waka collection. From the Heian period onward, aristocratic waka competitions (uta-awase) were documented, forming part of the broader corpus of waka collections. However, numerous manuscript and printed versions of waka collections have been created over different eras, often exhibiting variations in orthography and annotations.
+                </p>
+                <p style="text-align: left; ">This study utilizes basic data on waka and waka collections from Nichibunken’s waka database, which incorporates data from Keiko II, a waka and linked-verse research support system developed by Katsuhiro Seta (Seta, 1993).</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>The Data Model for Waka Collections</head>
+                    <p style="text-align: left; ">Nichibunken’s waka database provides various search functions, enabling users to browse waka collections by chronological or alphabetical order and to search waka by keywords, headnotes (kotobagaki), and authors. Each waka collection includes data on authors, text in kanji and kana, and associated headnotes. Waka and waka collection data model is shown in Figure 2.</p>
+                    <figure>
+                        <graphic n="1002" width="16.002cm" height="11.47938888888889cm" url="/tmp/tmp6xui0ajg/Pictures/ffa9c5ef7d7338a04b030eff4754b69b.png" rend="inline"/>
+                        <head>Figure Data model of Waka and Waka Collection</head>
+                    </figure>
+                    <p style="text-align: left; ">Given the existence of numerous manuscripts and printed editions, this study examines a data model for waka collections using FRBR (Functional Requirements for Bibliographic Records) from the IFLA LRM framework (Tillett, Barbara, 2004). In FRBR, a Work represents an abstract creation, while an Expression denotes its realization. For example, the 
+                        <hi rend="italic">Manyoshu</hi> as a conceptual Work encompasses various Expressions, such as the Takeda commentary edition registered in the waka database. The model also applies to individual waka, which require identifiers for both their Work and Expression forms due to differences in orthography and translations. Headnotes and annotations, which may vary even for identical waka, are linked to specific waka within collections, capturing their relationships.
+                    </p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Applications of the Knowledge Graph</head>
+                <p style="text-align: left; ">This study created knowledge graphs for the Koji-Ruien (13 digitized sections) and the waka database. The Koji-Ruien encompasses approximately 35,000 topics, resulting in about 200,000 triples. The waka database includes approximately 200,000 waka across 500 collections, with around 2.2 million triples. While many Koji-Ruien triples reference external resources, most sources remain unavailable online or lack URIs due to incomplete digitization.</p>
+                <p style="text-align: left; ">The Koji-Ruien LOD was constructed using RDF representations based on a customized data model.</p>
+                <p style="text-align: left; ">While the current implementation is independent, previous work has shown the applicability of Wikibase-based frameworks for similar tasks of modeling, unifying, and publishing complex cultural datasets (Uematsu et al., 2022).</p>
+                <p style="text-align: left; ">Using SPARQL queries, the knowledge graph enables users to retrieve lists of waka cited in the Koji-Ruien and identify frequently referenced historical materials.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Future Work</head>
+                <p style="text-align: left; ">The initial focus of this study was limited to digitized data from the Koji-Ruien and waka databases. Future work must extend knowledge graph construction to additional sections of the Koji-Ruien and other sources, including non-waka materials. Addressing challenges posed by outdated or non-Unicode characters is critical. Efforts like the CHISE project’s IDS notation could provide solution for encoding and linking such characters.</p>
+                <p style="text-align: left; ">The knowledge graph facilitates cross-referenced analyses, enabling deeper exploration of historical sources and their citation contexts. For waka collections, while the FRBR model effectively represents citation relationships, there is a need to develop data models for other referenced materials. Advanced systems incorporating TEI (Burnard, 2014) could support precise markup of citation relationships, enabling external links to specific text excerpts.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p style="text-align: left; ">This study structured the Koji-Ruien and its references to waka and waka collections into RDF and published the resulting knowledge graphs as Linked Open Data. The graphs enable the discovery of citation patterns, hierarchical relationships among topics, and connections between references and referenced materials.</p>
+                <p style="text-align: left; ">Future research will expand these efforts, enriching humanities studies through statistical analysis and cultural context exploration, such as the reasons for citations and the relationships between topics and their sources.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Seta, Katsuhiro. (1993): "On the Waka, Renga, and Haikai Example Search System "Keiko"", Bensei Publishing, Humanities and Information Processing (2) (in Japanese) September 1993, 25-30, https://doi.org/10.11501/2336943.</bibl>
+                    <bibl style="text-align: left; ">Tillett, Barbara B. (2004): What is FRBR? A Conceptual Model for the Bibliographic Universe. Library of Congress Cataloging Distribution Service.</bibl>
+                    <bibl style="text-align: left; ">Uematsu, H., Nguyen, P., Takeda, H. (2022): Design for data structures: data unification and federation with Wikibase. In: 2022 IEEE International Conference on Big Data, pp. 6169–6178. IEEE, DOI: 10.1109/BigData55660.2022.10020686.</bibl>
+                    <bibl style="text-align: left; ">Burnard, Lou. (2014): What is the Text Encoding Initiative? How to Add Intelligent Markup to Digital Resources. OpenEdition Press, 2014. ISBN: 978-2-8218-3460-6. DOI: 10.4000/books.oep.426.</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

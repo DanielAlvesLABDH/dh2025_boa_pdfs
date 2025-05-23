@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PAREJA_Roberto_Hacia_una_ontolog_a_de_los_festivales_de_cine">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Hacia una ontología de los festivales de cine de Abya Yala. Teoría, diseño y aplicaciones</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Pareja</surname>
+                        <forename>Roberto</forename>
+                    </persName>
+                    <affiliation>Independent researcher, United States of America</affiliation>
+                    <email>politica.pareja@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Leyva Quintero</surname>
+                        <forename>Elcira</forename>
+                    </persName>
+                    <affiliation>CY Cergy Paris Université</affiliation>
+                    <email>elciley@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Baker</surname>
+                        <forename>Peter</forename>
+                    </persName>
+                    <affiliation>University of Sterling</affiliation>
+                    <email>peter.baker@stir.ac.uk</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-22T10:29:11.697909182</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>cine autóctono de Abya Yala</term>
+                    <term>ontologías formales OWL</term>
+                    <term>Python para ontologías</term>
+                    <term>preservación cultural</term>
+                    <term>tecnologías para mejorar la accesibilidad</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digital archiving</term>
+                    <term>digital ecologies and digital communities creation management and analysis</term>
+                    <term>linked (open) data</term>
+                    <term>public humanities collaborations and methods</term>
+                    <term>Cultural studies</term>
+                    <term>Film and cinema arts studies</term>
+                    <term>Indigenous studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Esta ponencia presenta un proyecto de ontología de los festivales de cine autóctono basado en los catálogos de los festivales de cine autóctono de Abya Yala. Dado un corpus inicial de catálogos se construye una taxonomía/tesauro de los términos (conceptos) fundamentales y posteriormente una ontología formal que describe el dominio de conocimiento estableciendo relaciones entre los conceptos.Las ontologías formales son constructos que permiten la descripción rigurosa de un dominio de conocimiento, explicitando sus entidades (conceptos, propiedades e individuos) y las relaciones que existen entre ellas. Una de las aplicaciones de las ontologías es el mantenimiento y conservación del conocimiento en dominios específicos.</p>
+            <p>El objetivo de elaborar esta ontología tiene dos líneas: la primera es construir un archivo de información de libre uso y acceso principalmente para el beneficio de organizaciones y comunidades que producen, diseminan, archivan o investigan esta producción; la segunda, poder evaluar en qué medida se puede rastrear parte de la historia de la emergencia del cine autóctono en Abya Yala a partir de los datos que brindan los festivales y el papel de los festivales en esta emergencia. En cuanto al segundo objetivo, nuestro punto de partida es la necesidad de socializar la ontología construida con los actores interesados en este cine, aceptando, por un lado, la dificultad de reflejar a través de una estructura taxonómica el carácter de evento de los festivales y los procesos de comunicación comunitaria que van más allá de los datos sobre las películas y, por otro lado, el hecho de que tal ontología tenga que partir necesariamente de una episteme de lógica occidental que difícilmente pueda representar la interculturalidad que está en juego al considerar esta producción cinematográfica. Como tal, esta ponencia considerará también los juegos éticos que resultan de un proyecto de ontología de este tipo.</p>
+            <p>Teniendo en cuenta lo dicho, y entendiendo la problemática que ello implica, una ontología basada en los catálogos de festivales ofrece maneras de codificar ciertos aspectos de la comunicación intercultural que se da en los festivales. Por ejemplo, al nivel organizativo, se puede representar la interacción entre entidades de base indígena y grupos no indígenas, o, al nivel de los productos audiovisuales mostrados, se puede construir una taxonomía que recoja elementos de las prácticas socio-técnicas de las comunidades.En una publicación anterior (Leyva Quintero et al., 2023) ya habíamos sugerido que los términos usados en los catálogos para designar los géneros audiovisuales de las películas debían ser recuperados como una forma de representar la comunicación intercultural. Por ejemplo, notamos que algunos términos que designan géneros fílmicos vienen de la tradición de los estudios de comunicación social y periodismo en las instituciones universitarias latinoamericanas, lo que ha influído en la manera en cómo se representa el cine autóctono de Abya Yala desde la institucionalidad blanco-mestiza(Leyva Quintero et al., 2023: 52–53). </p>
+            <p>Una de las dificultades de modelar datos en Humanidades Digitales (HD) viene de la variedad y heterogeneidad de los datos mismos. Diseñar una ontología para un proyecto interdisciplinario de HD implica varios desafíos, entre ellos manejar una gran variedad de fuentes de datos, preguntas de investigación y metodologías, lo que requiere una representación del conocimiento que sea suficientemente robusta y expresiva. Una opción es reusar y extender ontologías existentes. En un estudio reciente se sugiere que la reutilización de estándares como el CIDOC Conceptual Reference Model o Functional Requirements for Bibliographic Records implica que ‘[T]he comprehension and ability to model special situations and reuse useful pieces [of the aforementioned standard ontologies] can be challenging, pushing researchers to generate over-specific extensions or entirely new, domain-specific ontologies from scratch to represent knowledge in detail’ (Ondraszek et al., 2024). Esta solución genera otros problemas, entre ellos, la falta de interoperabilidad y reusabilidad de modelos en las HD, o, para nuestro caso, aún más grave, la dificultad del uso de estos modelos por parte de no-expertos. Ondraszek et al proponen, en el estudio anteriormente citado, una aproximación basada en patrones. Esto significa que, en lugar de reusar ontologías complejas aplicándolas con un enfoque de arriba hacia abajo, se empieza con patrones abstractos y se los especializa poco a poco para mapearlos a algunas de las ontologías estándares y de buenas prácticas ya establecidas y que pueden ser apropiadas y relevantes para el caso(Ondraszek et al., 2024).</p>
+            <p>Como consecuencia de esto, hemos seleccionado para este experimento ‘piloto’ del tesauro sobre el cual basaremos nuestra intervención ontológica una variedad específica de festivales que representan distintas maneras y épocas en la organización de estos festivales: </p>
+            <p> • Por un lado, el festival Indigenous Film + Video organizado por el National Museum of the American Indian en Nueva York, uno de los festivales más longevos que abarca desde los setenta hasta 2011, de dirección no indígena, pero a partir de los años noventa al menos en adelante con un comité asesor de representación indígena. A pesar de ser un festival de Estados Unidos, ha contado desde el año 1991 con una importante representación del cine de todo Abya Yala.</p>
+            <p> • Por otro lado, el festival Ficwallmapu organizado por un colectivo sobre todo de mapuches en Temuco, Chile. Este festival surgió de la iteración en el 2006 de la Coordinadora Latinoamericana de Cine y Comunicación de los Pueblos Indígenas (CLACPI), el festival continental más grande, y cuenta con ser uno de los primeros y más recurrentes festivales que ha contado desde sus principios con dirección indígena.</p>
+            <p> • Finalmente, también en Chile, el festival Muestra de cine y video indígena, organizado por varias instituciones a lo largo de su historia incluyendo el Ministerio de Cultura y actualmente por el Museo Chileno de Arte Precolombino. Nuevamente, es uno de los festivales más longevos en el continente y su dirección es de mestizos aunque ha contado con participación indígena en la organización del evento en varias ocasiones.</p>
+            <p>Con esta selección de festivales y sus catálogos esperamos aportar una diversidad de maneras de organizar, tanto el festival como la información que ofrecen los catálogos en cuanto a las películas que se muestran. De esta manera el tesauro que diseñaremos podrá comparar diversas formas de organización durante años que al menos en parte coincidirán. </p>
+            <p>La reflexión sobre la categoría de cine indígena o autóctono es parte integral de la investigación que estamos llevando a cabo. En base a investigaciones previas, se establece la necesidad de profundizar aún más en la naturaleza multinivel de los problemas terminológicos en el dominio del cine y la comunicación audiovisual de los pueblos de Abya Yala (Baker, 2023). Por ejemplo, se llama la atención a la naturaleza de comunicación intercultural dirigida a una audiencia transnacional de los medios indígenas, la contradicción entre autoría colectiva y autoría individual y la necesidad de no aplastar la diversidad y la multiplicidad de voces (Baker, 2023: 381–82). </p>
+            <p>Las herramientas y tecnologías que hemos usado son variadas e incluyen:</p>
+            <p> • TemaTres (Shintaku et al.; Tematres: management formal representations of knowledge), para la construcción colaborativa y el manejo de vocabularios controlados, en este caso una taxonomía/tesauro del campo de conocimiento de los festivales de cine autóctono. Es un servidor con ambientes protegidos y tiene una política de apoyar proyectos sin fines de lucro en el área de la preservación cultural. TemaTres es un repositorio público que visualiza y da persistencia a los tesauros de instituciones educativas, culturales y de gobierno de varias partes del mundo y permite su reutilización a partir de sus servicios web.</p>
+            <p> • Protégé (protégé): un ambiente de creación de ontologías formales basado en el estándar OWL y una implementación de las lógicas de descripción (en base a teoría de conjuntos y lógica matemática de primer orden/predicados) que permiten el uso de motores de razonamiento lógico para realizar inferencias que mantienen la estabilidad de la ontología y la ensanchan.</p>
+            <p> • Diversas visualizaciones de la estructura ontológica para entender su dinámica.</p>
+            <p> • Owlready2 (Welcome to Owlready2’s documentation! — Owlready2 0.47 documentation), un paquete del lenguaje de programación Python que trata los conceptos de una ontología OWL como clases en la Programación Orientada a Objetos. Hemos usado Owlready2 para alojar la ontología en una base de datos de grafos SQLite que se puede usar, por ejemplo, para convertir la estructura de la ontología en un sitio web.</p>
+            <p>En cuanto a las aplicaciones, la ponencia presenta el tesauro alojado en TemaTres y discute las posibilidades que ofrece para el diseño colaborativo del vocabulario controlado que está a la base de la ontología. Por otra parte, se presentará una versión de la ontología y se la visualizará para explicar algunos aspectos de su estructura, discutiendo su aplicación en el manejo de un corpus de catálogos y, potencialmente, del patrimonio audiovisual de los pueblos de Abya Yala. Finalmente, se ofrecerá algunas ideas de las aplicaciones para análisis de datos en el campo de los estudios culturales del cine autóctono.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Baker, Peter (2023): ‘Imaginaries of Abya Yala: Indigenous filmmaking in Latin America from a multimodal semiotic perspective’, in: 
+                        <hi rend="italic">Latin American and Caribbean Ethnic Studies</hi>, 18, 3, 377–397, DOI: 10.1080/17442222.2022.2149230.
+                    </bibl>
+                    <bibl>Leyva Quintero, Elcira / Baker, Peter / Pareja Román, Roberto (2023): ‘Hacia una ontología del cine indígena en América Latina’, in: 
+                        <hi rend="italic">Pléyade</hi>, 32, 45–63, &lt;https://revistapleyade.cl/index.php/OJS/article/view/464&gt; [13.11.2024].
+                    </bibl>
+                    <bibl>Ondraszek, Sarah Rebecca / Sartini, Bruno / van Erp, Marieke / Poltronieri, Andrea / Lisena, Pasquale / Sack, Harald (2024): ‘One pattern to express them all? Towards Generalized Patterns for Ontology Design in the Digital Humanities’, Zenodo, DOI: 10.5281/zenodo.14063917.</bibl>
+                    <bibl>
+                        <hi rend="italic">protégé</hi>
+                        <hi rend="italic">A free, open-source ontology editor and framework for building intelligent systems</hi>, &lt;https://protege.stanford.edu/&gt; [19.11.2024].
+                    </bibl>
+                    <bibl>Shintaku, Milton / Barbosa Brasileiro, Ítalo / Rodrigues de Jesus, Jaqueline / Francisco dos Santos, José Carlos / Schiessl, Marcelo / Keicielle, Schimidt de Oliveira / Lucas, Rodrigues Costa / Mariangela Spotti, Lopes Fujita / Priscila, de Paiva Castro / Rafael, Fernandez Gomes / Raíssa, da Veiga de Menêses / Walter, Moreira (2019): 
+                        <hi rend="italic">Guia do usuário do TemaTres</hi>, Brasília: MINISTÉRIO DA ECONOMIA Escola Nacional de Administração Pública; MINISTÉRIO DA CIÊNCIA, TECNOLOGIA, INOVAÇÕES E COMUNICAÇÕES Instituto Brasileiro de Informação em Ciência e Tecnologia.
+                    </bibl>
+                    <bibl>
+                        <hi rend="italic">Tematres: management formal representations of knowledge</hi> &lt;https://vocabularyserver.com/web/&gt; [30.6.2024].
+                    </bibl>
+                    <bibl>
+                        <hi rend="italic">Welcome to Owlready2’s documentation! — Owlready2 0.47 documentation</hi> &lt;https://owlready2.readthedocs.io/en/latest/#&gt; [19.11.2024].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KOMIYA_Kanako_Automatic_Tagging_of_Word_Senses_for_a_Large_S">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Automatic Tagging of Word Senses for a Large-Scale Historical Japanese Corpus</title>
+                <author>
+                    <persName>
+                        <surname>Asada</surname>
+                        <forename>Soma</forename>
+                    </persName>
+                    <affiliation>Tokyo University of Agriculature and Technology, Japan</affiliation>
+                    <email>s231157v@st.go.tuat.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Komiya</surname>
+                        <forename>Kanako</forename>
+                    </persName>
+                    <affiliation>Tokyo University of Agriculature and Technology, Japan</affiliation>
+                    <email>kkomiya@go.tuat.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Asahara</surname>
+                        <forename>Masayuki</forename>
+                    </persName>
+                    <affiliation>NINJAL, Japan</affiliation>
+                    <email>masayu-a@ninjal.ac.jp</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-23T05:04:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Word Sense Disambiguation</term>
+                    <term>History of Japanese language</term>
+                    <term>Corpus creation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>natural language processing</term>
+                    <term>semantic analysis</term>
+                    <term>Asian studies</term>
+                    <term>Computer science</term>
+                    <term>Humanities computing</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <hi rend="color(222222)" style="font-size:10pt">A large-scale historical corpus annotated with word sense tags is invaluable for the study of classical texts, especially when morphological analysis is incomplete or unreliable. This is essential for historical language research, where no native speakers can confirm intended meanings. However, manual word sense annotation is particularly challenging in classical languages, requiring expert interpretation of nuanced context. To address this, we developed a system that automatically assigns word sense tags to every content word in a 20-million-word corpus of historical Japanese. Our method uses a Bidirectional Encoder Representations from Transformers (BERT) based model (Devlin et al. 2019) and achieves an accuracy of 88.57%. The system operates on tokenized input and directly labels sub-word tokens, avoiding reliance on detailed morphological annotation—making it suitable for diachronic corpus construction where annotation standards may vary over time..</hi>
+            </p>
+            <p>Data</p>
+            <p>
+                <hi rend="color(222222)" style="font-size:10pt" xml:space="preserve">The corpus used in this study is the </hi>
+                <hi rend="italic color(222222)" style="font-size:10pt">Corpus of Historical Japanese (CHJ)</hi>
+                <hi style="font-size:10pt">(NINJAL, Japan. 2022)</hi>
+                <hi rend="color(222222)" style="font-size:10pt" xml:space="preserve">. Portions of CHJ have been manually annotated with word senses, known as CHJ-WLSP </hi>
+                <hi style="font-size:10pt">(Asahara et al. 2022)</hi>
+                <hi rend="color(222222)" style="font-size:10pt" xml:space="preserve">. For word sense tags, we utilized concept IDs provided by the </hi>
+                <hi rend="italic color(222222)" style="font-size:10pt">Word List by Semantic Principles (WLSP)</hi>
+                <hi style="font-size:10pt">(NINJAL, Japan. 2004)</hi>
+                <hi rend="color(222222)" style="font-size:10pt" xml:space="preserve">, a comprehensive Japanese thesaurus containing 98,214 entries categorized by syntactic and hierarchical semantic principles. concept ID is represented by a five-digit number. For example, concept ID 1.1920 represents “Nominal - relation - quantity - degree/limit.“ This concept ID is used as a word sense tag. Additionally, the historical version of the WLSP, known as the </hi>
+                <hi rend="italic color(222222)" style="font-size:10pt">Nihon Koten Taisho Bunrui Goihyo</hi>
+                <hi rend="color(222222)" style="font-size:10pt" xml:space="preserve"> (hWLSP) (Miyajima et al. 2014), includes a thesaurus based on historical word senses, aligned with the vocabulary of the period. Together, these two resources integrate contemporary and historical vocabulary under a unified word sense hierarchy.</hi>
+            </p>
+            <p>
+                <hi rend="color(222222)" style="font-size:10pt" xml:space="preserve">Table 1 provides an overview of CHJ’s statistics, while Table 2 presents details of CHJ-WLSP (Asada et al. 2023). The CHJ corpus consists of 110 document files, and CHJ-WLSP comprises ten specific works, listed in Table 3 </hi>
+                <hi style="font-size:10pt">(Asahara et al. 2022)</hi>
+                <hi rend="color(222222)" style="font-size:10pt">.</hi>
+            </p>
+            <p style="text-align: center;">Table 1. Statistics of CHJ</p>
+            <table rend="rules">
+                <row>
+                    <cell style="text-align: left;">Tokens</cell>
+                    <cell style="text-align: right;">20,771,468</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">Types</cell>
+                    <cell style="text-align: right;">135,705</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">Target tokens</cell>
+                    <cell style="text-align: right;">14,918,386</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">Target types</cell>
+                    <cell style="text-align: right;">5,785</cell>
+                </row>
+            </table>
+            <p style="text-align: center;">Table 2. Statistics of CHJ-WLSP</p>
+            <table rend="rules">
+                <row>
+                    <cell style="text-align: left;">Tokens</cell>
+                    <cell style="text-align: right;">647,751</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">Target tokens</cell>
+                    <cell style="text-align: right;">329,109</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">Target types</cell>
+                    <cell style="text-align: right;">3,878</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">Target sense types</cell>
+                    <cell style="text-align: right;">1,747</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">Average of senses</cell>
+                    <cell style="text-align: right;">2.91</cell>
+                </row>
+            </table>
+            <p style="text-align: center;">
+                <hi rend="color(222222)" style="font-size:10pt">Table 3. The Name, Year, and Number of the Literature Book Used for the Experiments</hi>
+            </p>
+            <table rend="rules">
+                <row>
+                    <cell style="text-align: left;">Name</cell>
+                    <cell style="text-align: left;">Year</cell>
+                    <cell style="text-align: left;">
+                        <hi style="font-size:10pt">Number of Words</hi>
+                    </cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">Taketori Monogatari(lit. The Tale of the Bamboo Cutter) </cell>
+                    <cell style="text-align: center;">900</cell>
+                    <cell style="text-align: right;">12,757</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">Tosa Nikki (lit.Tosa Diary)</cell>
+                    <cell style="text-align: center;">934</cell>
+                    <cell style="text-align: right;">8,208</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">KonjakuMonogatari-shu(lit. Anthology of Tales from the Past)</cell>
+                    <cell style="text-align: center;">1100</cell>
+                    <cell style="text-align: right;">175,598</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">Hojoki (lit. Square-jo Record)</cell>
+                    <cell style="text-align: center;">1212</cell>
+                    <cell style="text-align: right;">5,402</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">Uji Shui Monogatari (lit. Gleanings from Uji Dainagon Monogatari)</cell>
+                    <cell style="text-align: center;">1220</cell>
+                    <cell style="text-align: right;">120,705</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">Jikkin-sho(AMiscellanyofTenMaxims) </cell>
+                    <cell style="text-align: center;">1252</cell>
+                    <cell style="text-align: right;">90,177</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">Tsurezuregusa (Essays in Idleness) </cell>
+                    <cell style="text-align: center;">
+                        <hi style="font-size:10pt">1336</hi>
+                    </cell>
+                    <cell style="text-align: right;">40,834</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">Toraakira-bonKyogen</cell>
+                    <cell style="text-align: center;">1642</cell>
+                    <cell style="text-align: right;">5,448</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">TaiyoTheSun (Magazine) </cell>
+                    <cell style="text-align: center;">1895</cell>
+                    <cell style="text-align: right;">
+                        <hi style="font-size:10pt">　6,394</hi>
+                    </cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">1st Jinjo Shogaku Tokuhon (Textbook)</cell>
+                    <cell style="text-align: center;">1904</cell>
+                    <cell style="text-align: right;">45,334</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">2nd Jinjo Shogaku Tokuhon (Textbook)</cell>
+                    <cell style="text-align: center;">1910</cell>
+                    <cell style="text-align: right;">96,894</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi style="font-size:10pt">　Total</hi>
+                    </cell>
+                    <cell style="text-align: left;">　</cell>
+                    <cell style="text-align: right;">647,751</cell>
+                </row>
+            </table>
+            <p>To evaluate the performance of our word sense disambiguation system, we used CHJ-WLSP as both training and validation data, with the Corpus of Historical Japanese (CHJ) as our target corpus.</p>
+            <p>
+                <hi rend="color(222222)" style="font-size:10pt">Additionally, we incorporated BCCWJ-WLSP (Maekawa et al. 2014) for supplementary training data. BCCWJ-WLSP is a sense-tagged corpus derived from the Balanced Corpus of Contemporary Japanese (BCCWJ) [8], which provides a comprehensive resource of contemporary Japanese usage. Table 4 presents a summary of the statistics for CHJ-WLSP, as derived and calculated from (Maekawa et al. 2014).</hi>
+            </p>
+            <p style="text-align: center;">Table 4. Statistics of BCCWJ-WLSP</p>
+            <table rend="rules">
+                <row>
+                    <cell style="text-align: left;">Tokens</cell>
+                    <cell style="text-align: right;">182,166</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">Types</cell>
+                    <cell style="text-align: right;">20,010</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">Target tokens</cell>
+                    <cell style="text-align: right;">77,344</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">Target types</cell>
+                    <cell style="text-align: right;">4,573</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">Average of senses</cell>
+                    <cell style="text-align: right;">3.24</cell>
+                </row>
+            </table>
+            <p>Evaluation</p>
+            <p>
+                <hi rend="color(222222)" style="font-size:10pt" xml:space="preserve">We developed two models: one trained exclusively on CHJ-WLSP and the other using both CHJ-WLSP and BCCWJ-WLSP as training data. For validation, we used 1/5 of CHJ-WLSP, with the remaining portion dedicated to training. The approach adopted here follows that proposed in (Asada et al. 2023), employing a sequential labeling method that incorporates document IDs. We believe that document information helps reduce the impact of data diversity. While the entire CHJ corpus serves as our target, we evaluated the model using CHJ-WLSP for validation, as it represents the annotated segment of CHJ. Notably, the definitions of morphological information between CHJ and CHJ-WLSP differ, as morphological definitions have evolved post-annotation of CHJ-WLSP. However, BERT-based models operate without detailed morphological information, allowing accurate prediction of word sense tags. Since both CHJ and BCCWJ were manually tokenized, tokenized sentences were used as input; the BERT tokenizer then segmented them further, with word senses assigned to each sub-word unit. We used </hi>https://huggingface.co/cl-tohoku/bert-base-japanese-v2
+                <hi rend="color(222222)" style="font-size:10pt">. The results trained with BERT were better than those trained with RoBERTa.</hi>
+            </p>
+            <p>Table 5 presents the accuracy scores on the validation set, where a model trained on both CHJ-WLSP and BCCWJ-WLSP achieved an accuracy of 88.57%. For both models, the optimal learning rate was 1e-05, with an epoch count of 15. Accuracy was calculated as the proportion of correctly tagged word senses out of the total number of polysemous words. Notably, the number of target polysemous words increased when BCCWJ-WLSP was included in the training data alongside CHJ-WLSP, enhancing the model’s generalization. Given our aim to annotate the full CHJ corpus, we selected the model trained with both corpora to accommodate potential out-of-vocabulary words from CHJ-WLSP present in the newer CHJ dataset. </p>
+            <p style="text-align: center;">Table 5. Accuracy on the Validation Set</p>
+            <table rend="rules">
+                <row>
+                    <cell style="text-align: left;">Training Corpus</cell>
+                    <cell style="text-align: left;">Accuracy</cell>
+                    <cell style="text-align: left;">Correct</cell>
+                    <cell style="text-align: left;">Target</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi style="font-family:游ゴシック;font-size:10pt">CHJ</hi>
+                        <hi rend="color(222222)" style="font-size:10pt">-WLSP</hi>
+                    </cell>
+                    <cell style="text-align: right;">85.25%</cell>
+                    <cell style="text-align: right;">275,837</cell>
+                    <cell style="text-align: right;">323,547</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi style="font-family:游ゴシック;font-size:10pt">CHJ</hi>
+                        <hi rend="color(222222)" style="font-size:10pt" xml:space="preserve">-WLSP </hi>
+                        <hi style="font-family:游ゴシック;font-size:10pt">+BCCWJ</hi>
+                        <hi rend="color(222222)" style="font-size:10pt">-WLSP</hi>
+                    </cell>
+                    <cell style="text-align: right;">88.57%</cell>
+                    <cell style="text-align: right;">430,496</cell>
+                    <cell style="text-align: right;">486,049</cell>
+                </row>
+            </table>
+            <p style="text-align: left;">
+                <hi rend="color(222222)" style="font-size:10pt" xml:space="preserve">Table 6 lists the three most frequently tagged word senses within CHJ. Concept IDs 2.3430 and 2.12000 correspond to verbs such as </hi>
+                <hi rend="italic color(222222)" style="font-family:Arial Unicode MS;font-size:10pt"><hi rend="Japanese">する</hi></hi>
+                <hi rend="color(222222)" style="font-size:10pt" xml:space="preserve"> (suru, "do") and </hi>
+                <hi rend="italic color(222222)" style="font-family:Arial Unicode MS;font-size:10pt"><hi rend="Japanese">ございます</hi></hi>
+                <hi rend="color(222222)" style="font-size:10pt" xml:space="preserve"> (gozaimasu, "be"), which are also prevalent in BCCWJ. Conversely, Concept ID 1.2301, which represents terms for people, appears less frequently in BCCWJ. We plan to make CHJ accessible via a web-based search system that allows queries based on word meanings.</hi>
+            </p>
+            <p style="text-align: center;">Table 6. The Three Most Frequently Tagged Word Senses within CHJ.</p>
+            <table rend="rules">
+                <row>
+                    <cell style="text-align: center;">Rank</cell>
+                    <cell style="text-align: center;">Concept ID</cell>
+                    <cell style="text-align: center;">Description</cell>
+                    <cell style="text-align: center;">Number</cell>
+                </row>
+                <row>
+                    <cell style="text-align: right;">1</cell>
+                    <cell style="text-align: right;">1.2301</cell>
+                    <cell style="text-align: left;"> Nominal-Subject-Human-Citizen </cell>
+                    <cell style="text-align: right;">47,496</cell>
+                </row>
+                <row>
+                    <cell style="text-align: right;">2</cell>
+                    <cell style="text-align: right;">2.3430</cell>
+                    <cell style="text-align: left;"> Verbal-Action-Activity-Activity/Action </cell>
+                    <cell style="text-align: right;">21,619</cell>
+                </row>
+                <row>
+                    <cell style="text-align: right;">3</cell>
+                    <cell style="text-align: right;">2.1200</cell>
+                    <cell style="text-align: left;"> Verbal-Relation-Existence-Existence </cell>
+                    <cell style="text-align: right;">18,143</cell>
+                </row>
+            </table>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; text-align: center;">Enter your references here:</bibl>
+                    <bibl>
+                        <hi rend="bold color(222222)" style="font-size:10pt">Asada, Soma / Komiya, Kanako / Asahara, Masayuki.</hi>
+                        <hi rend="color(222222)" style="font-size:10pt">(2023):</hi>
+                        <hi style="font-size:10pt">“</hi>
+                        <hi rend="color(222222)" style="font-size:10pt">All-Words Word Sense Disambiguation for Historical Japanese</hi>
+                        <hi style="font-size:10pt">”,</hi>
+                        <hi rend="color(222222)" style="font-size:10pt">Proceedings of the 37th Pacific Asia Conference on Language, Information and Computation: 201-209 &lt;https://aclanthology.org/2023.paclic-1.20.pdf&gt; [23.04.2025].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold color(222222)" style="font-size:10pt">Asahara, Masayuki. / Ikegami, Nao. / Suzuki, Tai. / Ichimura, Taro. / Kondo, Asuko. / Kato, Sachi. / Yamazaki, Makoto.</hi>
+                        <hi rend="color(222222)" style="font-size:10pt" xml:space="preserve"> (2022):</hi>
+                        <hi style="font-size:10pt">“</hi>
+                        <hi rend="color(222222)" style="font-size:10pt">CHJ-WLSP: Annotation of `Word List by Semantic Principles' Labels for the Corpus of Historical Japanese</hi>
+                        <hi style="font-size:10pt">”,</hi>
+                        <hi rend="color(222222)" style="font-size:10pt">Proceedings of the Second Workshop on Language Technologies for Historical and Ancient Languages: 31-37 &lt;https://aclanthology.org/2022.lt4hala-1.5.pdf&gt; [23.04.2025].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold color(222222)" style="font-size:10pt">Devlin, Jacob. / Chang, Ming-Wei. / Lee, Kenton. / Toutanova, Kristina.</hi>
+                        <hi rend="color(222222)" style="font-size:10pt" xml:space="preserve"> (2019):</hi>
+                        <hi style="font-size:10pt">“</hi>
+                        <hi rend="color(222222)" style="font-size:10pt">BERT: Pre-training of deep bidirectional transformers for language understanding</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">”, </hi>
+                        <hi rend="color(222222)" style="font-size:10pt">Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, 1: 4171-4186 &lt;https://aclanthology.org/N19-1423.pdf&gt; [23.04.2025].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold color(222222)" style="font-size:10pt">Kato, Sachi. / Asahara, Masayuki. / Yamazaki, Makoto.</hi>
+                        <hi rend="color(222222)" style="font-size:10pt">(2018):</hi>
+                        <hi style="font-size:10pt">“</hi>
+                        <hi rend="color(222222)" style="font-size:10pt">Annotation of ‘Word List by Semantic Principles’ labels for the Balanced Corpus of Contemporary Written Japanese</hi>
+                        <hi style="font-size:10pt">”,</hi>
+                        <hi rend="color(222222)" style="font-size:10pt">Proceedings of the 32nd Pacific Asia Conference on Language, Information and Computation, &lt;https://aclanthology.org/Y18-1029.pdf&gt; [23.04.2025].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold color(222222)" style="font-size:10pt" xml:space="preserve">Maekawa, Kikuo. / Yamazaki, Makoto. / Ogiso, Toshinobu. / Maruyama, Takehiko. / Ogura, Hidek  ./ Kashino, Wakako. / Koiso, Hanae. / Yamaguchi, Masaya. / Tanaka, Makiro. / Den, Yasuharu. </hi>
+                        <hi rend="color(222222)" style="font-size:10pt">(2014): Balanced corpus of contemporary written japanese</hi>
+                        <hi style="font-size:10pt">”,</hi>
+                        <hi rend="color(222222)" style="font-size:10pt" xml:space="preserve"> Language resources and evaluation, 48: 345–371 &lt;https://link.springer.com/article/10.1007/s10579-013-9261-0&gt; [23.04.2025].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold color(222222)" style="font-size:10pt" xml:space="preserve">Miyajima, Tatsuo. / Suzuki, Tai. / Ishii, Hisao. / Seiya, Abe. </hi>
+                        <hi rend="color(222222)" style="font-size:10pt" xml:space="preserve"> (2014).</hi>
+                        <hi rend="italic color(222222)" style="font-size:10pt">Nihon Koten Taisho Bunrui Goihyo</hi>
+                        <hi rend="color(222222)" style="font-size:10pt">. Tokyo: Kasama-shoin.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold color(222222)" style="font-size:10pt">NINJAL, Japan.</hi>
+                        <hi rend="color(222222)" style="font-size:10pt" xml:space="preserve"> (2004). </hi>
+                        <hi rend="italic color(222222)" style="font-size:10pt">Word List by Semantic Principles,- Revised and Enlarged Edition.</hi>
+                        <hi rend="color(222222)" style="font-size:10pt">Tokyo: Dainippon-tosho.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold color(222222)" style="font-size:10pt" xml:space="preserve">NINJAL, Japan. </hi>
+                        <hi rend="color(222222)" style="font-size:10pt" xml:space="preserve">(2022). </hi>
+                        <hi rend="italic color(222222)" style="font-size:10pt">Corpus of Historical Japanese.</hi>
+                        <hi rend="color(222222)" style="font-size:10pt">&lt;https://clrd.ninjal.ac.jp/chj/overview-en.html&gt; [23.04.2025].</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

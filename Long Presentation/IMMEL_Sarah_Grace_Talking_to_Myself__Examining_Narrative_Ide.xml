@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="IMMEL_Sarah_Grace_Talking_to_Myself__Examining_Narrative_Ide">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Talking to Myself: Examining Narrative Identity with Personalized Large Language Models</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Immel</surname>
+                        <forename>Sarah Grace</forename>
+                    </persName>
+                    <affiliation>University of Edinburgh, United Kingdom</affiliation>
+                    <email>s.g.immel@sms.ed.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Alex</surname>
+                        <forename>Beatrice</forename>
+                    </persName>
+                    <affiliation>University of Edinburgh, United Kingdom</affiliation>
+                    <email>b.alex@ed.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Lechelt</surname>
+                        <forename>Susan</forename>
+                    </persName>
+                    <affiliation>University of Edinburgh, United Kingdom</affiliation>
+                    <email>susan.lechelt@ed.ac.uk</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T09:02:50.464919126</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>narrative identity</term>
+                    <term>large language models</term>
+                    <term>personal data</term>
+                    <term>creative writing</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>electronic literature production and analysis</term>
+                    <term>natural language processing</term>
+                    <term>open access methods</term>
+                    <term>Informatics</term>
+                    <term>Literacy</term>
+                    <term>composition</term>
+                    <term>and creative writing</term>
+                    <term>Philosophy</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>While major large language model (LLM) interfaces like ChatGPT are, by default, impersonal, research and industry have shifted toward customized chatbots with distinct roles and personality traits (OpenAI 2023). Platforms like Character.AI provide services to create user-defined personas, ranging from Shakespeare to Elon Musk and “Gamer Boy” (Character Technologies 2024). Hobbyists and technologists have used personalization techniques to create convincing imitations of their friends’ group chats (Miller 2023) and their own writing (Vandenbroeck 2023). Meanwhile, natural language processing (NLP) studies show that instructing models to adopt a persona can alter their capabilities and reveal their bias (Salewski et al. 2023), help them retain and express desired personality traits (Gu et al. 2023), and simulate memory to communicate personal experiences in character (Shao et al. 2023). </p>
+            <p>As LLM personalization becomes increasingly accessible, it is vital that we investigate not only what it is good at, but also what such models are good for. To what extent can LLMs help us represent, understand, and create personal identity? Theories of performative and narrative identity suggest that our online actions and written utterances not only reflect but also construct our identities (Butler 2020). A language model trained on these performances might then be a valuable tool for examining personal identity by encountering it as something apart from oneself. </p>
+            <p>To investigate the uses and limitations of LLM personalization, we propose two methods for training LLMs on personal writing using free and open-access methods and tools. We present and compare models trained on a corpus of the first author’s (hereafter, “the subject’s”) own writing. We then analyze the usefulness of such methods, concluding that although their representation/simulation of personal identity is shallow and inconsistent, and their stand-alone creative outputs similarly lackluster, the process of interacting with a personalized model can provide rich creative inspiration and deeper understanding of narrative identity. </p>
+            <p>The training dataset consists of virtually every piece of writing the subject had retained, both born-digital and handwritten. It covers nearly two decades of writing and includes casual conversations, creative writing, journals, and a wide variety of essays. The data were cleaned to remove repetitive elements like headings, after which they comprised over 580,000 words (Fig. 1).</p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmpz8obw8tf/Pictures/199f9ca37685540f23e90087f78c583b.png"/>
+                    <head>A black and blue lineDescription automatically generated, Picture</head>
+                </figure>
+            </p>
+            <p>Figure 1. Training data categories and word counts</p>
+            <p>Two methods often used in state-of-the-art systems were used to personalize the models: fine-tuning and retrieval-augmented generation (RAG). Fine-tuning involves further training a pre-trained model on more selective data to produce desired behavior. RAG does not involve additional training but rather provides context to a model, automatically locating the most relevant documents for a user's query and appending them to the prompt. To keep these methods accessible to those without specialized computing resources, only open-access models small enough to train and prompt on freely available cloud services were used. </p>
+            <p>While a range of models and parameters were tested for fine-tuning, the most successful was a fine-tuned version of GPT-Neo-125m (Black et al. 2021) trained for 5 epochs, with a learning rate of 2e-05. Training loss was calculated with the model’s perplexity scores on a dev set—essentially, the model was updated to minimize its “surprise” when processing an unseen piece of the subject’s writing, leading to generations which mimic her voice at the phrase level. </p>
+            <p>The RAG system functions by converting chunks of her writing into vectors using Thenlper’s GTE-small (Li et al. 2023). This creates a multidimensional “knowledge base” where documents with similar content are grouped near each other in semantic space (Fig. 2). The seven documents closest to a prompt are then added to the template in Fig. 3 as context for a question-and-answer model—namely Qwen2-7B-Instruct (Yang et al. 2024). </p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmpz8obw8tf/Pictures/199f9ca37685540f23e90087f78c583b.png"/>
+                </figure>Figure 2. A visual representation of the embedded documents, reduced to two dimensions using PaCMAP (Wang et al. 2021). Document chunks are colored by source type, with a sample query “What is the purpose of fiction?” shown as a pink diamond.
+            </p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmpz8obw8tf/Pictures/199f9ca37685540f23e90087f78c583b.png"/>
+                </figure>
+            </p>
+            <p>Figure 3. The template used for prompting Qwen2-7B-Instruct, with curly braces (‘{ }’) indicating where the question-specific context and prompt would appear.</p>
+            <p>Evaluating these outputs for the ways in which they do or do not convey aspects of identity is a highly subjective process. However, to ensure a systematic evaluation, analysis included the use of two NLP tools. First, model outputs before and after personalization were compared against the subject’s writing with LIWC-22, a psychological text analysis toolkit (Boyd et al. 2022). Both personalization techniques raised scores for Analytical thinking and Authenticity and lowered scores for Clout—but as the models had very different starting measures relative to the subject's, these shifts were not necessarily improvements (Fig. 4). Breaking the model outputs and the subject’s writing into genres provides more clarity: personalization appears to have been most successful at shifting the models toward the subject’s academic writing (Fig. 5). </p>
+            <p>HALO, a recent hallucination ontology, was then applied to the output content to describe the types of inaccuracies to which each method was prone (Nananukul and Kejriwal 2024). While both models generated frequent factual inconsistencies, they varied in type: the RAG model frequently mismatched events in time or wrongly inferred plausible details, while the fine-tuned model often switched out names of family members with those of pets or fictional characters, or melded phrases together. Logical inconsistencies appeared frequently in the fine-tuned model but less often in RAG outputs. </p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmpz8obw8tf/Pictures/199f9ca37685540f23e90087f78c583b.png"/>
+                </figure>Figure 4. LIWC-22 summary values for the subject’s writing (Me) and GPT-Neo-125m and Qwen2-14B-Instruct before and after personalization, with calculated rows showing relative improvement, or how much closer each model’s scores came to those of the subject after personalization (Rel. Imp.).
+            </p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmpz8obw8tf/Pictures/199f9ca37685540f23e90087f78c583b.png"/>
+                </figure>Figure 5. LIWC-22 summary values for the subject’s writing and GPT-Neo-125m and Qwen2-14B-Instruct before and after personalization, broken down by genre
+            </p>
+            <p>These methods both emphasize the inconsistency of the outputs of LLM personalization. However, assessing the usefulness of the process of personalization required a more creative approach. To this end, the subject created a website (publicly available at 
+                <ref target="https://datadoppelganger.com/">https://datadoppelganger.com</ref>) which explores interactions between herself, the models, and her writing. Selected outputs from both models are arranged into pages based on themes which emerged during prompting and generation. These are layered above images of her handwriting and sketches, representing the source data, and further annotated with handwritten reactions to individual sections of generated text. A glance through these pages (Fig. 6) demonstrates that there is something of value in this layering of gen-AI texts against the information and identities they are meant to represent—themes from the training set emerge in ways which might have gone unnoticed without the LLM as an interpreter; at the same time, certain limitations and associations present in the model which do not accurately represent the source text/identity become clear.
+            </p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmpz8obw8tf/Pictures/199f9ca37685540f23e90087f78c583b.png"/>
+                </figure>Figure 6. Screenshots of datadoppelganger.com, the creative response composed by the subject.
+            </p>
+            <p>These analyses inform an evaluation of LLM personalization methods for each of de Vries’ three uses of creative AI: representing, creating, and understanding (2020). Representation—accurately and authentically representing one’s identity—seems most limited, due to the models’ inconsistencies. Both models are feasibly able to piece together outputs which function as authentic representations of self: the wide range of source texts allows sufficient context to allow for both congruence (alignment with one’s internal understanding of identity) and coherence (alignment with expressions of that identity across varied contexts) (Vivienne 2016). However, between conflicting associations already present in the base model, conflicting versions of identity in the data across genre and time, and imperfect training, embedding, and/or retrieval of these data, most outputs were misaligned with the subject’s internal and/or expressed understanding of herself.</p>
+            <p>LLM personalization shows more promise for creative processes. While the creativity of AI is hotly debated, our results support the view put forth by Franceschelli and Musolesi (2023) that LLMs may combine familiar ideas in novel ways but cannot attain transformational creativity, which requires changing or reinventing ways of thinking. Although the individual outputs highlighted on datadoppelganger.com are evocative, they only become meaningful when framed within the context of their generation. Here, they take on new value, generating novelty and potentiality even from texts which may be quite familiar. Every hallucination presents a new counterfactual version of the identity the model was trained to represent, an alternate self bounded only by those aspects captured in writing. This aligns with Xu et al.’s (2024) observation that LLMs can only reliably represent some aspects of truth rather than all possible truths. </p>
+            <p>Finally, LLM personalization can strongly aid in understanding narrative identity and its written expressions. The fine-tuned model reflected and amplified language patterns which had come from the subject’s writing but of which she was unaware. The RAG model often summarized her ideas in ways she felt were unjustified but which, on closer inspection, could reasonably be inferred from her writing. Prompts where models frequently hallucinated—for instance, being unable to describe a happy childhood, despite her having had one—revealed gaps and imbalances in her writing. Her identity, seen through a corpus, was far bleaker than she imagined it to be. Each of these small interactions made her hyper-aware of her “internalized and evolving life story, integrating the reconstructed past and imagined future” (McAdams and McLean 2013). Narrative therapy holds that this awareness can empower us to reconstruct those narratives and change our trajectories (Muntigl 2004). </p>
+            <p>By combining these findings and perspectives from creative AI, NLP, and identity theory, it becomes evident that LLM personalization can replicate not only language habits but also broader aspects of narrative identity, though in a highly inconsistent manner. While we should be critical of their capabilities to represent identity, these models remain valuable to writers and scholars for inspiring creative variation and broader understanding of the identities expressed in small corpora. Through the methods presented above, the authors hope to make these techniques accessible to a wider range of text and media researchers and invite further critique on the limitations of such systems.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Abdin, Marah / Aneja, Jyoti / Awadalla, Hany / Awadallah, Ahmed / Awan, Ammar Ahmad / Bach, Nguyenet al. (2024): "Phi-3 technical report: A highly capable language model locally on your phone", in: 
+                        <hi rend="italic">arXiv preprint,</hi> 2404.14219.
+                    </bibl>
+                    <bibl>Bender, Emily M / Gebru, Timnit / McMillan-Major, Angelina / Shmitchell, Shmargaret (2021): “On the dangers of stochastic parrots: Can language models be too big?”, in: Association for Computing Machinery (ed.): 
+                        <hi rend="italic">Proceedings of the 2021 ACM conference on fairness, accountability, and transparency, </hi>March 2021: 610-623. DOI: 10.1145/3442188.3445922.
+                    </bibl>
+                    <bibl>Biderman, Stella / Schoelkopf, Hailey / Anthony, Quentin Gregory / Bradley, Herbie / O’Brien, Kyle / Hallahan, Eric et al. (2023): “Pythia: A suite for analyzing large language models across training and scaling”, in: PMLR (ed.): 
+                        <hi rend="italic">Proceedings of the 40th International Conference on Machine Learning, </hi>July 2023: 2397-2430.
+                    </bibl>
+                    <bibl>Black, Sid / Gao, Leo / Wang, Phil / Leahy, Connor / Biderman, Stella (2021): “GPT-Neo: Large scale autoregressive language modeling with mesh-tensorflow” in: 
+                        <hi rend="italic">Zenodo</hi>, version 1.0. DOI: 10.5281/zenodo.5297715.
+                    </bibl>
+                    <bibl>Boyd, Ryan L. / Ashokkumar, Ashwini / Seraj, Sarah / Pennebaker, James W. (2022): 
+                        <hi rend="italic">The development and psychometric properties of LIWC-22. </hi>The University of Texas at Austin.
+                    </bibl>
+                    <bibl>Casañeda, Alexander / Brown, Patrick / Kazi, Rais / Moreno, Landyn / Tomah, Christian / Peng, Phillip / Hildner, Michael (2022): “GPT-3 Trained To Impersonate”, in: 
+                        <hi rend="italic">Medium</hi>, December 2022 &lt;https://medium.com/@patrickbrown5530/gpt-3-trained-to-impersonate-e0a801810245&gt; [29.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Character Technologies, Inc. </hi>(n.d.): “Homepage”, in: 
+                        <hi rend="italic">Character.ai</hi> &lt;https://character.ai.com&gt; [29.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Chase, Harrision </hi>(2022): 
+                        <hi rend="italic">Langchain. </hi>&lt;https://github.com/langchain-ai/langchain&gt; [29.04.2025].
+                    </bibl>
+                    <bibl>Chiu, Yu Ying / Sharma, Ashish / Lin, Inna Wanyin / Althoff, Tim (2024): “A computational framework for behavioral assessment of llm therapists”, in: 
+                        <hi rend="italic">arXiv preprint, </hi>2401.00820.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">C</hi>
+                        <hi rend="bold">ook, Jodie </hi>(2023): “Train ChatGPT to write like you in 5 easy steps”, in: 
+                        <hi rend="italic">Forbes </hi>&lt;https://www.forbes.com/sites/jodiecook/2023/06/15/train-chatgpt-to-write-like-you-in-5-easy-steps/&gt; [29.04.2025].
+                    </bibl>
+                    <bibl>Cover, Rob (2015): 
+                        <hi rend="italic">Digital identities: Creating and communicating the online self. </hi>Academic Press.
+                    </bibl>
+                    <bibl>De Vries, Katja (2020): “You never fake alone. Creative AI in action", in: 
+                        <hi rend="italic">Information, Communication &amp; Society</hi> 23, 14: 2110-2127.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Elkins, Katherine / Chun, Jon </hi>(2020): “Can GPT-3 pass a writer’s Turing test?”, in: 
+                        <hi rend="italic">Journal of Cultural Analytics</hi> 5, 2. DOI: 10.22148/001c.17212.
+                    </bibl>
+                    <bibl>Feher, Katalin (2021): “Digital identity and the online self: Footprint strategies–An exploratory and comparative research study", in: 
+                        <hi rend="italic">Journal of Information Science</hi> 47, 2: 192-205. DOI: 10.1177/0165551519879702
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Fraser, Colin </hi>(2024): “Hallucinations, errors, and dreams: On why modern AI systems produce false outputs and what there is to be done about it”, in: 
+                        <hi rend="italic">Medium</hi>, April 2024 &lt;https://medium.com/@colin.fraser/hallucinations-errors-and-dreams-c281a66f3c35&gt; [29.04.25].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Franceschelli, Giorgio / Musolesi, </hi>
+                        <hi rend="bold">Mirco</hi> (2024): "On the creativity of large language models", in: 
+                        <hi rend="italic">AI &amp; S</hi>
+                        <hi rend="italic">oc, </hi>2024: 1-11
+                        <hi rend="italic">.</hi>
+                        <hi rend="italic"> </hi>DOI: 10.1007/s00146-024-02127-3.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Frisch, Ivar, / Giulianelli, Mario</hi> (2024): "LLM agents in interaction: Measuring personality consistency and linguistic alignment in interacting populations of large language models", in: 
+                        <hi rend="italic">arXiv preprint </hi>2402.02896.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Gu, Heng / Degachi, Chadha / Genç, Uğur / Chandrasegaran, Senthil / Verma, Himanshu </hi>(2023): “On the effectiveness of creating conversational agent personalities through prompting”, in: 
+                        <hi rend="italic">arXiv preprint</hi> 2310.11182.
+                    </bibl>
+                    <bibl>Hsu, Yi-Li / Chen, Jui-Ning / Fan Chiang, Yang / Liu, Shang-Chien / Xiong, Aiping / Ku, Lun-Wei (2024): “Enhancing Perception: Refining Explanations of News Claims with LLM Conversations”, in: Duh, Kevin / Gomez, Helena / Bethard, Steven (eds.): 
+                        <hi rend="italic">Findings of the Association for Computational Linguistics: NAACL 2024</hi>. Association for Computational Linguistics, June 2024: 2129-2147. DOI: 10.18653/v1/2024.findings-naacl.137.
+                    </bibl>
+                    <bibl>Inie, Nanna / Falk, Jeanette / Tanimoto, Steve (2023): “Designing Participatory AI: Creative Professionals’ Worries and Expectations about Generative AI”, in: Association for Computing Machinery (eds.): 
+                        <hi rend="italic">Extended Abstracts of the 2023 CHI Conference on Human Factors in Computing Systems, </hi>Hamburg, Germany, 2023, no. 82. DOI: 10.1145/3544549.3585657.
+                    </bibl>
+                    <bibl>Jacobsen, Benjamin N. / Simpson, Jill (2023): “The Tensions of Deepfakes”, in: 
+                        <hi rend="italic">Information, Communication &amp; Society </hi>27, 6: 1095-1109. DOI: 10.1080/1369118X.2023.2234980.
+                    </bibl>
+                    <bibl>Ji, Ziwei / Yu, Tiezheng / Xu, Yan / Lee, Nayeon / Ishii, Etsuko / Fung, Pascale (2023): “Towards mitigating LLM hallucination via self-reflection”, in: Bouamor, Houda / Pino, Juan / Bali, Kalika (eds.): 
+                        <hi rend="italic">Findings of the Association for Computational Linguistics: EMNLP 2023</hi>, Association for Computational Linguistics, December 2023: 1827-1843. DOI: 10.18653/v1/2023.findings-emnlp.123.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Karpathy, Andrej</hi>
+                        <hi rend="bold">[@karpathy]</hi> (2023): #
+                        <hi rend="italic">On the "hallucination problem" I always struggle a bit with I'm asked about the "hallucination problem" in LLMs. Because, in</hi>[Tweet]
+                        <hi rend="italic">. </hi>X. &lt;https://x.com/karpathy/status/1733299213503787018&gt; [29.04.2025].
+                    </bibl>
+                    <bibl>La Cava, Lucio / Tagarelli, Andrea (2025): “Open Models, Closed Minds? On Agents Capabilities in Mimicking Human Personalities through Open Large Language Models”, in 
+                        <hi rend="italic">Proceedings of the AAAI Conference on Artificial Intelligence, </hi>April 2025, 39, 2:1355-1363. DOI: 10.1609/aaai.v39i2.32125.
+                    </bibl>
+                    <bibl>Lanier, Jaron (2011): 
+                        <hi rend="italic">You are Not a Gadget: A manifesto</hi>. Penguin Adult, United Kingdom.
+                    </bibl>
+                    <bibl>Le Guin, Ursula K. (2017): 
+                        <hi rend="italic">Dancing at the Edge of the World: Thoughts on words, women, places. </hi>Grove Atlantic, Germany.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Lewis, Patrick / Perez, Ethan / Piktus, Aleksandra / Petroni, Fabio / Karpukhin, Vladimir / Goyal, Naman / K</hi>
+                        <hi rend="bold">ut</hi>
+                        <hi rend="bold">tler, Heinrich </hi>
+                        <hi rend="bold">et al. </hi>(2020): “Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks”, in: 
+                        <hi rend="italic">Advances in Neural Information Processing Systems</hi> 33: 9459-9474. Curran Associates, Inc. &lt;https://proceedings.neurips.cc/paper_files/paper/2020/file/6b493230205f780e1bc26945df7481e5-Paper.pdf&gt; [29.04.2025].
+                    </bibl>
+                    <bibl>Li, Zehan / Zhang, Xin / Zhang, Yanzhao / Long, Dingkun / Xie, Pengjun / Zhang, Meishan (2023): “Towards General Text Embeddings with Multi-stage Contrastive Learning”, in: 
+                        <hi rend="italic">arXiv preprint, </hi>arXiv:2308.03281. DOI: 10.48550/arXiv.2308.03281.
+                    </bibl>
+                    <bibl>Martino, Ariana / Iannelli, Michael / Truong, Coleen (2023): “Knowledge Injection to Counter Large Language Model (LLM) Hallucination”, in: Pesquita, Catia / Skaf-Molli, Hala / Efthymiou, Vasilis / Kirrane, Sabrina / Ngonga, Axel / Collarana, Diego et al. (eds.): 
+                        <hi rend="italic">The Semantic Web: ESWC 2023 Satellite Events, </hi>Springer Nature Switzerland, 2023: 182-185. DOI: 10.1007/978-3-031-43458-7_34.
+                    </bibl>
+                    <bibl>McAdams, Dan P. / McLean, Kate (2013): “Narrative Identity”, in: 
+                        <hi rend="italic">Current Directions in Psychological Science </hi>22, 3: 233-238. DOI: 10.1177/0963721413475622.
+                    </bibl>
+                    <bibl>Miller, Izzy (2023): 
+                        <hi rend="italic">Replacing my best friends with an LLM trained on 500,000 group chat messages, </hi>blog. &lt;https://www.izzy.co/blogs/robo-boys&gt;
+                    </bibl>
+                    <bibl>Muntigl, Peter (2004): “Ontogenesis in Narrative Therapy: A Linguistic-Semiotic Examination of Client Change”, in: 
+                        <hi rend="italic">Family Process </hi>43, 1: 109-131. DOI: 10.1111/j.1545-5300.2004.04301009.x.
+                    </bibl>
+                    <bibl>Nananukul, Navapat / Kejriwal. Mayank(2024): "HALO: an ontology for representing and categorizing hallucinations in large language models", in: 
+                        <hi rend="italic">Disruptive Technologies in Information Sciences</hi>
+                        <hi rend="italic">VIII,</hi> 13058: 86-100. DOI: 10.1117/12.3014048.
+                    </bibl>
+                    <bibl>OpenAI (2023): 
+                        <hi rend="italic">GPT-4 technical report.</hi>
+                    </bibl>
+                    <bibl>Ortiz, Santiago(2023): “Simulating my friend Philippe”, in: 
+                        <hi rend="italic">Medium. </hi>&lt;https://medium.com/@moebio/simulating-my-friend-philippe-a8c9af223002&gt; [29.04.2025].
+                    </bibl>
+                    <bibl>Pretsch, Juergen / Pretsch, Ekaterina / Fuchs, Michael (2024): “Artificial Creativity--Early Analyses of LLMs’ Creative Approaches”, in: 
+                        <hi rend="italic">European Journal of Social Science Education and Research</hi> 11,1: 140-166.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Results for ‘customized LLM’ </hi>(n.d.). 
+                        <hi rend="italic">Medium</hi>. &lt;https://medium.com/search?q=customized+llm&gt; [29.04.2025].
+                    </bibl>
+                    <bibl>Runco, Mark A. (2023): “AI can only produce artificial creativity”, in: 
+                        <hi rend="italic">Journal of Creativity</hi> 33, 3: 1000063. DOI: 10.1016/j.yjoc.2023.100063.
+                    </bibl>
+                    <bibl>Salewski, Leonard / Alaniz, Stephan / Rio-Torto, Isabel / Schulz, Eric / Akata, Zeynep (2023): “In-Context Impersonation Reveals Large Language Models’ Strengths and Biases”, in: 
+                        <hi rend="italic">Advances in Neural Information Processing </hi>Systems 36: 72044-72057. Curran Associates, Inc.
+                    </bibl>
+                    <bibl>Saunders, George (2022): 
+                        <hi rend="italic">A Swim in a Pond in the Rain. </hi>Bloomsbury Publishing, United Kingdom.
+                    </bibl>
+                    <bibl>Shao, Yunfan / Li, Linyang / Dai, Junqi / Qiu, Xipeng (2023): “Character-LLM: A Trainable Agent for Role-Playing”, in: Bouamor, Houda / Pino, Juan / Bali, Kalika (eds.): 
+                        <hi rend="italic">Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing, </hi>December 2023: 13153-13187. Association for Computational Linguistics. 
+                    </bibl>
+                    <bibl>Towhidul Islam Tonmoy, S. M / Mehedi Zaman, S M / Jain, Vinija / Rani, Anku / Rawte, Vipula / Chadha, Aman / Das, Amitava (2024): “A Comprehensive Survey of Hallucination Mitigation Techniques in Large Language Models”, in: 
+                        <hi rend="italic">arXiv preprint </hi>2401.01313.
+                    </bibl>
+                    <bibl>Touvron, Hugo / Martin, Louis / Stone, Kevin / Albert, Peter / Almahairi, Amjad / Babaei, Yasmine et al. (2023): “Llama 2: Open foundation and fine-tuned chat models”, in: 
+                        <hi rend="italic">arXiv preprint </hi>2307.09288.
+                    </bibl>
+                    <bibl>Tunstall, Lewis / Beeching, Edward / Lambert, Nathan / Rajani, Nazneen / Rasul, Kashif / Belkada, Younes et al. (2023): “Zephyr: Direct distillation of LM alignment”, in: 
+                        <hi rend="italic">arXiv preprint </hi>2310.16944.
+                    </bibl>
+                    <bibl>Vandenbroeck, Philippe (2023). “Meeting my better self: an experiment with an AI-powered digital avatar”, in: 
+                        <hi rend="italic">Medium. </hi>&lt;https://philippevandenbroeck.medium.com/meeting-my-better-self-196bf737c28b&gt; [29.04.2025].
+                    </bibl>
+                    <bibl>Vasist, Pramukh Nanjundaswamy / Krishnan, Satish (2023): “Engaging with deepfakes: a meta-synthesis from the perspective of social shaping of technology theory”, in: 
+                        <hi rend="italic">Internet Research </hi>33, 5: 1670-1276. DOI: 10.1108/INTR-06-2022-0465.
+                    </bibl>
+                    <bibl>Vivienne, Sonja (2016): “Chapter 3. Identity: Nominalisation, authenticity, and incoherence”, in:
+                        <hi rend="italic"> Digital Identity and Everyday Activism: Sharing Private Stories with Networked Publics:</hi> 44-85. DOI: 10.1057/9781137500748_3.
+                    </bibl>
+                    <bibl>Wang, Yingfan / Huang, Haiyang / Rudin, Cynthia / Shaposhnik, Yurin (2021): “Understanding How Dimension Reduction Tools Work: An Empirical Approach to Deciphering t-SNE, UMAP, TriMap, and PaCMAP for Data Visualization”, in: 
+                        <hi rend="italic">Journal of Machine Learning Research</hi> 22, 201: 1-73.
+                    </bibl>
+                    <bibl>Wolf, Thomas / Debut, Lysandre / Sanh, Victor / Chaumond, Julien / Delangue, Clement / Moi, Anthony et al. (2019): “Huggingface's transformers: State-of-the-art natural language processing”, in: 
+                        <hi rend="italic">arXiv preprint </hi>1910.03771.
+                    </bibl>
+                    <bibl>Xu, Ziwei / Jain, Sanjay / Kankanhalli, Mohan (2024): “Hallucination is inevitable: An innate limitation of large language models”, in: 
+                        <hi rend="italic">arXiv preprint </hi>2401.11817.
+                    </bibl>
+                    <bibl>Yang, An / Yang, Baosong / Zhang, Beichen / Hui, Binyuan / Zheng, Bo / Yu, Bowen / Li, Chengyuan et al. (2024): “Qwen 2.5 Technical Report”, in: 
+                        <hi rend="italic">arXiv preprint</hi> 2412.15115.
+                    </bibl>
+                    <bibl>Zhao, Yunpu / Zhang, Rui / Li, Wenyi / Huang, Di / Guo, Jiaming / Peng, Shaohui / Hao, Yifan et al. (2024): “Assessing and understanding creativity in large language models”, in: 
+                        <hi rend="italic">arXiv preprint </hi>2401.12491.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Zylinksa, Joanna </hi>(2020): 
+                        <hi rend="italic">AI Art: Machine Visions and Warped Dreams.</hi> Open Humanities Press.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

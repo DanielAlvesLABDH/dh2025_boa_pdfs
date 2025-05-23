@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LEVCHENKO_Maria_AI_Supported_Scaffolded_Learning_for_Teachin">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">AI-Supported Scaffolded Learning for Teaching Python in Digital Humanities Education</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Levchenko</surname>
+                        <forename>Maria</forename>
+                    </persName>
+                    <affiliation>University of Bologna, Italy</affiliation>
+                    <email>marylevchenko@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T16:14:24.821201975</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Scaffolded Programming Education</term>
+                    <term>Digital Humanities Education</term>
+                    <term>Large Language Models</term>
+                    <term>AI-Supported Learning</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>curricular and pedagogical development and analysis</term>
+                    <term>Education/ pedagogy</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <anchor xml:id="id_docs-internal-guid-f8298a6e-7fff-08fc-650d-176a670e7eb3"/>This research examines the implementation of an AI-supported scaffolded learning approach in teaching Python programming to first-year master's students in the Digital Humanities and Digital Knowledge (DHDK) program at the University of Bologna. The study focuses on the Computational Thinking and Programming course, taught by Professor Silvio Peroni, which serves as a foundational component of the international curriculum and introduces students to basic Python programming concepts. While coding skills are critical for digital humanities scholars, teaching these skills to students from diverse academic backgrounds raises significant challenges, particularly in addressing different levels of prior technical experience and different learning approaches.
+            </p>
+            <p>Our study is based on the development and evaluation of an 
+                <hi rend="bold">online Python training platform </hi>that combines traditional scaffolded learning principles with AI-based support. 
+                <hi rend="bold">Scaffolded learning</hi>—the process of providing temporary, adjustable support structures that are gradually removed as students develop competence—forms the conceptual foundation of our approach. The platform applies these principles through a carefully structured progression of programming tasks, each of which builds on previous knowledge while remaining within the developmental reach of students. While traditional scaffolded learning often faces challenges in providing timely support and adapting to individual learning paces (Reiser &amp; Tabak, 2014), research consistently shows that scaffolding significantly enhances online learning performance (Kaldaras et al., 2024, Zuo et al., 2023). Our platform overcomes the limitations by using Large Language Models (LLMs) to provide immediate, personalized feedback. This AI-supported approach enables dynamic scaffolding that adapts to each student's progress, providing more intensive support when students struggle and gradually reducing support as they gain proficiency. We complement this scaffolded approach with principles from 
+                <hi rend="bold">Cognitive Load Theory </hi>(Sweller et al., 2019), carefully sequencing learning activities to manage cognitive demands and optimize knowledge retention. 
+            </p>
+            <p>The research addresses 
+                <hi rend="bold">three primary questions</hi>: (1) how AI-generated immediate feedback affects student performance on coding tasks compared to traditional teaching methods, as evidenced by a comparative analysis of previous years' exam scores, (2) the effectiveness of scaffolded practice approaches in facilitating student progression through the programming curriculum, and (3) patterns of student engagement and task completion rates compared to historical data from previous academic years.
+            </p>
+            <p>The 
+                <hi rend="bold">development of the platform </hi>builds on recent research demonstrating the effectiveness of LLMs in creating curriculum scaffolds (Malik et al., 2024) and their application in code comprehension (Oli, 2024) and CS education (Lyu et al., 2024). The technical implementation of the platform uses Next.js React for the front-end and FastAPI with PostgreSQL for the back-end, with the GPT-4 API integrated through carefully designed prompts that incorporate course materials and previous assignments.
+            </p>
+            <p>The platform's 
+                <hi rend="bold">content development </hi>follows a hybrid approach, combining AI-generated tasks with expert human teaching staff moderation. The task generation process is specifically tailored to digital humanities contexts, incorporating domain-specific examples such as text analysis, metadata processing, and cultural heritage data manipulation. This design choice responds to Lyu et al.'s findings about balancing AI support with traditional teaching methods to develop critical thinking skills, ensuring that automated support enhances rather than replaces pedagogical expertise.
+            </p>
+            <p>The core innovation lies in the platform's 
+                <hi rend="bold">dual feedback mechanism</hi>. Students work in an 
+                <hi rend="bold">interactive coding environment </hi>where they can write, execute, and submit solutions and receive immediate feedback at two levels: direct output from the Python executor and pedagogically relevant recommendations from the LLM. This feedback system not only identifies errors, but also contextualizes them within the student's current level of understanding, provides humanities-relevant analogies, and suggests next steps that maintain an optimal level of challenge.
+            </p>
+            <p>The study uses a longitudinal design and draws on historical data from previous cohorts of the DHDK program, including student engagement graphs, workshop completion rates, exam results, and student feedback, to establish baseline metrics and identify common learning barriers in the existing curriculum. Our ongoing data collection focuses on quantitative metrics from the platform, such as task completion attempts (both successful and unsuccessful) and detailed web session records that track student interactions with the system. In accordance with GDPR requirements, we collect only anonymized user interactions, with each user represented by a unique identifier without any personal information.</p>
+            <p>Preliminary results from the first cycle of implementation (academic year 2024-2025) show significant improvements in student engagement. The platform has achieved an average of 37 solved tasks per student, more than doubling the average task completion rate observed in the previous year's GitHub-based approach (approximately 10-15 tasks per student). The integration of LLMs for immediate feedback is showing promising results in reducing student frustration and accelerating the learning process, while the scaffolded structure helps maintain an appropriate level of challenge and support throughout the course.</p>
+            <p>The research contributes to the field in several ways: (1) it provides an empirically tested framework for integrating AI support into graduate-level programming education for humanities students, (2) it demonstrates practical applications of scaffolded learning principles in the acquisition of digital skills, supported by comparative historical data, and (3) it provides insights into the effective balance between AI support and traditional teaching methods in programming courses in digital humanities programs.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <anchor xml:id="id_docs-internal-guid-01941083-7fff-2e2e-e1b1-091e3eefcb44"/>Kaldaras, L., Wang, K. D., Nardo, J. E., Price, A., Perkins, K., Wieman, C., &amp; Salehi, S. (2024). Employing technology-enhanced feedback and scaffolding to support the development of deep science understanding using computer simulations. International Journal of STEM Education, 11(30).
+                    </bibl>
+                    <bibl>Lyu, W., Wang, Y., Chung, T. R., Sun, Y., &amp; Zhang, Y. (2024). Evaluating the effectiveness of LLMs in introductory computer science education: A semester-long field study. In Proceedings of the Eleventh ACM Conference on Learning @ Scale (L@S '24) (pp. 63–74). Association for Computing Machinery.
+                        <ref target="https://doi.org/10.1145/3657604.3662036">https://doi.org/10.1145/3657604.3662036</ref>
+                    </bibl>
+                    <bibl>Malik, R., Abdi, D., Wang, R., &amp; Demszky, D. (2024). Scaffolding middle-school mathematics curricula with large language models (EdWorkingPaper: 24-1028). Annenberg Institute at Brown University.
+                        <ref target="https://doi.org/10.26300/b47y-mh41">https://doi.org/10.26300/b47y-mh41</ref>
+                    </bibl>
+                    <bibl>Oli, P. (2024). Towards automated scaffolding of learners' code comprehension process [Doctoral dissertation, University of Memphis]. Electronic Theses and Dissertations.
+                        <ref target="https://digitalcommons.memphis.edu/etd/3614">https://digitalcommons.memphis.edu/etd/3614</ref>
+                    </bibl>
+                    <bibl>Reiser, B. J., &amp; Tabak, I. (2014). Scaffolding. In R. K. Sawyer (Ed.), The Cambridge handbook of the learning sciences (2nd ed., pp. 44-62). Cambridge University Press.</bibl>
+                    <bibl>Sweller, J., van Merriënboer, J. J., &amp; Paas, F. (2019). Cognitive Architecture and Instructional Design: 20 Years Later. Educational Psychology Review, 31(2), 261-292.</bibl>
+                    <bibl>Zuo, M., Kong, S., Ma, Y., Hu, Y., &amp; Xiao, M. (2023). The effects of using scaffolding in online learning: A meta-analysis. Education Sciences, 13(7), 705. https://doi.org/10.3390/educsci13070705</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

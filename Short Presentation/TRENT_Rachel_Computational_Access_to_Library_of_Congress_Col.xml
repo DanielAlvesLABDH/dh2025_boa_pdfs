@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="TRENT_Rachel_Computational_Access_to_Library_of_Congress_Col">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Computational Access to Library of Congress Collections as Data</title>
+                <author>
+                    <persName>
+                        <surname>Trent</surname>
+                        <forename>Rachel</forename>
+                    </persName>
+                    <affiliation>Library of Congress, United States of America</affiliation>
+                    <email>rtrent@loc.gov</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Foo</surname>
+                        <forename>Brian</forename>
+                    </persName>
+                    <affiliation>Library of Congress, United States of America</affiliation>
+                    <email>bfoo@loc.gov</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Salas</surname>
+                        <forename>Camille</forename>
+                    </persName>
+                    <affiliation>Library of Congress, United States of America</affiliation>
+                    <email>csala@loc.gov</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T16:38:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>digital scholarship services</term>
+                    <term>cultural heritage data</term>
+                    <term>libraries</term>
+                    <term>archives</term>
+                    <term>web archives</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digital access</term>
+                    <term>privacy</term>
+                    <term>and ethics analysis</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>public humanities collaborations and methods</term>
+                    <term>Computer science</term>
+                    <term>Humanities computing</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">This poster discusses the status of developing a routine digital scholarship program at the Library of Congress (LC) and invites researchers into deep engagement to inform development of the program. The starting place for this invitation is a concept at the core of critical data studies and critical archival studies: organization of data is not simply a process of “exposing”, “releasing”, or “making available” information for others to interpret; it is itself an unavoidably interpretive act of creation that has real-world impacts​ (Thylstrup 2022; Carbajal &amp; Caswell 2021; Jo &amp; Gebru 2020)​. This principle echoes the roots of the Digital Humanities movement, which emphasize a blurred boundary between the domains of creative scholarship and procedural curation, and parallels the emphasis on ethics of care and participatory design in the collections as data movement​ (Schnapp, Presner, Lunenfeld, &amp; Drucker 2009; Padilla, Scates Kettler, Varner, &amp; Shorish 2023)​. In this spirit, LC seeks to mature its digital scholarship program in close collaboration with diverse communities of use and representation—including researchers from the DH community.  </p>
+            <p style="text-align: left; ">Building on years of experiments, exploratory projects, and community-building centered in the Digital Innovation Division, also known as the LC Labs division, and drawing from researcher interactions across the library’s sixteen 
+                <ref target="https://www.loc.gov/research-centers/">research centers</ref>, the Library of Congress created its first dedicated Data Librarian position in 2024 to support expansion into a routine digital scholarship program. LC is now growing sustained programmatic services in three areas: data as a service, curated data packages, and community building.  
+            </p>
+            <div type="div1" rend="DH-Heading1">
+                <head>Data as a service </head>
+                <p style="text-align: left; ">The Library of Congress manages over 23 million catalog holdings records, 6 million digital collection records, 12 million authority records, and 81 million items described in EAD finding aids.  Although most of this data can be accessed via various APIs and data services, the sheer scale of data and aspects of its heterogeneity can make it challenging to navigate for even experienced computational users. Online collections cover the entire world, span over a millennium of production, and include formats such as monographs, manuscripts, photographic materials, newspapers and other periodicals, maps, web archives, audio, video, notated music, and born-digital datasets. Digital collections are described and structured in particularly heterogeneous ways tethered to centuries of diverse collecting histories and decades of digitization projects. Although generally hewing towards FAIR data principles, LC digital collections reflect their humanistic roots and nuanced sensitivities to the needs of source and user communities. LC maintains API documentation at 
+                    <ref target="https://www.loc.gov/apis/">https://www.loc.gov/apis/</ref> and publishes a collection of example projects demonstrating API-based uses of the library’s data streams.<ref n="1" target="ftn2"/>  LC also regularly publishes tutorials and data guides in the form of Jupyter notebooks and GitLab Pages sites created by staff, fellows, interns, and scholars in residence.<ref n="2" target="ftn3"/>  
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Curated data packages  </head>
+                <p style="text-align: left; ">One of the key findings of the Library of Congress’s recent Computing Cultural Heritage in the Cloud (CCHC) grant is that “the context of cultural heritage data is fundamental to its value for researchers, and inseparable from its usefulness”​ (Library of Congress, 2024)​. In response to this finding, LC Labs created 
+                    <ref target="https://data.labs.loc.gov/">data.labs.loc.gov</ref>, which hosts data packages that combine selected datasets with robust context and documentation. The data packages are designed for rapid computational access via manifest lists, combined with detailed profiles of the original collections, dataset generation, and approaches for use. Community input shapes the corpus of appropriate datasets selected for inclusion.  
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Community building </head>
+                <p style="text-align: left; ">Growth of the digital scholarship program depends on feedback and conversations with the people and communities engaged with and represented by the data. The Library of Congress actively seeks to enrich its engagement with computational users via ongoing routes for connection and feedback. We invite researchers to connect with us for computational consultations when seeking data and navigating the library’s data histories, structures, and APIs. Feedback from these consultations helps to inform metadata, infrastructure design, selection decisions, and documentation. Computational researchers are encouraged to submit questions, issues, and suggestions via GitHub issues on the 
+                    <ref target="https://github.com/LibraryOfCongress/data-exploration/">data-exploration</ref> repository or by contacting LC-Labs@loc.gov or askDCMS@loc.gov. LC also offers numerous 
+                    <ref target="https://www.loc.gov/internships-and-fellowships/">fellowships, internships</ref>, and the 
+                    <ref target="https://labs.loc.gov/about/opportunities/innovator-in-residence-program">Innovator in Residence</ref> program that allow researchers more direct access for computational research and extended collaboration. 
+                </p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn2" n="1">
+                        
+                            <hi style="font-family:Aptos;font-size:10pt">See “Learn How To Find or Use Our Data (</hi>
+                            <ref target="https://data.labs.loc.gov/learn/">
+                                <hi style="font-family:Aptos;font-size:10pt">https://data.labs.loc.gov/learn/</hi>
+                            </ref>
+                            <hi style="font-family:Aptos;font-size:10pt">), “Get Inspired by Data Explorations Across the Library” (</hi>
+                            <ref target="https://data.labs.loc.gov/explorations/">
+                                <hi style="font-family:Aptos;font-size:10pt">https://data.labs.loc.gov/explorations/</hi>
+                            </ref>
+                            <hi style="font-family:Aptos;font-size:10pt">), and “Experiments” (</hi>
+                            <ref target="https://labs.loc.gov/work/experiments/">
+                                <hi style="font-family:Aptos;font-size:10pt">https://labs.loc.gov/work/experiments/</hi>
+                            </ref>
+                            <hi style="font-family:Aptos;font-size:10pt">).</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn3" n="2">
+                        
+                            <hi style="font-family:Aptos;font-size:10pt">See “Tutorials for Data Exploration” (</hi>
+                            <ref target="https://libraryofcongress.github.io/data-exploration/intro.html">
+                                <hi style="font-family:Aptos;font-size:10pt">https://libraryofcongress.github.io/data-exploration/intro.html</hi>
+                            </ref>
+                            <hi style="font-family:Aptos;font-size:10pt">), “Processing and Visualizing By the People Transcription Data” (</hi>
+                            <ref target="https://libraryofcongress.github.io/btp-data/">
+                                <hi style="font-family:Aptos;font-size:10pt">https://libraryofcongress.github.io/btp-data/</hi>
+                            </ref>
+                            <hi style="font-family:Aptos;font-size:10pt">).</hi>
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Carbajal, Itza A. / Caswell, Michelle</hi> (2021): “Critical Digital Archives: A Review from Archival Studies,” in: 
+                        <hi rend="italic">The American Historical Review</hi>, 126, 3: 1102-1120. DOI: doi.org/10.1093/ahr/rhab359 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Jo, Eun Seo / Gebru, Timnit</hi> (2020): “Lessons from archives: strategies for collecting sociocultural data in machine learning,” in: 
+                        <hi rend="italic">FAT* '20: Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency</hi>, 306-316. DOI: doi.org/10.1145/3351095.3372829 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Library of Congress</hi> (2024): 
+                        <hi rend="italic">Computing Cultural Heritage in the Cloud</hi>. Retrieved 12 2, 2024 &lt;https://labs.loc.gov/work/experiments/cchc/&gt; [28.04.2025]
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Padilla, Thomas / Scates Kettler, Hannah / Varner, Stewart / Shorish, Yasmeen</hi> (2023): 
+                        <hi rend="italic">Vancouver Statement on Collections as Data</hi> &lt;https://zenodo.org/records/8342171&gt; and &lt;https://collectionsasdata.github.io/part2whole/vancouver/&gt; [28.04.2025]
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Schnapp, Jeffrey / Presner, Todd / Lunenfeld , Peter / Drucker , Johanna. </hi>(2009): 
+                        <hi rend="italic">The Digital Humanities Manifesto 2.0</hi> &lt;https://www.humanitiesblast.com/manifesto/Manifesto_V2.pdf&gt; [03.02.2025]
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Thylstrup, Nanna B.</hi> (2022): “The ethics and politics of data sets in the age of machine learning: deleting traces and encountering remains” in: 
+                        <hi rend="italic">Media, Culture &amp; Society</hi>, 44, 4. DOI: doi.org/10.1177/01634437211060226 
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

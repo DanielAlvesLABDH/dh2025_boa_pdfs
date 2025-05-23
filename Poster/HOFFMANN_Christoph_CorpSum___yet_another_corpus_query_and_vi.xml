@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="HOFFMANN_Christoph_CorpSum___yet_another_corpus_query_and_vi">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>CorpSum - yet another corpus query and visualization UI</title>
+                <author>
+                    <persName>
+                        <surname>Hoffmann</surname>
+                        <forename>Christoph</forename>
+                    </persName>
+                    <affiliation>Austrian Center for Digital Humanities, Austria</affiliation>
+                    <email>christoph.hoffmann@oeaw.ac.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Koppensteiner</surname>
+                        <forename>Wolfgang</forename>
+                    </persName>
+                    <affiliation>Austrian Center for Digital Humanities, Austria</affiliation>
+                    <email>wolfgang.koppensteiner@oeaw.ac.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Pirker</surname>
+                        <forename>Hannes</forename>
+                    </persName>
+                    <affiliation>Austrian Center for Digital Humanities, Austria</affiliation>
+                    <email>Hannes.Pirker@oeaw.ac.at</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T18:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>corpus analysis visualization frontend</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>spatial &amp; spatio-temporal analysis</term>
+                    <term>modeling and visualization</term>
+                    <term>text mining and analysis</term>
+                    <term>Linguistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>NoSkE, which is an open-source version of the commercial sketch Engine (SkE) by Lexical Computing Ltd., is a highly efficient and widely used corpus search software providing a wide array of linguistic corpus analysis tools. It is equipped with both a well-defined and -documented REST-API as well as a comprehensive frontend web application named Crystal. Because the Crystal web interface's aim is to provide access to the full bandwidth of functionalities the NoSke query engine is capable of, it can be difficult to navigate for novices. Moreover, some key features such as the visualization of query results and guided colocation and word combination queries have been reserved to its commercial sibling. The latter shortcomings compelled the Austrian Centre for Digital Humanities at the Austrian Academy of Sciences (ACDH-CH) to develop its own bespoke query tool - CorpSum. It is a web application that enables user-friendly, dynamically generated queries in text corpora along different extralinguistic dimensions of variation such as the dimensions time and space. Originally developed to facilitate work with the Austrian Media Corpus (AMC) based on the use of the NoSke Crystal interface by domain experts, the following common analysis tasks were identified and implemented: </p>
+            <p style="text-align: justify;">● Analysis of Regional Linguistic Varieties - display frequency results divided by regions on geographic map </p>
+            <p style="text-align: justify;">● Diachronic Lexicographic Analysis - display temporal trends of frequency results and the keyword-in-context in different time periods </p>
+            <p style="text-align: justify;">● Display sources / topics of frequency results - search and filter by other words using the keyword-in-context results as well as the attached corpus and document metadata </p>
+            <p style="text-align: justify;">The software is being realized as an open source project using well established technologies and frameworks: </p>
+            <p style="text-align: justify;">● TypeScript - a strongly typed superset of JavaScript </p>
+            <p style="text-align: justify;">● VueJS - a performant and versatile framework for building web user interfaces </p>
+            <p style="text-align: justify;">● D3JS - a JavaScript library for visualizing data </p>
+            <p>Whilst the initial implementation is bespoke to the use cases of the Austrian Media Corpus, initial tests with other NoSke-hosted corpora have shown that due to it’s modular architecture it is already usable on other corpora as well. Because it builds directly on top of the NoSkes swagger-documented REST-API, it can be used on any NoSke instance. In a Poster and Software Demo Session at the DH2025 we hope to get further feedback on our current implementation and gather what kind of documentation domain scientists would require to extend the set of pre-defined analysis tasks themselves.</p>
+            <p>
+                <hi rend="Heading_1_Char">
+                    <hi rend="bold">Rychly, P.</hi>
+                </hi> (2007). 
+                <hi rend="italic">Manatee/bonito - a modular corpus manager</hi>. 1st Workshop on Recent Advances in Slavonic Natural Language Processing., pages 65–70. 
+            </p>
+            <p>
+                <hi rend="bold">Kilgarriff, A., Baisa, V., Bušta, J. et al.</hi>
+                <hi rend="italic" xml:space="preserve">The Sketch Engine: ten years on. </hi>Lexicography ASIALEX 1, 7–36 (2014), 
+                <ref target="https://doi.org/10.1007/s40607-014-0009-9">https://doi.org/10.1007/s40607-014-0009-9</ref>
+            </p>
+            <p>
+                <hi rend="bold">Ransmayr, Jutta, Karlheinz Mörth, und Matej Ďurčo</hi> (2017): 
+                <hi rend="italic normalweight">AMC (Austrian Media Corpus) – Korpusbasierte Forschungen zum österreichischen Deutsch.</hi> Digitale Methoden der Korpusforschung in Österreich (= Veröffentlichungen zur Linguistik und Kommunikationsforschung Nr. 30), Hrsg. C. Resch und W. U. Dressler, pages 27-38. 
+            </p>
+            <p>
+                <hi rend="bold">Asil Cetin</hi> (2019) 
+                <hi rend="italic">Vielschichtige visuelle Datenanalyse für die Korpusforschung</hi>, 
+                <ref target="https://doi.org/10.25365/thesis.60378">https://doi.org/10.25365/thesis.60378</ref>
+            </p>
+        </body>
+    </text>
+</TEI>

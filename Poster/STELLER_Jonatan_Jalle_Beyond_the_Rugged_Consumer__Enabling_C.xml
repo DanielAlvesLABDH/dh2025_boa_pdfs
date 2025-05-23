@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="STELLER_Jonatan_Jalle_Beyond_the_Rugged_Consumer__Enabling_C">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Beyond the Rugged Consumer: Enabling Communal Experiences in Digital Cultural Heritage</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Steller</surname>
+                        <forename>Jonatan Jalle</forename>
+                    </persName>
+                    <affiliation>Academy of Sciences and Literature Mainz, Germany</affiliation>
+                    <email>jonatan.steller@adwmainz.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-09T10:52:21.592379084</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>cultural heritage</term>
+                    <term>community</term>
+                    <term>consumerism</term>
+                    <term>history</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digital publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>public humanities collaborations and methods</term>
+                    <term>Cultural studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Digital editions, repositories, web applications, and other cultural-heritage software commonly cater to expert users. While user stories and the identification of target audiences have become more mainstream in recent years, DH-informed cultural-heritage offerings with broad audience appeal are still rare. From manuscript editions in Latin to object databases without genre information to dictionaries full of abbreviations - the ‘rugged consumer’, a contemporary spin on Claude Lévi-Strauss’s 
+                <hi rend="italic">bricoleur</hi> coined by Raymond Malewitz (cf. 2014: 6f.), still constitutes the implicit norm. Like the DH scholars who produce data and software, rugged consumers are defined by their ability to reuse and repurpose what is available to them based on their knowledge of production conditions and marketplaces.
+            </p>
+            <p>In the eyes of cultural-studies scholar Lawrence Grossberg (cf. 1986: 69f., in reference to Stuart Hall), however, one of the most valuable contributions of the humanities to society should be to work against the grain of hegemonic individualism, as epitomized by the rugged consumer. As this poster argues, digital cultural heritage is in the unique position of enabling history and its scholarship as communal experiences. In the ongoing development of the Cultural Heritage Framework (cf. Steller 2025, a software to build cultural-heritage web applications<ref n="1" target="ftn0"/>), five central strategies have emerged as pathways towards less isolated and more participatory cultural-heritage editions:
+            </p>
+            <list type="ordered">
+                <item>
+                    <hi rend="bold">Federate silos:</hi> technologies such as Linked Open Data, embedded metadata, and IIIF help connect data and make it more discoverable. This reduces a crucial bit of knowledge required for users to engage with the data provided as part of a single edition, repository, or other resource.
+                </item>
+                <item>
+                    <hi rend="bold">Provide and question authority:</hi> while authority files are useful tools to interconnect data, they also reinscribe hegemonic modes of knowledge production. Cultural-heritage infrastructures thus need to provide paths for outside contributions and governance structures to deal with them.
+                </item>
+                <item>
+                    <hi rend="bold">Enable citizen science:</hi> by adhering to the FAIR (and possibly CARE, cf. Carroll 
+                    <hi rend="italic">et al.</hi> 2021: 
+                    <hi rend="italic">passim</hi>) data principles and by providing data serialisations in common file formats, external scholars and other users have a chance to use the data produced by a project. Standardised APIs further benefit data reuse.
+                </item>
+                <item>
+                    <hi rend="bold">Forge paths through the data:</hi> digital resources benefit from being designed as Open Educational Resources from the start. Instead of text-heavy essays, broader audiences benefit from formats such as data stories or notebooks with interactive content blocks that combine academic rigour with multiple modes of engagement.
+                </item>
+                <item>
+                    <hi rend="bold">Create a playful atmosphere:</hi> while gamification should not be an end in itself, it can be used in meaningful ways to create a more engaging user experience. Through mobile-friendly and location-based experiences, there is even a chance of bringing people together in the real world rather than individualising them as ‘users’.
+                </item>
+            </list>
+            <p>The success of these strategies is hard to assess, and their implementation in the Cultural Heritage Framework is still in progress. They do, however, take inspiration from successful community projects such as Wikidata and Historypin (cf. Armstrong 2012: 
+                <hi rend="italic">passim</hi>). The approach outlined here intentionally does not include social-media strategies and other ‘social’ experiences like comment sections, ratings, or discussion boards. While they represent participatory elements of the modern web, they are also hard to manage for humanities projects and commonly end up being monodirectional instead of social.
+            </p>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn0" rend="footnote text" n="1">The software is developed specifically for the German academies programme, whose projects largely adhere to a Western notion of heritage shared by all of humanity. Its federation options and communal aspects, however, are informed by the notion of community and heritage as sites of continuous struggle (cf. Alonso González 2015: 29).</note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Alonso González, Pablo (2015): “Conceptualizing Cultural Heritage as a Common”, in: Biehl, Peter F. / Comer, Douglas C. / Prescott, Christopher / Soderland, Hillary A. (eds.): 
+                        <hi rend="italic">Identity and Heritage: Contemporary Challenges in a Globalized World</hi>. Cham: Springer 27–35. DOI: 10.1007/978-3-319-09689-6_3.
+                    </bibl>
+                    <bibl>Armstrong, Natasha (2012): “Historypin: Bringing Generations Together Around a Communal History of Time and Place”, in: 
+                        <hi rend="italic">Journal of Intergenerational Relationships</hi> 10, 3: 294–298. DOI: 10.1080/15350770.2012.697412.
+                    </bibl>
+                    <bibl>Carroll, Stephanie Russo / Herczog, Edit / Hudson, Maui / Russell, Keith / Stall, Shelley (2021): “Operationalizing the CARE and FAIR Principles for Indigenous data futures”, in: 
+                        <hi rend="italic">Scientific Data</hi> 8, 108: 1–6. DOI: 10.1038/s41597-021-00892-0.
+                    </bibl>
+                    <bibl>Grossberg, Lawrence (1986): “History, Politics and Postmodernism: Stuart Hall and Cultural Studies”, in: 
+                        <hi rend="italic">Journal of Communication Inquiry</hi> 10, 2: 61–77. DOI: 10.1177/019685998601000205.
+                    </bibl>
+                    <bibl>Malewitz, Raymond (2014): 
+                        <hi rend="italic">The Practice of Misuse: Rugged Consumerism in Contemporary American Culture</hi>. Redwood City, CA: Stanford University Press.
+                    </bibl>
+                    <bibl>Steller, Jonatan Jalle (2025): 
+                        <hi rend="italic">Cultural Heritage Framework</hi>. GitHub, v. 2.0.0-alpha &lt;
+                        <ptr target="https://github.com/digicademy-chf"/>&gt; [9/5/2025].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

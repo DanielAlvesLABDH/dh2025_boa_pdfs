@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="GIRARD_Paul_Chromobase__a_narrative_driven_dataset_on_the19t">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Chromobase: a narrative-driven dataset on the 19th-century Colour Revolution </title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Girard</surname>
+                        <forename>Paul</forename>
+                    </persName>
+                    <affiliation>OuestWare, France</affiliation>
+                    <email>paul@ouestware.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ribeyrol</surname>
+                        <forename>Charlotte</forename>
+                    </persName>
+                    <affiliation>Sorbonne Université, France</affiliation>
+                    <email>ribeyrolc@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Dubois</surname>
+                        <forename>Arnaud</forename>
+                    </persName>
+                    <affiliation>CNRS, France</affiliation>
+                    <email>arnaud64.dubois@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Blanc</surname>
+                        <forename>Julie</forename>
+                    </persName>
+                    <affiliation>HEAD Genève, Suisse</affiliation>
+                    <email>contact@julie-blanc.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>L'EVEQUE</surname>
+                        <forename>Zoé</forename>
+                    </persName>
+                    <affiliation>CNAM, France</affiliation>
+                    <email>zoe.leveque@lecnam.net</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-11T11:25:17.767292815</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>colour studies</term>
+                    <term>annotations</term>
+                    <term>data visualisation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>data publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>scholarly editing and editions development</term>
+                    <term>analysis</term>
+                    <term>and methods</term>
+                    <term>History</term>
+                    <term>History of science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>The 19th century chromatic turn</head>
+                <p>
+                    <anchor xml:id="id_docs-internal-guid-2688d4d5-7fff-f3e3-ede8-3bbe903452ae"/>The 
+                    <ref target="https://chromobase.huma-num.fr/">Chromobase</ref> is the open access database produced by 
+                    <ref target="https://chromotope.eu/">CHROMOTOPE</ref>, an ERC funded project based on a multidisciplinary partnership between Sorbonne université, the University of Oxford and the Conservatoire National des Arts et Métiers in Paris. This research programme explores what happened to colour across industrial Europe in the second half of the 19th century. The Chromobase depicts how the new colouring materials and techniques which were invented in the 1850s brought about new ways of thinking about colour in literature, art, and the history of science and technology. The extraordinary story of this 19th century “Colour Revolution” is told through a series of interwoven interdisciplinary “narratives” written by colour experts from all over the world.
+                    <lb/>Our narrative-driven methodology extends those texts into a linked-data dataset which is published as a visual interactive web publication designed to foster serendipity and unveil the 19th-century colour materiality.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="id_docs-internal-guid-cba85aa1-7fff-4dab-e679-6a5da162a349"/>A narrative-driven dataset
+                </head>
+                <p>
+                    <anchor xml:id="id_docs-internal-guid-1cdb5bda-7fff-a423-03c9-030a761fd18f"/>In order to understand the cultural impact of the invention of aniline-based dyes we propose to entangle the actors-network (Callon / Latour 1981) which took a role in this colour revolution. To support this project we opted for a narrative-driven approach where writing becomes a data making process. 
+                </p>
+                <p>We reversed the usual data-to-publication movement to better fit our research project context. Writing texts was the common language and most relevant research methodology for our team. We designed a methodology where texts written by researchers are the source from which data points are created, inspired by the “narrative ontology” concept (Meghini et al. 2021). This model serves as an editorial process where we annotate the texts provided by scholars linking entities such as people, organisations, techniques, events, colours or references. Each edited piece adds one layer of data points into our data-set forming little by little a comprehensive set of actors who played a role in our object of study. Each author decides which specific items to highlight by talking about it in their narrative. Thus all data points are by-design curated and contextualised by texts which can be referenced to, to learn more on their roles and interactions.</p>
+                <p>Technically the editorial team uses a custom text-database editor built using the headless Content Management System (
+                    <ref target="https://keystonejs.com/">Keystone.js</ref>) to edit and annotate the texts with notices.
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpnsl8k4vx/Pictures/ab183372a8d01378783474b30aefb1dc.png"/>
+                    </figure>
+                </p>
+                <p>Figure (1) A narrative in the editor tool. One link edition select box is opened</p>
+                <p>Notices are data entries editors can edit whose data model depends on their type. For some specific types, we developed a wikidata connector which allows editors to import a concept from the open database and store its identifier. This process not only eases data edition but fosters data interoperability.</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpnsl8k4vx/Pictures/ab183372a8d01378783474b30aefb1dc.png"/>
+                    </figure>
+                </p>
+                <p>Figure (2) Dedicated page to create notice by importing entities from Wikidata</p>
+                <p>Through this process texts become “narratives” interconnected by a swarm of data points describing their main human and non-human actors.</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpnsl8k4vx/Pictures/ab183372a8d01378783474b30aefb1dc.png"/>
+                    </figure>
+                </p>
+                <p>Figure (3) Chromobase relational database schema</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="id_docs-internal-guid-f7a29312-7fff-3815-fbb1-6f703a1dbc11"/>Reading 19th-century colour materiality
+                </head>
+                <p>
+                    <anchor xml:id="id_docs-internal-guid-6e302de9-7fff-7c5c-f685-7d0a3e3dd25d"/>The Chromobase is a hybrid digital object, both a set of scientific articles and a database. Its public form is a digital-first publication editing a series of papers augmented by hypertextual materials (
+                    <ptr target="https://chromobase.huma-num.fr/"/>). We designed it for three main usages: reading,  exploring and discovering the 1851-1871 colour materiality.
+                </p>
+                <p>The narrative pages are the web editions of the short scientific articles presenting each a specific case or aspect of the “chromatic turn”. Text markers invite readers to extend their exploration through links to notices pages. To keep a fluid reading experience markers are rendered as light dots moving notices links in a sidebar showing their type, label and picture preview. At the end of the text, the bibliographic references cited by the text are listed to comply with scientific edition common usage.</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpnsl8k4vx/Pictures/ab183372a8d01378783474b30aefb1dc.png"/>
+                    </figure>
+                </p>
+                <p>Figure (4) The 
+                    <ref target="https://chromobase.huma-num.fr/narratives/persoz-the-birth-of-heritage-sciences-and-medieval-colours/">“Persoz, the birth of heritage sciences and medieval colours” narrative page</ref> with “Jean-François Persoz” marker and notice link highlighted
+                </p>
+                <p>Notices page (person, event, object, technique, colour or reference) are both informative, precising some more information and exploratory as they always refer back to the narratives which cites them as a glossary would do. One can also review those notices thanks to list pages which feature filterable and sortable lists of items by type.</p>
+                <p>In keeping with the “material turn” currently transforming the humanities, we have broadened the scope of our research to all the forms of coloured or colouring materials (from pigments to dyes) and techniques (chromolithography, electrotyping etc.) which emerged or were transformed during the “Colour Revolution”. The “Techniques” notices reveal the main processes and materials; “Colour names” keep track of the many names similar hues were attributed; “Objects” expose digital representations of coloured artefacts crafted during the period. </p>
+                <p>Object notices can contain high-definition pictures which readers may explore precise details through 
+                    <ref target="https://iiif.io/">IIIF protocol</ref>. Our digitisation efforts have focused on the colour collection of the CNAM associated with the chemist Jean-François Persoz. Very high definition colour digitisations methods were then explored in collaboration with 
+                    <ref target="https://archeovision.cnrs.fr/">Archéovision</ref>, on a selected sample books, colourant powder, or technical objects, revealing stunning representations of colouring chemistry materiality. 
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpnsl8k4vx/Pictures/ab183372a8d01378783474b30aefb1dc.png"/>
+                    </figure>
+                </p>
+                <p>Figure (5) 
+                    <ref target="https://chromobase.huma-num.fr/objects/azofuchsine-6b-bayer/">Azofuchsine 6B Bayer, CNAM Musée des Arts et Métiers, Paris object page</ref>
+                </p>
+                <p>To better convey the importance of the colour nuances of those “Objects” we indexed them in the colour space. We’ve used HSV space as it’s the closest contemporaneous space to the “Chromatic Circles” (Chevreul 1864) designed by the chemist Michel-Eugène Chevreul (1786-1889), a major actor in the colour debates of this period. Those colours are not automatically extracted but chosen by editors to specifically pinpoint meaningful ones. We chose curation over exhaustiveness.  </p>
+                <p>Finally we designed a digital visualisation of Chevreul’s chromatic circles in the colour wheel page. The colour space is divided in 10 circles each representing a span of values from low (dark) to high (light) values. Readers can navigate through the ten circles by using a value scale. Each circle is divided into twelve sections each representing one section of the 0-360° scale of Hue, and into five concentric rings dividing the saturation scale from 0% (pale) to 100% (vibrant). Thus each circle is represented by sixty (12 * 5) circle segments having each a single colour to summarize the many colours they contain. By navigating through those visual circles we quickly understand the abstract notions of value, hue and saturation. Second, those circles form a mathematical space where we can represent the colour points indexed in the “Objects” described in the database. Clicking on one colour point shows a summary of the related object and a link to consult its page. </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpnsl8k4vx/Pictures/ab183372a8d01378783474b30aefb1dc.png"/>
+                    </figure>
+                </p>
+                <p>Figure (6) Object "Register of samples and correspondence, 1850-1930: letter from Camille Koechlin to Horace Koechlin, 4 August 1861" in the 
+                    <ref target="https://chromobase.huma-num.fr/colour-wheel/">colour wheel page</ref>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="id_docs-internal-guid-e0e7975f-7fff-5c06-088c-771aa76609e1"/>A open web publication
+                </head>
+                <p>This project has been fueled by an interdisciplinary dynamic combining humanities, graphic design, web development and structured publishing. Our close collaboration aimed at  bringing together epistemology and materiality, where technical and visual devices are developed in resonance with research issues (Girard 2018).</p>
+                <p>The graphic and interactive design of the publication has been coded directly into responsive HTML and CSS templates. This approach guarantees a fluidity native to the web, while responding to specific requirements with ad hoc tools. No design template has been used for the frontend, reflecting the desire to offer an interface that is aligned with the epistemic questions posed by the project. Design becomes a critical and practical means of questioning the materialisation of knowledge and its ideological implications, which are often invisible but nonetheless central. Design in a digital environment has to come to terms with algorithmic logic and the constraints of interfaces (Drucker 2014), while remaining the bearer of a visual epistemology. In order to take advantage of the potential offered by the web, design must evoke the particularities of this publication space, which is what makes it ‘authentic’ (Huyghe 2004). In addition to the obvious hypertext navigation possibilities, the presence of a coloured animation in the background illustrates another specific feature of the web (movement on a screen), while at the same time providing a subtle reminder of the subject of the publication.</p>
+                <p>On the technical side, we designed a publication system with the smallest footprint possible. The website does not need anything more than a webserver to work. It’s only a set of HTML, CSS, JavaScript and image files. The database is only required by the edition tool. Edition and publication are totally separated. All web assets are pre-rendered on server side only when a new version is published by the editorial team thanks to the 
+                    <ref target="https://astro.build/">astro website generator</ref>. Even the IIIF protocol is implemented through a static generation of picture tiles thanks to the 
+                    <ref target="https://github.com/IIIF-Commons/biiif-cli">BIIIF tool</ref>.  On the client side we reduced the JavaScript code to the bare minimum to feature user interactions. This architecture allows a better resilience to service outage, a very light energy footprint and an easier publication format to archive. Chromobase’s source code is released under the EUPL-1.2 on 
+                    <ptr target="https://gitlab.com/ouestware/ChromoBase"/>. The production server is hosted by 
+                    <ref target="https://www.huma-num.fr/">IR* Huma-Num</ref>.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="id_docs-internal-guid-2289aaf4-7fff-4db0-c9a2-234a02762a2d"/>Discussion
+                </head>
+                <p>The Chromobase is an on-going digital-first academic edition which follows the humanities tradition of curation as a research method (Warburg 2020). The relying dataset is not yet released in open access. Our dataset will have one limitation: although narratives explain in plain language the relations between actors, those are unfortunately not described as semantic data. We didn’t work in this direction as our objectives were not to drive any quantitative analysis on the actors-network but rather focus on a more qualitative approach based on hermeneutics. </p>
+                <p>We are convinced our close interdisciplinary collaboration produced a unique writing and publishing digital object both in terms of design and technical aspects which could inspire new works in the Digital Humanities community.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Chevreul, Michel Eugène</hi>
+                        <hi rend="bold"> </hi>(1864): 
+                        <hi rend="italic">Des Couleurs et de Leurs Applications Aux Arts Industriels à l’aide Des Cercles Chromatiques</hi>. Paris: J. B. Baillère et Fils &lt;
+                        <ptr target="https://library.si.edu/digital-library/book/descouleursetde00chev"/>&gt; [11.04.2025].
+                    </bibl>
+                    <bibl>
+                        <anchor xml:id="id_docs-internal-guid-bcf807c9-7fff-a9e8-de52-7ed1340efddf"/>
+                        <hi rend="bold">Callon, Michel / Latour, Bruno</hi> (1981): “Unscrewing the big Leviathan: how actors macro-structure reality and how sociologists help them to do so”, in: Routledge and Kegan Paul (ed.): 
+                        <hi rend="italic">Advances in Social Theory and Methodology: Toward an Integration of Micro-and Macro-Sociologies</hi> 277-303.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Huyghe, Pierre-Damien</hi>
+                        <hi rend="bold"> </hi>(2004): “Le devenir authentique des techniques”, in: 
+                        <hi rend="italic">Conférence Centre National de la Recherche Technologique, </hi>Rennes &lt;
+                        <ptr target="http://pierredamienhuyghe.fr/documents/textes/huyghethomson.pdf"/>&gt;[11.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Drucker, Johanna </hi>(2014): 
+                        <hi rend="italic">Graphesis: Visual Forms of Knowledge Production</hi>. Cambridge: Harvard University Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Girard, Paul</hi> (2018): “Collaborative Humanities”, in: Maison européenne des sciences de l’homme et de la société de Lille: 
+                        <hi rend="italic">DHNord</hi>, Lille &lt;
+                        <ptr target="https://hal.science/hal-03619633v1"/>&gt; [11.04.2025]&lt;
+                        <ptr target="https://vimeo.com/295788855#t=327s"/>&gt;[11.04.2025]&lt;
+                        <ptr target="https://medialab.github.io/publications/collaborativeHumanities@DHnord/"/>&gt;[11.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Meghini, Carlo / Bartalesi, Valentina / Metilli, Daniele</hi> (2021): “Representing narratives in digital libraries: The narrative ontology”, in: IOS Press (ed.): 
+                        <hi rend="italic">Semantic Web</hi> 12, 2: 241-64.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

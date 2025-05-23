@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="JEONG_Young_Seob_Generative_Language_Models_for_Character_Ut">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Generative Language Models for Character Utterances in Novels</title>
+                <author>
+                    <persName>
+                        <surname>Jeong</surname>
+                        <forename>Young-Seob</forename>
+                    </persName>
+                    <affiliation>Chungbuk National University, Korea, Republic of (South Korea)</affiliation>
+                    <email>ysjay@chungbuk.ac.kr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Yun</surname>
+                        <forename>Misun</forename>
+                    </persName>
+                    <affiliation>Inha University, Korea, Republic of (South Korea)</affiliation>
+                    <email>msy207@inha.ac.kr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Joe</surname>
+                        <forename>Chung-hwan</forename>
+                    </persName>
+                    <affiliation>Hongik University, Korea, Republic of (South Korea)</affiliation>
+                    <email>chjoe@hongik.ac.kr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Kim</surname>
+                        <forename>Eunjin</forename>
+                    </persName>
+                    <affiliation>Chungbuk National University, Korea, Republic of (South Korea)</affiliation>
+                    <email>dw0815@chungbuk.ac.kr</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T17:41:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Language model</term>
+                    <term>Character utterance</term>
+                    <term>Personality</term>
+                    <term>Novel</term>
+                    <term>Instruction tuning</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data modeling</term>
+                    <term>natural language processing</term>
+                    <term>text mining and analysis</term>
+                    <term>Computer science</term>
+                    <term>Humanities computing</term>
+                    <term>Informatics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Since the introduction of the Transformer (Vaswani et al. 2017), story generation has rapidly advanced as a testbed for large language models (LLMs). Newer architectures, such as Mamba (Gu / Dao 2023), further improve efficiency of language models and make it possible to learn and generate texts according to longer contexts. Despite these technical advances, challenges remain in modeling emotion, sentiment, and personality. LLMs trained on public data often reflect general personality traits (Jiang et al. 2023; Zhang et al. 2024), and some studies have tuned LLMs to generate persona-specific utterances (Wu et al. 2024). However, these efforts focus on chat or advisory applications rather than storytelling.</p>
+            <p>In digital storytelling, especially in games, characters are typically defined by function rather than personality. This gap motivates our focus on improving the ability of language models to understand and generate personality-consistent utterances. We argue that novel data is crucial for improving this ability. Instead of assigning characters to predefined personality types, we propose to analyze them directly from literary texts. By identifying nuanced linguistic patterns in characters with similar personalities, we can train models to generate higher-quality, personality-consistent dialogue.This data-driven approach not only supports authors seeking AI assistance in creative writing, but also contributes to literary studies by revealing character patterns at scale. Such integration of language modeling with narrative analysis offers practical and scholarly benefits, promoting both storytelling quality and literary insight.</p>
+            <p>In this study, we used the Five-Factor Model of Personality (FFM), also known as the "Big Five" or OCEAN traits, to define personality traits: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism (McCrae / John 1992). Measured on a continuum, these traits allow for nuanced personality descriptions. For example, individuals may score uniquely across the five dimensions, reflecting a wide range of behavioral patterns. We formulated two hypotheses for the development of a language model capable of generating personality-consistent character utterances. The first hypothesis posits that although fictional characters in novels are not real individuals, their utterances reflect their distinct personalities. To validate this, we manually annotated OCEAN trait scores for characters from selected scientific fiction and works from the Project Dialogism Novel Corpus (PDNC, Vishnubhotla et al. 2022). Annotation was conducted by 7 graduate assistants trained in literary studies, and the total number of annotated novels is 233, including 28 PDNC novels. If the characters' personalities are well reflected in their utterances, characters with similar personalities would exhibit similar linguistic patterns in their utterances. Indeed, the character clusters of the utterance texts based on linguistic features had similar results to the character clusters of the OCEAN trait scores, implying that the characters with similar personality traits produced utterances with similar linguistic patterns. For clustering, we used k-means algorithm.</p>
+            <p>Based on the results of the above experiment, our second hypothesis is that a language model trained on the utterances of clustered characters can generate utterances that better reflect the personality of the corresponding cluster. To validate this, we formed clusters using character utterances from the PDNC, where the number of characters was 810, and the number of clusters was determined using the Elbow method (Thorndike 1953). We chose to use the PDNC because it provides the character utterances in a structured form, parsed from the original texts and annotated. Llama-2-7B (Touvron et al. 2023) was chosen as the LLM for our experiments as it is one of the most widely used open source LLMs. Its parameters were initialized with the pre-trained weights provided by Huggingface (open source &amp; model sharing platform), and it was trained on the utterances for each character cluster. Specifically, the utterances are drawn from selected representative characters within each cluster, with the number of representative characters determined based on the Silhouette coefficient (Rousseeuw 1987). The LLM is trained on the utterances of representative characters using an instruction tuning technique that drives the LLM to follow the given instruction (e.g., rephrase the following sentence as if it were spoken by the character Winterbourne from the novella 
+                <hi rend="italic">Daisy Miller</hi>: “I look forward to meeting you at the ADHO Digital Humanities Conference 2025”). Comparative experiments demonstrated that, compared to vanilla LLM (not tuned for personality-consistent utterance generation), our trained LLM was able to generate utterances that more consistently captured the personalities of the characters.
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Gu, A. / Dao, T.</hi> (2024): 
+                        <hi rend="bold">
+                            <hi rend="normalweight">“</hi>
+                        </hi>Mamba: linear-time sequence modeling with selective state spaces
+                        <hi rend="italic" xml:space="preserve">”. </hi>arXiv preprint arXiv:2312.00752 &lt;https://arxiv.org/abs/2312.00752&gt; [30.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Jiang, G. et al.</hi> (2023): 
+                        <hi rend="bold">
+                            <hi rend="normalweight">“</hi>
+                        </hi>Evaluating and Inducing Personality in Pre-trained Language Models
+                        <hi rend="italic" xml:space="preserve">”, in: </hi>
+                        <hi rend="italic">Proceedings of the Advances in Neural Information Processing Systems</hi> (NeurIPS 2023), New Orleans, LA, USA, December 2023 &lt;https://proceedings.neurips.cc/paper_files/paper/2023/file/21f7b745f73ce0d1f9bcea7f40b1388e-Paper-Conference.pdf&gt; [30.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">McCrae, R. R. / John, O. P.</hi> (1992): 
+                        <hi rend="bold">
+                            <hi rend="normalweight">“</hi>
+                        </hi>An introduction to the five-factor model and its applications
+                        <hi rend="italic" xml:space="preserve">”, in: </hi>
+                        <hi rend="italic">Journal of Personality</hi> 60, 2: 175-215.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Radford, A. et al.</hi> (2018): 
+                        <hi rend="bold">
+                            <hi rend="normalweight">“</hi>
+                        </hi>Improvinglanguage understanding by generative pre-training
+                        <hi rend="italic" xml:space="preserve">”, in: </hi>
+                        <hi rend="italic">OpenAI Platform</hi>
+                        <hi rend="italic">&lt;</hi>https://openai.com/index/language-unsupervised/
+                        <hi rend="italic">&gt; [30.04.2025]</hi>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Rousseeuw, P. J.</hi> (1987): 
+                        <hi rend="bold">
+                            <hi rend="normalweight">“</hi>
+                        </hi>Silhouettes: a graphical aid to the interpretation and validation of cluster analysis
+                        <hi rend="italic" xml:space="preserve"> ”, in: </hi>
+                        <hi rend="italic">Journal of Computational and Applied Mathematics</hi> 20: 53-65.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Thorndike, R. L.</hi> (1953): 
+                        <hi rend="bold">
+                            <hi rend="normalweight">“</hi>
+                        </hi>Who belongs in the family?
+                        <hi rend="italic" xml:space="preserve">”, in: </hi>
+                        <hi rend="italic">Psychometrika</hi> 18, 4: 267-276.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Touvron, H. et al.</hi> (2023): 
+                        <hi rend="bold">
+                            <hi rend="normalweight">“</hi>
+                        </hi>Llama 2: open foundation and fine-tuned chat models
+                        <hi rend="italic" xml:space="preserve">”. </hi>arXiv preprint arXiv:2307.09288 &lt;https://arxiv.org/abs/2307.09288&gt; [30.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Vaswani, A. et al.</hi> (2017): 
+                        <hi rend="bold">
+                            <hi rend="normalweight">“</hi>
+                        </hi>Attention is All You Need
+                        <hi rend="italic" xml:space="preserve">”, in: </hi>
+                        <hi rend="italic">Proceedings of theAdvances in Neural Information Processing Systems</hi> (NIPS 2017), Long Beach, CA, USA, December 2017: 5998–6008.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Vishnubhotla, K. et al.</hi> (2022): 
+                        <hi rend="bold">
+                            <hi rend="normalweight">“</hi>
+                        </hi>The Project Dialogism Novel Corpus: A Dataset for Quotation Attribution in Literary Texts
+                        <hi rend="italic" xml:space="preserve">”, in: </hi>
+                        <hi rend="italic">Proceedings of the Thirteenth Language Resources and Evaluation Conference</hi> (LREC 2022), Marseille, France, June 2022: 5838-5848.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Wu, W. et al.</hi> (2024): 
+                        <hi rend="bold">
+                            <hi rend="normalweight">“</hi>
+                        </hi>From Role-Play to Drama-Interaction: An LLM Solution
+                        <hi rend="italic" xml:space="preserve">”, in: </hi>
+                        <hi rend="italic">Findings of the Association for Computational Linguistics: ACL 2024</hi>, Bangkok, Thailand, August 2024: 3271-3290.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Zhang, J. et al.</hi> (2024): 
+                        <hi rend="bold">
+                            <hi rend="normalweight">“</hi>
+                        </hi>The better angels of machine personality: how personality relates to LLM safety
+                        <hi rend="italic" xml:space="preserve">”. </hi>arXiv preprint arXiv:2407.12344 &lt;https://arxiv.org/abs/2407.12344&gt; [30.04.2025].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

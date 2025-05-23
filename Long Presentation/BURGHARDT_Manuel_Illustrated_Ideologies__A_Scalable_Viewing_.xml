@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BURGHARDT_Manuel_Illustrated_Ideologies__A_Scalable_Viewing_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Illustrated Ideologies: A Scalable Viewing of Visual Media in German Children’s Books of the long 19th century</title>
+                <author>
+                    <persName>
+                        <surname>Burghardt</surname>
+                        <forename>Manuel</forename>
+                    </persName>
+                    <affiliation>Computational Humanities Group, Leipzig University</affiliation>
+                    <email>burghardt@informatik.uni-leipzig.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Borst</surname>
+                        <forename>Janos</forename>
+                    </persName>
+                    <affiliation>Computational Humanities Group, Leipzig University</affiliation>
+                    <email>borst@informatik.uni-leipzig.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Helm</surname>
+                        <forename>Wiebke</forename>
+                    </persName>
+                    <affiliation>Primary School Didactics, Leipzig University</affiliation>
+                    <email>wiebke.helm@uni-leipzig.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>distant viewing</term>
+                    <term>scalable viewing</term>
+                    <term>image analysis</term>
+                    <term>cultural analytics</term>
+                    <term>exploratory tools</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>image processing and analysis</term>
+                    <term>Book and print history</term>
+                    <term>Education/ pedagogy</term>
+                    <term>History</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Visual Media in Children’s Books of the Long 19th Century</head>
+                <p style="text-align: left; ">The "long 19th century" in Germany is characterized by a multitude of technological, economic and social upheavals (see Osterhammel, 2020; Kocka, 2021). This transformation is also reflected in contemporary children's and youth literature, which mirrors the ideologies and values of its time, conveys significant societal discourses, and thereby offers contemporary scholarship a lens into the past (see Ries, 1992; Kreidt, 1998; Schäfer, 2013). Children's literature is particularly interesting because it serves as a tool for socialization, explicitly teaching values, norms, and societal expectations. It reflects the way adults sought to shape the next generation by promoting desired character traits, moral teachings, and ideologies (McCallum, 2012). Moreover, its simplified narratives make complex societal discourses more accessible and transparent, allowing modern scholars to examine historical biases, gender roles, and class structures with greater clarity. The Colibri corpus ("Corpus Libri et Liberi")<ref n="1" target="ftn1"/> adds to existing digital humanities research in this field of study (see for example Helm et al., 2021; Smits &amp; Wevers, 2023) as it provides a unique resource in terms of scope and coverage. Colibri provides access to a fully cataloged digital collection of German-language children's and youth books by various authors, genres, editions, and prints from the years 1801 to 1914 (Putjenter, 2022; Schmideler, 2024).
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>The Case for Scalable Viewing</head>
+                <p style="text-align: left; ">In this paper, we will investigate the visual dimension of the Colibri corpus, focusing on its multitude of historical illustrations. These illustrations provide a rich and underexplored resource for understanding how visual media was used to shape societal values, norms, and ideologies. Moreover, they offer insights into aesthetic conventions and the ways visual storytelling reinforced or challenged cultural norms. To unlock the full potential of this data, we pursue a scalable viewing approach (see Burghardt, Kao &amp; Walkowski, 2019; Burghardt, Pause &amp; Walkowski, 2019; Ruth, Liebl &amp; Burghardt, 2023) that bridges traditional hermeneutic practices with recent computational techniques that have been termed „distant viewing“ (Arnold &amp; Tilton, 2019), „cultural analytics“ (Manovich, 2020) or „deep watching“ (Bermeitinger et al., 2019) – all indicating the use of deep learning models to detect patterns in visual media<ref n="2" target="ftn2"/>. Scalable viewing can be seen as an analogy to scalable reading, which has been proposed as a hybrid approach that uses both close and distant reading (Krautter, 2023). We argue for an exploratory mode of analysis that mirrors the hermeneutic cycle (also see Capurro, 2010; Romele, 2019). This involves shifting between "close viewing" – a detailed examination of specific illustrations and their features – and "distant viewing," where we analyze broader trends and patterns across the corpus. By alternating between these scales of analysis, we aim to derive interesting aspects and phenomena within the visual data, annotate them, and subsequently investigate them in a more systematic way. This scalable viewing approach not only allows us to navigate the vast dataset with greater efficiency, but also fosters a dynamic and iterative process of interpretation. In doing so, we can uncover and contextualize the nuanced ways in which illustrations in children's literature contributed to the broader societal discourses of the long 19th century, enriching our understanding of both the corpus and the historical period it represents.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Creation of the Visual Archive</head>
+                <p style="text-align: left; ">Colibri provides access to 11,074 children's books from the years 1801–1914 with a total of 2.24 million pages. Since we are only interested in the illustrated pages, we first created a page classifier using a data efficient image transformer (DeiT-ViT; Touvron et al., 2021), which was trained on about 1,000 pages with the labels "not relevant" (because it has no illustration), "relevant page" and "relevant cover" (see Helm et al., to appear 2025). A manual evaluation with 4,000 examples resulted in an accuracy of 96.6%. Since some pages contain multiple images, we extracted them using Doc-UFCN (Boillet, Kermorvant &amp; Paquet, 2021), a CNN designed for document analysis tasks. This procedure resulted in a visual archive of approximately 190,000 pages with a total of 230,000 different illustrations (with some pages containing multiple illustrations). Figure 1 shows some diachronic trends in this archive, such as a gradual increase of works (green) and pages (blue) through time. It also shows that the average page frequency per work has a slightly downward trend (purple). At the same time, the proportion of illustrated book pages (yellow) and covers (black) increased through time, which is closely linked to the advances in technical production that began in the second third of the 19th century. On the other hand, this result also underlines the increasing importance of illustration as a visual medium in children's books. This already shows that children's and young adult literature played an important role in the dawn of what has been called the visual age (Paul, 2016).</p>
+                <figure>
+                    <graphic n="1001" width="16.002cm" height="6.856236111111111cm" url="/tmp/tmpwlksj17_/Pictures/8ddfc3ca36aa1d9b42d0b63f98734211.png" rend="inline"/>
+                    <head>Diachronic frequency analysis of works (green), pages (blue), pages per work (purple) and illustrated pages (yellow) and illustrated cover pages (black).</head>
+                </figure>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Detection and Exploration of Visual Concepts at Scale</head>
+                <p style="text-align: left; ">Following Smits &amp; Wevers (2023), we use “contrastive machine learning models to explore, enrich and analyze digital visual historical collections”. Contrastive Language-Image Pretraining (CLIP; Radford et al, 2021) proposes a neural network architecture that is trained to understand visual concepts through natural language. The key innovation is that CLIP learns to associate images and text in a shared feature space, enabling zero-shot learning for various image classification and other vision tasks. For example, we can input a textual query such as 
+                    <hi rend="italic">bird</hi> and output all the images for which 
+                    <hi rend="italic">bird</hi> would be an appropriate caption (see Figure 2).
+                </p>
+                <figure>
+                    <graphic n="1002" width="16.002cm" height="7.552972222222222cm" url="/tmp/tmpwlksj17_/Pictures/8ddfc3ca36aa1d9b42d0b63f98734211.png" rend="inline"/>
+                    <head>Sample of illustrations from our visual archive that are retrieved through the query “bird”.</head>
+                </figure>
+                <p style="text-align: left; ">As the visual material in our corpus is rather complex (see Fig. 3), we created CLIP embeddings for all 230,000 illustrations in our archive and visualize them in an exploratory way, using the Collection Space Navigator (CSN; Ohm et al., 2023). </p>
+                <figure>
+                    <graphic n="1003" width="16.002cm" height="8.008055555555556cm" url="/tmp/tmpwlksj17_/Pictures/8ddfc3ca36aa1d9b42d0b63f98734211.png" rend="inline"/>
+                    <head>Example illustrations from our collection of historical children’s books.</head>
+                </figure>
+                <p style="text-align: left; ">The CSN is an exploratory tool that allows visual media to be clustered and viewed at different scales, from a broad overview to a more detailed perspective, by zooming in on specific parts of the collection (see Fig. 4). The CSN itself is already a scalable viewing tool in the classic sense of Shneiderman's (1996) design mantra "overview first, zoom and filter, then details-on-demand", which is a fundamental principle in human-computer interaction and data visualization.</p>
+                <figure>
+                    <graphic n="1004" width="16.002cm" height="6.9638333333333335cm" url="/tmp/tmpwlksj17_/Pictures/8ddfc3ca36aa1d9b42d0b63f98734211.png" rend="inline"/>
+                    <head>Two screens of the Collection Space Navigator, featuring our visual archive of 230,000 illustrations. The left side shows an overview of the entire collection, the right side shows a zoomed-in view into one cluster of illustrations which all feature images of cats.</head>
+                </figure>
+                <p style="text-align: left; ">Through the exploratory qualities of the CSN, we were able to identify a number of interesting visual patterns that prompted more specific research questions that we would like to explore in a more systematic and empirical way in the future. Looking through the visual archive with the CSN tool, we became aware of recurring scenes with different configurations of adults and adolescents, as well as recurring objects such as books and toys. Here another aspect of scalable viewing comes into play, as we develop a custom annotation scheme based on exploratory observations from the CSN, which is then used in a manual annotation process to generate training examples for a subsequent classification task. The annotation scheme describes various complex scenes such as 
+                    <hi rend="italic">playing</hi>, 
+                    <hi rend="italic">teaching</hi>, 
+                    <hi rend="italic">reading</hi>, and 
+                    <hi rend="italic">writing</hi>, and is driven by the previous observation that the children depicted in the illustrations are often interacting with books and toys, which is interesting to examine more closely from a diachronic perspective, but also through the lens of gender-specific patterns. Tools such as ChatGPT4o can be used as quick demonstrators to check whether the identified annotation labels can actually be found by a standard multimodal model using a visual question answering strategy. In fact, the results are already very promising for some sample illustrations (see Figure 5). 
+                </p>
+                <figure>
+                    <graphic n="1005" width="16.002cm" height="8.720666666666666cm" url="/tmp/tmpwlksj17_/Pictures/8ddfc3ca36aa1d9b42d0b63f98734211.png" rend="inline"/>
+                    <head>Example analysis of a teaching scene conducted through ChatGPT4o. Source of image: Comenius/Gailer (1835): Neuer Orbis pictus für die Jugend. Reutlingen: Mäcken 1835, Frontispiz.</head>
+                </figure>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusions</head>
+                <p style="text-align: left; ">As ChatGPT is, in a sense, an example of computer-assisted close viewing of individual illustrations, we are building on the general ability of existing vision language models (VLM) such as LLaVA (Large Language and Vision Assistant) to describe scenes and settings that we are interested in. As a next step, we are trying to create a scalable model that will allow us to automatically label all of our 230,000 illustrations via distant viewing, and then go back to close reading of the retrieved scenes to learn more about the role of books and social configurations in relation to reading socialization research. Other topics to be explored in the near future include play behavior and toys observed in boys and girls. Overall, we hope to have demonstrated how recent deep learning models and exploratory tools can be used for an iterative, scalable approach to viewing that combines the benefits of both close and distant reading.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                         https://ds.colibri-portal.eu/index/
+                    </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                         This has also been called the „visual digital turn“ (
+                            <hi rend="color(222222) background(white)">Wevers &amp; Smits, 2020)</hi>
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Arnold, T. / Tilton, L. (2019): “Distant Viewing: Analyzing Large Visual Corpora,” in: 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi> 34, Supplement_1: i3–i16.
+                    </bibl>
+                    <bibl style="text-align: left; ">Bermeitinger, B. / Gassner, S. / Handschuh, S. / Howanitz, G. / Radisch, E. / Rehbein, M. (2019): “Deep Watching: Towards New Methods of Analyzing Visual Media in Cultural Studies,” in: 
+                        <hi rend="italic">Proceedings of the ADHO Digital Humanities</hi>, Utrecht.
+                    </bibl>
+                    <bibl style="text-align: left; ">Boillet, M. / Kermorvant, C. / Paquet, T. (2021): “Multiple Document Datasets Pre-Training Improves Text Line Detection with Deep Neural Networks,” in: 
+                        <hi rend="italic">2020 25th International Conference on Pattern Recognition (ICPR)</hi>: 2134–2141, IEEE.
+                    </bibl>
+                    <bibl style="text-align: left; ">Burghardt, M. / Kao, M. / Walkowski, N. O. (2018): “Scalable MovieBarcodes – An Exploratory Interface for the Analysis of Movies,” in: 
+                        <hi rend="italic">Proceedings of the IEEE Vis4DH Workshop</hi>, Berlin.
+                    </bibl>
+                    <bibl style="text-align: left; ">Burghardt, M. / Pause, J. / Walkowski, N. O. (2018): “Scalable Viewing in den Filmwissenschaften,” in: 
+                        <hi rend="italic">Proceedings of the DHd Conference 2019</hi>, Cologne.
+                    </bibl>
+                    <bibl style="text-align: left; ">Capurro, R. (2010): “Digital Hermeneutics: An Outline,” in: 
+                        <hi rend="italic">AI &amp; Society</hi> 25, 1: 35–42.
+                    </bibl>
+                    <bibl style="text-align: left; ">Helm, W. / Borst, J. / Burghardt, M. / Schmideler, S. (2025): “Buchkindheiten Digital – Werkstattbericht zur Computergestützten Analyse von Illustrationen in Historischen Kinder- und Jugendbüchern,” in: 
+                        <hi rend="italic">Proceedings of the German National Conference on DH (Digital Humanities Im Deutschsprachigen Raum)</hi>, Bielefeld.
+                    </bibl>
+                    <bibl style="text-align: left; ">Helm, W. / Schmideler, S. / Im, C. / Mandl, T. / Kollmann, S. / Müller, L. (2021): “Wie sich die Bilder ähneln: Vom Zufallsfund zur systematischen Forschung im Bereich der automatisierten Bildähnlichkeitssuche,” in: 
+                        <hi rend="italic">Fabrikation von Erkenntnis: M. Burghardt et al. (eds.)</hi>, Melusina Press / 
+                        <hi rend="italic">Zeitschrift für Digitale Geisteswissenschaften</hi>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Kocka, Jürgen (2021): 
+                        <hi rend="italic">Kampf um die Moderne. Das lange 19. Jahrhundert In Deutschland</hi>. Stuttgart: Klett-Cotta.
+                    </bibl>
+                    <bibl style="text-align: left; ">Krautter, B. (2023): “The Scales of (Computational) Literary Studies: Martin Mueller’s Concept of Scalable Reading in Theory and Practice,” in: Armaselu, F. / Fickers, A. (eds.): 
+                        <hi rend="italic">Zoomland. Exploring Scale in Digital History and Humanities</hi>, De Gruyter / Oldenburg: 261–286.
+                    </bibl>
+                    <bibl style="text-align: left; ">Kreidt, U. (1998): Bilder in Kinder- und Jugendbüchern 1800–1850, in: Brunken, O. / Hurrelmann, B. / Pech, K.-U. (eds.): 
+                        <hi rend="italic">Handbuch KJL. Von 1800 bis 1850</hi>, Stuttgart, Weimar 1998: 116–166.
+                    </bibl>
+                    <bibl style="text-align: left; ">Manovich, L. (2020): 
+                        <hi rend="italic">Cultural Analytics</hi>. MIT Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">McCallum, R. (2012): 
+                        <hi rend="italic">Ideologies of Identity in Adolescent Fiction: The Dialogic Construction of Subjectivity</hi>. Routledge.
+                    </bibl>
+                    <bibl style="text-align: left; ">Ohm, T. / Canet Sola, M. / Karjus, A. / Schich, M. (2023, September): “Collection Space Navigator: An Interactive Visualization Interface for Multidimensional Datasets,” in: 
+                        <hi rend="italic">Proceedings of the 16th International Symposium on Visual Information Communication and Interaction</hi>: 1–5.
+                    </bibl>
+                    <bibl style="text-align: left; ">Osterhammel, Jürgen (2020): 
+                        <hi rend="italic">Die Verwandlung der Welt. Eine Geschichte des 19. Jahrhunderts</hi>. 6. Aufl. München: C.H. Beck.
+                    </bibl>
+                    <bibl style="text-align: left; ">Paul, Gerhard (2016): 
+                        <hi rend="italic">Das Visuelle Zeitalter. Punkt und Pixel</hi>. Göttingen: Wallstein.
+                    </bibl>
+                    <bibl style="text-align: left; ">Putjenter, Sigrun (2022): “Colibri – Klein, flink, bunt. Ein Digitalisierungsprojekt der Universitätsbibliotheken Bielefeld und Braunschweig, Der Staatsbibliothek zu Berlin und der internationalen Jugendbibliothek München,” in: 
+                        <hi rend="italic">Bibliotheksmagazin. Mitteilungen aus den Staatsbibliotheken in Berlin und München</hi> 17, 2: 5–8.
+                    </bibl>
+                    <bibl style="text-align: left; ">Radford, Alec / Jong Wook Kim / Chris Hallacy / Aditya Ramesh / Gabriel Goh / Sandhini Agarwal / Girish Sastry / Amanda Askell / Pamela Mishkin / Jack Clark / Gretchen Krueger / I. Sutskever (2021): “Learning Transferable Visual Models from Natural Language Supervision,” in: 
+                        <hi rend="italic">International Conference on Machine Learning</hi>, PMLR 139: 8748–8763.
+                    </bibl>
+                    <bibl style="text-align: left; ">Ries, H. (1992): Illustration und Illustratoren des Kinder- und Jugendbuches im deutschsprachigen Raum 1871-1914. Osnabrück: Wenner.</bibl>
+                    <bibl style="text-align: left; ">Romele, A. (2019): 
+                        <hi rend="italic">Digital Hermeneutics: Philosophical Investigations in New Media and Technologies</hi>. Routledge.
+                    </bibl>
+                    <bibl style="text-align: left; ">Ruth, N. / Liebl, B. / Burghardt, M. (2023): “From Clusters to Graphs – Toward a Scalable Viewing of News Videos,” in: 
+                        <hi rend="italic">Proceedings of the Computational Humanities Research Conference 2023</hi>, Paris.
+                    </bibl>
+                    <bibl style="text-align: left; ">Schäfer, J. (2013): Das Bild als Erzieher: Daniel Nikolaus Chodowieckis Kinder- und Jugendbuchillustrationen in Johann Bernhard Basedows Elementarwerk und Christian Gotthilf Salzmanns Moralischem Elementarbuch. Frankfurt: Lang.</bibl>
+                    <bibl style="text-align: left; ">Schmideler, S. (2024): “COLIBRI flieg(t)! Eine digitale Sammlung von 15.000 deutschsprachigen Kinder- und Jugendbüchern aus dem ‘langen 19. Jahrhundert’ lädt zur wissenschaftlichen Recherche ein,” in: kjl&amp;m, 76(3), 80-85.</bibl>
+                    <bibl style="text-align: left; ">Shneiderman, B. (1996): “The Eyes Have It: A Task by Data Type Taxonomy for Information Visualizations,” in: 
+                        <hi rend="italic">Proceedings of the IEEE Symposium on Visual Languages</hi>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Smits, T. / Wevers, M. (2023): “A Multimodal Turn in Digital Humanities. Using Contrastive Machine Learning Models to Explore, Enrich, and Analyze Digital Visual Historical Collections,” in: 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi> 38, 3: 1267–1280.
+                    </bibl>
+                    <bibl style="text-align: left; ">Touvron, H. / Cord, M. / Douze, M. / Massa, F. / Sablayrolles, A. / Jégou, H. (2021): “Training Data-Efficient Image Transformers &amp; Distillation Through Attention,” in: 
+                        <hi rend="italic">International Conference on Machine Learning</hi>: 10347–10357, PMLR.
+                    </bibl>
+                    <bibl style="text-align: left; ">Wevers, M. / Smits, T. (2020): “The Visual Digital Turn: Using Neural Networks to Study Historical Images,” in: 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi> 35, 1: 194–207.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

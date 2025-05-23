@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="DEGAETANO_ORTLIEB_Stefania_Detecting_divergent_language_use_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Detecting divergent language use in Russian Media during the Russo-Ukrainian War: Steps towards interpretable propaganda detection and analysis</title>
+                <author>
+                    <persName>
+                        <surname>Vestel</surname>
+                        <forename>Anastasiia</forename>
+                    </persName>
+                    <affiliation>Saarland University, Germany</affiliation>
+                    <email>anastasiia.vestel@uni-saarland.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Degaetano-Ortlieb</surname>
+                        <forename>Stefania</forename>
+                    </persName>
+                    <affiliation>Saarland University, Germany</affiliation>
+                    <email>s.degaetano@mx.uni-saarland.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-25T16:25:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>propaganda</term>
+                    <term>linguistics</term>
+                    <term>interpretability</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>natural language processing</term>
+                    <term>social media analysis and methods</term>
+                    <term>text mining and analysis</term>
+                    <term>Linguistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">Introduction and related work</p>
+            <p style="text-align: left; ">
+                <hi style="font-size:10pt">The Russo-Ukrainian war has intensified the need to understand media manipulation and its societal impacts. While NLP methods for propaganda detection often rely on transformer-based models that require annotated data and lack transparency (cf. Da San Martino et al. 2021, Park et al. 2022), we propose applying Kullback-Leibler Divergence (KLD; Kullback / Leibler 1951). This method has been widely used for analyzing language variation, and it will allow us to detect distinctive features of divergence providing highly interpretable results.</hi>
+            </p>
+            <p style="text-align: left; ">
+                <hi style="font-size:10pt" xml:space="preserve">The Russian government has been using various narratives to gain support from its population, e.g., by euphemistic choices such as replacing </hi>
+                <hi rend="italic" style="font-size:10pt" xml:space="preserve">war </hi>
+                <hi style="font-size:10pt" xml:space="preserve">with </hi>
+                <hi rend="italic" style="font-size:10pt">special military operation</hi>
+                <hi style="font-size:10pt" xml:space="preserve"> (cf. Park et al. 2022, Solopova et al. 2023, Ustyianovych / Barbosa 2024). Using the WarMM-2022 corpus (Alyukov et al. 2023), which includes state-controlled media targeted at regime supporters and social media used by people with undefined or opposing political views, Alyukov et al. (2024) showed the two text types to use different propaganda frames, such as normalization (downplaying the effects of the war on the everyday life in Russia) on state media, which aims to demobilize the population, and disinformation (presenting news from Ukraine and the West as fake) on social media, a more mobilizational approach. </hi>
+            </p>
+            <p style="text-align: left; ">
+                <hi style="font-size:10pt" xml:space="preserve">In this work, we aim to explore the linguistic means of propaganda frames by analyzing how language in Russian state-controlled media and social media linguistically differs and might reflect propaganda strategies (e.g., euphemisms usage). </hi>
+            </p>
+            <p style="text-align: left; ">Methodology</p>
+            <p style="text-align: left; ">
+                <hi style="font-size:10pt" xml:space="preserve">The WarMM-2022 corpus is a collection of 1.7M posts on the Russo-Ukrainian war with two sub-corpora: state-controlled mass media (24.4M tokens of press; 1.7M of TV transcripts; from February to September 2022), and social media posts with limited governmental control (268.4M tokens; July-September 2022). </hi>
+            </p>
+            <p style="text-align: left; ">
+                <hi style="font-size:10pt">To assess the linguistic differences between state and social media in the WarMM-2022 corpus, we employ KLD, which quantifies divergence between two probability distributions, helping identify features that distinguish these text types. We apply KLD to content words, comparing the probability distributions of linguistic features in state-controlled (</hi>
+                <hi rend="italic" style="font-size:10pt">State</hi>
+                <hi style="font-size:10pt">) and social media (</hi>
+                <hi rend="italic" style="font-size:10pt">Social</hi>
+                <hi style="font-size:10pt" xml:space="preserve">) texts. KLD measures the additional bits needed to encode one distribution using another, revealing the extent to which specific features contribute to linguistic divergence. Unlike simple frequency-based methods, KLD captures even low-frequency yet distinctive linguistic variations (Degaetano-Ortlieb / Teich 2021). KLD calculation for </hi>
+                <hi rend="italic" style="font-size:10pt">State</hi>
+                <hi style="font-size:10pt" xml:space="preserve"> given </hi>
+                <hi rend="italic" style="font-size:10pt">Social</hi>
+                <hi style="font-size:10pt" xml:space="preserve"> is formalized as:</hi>
+            </p>
+            <figure>
+                <graphic n="1001" width="9.634152777777778cm" height="1.1129444444444445cm" url="/tmp/tmph1j1sl9q/Pictures/05c29388f5b177bdf94818343ed655ac.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">
+                <hi style="font-size:10pt">We argue that KLD offers interpretable, reproducible insights into propaganda-related language variation, complementing opaque neural models whose limitations hinder linguistic analysis and adaptability across domains.</hi>
+            </p>
+            <p style="text-align: left; ">Results</p>
+            <p style="text-align: left; ">
+                <hi style="font-size:10pt">The analysis reveals distinct patterns in the use of language between state-controlled media and social media in the context of the Russo-Ukrainian war (see Figure 1). Terms related to geographical entities, specifically those Russia occupied, and referendums</hi><ref n="1" target="ftn1"/>
+                <hi style="font-size:10pt" xml:space="preserve"> are more prominent in state media, reflecting a territorial control narrative consistent with a normalization frame. Social media shows a higher contribution of direct war-related terminology, indicative of a mobilizational approach. In contrast, euphemisms for war are more characteristic of state media, aligning with efforts to downplay the invasion. Additionally, words such as </hi>
+                <hi rend="italic" style="font-size:10pt">propaganda</hi>
+                <hi style="font-size:10pt" xml:space="preserve"> and </hi>
+                <hi rend="italic" style="font-size:10pt">truth</hi>
+                <hi style="font-size:10pt" xml:space="preserve"> exhibit high KLD values on social media, pointing to the disinformation frame. In addition, there is evidence suggesting the use of homoglyphs — such as replacing the Cyrillic "у" with the Latin "y" — as a potential strategy to circumvent content moderation and spread disinformation on social platforms.</hi>
+            </p>
+            <figure>
+                <graphic n="1002" width="9.600597222222222cm" height="4.189586111111111cm" url="/tmp/tmph1j1sl9q/Pictures/05c29388f5b177bdf94818343ed655ac.png" rend="inline"/>
+                <head>
+                    <hi style="font-size:9pt">Top 50 words with the highest KLD values for social media (left) and state media (right). Word size accounts for KLD values and color indicates frequencies from higher (red) to lower (green).</hi>
+                </head>
+            </figure>
+            <p style="text-align: left; ">Conclusion</p>
+            <p style="text-align: left; ">
+                <hi style="font-size:10pt">The findings suggest a clear divergence in rhetorical strategies between the two media types. State media predominantly employs demobilizational tactics, characterized by normalization framing and references to geopolitical control, aimed at downplaying the war and reinforcing authority. In contrast, social media content tends to adopt a mobilizational stance, marked by the disinformation frame and the use of direct war-related language. In the future, the analysis will be extended by applying KLD to other linguistic features such as parts of speech and syntactic patterns, as well as examining changes over time. Furthermore, state-of-the-art methods including surprisal and word embeddings will be explored to enhance the detection and analysis of propagandistic language and semantic shifts. Overall, this work underscores the potential of open, transparent methodologies to democratize access to knowledge and foster resilience against disinformation, aligning with the values of Open Science and the digital humanities.</hi>
+            </p>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                    
+                        <hi style="font-size:9pt">These refer to the sham referendums on Russia's annexation of Ukraine's occupied territories conducted in late September 2022.</hi>
+                    
+                </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Alyukov, Maxim / Kunilovskaya, Maria / Semenov, Andrei</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2023): “Wartime Media Monitor (WarMM-2022): A Study of Information Manipulation on Russian Social Media during the Russia-Ukraine War”, in: Degaetano-Ortlieb, Stefania / Kazantseva, Anna / Reiter, Nils / Szpakowicz, Stan (eds.): </hi>
+                        <hi rend="italic" style="font-size:10pt">Proceedings of the 7th Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature</hi>
+                        <hi style="font-size:10pt">, Dubrovnik, Croatia, May 2023: 152–161. DOI: 10.18653/v1/2023.latechclfl-1.17 [08.10.2024].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Alyukov, Maxim / Kunilovskaya, Maria / Semenov, Andrei</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024): “Confuse and Normalise: Authoritarian Propaganda in a High-Choice Media Environment and Russia's Invasion of Ukraine”, in: Goode, Paul (ed.): </hi>
+                        <hi rend="italic" style="font-size:10pt">Russian Propaganda Today: Challenges, Effectiveness, and Resistance</hi>
+                        <hi style="font-size:10pt">. University of Michigan Press, University of Manchester Press: in print.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Da San Martino, Giovanni / Cresci, Stefano / Barrón-Cedeño, Alberto / Yu, Seunghak / Di Pietro, Roberto / Nakov, Preslav</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2021): “A Survey on Computational Propaganda Detection”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt">Proceedings of the Twenty-Ninth International Joint Conference on Artificial Intelligence (IJCAI'20)</hi>
+                        <hi style="font-size:10pt">, Yokohama, Japan: 4826–4832 [10.12.2024].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Degaetano-Ortlieb, Stefania / Teich, Elke </hi>
+                        <hi style="font-size:10pt" xml:space="preserve">(2022): “Toward an Optimal Code for Communication: The Case of Scientific English”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt">Corpus Linguistics and Linguistic Theory</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 18, 1: 175–207. DOI: 10.1515/cllt-2018-0088 [01.10.2024].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Kullback, Solomon / Leibler, Richard A.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (1951): “On Information and Sufficiency”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt">The Annals of Mathematical Statistics</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 22, 1: 79–86. DOI: 10.1214/aoms/1177729694 [10.12.2024].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Park, Chan Young / Mendelsohn, Julia / Field, Anjalie / Tsvetkov, Yulia</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2022): “Challenges and Opportunities in Information Manipulation Detection: An Examination of Wartime Russian Media”, in: Goldberg, Yoav / Kozareva, Zornitsa / Zhang, Yue (eds.): </hi>
+                        <hi rend="italic" style="font-size:10pt">Findings of the Association for Computational Linguistics: EMNLP 2022</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">, Abu Dhabi, UAE: 5209–5235. DOI: 10.18653/v1/2022.findings-emnlp.382 </hi>
+                        <ref target="https://aclanthology.org/2022.findings-emnlp.382/">
+                            <hi style="font-size:10pt">https://aclanthology.org/2022.findings-emnlp.382/</hi>
+                        </ref>
+                        <hi style="font-size:10pt" xml:space="preserve"> [10.03.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Solopova, Veronika / Benzmüller, Christoph / Landgraf, Tim </hi>
+                        <hi style="font-size:10pt" xml:space="preserve">(2023): “The Evolution of Pro-Kremlin Propaganda From a Machine Learning and Linguistics Perspective”, in: Romanyshyn, Mariana (ed.): </hi>
+                        <hi rend="italic" style="font-size:10pt">Proceedings of the Second Ukrainian Natural Language Processing Workshop (UNLP)</hi>
+                        <hi style="font-size:10pt">, Dubrovnik, Croatia: 40–48. DOI: 10.18653/v1/2023.unlp-1.5 [16.10.2024].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Ustyianovych, Taras / Barbosa, Denilson</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024): “Instant Messaging Platforms News Multi-Task Classification for Stance, Sentiment, and Discrimination Detection”, in: Romanyshyn, Mariana / Romanyshyn, Nataliia / Hlybovets, Andrii / Ignatenko, Oleksii (eds.): </hi>
+                        <hi rend="italic" style="font-size:10pt">Proceedings of the Third Ukrainian Natural Language Processing Workshop (UNLP) @ LREC-COLING 2024</hi>
+                        <hi style="font-size:10pt">, Torino, Italia: 30–40 [16.10.2024]</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

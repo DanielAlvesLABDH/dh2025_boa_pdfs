@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="COLL_ARDANUY_Mariona_Towards_an_automatic_transcription_of_C">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Towards an automatic transcription of Catalan notarial manuscripts from the Late Middle Ages</title>
+                <author>
+                    <persName>
+                        <surname>Coll Ardanuy</surname>
+                        <forename>Mariona</forename>
+                    </persName>
+                    <affiliation>Barcelona Supercomputing Center (BSC)</affiliation>
+                    <email>mariona.coll@bsc.es</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Sarobe</surname>
+                        <forename>Ramon</forename>
+                    </persName>
+                    <affiliation>Barcelona Supercomputing Center (BSC)</affiliation>
+                    <email>ramon.sarobe@bsc.es</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Giner-Miguelez</surname>
+                        <forename>Joan</forename>
+                    </persName>
+                    <affiliation>Barcelona Supercomputing Center (BSC)</affiliation>
+                    <email>joan.giner@bsc.es</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Gómez</surname>
+                        <forename>Felipe</forename>
+                    </persName>
+                    <affiliation>Barcelona Supercomputing Center (BSC)</affiliation>
+                    <email>felipe.gomez1@bsc.es</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Marangio</surname>
+                        <forename>Paolo</forename>
+                    </persName>
+                    <affiliation>Barcelona Supercomputing Center (BSC)</affiliation>
+                    <email>paolo.marangio@bsc.es</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Crosas</surname>
+                        <forename>Mercè</forename>
+                    </persName>
+                    <affiliation>Barcelona Supercomputing Center (BSC)</affiliation>
+                    <email>merce.crosas@bsc.es</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Cuadrada</surname>
+                        <forename>Coral</forename>
+                    </persName>
+                    <affiliation>Barcelona Supercomputing Center (BSC)</affiliation>
+                    <email>coral.cuadrada@bsc.es</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T10:50:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>notarial documentation</term>
+                    <term>medieval studies</term>
+                    <term>handwritten text recognition</term>
+                    <term>dataset creation</term>
+                    <term>late middle ages</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>optical character recognition and handwriting recognition</term>
+                    <term>History</term>
+                    <term>Humanities computing</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">We present a pilot project centered on the automatic transcription of Catalan manuscripts from the Late Middle Ages, focusing on notarial documentation produced between the 13th and 15th centuries. The project is based at the Barcelona Supercomputing Center (BSC), with the collaboration of several historical archives and the support of the Archival Heritage area of the Catalan Department of Culture. The project is composed of an interdisciplinary team, including experts in paleography, archival sciences and medieval history, as well as computational linguists and computer scientists.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Motivation</head>
+                <p style="text-align: left; ">Catalan archives hold some of the most complete collections of medieval documentary heritage in Europe. The 
+                    <ref target="https://www.colegionotarial.org/ca/ahpd/arxiu-digital/fons-digitalitzats/">
+                        <hi rend="italic">Arxiu Històric de Protocols de Barcelona</hi>
+                    </ref> (AHPB) alone houses over 3.5K notarial registers spanning from 1296 to 1510, comprising over 750K digitized images. Many public and private archives contribute to the richness and diversity of Catalan medieval documentary heritage.
+                </p>
+                <p style="text-align: left; ">The variety of documents registered by these notaries is astounding. From last wills to land sales, loans, and even art commissions for embroideries or paintings, these collections chronicle the everyday life of the people of Barcelona and adjacent areas and contain the social and economic realities of the common people. At the same time, as a prosperous and diverse commercial city, Barcelona had connections with the main Atlantic and Mediterranean ports, from Antwerp to Alexandria, and these pages also abound with mentions of merchants, artists and artisans from all over the Mediterranean and Atlantic Europe. These records—when studied at scale—will enable new ways of research into life in the Late Middle Ages. However, as a first step, we need to achieve an accurate enough transcription, which will only be possible through a combination of specialist knowledge and cutting-edge computer vision and natural language processing techniques, as well as the computational power afforded by high-performance computing.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Background</head>
+                <p style="text-align: left; ">Handwritten text recognition (HTR) on historical manuscripts has improved significantly in recent years. Until recently, most experiments were conducted in highly controlled scenarios, often training models that learned to recognize a specific hand. Recent work (Torres Aguilar and Jolivet, 2023; Clérice et al., 2024; Vidal-Gorène et al., 2024; among others) has recognized the need to build models that have a more generalist scope to account for the large variability of characteristics in historical (and particularly medieval) handwritten documents. Their findings demonstrate that training on more diverse datasets yields more robust models, which generalize better when applied out-of-domain.</p>
+                <p style="text-align: left; ">A significant amount of work on HTR for medieval manuscripts has focused on transcribing literary or religious works of very high-quality production and neat handwriting (Haverals and Kestemont, 2023; Pinche, 2023), with fewer examples of transcribing documents from the documentary domain (Torres Aguilar and Jolivet, 2023; Torres Aguilar, 2024). The recording of notarial documentation was a fast-paced process, resulting in highly abbreviated text written in often messy cursive handwriting. The documents in our data are written in Medieval Latin and Catalan; the spelling of words is not consistent, and neither is their use of abbreviations. Today, very few people have the skills necessary to read these documents.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methodology</head>
+                <p style="text-align: left; ">We have selected 300 images for our initial experiments, of which 100 charters written on parchment and 200 pages from notarial registers written on paper. The charters on parchment were kindly provided by the 
+                    <ref target="https://arxiumarquesosdebarbera.cat/">Arxiu dels Marquesos de Santa Maria de Barberà</ref> (AMSMB), a nobility archive in Vilassar de Dalt that holds over 11K medieval charters, whereas the notarial registers were kindly provided by the AHPB. Conversations are underway to include other public and private archives in the future.
+                </p>
+                <p style="text-align: left; ">The dataset has been selected to represent—to the extent possible—the variation that is present in the sources: we have included as many different writers as possible, spread across the 13th to the 15th centuries. The intention behind creating such a diversified dataset is double: on the one hand, it allows us to assess the performance of existing generic approaches in a more realistic manner. On the other hand, as mentioned, previous work has demonstrated that models trained (or fine-tuned) on more diverse data result in better out-of-domain generalization (Pinche, 2023; Vidal-Gorène et al., 2024): in creating this dataset we aim at improving recognition of handwriting in cursive script from the 13th to the 15th centuries. Our dataset will be an addition to the growing body of ground truth datasets for medieval HTR (Chagué and Clérice, 2023).</p>
+                <p style="text-align: left; ">The selected images have been annotated using the 
+                    <hi rend="italic">eScriptorium</hi> tool (Kiessling, 2019). Our transcription guidelines were produced by an expert paleographer with years of experience working with medieval documents and were cross validated with the team, considering current practices in HTR. Our transcription follows a semi-diplomatic approach that expands abbreviations for improved readability and respects common transcription conventions for Latin and Catalan. Initial tests have been conducted to assess the performance of existing models on our data, so far using the 
+                    <ref target="https://kraken.re/main/index.html">Kraken</ref> library (Kiessling, 2019; Kiessling et al., 2022), and work is ongoing to investigate transformer-based solutions such as Florence-2 (Xiao et al., 2023), TrOCR (Li et al., 2023), and QwenVL (Bai et al., 2023).
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p style="text-align: left; ">We present our work towards the automatic transcription of Late Medieval Catalan manuscripts, focusing on notarial documents. The resulting datasets, models, and code will be made publicly available through the BSC Dataverse repository, and fully documented, along with the decisions, guidelines, and computational workflows that enabled them, following the FAIR principles.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Acknowledgements</head>
+                <p style="text-align: left; ">Mariona Coll Ardanuy and Joan Giner-Miguelez acknowledge their AI4S fellowship within the “Generación D” initiative by Red.es, Ministerio para la Transformación Digital y de la Función Pública, for talent attraction (C005/24-ED CV1), funded by NextGenerationEU through PRTR.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bai, Jinze / Bai, Shuai / Yang, Shusheng / Wang, Shijie / Tan, Sinan / Wang, Peng / Lin, Junyang / Zhou, Chang / Zhou, Jingren</hi> (2023). Qwen-vl: A frontier large vision-language model with versatile abilities. arXiv Preprint arXiv:2308.12966.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Chagué, Alix / Clérice, Thibault</hi> (2023): “I'm here to fight for ground truth: HTR-United, a solution towards a common for HTR training data”, in: 
+                        <hi rend="italic">Digital Humanities 2023: Collaboration as Opportunity</hi>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Clérice, Thibault / Pinche, Ariane / Vlachou-Efstathiou, Malamatenia / Chagué, Alix / Camps, Jean-Baptiste, Gille Levenson, Matthias / Brisville-Fertin, Olivier / Boschetti, Federico / Fischer, Franz / Gervers, Michael / Boutreux, Agnès / Manton, Avery / Gabay, Simon / O’Connor, Patricia / Haverals, Wouter / Kestemont, Mike / Vandyck, Caroline / Kiessling, Benjamin</hi> (2024): “CATMuS Medieval: A multilingual large-scale cross-century dataset in Latin script for handwritten text recognition and beyond”, in: 
+                        <hi rend="italic">International Conference on Document Analysis and Recognition</hi>, 174-194.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Haverals, Wouter / Kestemont, Mike</hi> (2023): “The middle Dutch manuscripts surviving from the Carthusian monastery of Herne (14th century): Constructing an open dataset of digital transcriptions”, in: 
+                        <hi rend="italic">Computational Humanities Research (CHR 2023)</hi>, 135-152.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Kiessling, Benjamin </hi>(2022): “The Kraken OCR system (Version 4.1.2)”, [Computer software: 
+                        <ref target="https://kraken.re">https://kraken.re</ref>].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kiessling, Benjamin / Tissot, Robin / Stokes, Peter / Ezra, Daniel Stökl Ben</hi> (2019): “eScriptorium: an open source platform for historical document analysis”, in: 
+                        <hi rend="italic">International Conference on Document Analysis and Recognition: Workshops (ICDARW)</hi>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Li, Minghao / Lv, Tengchao / Chen, Jingye / Cui, Lei / Lu, Yijuan / Florencio, Dinei / Zhang, Cha / Li, Zhoujun / Wei, Furu</hi> (2023): “TrOCR: Transformer-based optical character recognition with pre-trained models”, in: 
+                        <hi rend="italic">Proceedings of the AAAI Conference on Artificial Intelligence</hi>, 37: 13094-13102.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Pinche, Ariane</hi> (2023): “Generic HTR Models for Medieval Manuscripts. The CREMMALab Project”, in: 
+                        <hi rend="italic">Journal of Data Mining and Digital Humanities</hi>, 1-20.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Torres Aguilar, Sergio</hi> (2024): Handwritten Text Recognition for Historical Documents using Visual Language Models and GANs, in: 
+                        <hi rend="italic">HAL Open Science</hi>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Torres Aguilar, Sergio / Jolivet, Vincent</hi> (2023): “Handwritten text recognition for documentary medieval manuscripts”, in: 
+                        <hi rend="italic">Journal of Data Mining and Digital Humanities</hi>, 1-13.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Vidal-Gorène, Chahan / Salah, Clément / Lucas, Noëmie / Decours-Perez, Aliénor / Perrier, Antoine</hi> (2024): “Enhancing Arabic Maghribi Handwritten Text Recognition with RASAM 2: A Comprehensive Dataset and Benchmarking”, in: 
+                        <hi rend="italic">Computational Humanities Research (CHR)</hi>, 200-216.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Xiao, Bin / Wu, Haiping / Xu, Weijian / Dai, Xiyang / Hu, Houdong / Lu, Yumao / Zeng, Michael / Liu, Ce / Yuan, Lu</hi> (2023): “Florence-2: Advancing a Unified Representation for a Variety of Vision Tasks”, in: 
+                        <hi rend="italic">Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</hi>, 4818-4829.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

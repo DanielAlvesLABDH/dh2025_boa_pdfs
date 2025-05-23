@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KELLNER_Nils_They_crossed_the_valley_of_Catamarca__A_study_o">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">They crossed the valley of Catamarca: A study of narrative space in novel openings</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Kellner</surname>
+                        <forename>Nils</forename>
+                    </persName>
+                    <affiliation>Universität Rostock, Germany</affiliation>
+                    <email>nils.kellner@uni-rostock.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Lemke</surname>
+                        <forename>Marc</forename>
+                    </persName>
+                    <affiliation>Universität Rostock, Germany</affiliation>
+                    <email>marc.lemke@uni-rostock.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Henny-Krahmer</surname>
+                        <forename>Ulrike</forename>
+                    </persName>
+                    <affiliation>Universität Rostock, Germany</affiliation>
+                    <email>ulrike.henny-krahmer@uni-rostock.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Spinelli</surname>
+                        <forename>Julián Carlos</forename>
+                    </persName>
+                    <affiliation>Universität Rostock, Germany</affiliation>
+                    <email>julian.spinelli7@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Renz</surname>
+                        <forename>Erik</forename>
+                    </persName>
+                    <affiliation>Universität Rostock, Germany</affiliation>
+                    <email>erik.renz@uni-rostock.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Piotraschke</surname>
+                        <forename>Anika</forename>
+                    </persName>
+                    <affiliation>Universität Rostock, Germany</affiliation>
+                    <email>anika.piotraschke@uni-rostock.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T08:29:05.792970304</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Computational Literary Studies</term>
+                    <term>Narrative Space</term>
+                    <term>Annotation</term>
+                    <term>Novels</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>cultural analytics</term>
+                    <term>spatial &amp; spatio-temporal analysis</term>
+                    <term>modeling and visualization</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Problem Description and State of Research<ref n="1" target="ftn0"/>
+                </head>
+                <p>Novel openings’ similarities and differences raise literary-historical questions. With our contribution, we aim to advance that research by means of digital text annotation and spatiality analysis of the openings of a selection of nineteenth- and twentieth-century novels in German and Spanish. The background of our research is the ongoing interdisciplinary project CANSpiN: 
+                    <hi rend="italic">Computational Approaches to Narrative Space in 19th and 20th Century Novels</hi>, which is based at the University of Rostock in Germany.
+                </p>
+                <p>So far, Literary Studies research on the openings of novels is mostly fragmented into author-related studies, has brought together only a few general studies and reviews (Adamo 2000, Said 1975) and is essentially narratological (Bendheim 2017: 25, Krings 2004: 163, Neumann 1996: 21, Nuttall 1992). The literary-historical theses thus produced link narrative techniques at the opening of novels with the amount and functions of narrated space (Hirdt 1974: 433, Maier 1965: 150). What these approaches have not taken into account, however, is the 
+                    <hi rend="italic">spatiality</hi> of the novel, i.e. the 
+                    <hi rend="italic">space-referential expressions</hi> a text offers. These are in the context of Computational Literary Studies the central means of capturing space (Schumacher 2023). Analyzing that textual property promises on the one hand, supplementing existing research results from Literary Studies. For example, the theses that a 
+                    <hi rend="italic">classical exposition</hi> is more spatial than a 
+                    <hi rend="italic">modern</hi> opening 
+                    <hi rend="italic">in medias res</hi> should be examined from the point of view of the spatiality of texts, as well (Krings 2004: 169, Neumann 1996: 29). On the other hand, completely unexpected patterns could be discovered and examined.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Space-referential Expressions in Novels</head>
+                <p>For annotating space-referential expressions we developed the annotation guideline CANSpiN.CS1 (Henny-Krahmer et al. 2024, 2025a). In an epistemological understanding of space, we distinguish place, movement, dimensioning, direction, and positioning (see Fig. 1).</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp0ozwpk0q/Pictures/a938f54cefb20773fbf69fc7df28c25c.png"/>
+                    </figure>With the help of its spatial vocabulary, we capture both: the spatiality of the text and the narrated world.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Corpus Description</head>
+                <p>We see our contribution as a preliminary to full-scale distant reading studies. To clarify whether patterns in the spatial vocabulary of novel openings can be used to categorize these is a prerequisite for such studies. For our analysis we chose eight introductory chapters from German, Spanish, and Latin American texts of the nineteenth and twentieth century originating from four corpora of the CANSpiN project (two from each corpus, see Fig. 2).</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp0ozwpk0q/Pictures/a938f54cefb20773fbf69fc7df28c25c.png"/>
+                    </figure>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Analysis</head>
+                <p>Analyzing openings of novels comes with unsolved problems concerning the question which text to select as 
+                    <hi rend="italic">opening</hi> (Bendheim 2017, Retsch 2000, Ruta 2004: 111–112). In our study, only the first chapter of the novel is considered as its opening, since it is the smallest logical and semantic unit which contains enough textual material for an analysis.
+                </p>
+                <p>Our main interest is to identify possible correlations between different types of novel openings and spatial vocabulary: Do certain novel beginnings use particularly much or little spatial vocabulary and do they favour certain categories of spatiality?</p>
+                <p>For these questions, we analyze the novels’ openings qualitatively by distinguishing grades of 
+                    <hi rend="italic">expositionality</hi> (the degree of basic information about place, time, and characters, see Krings 2004: 168–169), the difference between 
+                    <hi rend="italic">ab ovo</hi> and 
+                    <hi rend="italic">in medias res</hi> beginnings (which goes back to Horace and asks if the events told in the first chapter are part of the backstory or the main story (
+                    <hi rend="italic">plot</hi>), see Retsch 2000: 14), and by describing the entrance and first event of each novel (see Fig. 3). The data, the code as well as explanations on the categorization of the novel beginnings can be found in our Github Repository (Henny-Krahmer et al. 2025b).
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp0ozwpk0q/Pictures/a938f54cefb20773fbf69fc7df28c25c.png"/>
+                    </figure>
+                </p>
+                <p>Based on this terminology, we can ask whether a highly expositional novel opening is more spatial overall and whether it contains more places than a little expositional opening, which could primarily contain movements, whether in medias res and ob ovo openings correlate with certain degrees of expositionality, and whether the spatial vocabulary before and after the first event differs in terms of quantity and categories used.</p>
+                <p>Fig. 4 shows the annotation amounts of space-referential expressions inside the initial chapters of the novels in percentage of all tokens of the chapters. These results do not confirm that texts with a high expositionality (DEU19_030, DEU19_001, SPA19_001, LAT19_041) are in general particularly spatial or contain significantly more places than less expositional chapters, as two of these (DEU19_030 and SPA19_001) are rather in the middle range in terms of the proportion of spatial vocabulary and only two (DEU19_001 and LAT19_041) are above average. In addition, texts with medium expositionality can also use a high amount of spatial vocabulary (DEU20_021).</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp0ozwpk0q/Pictures/a938f54cefb20773fbf69fc7df28c25c.png"/>
+                    </figure>
+                </p>
+                <p>The difference between ab ovo and in medias res beginnings is shown by the fact that a larger amount of spatial vocabulary is used in the novel with an ab ovo beginning (LAT19_041). On the other hand, this is not the novel with the largest quantity of spatial vocabulary, which is why no clear indication of a connection can be proven here. For this, larger amounts of text would have to be included.</p>
+                <p>The relevance of the question of the connection between spatial vocabulary and the first events for the beginnings of novels can be seen in the example of the DEU19_030 text. With the first event, the amount of spatial vocabulary suddenly decreases in the course of the text and certain categories (positionings and places) have a significantly lower proportion in the part of the chapter following the event (see Fig. 5).</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp0ozwpk0q/Pictures/a938f54cefb20773fbf69fc7df28c25c.png"/>
+                    </figure>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusions and Next Steps</head>
+                <p>After these exemplary analyses of the first annotation data, it is already clear that for some novels, the space-referential expressions are related to the category of novel opening, but not in all the cases. To be able to make more general statements that go beyond the individual text, more data is required. Possible next steps could therefore include LLMs for automatic annotation of larger amounts of text with the categories of space-referential expressions described here.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn0" rend="footnote text" n="1">Contributor Roles: Nils Kellner (Conceptualization, Data curation, Writing – original draft, Writing – review &amp; editing), Marc Lemke (Conceptualization, Data curation, Software, Visualization, Writing – original draft, Writing – review &amp; editing), Ulrike Henny-Krahmer (Conceptualization, Data curation, Project administration, Writing – original draft, Writing – review &amp; editing), Julián Carlos Spinelli (Data curation, Writing – original draft), Erik Renz (Data curation), Anika Piotraschke (Data curation).</note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Adamo, Giuliana</hi> (2000): “Twentieth-Century Recent Theories on Beginnings and Endings of Novels”, in: 
+                        <hi rend="italic">Annali d'Italianistica</hi> 18: 49–76 &lt;
+                        <ptr target="https://www.jstor.org/stable/24008547"/>&gt; [09.05.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Bendheim, Amelie</hi> (2017): 
+                        <hi rend="italic">Wechselrahmen: Medienhistorische Fallstudien zum Romananfang des 13. Jahrhunderts</hi>. Heidelberg: Winter. DOI: 
+                        <ref target="https://doi.org/10.1515/arb-2020-0070">10.1515/arb-2020-0070</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Henny-Krahmer, Ulrike / Kellner, Nils / Lemke, Marc</hi> (2025a): 
+                        <hi rend="italic">CANSpiN.CS1</hi>. Version 1.1.0 [Annotation Guideline]. DOI: 
+                        <ref target="https://doi.org/10.5281/zenodo.10437030">10.5281/zenodo.10437030</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Henny-Krahmer, Ulrike / Kellner, Nils / Lemke, Marc</hi> (2025b): 
+                        <hi rend="italic">dh2025</hi> [GitHub Repository] &lt;
+                        <ptr target="https://github.com/CANSpiNproject/dh2025"/>&gt; [09.05.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Henny-Krahmer, Ulrike / Kellner, Nils / Lemke, Marc</hi> (2024): “Annotating Spatiality in Literary Texts: The Category Set CANSpiN.CS1”, in: 
+                        <hi rend="italic">DH2024: Reinvention &amp; Responsibility</hi>, Arlington, Washington, D.C. DOI: 
+                        <ref target="https://doi.org/10.5281/zenodo.13709642">10.5281/zenodo.13709642</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hirdt, Willi</hi> (1974): “INCIPIT. Zu einer Poetik des Romananfangs”, in: 
+                        <hi rend="italic">Romanische Forschungen</hi> 86, 3/4: 419–436 &lt;
+                        <ptr target="https://www.jstor.org/stable/27938110"/>&gt; [09.05.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Krings, Constanze</hi> (2004): “Zur Analyse des Erzählanfangs und des Erzählschlusses”, in: Wenzel, Peter (ed.): 
+                        <hi rend="italic">Einführung in die Erzähltextanalyse: Kategorien, Modelle, Probleme</hi>, Trier: WVT 163–179.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Maier, Wolfgang</hi> (1965): “Ein Einzelfall? Anfang und Struktur im ‘Maler Nolten’”, in: Miller, Norbert (ed.): 
+                        <hi rend="italic">Romananfänge. Versuch zu einer Poetik des Romans</hi>, Berlin: Verlag Literarisches Colloquium 149–172.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Neumann, Uwe</hi> (1996): “‘Behandeln Sie den Anfang so unnachsichtig wie möglich’: Vorläufiges zu Romananfängen bei Uwe Johnson”, in: Helbig, Holger / Fries, Ulrich (eds.): 
+                        <hi rend="italic">Johnson-Jahrbuch</hi> 3, Göttingen: Vandenhoeck &amp; Ruprecht 19–49.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Nuttall, Anthony D.</hi> (1992): 
+                        <hi rend="italic">Openings. Narrative Beginnings from the Epic to the Novel</hi>. Oxford: Clarendon Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Retsch, Annette</hi> (2000): 
+                        <hi rend="italic">Paratext und Textanfang</hi>. Würzburg: Königshausen &amp; Neumann.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Ruta, Caterina</hi> (2004): “Los comienzos y los finales de las Novelas ejemplares”, in: Lobato, María Luisa / Domínguez Matito, Francisco (eds.): 
+                        <hi rend="italic">Memoria de la palabra</hi>, Vervuert Verlagsgesellschaft 111–138. DOI: 
+                        <ref target="https://doi.org/10.31819/9783964565297-007">10.31819/9783964565297-007</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Said, Edward</hi> (1975): 
+                        <hi rend="italic">Beginnings: Intention and Method</hi>. New York: Basic Books.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Schumacher, Mareike</hi> (2023): 
+                        <hi rend="italic">Orte und Räume im Roman. Ein Beitrag zur digitalen Literaturwissenschaft</hi>. Digitale Literaturwissenschaft. Springer Link. DOI: 
+                        <ref target="https://doi.org/10.1007/978-3-662-66035-5">10.1007/978-3-662-66035-5</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Thüsen, Joachim von der</hi> (1969): “Der Romananfang in ‘Wilhelm Meisters Lehrjahren’”, in: 
+                        <hi rend="italic">Deutsche Vierteljahrsschrift für Literaturwissenschaft und Geistesgeschichte</hi> 43: 622–630. DOI: 
+                        <ref target="https://doi.org/10.1007/BF03376395">10.1007/BF03376395</ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

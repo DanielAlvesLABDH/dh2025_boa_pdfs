@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KRAUSE_Lena__L_art_public_sous_la_loupe_des_citoyen_ne_s___m">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title> L’art public sous la loupe des citoyen·ne·s : modeler une interface pour la recherche avec les données MONA </title>
+                <author>
+                    <persName>
+                        <surname>De Oliveira Savoi</surname>
+                        <forename>Camila</forename>
+                    </persName>
+                    <affiliation>Université de Montréal, Canada; Maison MONA, Canada</affiliation>
+                    <email>camila.de.oliveira.savoi@umontreal.ca</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Krause</surname>
+                        <forename>Lena</forename>
+                    </persName>
+                    <affiliation>Université de Montréal, Canada; Maison MONA, Canada</affiliation>
+                    <email>lena.krause@umontreal.ca</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Godefroid</surname>
+                        <forename>Corélie</forename>
+                    </persName>
+                    <affiliation>Université de Montréal, Canada; Maison MONA, Canada</affiliation>
+                    <email>corelie.godefroid@umontreal.ca</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Janssen</surname>
+                        <forename>Simon</forename>
+                    </persName>
+                    <affiliation>Université de Montréal, Canada; Maison MONA, Canada</affiliation>
+                    <email>simon.janssen@umontreal.ca</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Marche</surname>
+                        <forename>Barbara</forename>
+                    </persName>
+                    <affiliation>Maison MONA, Canada</affiliation>
+                    <email>barbara.mrch@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T22:31:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>art public</term>
+                    <term>interface de recherche</term>
+                    <term>crowdsourcing</term>
+                    <term>sociologie de l'art</term>
+                    <term>design UI/UX</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>crowdsourcing</term>
+                    <term>cultural analytics</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>Art history</term>
+                    <term>Cultural studies</term>
+                    <term>Sociology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">Le terme « art public » désigne couramment les sculptures, monuments et murales dispersées dans nos villes. Si cette forme d’art peut être ignorée ou passer inaperçue (Veyne 1988), des événements récents ont conduit à de nombreuses interactions avec elle ; par exemple, le mouvement 
+                <hi rend="italic">Black Lives Matter</hi> a ravivé les débats sur la présence de certaines œuvres dans l’espace public. Cependant, même face à des « controverses monumentales » (Senie 2019) telles que des monuments déboulonnés par des manifestant·e·s, les décisions et les discours sur l’art public sont principalement générés par des fonctionnaires des politicien·ne·s, des travailleur·se·s culturels ou des journalistes (Moreau 2021 ; Gérin et al. 2010). L'étude de la réception de l'art public demeure un défi en sociologie de l'art, faute d'outils pour recueillir et analyser les perspectives du public (Dery 2024 ; Paquet et Vernet 2021). 
+            </p>
+            <p style="text-align: left; ">Cette communication présente le développement d’une interface qui combine des analyses quantitatives et qualitatives à partir des données générées par une application mobile, afin d’étudier la réception de l’art public au Québec. L’interface permet de déceler des interactions avec l’art public jusque-là difficilement observables. Il s’agit ainsi d’enrichir notre compréhension de l’impact de l’art dans la vie des citoyen·ne·s. Ce projet collaboratif, associant le groupe de recherche Art+site de l’Université de Montréal (dir. Suzanne Paquet) au travail de l’organisme à but non lucratif Maison MONA, a réuni une équipe de chercheur·se·s spécialisé·e·s en histoire de l’art, en muséologie, en informatique, en design et en humanités numériques.</p>
+            <p style="text-align: left; ">Ce projet repose sur l’infrastructure de la Maison MONA, qui a rassemblé des données ouvertes provenant de sources institutionnelles et gouvernementales pour former une base d’information sur l’art public (Graff, Krause et al. 2024 ; Krause et Janssen 2023). Ces données sont ensuite intégrées dans une application mobile, MONA, qui communique la géolocalisation et d’autres informations sur les œuvres. Conçue pour encourager la participation, l’application invite les utilisateur·rice·s à qualifier leur expérience par la photographie, la rédaction de commentaires et l’émission d’une note (1 à 5 étoiles) pour chaque œuvre (Krause 2020). Ces retours, recueillis de façon anonymisée, constituent les données accessibles par une interface de recherche. La première version, développée en 2019, était rudimentaire. Pensée comme une interface graphique (GUI) pour consulter les données hébergées sur notre serveur, auparavant uniquement accessibles par ligne de commande, elle n’avait pas bénéficié d’une réflexion approfondie sur l’organisation visuelle de l’information. Fonctionnelle, elle limitait cependant le travail d’analyse, les recherches avancées et tout particulièrement les comparaisons des commentaires et des photographies des différent·e·s utilisateurs·ice·s de MONA.</p>
+            <figure>
+                <graphic n="1001" width="15.873236111111112cm" height="7.170208333333333cm" url="/tmp/tmpeb63pf6l/Pictures/700671db40453982255ff6eb00ca4c2b.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 1 : Capture d’écran de la première version de l’interface</p>
+            <p style="text-align: left; ">En 2024, nous avons assemblé une équipe multidisciplinaire pour concevoir une nouvelle version de l’interface, ciblant son potentiel pour la recherche. Afin de créer un outil pour l’étude de la réception, nous avons adopté une méthode itérative, inspirée de Ruecker, Radzikowska et Sinclair (2016). Pour concrétiser l’orientation de recherche, le processus a été guidé par un format de livrable de recherche développé par la Maison MONA : les rapports de réception. Destinés aux gestionnaires de collections d’art public, ces documents contiennent l’analyse de la réception des œuvres de leur collection et l’éditorialisation des données les concernant.</p>
+            <p style="text-align: left; ">Afin d’élargir nos perspectives sur les fonctionnalités possibles pour cette interface, deux membres de l’équipe, l’une en histoire de l’art et l’autre en informatique, ont réalisé un étalonnage (benchmark) de sites web et de moteurs de recherche facilitant l’accès à des données culturelles. L’objectif était de s’aligner aux standards établis en étudiant des interfaces produites par des institutions culturelles : d’une part les bibliothèques et leurs modèles de recherche avancée et systèmes de tri sophistiqués dans les métadonnées, et, d’autre part, les fonctionnalités de recherche dans les collections muséales, qui intègrent des images. La dimension visuelle est en effet essentielle, les photographies des utilisateur·rice·s étant au cœur de notre étude.</p>
+            <p style="text-align: left; ">À partir de ces recherches, nous avons conçu de nouvelles fonctionnalités. L’interface dispose désormais d’une page d’accueil qui permet de visualiser des photos récemment téléversées par les utilisateur·rice·s. Cela offre un aperçu du taux d’activité sur la plateforme et favorise les découvertes dès leur arrivée sur l’interface. En explorant les données, on peut basculer entre une vue tabulaire (approche quantitative) et une vue par photographies (approche visuelle et qualitative). Pour chaque œuvre d’art, une nouvelle vue permet de conserver l’affichage des métadonnées tout en optimisant la navigation entre les photographies et les commentaires. L’aperçu en vignette de toutes les photographies d’une œuvre crée un espace visuel qui fait cohabiter les perspectives citoyennes. Un mécanisme de redéploiement (shuffle) donne la possibilité de changer l’ordre d’affichage afin de potentiellement révéler de nouvelles associations visuelles. Finalement, une fonctionnalité facilite l’exportation des données pour générer les rapports de réception.</p>
+            <figure>
+                <graphic n="1002" width="16.06763888888889cm" height="9.817052777777779cm" url="/tmp/tmpeb63pf6l/Pictures/700671db40453982255ff6eb00ca4c2b.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 2 : Captures d’écran de la nouvelle interface</p>
+            <p style="text-align: left; ">Ce nouvel environnement de travail produit un espace propice à l’analyse et la valorisation d’interprétations plurielles. Prenons, par exemple, le cas de la sculpture 
+                <hi rend="italic">Le chien du Québec</hi> (1972) d’Armand Vaillancourt. Face à l’abstraction de l’œuvre et son emplacement dans un parc facilement approchable (1m de hauteur incluant le socle), les photographies sont variées : différents angles sont possibles, des interactions humoristiques aux détails texturés évoquant un flou artistique. La sculpture, malgré la renommée de son artiste, a eu une réception très mixte. Les notes attribuées vont de 1 à 5 étoiles et la note moyenne est de 3. Les notes sont parfois nuancées ou appuyées par les commentaires : « flatter ou fuire » (5 étoiles), « pas terrible » (1 étoile), « on dirait une crevette » (3 étoiles). On constate la spontanéité avec laquelle les utilisateur·rice·s partagent leurs avis sur l’application. Cela met également en évidence que la perception esthétique des œuvres peut parfois diverger de l’intention créative de l’artiste.
+            </p>
+            <p style="text-align: left; ">Cette interface de recherche vise donc à intégrer efficacement l’expérience immédiate de l’utilisateur·rice dans une initiative de recherche participative et citoyenne. La création d’un commun numérique qui rassemble les expériences individuelles vécues 
+                <hi rend="italic">in situ</hi> dans l’espace public permet de considérer l’art public comme une entité vivante et dynamique, profondément ancrée dans les interactions et les perceptions collectives.
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-family:Liberation Sans">Dery, Milly Alexandra</hi>
+                        <hi style="font-family:Liberation Sans" xml:space="preserve"> (2024):</hi>
+                        <hi rend="italic" style="font-family:Liberation Sans">L’art public montréalais : oser la jeunesse</hi>
+                        <hi style="font-family:Liberation Sans">. Avis. Montréal: Conseil Jeunesse de Montréal. &lt;</hi>
+                        <ref target="https://ville.montreal.qc.ca/pls/portal/docs/page/cons_jeunesse_fr/media/documents/avis_art_public_oser_la_jeunesse.pdf">
+                            <hi style="font-family:Liberation Sans">https://ville.montreal.qc.ca/pls/portal/docs/page/cons_jeunesse_fr/media/documents/avis_art_public_oser_la_jeunesse.pdf</hi>
+                        </ref>
+                        <hi style="font-family:Liberation Sans">&gt; [29.04.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-family:Liberation Sans">Gérin, Annie et al</hi>
+                        <hi style="font-family:Liberation Sans" xml:space="preserve"> (2010):</hi>
+                        <hi rend="italic" style="font-family:Liberation Sans">Œuvres à la rue: pratiques et discours émergents en art public</hi>
+                        <hi style="font-family:Liberation Sans">. Montréal: Département d’histoire de l’art de l’UQAM. &lt;</hi>
+                        <ref target="https://galerie.uqam.ca/wp-content/uploads/2010_Oeuvres_publication_complete-1.pdf">
+                            <hi style="font-family:Liberation Sans">https://galerie.uqam.ca/wp-content/uploads/2010_Oeuvres_publication_complete-1.pdf</hi>
+                        </ref>
+                        <hi style="font-family:Liberation Sans">&gt; [29.04.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-family:Liberation Sans" xml:space="preserve">Graff, Julie / Krause, Lena Krause / Janssen, Simon / Pinto Ferretti, Alexia / Delattre, Camille / Trihn, Kim / Valentine, David </hi>
+                        <hi style="font-family:Liberation Sans">(2024): “Going with the Flow : Merging Research and Cultural Outreach in GLAM+ Data”. Reykjavik: DHNB 2024, long papier.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-family:Liberation Sans">Krause, Lena</hi>
+                        <hi style="font-family:Liberation Sans" xml:space="preserve"> (2020): “MONA: From Public Art to Our Art with a Mobile App”. Ottawa: DH2020, session de poster (annulée). &lt;https://dh2020.adho.org/wp-content/uploads/2020/07/707_MONAfrompublicarttoourartwithamobileapp.html&gt; [29.03.2021].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-family:Liberation Sans" xml:space="preserve">Krause, Lena / Janssen, Simon </hi>
+                        <hi style="font-family:Liberation Sans">(2023): “MONA : des données ouvertes à la chasse au trésor culturelle”. Genève: Humanistica 2023, session de posters. &lt;https://hal.science/hal-04105559&gt; [29.04.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-family:Liberation Sans">Moreau, Patrick</hi>
+                        <hi style="font-family:Liberation Sans" xml:space="preserve"> (2021): “Quel avenir pour l’art public </hi>?”, in: 
+                        <hi rend="italic" style="font-family:Liberation Sans">Le Devoir</hi>
+                        <hi style="font-family:Liberation Sans">, 16 décembre 2021. &lt;https://www.ledevoir.com/opinion/idees/654774/point-de-vue-quel-avenir-pour-l-art-public&gt; [29.04.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-family:Liberation Sans" xml:space="preserve">Paquet, Suzanne / Vernet, Laurent </hi>
+                        <hi style="font-family:Liberation Sans">(2021): “Le récit de la controverse autour d’une œuvre d’art public à Montréal : les publics de La vélocité des lieux (2015) de BGL, de la commande à la réception médiatique</hi> ”, in: IdeAs
+                        <hi rend="italic" style="font-family:Liberation Sans">. Idées d’Amérique</hi>
+                        <hi style="font-family:Liberation Sans">17. &lt;doi.org/10.4000/ideas.10863&gt; [29.04.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-family:Liberation Sans">Ruecker, Stan / Radzikowska, Milena / Sinclair</hi>
+                        <hi style="font-family:Liberation Sans" xml:space="preserve">, </hi>
+                        <hi rend="bold" style="font-family:Liberation Sans">Stéfan</hi>
+                        <hi style="font-family:Liberation Sans">(2016):</hi>
+                        <hi rend="italic" style="font-family:Liberation Sans">Visual Interface Design for Digital Cultural Heritage: A Guide to Rich-Prospect Browsing</hi>
+                        <hi style="font-family:Liberation Sans">. Londres: Routledge.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-family:Liberation Sans">Senie, Harriet</hi>
+                        <hi style="font-family:Liberation Sans" xml:space="preserve"> (2019): “Monumental Controversies: Public Art in the Aftermath of TheRevisited Commemoration Process”. Présenté à </hi>
+                        <hi rend="italic" style="font-family:Liberation Sans">Entre raison et tension. L’art public à l’épreuve de la commémoration corrigée</hi>
+                        <hi style="font-family:Liberation Sans">, Montréal, 7 octobre 2019.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-family:Liberation Sans">Veyne, Paul</hi>
+                        <hi style="font-family:Liberation Sans" xml:space="preserve"> (1988): “Conduites sans croyance et œuvres d’art sans </hi> spectateurs”, in:
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="italic" style="font-family:Liberation Sans">Diogène</hi>
+                        <hi style="font-family:Liberation Sans" xml:space="preserve"> 43: 3‑22.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

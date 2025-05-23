@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LAYNE_WORTHEY_Glen_Datafying_75_Years_of_Book_Reviews_from_t">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Datafying 75 Years of Book Reviews from the Bulletin of the Center for Children’s Books</title>
+                <author>
+                    <persName>
+                        <surname>Debnath</surname>
+                        <forename>Tanmoy</forename>
+                    </persName>
+                    <affiliation>University of Illinois at Urbana-Champaign, United States of America</affiliation>
+                    <email>tand3@illinois.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Fitzsimmons</surname>
+                        <forename>Rebekah</forename>
+                    </persName>
+                    <affiliation>Carnegie Mellon University, United States of America</affiliation>
+                    <email>rfitzsim@andrew.cmu.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Layne-Worthey</surname>
+                        <forename>Glen</forename>
+                    </persName>
+                    <affiliation>University of Illinois at Urbana-Champaign, United States of America</affiliation>
+                    <email>gworthey@illinois.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Alteri</surname>
+                        <forename>Suzan</forename>
+                    </persName>
+                    <affiliation>University of Illinois at Urbana-Champaign, United States of America</affiliation>
+                    <email>salteri@illinois.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Schwebel</surname>
+                        <forename>Sara</forename>
+                    </persName>
+                    <affiliation>University of Illinois at Urbana-Champaign, United States of America</affiliation>
+                    <email>sls09@illinois.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-06T18:00:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>children's literature</term>
+                    <term>book reviewing</term>
+                    <term>data extraction</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>bibliographic analysis</term>
+                    <term>cultural analytics</term>
+                    <term>text mining and analysis</term>
+                    <term>Book and print history</term>
+                    <term>Education/ pedagogy</term>
+                    <term>Library &amp; information science</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <hi style="font-family:Quicksand;font-size:12pt" xml:space="preserve">This poster describes ongoing collaborative research on the </hi>
+                <hi rend="italic" style="font-family:Quicksand;font-size:12pt">Bulletin of the Center for Children’s Books,</hi>
+                <hi style="font-family:Quicksand;font-size:12pt" xml:space="preserve"> a children’s book review journal founded in Chicago in 1947.  The 75+ year history of the </hi>
+                <hi rend="italic" style="font-family:Quicksand;font-size:12pt">Bulletin</hi>
+                <hi style="font-family:Quicksand;font-size:12pt" xml:space="preserve"> reviews provide a vital record of the history of children’s book publishing and professional children’s book reviewing during the 20th and 21st centuries.  To date, approximately 40,000 children’s books have been reviewed in the </hi>
+                <hi rend="italic" style="font-family:Quicksand;font-size:12pt">Bulletin</hi>
+                <hi style="font-family:Quicksand;font-size:12pt">.</hi>
+            </p>
+            <p>
+                <hi style="font-family:Quicksand;font-size:12pt" xml:space="preserve">Our project both enables and relies on textual analysis to examine this very long run of very short book reviews. The digitized collection of the </hi>
+                <hi rend="italic" style="font-family:Quicksand;font-size:12pt">Bulletin</hi>
+                <hi style="font-family:Quicksand;font-size:12pt" xml:space="preserve"> provides a wealth of historical information not only about which books were reviewed, which authors were most favored by reviewers, etc. but also about how the review activities of librarians shaped the landscape of children’s literature, and how these expert reviewers are perceived as definitive voices of what constituted good books for children.  </hi>
+            </p>
+            <p>This poster outlines the ongoing work of the project, including harvesting, cleaning, extracting, and structuring the rich historical data and metadata of this unique digitized corpus. We focus on data creation and curation, which requires exploration of a surprisingly diverse range of approaches (described below). Overcoming the numerous challenges involved, such as dealing with inconsistencies in the source files and structural variations, required a careful balance between automated processes and manual interventions. The resulting dataset will enable future at-scale analyses, allowing scholars to explore the influence of book reviews on canon formation and reception.</p>
+            <p>Each review includes basic metadata of the books under review (author, title, publisher, date, number of pages, price), as well as reviewer-provided data and metadata, crucially including a recommendation code (for “Recommended,” “Additional, but not essential,” “Marginal,” “Not Recommended,” etc.), reader age (or grade level), and a review of about 100-150 words.</p>
+            <p>
+                <hi style="font-family:Quicksand;font-size:12pt" xml:space="preserve">We extracted the metadata and full text of all these reviews from 800+ </hi>
+                <hi rend="italic" style="font-family:Quicksand;font-size:12pt">Bulletin</hi>
+                <hi style="font-family:Quicksand;font-size:12pt" xml:space="preserve"> issues previously scanned as PDF and converted it to structured metadata and a text corpus to enable our own analysis and to publish as a dataset for future research. Although the </hi>
+                <hi rend="italic" style="font-family:Quicksand;font-size:12pt">Bulletin</hi>
+                <hi style="font-family:Quicksand;font-size:12pt" xml:space="preserve"> editors clearly sought to create a consistent structure for the </hi>
+                <hi rend="italic" style="font-family:Quicksand;font-size:12pt">Bulletin</hi>
+                <hi style="font-family:Quicksand;font-size:12pt" xml:space="preserve"> (and were largely successful), inevitable changes in formatting over a 75+-year run, in addition to handwritten annotations on some originals and other image quality issues, have made fully automated data extraction difficult. </hi>
+            </p>
+            <p>To deal with these challenges, we first divided the series into distinct groups based on changes in visual layout, metadata placement, and structural elements within the reviews. These subtle shifts in publication style over the decades required a tailored approach to data extraction. Segmenting the data allowed us to apply specific methods optimized for each group, resulting in a more accurate and consistent curation process across the corpus.</p>
+            <p>Next, we experimented with three distinct techniques for extracting metadata and full review texts: rule-based pattern matching (regex) with Python, natural language processing (NLP) models, and large language models (LLMs). NLP and LLMs, despite our high hopes, presented challenges that ultimately led us to prioritize pattern matching.</p>
+            <p>Surprisingly, modern NLP models like BERT did not perform noticeably better than pattern matching. Limited by the inconsistent page structure, they required substantial additional processing time, making them less efficient overall. LLMs, including GPT-3.5 and more recently GPT-4o and o-preview, showed initial promise by flexibly handling noisy and complex text formats. However, they presented significant challenges at scale due to their high computational cost and frequent hallucinations, generating non-existent content or conflating details across reviews. </p>
+            <p>Ultimately, pattern matching proved to be the most efficient approach. Our regex-based algorithms used techniques such as backtracking and anchor-based segmentation to iteratively identify metadata and segment review texts. Overall, the regex-based approach allowed for reliable data structuring with minimal human intervention, which was essential for processing the dataset at scale.</p>
+            <p>
+                <hi style="font-family:Quicksand;font-size:12pt" xml:space="preserve">Despite the overall success of this approach, we still relied on manual correction, or what we’ve come to call “student sourcing.” A small team of undergraduate data science and statistics majors worked on data quality assessment, corrections, and flagging of ambiguities as part of a for-credit summer internship. Another team of (paid) graduate research assistants, all studying children’s literature and youth librarianship, was engaged in more content-specific quality control and remediation. Each group of students benefited from the hands-on professional experience and contributed to the quality of the resulting </hi>
+                <hi rend="italic" style="font-family:Quicksand;font-size:12pt">Bulletin</hi>
+                <hi style="font-family:Quicksand;font-size:12pt" xml:space="preserve"> dataset.</hi>
+            </p>
+            <p>Finally, we will present a few preliminary explorations of the sorts of research questions that will be answerable using this unique dataset.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left;">
+                        <hi style="font-family:Quicksand;font-size:12pt" xml:space="preserve">The Center for Children’s Books. </hi>
+                        <hi rend="italic" style="font-family:Quicksand;font-size:12pt">The Bulletin of the Center for Children’s Books</hi>
+                        <hi style="font-family:Quicksand;font-size:12pt">. School of Information Sciences, University of Illinois at Urbana-Champaign, 1945- . Journal home page: https://bccb.ischool.illinois.edu/ .</hi>
+                        <hi style="font-family:Quicksand;font-size:12pt">Journal back-issue repository: https://hdl.handle.net/2142/9514</hi>
+                    </bibl>
+                    <bibl style="text-align: left;">
+                        <hi style="font-family:Quicksand;font-size:12pt">Debnath, Tanmoy. Datafying the CCB Bulletin Code Repository: https://github.com/center-for-childrens-books/bulletin-conversion</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

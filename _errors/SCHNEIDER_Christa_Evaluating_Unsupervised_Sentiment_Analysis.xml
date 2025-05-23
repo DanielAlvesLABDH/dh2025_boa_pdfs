@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SCHNEIDER_Christa_Evaluating_Unsupervised_Sentiment_Analysis">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Evaluating Unsupervised Sentiment Analysis Approaches on Early Modern German and English Criminal Records</title>
+                <author>
+                    <persName>
+                        <surname>Schneider</surname>
+                        <forename>Christa</forename>
+                    </persName>
+                    <affiliation>University of Bern, Switzerland</affiliation>
+                    <email>christa.schneider@unibe.ch</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-10T16:35:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Sentiment Analysis</term>
+                    <term>Early Modern Texts</term>
+                    <term>(Historical) (Socio-)Linguistics</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>information retrieval and querying algorithms and methods</term>
+                    <term>natural language processing</term>
+                    <term>History</term>
+                    <term>Linguistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction and Motivation</head>
+                <p>Sentiment analysis is pivotal in Natural Language Processing (NLP) for extracting emotional tone from texts, with applications from customer feedback to social media. However, applying these techniques to Early Modern German and English legal records introduces challenges due to premodern linguistic structures, cultural semantics, and limited historical linguistic resources. Semantic shifts further complicate sentiment interpretation. This study evaluates five unsupervised sentiment analysis methods, investigating their effectiveness and limitations in analysing Early Modern German and English criminal records. The findings highlight methodological constraints and propose directions for advancing sentiment analysis in historical contexts.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Objectives and Research Questions</head>
+                <p>The study aims to:</p>
+                <list type="ordered">
+                    <item>Evaluate the performance of lexicon-based, clustering, topic-modelling, embedding-based, and deep learning approaches on historical texts.</item>
+                    <item>Compare the performance of these methods between German and English datasets to uncover disparities.</item>
+                </list>
+                <p>Key research questions include:</p>
+                <list type="unordered">
+                    <item>How effective are current unsupervised methods for sentiment analysis on historical texts?</item>
+                    <item>What adaptations are necessary to improve these methods for Early Modern texts?</item>
+                </list>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Related Work</head>
+                <p>Existing studies emphasise the potential of sentiment analysis for historical texts, with most focusing on supervised approaches. For example, Sprugnoli et al. (2016) analysed historical Italian texts using the ALCIDE platform, and Piotrowski (2012) highlighted the role of NLP for historical datasets. However, annotated corpora for Early Modern texts remain scarce. Unsupervised approaches, while scalable, face challenges such as capturing nuanced sentiments, as noted by AlGhalibli (2021). This study extends prior work by applying and critically evaluating unsupervised methods in historical contexts.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Datasets</head>
+                <p>The study focuses on four criminal records, two from Early Modern German and two from Early Modern English sources:</p>
+                <list type="ordered">
+                    <item>Early Modern German Records: Extracted from the Bernese Tower Book corpus, a collection of premodern criminal trial papers from Bern, Switzerland. These texts provide insights into criminal proceedings and sentencing in Early Modern Switzerland. The corpus data has been digitised and transcribes (automatically) and is only annotated partially in terms of Named Entity Recognition. POS tagging or other annotations that would enhance sentiment analysis have not been realised so far.</item>
+                    <item>Early Modern English Records: Selected from the Salem Witch Trial corpus, a collection of premodern English witch trial papers from Salem Massachusetts (USA). These documents represent significant cultural and linguistic artefacts of Early Modern English. The data in this corpus has been transcribed through the Salem Witch Trials Documentary Archive and Transcription Project and has not been tagged or annotated in any way.</item>
+                </list>
+                <p>Before applying unsupervised sentiment analytic approaches, the four records have been manually annotated and analysed to evaluate the feasibility of the chosen approach. They show all predominantly negative sentiments, probably due to their focus on criminal accusations, trials and punishments. However, the manual annotations do not account for nuances or segment-level sentiments, leaving room for methodological exploration. This strong skew toward negative sentiment is an intrinsic property of the datasets and may have distorted classifier behaviour, particularly for models expecting more balanced input. Previous historical sociolinguistic studies on witch trial papers have highlighted their relevance not only for sentiment analysis but also for named entity recognition. But, in respective pilot studies, it became evident that existing frameworks are not well suited for historical data, motivating the development of more tailored approaches. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methodologies and expected limitations</head>
+                <p>Five unsupervised methods were applied:</p>
+                <list type="ordered">
+                    <item>Lexicon-Based Approach: Relies on predefined word lists but faces accuracy issues due to limited historical vocabularies.</item>
+                    <item>Clustering-Based Approach: Groups texts via K-means but struggles with linguistic variation and semantic shifts.</item>
+                    <item>Topic Modelling (LDA): Analyses sentiments within topics but suffers from sparse data and unsuitable keywords.</item>
+                    <item>Embedding-Based Approach: Aggregates word embeddings to classify sentiments but depends heavily on modern language data.</item>
+                    <item>Deep Learning-Based Approach: Uses autoencoders to capture nuanced features but risks overfitting without domain-specific training data.</item>
+                </list>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results</head>
+                <p>Lexicon-Based Approach</p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: left;">Document</cell>
+                        <cell style="text-align: left;">Positive Polarity </cell>
+                        <cell style="text-align: left;">Negative Polarity</cell>
+                        <cell style="text-align: left;">Sentiment</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">English_1</cell>
+                        <cell style="text-align: left;">0.065</cell>
+                        <cell style="text-align: left;">0.072</cell>
+                        <cell style="text-align: left;">Negative</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">English_2</cell>
+                        <cell style="text-align: left;">0.068</cell>
+                        <cell style="text-align: left;">0.053</cell>
+                        <cell style="text-align: left;">Positive</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">German_1</cell>
+                        <cell style="text-align: left;">0.008</cell>
+                        <cell style="text-align: left;">0.026</cell>
+                        <cell style="text-align: left;">Negative</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">German_2</cell>
+                        <cell style="text-align: left;">0.000</cell>
+                        <cell style="text-align: left;">0.100</cell>
+                        <cell style="text-align: left;">Negative</cell>
+                    </row>
+                </table>
+                <p>Tab.1: Results Sentiment Test Lexicon-Based Approach</p>
+                <p>For the lexicon-based approach VADER for English or German, respectively, has been applied. VADER sentiment analysis effectively captures the overall polarity of Early Modern English texts, demonstrating strong performance for both positive and negative sentiments, though nuanced language is sometimes oversimplified. In contrast, its performance on Early Modern German texts is hindered by limited lexicon support and challenges with archaic vocabulary, resulting in reduced accuracy and effectiveness. Despite its robustness to unnormalized historical texts, VADER’s sensitivity to linguistic shifts highlights the need for enhanced domain-specific lexicons and adaptations for historical contexts. </p>
+                <p>Clustering-Based Approach</p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: left;">Document</cell>
+                        <cell style="text-align: left;">Negative</cell>
+                        <cell style="text-align: left;">Positive</cell>
+                        <cell style="text-align: left;">Sentiment</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">English_1</cell>
+                        <cell style="text-align: left;">0.023</cell>
+                        <cell style="text-align: left;">0.977</cell>
+                        <cell style="text-align: left;">Positive</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">English_2</cell>
+                        <cell style="text-align: left;">0.223</cell>
+                        <cell style="text-align: left;">0.777</cell>
+                        <cell style="text-align: left;">Positive</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">German_1</cell>
+                        <cell style="text-align: left;">0.040</cell>
+                        <cell style="text-align: left;">0.960</cell>
+                        <cell style="text-align: left;">Positive</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">German_2</cell>
+                        <cell style="text-align: left;">0.074</cell>
+                        <cell style="text-align: left;">0.926</cell>
+                        <cell style="text-align: left;">Positive</cell>
+                    </row>
+                </table>
+                <p>Tab. 2: Results Sentiment Test Clustering-Based Approach</p>
+                <p>The clustering-based sentiment analysis approach employed K-means clustering with multilingual embeddings from the Sentiment Transformer model (paraphrase-multilingual-MiniLM-L12-v2). Sentiments were grouped into positive and negative clusters based on proximity to cluster centres, but the method misclassified all documents as predominantly positive, contradicting manual analysis. The positive and negative cluster centres were initialised using prototype vectors constructed from small, predefined sets of sentiment-bearing seed sentences. The positive and negative columns represent the proportion of sentences assigned to each cluster, such as a positive value of 0.977 indicating 97.7% of sentence classified as positive.</p>
+                <p>Topic Modelling (LDA)</p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: left;">Document</cell>
+                        <cell style="text-align: left;">Positive</cell>
+                        <cell style="text-align: left;">Negative</cell>
+                        <cell style="text-align: left;">Sentiment</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">English_1</cell>
+                        <cell style="text-align: left;">0.000</cell>
+                        <cell style="text-align: left;">0.999</cell>
+                        <cell style="text-align: left;">Negative</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">English_2</cell>
+                        <cell style="text-align: left;">0.000</cell>
+                        <cell style="text-align: left;">0.999</cell>
+                        <cell style="text-align: left;">Negative</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">German_1</cell>
+                        <cell style="text-align: left;">0.000</cell>
+                        <cell style="text-align: left;">0.999</cell>
+                        <cell style="text-align: left;">Negative</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">German_2</cell>
+                        <cell style="text-align: left;">0.000</cell>
+                        <cell style="text-align: left;">0.999</cell>
+                        <cell style="text-align: left;">Negative</cell>
+                    </row>
+                </table>
+                <p>Tab. 3: Results Sentiment Test Topic Modelling (LDA)</p>
+                <p>The table presents the results of a SpaCy-based preprocessing pipeline combined with LDA (Latent Dirichlet Allocation) topic modelling for sentiment analysis on Early Modern English and German texts. Each document is evaluated for its positive and negative sentiment proportions based on topic distribution. The dominant sentiment consistently identifies as negative across all documents. Topics were mapped to sentiments by manually assigning sentiment polarity to the most representative keywords associated with each topic. However, the results are likely unreliable, as the absence of any positivity is inconsistent with expectations and highlights methodological challenges. The lack of clear sentiment mapping is likely due to domain vocabulary issues, where premodern keywords do not align with modern sentiment categories. Thus, keywords used to assign sentiments may be unsuitable for premodern texts, as they often fail to align with historical language and context. Similar results were observed with the GENSIM approach, indicating that the issue lies in the overall methodology. Testing an approach without keywords produced similarly unreliable outcomes, suggesting that manually defining suitable sentiment-related keywords for premodern contexts is likely necessary to improve accuracy.</p>
+                <p>Embedding-Based Approach</p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: left;">Documents</cell>
+                        <cell style="text-align: left;">Negative</cell>
+                        <cell style="text-align: left;">Positive</cell>
+                        <cell style="text-align: left;">Sentiment</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">English_1</cell>
+                        <cell style="text-align: left;">0.112626</cell>
+                        <cell style="text-align: left;">0.199963</cell>
+                        <cell style="text-align: left;">Positive</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">English_2</cell>
+                        <cell style="text-align: left;">0.148977</cell>
+                        <cell style="text-align: left;">0.275450</cell>
+                        <cell style="text-align: left;">Positive</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">German_1</cell>
+                        <cell style="text-align: left;">0.259303</cell>
+                        <cell style="text-align: left;">0.221131</cell>
+                        <cell style="text-align: left;">Positive</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">German_2</cell>
+                        <cell style="text-align: left;">0.333073</cell>
+                        <cell style="text-align: left;">0.261066</cell>
+                        <cell style="text-align: left;">Positive</cell>
+                    </row>
+                </table>
+                <p>Tab. 4: Results Sentiment Test Embedding-Based Approach</p>
+                <p>The table presents the result of an embedding-based unsupervised sentiment analysis using a multilingual sentence embedding model (paraphrase-multilingual-Mini-L12-v2) to calculate cosine similarity between document embeddings and automatically predefined sentiment-bearing embeddings. While the model currently identifies positive sentiments for English documents, the results are unconvincing, as the sources indicate only a marginally stronger alignment with negative sentiments. The German results are similarly problematic, with close positive and negative scores reflecting a lack of clarity in the sentiment classification. The German texts are entirely misclassified as positive, contradicting manual analysis and underscoring the model’s limitations in capturing the nuances of Early Modern languages. Again, these findings point to the necessity of domain-specific adaptions, including fine-tuning on historical corpora, to improve the reliability of sentiment analysis in premodern contexts.</p>
+                <p>Deep Learning-Based Approach</p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: left;">Document</cell>
+                        <cell style="text-align: left;">Sentiment Score</cell>
+                        <cell style="text-align: left;">Dominant Score</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">English_1</cell>
+                        <cell style="text-align: left;">NaN</cell>
+                        <cell style="text-align: left;">Negative</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">English_2</cell>
+                        <cell style="text-align: left;">NaN</cell>
+                        <cell style="text-align: left;">Negative</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">German_1</cell>
+                        <cell style="text-align: left;">NaN</cell>
+                        <cell style="text-align: left;">Negative</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">German_2</cell>
+                        <cell style="text-align: left;">NaN</cell>
+                        <cell style="text-align: left;">Negative</cell>
+                    </row>
+                </table>
+                <p>Tab. 5: Results Sentiment Test Deep Learning-Based Approach</p>
+                <p>The table points towards critical issues in the autoencoder-based sentiment analysis approach, as the sentiment scores are NaN (Not a Number), likely due to poor reconstruction quality or normalisation errors arising from identical minimum and maximum values in the output. Interestingly, the fallback classification mechanism still correctly identified all documents as “negative”, consistent with manual annotations. But also these results appear incidental rather than indicative of reliable model performance. The autoencoder struggled to capture meaningful features from the input texts, likely due to limited token diversity in premodern texts, and the inherent sparsity of sentiment-bearing terms. Robustness was further compromised by the model’s inability to handle unnormalized historical language, suggesting that the encoder’s representation space did not adequately capture the semantic nuances of Early Modern German and English. Detailed specifications of the model architecture and training setup are provided in forthcoming work. While the output aligns with the ground truth sentiment labels, the results highlight fundamental issues in feature extraction and reconstruction, emphasising the need for domain-specific embeddings or contextualised language models for reliable sentiment analysis in historical texts.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Discussion</head>
+                <p>The results reveal significant limitations of current unsupervised sentiment analysis methods for Early Modern German and English texts. Misclassification reflects the inadequacy of general-purpose multilingual embeddings, which, while enabling cross-linguistic analysis, fail to account for nuanced semantic and unique historical vocabulary. While not ideal for modern classification frameworks, the consistent negativity of the dataset reflects real historical discourse patterns in legal texts. Semantic shifts complicate interpretation, as models trained on modern data struggle with premodern linguistic structures and meanings. Sparse, unannotated corpora exacerbate these challenges, limiting resources for training and validation. While some methods demonstrate robustness to unnormalized text, reliance on generic embeddings highlights the need of domain-specific models. Clustering and embedding-based approaches lack contextual understanding, misinterpreting sentiment phrases or misaligning with ground-truth annotations. Deep learning methods failed to reliably extract features, underscoring the need for historical corpora with higher token diversity and tailored architectures. This study highlights the necessity of integrating historical lexicons and domain-specific models to address complexities in historical sentiment analysis. Future research should prioritise hybrid methods combining unsupervised techniques with minimal annotation for improved adaptability to premodern contexts.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion and Future Directions</head>
+                <p>This study highlights the challenges of applying unsupervised sentiment analysis to Early Modern texts, emphasising the need for methodological advancements and interdisciplinary efforts. Addressing the issue will enable more effective applications in Digital Humanities, aiding in cultural heritage preservation and nuanced interpretation. Future research will focus on multilingual resources, hybrid methodologies, and segment-level analysis to better adapt sentiment analysis to historical datasets. By laying this foundation, the study bridges the gap between computational techniques and humanities scholarship, fostering innovation in historical text analysis.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Piotrowski, Michael (2012). 
+                        <hi rend="italic">Natural Language Processing for Historical Texts</hi>. Toronto: Morgan &amp; Claypool.
+                    </bibl>
+                    <bibl style="text-align: left; ">Sprugnoli, Rachele / Sara Tonelli / Alessandro Marchetti / Giovanni Moretti (2016). “Towards sentiment analysis for historical texts”. 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi>, Vol. 31, No.4: 762-772.
+                    </bibl>
+                    <bibl style="text-align: left; ">AlGhalibi Maha (2021). 
+                        <hi rend="italic">Emotion and Sentiment Detection in Unstructured Social Data</hi>. Hochschulbibliothekszentrum NRM: 
+                        <ref target="https://kola.opus.hbz-nrw.de/frontdoor/deliver/index/docId/2276/file/maha+alghalibi+phd+thesis+pub2.pdf">https://kola.opus.hbz-nrw.de/frontdoor/deliver/index/docId/2276/file/maha+alghalibi+phd+thesis+pub2.pdf</ref> (10.05.2025).
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

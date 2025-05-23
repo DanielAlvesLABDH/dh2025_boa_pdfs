@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KESSLER_Florian__What_is_a_Term_in_Chinese_Mathematics__A_Di">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main"> What is a Term in Chinese Mathematics? A Digital Exploration of Glossaries in Relation to the Language of the Original Texts </title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Kessler</surname>
+                        <forename>Florian</forename>
+                    </persName>
+                    <affiliation>Friedrich-Alexander-Universität Erlangen-Nürnberg</affiliation>
+                    <email>florian.kessler@fau.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T11:33:46.416747948</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Chinese mathematics</term>
+                    <term>terminology</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>scholarly editing and editions development</term>
+                    <term>analysis</term>
+                    <term>and methods</term>
+                    <term>Asian studies</term>
+                    <term>History of science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>One of the established genres of writing the global history of mathematics is the monographic translation of a historic work into a modern Western language. Often, translations of this type include in their appendices a glossary, guiding the reader’s understanding of the technical language of cultures both distant in time and space. But what terms end up in these glossaries, and how do they relate to the language of the originals? In this study, I examine these questions for the case of four monographs on Chinese mathematical works, using methods inspired from automatic term extraction (ATE, Kageura/Marshman 2019), which is concerned with using computational methods for discovering terms in a text. Using digitized versions of the glossaries as well as the original texts, this approach allows a systematic and quantitative evaluation of the contents of the glossaries.</p>
+            <p>The four works for which glossaries are surveyed are the 
+                <hi rend="italic">Jiuzhang suanshu </hi><hi rend="Chinese">九章算術 </hi>(
+                <hi rend="italic">Mathematical Procedures in Nine Chapters, </hi>1. century CE, glossary in Chemla/Guo 2004), the 
+                <hi rend="italic">Shushu jiuzhang </hi><hi rend="Chinese">數書九章 </hi>(
+                <hi rend="italic">Mathematical Writings in Nine Chapters,</hi> 1247, glossary in Libbrecht 1973), 
+                <hi rend="italic">the</hi>
+                <hi rend="italic">Ceyuan haijing </hi><hi rend="Chinese">測圓海鏡 </hi>(
+                <hi rend="italic">Sea Mirror of Circle Measurements</hi>, 1248, glossary in Chemla 1982) and the 
+                <hi rend="italic">Duoji bilei </hi><hi rend="Chinese">垛積比類 </hi>(
+                <hi rend="italic">Analogue Categories of Discrete Accumulations, </hi>1867, glossary in Bréard 2023). These works have traditionally been considered to be high-points of Chinese mathematics of their respective times.
+            </p>
+            <p>Using the digitized versions of the texts and glossaries, it is easy to show that all of the glossaries are highly selective, that is, they only contain a small fraction of the lexicon of the original works, ranging from ca. 7% to ca. 17% of single Chinese characters, and much less of longer sequences found in the original texts. Furthermore, as a comparison of the lexicons of the texts and the glossaries against each other demonstrates, what different glossaries include can differ, even if the respective original texts contain the same kind of language. Thus, the fundamental problem that each glossary writer is naturally faced with can be framed as one of deciding for or against inclusion of specific items. For the purposes here, this can be further decomposed into two facets: First, which phenomena in the original text are relevant enough to mention in the glossary? Second, for those phenomena that are to be included, which of their constituent parts are to be included?</p>
+            <p>In regards to the first facet, an often used proxy in ATE is frequency, which serves as the basis of many more sophisticated methods that e.g. try to account for term length and nested terms (Frantzi et al. 2000), or compare the frequency in the technical target corpus against a reference corpus of general language (Ahmad et al. 2000). For the texts studied here, frequencies for all terms from the glossaries as well as everything else that appears in the original texts were computed, revealing that frequency is reasonably good at predicting which single characters are included in the glossaries. However, in each of the glossaries, low frequency items do appear. The possibility to systematically list these offers an interesting avenue for research: what factors other than frequency have made these terms seem relevant to the researchers who compiled the glossaries?</p>
+            <p>In regards to the second facet, the most noticeable issue that emerged after conducting a comparison of the contents of the glossaries is related to the notion of 
+                <hi rend="italic">unithood </hi>(Kageura/Marshman 2019), that is in our case, which linguistic units are to be included as entries. To use an extremely common expression as an example, “
+                <hi rend="italic">xiang cheng </hi><hi rend="Chinese">相乘” </hi>(to multiply with each other) could be represented with an entry for itself, with separate entries for “
+                <hi rend="italic">xiang</hi>” and “
+                <hi rend="italic">cheng</hi>”, an entry for “
+                <hi rend="italic">cheng</hi>” which notes the frequent combination with “
+                <hi rend="italic">xiang”</hi>, or further variants. Questions like this are highly relevant for modern terminologists (Cabré/Estopà 2003), but working with technical documents in pre-modern Chinese further highlights their importance, as notions such as that of a “word” as the most basic unit, which might be taken for granted in other languages, become challenging to define.
+            </p>
+            <p>Computational linguistics offers a method for testing the strength of connection between items in the form of association measures (Evert 2005). Thus, they allow us to approach the question of unithood from a purely quantitative perspective, without having to rely on additional linguistic features such as semantics or grammatical aspects, and have been suggested as one family of methods for ATE (Kageura/Marshman 2019). When applying one established association measure, simple-ll, extended to work with n-grams longer than two characters, on the works of Chinese mathematics studied here, some of the compound expressions contained in the glossaries such as “
+                <hi rend="italic">xiang cheng</hi>” do achieve high scores, but in general, many “bundles” (Biber 2009) that are not listed in the glossaries are scored higher. While this does of course not make the choice of the glossary writers “wrong” in any sense, it offers interesting new insights into the formulaic nature of Chinese mathematical language. 
+            </p>
+            <p>For example, many of the n-grams in the texts that achieve particularly high scores combine an operation with specific operands, such as in sequences like “
+                <hi rend="italic">cheng zhi </hi><hi rend="Chinese">乘之” </hi>(to multiply it [the result of the previous operation]). While expressions of this type might not be a natural unit from a mathematical point of view, as they cross the usual categories of how mathematical knowledge is structured, the association measure nevertheless shows their key role as a formulaic sequence in the mathematical language.
+            </p>
+            <p>Using the dual perspective gained by leveraging both the glossaries as a selective index as well as the data obtained from the original texts, I argue for a multi-faceted perspective on technical language in historical Chinese mathematics: On the one hand, for many items in the glossaries, unithood might be called into question, casting doubt on whether they can be considered to be terms. On the other hand, the texts exhibit a large number of fully or partly formulaic sequences, which can be investigated without having to label them as terms. </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Ahmad, Khurshid / Gillam, </hi>
+                        <hi rend="bold">Lee</hi>
+                        <hi rend="bold"> / Tostevin, Lena</hi> (2000): “Weirdness Indexing for Logical Document Extrapolation and Retrieval (WILDER)“, in: 
+                        <hi rend="italic">Proceedings of the Eighth Text Retrieval Conference, </hi>Gaithersburg, Maryland, November 1999: 717–725
+                        <hi rend="italic">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Biber, Douglas</hi> (2009): “A Corpus-Driven Approach to Formulaic Language in English: Multi-Word Patterns in Speech and Writing“, in: 
+                        <hi rend="italic">International Journal of Corpus Linguistics</hi> 14, 3: 275–311.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Bréard, Andrea</hi> (2023): 
+                        <hi rend="italic">Li Shanlan. Catégories analogues d’accumulations discrètes</hi>. Paris: Les Belles Lettres
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Cabré, M. Teresa / Estopà, Rosa</hi> (2003): “On the units of specialised meaning used in professional communication“, in: 
+                        <hi rend="italic">Terminology Science &amp; Research / Terminologie: Science et Recherche</hi> 14: 15–27.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Chemla, Karine</hi> (1982): 
+                        <hi rend="italic">Etude du livre Reflets des mesures du cercle sur la mer de Li Ye</hi>. Ph.D. thesis, Université de Paris XIII.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Chemla, Karine / Guo Shuchun</hi> (2004): 
+                        <hi rend="italic">Les neuf chapitres: Le classique mathématique de la Chine ancienne et ses commentaires</hi>. Paris: Dunod.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Evert, Stefan</hi> (2005): 
+                        <hi rend="italic">The Statistics of Word Cooccurrences: Word Pairs and Collocations</hi>. PhD thesis, University of Stuttgart.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Frantzi, Katerina / Ananiadou, Sophia / Mima, Hideki</hi> (2000): “Automatic recognition of multi-word terms: the C-value/NC-value method“, in: 
+                        <hi rend="italic">International </hi>
+                        <hi rend="italic">J</hi>
+                        <hi rend="italic">ournal on </hi>
+                        <hi rend="italic">D</hi>
+                        <hi rend="italic">igital </hi>
+                        <hi rend="italic">L</hi>
+                        <hi rend="italic">ibraries</hi> 3: 115–130.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Kageura, Kyo / Marshman, Elizabeth</hi> (2019): “Terminology Extraction and Management”,
+                        <hi rend="italic"> </hi>in:
+                        <hi rend="italic"> </hi>
+                        <hi rend="italic">The Routledge Handbook of Translation and Technology</hi>. London and New York: Routledge.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Libbrecht, Ulrich</hi> (1973): 
+                        <hi rend="italic">Chinese Mathematics in the Thirteenth Century</hi>. Cambridge and London: MIT Press.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

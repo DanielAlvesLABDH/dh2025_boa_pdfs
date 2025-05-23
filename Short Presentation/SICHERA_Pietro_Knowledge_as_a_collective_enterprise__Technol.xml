@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SICHERA_Pietro_Knowledge_as_a_collective_enterprise__Technol">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Knowledge as a collective enterprise: Technology for orchestration of complex cultural models in DH</title>
+                <author>
+                    <persName>
+                        <surname>Sichera</surname>
+                        <forename>Pietro</forename>
+                    </persName>
+                    <affiliation>Consiglio Nazionale Delle Ricerche, CNR - Istituto per il Lessico Intellettuale Europeo e Storia delle Idee, ILIESI - Italy</affiliation>
+                    <email>pietro.sichera@cnr.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Marras</surname>
+                        <forename>Cristina</forename>
+                    </persName>
+                    <affiliation>Consiglio Nazionale Delle Ricerche, CNR - Istituto per il Lessico Intellettuale Europeo e Storia delle Idee, ILIESI - Italy</affiliation>
+                    <email>cristina.marras@cnr.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Pasini</surname>
+                        <forename>Enrico</forename>
+                    </persName>
+                    <affiliation>Consiglio Nazionale Delle Ricerche, CNR - Istituto per il Lessico Intellettuale Europeo e Storia delle Idee, ILIESI - Italy</affiliation>
+                    <email>enrico.pasini@unito.it</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-07T13:25:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Research Infrastructures</term>
+                    <term>Open Science</term>
+                    <term>Marketplace</term>
+                    <term>API Orchestration</term>
+                    <term>Digital Humanities</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digital publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>open access methods</term>
+                    <term>systems and information architecture and usability</term>
+                    <term>Computer science</term>
+                    <term>Cultural studies</term>
+                    <term>Humanities computing</term>
+                    <term>Informatics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction </head>
+                <p style="text-align: left; ">The paper focuses on some characteristics of research infrastructures (RIs) for the humanities and cultural heritage (SSH) that facilitate open science, discussing how technology is increasingly becoming an integral part of the processes of collaborative knowledge construction. In the first part, we briefly review the perspectives of federated RIs, focusing on marketplaces as dynamic and functional connection points between different cloud networks and other network infrastructures. </p>
+                <p style="text-align: left; ">The second part describes the technological substrate to support the development of a federated research infrastructure and the technical 'nodes', namely the APIs orchestration for application workflows in DH as developed for the H2IOSC<ref n="1" target="ftn1"/> MarketPlace.
+                </p>
+                <p style="text-align: left; ">In the third and final part, we will summarize the main points emerging from the API's orchestration, tracing them back to the main objectives of the Italian node of the RI OPERAS (OPen Scholarly Communication in the European Research Area for Social Sciences and Humanities)<ref n="2" target="ftn2"/> in the context of the H2IOSC project.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Marketplaces as connection hub</head>
+                <p style="text-align: left; ">In very general terms, a marketplace is a 'place' where goods and services are exchanged (Cristofaro et al. 2024). In the European research space, marketplaces have been identified as essential tools to support the transition from traditional research to cloud-based infrastructures through centralized access to catalogues of resources and services. In the context of SSH, such resources and services may include relatively large and complex volumes of structured and heterogeneous data, together with software tools for querying, analyzing and subsequently using these same data and information repositories. In this context, the Open Cloud Computing paradigm has emerged as the dominant tool for distributing network infrastructure and resources, overcoming the need for complex and costly hardware/software systems for data management (including collaborative) on-premises.</p>
+                <p style="text-align: left; ">A marketplace can act as a connection point between different cloud networks and other network infrastructures, creating a single, dynamic and functional access environment for the collaborative sharing, use and management of data and services. In this sense, the H2IOSC MarketPlace, coordinated by OPERAS-IT, aims to increase the visibility and exploitation of the data sources, services and resources provided by the RIs involved in the project<ref n="3" target="ftn3"/> and the research community in general, hosted in the H2IOSC National Cloud (Sichera et al. 2024).
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>APIs orchestration </head>
+                <p style="text-align: left; ">During the design phase, a benchmark was carried out to assess the main functions and sections of the H2IOSC MarketPlace front-end, with the aim of following accessibility guidelines and best practices not only in the digital humanities sector, but also taking into account the leaders in the technology and communications market. The H2IOSC MarketPlace, like its counterparts in Europe (Marras et al. 2025
+                    <hi style="font-size:10pt">)</hi> has been designed to offer functionality on different levels to meet the needs of both administrators and users and catalogues services and resources; moreover, the main advancement being the ability to “orchestrate” multiple resources in a single application workflow (
+                    <hi rend="color(231D1C)">Kondam 2024)</hi>.
+                </p>
+                <p style="text-align: left; ">From a technical point of view, the potential of API orchestrators is particularly valuable to the field of DH, where systems designed for API management and orchestration can provide indispensable support for a wide array of research and creative activities. These systems enable the analysis, creation, organization, and execution of projects that integrate multiple types of data, including textual resources, images, and complex cultural models (Figure 1). </p>
+                <figure>
+                    <graphic n="1001" width="13.889363888888889cm" height="7.844919444444445cm" url="/tmp/tmp57quzcbb/Pictures/ac248a614ba5a8006f9fa94299adb8b1.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">
+                    <hi style="font-size:9pt">Figure 1. An example of a list of APIs available on the MarketPlace
+                        <lb/>(source
+                    </hi>
+                    <ref target="https://apim.docs.wso2.com/en/4.1.0/consume/consume-api-overview/">
+                        <hi style="font-size:9pt">https://apim.docs.wso2.com/en/4.1.0/consume/consume-api-overview/</hi>
+                    </ref>
+                    <hi style="font-size:9pt">).</hi>
+                </p>
+                <p style="text-align: left; ">By leveraging API orchestration, researchers and practitioners can connect disparate data sources, analytical tools, and distributed digital resources.<ref n="4" target="ftn4"/> This interconnectedness allows these systems to work seamlessly together, enabling the realization of sophisticated and highly integrated projects.<ref n="5" target="ftn5"/> Such orchestration is particularly advantageous in contexts where interdisciplinarity and the integration of heterogeneous data are essential for project success.<ref n="6" target="ftn6"/>
+                </p>
+                <p style="text-align: left; ">In the case of federated data repositories, the role of APIs becomes even more critical. These interfaces facilitate access to digital collections that are often scattered across different types of institutions, including archives, libraries, museums, and universities. As an example of use case, by providing a standardised mechanism for querying and retrieving information, APIs make it possible to combine resources from multiple repositories into a unified workflow (Figure 2).</p>
+                <figure>
+                    <graphic n="1002" width="13.36523888888889cm" height="5.334241666666666cm" url="/tmp/tmp57quzcbb/Pictures/ac248a614ba5a8006f9fa94299adb8b1.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">
+                    <hi style="font-size:9pt">Figure 2. An example of use case (figure by Martina Rossi).</hi>
+                </p>
+                <p style="text-align: left; ">This approach allows users to access diverse types of content, such as historical documents, literary manuscripts, photographic archives, and multimedia materials, within a single analytical or creative workflow (Figure 3).</p>
+                <p style="text-align: left; ">The use of API orchestrators in such environments further enhances the capabilities of these systems by unifying data access protocols, creating a consistent user experience, and eliminating redundancies in managing different repositories.</p>
+                <figure>
+                    <graphic n="1003" width="13.667619444444444cm" height="9.197622222222222cm" url="/tmp/tmp57quzcbb/Pictures/ac248a614ba5a8006f9fa94299adb8b1.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">
+                    <hi style="font-size:9pt">Figure 3. Interface for creating an application workflow</hi>
+                    <lb/>
+                    <hi style="font-size:9pt" xml:space="preserve">(source </hi>
+                    <ref target="https://wso2.com/library/blogs/elevate-your-integration-development-experience-with-wso2-micro-integrator-4-3/">
+                        <hi style="font-size:9pt">https://wso2.com/library/blogs/elevate-your-integration-development-experience-with-wso2-micro-integrator-4-3/</hi>
+                    </ref>
+                    <hi style="font-size:9pt">).</hi>
+                </p>
+                <p style="text-align: left; ">Additionally, API orchestrators offer robust mechanisms for controlling authentication and authorization. This ensures that access to datasets is managed according to the specific permissions required, protecting sensitive information while facilitating efficient collaboration. For example, certain data may only be accessible to authorized researchers, while other datasets may be openly available to the public.<ref n="7" target="ftn7"/>
+                </p>
+                <p style="text-align: left; ">Furthermore, the orchestration of APIs can foster collaboration between diverse disciplines and institutions, as it creates a shared infrastructure that simplifies resource sharing and communication.<ref n="8" target="ftn8"/> Researchers in the DH often need to integrate tools for text analysis, visual data processing, or even simulations of cultural phenomena. An orchestrated API environment not only connects these tools but also ensures that they can operate efficiently together, streamlining workflows and enabling innovative approaches to research.<ref n="9" target="ftn9"/> By integrating diverse datasets and computational methods, API orchestrators help to break down silos, making data and tools accessible in ways that were previously unimaginable.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p style="text-align: left; ">Sharing data and resources through APIs supports the creation of open ecosystems where researchers, developers and the public can access tools and resources (Mittal et al. 2023). Public APIs enable external developers and researchers to build custom applications, integrate data visualisation tools, or develop new analytics, extending the reach and impact of available resources. API orchestrators facilitate permissions and security management, setting access rules to protect sensitive data and regulating public access to resources. </p>
+                <p style="text-align: left; ">OPERAS-IT finds in the APIs orchestrator a valid and substantial support in at least two aspects. 1. To fulfil the objectives and architecture of the MarketPlace, i.e. a platform with an IT structure to facilitate the visibility and accessibility of content providers’ contributions, and a set of functionalities for user interaction, 2. To fulfil the main mission of OPERAS, i.e. to coordinate and pool resources to efficiently meet the scholarly communication needs of European researchers in the field of SSH and its collaborative potential for digital research, where knowledge is at work as a collective enterprise.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                        
+                            <hi style="font-size:10pt" xml:space="preserve"> H2IOSC project: Humanities and cultural Heritage Italian Open Science Cloud research ecosystem, EU-funded project NextGenerationEU - PNRR M4C2 - Project Code IR0000029, </hi>
+                            <ref target="https://www.h2iosc.cnr.it/">
+                                <hi style="font-size:10pt">https://www.h2iosc.cnr.it/</hi>
+                            </ref>
+                            <hi style="font-size:10pt">. Last access to all cited URLs 2025/05/02.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                        
+                            <hi style="font-size:10pt" xml:space="preserve"> OPERAS-IT is the Italian node of OPERAS (</hi>
+                            <ref target="https://operas-eu.org">
+                                <hi rend="underline color(1155CC)" style="font-size:10pt">https://operas-eu.org</hi>
+                            </ref>
+                            <hi style="font-size:10pt">) a Europe-wide distributed research infrastructure that aims to integrate and enhance scholarly communication channels, resources and tools in the social sciences and humanities, and to develop advanced strategies, policies, resources, tools and services to support Open Science.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                        
+                            <hi style="font-size:10pt" xml:space="preserve"> In addition to OPERAS the Italian nodes of the four high-priority research infrastructures are CLARIN, DARIAH, E-RIHS (</hi>
+                            <ref target="https://www.h2iosc.cnr.it/the-ris-cluster/">
+                                <hi style="font-size:10pt">https://www.h2iosc.cnr.it/the-ris-cluster/</hi>
+                            </ref>
+                            <hi style="font-size:10pt">).</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn4" n="4">
+                        
+                            <hi style="font-size:10pt" xml:space="preserve"> WSO2. “Service Orchestration - WSO2 Micro Integrator Documentation”. </hi>
+                            <ref target="https://mi.docs.wso2.com/en/latest/learn/integration-use-case/service-orchestration-overview/">
+                                <hi style="font-size:10pt">https://mi.docs.wso2.com/en/latest/learn/integration-use-case/service-orchestration-overview/</hi>
+                            </ref>
+                            <hi style="font-size:10pt">.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn5" n="5">
+                        
+                            <hi style="font-size:10pt" xml:space="preserve">OpenAPI Initiative. “Home - OpenAPI Initiative”. </hi>
+                            <ref target="https://www.openapis.org/">
+                                <hi style="font-size:10pt">https://www.openapis.org/</hi>
+                            </ref>
+                            <hi style="font-size:10pt">.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn6" n="6">
+                        
+                            <hi style="font-size:10pt" xml:space="preserve"> WSO2. “Create a REST API from an OpenAPI Definition - WSO2 API Manager Documentation”. </hi>
+                            <ref target="https://apim.docs.wso2.com/en/latest/design/create-api/create-rest-api/create-a-rest-api-from-an-openapi-definition/">
+                                <hi style="font-size:10pt">https://apim.docs.wso2.com/en/latest/design/create-api/create-rest-api/create-a-rest-api-from-an-openapi-definition/</hi>
+                            </ref>
+                            <hi style="font-size:10pt">.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn7" n="7">
+                        
+                            <hi style="font-size:10pt" xml:space="preserve"> WSO2. “Authenticating and Authorizing REST APIs - WSO2 Identity Server Documentation”. </hi>
+                            <ref target="https://is.docs.wso2.com/en/5.9.0/develop/authenticating-and-authorizing-rest-apis/">
+                                <hi style="font-size:10pt">https://is.docs.wso2.com/en/5.9.0/develop/authenticating-and-authorizing-rest-apis/</hi>
+                            </ref>
+                            <hi style="font-size:10pt">.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn8" n="8">
+                        
+                            <hi style="font-size:10pt" xml:space="preserve"> WSO2. “Overview - Micro Integrator for VS Code”. </hi>
+                            <ref target="https://mi.docs.wso2.com/en/latest/develop/mi-for-vscode/mi-for-vscode-overview/">
+                                <hi style="font-size:10pt">https://mi.docs.wso2.com/en/latest/develop/mi-for-vscode/mi-for-vscode-overview/</hi>
+                            </ref>
+                            <hi style="font-size:10pt">.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn9" n="9">
+                        
+                            <hi style="font-size:10pt" xml:space="preserve"> WSO2. “Setting Query Parameters on Outgoing Messages - WSO2 Micro Integrator Documentation”. </hi>
+                            <ref target="https://mi.docs.wso2.com/en/latest/learn/examples/rest-api-examples/setting-query-params-outgoing-messages/">
+                                <hi style="font-size:10pt">https://mi.docs.wso2.com/en/latest/learn/examples/rest-api-examples/setting-query-params-outgoing-messages/</hi>
+                            </ref>
+                            <hi style="font-size:10pt">.</hi>
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Cristofaro, Salvatore / Fabiani, Vittoria / Marras Cristina / Pasini, Enrico / Sichera, Pietro / Yu, Min (2024): “Infrastrutture di ricerca come strumenti di ‘interculturalità digitale’”, in Di Silvestro, Antonio / Spampinato Daria (eds.): 
+                        <hi rend="italic">Me.Te. Digitali. Mediterraneo in rete tra testi e contesti</hi>, Proceedings XIII Convegno Annuale AIUCD, Catania 28-30 maggio 2024, 
+                        <hi rend="italic">Quaderni di Umanistica Digitale</hi>: 572-576, DOI: 
+                        <ref target="https://doi.org/10.6092/unibo/amsacta/7927">https://doi.org/10.6092/unibo/amsacta/7927</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="color(231D1C)" xml:space="preserve">Kondam, Anusha. (2024). “Api Gateway Orchestration In Multi-Cloud Environments: Challenges And Solutions”, in: </hi>
+                        <hi rend="italic color(231D1C)">International Journal of Creative Research Thoughts</hi>
+                        <hi rend="color(231D1C)">, 12: 596-602.</hi>
+                        <ref target="https://www.researchgate.net/publication/385345794_Api_Gateway_Orchestration_In_Multi-Cloud_Environments_Challenges_And_Solutions">
+                            <hi rend="underline color(1155CC)">https://www.researchgate.net/publication/385345794_Api_Gateway_Orchestration_In_Multi-Cloud_Environments_Challenges_And_Solutions</hi>
+                        </ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">Marras, Cristina / Fabiani, Vittoria / Pasini, Enrico / Reggiani, Lisa / Sichera, Pietro / Ongaro Paolo / Rossi Martina (2025): “Modelli e tecnologie integrate e innovative per una cittadinanza digitale equa e sostenibile”, in: 
+                        <hi rend="italic">AIUCD Annual Conference 2025</hi>, 
+                        <hi rend="italic">Book of Abstracts</hi> (forthcoming).
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="color(2A2A2A) background(white)" xml:space="preserve">Mittal, Deepti / Mease, Rebecca / Kuner, Thomas / Flor, Herta / Kuner, Rohini / Andoh, Jamila (2023): “Data management strategy for a collaborative research center”, in: </hi>
+                        <hi rend="italic color(2A2A2A) background(white)">GigaScience</hi>
+                        <hi rend="color(2A2A2A) background(white)">, 12, giad049, DOI:</hi>
+                        <ref target="https://doi.org/10.1093/gigascience/giad049">
+                            <hi rend="underline color(1155CC) background(white)">https://doi.org/10.1093/gigascience/giad049</hi>
+                        </ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">Sichera, Pietro / Cristofaro, Salvatore / Mazzagufo, Laura / Spampinato, Daria / Del Grosso, Angelo Mario: “CHROMA model for H2IOSC”, in: 
+                        <hi rend="italic">CLARIN Annual Conference 2024</hi>, Barcelona, DOI: 
+                        <ref target="https://doi.org/10.5281/zenodo.13913607">https://doi.org/10.5281/zenodo.13913607</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">Sichera, Pietro / Marras, Cristina / Pasini, Enrico (2024): “Orchestrazione API per workflow applicativi nell’ambito delle Digital Humanities”, 
+                        <hi rend="italic">Technical-Scientific Report</hi>, Zenodo, DOI: 
+                        <ref target="https://doi.org/10.5281/zenodo.14187534">https://doi.org/10.5281/zenodo.14187534</ref>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

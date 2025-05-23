@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MANCINELLI_Tiziana_Developing_a_Platform_for_Aligned_Transla">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Developing a Platform for Aligned Translations in Digital Scholarly Editions</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Hohenegger</surname>
+                        <forename>Hansmichael</forename>
+                    </persName>
+                    <affiliation>Istituto Italiano di Studi Germanici, Italy</affiliation>
+                    <email>hohenegger@studigermanici.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Mancinelli</surname>
+                        <forename>Tiziana</forename>
+                    </persName>
+                    <affiliation>Istituto Italiano di Studi Germanici, Italy</affiliation>
+                    <email>mancinelli@studigermanici.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ciotti</surname>
+                        <forename>Fabio</forename>
+                    </persName>
+                    <affiliation>Tor Vergata University of Rome</affiliation>
+                    <email>fabio.ciotti@uniroma2.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>De Longis</surname>
+                        <forename>Eleonora</forename>
+                    </persName>
+                    <affiliation>Istituto Italiano di Studi Germanici, Italy</affiliation>
+                    <email>delongis@studigermanici.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Boschetti</surname>
+                        <forename>Federico</forename>
+                    </persName>
+                    <affiliation>Cnr-Istituto di Linguistica Computazionale "Antonio Zampolli"</affiliation>
+                    <email>federico.boschetti@ilc.cnr.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Del Grosso</surname>
+                        <forename>Angelo Mario</forename>
+                    </persName>
+                    <affiliation>Cnr-Istituto di Linguistica Computazionale "Antonio Zampolli"</affiliation>
+                    <email>angelomario.delgrosso@cnr.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Meschini</surname>
+                        <forename>Federico</forename>
+                    </persName>
+                    <affiliation>University of Viterbo La Tuscia</affiliation>
+                    <email>fmeschini@unitus.it</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-08T15:59:19.985983589</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>digital scholarly editions</term>
+                    <term>translations alignement</term>
+                    <term>data modeling</term>
+                    <term>open source</term>
+                    <term>accessibility</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>data modeling</term>
+                    <term>metadata standards</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>scholarly editing and editions development</term>
+                    <term>analysis</term>
+                    <term>and methods</term>
+                    <term>Linguistics</term>
+                    <term>Literary studies</term>
+                    <term>Translation studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>Digital scholarly editing has become a cornerstone in advancing the accessibility and usability of cultural heritage resources. The DiScEPT platform (Digital Scholarly Editing Platform and Tools) aims to provide a comprehensive ecosystem for creating digital editions, uniting established methodologies, workflows, and tools from digital philology and publishing. By reusing and integrating widely recognised formats, software, and services, DiScEPT offers a collaborative environment that accommodates the entire editorial pipeline — from data production to dissemination — while adhering to principles of accessibility and reusability.</p>
+                <p>A fundamental feature of DiScEPT is its emphasis on multilingualism, which functions as an essential resource for philological research and a cornerstone for fostering broader accessibility and inclusivity. Translations are not merely instruments for overcoming linguistic barriers; they serve as cultural bridges facilitating dialogue between texts, contexts, and diverse communities, thereby enriching textual criticism and cultural studies. DiScEPT acknowledges this central role, integrating advanced tools that enable the alignment of texts in multiple languages and an in-depth exploration of translation processes, highlighting the semantic, cultural, and historical nuances that translations may uncover. DiScEPT approaches the issue of text alignment by focusing on a underexplored aspect: embedding this functionality within a flexible and editor-oriented workflow that can be tailored to the specific needs of scholarly editing. In doing so, it fills a gap left by other tools, such as the excellent Ugarit and similar platforms..</p>
+                <p>The platform’s alignment tools enable the comparison of different versions of the same text across various ancient and modern languages, shedding light on the translation strategies employed and their impact on the original meaning. This level of analysis reveals not only linguistic similarities and discrepancies but also the cultural transformations inherent in the translation process. In this way, DiScEPT aspires to serve as a laboratory for the study of translation, fostering research that spans philology, literary criticism, and linguistic analysis, and, eventually, historical linguistic analysis.</p>
+                <p>The platform’s multilingual approach goes beyond meeting the needs of experts, aiming to democratize access to academic resources by making them accessible to scholars and a wider public working with less commonly spoken languages or operating in diverse geographic and cultural contexts. For instance, by supporting the analysis of translations into non-Western or minority languages, DiScEPT broadens the scope of research, giving value to cultural traditions that are often overlooked. This effort promotes academic inclusivity and strengthens the platform’s capacity to create connections across disciplines and methodological approaches.</p>
+                <p>The emphasis on multilingualism, therefore, translates into a strong commitment to accessibility: the ability to consult digital editions in multiple languages, coupled with interactive tools for analysis and translation, ensures that a heterogeneous audience can access the content and actively participate in scientific discourse. While DiScEPT aligns with the FAIR principles (Findable, Accessible, Interoperable, Reusable), it goes further by adopting a vision that integrates the needs of cultural, linguistic, and social inclusion, ensuring that its resources are not only accessible and reusable, but also capable of actively involving communities that have traditionally been excluded from academic circles.</p>
+                <p>The combination of multilingualism and an in-depth focus on translation studies makes DiScEPT a cutting-edge platform for expert philologists and students, translators, and researchers from various disciplines. It creates a knowledge ecosystem that values linguistic and cultural diversity as the key to fostering truly inclusive and universal scholarship.</p>
+                <p>By fostering collaboration among researchers, editors, and translators, DiScEPT focuses on findability (metadata and searchable in CLARIN), accessibility (free but scientifically motivated registration), interoperability (standard input/output formats and APIs) and reusability (open licences), highlighting the importance of making digital editions and scholarly practices more open, inclusive, and multilingual.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>What is DiScEPT?</head>
+                <p>DiScEPT is an open, modular ecosystem designed to support the creation of digital scholarly editions by integrating and extending existing open-source tools and technologies. Responding to the diverse needs of scholars in text-critical and editorial practices, DiScEPT enables the management of various types of data and metadata, leveraging interoperable standards such as XML-TEI, XML-RDF, and JSON-LD.</p>
+                <p>All components of the DiScEPT platform have been identified, and the processes and workflows to be addressed have been outlined. Active development is underway to fully integrate these components and establish APIs. The repository for DiScEPT is continuously updated, with new functionalities and improvements being added through each release. You can access the DiScEPT Repository here [Webpage: https://istituto-italiano-di-studi-germanici.github.io/DiScEPT/ ].</p>
+                <p>Unlike other tools that address isolated phases in the editorial workflow, DiScEPT offers an end-to-end solution encompassing:</p>
+                <p>● Textual editing: A user-friendly editor utilising a domain-specific language (DSL)that facilitates text encoding with familiar conventions, seamlessly converting outputs to XML-TEI.</p>
+                <p>● Translation alignment: Advanced tools for aligning texts across languages and versions, supporting granular associations (e.g., sections, paragraphs, sentences, or words) and enabling both semantic annotation and linguistic analysis. This module also fosters comparative studies across translations and versions, allowing insights into stylistic, cultural, and semantic shifts.</p>
+                <p>● Publishing and visualization: Utilizing frameworks like TEI-Publisher and IIIF, DiScEPT allows for the flexible representation of texts, images, and annotations across web interfaces, print-ready formats, and linked open data environments.</p>
+                <p>● Data sustainability: The platform adheres to FAIR principles, ensuring its outputs remain accessible, reusable, and interlinked within broader scholarly ecosystems.</p>
+                <p>DiScEPT provides an innovative resource for studying linguistic mobility, intercultural exchange, and the evolution of textual traditions by addressing the alignment of translations and fostering multilingual text studies. It supports high-quality editorial practices and contributes to the accessibility and inclusivity of digital scholarly editions. The project’s commitment to open standards, reusable components, and interdisciplinary collaboration ensures that DiScEPT remains a valuable resource both for traditional philologists and the broader digital humanities community.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Modeling for digital scholarly editions with translation alignment</head>
+                <p>The metadata model in DiScEPT is specifically designed to support digital scholarly editions with aligned translations, prioritising usability, interoperability, and accessibility. Built upon TEI P5 (Text Encoding Initiative), the Web Annotation Data Model, and semantic technologies, this model encodes relationships between original texts and their translations in a structured, reusable manner. Adhering to the principles outlined in TEI Module 16: "Linking, Segmentation, and Alignment," the model facilitates the accurate representation of textual relationships across languages, enabling comprehensive analysis of the alignment between source texts and their translations.</p>
+                <p>A key feature of this model is the use of stand-off annotations, which allow DiScEPT to preserve the integrity of the original content while enabling detailed segmentation and alignment. Central to this approach is the &lt;annotation&gt; element, which facilitates the identification and documentation of translation correspondences at various levels of granularity—from entire sections and paragraphs to individual words. This flexibility supports various research goals, from broad comparative studies to fine-grained analyses of specific linguistic or stylistic choices.</p>
+                <p>The metadata schema incorporates flexible components for generating, managing, and exporting data, allowing for creating IIIF-compatible manifests that integrate textual and image annotations into a cohesive, interoperable format. These manifests serve as containers for a wide range of metadata, including linguistic features, cultural context, and interpretative annotations, which are invaluable for interdisciplinary research. Additionally, semantic descriptions encoded through these annotations provide a deeper understanding of text relationships, highlighting shifts in meaning, style, and cultural context across translations.</p>
+                <p>This rich, structured metadata framework supports in-depth philological and translational analysis, making it a powerful tool for scholars studying textual shifts and the broader intercultural dynamics involved in translation. Through its emphasis on flexibility, reusability, and semantic depth, the metadata model in DiScEPT fosters a more nuanced approach to studying multilingual texts and their translations.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Automatic Translation Alignment in Digital Scholarly Editions</head>
+                <p>The integration of advanced automatic alignment tools like BERT Align enhances DiScEPT's capabilities, especially in multilingual contexts. Using the well-known Transformers-based language models BERT (Devlin et al., 2019) (based on self-attention and contextual embeddings, excelling at detecting semantic correspondences across languages), this tool efficiently automates the alignment process, matching linguistic units ranging from sentences to individual words. . Techniques such as token-level alignment further refine its precision, enabling nuanced mappings even in complex textual structures.</p>
+                <p>However, despite its powerful capabilities, BERT Align comes with limitations. The reliance on large pre-trained models demands considerable computational resources for fine-tuning, which can be challenging for smaller research projects or under-resourced languages. Additionally, while it excels with widely spoken languages, its performance diminishes with less-resourced or non-standard languages due to limited exposure during pre-training. This challenge of underrepresentation in the training data can result in less accurate alignments for these linguistic contexts.</p>
+                <p>Annotations generated through BERT Align can be manually refined and incorporated into DiScEPT's stand-off annotation framework, supporting data serialization in formats like RDF and JSON-LD. This enables large-scale comparative studies, offering a deeper understanding of translational and intercultural dynamics while maintaining long-term sustainability through open, interoperable standards supported by DiScEPT.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Sustainability and DiScEPT software</head>
+                <p>The software developed for translation alignment within DiScEPT is designed to be open and flexible. It operates client-side, allowing it to be integrated as a component into other software systems. As an open-source tool, it is customisable and adaptable, enabling various communities to modify it according to their specific needs and research goals. This approach encourages broader adoption across diverse interdisciplinary fields.</p>
+                <p>In conclusion, DiScEPT integrates with infrastructures such as ILC4CLARIN, part of the CLARIN-IT consortium, to ensure the long-term preservation and accessibility of its resources. Managed by the Istituto di Linguistica Computazionale (ILC), ILC4CLARIN provides the technical backbone for storing, preserving, and disseminating DiScEPT’s outputs. By aligning its metadata practices with CLARIN’s FAIR compliance framework, DiScEPT ensures that its data and tools remain sustainable, interoperable, and accessible to the global research community.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Boschetti, Federico/ Taddei Andrea, Bambaci, Luigi/ Del Grosso Angelo Mario/ Mugelli, Gloria/ Khan, Fahad/ Bellandi, Andrea</hi> (2023): “Collaborative and Multidisciplinary Annotations of Ancient Texts: the Euporia System”, in: Bigot Juloux, Vanessa/ di Ludovico, Alessandro/ Matskevich, Sveta (eds.): 
+                        <hi rend="italic">The Ancient World Goes Digital Case Studies on Archaeology, Texts</hi>, 
+                        <hi rend="italic">Online Publishing, Digital Archiving, and Preservation</hi>. Leiden-Boston: Brill 172–223.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Boschetti, Federico/ Rigobianco, Luca/ Quochi, Valeria</hi> (2023): “Domain-Specific Languages for Epigraphy: The Case of ItAnt”, in: 
+                        <hi rend="italic">CLARIN Annual Conference Proceedings </hi>80-84
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Cushman, Ellen </hi>(2020): “Supporting Manuscript Translation in Library and Archival Collections: Toward Decolonial Translation Methods”, in: Mizruchi, Susan L. (ed.): 
+                        <hi rend="italic">Libraries and Archives in the Digital Age</hi>. London: Palgrave Macmillan.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Devlin, J., Chang, M.-W., Lee, K. and Toutanova, K.</hi> (2019): “BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding”, in: Association for Computational Linguistics (ed.): 
+                        <hi rend="italic">Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies </hi>1. Minneapolis, Minnesota 4171-4186 doi:10.18653/v1/N19-1423. https://aclanthology.org/N19-1423.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Daquino, Marilena/ Giovannetti, Francesca/ Tomasi, Francesca </hi>(2019): “Linked Data per le Edizioni Scientifiche Digitali. Il Workflow di pubblicazione dell’edizione semantica del Quaderno di Appunti di Paolo Bufalini”, in: 
+                        <hi rend="italic">Umanistica Digitale</hi> 3,7: 49-75. DOI: 10.6092/.2532-8816/9091
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Froeliger, Nicolas </hi>(2013): 
+                        <hi rend="italic">Les Noces de l'analogique et du numérique. De la traduction pragmatique.</hi> Paris: Les Belles Lettres.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Ladmiral, Jean-René</hi> (2014): 
+                        <hi rend="italic">Sourcier ou cibliste.</hi> Paris: Les Belles Lettres.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Martignano, Chiara</hi> (2021): “A Conceptual Model to Encourage the Development and Reuse of Apps for Digital Editions”, in: 
+                        <hi rend="italic">Umanistica Digitale</hi> 5, 10: 71-88. DOI: 10.6092/2532-8816/12620.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Pierazzo, Elena</hi> (2015): 
+                        <hi rend="italic">Digital Scholarly Editing: Theories, Models and Methods</hi>. Farnham, Surrey: Ashgate.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Romanzi, Andrea</hi> (2020): “Er jeg Rolf Jacobsen da? Traduzione e appropriazione dell’identità”, in: Gargiulo, M. (ed.) 
+                        <hi rend="italic">Incroci. Luoghi della creatività e della comunicazione</hi>, Roma: Aracne 189-204.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Viglianti, Raffaele</hi> (2019): “Why TEI Stand-off Markup Authoring Needs Simplification”, in: 
+                        <hi rend="italic">Journal of the Text Encoding Initiative</hi> 10 &lt;
+                        <ptr target="https://journals.openedition.org/jtei/1838"/>&gt; [16/06/2019].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Spadini, Elena and Turska, Magdalena</hi> (2019): “XML-TEI Stand-off Markup: One Step Beyond. Digital Philology”, in: 
+                        <hi rend="italic">A Journal of Medieval Cultures</hi> 8: 225-239. DOI: 10.1353/2019.0025.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Pozzo, Riccardo/ Gatta Timon/ Hohenegger, Hansmichael/ Kuhn, Jonas/ Pichler, Axel/ Turchi, Marco and Genabith, Josef van </hi>(2022): “Aligning Immanuel Kant’s Work and its Translations”, in: Fišer, D. and Witt, A. (eds.): 
+                        <hi rend="italic">CLARIN The Infrastructure for Language Resources</hi>. Berlin, Boston: De Gruyter 727-746. DOI: 10.1515/9783110767377-029.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

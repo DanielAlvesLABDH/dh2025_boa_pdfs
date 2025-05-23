@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KITAZAKI_Yuho_Structuring_and_Issues_of_Late_Middle_Japanese">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Structuring and Issues of Late Middle Japanese Materials: Focusing on ‘Shōmono’, a commentary on Chinese poetry and prose</title>
+                <author>
+                    <persName>
+                        <surname>Kitazaki</surname>
+                        <forename>Yuho</forename>
+                    </persName>
+                    <affiliation>The University of Osaka, Japan</affiliation>
+                    <email>yuho.hmt@osaka-u.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Furuta</surname>
+                        <forename>Tatsuhiro</forename>
+                    </persName>
+                    <affiliation>Kyushu Sangyo University, Japan</affiliation>
+                    <email>t-furuta@ip.kyusan-u.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Murayama</surname>
+                        <forename>Miwako</forename>
+                    </persName>
+                    <affiliation>Japan Women's University, Japan</affiliation>
+                    <email>murayamam@fc.jwu.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Watanabe</surname>
+                        <forename>Yuki</forename>
+                    </persName>
+                    <affiliation>Tokoha University, Japan</affiliation>
+                    <email>ywatanabe@sz.tokoha-u.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ogiso</surname>
+                        <forename>Toshinobu</forename>
+                    </persName>
+                    <affiliation>National Institute for Japanese Language and Linguistics, Japan</affiliation>
+                    <email>togiso@ninjal.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Aoki</surname>
+                        <forename>Hirofumi</forename>
+                    </persName>
+                    <affiliation>Kyushu University, Japan</affiliation>
+                    <email>h-aoki@lit.kyushu-u.ac.jp</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-25T07:25:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Historical linguistics</term>
+                    <term>Corpus Linguistics</term>
+                    <term>History of Japanese language</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>natural language processing</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>Linguistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">‘
+                <hi rend="italic">Shōmono</hi>’ refers to commentaries on Chinese classics and Buddhist scriptures compiled by monks and scholars. As these materials are often compiled as lecture notes based on oral transcriptions, they are valuable sources that reflect the spoken language in Late Middle Japanese (14th-16th centuries).
+            </p>
+            <p style="text-align: left; ">Despite their significance, Shōmono texts are often largely overlooked in historical Japanese studies due to their complexity and limited accessibility. Little progress has been made in creating reprinted versions and indexes and digitizing texts. Although corpus-based research on the history of the Japanese language has advanced significantly over the past decade, existing diachronic corpora (a type of corpus that includes texts from different periods) do not include Shōmono (Aoki 2022). XML markup is known to play an important role in building corpora for linguistic analysis of historical materials. For Japanese historical texts, studies on Kyōgen scripts by Ichimura et al. 2015 and Sharebon (early modern Japanese novels) by Kawase et al. 2014. In particular, Okada 2022 and Kubo et al. 2024. focus on annotated or glossed materials. This study builds on these foundations by developing an XML structure specifically for Shōmono texts and creating a corpus.</p>
+            <p style="text-align: left; ">This project specifically aims: (1) to develop standardized annotation guidelines for digitizing Shōmono texts, (2) to create a pilot corpus of selected texts from the Late Middle Japanese, and (3) to establish a framework for marking up the relationship between classical Chinese texts and their Japanese annotations. The resulting corpus will enable researchers to conduct comprehensive analyses of the linguistic features of Late Middle Japanese, including lexical choices, grammatical patterns, and characteristic discourse structures. To understand the problems in digitizing Shōmono, we selected ‘
+                <hi rend="italic">Chūka Jakuboku Shishō</hi>’ (Commentary on Chinese and Japanese Poetries) by 
+                <hi rend="italic">Nyogetsu Juin</hi> as a model case and created the text data. It is a collection of 261 Chinese poems with Japanese commentaries and explanations. Figure 1 shows a part of this material as an example. The green frame shows the title and author information, the blue frame shows part of the Chinese poetry quotation, and the orange frame shows a commentary on the Chinese poetry quotation.
+            </p>
+            <figure>
+                <graphic n="1001" width="11.248569444444444cm" height="8.921783333333334cm" url="/tmp/tmpffe9cu1n/Pictures/bffcbd17f1812725c951d02a95ca197f.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 1 Structure of 
+                <hi rend="italic">Chūka Jakuboku Shishō</hi>
+            </p>
+            <p style="text-align: left; ">First, we assembled multiple manuscripts and printed editions to establish a reliable main text, which was then converted into textual data. Next, we implemented XML markup, partly referring to the TEI (Text Encoding Initiative guidelines for encoding digital texts) guidelines, to distinguish between multiple text elements, such as the original Chinese text, Japanese commentaries, and metadata. We used the Oxygen XML Editor to assist with the XML markup. Figure 2 shows the XML schema and Figure 3 shows an annotation example. Furthermore, we augmented this XML data with morphological information (e.g., tokenization and part-of-speech classification) using a dictionary trained from non-Shōmono materials. Morphological information is provided as standoff annotations linked to the XML documents.</p>
+            <figure>
+                <graphic n="1002" width="10.931069444444445cm" height="5.294375cm" url="/tmp/tmpffe9cu1n/Pictures/bffcbd17f1812725c951d02a95ca197f.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 2 XML schema for Shōmono</p>
+            <figure>
+                <graphic n="1003" width="9.631375cm" height="7.735452777777778cm" url="/tmp/tmpffe9cu1n/Pictures/bffcbd17f1812725c951d02a95ca197f.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 3 Part of the corpus (XML)</p>
+            <p style="text-align: left; ">One of the primary challenges in developing a corpus of Shōmono texts is addressing the complex interplay of multiple writing styles and languages within a text. Shōmono texts coexist with quotations from Chinese poetries, their vernacular readings (direct translations into written Japanese), and annotations and commentaries in spoken Late Middle Japanese. This stylistic feature complicates the application of uniform morphological analysis. To address this issue, we propose a markup system that distinguishes quoted and annotated sections. By focusing on the morphological analysis of annotations, we can preserve the structural integrity of texts while facilitating linguistic research. For annotations, we also need to mark the correspondence between the commentary and Chinese source text. Therefore, this study also addresses a methodological approach to systematically documenting text-annotation correspondences.</p>
+            <p style="text-align: left; ">This presentation provides an overview of our project’s methodology and progress, including the development of the structuring policy and the preliminary results. The resulting corpus will serve as a valuable resource not only for historical linguistics but also for researchers in related fields such as Buddhist studies, the history of ideas, and the history of education. Moreover, our study provides a model for considering the structures of materials that are annotated or have multiple writing styles.</p>
+            <p style="text-align: left; ">Acknowledgments</p>
+            <p style="text-align: left; ">This work was supported by the NINJAL collaborative research project 'Co-creation of Research Infrastructure Through the Integration of Diverse Lexical Resources' and JSPS KAKENHI Grant Number JP24H00089.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Aoki, Hirofumi</hi> (2022): “Shōmono Shiryō ni yoru Nihongo Kenkyū no Tenbō [Prospecgts for Research on the History of the Japanese Language Using Shōmono Materials]”, in: 
+                        <hi rend="italic">Kokugo Kokubun</hi> 91(11): 2–10.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Ichimura, Taro / Watanabe, Yuki / Kono, Tomoaki / Ogiso</hi>, 
+                        <hi rend="bold" xml:space="preserve">Toshinobu, </hi>(2015): “Construction of the Corpus of Toraakira-bon Kyōgen”, in: 
+                        <hi rend="italic">DH2015</hi>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Kawase, Akihiro / Ichimura, Taro / Ogiso, Toshinobu </hi>(2014): “Problems in Encoding Documents of Early Modern Japanese”, in: 
+                        <hi rend="italic">DH2014</hi>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Kubo, Masako / Ichimura, Taro / Ogiso, Toshinobu </hi>(2022): “Design and Construction of the Corpus of “Kokinshu-Tōkagami”: An Early Modern Annotated Book on Classical Japanese Poetry Anthology”, in: 
+                        <hi rend="italic">DH2024</hi>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Okada, Kazuhiro</hi> (2022): “Considerations for the TEI encoding of Sino-Japanese Glossed Materials”, in: 
+                        <hi rend="italic">DH2022</hi>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

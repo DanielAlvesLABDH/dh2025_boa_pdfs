@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MICHIELIN_Lucia_Mind_the_Gap__Supporting_code_free_Computati">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Mind the Gap! Supporting code-free Computational research through Small Scale Apps</title>
+                <author>
+                    <persName>
+                        <surname>Michielin</surname>
+                        <forename>Lucia</forename>
+                    </persName>
+                    <affiliation>University of Edinburgh, United Kingdom</affiliation>
+                    <email>lucia.michielin@ed.ac.uk</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-14T08:38:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Non-coding tools for Digital Humanities</term>
+                    <term>Messy Data</term>
+                    <term>Data Architectures</term>
+                    <term>Shiny Apps</term>
+                    <term>Accessibility</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>open access methods</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>Computer science</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p rend="paragraph" style="text-align: left; ">
+                <hi rend="normaltextrun">The use of non-coding-based tools in digital humanities has considerably widened the accessibility to computational research, enabling scholars without programming expertise to employ advanced methods for data analysis of structured and unstructured data. Although critical and thoughtful approach to the proliferation and functionality of these tools is essential when engaging with them (
+                    <hi rend="color(3A3A3A)" style="font-family:Source Sans Pro">van Es 2023</hi>), it is undeniable their role as inclusivity platform for DH practitioners. For example, tools such as 
+                </hi>
+                <ref target="https://www.laurenceanthony.net/software/antconc/">
+                    <hi rend="normaltextrun">
+                        <hi rend="underline color(0563C1)" style="font-family:Source Sans Pro;font-size:11pt">AntConc</hi>
+                    </hi>
+                </ref>
+                <hi rend="superscript">
+                    <hi rend="superscript" style="font-family:Source Sans Pro;font-size:8.5pt">1</hi>
+                </hi>
+                <hi rend="normaltextrun"> and </hi>
+                <ref target="https://lancsbox.lancs.ac.uk/">
+                    <hi rend="normaltextrun">
+                        <hi rend="underline color(0563C1)" style="font-family:Source Sans Pro;font-size:11pt">LancsBox</hi>
+                    </hi>
+                </ref>
+                <hi rend="superscript">
+                    <hi rend="superscript" style="font-family:Source Sans Pro;font-size:8.5pt">2</hi>
+                </hi>
+                <hi rend="normaltextrun"> provide intuitive graphical interfaces that facilitate tasks the analysis of unstructured data. On the other hand, tools such as </hi>
+                <ref target="https://openrefine.org/">
+                    <hi rend="normaltextrun">
+                        <hi rend="underline color(0563C1)" style="font-family:Source Sans Pro;font-size:11pt">OpenRefine</hi>
+                    </hi>
+                </ref>
+                <hi rend="normaltextrun"> which is designed to handle large and messy datasets efficiently can help for tasks like data wrangling and standardisation of tabular datasets.</hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; ">
+                <hi rend="normaltextrun">Unstructured data analysis tools have helped to democratise computational methods, removing technical barriers and fostering interdisciplinary research in many DH fields. The relatively easier accessibility to advanced analytical techniques (without the need of programming skills), allow a broader range of scholars to engage with data-driven approaches, enhancing innovation and collaboration in the digital humanities  (e.g. Griffin &amp; Hayler 2018).</hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; ">
+                <hi rend="normaltextrun">However, despite this accessibility, their utility often hinges on the assumption that the data being analysed is already clean, structured, and ready for ingestion. This is rarely the case with real-world data, whether it is scraped from the web or sourced from digital collections. Such data is frequently unstructured, riddled with inconsistencies in formatting, incomplete entries, and typos. Web-scraped data, for instance, may include irrelevant content such as advertisements, duplicates, or noise, while digitised collections often suffer from issues like outdated scanning methods, OCR errors, or insufficient metadata standardisation. These challenges necessitate extensive data cleaning and pre-processing, which can involve merging datasets, standardising formats, resolving inconsistencies, and removing irrelevant entries. Furthermore, the heterogeneity of data sources introduces biases and gaps that, if not carefully addressed, can skew analytical outcomes and limit the reliability of results. These wrangling tasks if performed manually can require a consistent amount of time and while tools like the aforementioned OpenRefine can help with many of these tasks it relies on a data architecture that differs significantly from that required by text analysis applications like AntConc or LancsBox. Transitioning between these architectures— i.e. moving from a tabular data structure used in cleaning tools to the textual or corpus-based formats needed for analysis—can be accomplished with programming languages like R or Python. However, this process is not easily managed within non-coding tools themselves, creating vicious circle where 90 % of the workflow can be performed via graphic interfaces but the remaining 10% impede the creation of efficient workflows and increase the data-processing times.</hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; ">
+                <hi rend="normaltextrun">A practical solution to addressing the gap between messy data and non-coding analysis tools lies in developing small-scale applications that effectively integrate with existing tools, rather than creating additional large-scale solutions.</hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; ">
+                <ref target="https://lucia-michielin.shinyapps.io/shinyapp/">
+                    <hi rend="normaltextrun">
+                        <hi rend="underline color(0563C1)" style="font-family:Source Sans Pro;font-size:11pt">The Shiny App here presented,</hi>
+                    </hi>
+                </ref>
+                <hi rend="normaltextrun"> facilitates data transformation by converting unstructured into structured datasets and vice versa. </hi>
+                <ref target="https://shiny.posit.co/">
+                    <hi rend="normaltextrun">
+                        <hi rend="underline color(0563C1)" style="font-family:Source Sans Pro;font-size:11pt">Shiny Apps</hi>
+                    </hi>
+                </ref>
+                <hi rend="normaltextrun"> allow the creation of custom web applications that integrate user-friendly interfaces with data processing capabilities. The application, still a demo, allows users to transform unstructured .txt files into a single, structured CSV file, capturing the content of each text file across multiple rows or columns in a format suitable for further analysis. Users can specify which sections of the text should be extracted and mapped into individual columns, making the data ready for processing. Conversely, the app can also take structured CSV files and convert them back into individual .txt files, extracting text from selected columns. The app automatically handles common text encoding issues, provides real-time progress updates, and allows users to build informative files names using a combination of the CSV files variables. This simple yet effective workflow demonstrates how Shiny can be employed to bridge the gap between messy raw data and structured datasets that are ready for analysis.</hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; ">
+                <hi rend="normaltextrun">In addition to this text conversion functionality, small-scale Shiny apps can be created to tackle a variety of other data cleaning and preprocessing tasks. For example, it could help researchers clean large corpora by resolving OCR errors, standardising metadata, or filtering irrelevant content. By embedding these data preprocessing tasks into, user-friendly apps non-technical researchers can prepare their data for analysis without requiring coding expertise. Shiny’s flexibility also allows real-time interaction, where users can adjust parameters, preview results, and dynamically fine-tune the data processing workflow. In this way, these apps can complement existing non-coding tools by streamlining the data wrangling process, making the entire research workflow—from data cleaning to analysis—more accessible to a broader range of scholars across disciplines without the need of creating yet new large apps. </hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; ">
+                <hi rend="normaltextrun">Finally, adopting a "small-scale approach" that utilises ad-hoc apps to bridge gaps between existing tools, rather than contributing to the proliferation of new tools, can promote environmental sustainability.</hi>
+                <hi rend="eop"> </hi>
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl rend="paragraph" style="text-align: left; ">
+                        <hi rend="normaltextrun">
+                            <hi rend="bold" style="font-family:Source Sans Pro;font-size:11pt">Griffin, G</hi>
+                            <hi rend="bold" style="font-family:Source Sans Pro;font-size:11pt">.</hi>
+                            <hi rend="bold" style="font-family:Source Sans Pro;font-size:11pt" xml:space="preserve"> &amp; Hayler, M</hi>. (2018), 'Collaboration in Digital Humanities Research – Persisting Silences', Digital Humanities 
+                            <hi rend="italic" style="font-family:Source Sans Pro;font-size:11pt">Quarterly</hi>, vol. 12, no. 1.
+                        </hi>
+                        <hi rend="eop"> </hi>
+                    </bibl>
+                    <bibl rend="paragraph" style="text-align: left; ">
+                        <hi rend="normaltextrun">
+                            <hi rend="bold color(3A3A3A)" style="font-family:Source Sans Pro;font-size:11pt">V</hi>
+                            <hi rend="bold color(3A3A3A)" style="font-family:Source Sans Pro;font-size:11pt">an Es, K.</hi>
+                            <hi rend="color(3A3A3A)" style="font-family:Source Sans Pro;font-size:11pt" xml:space="preserve"> (2023)</hi>
+                            <hi rend="color(3A3A3A)" style="font-family:Source Sans Pro;font-size:11pt">,</hi>
+                            <hi rend="color(3A3A3A)" style="font-family:Source Sans Pro;font-size:11pt">‘</hi>
+                            <hi rend="color(3A3A3A)" style="font-family:Source Sans Pro;font-size:11pt">Unpacking tool criticism as practice, in practice</hi>
+                            <hi rend="color(3A3A3A)" style="font-family:Source Sans Pro;font-size:11pt" xml:space="preserve">’, </hi>
+                            <hi rend="italic color(3A3A3A)" style="font-family:Source Sans Pro;font-size:11pt">Digital humanities quarterly</hi>
+                            <hi rend="color(3A3A3A)" style="font-family:Source Sans Pro;font-size:11pt">. 17 (2)</hi>
+                        </hi>
+                        <hi rend="eop">
+                            <hi rend="color(3A3A3A)" style="font-family:Source Sans Pro;font-size:11pt"> </hi>
+                        </hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

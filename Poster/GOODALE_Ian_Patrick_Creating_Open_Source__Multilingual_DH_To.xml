@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="GOODALE_Ian_Patrick_Creating_Open_Source__Multilingual_DH_To">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Creating Open Source, Multilingual DH Tools with Rust</title>
+                <author>
+                    <persName>
+                        <surname>Goodale</surname>
+                        <forename>Ian Patrick</forename>
+                    </persName>
+                    <affiliation>University of Texas at Austin, United States of America</affiliation>
+                    <email>ian.goodale@austin.utexas.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-14T15:29:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>rust</term>
+                    <term>natural language processing</term>
+                    <term>text analysis</term>
+                    <term>open source</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>natural language processing</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>text mining and analysis</term>
+                    <term>Computer science</term>
+                    <term>Humanities computing</term>
+                    <term>Linguistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Rust is a popular and still-growing programming language, but has relatively little use in the digital humanities compared to other languages (Wachowiak 2022). This poster will explore the benefits Rust can offer DH practitioners and researchers through a case study of three DH packages I wrote in the language, exploring the structure and practical application of these packages, the value of creating one’s own tools
+                <note place="foot" xml:id="ftn1" n="1"/>, and the way Rust lends itself to their use cases. It will also explore the importance of incorporating principles of reusability in open source programming, particularly as they relate to research-oriented or DH codebases.
+            </p>
+            <p>The packages highlighted in this poster include a package for performing lemmatization, a key natural language processing (NLP) task, on text 
+                <hi style="font-size:9pt">(</hi>Tenen 2016); a package for assessing the readability of a text containing a variety of algorithms to choose from (Goodale 2024); and a package to perform stylometric analysis on text (Goodale 2024). They were all built with multilingual support in mind, and as such are specifically designed to move outside of an Anglocentric paradigm often found in technologies for NLP and textual analysis (Dombrowski 2024), creating new opportunities for multilingual and non-English textual analysis and digital humanities. This poster will discuss how this multilingual approach is complemented and supported by the unique features of Rust—such as its emphasis on memory safety and verbose error messages—as well as how these packages create new opportunities for DH practitioners to use the Rust language in their work, providing a technical groundwork for others to build on. It will also explore how the packages can be used both by experienced programmers in their work, either as is or as springboards for further open source development, and as demonstrations of the applicability of Rust to DH in a pedagogical context, as they are simple enough to use in a more introductory educational setting. These practical applications will be situated within the context of DH as a fundamentally collaborative and often community-based discipline (or network of disciplines), highlighting how these packages contribute to this community by furthering natural language processing and multilingual support within the Rust ecosystem. 
+            </p>
+            <p>Furthermore, the poster will highlight the value and methodologies used to create the tools, offering practical examples of how building one’s own DH tools can be applied both to individualized research applications and to a wider, general purpose audience of DH practitioners. Reusability is an important focus in open science and open source programming, and these principles can greatly benefit DH codebases (Paschali 2017). The poster will describe the design choices behind the software and how these were made, with an emphasis on how principles of reusability, readability, and open source collaboration and community were implemented in the code. This section of the poster will thereby engage with ongoing discussions within DH on the importance of open access code and code sharing (Benedict 2018). I will highlight not only the design choices and principles of the code itself, but the intentions behind the licensing and hosting of the code online, discussing why the code was shared on both GitHub and crates.io, the Rust ecosystem’s central registry for sharing packages and libraries written in Rust. I will also discuss the implications of coding in a language like Rust for increasing accessibility, reaching a broad audience, and encouraging code reusability.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="background(white)">Benedict, Nora, Benjamin W. Hicks, and Rebecca Sutton Koeser. “Bridging Digital Humanities</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="background(white)" xml:space="preserve">	Internal and Open Source Software Projects Through Reusable Building Blocks”. </hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="background(white)" xml:space="preserve">Presented at the Digital Humanities 2018 (DH2018), Mexico City, Mexico, 2018. </hi>
+                    </bibl>
+                    <bibl>
+                        <ref target="https://doi.org/10.17613/mnwg-sj89">
+                            <hi rend="underline color(1155CC) background(white)">https://doi.org/10.17613/mnwg-sj89.</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>Dombrowski, Quinn. “What’s a ‘Word’: Multilingual DH and the English Default,” October 15, 2020. Accessed November 19, 2024.
+                        <ref target="https://dh2018.adho.org/en/bridging-digital-humanities-internal-and-open-source-software-projects-through-reusable-building-blocks/" xml:space="preserve"> </ref>
+                        <ref target="https://quinndombrowski.com/blog/2020/10/15/whats-word-multilingual-dh-and-english-default/undefined">
+                            <hi rend="underline color(1155CC)">https://quinndombrowski.com/blog/2020/10/15/whats-word-multilingual-dh-and-english-default/undefined</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Goodale, Ian. “Rust_Lemmatizer.” GitHub, September 14, 2024.
+                        <ref target="https://github.com/ian-nai/rust_lemmatizer" xml:space="preserve"> </ref>
+                    </bibl>
+                    <bibl>
+                        <ref target="https://github.com/ian-nai/rust_lemmatizer">
+                            <hi rend="underline color(1155CC)">https://github.com/ian-nai/rust_lemmatizer</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Goodale, Ian. “Rust_Readability.” GitHub, October 16, 2024.</bibl>
+                    <bibl>
+                        <ref target="https://github.com/ian-nai/rust_readability">
+                            <hi rend="underline color(1155CC)">https://github.com/ian-nai/rust_readability</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Goodale, Ian. “Rust_Stylometry.” GitHub, June 19, 2024.
+                        <ref target="https://github.com/ian-nai/rust_stylometry" xml:space="preserve"> </ref>
+                    </bibl>
+                    <bibl>
+                        <ref target="https://github.com/ian-nai/rust_stylometry">
+                            <hi rend="underline color(1155CC)">https://github.com/ian-nai/rust_stylometry</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Tenen, D. (2016). “Blunt Instrumentalism: On Tools and Methods.” 
+                        <hi rend="italic" xml:space="preserve">Debates in the Digital </hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="italic">Humanities</hi>, 83–91.
+                    </bibl>
+                    <bibl>Paschali, Maria-Eleni, Apostolos Ampatzoglou, Stamatia Bibi, Alexander Chatzigeorgiou, and </bibl>
+                    <bibl> Ioannis Stamelos. “Reusability of Open Source Software across Domains: A Case </bibl>
+                    <bibl> Study.” Journal of Systems and Software 134 (December 1, 2017): 211–27.</bibl>
+                    <bibl>
+                        <ref target="https://doi.org/10.1016/j.jss.2017.09.009">
+                            <hi rend="underline color(1155CC)">https://doi.org/10.1016/j.jss.2017.09.009</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Wachowiak, Mark P. (2022.). “The ‘R Vs. Python’ Debate in The Digital Humanities.” 
+                        <hi rend="italic" xml:space="preserve">Digital </hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="italic">Humanities Tools and Techniques I.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

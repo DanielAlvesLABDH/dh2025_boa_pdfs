@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KIM_Minji_Preserving_Musical_Ephemera___A_Digital_Archive_Fr">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Preserving Musical Ephemera : A Digital Archive Framework for Classical Vocal Music</title>
+                <author>
+                    <persName>
+                        <surname>Kim</surname>
+                        <forename>Minji</forename>
+                    </persName>
+                    <affiliation>Seoul National Univeristy, Korea, Republic of (South Korea)</affiliation>
+                    <email>happyhill@snu.ac.kr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Lee</surname>
+                        <forename>Eunsoo</forename>
+                    </persName>
+                    <affiliation>Seoul National Univeristy, Korea, Republic of (South Korea)</affiliation>
+                    <email>les99@snu.ac.kr</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-08T18:14:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>musical heritage</term>
+                    <term>musical ephemera</term>
+                    <term>ontology development</term>
+                    <term>data visualization</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data modeling</term>
+                    <term>digital archiving</term>
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>metadata standards</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>Cultural studies</term>
+                    <term>Library &amp; information science</term>
+                    <term>Musicology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">
+                <hi style="font-size:10pt">T</hi>his paper presents a novel ontology for archiving ephemera data collected from classical vocal music performances in South Korea and proposes a web page that enables cross-sectional exploration. 
+                <hi rend="bold" xml:space="preserve">Musical performance ephemera </hi>—such as posters, programmes, brochures, and tickets— have long been overlooked in digital humanities research and are often excluded from detailed cataloguing and collection inventories, despite their potential to provide valuable insights into socio-cultural contexts and enrich our understanding of musical culture (Bainbridge et al., 2023). In the context of South Korean classical vocal music, ephemeral and contextual data remain highly fragmented across disparate sources. Furthermore, the digital-born data from these platforms is recorded in heterogeneous formats (e.g., .gif, .png, .txt), posing significant challenges for data integration and analysis. Addressing these issues necessitates the development of a domain-specific ontology tailored to the unique characteristics of classical vocal performance data. In response, this paper introduces a novel ontology designed specifically for the ephemera of classical vocal music performances in South Korea. Additionally, it proposes an interactive web page with cross-sectional search capabilities, aimed at mitigating information overload, facilitating efficient data retrieval, and promoting the sustainability of archival processes. This study uses classical vocal performances in South Korea as a representative example to ensure data consistency and focus in the development of the proposed framework, although these challenges are not exclusive to this domain. 
+            </p>
+            <p style="text-align: left; ">Ontology, defined as a structured vocabulary and a comprehensive semantic framework of shared knowledge that includes a collection of concepts, their meanings, and their relationships (Uschold and Gruninger, 1996), serves as the foundation for addressing complex and diverse datasets. Building on this foundation, the study examines a range of music- and performance-related ontology projects—including 
+                <hi rend="italic" style="font-size:10pt">InConcert</hi> (Nurmikko-Fuller et al. 2016), 
+                <hi style="font-size:10pt">DOREMUS</hi> (Lisena / Troncy 2017), 
+                <hi rend="italic" style="font-size:10pt">MusicBrainz</hi> (Swartz 2002), 
+                <hi rend="italic" style="font-size:10pt">JazzCats</hi> (Bangert et al. 2018), 
+                <hi rend="italic" style="font-size:10pt">The Jazz Ontology</hi> (Proutskova et al. 2022), and 
+                <hi rend="italic" style="font-size:10pt">The Music Meta Ontology</hi> (Berardinis et al. 2023)—to extract relevant conceptual classes and terms from widely adopted standards. By synthesizing key components from these diverse ontologies, it develops a customized structure tailored to the characteristics of classical vocal performance ephemera. This process involves both reviewing standard vocabularies and examining locally extended models to construct a domain-specific ontology. The resulting ontology captures culturally and contextually significant metadata fields such as performance descriptions, program sequences, composer information, performer backgrounds, and accompanist information. Grounded in RDF and Linked Open Data principles, the proposed framework ensures interoperability across platforms, addresses challenges of data fragmentation, and fosters both community engagement and public participation in the archiving process. 
+            </p>
+            <p style="text-align: left; ">The data collection phase employed manual efforts to ensure the precision and contextual relevance of the information gathered, allowing researchers to directly examine the heterogeneous formats of the data. Currently, the focus is on collecting data on classical vocal music performances in South Korea, covering the period from 2015 to 2024. The dataset encompasses five main categories: (1) core performance details (title, time, venue); (2) musical content (performed works); (3) contributors (performers, composers, creators, producers, researchers, and organizations); (4) equipment (instruments, recording tools, stage devices); (5) media and ephemera (programs, posters, recordings, publications, albums). Data sources include three distinct platforms selected for their diverse perspectives: 
+                <hi rend="italic">Nol Ticket</hi> (https://nol.interpark.com/ticket), a leading private ticketing website; 
+                <hi rend="italic">GoClassic</hi> (https://www.goclassic.co.kr/), a community-driven platform for classical music information; and 
+                <hi rend="italic">KOPIS : Korea Performing Arts Box Office Information System</hi> (https://www.kopis.or.kr/), a government-supported platform offering structured data on performing arts events. These platforms were selected to ensure a comprehensive dataset that reflects commercial, community-based, and public-sector perspectives. The data collection methods also vary by type: performance information and performer biographies were manually curated using researcher-generated prompts, with assistance from ChatGPT, and classified based on a predefined metadata schema, with OCR applied where necessary. Concert poster images are retrieved using Selenium, a Python-based web automation tool. This multi-pronged approach ensures the dataset’s comprehensiveness and relevance, offering a balanced representation of classical vocal music performance data in South Korea. 
+            </p>
+            <p style="text-align: left; ">Building on this dataset, this study proposes the development of an accessible digital archive that enables users to explore and analyze comprehensive information on classical vocal performances. The curation of such data is critical for democratizing access, fostering user engagement, and preserving cultural heritage. To facilitate the effective visualization and analysis of the collected data, this project adopts the 
+                <hi rend="italic">VIKUS Viewer</hi>, an open-source tool developed by Christopher Pietsch at the Urban Complexity Lab of the University of Applied Sciences Potsdam (Glinka et al., 2017). Utilizing programming languages such as JavaScript and Python, the 
+                <hi rend="italic">VIKUS Viewer</hi> supports dynamic visual exploration through temporal histograms, t-SNE layouts, and keyword filtering features, enabling users to identify trends across multiple dimensions such as program content and performer details. By adopting these functionalities, this study facilitates cross-sectional searches within the curated data, uncovering trends and correlations across diverse aspects of vocal music performances. The integration of 
+                <hi rend="italic">VIKUS Viewer</hi> into this framework ensures that the archive not only serves as a repository but also as an analytical tool, enhancing public engagement and preserving the cultural and historical significance of classical vocal music. 
+            </p>
+            <p style="text-align: left; ">This study highlights the importance of developing an accessible digital archive to address the fragmented and underutilized classical vocal music performance data. By integrating a novel ontology and dynamic visualization tools like the 
+                <hi rend="italic">VIKUS Viewer</hi>, the proposed framework ensures the preservation of ephemeral digital resources while enhancing their accessibility and usability. Consolidating 10 years of performance data into a centralized platform enables users to explore previously scattered and unmanaged information in one place, supporting music professionals in planning their performances and fostering a collaborative music society. Beyond its role in preservation, the archive serves as an educational tool, offering insights into the cultural and historical significance of classical vocal music and promoting its practical application. In doing so, this framework bridges the gap between the preservation of cultural heritage and its active use, ensuring the sustainability of classical vocal music in contemporary contexts.
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Achichi, Mustapha / Lisena, Pasquale / Todorov, Kiril / Troncy, Raphaël / Delahousse, Jérôme
+                            <hi rend="normalweight" style="font-size:10pt" xml:space="preserve"> (2018): “DOREMUS: A graph of linked musical works”, in: The Semantic Web – ISWC 2018, Vol. 11137. Cham: Springer: 3–20. https://doi.org/10.1007/978-3-030-00668-6_1 [accessed: 2025-05-09]</hi>
+                        </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bainbridge, David / Cowgill, Robert / Perry, Frances / Downie, J. Stephen / Dix, Alan J. / Twidale, Michael B.
+                            <hi rend="normalweight" style="font-size:10pt" xml:space="preserve"> (2023): “Collaborative musicology: Designing a digital library of musical events ephemera”, in: Proceedings of the 10th International Conference on Digital Libraries for Musicology: 119–127.</hi>
+                        </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bangert, Daniel / Nurmikko-Fuller, Terhi / Downie, J. Stephen / Hao, Yajie
+                            <hi rend="normalweight" style="font-size:10pt" xml:space="preserve"> (2018): “</hi>
+                            <hi rend="normalweight" style="font-size:10pt">JazzCats</hi>
+                            <hi rend="normalweight" style="font-size:10pt" xml:space="preserve">: Navigating an RDF </hi>
+                            <hi rend="normalweight" style="font-size:10pt">triplestore</hi>
+                            <hi rend="normalweight" style="font-size:10pt" xml:space="preserve"> of integrated performance metadata”, in: Proceedings of the 5th International Conference on Digital Libraries for Musicology: 74–77. https://doi.org/10.1145/3273024.3273031 [accessed: 2025-05-09]</hi>
+                        </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Berardinis, Jacopo de / Carriero, Valentina A. / Meroño-Peñuela, Albert / Poltronieri, Andrea / Presutti, Valentina
+                            <hi rend="normalweight" style="font-size:10pt" xml:space="preserve"> (2023): “The Music Meta Ontology: A flexible semantic model for the </hi>
+                            <hi rend="normalweight" style="font-size:10pt" xml:space="preserve">interoperability of music metadata”, in: </hi>
+                            <hi rend="normalweight" style="font-size:10pt">arXiv</hi>
+                            <hi rend="normalweight" style="font-size:10pt" xml:space="preserve"> preprint. https://doi.org/10.48550/arXiv.2311.03942 [accessed: 2025-05-09]</hi>
+                        </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Glinka, Katrin / Pietsch, Christopher / Dörk, Moritz
+                            <hi rend="normalweight" style="font-size:10pt" xml:space="preserve"> (2017): “Past visions and reconciling views: Visualizing time, texture and themes in cultural collections”, in: Digital Humanities Quarterly, 11(2). [accessed: 2025-05-09]</hi>
+                        </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Lisena, Pasquale / Troncy, Raphaël
+                            <hi rend="normalweight" style="font-size:10pt" xml:space="preserve"> (2017): “</hi>
+                            <hi rend="normalweight" style="font-size:10pt">DOing</hi>
+                            <hi rend="normalweight" style="font-size:10pt">REusable</hi>
+                            <hi rend="normalweight" style="font-size:10pt">MUSical</hi>
+                            <hi rend="normalweight" style="font-size:10pt" xml:space="preserve"> Data (DOREMUS)”, in: K-CAP Workshops. [accessed: 2025-05-09]</hi>
+                        </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Nurmikko-Fuller, Terhi / Dix, Alan / Weigl, David M. / Page, Kevin R.
+                            <hi rend="normalweight" style="font-size:10pt" xml:space="preserve"> (2016): “In collaboration with </hi>
+                            <hi rend="normalweight" style="font-size:10pt">InConcert</hi>
+                            <hi rend="normalweight" style="font-size:10pt">: Reflecting a digital library as linked data for performance ephemera”, in: Proceedings of the 3rd International Workshop on Digital Libraries for Musicology: 17–24. [accessed: 2025-05-09]</hi>
+                        </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Proutskova, Polina / Wolff, Daniel / Fazekas, György / Frieler, Klaus / Höger, Florian / Velichkina, Olga / Solis, Gabriel / Weyde, Tillman / Pfleiderer, Martin / Crayencour, Hugo C. / Peeters, Geoffroy / Dixon, Simon
+                            <hi rend="normalweight" style="font-size:10pt" xml:space="preserve"> (2022): “The Jazz Ontology: A semantic model and large-scale RDF repositories for jazz”, in: Journal of Web Semantics, 74: 100735. https://doi.org/10.1016/j.websem.2022.100735 [accessed: 2025-05-09]</hi>
+                        </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Swartz, Aaron
+                            <hi rend="normalweight" style="font-size:10pt" xml:space="preserve"> (2002): “</hi>
+                            <hi rend="normalweight" style="font-size:10pt">MusicBrainz</hi>
+                            <hi rend="normalweight" style="font-size:10pt">: A semantic Web service”, in: IEEE Intelligent Systems, 17(1): 76–77. https://doi.org/10.1109/5254.988466 [accessed: 2025-05-09]</hi>
+                        </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Uschold, Michael / Gruninger,
+                            <hi rend="normalweight" style="font-size:10pt" xml:space="preserve"> Mark (1996): “Ontologies: Principles, methods and applications”, in: The Knowledge Engineering Review, 11(2): 93–136. [accessed: 2025-05-09]</hi>
+                        </hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

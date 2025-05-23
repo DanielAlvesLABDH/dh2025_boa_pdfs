@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BAUMANN_Noah_Jefferson_Bridging_the_Past_with_Technology__RA">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Bridging the Past with Technology: RAG Systems and Map-Based Insights into Berlin’s Cold War Transit</title>
+                <author>
+                    <persName>
+                        <surname>Baumann</surname>
+                        <forename>Noah Jefferson</forename>
+                    </persName>
+                    <affiliation>Humboldt Universität zu Berlin</affiliation>
+                    <email>noah.jefferson.baumann.1@hu-berlin.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T20:05:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>HisGis</term>
+                    <term>Data-Modelling</term>
+                    <term>RAG</term>
+                    <term>Visualizualisations</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>spatial &amp; spatio-temporal analysis</term>
+                    <term>modeling and visualization</term>
+                    <term>History</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">The poster introduces a novel approach to digital public history, leveraging Retrieval Augmented Generation (RAG) and map visuali
+                <hi rend="italic">s</hi>ations linked to a graph database to provide immersive access to historical data on Berlin's public transport system during the Cold War. 
+            </p>
+            <p style="text-align: left; ">While we possess rich datasets and share open-source code, accessibility to underlying data remains a challenge due to the technical expertise required to navigate the multiple layers of abstraction common in digital humanities projects. For instance, the original daily operations of Berlin's transport system were abstracted by contemporaneous operators into static timetable books (Fahrplanbücher). These timetables have been digitised and modelled into a complex L-space graph stored in a Neo4j database, enriched with geospatial references and external socio-political data, organi
+                <hi rend="italic">s</hi>ed as yearly snapshots across multiple decades.<ref n="1" target="ftn1"/> This comprehensive model offers critical insights into the infrastructural and socio-political dynamics of East and West Berlin during a pivotal historical period. However, for the public to gain these insights academic literature and technical programming knowledge was previously required. 
+            </p>
+            <p style="text-align: left; ">Central to this initiative of accessibility is a GraphRAG system that enables users to interact with the database via a chat interface, using natural language prompts such as “How would I travel from X to Y in 1974?” or “What vehicles served Bus line 112 in 1961?” The system generates Cypher queries for the Neo4j database, with the Large Language Model (LLM) producing answers based on retrieved data.<ref n="2" target="ftn2"/> Responses are linked to corresponding interactive map visuali
+                <hi rend="italic">s</hi>ations. By leveraging the semantic connections between station and line names and geospatial data, this integration offers a multi-modal experience that enhances user engagement and accessibility. 
+            </p>
+            <p style="text-align: left; ">This approach experiments with new technologies to explore their potential for public history—reaching new audiences, offering dynamic content, increasing engagement, and enabling large-scale collaboration.<ref n="3" target="ftn3"/> It represents an innovative dissemination method, providing a new paradigm for public interaction with historical datasets through textual and visual means. 
+            </p>
+            <p rend="DH-Heading2">Multi-Modal Visualisation and Interaction </p>
+            <p style="text-align: left; ">The project's map application, developed using Next.js and Leaflet, offers an interactive platform where users can explore the transport network for specific years. Layers representing historical maps, district landmarks, and socio-economic data can be toggled on and off, providing a multidimensional view of the city's transport infrastructure. Together with the RAG chat, this multi-modal access enhances the user's understanding by combining the precision of database querying with the intuitive appeal of geospatial visuali
+                <hi rend="italic">s</hi>ation. 
+            </p>
+            <p rend="DH-Heading2">Citizen Science Aspect </p>
+            <p style="text-align: left; ">By enhancing user interaction, we aim to engage citizen scientists who possess extensive technical knowledge of the period's public transport system.<ref n="4" target="ftn4"/> Engaging this audience through the novel RAG system not only enriches user experience but also facilitates the improvement of the underlying data. Users can suggest corrections to station placements via the interactive map or provide feedback on transport line data, such as vehicle speeds and capacities through the chat, thereby contributing to the refinement of the database. 
+            </p>
+            <p rend="DH-Heading2">Significance for Digital Humanities </p>
+            <p style="text-align: left; ">This work aligns with the conference themes of Open, Public, and Participatory Humanities. By utilising open-source technologies (e.g., HuggingFace Transformer Models, Leaflet, and Next.js) and innovative dissemination methodologies, the project demonstrates how digital tools can enhance historical research and public engagement. The integration of innovative RAG systems in a historical context represents an experimentation with significant potential for advancement in digital public history, democrati
+                <hi rend="italic">s</hi>ing access to complex datasets and fostering inclusive participation.<ref n="5" target="ftn5"/>
+            </p>
+            <p rend="DH-Heading2">Poster Experience </p>
+            <p style="text-align: left; ">The poster 
+                <hi rend="italic">features</hi> visual representations of the web application, including screenshots of the interactive map visuali
+                <hi rend="italic">s</hi>ations and the RAG-supported chat interface. Attendees will be invited to explore the tool and discuss its implications for digital public history and public engagement. By linking to the open-source code and infrastructure behind the application, the poster aims to inspire similar initiatives and encourage dialogue on the multi-modal application and general potential of RAG as a dissemination method in historical research.
+            </p>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                     For an overview of public transportation modelling, see: Shanmukhappa, et al., 2019.
+                </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                     For a review of graph-based RAG, see: Peng, et al., 2024. This is a new field but has the potential to improve naïve RAG systems through relationship-awareness, decreased textual input through abstraction and in our case the ability to pinpoint nodes in the database that we can then update features of. 
+                </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                     Leon, 2017, pg. 45.
+                </note>
+<note rend="footnote text" xml:id="ftn4" n="4">
+                     On the importance of citizen scientists for transport history, see: Divall &amp; Dienel (2009), pg. 65.
+                </note>
+<note rend="footnote text" xml:id="ftn5" n="5">
+                     For a recent assessment of the field of digital public history from two years ago, in which RAG was not yet discussed, see: Handbook of Digital Public History, (2022).
+                </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Divall, Colin M. / Dienel, Hans-Liudger</hi> (2009): "Changing histories of transport and mobility in Europe", in: 
+                        <hi rend="italic">Neue Wege in Neues Europa</hi>: 65-84.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Handbook of Digital Public History</hi> (2022): 
+                        <hi rend="italic">Handbook of Digital Public History</hi>. De Gruyter Oldenbourg. 
+                        <ref target="https://doi.org/10.1515/9783110430295">https://doi.org/10.1515/9783110430295</ref> [30.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Leon, Sharon</hi> (2017): "Complexity and Collaboration: Doing Public History in Digital Environments", in: Hamilton, Paula / Gardner, James B. (eds.): 
+                        <hi rend="italic">The Oxford Handbook of Public History</hi>. Oxford University Press. DOI: 10.1093/oxfordhb/9780199766024.013.2.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Peng, Bowen / Zhu, Yunxiang / Liu, Yunfan / Bo, Xingcheng / Shi, Hengheng / Hong, Cheng / Zhang, Yan / Tang, Siliang</hi> (2024): 
+                        <hi rend="italic">Graph Retrieval-Augmented Generation: A Survey</hi>. arXiv. DOI: 10.48550/arXiv.2408.08921.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Shanmukhappa, Thejaswini / Wang-Hei Ho, Ivan / Tse, Chi K. / Leung, King Kei</hi> (2019): "Recent Development in Public Transport Network Analysis From the Complex Network Perspective", in: 
+                        <hi rend="italic">IEEE Circuits and Systems Magazine</hi> 19, 4: 39-65. DOI: 10.1109/MCAS.2019.2945211.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

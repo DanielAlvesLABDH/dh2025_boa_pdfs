@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="HEUMANN_Anne_The_Impact_of_Review_Copies_on_German_Online_Bo">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Impact of Review Copies on German Online Book Reviews from LovelyBooks</title>
+                <author>
+                    <persName>
+                        <surname>Heumann</surname>
+                        <forename>Anne</forename>
+                    </persName>
+                    <affiliation>Johannes Gutenberg-Universität Mainz, Germany</affiliation>
+                    <email>anheuman@uni-mainz.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-28T07:59:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Book Reviews</term>
+                    <term>Review Copies</term>
+                    <term>Digital Social Reading</term>
+                    <term>Incentivization</term>
+                    <term>Natural Language Processing</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data modeling</term>
+                    <term>electronic literature production and analysis</term>
+                    <term>natural language processing</term>
+                    <term>text mining and analysis</term>
+                    <term>Communication studies</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">Lay book reviews are of high importance for all stakeholders in the book market: For their readers, they are a valuable tool to navigate the high variety of books, considering alone about 67,000 newly published books in Germany 2023 (Börsenverein des deutschen Buchhandels 2024). For their writers, reviews are a way to connect to other readers. For publishers and authors, they constitute an effective marketing strategy to foster book sales because reviews are deemed more credible than traditional marketing strategies (e.g. Schmidt 2018), such as advertising banners. Consequently, cooperations with online book reviewers are well established. Often, review copies are given to reviewers in exchange for a review.</hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">In Germany, incentivised book reviews are a form of advertising and must be disclosed (die medienanstalten 2019</hi><ref n="1" target="ftn1"/>
+                    <hi style="font-size:10pt" xml:space="preserve">). Conversely, this research is based on the observation that reviewers often do not comply with these restrictions. Instead, cooperations are disclosed implicitly by expressing gratitude for having received a free copy, sometimes by emphasising their objectivity, e.g.: “Many thanks for providing the review copy. This has no impact on my opinion.” </hi>
+                </p>
+                <p style="text-align: left; ">Although incentivised reviews have been subject to many studies, a well-founded investigation targeted on German book reviews is still lacking.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Current Study</head>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt" xml:space="preserve">The research presented in this poster aims at filling this gap by questioning book reviewers’ self-stated objectivity. The goal consists in investigating the influence of incentivisation on book reviews. To do so, a dataset of German online book reviews from the social cataloguing site LovelyBooks was analysed (first introduced by Rebora et al. 2022). </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt" xml:space="preserve">Two samples of incentivised (IRs) and non-incentivised reviews (NIRs) were drawn. In line with other studies (e.g. Costa et al. 2019, Hu et al. 2023), IRs were identified by assuming that reviewers explicitly disclose the cooperation by expressing their gratitude. Seven deterministic terms with &gt;90% accuracy were used for IR identification, e.g. “Rezensionsexemplar” (review copy, 98.96% accuracy). Conversely, NIRs were identified by assuming that a review is not incentivised, if it does not contain any of the terms from the IR detection approach (in line with e.g. Hu et al. 2023). Overall, two samples of 4872 reviews were used. To avoid possible biases, a single genre was selected: romance, because it had the highest absolute number of IRs. As the NIR sample was much larger than the IR sample (approx. 125,000 reviews), NIRs were selected randomly. </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">The concept of “influence” was measured across five dimensions (derived from Kim et al. 2019): positivity, complexity, elaborateness, extremeness and objectivity. Rule-based proxies were chosen to operationalise and formalise the concepts, e.g. Sentiment Analysis using sentiArt (Jacobs 2019) to measure a review’s positivity. Statistical tests were conducted to compare the outcome.</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results</head>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt" xml:space="preserve">No differences were found in terms of positivity, complexity, extremeness, and objectivity. Only in case of review elaborateness–measured by considering review length as a proxy–, a significant difference was found: IRs are more elaborate than NIRs. Consequently, book reviews show only few signs of influence if the reviewer received a review copy. In other words: incentivised book reviewers and non-incentivised reviewers indeed seem to be equally objective. </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">A web-based presentation is also available (Heumann 2024).</hi>
+                </p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                        
+                            <hi rend="bold">
+                                <hi rend="normalweight" style="font-size:10pt">The regulations from 2018 were considered because the analysed reviews were published before 2019.</hi>
+                            </hi>
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Börsenverein d. Deutschen Buchhandels, Abt. Marktforsch. u. Statistik</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">, ed. (2024): </hi>
+                        <hi rend="italic" style="font-size:10pt">Buch und Buchhandel in Zahlen 2024: Zahlen, Fakten und Analysen zur wirtschaftlichen Entwicklung</hi>
+                        <hi style="font-size:10pt">. Frankfurt am Main: MVB.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Costa, Ana / Guerreiro, João / Moro, Sérgio / Henriques, Roberto</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2019): “Unfolding the characteristics of incentivized online reviews”, in:</hi>
+                        <hi rend="italic" style="font-size:10pt">Journal of Retailing and Consumer Services</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 47: 272–281. DOI: </hi>
+                        <ref target="https://doi.org/10.1016/j.jretconser.2018.12.006">
+                            <hi style="font-size:10pt">10.1016/j.jretconser.2018.12.006</hi>
+                        </ref>
+                        <hi style="font-size:10pt">.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">die medienanstalten – ALM GbR</hi>
+                        <hi style="font-size:10pt">, ed. (2019): “Leitfaden der Medienanstalten – Werbekennzeichnung bei Online-Medien 2018”. Published online January 23, 2019. &lt;</hi>
+                        <ref target="https://www.die-medienanstalten.de/fileadmin/user_upload/die_medienanstalten/Service/Merkblaetter_Leitfaeden/Leitfaden_Werbekennzeichnung_Onlinemedien_ua.pdf">
+                            <hi style="font-size:10pt">https://www.die-medienanstalten.de/fileadmin/user_upload/die_medienanstalten/Service/Merkblaetter_Leitfaeden/Leitfaden_Werbekennzeichnung_Onlinemedien_ua.pdf</hi>
+                        </ref>
+                        <hi style="font-size:10pt">&gt; [14.04.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Heumann, Anne</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024): “Incentivized Book Reviews.” Web-based presentation of “The Impact of Review Copies on German Online Book Reviews from LovelyBooks”. Unpublished master’s thesis, University of Mainz / Hochschule Mainz. &lt;</hi>
+                        <ref target="https://aheuma.github.io/IncentivizedBookReviews/">
+                            <hi style="font-size:10pt">https://aheuma.github.io/IncentivizedBookReviews/</hi>
+                        </ref>
+                        <hi style="font-size:10pt">&gt; [14.04.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Hu, Yuerong / LeBlanc, Zoe / Diesner, Jana / Underwood, Ted / Layne-Worthey, Glen / Downie, J. Stephen</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2023): “Complexities of leveraging user-generated book reviews for scholarly research: Transiency, power dynamics, and cultural dependency”, in:</hi>
+                        <hi rend="italic" style="font-size:10pt">International Journal on Digital Libraries</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 25: 317–340. DOI: </hi>
+                        <ref target="https://doi.org/10.1007/s00799-023-00376-z">
+                            <hi style="font-size:10pt">10.1007/s00799-023-00376-z</hi>
+                        </ref>
+                        <hi style="font-size:10pt">.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Jacobs, Arthur M.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2019): “Sentiment Analysis for Words and Fiction Characters From the Perspective of Computational (Neuro-)Poetics”, in:</hi>
+                        <hi rend="italic" style="font-size:10pt">Frontiers in Robotics and AI</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 6, 53. DOI:</hi>
+                        <ref target="https://doi.org/10.3389/frobt.2019.00053">
+                            <hi style="font-size:10pt">10.3389/frobt.2019.00053</hi>
+                        </ref>
+                        <hi style="font-size:10pt">.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Kim, Su J. / Maslowska, Ewa / Tamaddoni, Ali</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2019): “The paradox of (dis)trust in sponsorship disclosure: The characteristics and effects of sponsored online consumer reviews”, in:</hi>
+                        <hi rend="italic" style="font-size:10pt">Decision Support Systems</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 116: 114–124. DOI: </hi>
+                        <ref target="https://doi.org/10.1016/j.dss.2018.10.014">
+                            <hi style="font-size:10pt">10.1016/j.dss.2018.10.014</hi>
+                        </ref>
+                        <hi style="font-size:10pt">.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Rebora, Simone / Messerli, Thomas / Herrmann, Berenike</hi>
+                        <hi style="font-size:10pt">(2022): “Towards a Computational Study of German Book Reviews – A Comparison between Emotion Dictionaries and Transfer Learning in Sentiment Analysis”, in: Geierhos, Michaela (ed.):</hi>
+                        <hi rend="italic" style="font-size:10pt">8. Jahrestagung des Verbands Digital Humanities im deutschsprachigen Raum: Konferenzabstracts</hi>, 
+                        <hi style="font-size:10pt" xml:space="preserve">Potsdam, March 2022: 354–356. DOI: </hi>
+                        <ref target="https://doi.org/10.5281/ZENODO.6328141">
+                            <hi style="font-size:10pt">10.5281/ZENODO.6328141</hi>
+                        </ref>
+                        <hi style="font-size:10pt">.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Schmidt, Christopher M.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">, ed. (2018): </hi>
+                        <hi rend="italic" style="font-size:10pt">Werbekommunikation in der Wirtschaft</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">. Wiesbaden: Springer Fachmedien. DOI: </hi>
+                        <ref target="https://doi.org/10.1007/978-3-658-20815-8">
+                            <hi style="font-size:10pt">10.1007/978-3-658-20815-8</hi>
+                        </ref>
+                        <hi style="font-size:10pt">.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

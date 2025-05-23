@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PONS_Philippe_DoTS__FAIRly_publishing_your_textual_data_with">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">DoTS: FAIRly publishing your textual data with the DTS API</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Pons</surname>
+                        <forename>Philippe</forename>
+                    </persName>
+                    <affiliation>École des chartes - PSL, France</affiliation>
+                    <email>philippe.pons@chartes.psl.eu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Jolivet</surname>
+                        <forename>Vincent</forename>
+                    </persName>
+                    <affiliation>École des chartes - PSL, France</affiliation>
+                    <email>vincent.jolivet@chartes.psl.eu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Boby</surname>
+                        <forename>Jean-Victor</forename>
+                    </persName>
+                    <affiliation>École des chartes - PSL, France</affiliation>
+                    <email>jean-victor.boby@chartes.psl.eu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Terriel</surname>
+                        <forename>Lucas</forename>
+                    </persName>
+                    <affiliation>École des chartes - PSL, France</affiliation>
+                    <email>lucas.terriel@chartes.psl.eu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-28T10:22:44.239171424</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>FAIR</term>
+                    <term>DTS API</term>
+                    <term>Scholarly editions</term>
+                    <term>XQuery</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digital libraries creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>metadata standards</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>open access methods</term>
+                    <term>scholarly editing and editions development</term>
+                    <term>analysis</term>
+                    <term>and methods</term>
+                    <term>History</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>In the field of digital humanities, publishing structured textual data in XML/TEI presents significant challenges. The ever-growing number of corpora raises complex questions: how can we ensure the long-term preservation of these corpora? How can we make these texts citable, interoperable, and easily reusable in various contexts?</p>
+                <p>These issues lie at the heart of the FAIR principles (
+                    <hi rend="italic">Findable</hi>, 
+                    <hi rend="italic">Accessible</hi>, 
+                    <hi rend="italic">Interoperable</hi>, 
+                    <hi rend="italic">Reusable</hi>), which aim to promote the sharing and reuse of research data. The DTS (
+                    <hi rend="italic">Distributed Text Services</hi>) API was specifically designed to address these challenges. Much like the IIIF API has revolutionized image sharing, ”the Distributed Text Services (DTS) Specification defines an API for working with collections of text as machine-actionable data”.
+                </p>
+                <p>However, the availability of concrete implementations is essential to encourage the adoption and appropriation of DTS by the community. This is precisely where 
+                    <hi rend="bold">DoTS </hi>(<ptr target="https://github.com/chartes/dots"/>), an implementation of the DTS API developed in Xquery and supported by the powerful BaseX database engine, comes in.
+                </p>
+                <p>This poster aims to present DoTS, an open source project founded by the digital infrastructure Biblissima+ (<ptr target="https://projet.biblissima.fr/fr"/>). DoTS is a comprehensive and functional suite of tools for publishing corpora in compliance with the DTS specification, integrating backend, API responses, and frontend for the creation of adaptable websites.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Overview of DoTS and its benefits</head>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Key features of DoTS</head>
+                    <p>DoTS, whose documentation is available online (<ptr target="https://chartes.github.io/dots_documentation/"/>), is a suite of tools developed in Xquery, designed to :
+                    </p>
+                    <list type="ordered">
+                        <item>
+                            <hi rend="bold">Create and manage projects in BaseX :</hi> DoTS simplifies the setup and management of TEI-based publication projects in BaseX.
+                        </item>
+                        <item>
+                            <hi rend="bold">Implement a DTS resolver </hi>: Based on the created project, DoTS fully leverages the DTS API (<ptr target="https://distributed-text-services.github.io/specifications/"/>) through its three main endpoints :
+                            <list type="unordered">
+                                <item>
+                                    <hi rend="bold">Collection :</hi> Lists collection members and provides access to collection or document metadata.
+                                </item>
+                                <item>
+                                    <hi rend="bold">Navigation :</hi> Explores document fragments, accesses their metadata.
+                                </item>
+                                <item>
+                                    <hi rend="bold">Document :</hi> Displays full documents (in XML/TEI or HTML), extracts specific fragments.
+                                </item>
+                            </list>
+                        </item>
+                        <item>
+                            <hi rend="bold">Build consultation websites :</hi> With DoTS-vue, a front-end based on the Vue.js framework, users can easily deploy websites where content is directly published using DTS API queries.
+                        </item>
+                    </list>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Advantages of DoTS</head>
+                    <list type="unordered">
+                        <item>
+                            <hi rend="bold">Compliance with standard formats :</hi> In line with DTS specifications, HTTP responses from DoTS use JSON-LD for metadata and XML/TEI by default for textual data, ensuring maximum interoperability.
+                        </item>
+                        <item>
+                            <hi rend="bold">Ease of use :</hi> DoTS is designed to be accessible to editors working with TEI corpora. The various cookbooks available in the documentation (<ptr target="https://chartes.github.io/dots_documentation/cookbook/"/>) demonstrate the main advantages of DoTS :
+                            <list type="unordered">
+                                <item>
+                                    <hi rend="bold">Generic :</hi> It allows users to freely organize documents into collections.
+                                </item>
+                                <item>
+                                    <hi rend="bold">Flexible :</hi> Editors can customize metadata to describe collections, documents, or specific passages.
+                                </item>
+                                <item>
+                                    <hi rend="bold">Granular :</hi> Passages can be defined according to user needs, enabling precise citation of documents or their fragments.
+                                </item>
+                            </list>
+                        </item>
+                    </list>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>A Proven tool already in production</head>
+                    <p>DoTS is already in production at the École des chartes – PSL (<ptr target="https://theses.chartes.psl.eu/"/>) and is increasingly adopted, particularly within a growing French-speaking user community. This demonstrates its relevance and effectiveness in supporting Open Science principles and facilitating the publication of textual data.
+                    </p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p>The DH 2025 conference offers a unique opportunity to showcase this generic tool and establish partnerships to promote the adoption of the DTS API and its DoTS implementation.</p>
+                <p>A broader adoption of DoTS will :</p>
+                <list type="unordered">
+                    <item>Enhance the publication of textual data, ensuring their accessibility, citability, and interoperability.</item>
+                    <item>Facilitate text alignment and republication, for instance, in multilingual contexts.</item>
+                </list>
+                <p>By highlighting the strengths of DoTS and the benefits of the DTS API, we aim to contribute to the development of tools that respect the FAIR principles in digital humanities.</p>
+            </div>
+        </body>
+    </text>
+</TEI>

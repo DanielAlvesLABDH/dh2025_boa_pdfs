@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LUCIC_Ana_Mapping_the_Margins__The_Creation_of_a_Dataset_for">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Mapping the Margins: The Creation of a Dataset for Automated Peritext Detection in Digital Collections</title>
+                <author>
+                    <persName>
+                        <surname>Lucic</surname>
+                        <forename>Ana</forename>
+                    </persName>
+                    <affiliation>University of Illinois, United States of America</affiliation>
+                    <email>alucic2@illinois.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Shanahan</surname>
+                        <forename>John</forename>
+                    </persName>
+                    <affiliation>DePaul University</affiliation>
+                    <email>jshanah1@depaul.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Debnath</surname>
+                        <forename>Tan</forename>
+                    </persName>
+                    <affiliation>University of Illinois, United States of America</affiliation>
+                    <email>tand3@illinois.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Kirchhoff</surname>
+                        <forename>Amy</forename>
+                    </persName>
+                    <affiliation>ITHAKA</affiliation>
+                    <email>Amy.Kirchhoff@ithaka.org</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Organisciak</surname>
+                        <forename>Peter</forename>
+                    </persName>
+                    <affiliation>University of Denver</affiliation>
+                    <email>Peter.Organisciak@du.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T22:56:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>dataset; open source software; book history; peritext detection</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>data modeling</term>
+                    <term>data publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>Book and print history</term>
+                    <term>Computer science</term>
+                    <term>Cultural studies</term>
+                    <term>Informatics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">Digital humanities researchers analysing large-scale text collections face a persistent challenge: distinguishing between an author's core content and the supplementary material that surrounds it. Statistical analysis, topic modelling, named entities extraction and other computational approaches can be skewed by the inclusion of volume bibliographies and indexes. While researchers have historically relied on crude heuristics such as removing the first and last 5% or 10% of all volumes, our NEH funded project (HAA-296436-24) takes a more sophisticated approach to the separation of content and peritext. We have built an annotated dataset as the basis for a new supervised text classification model. Relying on the text features of digitized pages in the background, the predictive model will distinguish whether a digitized page represents 
+                    <hi rend="italic">front</hi>, 
+                    <hi rend="italic">core</hi>, or 
+                    <hi rend="italic" xml:space="preserve">back </hi>text matter. In 2017, our initial model proved successful on a smaller set (Lučić et al. 2019). The present project scales up our previous work tenfold, and this presentation will report on our findings about volumes included in the dataset and about a new interface developed for work with the digitized text files to be made freely available to the researchers. The dataset and tools are created on and work with HathiTrust digital collection of scanned and digitized text, but the model and the approach will be applicable to other digitized collections such as, JSTOR’s Data for Research or content from Project Gutenberg. This work directly advances the conference's focus on accessibility by creating tools and resources that make digital collections more analytically accessible at scale.
+                </p>
+            </div>
+            <div xml:id="Dataset_selection_criteria_and_methodolo" type="div1" rend="DH-Heading1">
+                <head>Dataset selection criteria and methodology</head>
+                <p style="text-align: left; ">This project focuses on the structural boundaries of fiction and non-fiction works predominantly but not exclusively published in the United States during the 20th century. Our set was drawn from the HathiTrust repository. One key interest in this definition of the set is an ability to probe changes in publishing practices, especially the amount and kinds of peritextual material, over different decades, locations, and even publishers. We will present the justification of our decisions in identifying volumes to include in such a collection. </p>
+                <p style="text-align: left; ">For non-fiction works, the selection process was more challenging. Although methods for inferring nonfiction works exist (Kazmi et al. 2022), they are not very common, leading us to develop an innovative methodology that bridges contemporary and historical classification systems. We drew from the Goodreads website (which provides a listing of popular nonfiction categories). With the help of a librarian, we mapped the top listed nonfiction categories on the Goodreads page, such as 
+                    <hi rend="italic color(202020)">History</hi>
+                    <hi rend="color(202020)" xml:space="preserve">, </hi>
+                    <hi rend="italic color(202020)">Politics</hi>
+                    <hi rend="color(202020)" xml:space="preserve">, </hi>
+                    <hi rend="italic color(202020)">Science</hi>
+                    <hi rend="color(202020)" xml:space="preserve">, </hi>
+                    <hi rend="italic color(202020)">Biography</hi>
+                    <hi rend="color(202020)" xml:space="preserve">, </hi>
+                    <hi rend="italic color(202020)">Psychology</hi>
+                    <hi rend="color(202020)" xml:space="preserve">, </hi>
+                    <hi rend="italic color(202020)" xml:space="preserve">Philosophy </hi>to Library of Congress Subject Headings (LCSH). By relying on the catalogue of the University of Illinois library system, we mapped the Goodreads single-word tags to multi-word LCSHs that contained the previously mentioned Goodreads tags of interest. This resulted in thousands of the Library of Congress Subject Headings for each of the six Goodreads tags. We then randomly extracted 10 headings for each tag and queried the HathiTrust repository against the query pool of 60 subject headings. From the resulting list of volumes, we filtered out those that ended in “--fiction” and this gave us a pool of approximately 50,000 HathiTrust volumes from which we randomly selected 500 works of nonfiction to add to our dataset and annotate.
+                </p>
+            </div>
+            <div xml:id="Annotation_guidelines" type="div1" rend="DH-Heading1">
+                <head>Annotation guidelines</head>
+                <p style="text-align: left; ">This presentation will highlight our decisions about annotating the volumes and the challenges we faced in terms of finding an efficient method for annotating the volumes’ structure. The variety and fluidity of peritext elements became evident through the annotation process. The timeline of events, study questions, further reading material lists that are sometimes provided at the end of a work and likely written by the author/s presented a significant annotation challenge. While they may have likely been prepared by the author/s, we decided to annotate them as back matter because they can also be seen as peripheral to the core work. Prologue and conclusion sections, however, have been annotated as core matter as they are commonly written by the authors themselves and are either setting the tone or providing a conclusion for the work. This project relies on the premise that division of structural elements of the work into peritextual or core elements is both subject to interpretation and embedded in the historical and cultural conditions of book publishing practices. Given that we were not able to delve into the conditions of book making for each of the volumes in our dataset, we had to simplify rules for developing a workable model of what represents peripheral versus core material. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Text annotation tool development</head>
+                <p style="text-align: left; ">A crucial part of the dataset building process was the need for the manual annotation process to interact with digitized works that are available as folders of text files (each text file represents a page of the physical work). This manually annotated set served as ground truth for our model- building. The volumes in the HathiTrust repository were scanned from front cover to back cover with no clear or easy distinction between page “types” (e.g., what is a cover page, acknowledgement page, foreword, core matter). We needed to develop an annotation tool that would facilitate annotator determination of whether a page is core or back matter or whether they were the mixture of peri-text and core. The ratio of front and back matter elements compared to the quantity of core work is typically very unbalanced. Commonly, the number of pages that are front or back matter is much smaller than the number of pages that represent the core work. Therefore, most pages in a fiction or nonfiction volume are likely to be categorized as core matter. We adopted a rule to initially annotate all the pages in our training dataset as 
+                    <hi rend="italic" xml:space="preserve">core </hi>and then manually work from the start and back of the work to identify those that in fact do not represent core material but can be described as 
+                    <hi rend="italic">front</hi> or 
+                    <hi rend="italic">back</hi> matter. This paper focuses on the rules that guided the building of an open-source software tool that facilitated the manual annotation of the works. The tool is currently available as an executable file that can be used on different platforms (Debnath 2024). Our presentation will show how the annotation process and tool-building process informed the interface architecture, and how the tool building in turn informed the annotation process.
+                </p>
+            </div>
+            <div xml:id="Dataset_characteristics_and_early_text_c" type="div1" rend="DH-Heading1">
+                <head>Dataset characteristics and early text classification results</head>
+                <p style="text-align: left; ">The resulting front, core, and back matter page indicators together with the descriptive metadata for the volumes included in our set of ~1,000 works provided the basis for construction of the supervised text classification model. Figure 1 indicates the distribution of the volumes in our dataset arranged according to the date of their publication. Figure 2 indicates front, core, and back matter pages across fiction and non-fiction works which are different at a statistically significant level (p&lt;0.001). Our presentation will delve deeper into the differences between front and back matter in fiction and nonfiction works and their implications as well as show decade differences across gender and genre lines. To make the dataset FAIR compliant, machine readable and analysis ready, we have adopted the MLCommons Croissant metadata format (Akhtar et al. 2024) and we will document it with a datasheet (Gebru et al. 2018). Finally, we will showcase early text classification results using the LLM Sentence Transformers library (Reimers / Gurevych 2019). The main outcome of this project, the supervised text classification model, has a potential to be incorporated into a textual repository, thereby increasing the accessibility and usability of the repository holdings.</p>
+                <figure>
+                    <graphic n="1001" width="12.747330555555555cm" height="10.198425cm" url="/tmp/tmprh3o1nv_/Pictures/db154ca83e619640d2e980c0f6d43efa.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 1 – Distribution of 1,015 HathiTrust volumes graphed according to the decade of their publication </p>
+                <figure>
+                    <graphic n="1002" width="16.002cm" height="8.49488888888889cm" url="/tmp/tmprh3o1nv_/Pictures/db154ca83e619640d2e980c0f6d43efa.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 2 – Distributions of front, core, and back matter in fiction and non-fiction works</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Acknowledgements</head>
+                <p style="text-align: left; ">This project is supported by the National Endowment for the Humanities (Award: HAA-296436-24).</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="DH-Biblio_author">Akhtar, Mubashara / Benjelloun, Omar / Conforti, Constanza / Giner-Miguelez, Joan / Jain, Nitisha / Kuchnik, Michael / Lhoest, Quentin / Marcenac, Pierre / Maskey, Manil / Mattson, Peter / Oala, Luis. / Ruyssen, Pierre / Shinde, Rajat / Simperl, Elena / Thomas, Goeffry / Tykhonov, Slava / Vanschoren, Joaquin / Vogler, Steffen / Wu, Carole-Jean 
+                            <hi rend="normalweight" xml:space="preserve">(2024): “Croissant: A Metadata Format for ML-Ready Datasets”, in: </hi>
+                            <hi rend="italic normalweight">Proceedings of the Eighth Workshop on Data Management for End-to-End Machine Learning</hi>.
+                        </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="DH-Biblio_author">Debnath, Tanmoy 
+                            <hi rend="normalweight" xml:space="preserve">(2024): “Annotation tool” </hi>
+                        </hi>
+                        <ref target="https://github.com/tandebnath/annotation-tool">
+                            <hi rend="DH-Biblio_author">
+                                <hi rend="normalweight">https://github.com/tandebnath/annotation-tool</hi>
+                            </hi>
+                        </ref>
+                        <hi rend="DH-Biblio_author">
+                            <hi rend="normalweight" xml:space="preserve"> [21.04.2025].</hi>
+                        </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="DH-Biblio_author">Gebru, Timnit / Morgenstern, Jamie / Vecchione, Briana / Vaughan, Jennifer Wortman / Wallach, Hannah / Daumé, Hall III / Crawford, Kate 
+                            <hi rend="normalweight" xml:space="preserve">(2018): “Datasheets for datasets”, in: </hi>
+                            <hi rend="italic normalweight">Communications of the ACM</hi>
+                            <hi rend="normalweight" xml:space="preserve"> 64: 86–92.</hi>
+                        </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="DH-Biblio_author">Kazmi, Arman / Ranjan, Sidharth / Sharma, Arpit / Rajkumar, Rajakrishnan (2022): “Linguistically Motivated Features for Classifying Shorter Text into Fiction and Non-Fiction Genre”, in: Calzolari, N. / Huang, C.-R. / Kim, H. / Pustejovsky, J. / Wanner, L. / Choi, K.-S. / Ryu, P.-M. / Chen, H.-H. / Donatelli, L. / Ji, H. / Kurohashi, S. / Paggio, P. / Xue, N. / Kim, S. / Hahm, Y. / He, Z. / Lee, T. K. / Santus, E. / Bond, F. / Na, S.-H. (eds.): 
+                            <hi rend="italic normalweight">Proceedings of the 29th International Conference on Computational Linguistics</hi>
+                            <hi rend="normalweight">, Gyeongju, Republic of Korea</hi>.
+                        </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="DH-Biblio_author">Lučić, Ana / Burke, Robin / Shanahan, John 
+                            <hi rend="normalweight">(2019): “Unsupervised Clustering with Smoothing for Detecting Paratext Boundaries in Scanned Documents”, in: 2019 ACM/IEEE Joint Conference on Digital Libraries (JCDL), 2–6 June 2019</hi>.
+                        </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="DH-Biblio_author">Reimers, Nils / Gurevych, Iryna 
+                            <hi rend="normalweight" xml:space="preserve">(2019): “Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks”, in: </hi>
+                            <hi rend="italic normalweight">Conference on Empirical Methods in Natural Language Processing (EMNLP)</hi>
+                            <hi rend="normalweight">.</hi>
+                        </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="DH-Biblio_author">Underwood, Ted / Kimutis, Patrick / Witte, Jessica 
+                            <hi rend="normalweight" xml:space="preserve">(2020): “NovelTM Datasets for English-Language Fiction, 1700–2009”, in: </hi>
+                            <hi rend="italic normalweight">Journal of Cultural Analytics</hi>
+                        </hi>
+                        <anchor xml:id="Hlt196130550"/>
+                        <anchor xml:id="Hlt196130551"/>
+                        <anchor xml:id="Hlt196130552"/>
+                        <hi rend="DH-Biblio_author">
+                            <hi rend="normalweight">&lt;</hi>
+                        </hi>
+                        <ref target="https://doi.org/10.22148/001c.13147">
+                            <hi rend="DH-Biblio_author">
+                                <hi rend="normalweight">https://doi.org/10.22148/001c.13147</hi>
+                            </hi>
+                        </ref>
+                        <hi rend="DH-Biblio_author">
+                            <hi rend="normalweight">&gt; [21.04.2025].</hi>
+                        </hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

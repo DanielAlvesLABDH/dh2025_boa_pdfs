@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VERSTRAETE_Mathilde_Defining_the_Variation_in_the_Greek_Anth">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Defining the Variation in the Greek Anthology. The IAL (Intelligence Artificielle Littéraire) Project</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Verstraete</surname>
+                        <forename>Mathilde</forename>
+                    </persName>
+                    <affiliation>University of Montreal, Canada</affiliation>
+                    <email>mathilde.verstraete@umontreal.ca</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Vitali-Rosati</surname>
+                        <forename>Marcello</forename>
+                    </persName>
+                    <affiliation>University of Montreal, Canada</affiliation>
+                    <email>marcello.vitali.rosati@umontreal.ca</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Audin</surname>
+                        <forename>Yann</forename>
+                    </persName>
+                    <affiliation>University of Montreal, Canada</affiliation>
+                    <email>yann.audin@umontreal.ca</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Forest</surname>
+                        <forename>Dominic</forename>
+                    </persName>
+                    <affiliation>University of Montreal, Canada</affiliation>
+                    <email>dominic.forest@umontreal.ca</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Bouchard</surname>
+                        <forename>William</forename>
+                    </persName>
+                    <affiliation>University of Montreal, Canada</affiliation>
+                    <email>william.bouchard.2@umontreal.ca</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-02T16:39:57.805215847</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Text analytics</term>
+                    <term>variation detection</term>
+                    <term>text similarity</term>
+                    <term>greek anthology</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>natural language processing</term>
+                    <term>scholarly editing and editions development</term>
+                    <term>analysis</term>
+                    <term>and methods</term>
+                    <term>semantic analysis</term>
+                    <term>text mining and analysis</term>
+                    <term>Literary studies</term>
+                    <term>Philology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>Could literary theory be more effectively understood with algorithms? They are frequently employed in the Humanities (especially in literature) for heuristic and, consequently, productive purposes. However, what if we inverted this usage, requesting their input in comprehending our objectives rather than using them in order to retrieve instances of a particular concept? Literary notions are often defined using natural language and exemplifications, which can lack clarity and are open to interpretation. In such instances, can we employ natural language processing and knowledge discovery in database algorithms to enhance and formalise a literary concept inside a specific historical corpus? From an epistemic perspective, what would be the status of this definition?</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>The Corpus</head>
+                <p>This talk outlines findings and theoretical framework of a current research project, 
+                    <hi rend="italic">IAL: Intelligence Artificielle Littéraire</hi>. IAL originates from the assets of a prior initiative overseen by the Canada Research Chair on Digital Textualities: the collaborative digital edition of the 
+                    <hi rend="italic">Greek Anthology</hi>, with results accessible on the platform 
+                    <ptr target="https://anthologiagraeca.org/"/> and its API 
+                    <ptr target="https://anthologiagraeca.org/api/"/>.
+                </p>
+                <p>The 
+                    <hi rend="italic">Greek Anthology</hi> compiles around 4,000 epigrams authored by more than 300 writers from the 6th century BC to the 10th century AD. Our platform provides, for each epigram, the associated manuscript image, an edition of the Greek texts, translations in different languages, commentaries, scholia, alignments, etc. This editorial endeavour remains ongoing and is conducted by several editors. This segment of the project was thoroughly documented in various publications (Mellet 2020; Vitali-Rosati et al. 2020, 2021; Vitali-Rosati 2024). The efforts invested in the 
+                    <hi rend="italic">Greek Anthology </hi>platform and its API provide a comprehensive and finely organised corpus: an optimal environment for initiating computational literary experiments.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Objectives</head>
+                <p>The epigram is a literary genre grounded in a specific literary practice: the variation<ref n="1" target="ftn1"/>. “Good” epigrammatists were expected to be familiar in the works of their predecessors and contemporaries, and to produce recognisable variations of earlier compositions (Tarán 1979). Laurens (2012) delineates three categories of variation: stylistic (variation in vocabulary and syntax), rhetorical (diversity in structure), and paradigmatic (variance in subject matter). IAL intends to conceive and implement a set of algorithms, but not to identify the variation within the corpus, as philologists have already recorded numerous instances of this concept (Waltz 1931; Tarán 1979). Rather, their research informs the training of our models, alongside annotations provided by annotators. Consequently, algorithms are used for hermeneutic purposes rather than heuristic objectives. The goal is to use these findings in order to enhance our existing definitions of the three categories of variation and, if feasible, to establish a strictly formal definition of variation in the 
+                    <hi rend="italic">Greek Anthology</hi>.
+                </p>
+                <p>Owing to technical and computational limitations, our team is presently focused on a sample from the 
+                    <hi rend="italic">Anthology</hi>: the sixth book, which comprises 358 votive epigrams and is particularly abundant in variations. This project involves collaboration among philologists, literary theorists, and programmers from diverse linguistic backgrounds, focusing on both the original Ancient Greek text and its translations. This enables the technical team to evaluate hypotheses and lends merit to the approaches regardless of the language employed. However, variation identification is kept in the hands of the philologists.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methodology</head>
+                <p>In the first phase of the project, we deployed traditional NLP methods such as bag of word representations (with TF-IDF weighting) and simple predictive models like decisions trees and logistic regression. Approximately 30% of stylistic variations recognized by the philologists remain a unaccounted for by these models<ref n="2" target="ftn2"/>, emphasising the need to detect synonyms, structures and metaphors.
+                </p>
+                <p>Our current work uses 
+                    <hi rend="italic">ancient-greek-bert</hi> to detect structural, semantic, stylistic and narrative similarities between epigrams. The main challenge is to interpret distances and similarities generated with BERT representations to identify how vectorial features relate to different types of variation as well as linguistic structures. To do so, we mobilise current methods for neural network interpretation, such as sparse auto-encoders and integrated gradient.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Challenges</head>
+                <p>IAL raises distinct linguistic, philosophical, epistemological, and technical challenges. Since Ancient Greek is no longer in active use, access to the original texts and their meanings is limited to a small group of specialists. Furthermore, the corpus is closed, which poses a significant limitation for training language models. Finally, Ancient Greek has significant diachronic and synchronic variability and frequently employs homonyms.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p>This presentation outlines the algorithmic methods used to identify and characterise variation in the 
+                    <hi rend="italic">Greek Anthology </hi>and analyses our preliminary results. We discuss the limitations of these approaches when applied to a under-resourced language such as Ancient Greek. The formal definition of a literary concept requires a rigorous theoretical framework and prompts investigations into the nature of formal and linguistic representations. The hermeneutic aims of IAL lead us to attempt to interpret the results of our models, which we attempt with visualisations and methods designed to explained the results of large language models.
+                </p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn1" rend="footnote text" n="1">Though its objectives are more general, it is important to highlight here the 
+                        <hi rend="italic">Memorata poetis </hi>project, which is concentrated on the study of the interrelations between epigrams : 
+                        <ref target="http://www.memoratapoetis.it/">http://www.memoratapoetis.it</ref>. 
+                    </note>
+<note xml:id="ftn2" rend="footnote text" n="2">While paradigmatic and rhetoric variations fully escape these older methods. </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Aubreton, Robert</hi>(1968): “La tradition manuscrite des épigrammes de l’
+                        <hi rend="italic">Anthologie Palatine</hi>”, in: 
+                        <hi rend="italic">Revue des études anciennes </hi>70, 1–2: 32–82. DOI: 10.3406/rea.1968.3808.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Audin, Yann / Forest, Dominic / Verstraete, Mathilde / Vitali-Rosati, Marcello</hi> (2024): “Le Projet Intelligence Artificielle Littéraire (IAL) : Définir formellement le concept de variation au sein de l’
+                        <hi rend="italic">Anthologie Grecque </hi>?”, in: 
+                        <hi rend="italic">JADT 2024. Mots comptés, textes déchiffrés (17es Journées internationales d’analyse statistique des données textuelles).</hi> Bruxelles: Presses Universitaires de Louvain: 59–68.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Audin, Yann / Verstraete, Mathilde / Vitali-Rosati, Marcello</hi> (2023): “Intelligence artificielle littéraire”, in: 
+                        <hi rend="italic">Humanistica 2023,</hi> Genève. &lt;
+                        <ptr target="https://hal.science/hal-04131573"/>&gt; [14.02.2024].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Boschetti, Federico / Del Gratta, Riccardo / Lamé, Marion</hi> (2014): “Computer Assisted Annotation of Themes and Motifs in Ancient Greek Epigrams: First Steps”, in: 
+                        <hi rend="italic">Proceedings of CLIC-It 2014</hi>. DOI: 10.12871/CLICIT2014117.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Gutzwiller, Kathryn J.</hi> (1998): 
+                        <hi rend="italic">Poetic Garlands: Hellenistic Epigrams in Context</hi>. Los Angeles/London: University of California Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Khan, Fahad / Arrigoni, Silvia / Boschetti, Federico / Frontini, Francesca</hi> (2016): “Restructuring a Taxonomy of Literary Themes and Motifs for More Efficient Querying”, in: 
+                        <hi rend="italic">Matlit</hi> 4, 2: 11–27. DOI: 10.14195/2182-8830_4-2_1.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Laurens, Pierre</hi> (2012): 
+                        <hi rend="italic">L’abeille dans l’ambre : Célébration de l’épigramme de l’époque Alexandrine à la fin de la Renaissance</hi>. 2e édition revue et augmentée. Paris: Les Belles Lettres.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Mellet, Margot</hi> (2020): “Penser le palimpseste numérique. Le projet d’édition numérique collaborative de l’
+                        <hi rend="italic">Anthologie Palatine</hi>”, in: 
+                        <hi rend="italic">Captures</hi>, 5, 1. 
+                        <hi rend="color(#000000)">&lt;</hi>
+                        <ptr target="https://revuecaptures.org/node/4382/"/>
+                        <hi rend="color(#000000)">&gt;</hi> [30.05.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Tarán, Sonya Lida</hi> (1979): 
+                        <hi rend="italic">The Art of Variation in the Hellenistic Epigram</hi>. Leiden: Brill.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Verstraete, Mathilde / Audin, Yann / Forest, Dominic / Vitali-Rosati, Marcello</hi> (2024): “Des algorithmes pour définir des concepts littéraires ?”, in: 
+                        <hi rend="italic">Humanistica 2024,</hi> Genève. &lt;
+                        <ptr target="https://hal.science/hal-04563545"/>&gt; [09.05.2024].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Verstraete, Mathilde / Mellet, Margot</hi> (2024): “Passés et présents anthologiques. Le projet d’édition numérique collaborative de l’Anthologie grecque”, in: 
+                        <hi rend="italic">Communautés et pratiques d’écritures des patrimoines et des mémoires,</hi> Paris.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Vitali-Rosati, Marcello / Monjour, Servanne / Casenave, Joana / Bouchard, Elsa / Mellet, Margot</hi> (2020): “Editorializing the 
+                        <hi rend="italic">Greek Anthology</hi>: The Palatin Manuscript as a Collective Imaginary”, in: 
+                        <hi rend="italic">Digital Humanities Quarterly</hi>, 14, 1. &lt;
+                        <ptr target="https://www.digitalhumanities.org/dhq/vol/14/1/000447/000447.html"/>&gt; [30.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Vitali-Rosati, Marcello / Agostini-Marchese, Enrico / Fauchié, Antoine / Guicherd, Timothée / Larlet, David / Mellet, Margot / Monjour, Servanne</hi> (2021): “L’épopée numérique de l’
+                        <hi rend="italic">Anthologie Grecque </hi>: entre questions épistémologiques, modèles techniques et dynamiques collaboratives”, in: 
+                        <hi rend="italic">Sens Public</hi>. &lt;
+                        <ptr target="https://sens-public.org/articles/1603/"/>&gt; [30.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Vitali-Rosati, Marcello.</hi> (2024): “De l’intelligence artificielle aux modèles de définition de l’intelligence, Le cas des variations dans l’
+                        <hi rend="italic">Anthologie Grecque</hi>”, in: 
+                        <hi rend="italic">Sens Public</hi>. &lt;
+                        <ptr target="http://sens-public.org/articles/1729/"/>&gt; [30.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Waltz, Pierre</hi> (1931): 
+                        <hi rend="italic">Anthologie Grecque (Livre VI)</hi>. Paris: Les Belles Lettres.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

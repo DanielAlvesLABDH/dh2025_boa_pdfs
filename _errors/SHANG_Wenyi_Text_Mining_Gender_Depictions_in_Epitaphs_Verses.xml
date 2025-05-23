@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SHANG_Wenyi_Text_Mining_Gender_Depictions_in_Epitaphs_Verses">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Text Mining Gender Depictions in Epitaphs Verses from Northern Wei (386–539 C.E.) China</title>
+                <author>
+                    <persName>
+                        <surname>Shang</surname>
+                        <forename>Wenyi</forename>
+                    </persName>
+                    <affiliation>University of Missouri, United States of America</affiliation>
+                    <email>wenyishang@missouri.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ochi</surname>
+                        <forename>Seiko</forename>
+                    </persName>
+                    <affiliation>Meijo University, Japan</affiliation>
+                    <email>sochi@meijo-u.ac.jp</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>text mining</term>
+                    <term>gender depictions</term>
+                    <term>Chinese history</term>
+                    <term>epitaphs</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>text mining and analysis</term>
+                    <term>Asian studies</term>
+                    <term>History</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">Premodern China is richly documented in the extensive official dynastic histories. However, as Twitchett (1966) metaphorically described these histories as a “monumental and monolithic fabric” (31), their focus is limited to political and military activities. In contrast, tomb epitaphs provide a valuable alternative, reshaping the research landscape by enabling the study of aspects beyond the scope of traditional historiography. While epitaphs still predominantly center on the upper echelons of society, they also illuminate the lives of individuals often marginalized or omitted in official histories, such as women.</p>
+            <p style="text-align: left; ">This research examines the epitaphs from the Northern Wei dynasty (386–539 C.E.), the first conquering dynasty in Chinese history, founded by the Inner Asian Xianbei people. The conflicts and eventual fusion of diverse political institutions and cultural traditions during this period left a lasting legacy that influenced the Tang dynasty (618–907 C.E.) (Pearce 2019: 182–183), highlighting its historical significance. Moreover, the Sinicization of the dynasty brought shifts in gender roles, as women increasingly came to be portrayed as paragons of virtue in line with Chinese traditions—a topic explored in our previous study (Ochi 2024).</p>
+            <p style="text-align: left; ">The dataset for this research comprises all rhyme verses from excavated Northern Wei epitaphs available to date, totaling 364 male and 93 female, as collected by Kajiyama (2013) and Ochi (2023). These rhymed verses, typically 100 to 120 characters long, consist of phrases that each follow a four-character format, expressing admiration and mourning for the deceased. Leveraging recent advancements in natural language processing techniques, this study employs Transformer-based models for text mining these verses to address the following research questions: (1) How were males and females depicted differently in Northern Wei epitaph verses? (2) Which classical texts did male and female epitaph verses respectively resemble?</p>
+            <p style="text-align: left; ">We first segmented each epitaph verse into terms by dividing each four-character phrase into two two-character terms, leveraging the verses’ strict format. Next, we evaluated the performance of four Transformer-based models pretrained on large collections of classical Chinese texts: SikuBERT (D. Wang et al. 2022), bert-ancient-chinese (P. Wang / Ren 2022), and GuwenBERT (base and large models, https://github.com/Ethan-yt/guwenbert). For evaluation, we generated embeddings—numerical representations that capture the semantic meaning of text—for each term, calculated the 30 terms with the highest cosine similarity scores, and manually assessed whether they were semantically similar in their respective contexts. We found that the GuwenBERT-base model demonstrated the best performance and subsequently used it for the remaining tasks.</p>
+            <p style="text-align: left; ">In the first experiment, we generated embeddings for the full text of each epitaph verse, and compared the average cosine similarity scores among male epitaphs, among female epitaphs, and between male and female epitaphs.</p>
+            <figure>
+                <graphic n="1001" width="9.728219444444445cm" height="7.797816666666667cm" url="/tmp/tmp3xumw2e4/Pictures/8debe2a70b1139b73f80c143f2f867c0.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">
+                <hi rend="bold">Figure 1.</hi> Average similarity among and between male and female epitaph verses
+            </p>
+            <p style="text-align: left; ">Male epitaph verses show greater within-group similarity (0.99866) than their similarity with female epitaph verses (0.99843), a statistically significant difference confirmed by a Mann–Whitney 
+                <hi rend="italic">U</hi> test (
+                <hi rend="italic">p</hi>&lt;0.001) (Mann / Whitney 1947). In contrast, female epitaph verses exhibit slightly lower within-group similarity (0.99842) than their similarity with male epitaph verses. Our previous study found that female epitaph verses frequently use unique terms that appear in only one verse (Ochi 2024), which explains why female epitaph verses, unlike male ones, do not exhibit high within-group similarity.
+            </p>
+            <p style="text-align: left; ">In addition to document embeddings, we generated embeddings for each two-character term in their respective contexts. For each term, we calculated the average cosine similarity scores within and across gender groups, where applicable. Among the 622 terms appearing in at least two male epitaph verses and one female epitaph verse, the average similarity is higher within the male group (0.9913) than across gender groups (0.9910). Similarly, for the 307 terms that appear in at least two female epitaph verses and one male epitaph verse, the average similarity is higher within the female group (0.9910) than across gender groups (0.9906). These findings suggest that, while female epitaph verses do not exhibit greater within-group resemblance at the document level due to unique term choices, individual terms show more consistent semantic usage within both male and female gender groups than across gender groups.</p>
+            <p style="text-align: left; ">To further explore term usage within and across gender groups, we examined all three instances of the term “wise person” (
+                <hi rend="italic">zheren</hi> <hi rend="Chinese">哲人</hi>) in female epitaph verses. Traditionally used in Chinese classics to describe male scholars—originally referring to Confucius—the term is particularly noteworthy in the context of female epitaphs. We compared the average cosine similarity scores between the embedding of each of its three occurrences in female epitaph verses and the embeddings of all 36 occurrences in male epitaph verses.
+            </p>
+            <figure>
+                <graphic n="1002" width="16.002cm" height="12.481277777777779cm" url="/tmp/tmp3xumw2e4/Pictures/8debe2a70b1139b73f80c143f2f867c0.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">
+                <hi rend="bold">Figure 2.</hi> Average similarity of “wise person” in female epitaph verses to male epitaph verses
+            </p>
+            <p style="text-align: left; ">In the epitaph of Dowager Consort Han of Gao Shusheng, the term “wise person” refers to Han’s husband rather than herself. This usage demonstrates a higher average similarity with the term in male epitaph verses (0.9903) compared to the two instances where it describes women (0.9873; 0.9895). These differences are statistically significant, as confirmed by Wilcoxon signed-rank test (
+                <hi rend="italic">W</hi>=0, 
+                <hi style="font-family:Cambria Math">𝑝</hi>&lt;0.001; 
+                <hi rend="italic">W</hi>=36, 
+                <hi rend="italic">p</hi>&lt;0.001) (Wilcoxon 1945). This highlights a dual phenomenon: first, the lack of terms to describe virtues attributed to women beyond conventional concepts like “submission” and “beauty” led epitaph writers to adopt terms traditionally reserved for men to praise women’s intellectual achievements. Second, the semantic meaning of these terms shifts when applied to women, diverging more from their typical usage in describing men.
+            </p>
+            <p style="text-align: left; ">To address the second research question, we identified three influential Chinese classics—the 
+                <hi rend="italic">Analects</hi> (
+                <hi rend="italic">Lunyu</hi> <hi rend="Chinese">論語</hi>), the 
+                <hi rend="italic">Book of Rites</hi> (
+                <hi rend="italic">Liji</hi> <hi rend="Chinese">禮記</hi>), and the 
+                <hi rend="italic">Book of Songs</hi> (
+                <hi rend="italic">Shijing</hi> <hi rend="Chinese">詩經</hi>)—as having intertextual connections with Northern Wei epitaph verses through close reading. The English translations referenced for these works, including their passage names, were 
+                <hi rend="italic">Confucius Analects</hi> (2003), 
+                <hi rend="italic">Li Chi: Book of Rites</hi> (1967), and 
+                <hi rend="italic">The Book of Songs</hi> (1996). We generated document embeddings for individual passages of the three works and calculated the average cosine similarity scores between these embeddings and male and female epitaph verses, respectively.
+            </p>
+            <p style="text-align: left; ">On average, the 
+                <hi rend="italic">Analects</hi> and the 
+                <hi rend="italic">Book of Rites</hi> show greater similarity to male epitaph verses, while the 
+                <hi rend="italic">Book of Songs</hi> shows greater similarity to female epitaph verses. We further visualized the differences in average similarity between each passage of the three classics and male and female epitaph verses. Dots above the red line represent passages semantically closer to male epitaph verses, while those below represent passages resembling female epitaph verses.
+            </p>
+            <figure>
+                <graphic n="1003" width="16.002cm" height="11.618736111111112cm" url="/tmp/tmp3xumw2e4/Pictures/8debe2a70b1139b73f80c143f2f867c0.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">
+                <hi rend="bold">Figure 3.</hi> Differences in average similarity between passages of classics and male and female epitaph verses
+            </p>
+            <p style="text-align: left; ">The 
+                <hi rend="italic">Analects</hi> consist of collective sayings of Confucius that describe the ideal way of living according to Confucian teachings, and each passage is not fully cohesive internally. Consequently, they all show greater similarity to male epitaph verses. Similarly, most passages of the 
+                <hi rend="italic">Book of Rites</hi> also exhibit greater similarity to male epitaph verses, as they primarily focus on social norms for men. This is exemplified by the passage “Conduct of the Scholar” (
+                <hi rend="italic">Ruxing</hi> <hi rend="Chinese">儒行</hi>), which shows the largest difference in similarity between male and female epitaph verses. However, a few passages in the 
+                <hi rend="italic">Book of Rites</hi> show greater similarity to female epitaph verses, most notably “Meaning of the Marriage Ceremony” (
+                <hi rend="italic">Hunyi</hi> <hi rend="Chinese">昏義</hi>) and “Pattern of the Family” (
+                <hi rend="italic">Neize</hi> <hi rend="Chinese">內則</hi>). These passages discuss marriage and family rites, aligning closely with themes in Northern Wei female epitaph verses. In the 
+                <hi rend="italic">Book of Songs</hi>, many passages from the section 
+                <hi rend="italic">Airs of the States</hi> (
+                <hi rend="italic">Guofeng</hi> <hi rend="Chinese">國風</hi>) resemble female epitaph verses. Examples include “Peach-Tree” (
+                <hi rend="italic">Taoyao</hi> <hi rend="Chinese">桃夭</hi>), “Out in the Bushlands a Creeper Grows” (
+                <hi rend="italic">Yeyou mancao</hi> <hi rend="Chinese">野有蔓草</hi>), and “Of Fair Girls” (
+                <hi rend="italic">Jingnü</hi> <hi rend="Chinese">靜女</hi>), which focus on romantic themes and depictions of beauty. By contrast, the passages that most closely resemble male epitaph verses are found in the section Hymns (
+                <hi rend="italic">Song</hi> <hi rend="Chinese">頌</hi>), such as “Always Furthering” (
+                <hi rend="italic">Changfa</hi> <hi rend="Chinese">長髮</hi>), “Celebration” (
+                <hi rend="italic">Ban</hi> <hi rend="Chinese">般</hi>), and “The Dark Birds” (
+                <hi rend="italic">Xuanniao</hi> <hi rend="Chinese">玄鳥</hi>), which commend the achievements of dynasties.
+            </p>
+            <p style="text-align: left; ">To conclude, our findings demonstrate that women are depicted differently than men in Northern Wei epitaph verses. Female epitaph verses employ distinct terms and resemble different passages in classical texts. Moreover, male dominance in the power structure resulted in discourse being shaped by patriarchal privileges, rendering women invisible and leading to the absence of terms that capture their unique characteristics. Therefore, as Spivak (1988) asserts, “the subaltern cannot speak” (308). Women were portrayed using terms traditionally reserved for men, reinforcing and reproducing the male-dominant structure, a pattern akin to the concept of “hybrid masculinity” as described by Demetriou (2001).</p>
+            <p style="text-align: left; ">As summarized by Lee (2019): “Women were thus found included and placed in relation to men to form ethical norms” (459). Using a novel text mining approach, our research uncovered nuanced patterns that confirm these dynamics in Northern Wei epitaphs, providing deeper insights into gender depictions in historical texts. The main limitation of this research lies in the use of general-purpose Transformer-based models for classical Chinese, which may not fully capture the semantic nuances of our corpus. This could be addressed by fine-tuning the models with medieval or epitaph texts and refining the segmentation method. Additionally, we aim to reveal more rhetorical nuances through close reading of both epitaph verses and the classical texts they resemble in the further development of this research.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="italic">Confucius Analects</hi> (2003). Translated by Edward Slingerland. Indianapolis and Cambridge: Hackett Publishing Company, Inc.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Demetriou, Demetrakis Z.</hi> (2001): “Connell’s Concept of Hegemonic Masculinity: A Critique”, in: 
+                        <hi rend="italic">Theory and Society</hi> 30, 3: 337–361.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kajiyama, Satoshi <hi rend="Chinese">梶山智史</hi></hi> (ed.) (2013): 
+                        <hi rend="italic">Hokuchō zuidai boshi syozai sougou mokuroku</hi> <hi rend="Chinese">北朝隋代墓誌所在総合目録 </hi>[Catalog of Bibliographic Sources of Stone Tomb Inscriptions from the Northern Dynasties and Sui Dynasty]. Tokyo: Meiji daigaku higashi ajia sekkoku kenkyūsyo.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Lee, Jen-der</hi> (2019): “Women, Families, and Gendered Society”, in: Dien, Albert E. / Knapp, Keith N. (eds.): 
+                        <hi rend="italic">The Cambridge History of China, Volume 2: The Six Dynasties, 220–589</hi>. Cambridge: Cambridge University Press 443–459.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="italic">Li Chi: Book of Rites</hi> (1967). Translated by James Legge. New Hyde Park: University Books, Inc.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Mann, Henry Berthold / Whitney, Donald Ransom</hi> (1947): “On a Test of Whether One of Two Random Variables is Stochastically Larger Than the Other”, in: 
+                        <hi rend="italic">The Annals of Mathematical Statistics</hi> 18, 1: 50–60. DOI:10.1214/aoms/1177730491.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Ochi, Seiko <hi rend="Chinese">大知聖子</hi></hi> (2023): “Shinsyutsu hokugi boshi mokuroku” <hi rend="Chinese">新出北魏墓誌目録 </hi>[A Catalogue of Newly Excavated Northern Wei Epitaphs], in: 
+                        <hi rend="italic">Nagoya daigaku tōyōshi kenkyū houkoku</hi> <hi rend="Chinese">名古屋大学東洋史研究報告 </hi>47: 93–106.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Ochi, Seiko</hi> (2024): “Extraction of Gender Role Expressions in Northern Wei Epitaphs Using Correspondence Analysis and Historical Consideration”, in: Karajgikar, Jajwalya / Janco, Andrew / Otis, Jessica (eds.): 
+                        <hi rend="italic">The Book of Abstracts of Digital Humanities Conference 2024 (DH2024)</hi>, Arlington, VA, August 2024: 521–523.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Pearce, Scott</hi> (2019): “Northern Wei”, in Dien, Albert E. / Knapp, Keith N. (eds.): 
+                        <hi rend="italic">The Cambridge History of China, Volume 2: The Six Dynasties, 220–589</hi>. Cambridge: Cambridge University Press 155–183.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Spivak, Gayatri Chakravorty</hi> (1988): “Can the Subaltern Speak?”, in: Nelson, Cary / Grossberg, Lawrence (eds.): 
+                        <hi rend="italic">Marxism and the Interpretation of Culture</hi>. Basingstoke: Macmillan Education 271–313.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="italic">The Book of Songs</hi> (1996). Translated by Arthur Waley. New York: Grove Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Twitchett, Denis</hi> (1966): “Chinese Social History from the Seventh to the Tenth Centuries: The Tunhuang Documents and Their Implications”, in: 
+                        <hi rend="italic">Past &amp; Present</hi> 35, 1: 28–53. DOI: 10.1093/past/35.1.28.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Wang, Dongbo <hi rend="Chinese">王東波 </hi>/ Liu, Chang <hi rend="Chinese">劉暢 </hi>/ Zhu, Zihe <hi rend="Chinese">朱子赫 </hi>/ Liu, Jiangfeng <hi rend="Chinese">劉江峰 </hi>/ Hu, Haotian <hi rend="Chinese">胡昊天 </hi>/ Shen, Si <hi rend="Chinese">沈思 </hi>/ Li, Bin <hi rend="Chinese">李斌</hi></hi> (2022): “Mianxiang shuzi renwen de Siku Quanshu yu xunlian moxing goujian ji yingyong yanjiu” <hi rend="Chinese">面向數字人文的《四庫全書》預訓練模型構建及應用研究 </hi>[Construction and Application of Pre-training Model of ‘Siku Quanshu’ Oriented to Digital Humanities], in: 
+                        <hi rend="italic">Tushuguan luntan</hi> <hi rend="Chinese">圖書館論壇</hi>, 6: 30–43.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Wang, Pengyu / Ren, Zhichen</hi> (2022): “The Uncertainty-Based Retrieval Framework for Ancient Chinese CWS and POS”, in: Sprugnoli, Rachele / Passarotti, Marco (eds.): 
+                        <hi rend="italic">Proceedings of the Second Workshop on Language Technologies for Historical and Ancient Languages</hi>, Marseille, France, June 2022: 164–168.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Wilcoxon, Frank</hi> (1945): “Individual Comparisons by Ranking Methods”, in 
+                        <hi rend="italic">Biometrics Bulletin</hi> 1, 6: 80–83. DOI: 10.2307/3001968.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="RADISCH_Erik__A_3D_Positioning_System_for_the_Paintings_of_t">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main"> A 3D-Positioning System for the Paintings of the Kucha Project </title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Radisch</surname>
+                        <forename>Erik</forename>
+                    </persName>
+                    <affiliation>Saxon Academy of Sciences and Humanities in Leipzig, Germany</affiliation>
+                    <email>radisch@saw-leipzig.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-05T20:41:08.937680817</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Art History</term>
+                    <term>Buddhist Studies</term>
+                    <term>Asian Studies</term>
+                    <term>3D-Annotation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>data</term>
+                    <term>object</term>
+                    <term>and artefact preservation</term>
+                    <term>digitization (2D &amp; 3D)</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>Art history</term>
+                    <term>Asian studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>The Kucha region of Xinjiang is home to Buddhist man-made cave complexes featuring remarkable wall paintings that illustrate Buddhist legends dating from approximately the 5th to 10th centuries. Evidence of this past Buddhist culture was first discovered in the early 20th century. Following this discovery, several nations sent expeditions to the area, which documented the murals’ state of preservation through photographs and reports. Some paintings were removed for research purposes and brought to the explorers’ respective national museums. Due to sales and political turmoil, the painting fragments are now scattered across the globe, making it challenging to identify their original positions within the murals. (For further information: Yaldiz 1987; Popova 2008; Dreyer 2015; Zhao 2021.)</p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp5s2_4r1h/Pictures/a329a86b596c437f00d8b6c81537dca6.png"/>
+                    <head>Example of grid systems (highlighted). Source: Xinjiang Weiwu’er zizhiqu wenwu guanli weiyuanhui 1992.</head>
+                </figure>One of the primary objectives of our project is to establish a database-supported information system to systematically document the Buddhist paintings of Kucha. This includes recording their current locations and, where possible, reconstructing their original contexts.
+            </p>
+            <p>Most paintings in the caves are arranged systematically, typically in rhombic or square patterns, as shown in Figure 1. This layout lends itself to a coordinate system for locating individual paintings, consisting of registers (y-axis) and numbers (x-axis). Numbering progresses from the entrance inward, while registers are counted from top to bottom.</p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp5s2_4r1h/Pictures/a329a86b596c437f00d8b6c81537dca6.png"/>
+                    <head>Old location system. </head>
+                </figure>Until now, we recorded register systems as a simple text field (see Figure 2), which, while sufficient for experts, presented a knowledge barrier for non-specialist users. To address this, we have completely redesigned how painting locations are handled.
+            </p>
+            <p>In the first step, we developed an interactive visualization of the register systems. Users can now create custom register systems reflecting the actual dimensions and link individual sections to specific content. Three main content types are available: empty spots (white), representing non-existent areas; damaged spots (red), indicating areas that once existed but are now lost; and linked paintings (blue), which may also include uncertain location assignments (lighter blue). The register system is constructed using semi-transparent SVG elements rendered on a simple canvas. The area for the register system is also freely configurable (see Figures 3 and 4).</p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp5s2_4r1h/Pictures/a329a86b596c437f00d8b6c81537dca6.png"/>
+                    <head>Sample of the new interactive register system in rhombus mode.</head>
+                </figure>
+                <figure>
+                    <graphic url="/tmp/tmp5s2_4r1h/Pictures/a329a86b596c437f00d8b6c81537dca6.png"/>
+                    <head>Sample of the interactive system in square mode.</head>
+                </figure>
+            </p>
+            <p>This new interactive presentation has significantly improved the understanding of painting positions on a single wall. To extend this functionality, schematic 3D models of the caves were created, and the register systems were projected onto the corresponding walls. Walls in the model were labeled with IDs corresponding to our system. The interaction between the 3D wall and the canvas (UV map) is projected directly onto the canvas to clarify which areas will appear on the wall. This is particularly evident in Figure 5, where the back wall is projected onto the canvas. Corridors to the right and left, as well as a niche, are excluded from the projection. Consequently, the marked area would only partially appear in the 3D model. In the final step, the semi-transparent SVG graphics were overlaid onto the cave textures. </p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp5s2_4r1h/Pictures/a329a86b596c437f00d8b6c81537dca6.png"/>
+                    <head>Projection of the 3D cave shape onto the canvas.</head>
+                </figure>
+            </p>
+            <p>As the SVG elements lose their interactivity in this final visualization, we implemented an algorithm to detect mouse interactions within the 3D model. By mapping mouse positions to canvas points via UV coordinates, the algorithm identifies whether a painting is being pointed at and initiates appropriate interactions, such as popups with further information (see Figure 6).</p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp5s2_4r1h/Pictures/a329a86b596c437f00d8b6c81537dca6.png"/>
+                    <head>New interactive 3D view of the grid system and popup-information.</head>
+                </figure>
+            </p>
+            <p>Additionally, we integrated a hierarchical tree of iconographic and pictorial content into the 3D view. Clicking on a content type highlights corresponding paintings in green, enabling spatial analysis of the cave’s pictorial program (see Figure 7).</p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp5s2_4r1h/Pictures/a329a86b596c437f00d8b6c81537dca6.png"/>
+                    <head>Interaction between content tree and 3D-Model. The painting with mouse pointer is marked green as it contains a child.</head>
+                </figure>
+            </p>
+            <p>This new system not only facilitates a better understanding of a painting’s location within a cave but also enables spatial analysis of the broader pictorial program.</p>
+            <p>The approach of projecting 2D semi-transparent SVG objects onto 3D textures could be valuable for other projects<ref n="1" target="ftn1"/>. Although it is common to use 3D objects to display pictorial elements in their spatial context, to the author’s knowledge, there has so far been no method for making polygon annotations visible directly on 3D surfaces<ref n="2" target="ftn2"/>. Modern 3D annotation tools often focus solely on point annotations or object highlighting, which may not be sufficient for analyzing visual programs in the digital humanities. While this limitation does not significantly affect our use case, semi-transparent polygon annotations offer the advantage of highlighting surface areas while still allowing users to see the underlying content. This is particularly important for complex and fragmented pictorial elements. Highlighting related parts of artworks with semi-transparent SVGs thus fosters a deeper understanding of their interrelations.
+            </p>
+            <p>However, broader application of this method is currently limited by the complexity of implementing interactive annotation logic. A more scalable solution might involve developing a dedicated surface annotation tool, with annotations stored as meshes to enable interactivity directly within the 3D model.</p>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn1" rend="footnote text" n="1">A good axample of another project would be Florence as it was. The paintings, which are presented here in their original spatial context, would benefit greatly, if polygon annotations could also access their pictorial content en detail. Bent et al. 2022</note>
+<note xml:id="ftn2" rend="footnote text" n="2">A good example might be kompakkt, which only sets points for annotations: Eide et al. 2019.</note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Bent, G. R. Pfaff, </hi>
+                        <hi rend="bold">D.</hi>
+                        <hi rend="bold">,Brooks, </hi>
+                        <hi rend="bold">M</hi>
+                        <hi rend="bold">, Radpour, </hi>
+                        <hi rend="bold">R.</hi>
+                        <hi rend="bold"> </hi>
+                        <hi rend="bold">and </hi>
+                        <hi rend="bold">Delaney, </hi>
+                        <hi rend="bold">J. </hi>(2022)
+                        <hi rend="bold"> </hi>A practical workflow for the 3D reconstruction of complex historic sites and their decorative interiors: 
+                        <hi rend="italic">Florence As It Was</hi>and the church of Orsanmichele. 
+                        <hi rend="italic">Herit Sci</hi>10, 118 (2022). https://doi.org/10.1186/s40494-022-00750-1
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Dreyer, C.</hi>(2015). 
+                        <hi rend="italic">Abenteuer Seidenstraße: Die Berliner Turfan-Expeditionen 1902–1914</hi>. Leipzig: Seemann.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Eide, Ø., Schubert, Z., Türkoğlu, E., Wieners, J. G., &amp; Niebes, K.</hi>(2019). The intangibility of tangible objects: re-telling artefact stories through spatial multimedia annotations and 3D objects. ICOM Kyoto 2019, 25th ICOM General Conference: Museums as Cultural Hubs: The Future of Tradition, Kyoto. 
+                        <ptr target="https://doi.org/10.5281/zenodo.3878966"/>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Popova, I. F. </hi>(ed.) (2008). 
+                        <hi rend="italic">Russian Expeditions to Central Asia at the Turn of the 20th Century: Collected Articles</hi>. St Petersburg: Slavia Publishers.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Xinjiang Weiwu’er zizhiqu wenwu guanli weiyuanhui, Beijing daxue kaoguxi <hi rend="Chinese">新疆维吾尔自治区文物管理委员会</hi>, <hi rend="Chinese">北京大学考古系 </hi>(edd.)</hi>(1992), Zhongguo shiku: Kumutula shiku <hi rend="Chinese">中国石窟</hi>: <hi rend="Chinese">库木吐喇石窟 </hi>[The Grotto Art of China: The Kumtura Grottoes]. Beijing: Wenwu chubanshe.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Yaldiz, M.</hi>(1987). 
+                        <hi rend="italic">Archäologie und Kunstgeschichte Chinesisch-Zentralasiens (Xinjiang)</hi>. Leiden: Brill, Handbuch der Orientalistik, Abteilung 7, Kunst und Archäologie, Band 3, Innerasien.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Zhao, L. <hi rend="Chinese">赵莉</hi></hi>(2021). 
+                        <hi rend="italic">Kezi‘er shiku bihua fuyuan yanjiu</hi><hi rend="Chinese">克孜尔石窟壁画复原研究 </hi>/ 
+                        <hi rend="italic">A Study on the Restoration of the Kizil Grotto Murals</hi>. Shanghai: Shanghai shuhua chubanshe.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ALONSO_Mikel_Linking_Larramendi_s_Lexicon">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Linking Larramendi’s Lexicon</title>
+                <author>
+                    <persName>
+                        <surname>Alonso</surname>
+                        <forename>Mikel</forename>
+                    </persName>
+                    <affiliation>University of the Basque Country (UPV/EHU), Spain</affiliation>
+                    <email>mikel.alonsoa@ehu.eus</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Historical Lexicography</term>
+                    <term>OCR</term>
+                    <term>Information Extraction</term>
+                    <term>Linked Data</term>
+                    <term>Wikibase</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>crowdsourcing</term>
+                    <term>digital publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>linked (open) data</term>
+                    <term>optical character recognition and handwriting recognition</term>
+                    <term>Linguistics</term>
+                    <term>Philology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">The 
+                    <hi rend="italic">Spanish-Basque-Latin Trilingual Dictionary</hi> by Manuel Larramendi (1745), hereafter LAR, was the preeminent reference work for Basque for over a century and a half, and it is considered the dictionary that brought a significant shift within the periodisation of Basque dictionary-making (Urgell 2002). The dictionary has been thoroughly analysed from philological and lexicographical perspectives (see Urgell 2000), but these studies have only been able to rely on manually collected samples. Consequently, no quantitative method that takes the whole of its contents into account has yet been applied. 
+                </p>
+                <p style="text-align: left; ">The contribution Larramendi made to Basque literature and linguistics is unquestionable, as has been noted in many works (see Lakarra 1985; Sarasola 1986; or, more recently, Urgell 2021). Larramendi authored the first grammar and the first comprehensive dictionary published in Basque, and their influence on written Basque has been described for instance in Gómez (1991b) and Sarasola (2008). Besides his role promoting Basque, Larramendi is considered by many an excellent writer, both in Basque and Spanish (Gómez 1991a; Mitxelena 2011, p. 145-146). Although his texts are available online in digital repositories and Basque corpus portals, these versions cannot be straightforwardly used for research due to doubts regarding their quality and missing provenance metadata. </p>
+                <p style="text-align: left; ">Wikidata<ref n="1" target="ftn1"/> is a free and open knowledge base that can be read and edited by both humans and machines and acts as a repository of structured data. Although since its creation in 2012 Wikidata has primarily been focusing on representing real-world objects and concepts (“items”), from 2018 on it also describes lexemes in multiple languages. As explained on the page dedicated to Wikidata’s lexicographical data model<ref n="2" target="ftn2"/>, the structured descriptions of lexemes are modeled according to the three core classes in the Ontolex-Lemon RDF vocabulary (McCrae et al. 2017), i.e., they are described at three levels: Lexical entry, sense, and form. These entries, like all Wikidata content, are reusable across a wide range of tools and queries. Wikibase<ref n="3" target="ftn3"/>, an extension of MediaWiki, is the software that underlies Wikidata, and it is a free and open-source software suite that allows its users to create and run their own open knowledge base. 
+                </p>
+                <p style="text-align: left; ">This paper describes the workflow we implement for digitising Larramendi’s dictionary and prose texts using open-source software and the publication of his works in public platforms that guarantee the FAIR principles, serving as a foundation for digitising other dictionaries and historical texts.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Digitisation Workflow</head>
+                <p style="text-align: left; ">In Alonso (2021) and Lindemann and Alonso (2021) we describe the process of digitising a legacy dictionary, LAR, starting from scanned images of the early modern print original paper publication. Once the OCR was performed and evaluated —bearing in mind that the accuracy was not absolute (98.5%)— the output was taken to an information extraction process that provided lexicographic annotation using 
+                    <hi rend="italic">Elexifier</hi><ref n="4" target="ftn4"/>, which was still in its beta phase. Consequently, the annotations made and the resulting outcomes were not as precise as desired. On the other hand, after processing the extracted Spanish lemma list and the corresponding Basque equivalents using rule-based methods to standardise spelling, we developed a model to compare the two datasets and establish links to Wikidata lexemes, integrating several Basque forms extracted from LAR into Wikidata after a double check: we added LAR forms to existing Wikidata lexemes when these forms were corroborated by two criteria: a “1745” dating in Sarasola’s Hauta Lanerako Euskal Hiztegia (1996) and the presence of a single grammatical category in Wikidata.
+                </p>
+                <p style="text-align: left; ">Thus, making these forms from LAR accessible in a machine-readable format, and publishing them as Linked Open Data, opened up opportunities for several new applications. Beyond direct consultation in Wikidata, this data can be used, for example, to train NLP tools for the lemmatization of historical texts, for linking corpus tokens to dictionary entries, or for semantic annotation (linking tokens to lexeme senses). Moreover, we uploaded the OCR output and the resulting transcription of LAR to Wikisource<ref n="5" target="ftn5"/>, a crowdsourcing platform that provides an interface for collaborative facsimile transcriptions. This process is ongoing and will very soon lead to an error-free digital version of the original text. 
+                </p>
+                <p style="text-align: left; ">Regarding Larramendi’s prose texts, as described in Lindemann and Alonso (2024), we are currently using a Wikibase instance to describe the content of Larramendi’s texts stored on Wikisource<ref n="6" target="ftn6"/>, and add linguistic and philological annotations to token and token spans. The deployed software features edit and user contribution histories, so that the platform can be used for larger projects where different human editors are involved. As the dataset is compatible with Wikidata, in the sense that lexemes, forms, senses, their descriptions, and ontology concepts can be aligned between both platforms, it is possible to launch federated queries<ref n="7" target="ftn7"/> delivering results from both knowledge graphs at the same time.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Outlook</head>
+                <p style="text-align: left; ">We have described the workflow followed for the ongoing digitisation of Larramendi’s works Further research will rely on, first of all, an error-free final transcription of LAR. Once achieved that, we will apply the already tested information extraction approach for obtaining a structured version of the dictionary. For this purpose, 
+                    <hi rend="italic">Elexifier</hi> should be fed with a larger training set and use more complex markup, as the tool’s development is now complete. For the annotation to reflect the dictionary’s structure accurately, that structure must be clearly defined, namely identifying headwords, detecting subentries, distinguishing phrases and, overall, describing precisely the dictionary’s microstructure. Completing these tasks will allow, for instance, to continue linking the dictionary entries with tokens in the prose text of the same author, to understand the extent to which the words from the dictionary were actually used in his writings, or to produce a reverse dictionary that would organise the words from the end to the beginning, enabling the extraction of suffix lists and facilitating the identification of derived words.
+                </p>
+                <p style="text-align: left; ">Another task to be concluded is to include LAR lemmata in Wikidata lexemes. To achieve this, it will be necessary to resolve the grammatical categories of the lemmas extracted from LAR. This will also allow connecting LAR Latin content to other linguistic resources like LiLa: Linking Latin<ref n="8" target="ftn8"/>.
+                </p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                         See https://www.wikidata.org/.
+                    </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                         See https://www.wikidata.org/wiki/Wikidata:Lexicographical_data.
+                    </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                         See https://wikiba.se/.
+                    </note>
+<note rend="footnote text" xml:id="ftn4" n="4">
+                         See https://elexifier.elex.is/.
+                    </note>
+<note rend="footnote text" xml:id="ftn5" n="5">
+                         See https://eu.wikisource.org/wiki/Hiztegi_Hirukoitza.
+                    </note>
+<note rend="footnote text" xml:id="ftn6" n="6">
+                         See https://eu.wikisource.org/wiki/Azkoitiko_Sermoia.
+                    </note>
+<note rend="footnote text" xml:id="ftn7" n="7">
+                         See https://www.mediawiki.org/wiki/Wikibase/Federation for detailed information.
+                    </note>
+<note rend="footnote text" xml:id="ftn8" n="8">
+                         See https://lila-erc.eu/.
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Alonso, Mikel</hi> (2021): 
+                        <hi rend="italic">Larramendiren</hi> Hiztegi Hirukoitza
+                        <hi rend="italic">ren digitalizazioa</hi>. Master’s thesis, University of the Basque Country (UPV/EHU). DOI: 
+                        <ref target="http://dx.doi.org/10.13140/RG.2.2.27926.68169">10.13140/RG.2.2.27926.68169</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Gómez, Ricardo</hi> (1991a): “El legado de Manuel Larramendi” in: 
+                        <hi rend="italic">Ínsula</hi> 534: 29-30. 
+                        <ref target="https://artxiker.ccsd.cnrs.fr/artxibo-00106375v1">
+                            <hi style="font-family:Cambria Math">⟨</hi>artxibo-00106375
+                            <hi style="font-family:Cambria Math">⟩</hi>
+                        </ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Gómez, Ricardo</hi> (1991b): “Larramendiren gramatika eta gramatikagintzaren historia” in: 
+                        <hi rend="italic" xml:space="preserve">ASJU </hi>25: 783-796.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Lakarra, Joseba A.</hi> (1985): “Larramendiren hiztegigintzaren inguruan” in: 
+                        <hi rend="italic">ASJU</hi> 19, 1: 9-50.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Larramendi, Manuel</hi> (1745
+                        <hi rend="italic">): Diccionario trilingüe castellano, bascuence y latin dedicado a la M.N. y M.L. provincia de Guipuzcoa</hi>. San Sebastián: Bartholomé Riesgo y Montero.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Lindemann, David / Alonso, Mikel</hi> (2021): “A workflow for historical dictionary digitisation: Larramendi’s Trilingual Dictionary” in: 
+                        <hi rend="italic">Electronic Lexicography in the 21st Century: Proceedings of the eLex 2021 Conference</hi>: 598–614.
+                        <lb/>
+                        <ref target="https://elex.link/elex2021/wp-content/uploads/2021/08/eLex_2021_39_pp598-614.pdf">https://elex.link/elex2021/wp-content/uploads/2021/08/eLex_2021_39_pp598-614.pdf</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Lindemann, David / Alonso, Mikel</hi> (2024): “Linking Historical Corpus Data and Annotations using Wikibase” in: Kristina Š. Despot, Ana Ostroški Anić, Ivana Brač (eds.): 
+                        <hi rend="italic">Lexicography and Semantics. Proceedings of the XXI EURALEX International Congress</hi>. Institute for the Croatian Language.
+                        <lb/>
+                        <ref target="https://doi.org/10.5281/zenodo.13932190" xml:space="preserve"> </ref>
+                        <ref target="https://doi.org/10.5281/zenodo.13932190">https://doi.org/10.5281/zenodo.13932190</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">McCrae, John P. / Bosque-Gil, Julia / Gracia, Jorge / Buitelaar, Paul / Cimiano, Philipp</hi> (2017): “The OntoLex-Lemon Model: Development and Applications” in: I. Kosem, C. Tiberius, M. Jakubíček, J. Kallas, S. Krek &amp; V. Baisa (eds
+                        <hi rend="italic">.): Electronic lexicography in the 21st century: Lexicography from scratch. Proceedings of eLex 2017</hi>. Leiden: Lexical Computing 587–597. 
+                        <lb/>URL 
+                        <ref target="https://elex.link/elex2017/wp-content/uploads/2017/09/paper36.pdf">https://elex.link/elex2017/wp-content/uploads/2017/09/paper36.pdf</ref>. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Mitxelena, Koldo</hi> (2011): 
+                        <hi rend="italic">Obras completas XIII (Supplements of ASJU 66)</hi>, Donostia &amp; Vitoria-Gasteiz: Julio Urkixo Euskal Filologia Mintegia, Gipuzkoako Foru Aldundia &amp; UPV/EHU (ed. by Joseba A. Lakarra &amp; Iñigo Ruiz Arzalluz).
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Sarasola, Ibon</hi> (1986): “Larramendiren eraginaz eta” in: 
+                        <hi rend="italic" xml:space="preserve">ASJU </hi>20, 1: 203-215.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Sarasola, Ibon</hi> (1996): 
+                        <hi rend="italic">Hauta Lanerako Euskal Hiztegia</hi>. Donostia: Kutxa Gizarte eta Kultur Fundazioa.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Sarasola, Ibon</hi> (2008): “Iparraldeko hiztegigintza Larramendiren paradigmaren garaian” in: 
+                        <hi rend="italic">ASJU</hi> 51: 769-784.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Urgell, Blanca</hi> (2000): 
+                        <hi rend="italic">Larramendiren</hi> Hiztegi Hirukoitza
+                        <hi rend="italic">-ren osagaiez</hi>. Ph.D. thesis, University of the Basque Country (UPV/EHU), Gasteiz.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Urgell, Blanca</hi> (2002): “
+                        <hi rend="italic">Hiztegi Hirukoitza</hi>-ren kanpoko eta barruko historiaz” in: 
+                        <hi rend="italic">ASJU</hi> 44: 629-649.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Urgell, Blanca</hi> (2021): “On the reliability of Larramendi’s evidence” in
+                        <hi rend="italic">: Anuario del Seminario de Filología Vasca «Julio de Urquijo»</hi>, 50, 1: 121–147.
+                        <ref target="https://doi.org/10.1387/asju.22861">
+                            <lb/>
+                        </ref>
+                        <ref target="https://doi.org/10.1387/asju.22861">https://doi.org/10.1387/asju.22861</ref>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

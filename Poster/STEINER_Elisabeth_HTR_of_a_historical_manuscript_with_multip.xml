@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="STEINER_Elisabeth_HTR_of_a_historical_manuscript_with_multip">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>HTR of a historical manuscript with multiple languages, scripts, and hands</title>
+                <author>
+                    <persName>
+                        <surname>Scholger</surname>
+                        <forename>Martina</forename>
+                    </persName>
+                    <affiliation>University of Graz, Austria</affiliation>
+                    <email>martina.scholger@uni-graz.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Steiner</surname>
+                        <forename>Elisabeth</forename>
+                    </persName>
+                    <affiliation>University of Graz, Austria</affiliation>
+                    <email>elisabeth.steiner@uni-graz.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Frauendorfer</surname>
+                        <forename>Melanie</forename>
+                    </persName>
+                    <affiliation>University of Graz, Austria</affiliation>
+                    <email>melanie.frauendorfer@uni-graz.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Strutz</surname>
+                        <forename>Sabrina</forename>
+                    </persName>
+                    <affiliation>University of Graz, Austria</affiliation>
+                    <email>sabrina.strutz@uni-graz.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Döhla</surname>
+                        <forename>Hans-Jörg</forename>
+                    </persName>
+                    <affiliation>University of Tübingen, Germany</affiliation>
+                    <email>hans-joerg.doehla@romanistik.uni-tuebingen.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Klöter</surname>
+                        <forename>Henning</forename>
+                    </persName>
+                    <affiliation>Humboldt-Universität zu Berlin, Germany</affiliation>
+                    <email>henning.kloeter@hu-berlin.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>handwritten text recognition</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>manuscripts description</term>
+                    <term>representation</term>
+                    <term>and analysis</term>
+                    <term>optical character recognition and handwriting recognition</term>
+                    <term>Asian studies</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">This contribution investigates the application of Handwritten Text Recognition (HTR) to the automated transcription of a multilingual historical manuscript. Using the Bocabulario de lengua sangleya por las letraz de el A.B.C. (British Library, Add ms. 25.317), hereafter Bocabulario, we explore the performance of Transkribus (READ-COOP 2023) in addressing challenges like multiple non-normalized languages and scripts as well as different scribes. Likely written in 1617, the Bocabulario includes 223 double-sided folios with approximately 1400 Chinese lemmas in Latin script and around 60 Chinese characters (see Figure 1). The manuscript also displays unusual spacing and punctuation within and across traditional word boundaries, thus presenting an interesting case for evaluating HTR workflows and training strategies for such challenging historical materials. This initial investigation of Transkribus will be complemented by results from eScriptorium (Stökl Ben Ezra et al. 2024) at the time of presentation, offering comprehensive insights for similar projects. This experiment contributes to the broader Early Manila Hokkien (EMHo) project, whose objective is to create a multi-level digital scholarly edition (DSE) (Döhla et al. 2022; Döhla et al. 2024).</p>
+                <p style="text-align: left; ">To train the HTR software, 25 pages were randomly selected for manual transcription by experts to build the ground truth, incorporating diverse handwriting styles from across the document. The dataset was subsequently expanded to include 50 facsimiles, enhancing its scope for training; cf. Hodel on the ever-decreasing amount of necessary training material (2023: 163). Two existing models were selected for testing and fine-tuning according to the characteristics of the source.</p>
+                <figure>
+                    <graphic n="1001" width="16.002cm" height="7.741708333333333cm" url="/tmp/tmp7qnp6hxw/Pictures/c71b87fcb74dd7c7a7f7872e33ec82cd.png" rend="inline"/>
+                    <head>Add ms. 25.317, fol. 15v. Facsimile reused with kind permission © British Library Board, all rights reserved.</head>
+                </figure>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Preliminary Results with Transkribus</head>
+                <p style="text-align: left; ">Initially, eight basic models in the categories “Languages: Spanish; Castilian” and “Handwriting” were tested on 25 pages, with the two best-performing models selected “Coloso Español” (Cuéllar 2023) and “Spanish Golden Age Manuscripts (Spelling Modernization) 1.0” (Cuéllar 2023) for further fine-tuning. After generating the initial transcription, manual corrections were performed to create high-quality ground truth and refine segmentations. A key adjustment was integrating headwords, which the initial model had categorized as separate regions on the left, into the main text to reflect their functional relationship and prevent them from appearing as standalone lines. Training iterations of 100 cycles were conducted, maintaining a consistent 10% validation set. Using the results obtained from the initial 25 pages and further fine-tuning the model, applying this model to 25 unseen pages resulted in a character error rate (CER) of 7.80% for the best-performing model “EMHo Spanish Golden Age Manuscripts”. Although increasing the number of pages in the ground truth with the base model did improve CER results, fine-tuning the base model achieved better CER even with fewer pages of ground truth.</p>
+                <figure>
+                    <graphic n="1002" width="16.002cm" height="5.912555555555556cm" url="/tmp/tmp7qnp6hxw/Pictures/c71b87fcb74dd7c7a7f7872e33ec82cd.png" rend="inline"/>
+                    <head>Comparison of the models</head>
+                </figure>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Next Steps</head>
+                <p style="text-align: left; ">By the time of the conference, we will present comparative results from the open-source tool eScriptorium using the same ground truth data and similar training approaches to train models such as “McCATMuS” (Chagué 2024) and “CATMuS Medieval” (Pinche et al. 2024), which were selected for their relevance to the project’s dictionary-focused objectives.</p>
+                <p style="text-align: left; ">While the exact workings of Transkribus and how it utilizes language settings remain unclear, they seem to influence model performance: “Coloso Español” achieved lower CER with “Filipino; Pilipino” (FIL), while “Spanish Golden Age Manuscripts” performed better with “Spanish; Castilian” (SPA). This shows that sources with multiple languages and scripts remain challenging and profit from evaluating different language and script settings. In this respect, more transparency is advantageous to increase traceability. In this context, we will do a qualitative evaluation of the transcription errors to examine language-dependent performance with regard to Hokkien vs. Spanish segments.</p>
+                <p style="text-align: left; ">Currently, no Chinese script models are available in the official model selection of Transkribus and eScriptorium; only project-specific attempts can be referenced (Smith 2024). While processing with one model is appropriate for our project due to the dominance of Latin script, documents with a more balanced ratio between different scripts may require multiple models, presenting additional challenges.</p>
+                <p style="text-align: left; ">The comparison of Transkribus and eScriptorium provides practical insights into the feasibility and cost-benefit ratio for projects with multiple languages, scripts, and hands, especially as HTR tools and models continue to improve performance and cost-effectiveness.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Chagué, Alix </hi>(2024): 
+                        <hi rend="italic">McCATMuS – Transcription model for handwritten, printed and typewritten documents from the 16th century to the 21st century</hi>, in: Zenodo DOI: 10.5281/ZENODO.13788176 [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Cuéllar, Álvaro</hi> (2023): “La Inteligencia Artificial al rescate del Siglo de Oro. Transcripción y modernización automática de mil trescientos impresos y manuscritos teatrales”, in: 
+                        <hi rend="italic">Hipogrifo. Revista de literatura y cultura del Siglo de Oro</hi> 11, 1: 101–115. DOI: 10.13035/H.2023.11.01.08 [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Döhla, Hans-Jörg / Klöter, Henning / Scholger, Martina / Steiner, Elisabeth</hi> (2022): “Annotating a historical manuscript as a linguistic resource”, in: Cummings, James (ed.): 
+                        <hi rend="italic">TEI2022 Conference Book</hi> 1.1. TEI2022 – “Text as Data”. Newcastle, UK, 2022. Zenodo: 129. DOI: 10.5281/zenodo.7120027 [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Döhla, Hans-Jörg / Klöter, Henning / Scholger, Martina</hi> (eds.) (2024): 
+                        <hi rend="italic">Early Manila Hokkien. Digital Edition of the Bocabulario de lengua sangleya</hi>. GAMS &lt;https://gams.uni-graz.at/emho&gt; [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Hodel, Tobias</hi> (2023): “Konsequenzen der Handschriftenerkennung und des maschinellen Lernens für die Geschichtswissenschaft. Anwendung, Einordnung und Methodenkritik”, in: 
+                        <hi rend="italic">Historische Zeitschrift</hi> 316, 1: 151–180. DOI: 10.1515/hzhz-2023-0006 [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Klöter, Henning / Döhla, Hans-Jörg </hi>(2022): “Early Spanish-Chinese encounters in the Philippines and the birth of Spanish-Chinese lexicography”, in: Bussotti, Michela / Lachaud, François (eds.): 
+                        <hi rend="italic">Interpreting empires, mastering languages, taming the world: Dictionaries and multilingual lexicons in East Asia</hi>. Paris: EFEO 149–173.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Pinche, Ariane / Clérice, Thibault / Chagué, Alix / Camps, Jean-Baptiste / Vlachou-Efstathiou, Malamatenia / Gille Levenson, Matthias / Brisville-Fertin, Olivier / Boschetti, Federico / Fischer, Franz / Gervers, Michael / Boutreux, Agnès / Manton, Avery / Gabay, Simon</hi> (2024): 
+                        <hi rend="italic">CATMuS Medieval (1.5.0)</hi>, in: Zenodo DOI: 10.5281/zenodo.12743230 [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">READ-COOP</hi> (2023): 
+                        <hi rend="italic">Transkribus</hi> &lt;https://www.transkribus.org&gt; [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Smith, Peter</hi> (2024): 
+                        <hi rend="italic">Handwritten Text Recognition of the Dunhuang manuscripts: the challenges of machine learning on ancient Chinese texts</hi> &lt;https://blogs.bl.uk/digital-scholarship/2024/03/handwritten-text-recognition-of-the-dunhuang-manuscripts.html&gt; [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Stökl Ben Ezra, Daniel / Stokes, Petre / Kiessling, Benjamin / Tissot, Robin</hi> (2024): 
+                        <hi rend="italic">eScriptorium</hi> &lt;https://gitlab.com/scripta/escriptorium&gt; [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Thompson, Walker R.</hi> (2021): “Using Handwritten Text Recognition (HTR) Tools to Transcribe Historical Multilingual Lexica”, in: 
+                        <hi rend="italic">Scripta &amp; e-Scripta. The Journal of Interdisciplinary Mediaeval Studies</hi> 21: 217–231 &lt;https://www.ceeol.com/search/article-detail?id=994722&gt; [17.04.2025].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

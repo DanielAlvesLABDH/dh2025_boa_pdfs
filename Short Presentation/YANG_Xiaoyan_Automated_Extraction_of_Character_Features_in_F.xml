@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="YANG_Xiaoyan_Automated_Extraction_of_Character_Features_in_F">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Automated Extraction of Character Features in Fiction: Comparing Bert-based Models and Large Language Models on Fanfiction in English and Chinese</title>
+                <author>
+                    <persName>
+                        <surname>Yang</surname>
+                        <forename>Xiaoyan</forename>
+                    </persName>
+                    <affiliation>University of Groningen, Netherlands, The</affiliation>
+                    <email>yxyforeveryoung@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Pianzola</surname>
+                        <forename>Federico</forename>
+                    </persName>
+                    <affiliation>University of Groningen, Netherlands, The</affiliation>
+                    <email>f.pianzola@rug.nl</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Fictional Character</term>
+                    <term>Computational Literature</term>
+                    <term>Fanfiction</term>
+                    <term>Large Language Models</term>
+                    <term>NLP</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>artificial intelligence and machine learning</term>
+                    <term>natural language processing</term>
+                    <term>text mining and analysis</term>
+                    <term>Computer science</term>
+                    <term>Humanities computing</term>
+                    <term>Linguistics</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>1 Introduction</head>
+                <p style="text-align: left; ">Fanfiction is a unique form of participatory storytelling where fans reinterpret and expand on existing narratives (Jenkins 2012). It presents a distinct avenue for literary and cultural research due to its participatory nature and its adaptive portrayal of canonical narratives (Milli / Bamman 2016).</p>
+                <p style="text-align: left; ">Character analysis in fiction often focuses on personas or relationships, e.g., graphical model to infer latent character personas and group character traits by Bamman et al. (2013), character personality prediction by Flekova and Gurevych (2015), unsupervised neural network for relationships evolution by Iyyer et al. (2016), while recent advancements, such as Papoudakis et al. (2024) constructed BOOKWORM dataset of pairing character description and analysis, enable LLMs for narrative understanding.</p>
+                <p style="text-align: left; ">In the context of fanfiction, computational methods have been employed to explore character adaptation, interaction, and recontextualization across fandoms (Yin et al. 2017). Although studies have examined certain factors influencing fanfiction’s popularity, such as innovation (Jing et al. 2019) and character frequency (
+                    <anchor xml:id="OLE_LINK8"/>Nguyen et al. 2024), research has yet to examine characterization within fanfiction systematically. However, the character lies at the center of the fanfiction narrative. The GOLEM database (Pannach et al. 2024) contains 8 million stories and related metadata from Archive of Our Own (AO3) (Fiesler, et al. 2016), one of the largest fanfiction platforms, spanning from 2000 to September 2022. AO3 enables fanfiction authors to categorize their works using a well-established tag system. Among the 200 most-used tags, 106 related to character features, e.g., 'Aged-Up Character(s)
+                    <anchor xml:id="OLE_LINK9"/>' reflecting modifications to canonical biographical information, 'First Kiss' denoting specific behaviors, and 'Grief/Mourning' capturing the emotional and psychological depth of characters. Therefore, systematically examining these character features is essential for understanding diverse aspects of characterization.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>2 Methodology</head>
+                <p style="text-align: left; ">To uncover cross-cultural narrative patterns of characters, this research addresses two primary questions: how NLP techniques can be applied to analyze fanfiction at scale to uncover cross-cultural narrative patterns? More specifically, how well do the existing Bert-based NLP pipelines perform on character coreference resolution, features, and dialogue extractions for both English and Chinese fanfiction? Can LLMs be used to improve the accuracy of this automated extraction? </p>
+                <p style="text-align: left; ">The first step is defining character concepts and character features. We use the GOLEM ontology (Pianzola et al. 2025) that adopts a bottom-up approach to construct character features control vocabulary from AO3 character-related tags with the addition of structured information from multiple fan crowdsource databases. It includes biographical details (e.g. age, gender, occupation), physical descriptions (e.g. height, eye color, clothing), and psychological features (e.g. personality).</p>
+                <p style="text-align: left; ">Two annotators will annotate 20 fanfictions (10 each in English and Chinese) across four fandoms, ensuring linguistic and cultural diversity. Annotation guidelines are grounded in the GOLEM ontology and controlled vocabulary, focusing on coreference resolution and the detailed representation of character traits in text. Since 
+                    <anchor xml:id="OLE_LINK10"/>this is a pilot study for a bigger future annotation, the corpus is insufficient for model fine-tuning but still serves as a good reference for evaluating NLP models in the latter steps.
+                </p>
+                <p style="text-align: left; ">The framework integrates character recognition, coreference resolution, entity and dialogue extraction and linking, comparing Bert based NLP tools and LLMs. To explore the evolution of characters’ traits, this research introduces an automated pipeline for extracting character features from fanfiction in English and Chinese.</p>
+                <p style="text-align: left; ">Then character recognition is the first step. BookNLP (Bamman 2021) and ARMCC (Song / Ying, 2024) will be evaluated for their ability to identify characters in English and Chinese texts, respectively. Coreference resolution links mentions of the same character throughout a narrative, a task complicated by fanfiction's abundance of pronouns in comparison to other types of texts (Yang / 
+                    <anchor xml:id="OLE_LINK3"/>Pianzola 2024). We will also assess the performance of traditional Bert-based models alongside LLMs including Llama 3.1-70b (Grattafiori et al. 2025), Deepseek r1-70b (Guo et al. 2025) and the fine-tuned t5-3b model (Hicke / Minno, 2024) for their few shots capabilities on literary coreference annotation by testing on this small annotated dataset.
+                </p>
+                <p style="text-align: left; ">The second step is character feature extraction. Due to the lack of multilingual pipelines capable of performing this task, we draw inspiration from the methods of Flekova and Gurevych (2015). Based on previous character identification and coreference resolution, we decompose the task into three sub-tasks: dialogue extraction, explicit predicative extraction, and implicit character personality prediction on verb-based context extraction.</p>
+                <p style="text-align: left; ">For dialogue extraction, dialogues are central to the construction of fictional characters (Koivisto / Nykänen 2016), as they often reveal implicit traits such as determination or kindness, providing a nuanced lens for character analysis. We will use BookNLP and ARMCC for dialogue extraction and speaker attribution.</p>
+                <p style="text-align: left; ">For predicatives and verbs, we will adapt dependency parse trees to identify character-related attributes. Explicit traits are extracted from sentences containing character mentions and copulas (e.g. "X is brave") (Zhang et al. 2019). Implicit traits are inferred from contexts where characters appear as subjects (NSUBJ) or direct objects (DOBJ) in action-related sentences. </p>
+                <p style="text-align: left; ">Explicit character traits in English texts will be identified using BookNLP, while for Chinese texts, we will utilize the Lexical Analysis of Chinese (LAC) model (Jiao et al. 2018), which integrates tokenization, part-of-speech tagging, and dependency parsing. For contexts with 
+                    <anchor xml:id="OLE_LINK4"/>implicit traits, we will employ available personality prediction classifiers based on text, to extract nuanced psychological character traits based on contexts. 
+                </p>
+                <p style="text-align: left; ">Finally, evaluating these results on human annotations alongside LLMs, we aim to identify how the current NLP tools perform in identifying biographical, physical, and psychological character traits for fiction and the directions for future improvement.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>3 Expected Contributions</head>
+                <p style="text-align: left; ">By implementing and evaluating traditional models and LLMs, this research will provide insights into the performance of these tools in character-centric tasks, particularly in linguistically diverse datasets. The integration of recognition, coreference resolution, dialogue attribution, and trait extraction facilitates a holistic understanding of fictional characters. By combining annotation with NLP tools, this research aims to facilitate future research of characterization dynamics in global fanfiction, enabling cross-cultural comparisons of character adaptation and reader engagement.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <anchor xml:id="Hlk196646867"/>
+                        <hi rend="bold">
+                            <hi rend="color(404040)">Bamman, David</hi>
+                        </hi>
+                        <hi rend="color(404040)"> (2021): </hi>
+                        <hi rend="italic">
+                            <hi rend="color(404040)">BookNLP: Natural Language Processing for Literary Text</hi>
+                        </hi>
+                        <hi rend="color(404040)">.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">
+                            <hi rend="color(404040)">Bamman, David / O'Connor, Brendan / Smith, Noah A.</hi>
+                        </hi>
+                        <hi rend="color(404040)"> (2013): "Learning latent personas of film characters", in: </hi>
+                        <hi rend="italic">
+                            <hi rend="color(404040)">Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)</hi>
+                        </hi>
+                        <hi rend="color(404040)">, 352--361.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">
+                            <hi rend="color(404040)">Fiesler, Casey</hi>
+                            <hi rend="color(404040)" xml:space="preserve"> /</hi>
+                            <hi rend="color(404040)" xml:space="preserve"> Shannon Morrison</hi>
+                            <hi rend="color(404040)" xml:space="preserve"> / </hi>
+                            <hi rend="color(404040)" xml:space="preserve">Amy S. Bruckman. </hi>
+                            <hi rend="color(404040)" xml:space="preserve">(2016): </hi>
+                            <hi rend="normalweight color(404040)" xml:space="preserve">"An archive of their own: A case study of feminist HCI and values in design." </hi>
+                            <hi rend="italic normalweight color(404040)">Proceedings of the 2016 CHI conference on human factors in computing systems.</hi>
+                        </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">
+                            <hi rend="color(404040)">Fathallah, Judith</hi>
+                        </hi>
+                        <hi rend="color(404040)"> (2017): </hi>
+                        <hi rend="italic">
+                            <hi rend="color(404040)">Fanfiction and the Author: How Fanfic Changes Popular Cultural Texts</hi>
+                        </hi>
+                        <hi rend="color(404040)">. Amsterdam: Amsterdam University Press.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">
+                            <hi rend="color(404040)">Flekova, Lucie / Gurevych, Iryna</hi>
+                        </hi>
+                        <hi rend="color(404040)"> (2015): "Personality profiling of fictional characters using sense-level links between lexical resources", in: </hi>
+                        <hi rend="italic">
+                            <hi rend="color(404040)">Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing</hi>
+                        </hi>
+                        <hi rend="color(404040)">, 1805--1816.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">
+                            <hi rend="color(404040)">Grattafiori, Aaron / Dubey, Abhimanyu / Jauhri, Abhinav / et al.</hi>
+                        </hi>
+                        <hi rend="color(404040)"> (2024): "The llama 3 herd of models", in: </hi>
+                        <hi rend="italic">
+                            <hi rend="color(404040)">arXiv preprint</hi>
+                        </hi>
+                        <hi rend="color(404040)"> 2407.21783.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold color(404040)">Guo, Daya, et al.</hi>
+                        <hi rend="color(404040)" xml:space="preserve"> (2025): "Deepseek-r1: Incentivizing reasoning capability in llms via reinforcement learning." </hi>
+                        <hi rend="italic color(404040)">arXiv preprint arXiv:2501.12948</hi>
+                        <hi rend="color(404040)">.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">
+                            <hi rend="color(404040)">Hicke, Rebecca / Mimno, David</hi>
+                        </hi>
+                        <hi rend="color(404040)"> (2024): "Lions: 1 and Tigers: 2 and Bears: 3, Oh My! Literary Coreference Annotation with LLMs", in: </hi>
+                        <hi rend="italic color(404040)">Proceedings of the 8th Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature (LaTeCH-CLfL 2024),</hi>
+                        <hi rend="color(404040)" xml:space="preserve"> St. Julians, Malta: Association for Computational Linguistics, 270--277.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">
+                            <hi rend="color(404040)">Iyyer, Mohit / Guha, Anupam / Chaturvedi, Snigdha / et al.</hi>
+                        </hi>
+                        <hi rend="color(404040)"> (2016): "Feuding families and former friends: Unsupervised learning for dynamic fictional relationships", in: </hi>
+                        <hi rend="italic">
+                            <hi rend="color(404040)">Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</hi>
+                        </hi>
+                        <hi rend="color(404040)">, 1534--1544.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">
+                            <hi rend="color(404040)">Jenkins, Henry</hi>
+                        </hi>
+                        <hi rend="color(404040)"> (2012): </hi>
+                        <hi rend="italic">
+                            <hi rend="color(404040)">Textual Poachers: Television Fans and Participatory Culture</hi>
+                        </hi>
+                        <hi rend="color(404040)">. London: Routledge.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">
+                            <hi rend="color(404040)">Jiao, Zhenyu / Sun, Shuqi / Sun, Ke</hi>
+                        </hi>
+                        <hi rend="color(404040)"> (2018): "Chinese lexical analysis with deep bi-gru-crf network", in: </hi>
+                        <hi rend="italic">
+                            <hi rend="color(404040)">arXiv preprint</hi>
+                        </hi>
+                        <hi rend="color(404040)"> 1807.01882.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">
+                            <hi rend="color(404040)">Jing, Elise / DeDeo, Simon / Wright, Daniel R. / Ahn, Yong-Yeol</hi>
+                        </hi>
+                        <hi rend="color(404040)"> (2019): "Sameness entices, but novelty enchants in fanfiction online", in: </hi>
+                        <hi rend="italic">
+                            <hi rend="color(404040)">arXiv preprint</hi>
+                        </hi>
+                        <hi rend="color(404040)" xml:space="preserve"> 1904.07741. </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">
+                            <hi rend="color(404040)">Koivisto, Aino / Nykänen, Elise</hi>
+                        </hi>
+                        <hi rend="color(404040)"> (2016): "Introduction: Approaches to fictional dialogue", in: </hi>
+                        <hi rend="italic">
+                            <hi rend="color(404040)">International Journal of Literary Linguistics</hi>
+                        </hi>
+                        <hi rend="color(404040)" xml:space="preserve"> 5, 2. </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">
+                            <hi rend="color(404040)">Milli, Smitha / Bamman, David</hi>
+                        </hi>
+                        <hi rend="color(404040)"> (2016): "Beyond canonical texts: A computational analysis of fanfiction", in: </hi>
+                        <hi rend="italic">
+                            <hi rend="color(404040)">Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing</hi>
+                        </hi>
+                        <hi rend="color(404040)">, 2048--2053.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">
+                            <hi rend="color(404040)">Nguyen, Duy / Zigmond, Sarah / Glassco, Sarah / et al.</hi>
+                        </hi>
+                        <hi rend="color(404040)"> (2024): "Big data meets storytelling: Using machine learning to predict popular fanfiction", in: </hi>
+                        <hi rend="italic">
+                            <hi rend="color(404040)">Social Network Analysis and Mining</hi>
+                        </hi>
+                        <hi rend="color(404040)"> 14, 1: 58. DOI: 10.1007/s13278-024-01258-1.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">
+                            <hi rend="color(404040)">Pannach, Franziska / Yang, Xiaoyan / Solissa, Nanda V. / et al.</hi>
+                        </hi>
+                        <hi rend="color(404040)"> (2024): "The GOLEM Triple Store: A graph-based representation of narrative and fiction", in: </hi>
+                        <hi rend="italic color(404040)">Joint of the ESWC 2024 Workshops and Tutorials, ESWC-JP 2024, CEUR Workshop Proceedings (CEUR-WS.org).</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">
+                            <hi rend="color(404040)">Papoudakis, Argyrios / Lapata, Mirella / Keller, Frank</hi>
+                        </hi>
+                        <hi rend="color(404040)"> (2024): "BookWorm: A dataset for character description and analysis", in: </hi>
+                        <hi rend="italic">
+                            <hi rend="color(404040)">arXiv preprint</hi>
+                        </hi>
+                        <hi rend="color(404040)" xml:space="preserve"> 2410.10372. </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">
+                            <hi rend="color(404040)">Pianzola, Federico / Cheng, L</hi>
+                            <hi rend="color(404040)">uotong</hi>
+                            <hi rend="color(404040)" xml:space="preserve"> / Yang, Xiaoyan / Pannach, Franziska</hi>
+                        </hi>
+                        <hi rend="color(404040)"> (2025): "</hi>
+                        <hi rend="italic">
+                            <hi rend="color(404040)">The GOLEM Ontology for Narrative and Fiction</hi>
+                        </hi>
+                        <hi rend="color(404040)">"</hi>
+                        <hi rend="italic color(404040)">.</hi>
+                        <hi rend="color(404040)" xml:space="preserve"> [Under review].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">
+                            <hi rend="color(404040)">Song, Li / Liu, Ying</hi>
+                        </hi>
+                        <hi rend="color(404040)"> (2024): "Approaches and challenges for resolving different representations of fictional characters for Chinese novels", in: </hi>
+                        <hi rend="italic color(404040)">Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)</hi>
+                        <hi rend="color(404040)">.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">
+                            <hi rend="color(404040)">Yang, Xiaoyan / Pianzola, Federico</hi>
+                        </hi>
+                        <hi rend="color(404040)"> (2024): "Exploring the evolution of gender power difference through the Omegaverse trope on AO3 fanfiction", in: </hi>
+                        <hi rend="italic color(404040)">2024 Computational Humanities Research Conference, CHR 2024, CEUR Workshop Proceedings (CEUR-WS.org)</hi>
+                        <hi rend="color(404040)">.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">
+                            <hi rend="color(404040)">Yin, Kodlee / Aragon, Cecilia / Evans, Sarah / Davis, Katie</hi>
+                        </hi>
+                        <hi rend="color(404040)"> (2017): "Where no one has gone before: A meta-dataset of the world's largest fanfiction repository", in: </hi>
+                        <hi rend="italic">
+                            <hi rend="color(404040)">Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems (CHI '17)</hi>
+                        </hi>
+                        <hi rend="color(404040)">, 6106--6110. DOI: 10.1145/3025453.3025720.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">
+                            <hi rend="color(404040)">Zhang, Weiwei / Cheung, Jackie Chi Kit / Oren, Joel</hi>
+                        </hi>
+                        <hi rend="color(404040)"> (2019): "Generating character descriptions for automatic summarization of fiction", in: </hi>
+                        <hi rend="italic">
+                            <hi rend="color(404040)">Proceedings of the AAAI Conference on Artificial Intelligence</hi>
+                        </hi>
+                        <hi rend="color(404040)"> 33, 1: 7476--7483.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

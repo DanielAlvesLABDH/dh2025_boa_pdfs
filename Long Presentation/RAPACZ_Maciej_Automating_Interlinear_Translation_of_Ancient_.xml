@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="RAPACZ_Maciej_Automating_Interlinear_Translation_of_Ancient_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Automating Interlinear Translation of Ancient Greek Texts: A Digital Humanities Approach to Biblical Translation</title>
+                <author>
+                    <persName>
+                        <surname>Rapacz</surname>
+                        <forename>Maciej</forename>
+                    </persName>
+                    <affiliation>AGH University of Kraków, Poland</affiliation>
+                    <email>mrapacz@agh.edu.pl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Smywiński-Pohl</surname>
+                        <forename>Aleksander</forename>
+                    </persName>
+                    <affiliation>AGH University of Kraków, Poland</affiliation>
+                    <email>apohllo@agh.edu.pl</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T18:56:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>interlinear translation</term>
+                    <term>ancient greek</term>
+                    <term>machine translation</term>
+                    <term>biblical studies</term>
+                    <term>morphological analysis</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>data modeling</term>
+                    <term>natural language processing</term>
+                    <term>Computer science</term>
+                    <term>Linguistics</term>
+                    <term>Translation studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">Interlinear translation represents a highly specialized approach to translation that prioritizes preserving the original syntactic structure over natural fluency (Shuttleworth / Cowie 2014). In this method, target language words are arranged directly beneath their source counterparts, creating a word-by-word correspondence that serves as a crucial tool for scholars studying ancient texts. While conventional machine translation systems often reorder words to produce more natural output, interlinear translation maintains the source text's structure, making it particularly valuable for understanding Ancient Greek's complex morphological system and its relationship to modern languages. This approach holds special significance in biblical and classical scholarship, where precise analysis of the original text's structure is essential. Despite being considered by some scholars as the archetypal form of translation (Benjamin 1923/2000), interlinear translation has remained largely unexplored when it comes to automated translation in digital humanities research.</p>
+                <p style="text-align: left; ">Our study presents the first systematic investigation of automated interlinear translation from Ancient Greek, using the 
+                    <hi rend="italic">New Testament</hi> (Nestle et al. 2012) as a case study. We demonstrate how modern machine learning techniques can assist scholars in creating interlinear translations utilizing morphological metadata. This research bridges the gap between traditional philological methods and contemporary computational approaches.
+                </p>
+                <p style="text-align: left; ">This submission presents three main contributions. First, we present the first systematic approach to automating interlinear translation using modern machine learning methods. We evaluate four base models -- 
+                    <hi rend="italic">PhilTa</hi>, 
+                    <hi rend="italic">GreTa</hi> (Riemenschneider / Frank 2023), and 
+                    <hi rend="italic">mT5</hi> (Xue et al. 2020) (in two sizes) -- across 144 experimental scenarios, providing comprehensive insights into the task's feasibility. Second, we construct a novel word-level-aligned parallel corpus of the Greek New Testament with interlinear translations in English and Polish, based on data from 
+                    <hi rend="italic">BibleHub</hi> (BibleHub n.d.) and 
+                    <hi rend="italic">Oblubienica</hi> (Oblubienica n.d.). Finally, our experiments demonstrate that incorporating morphological information in low-resource settings significantly improves translation quality, with proper morphological tag encoding yielding improvements of 38% for Polish and 35% for English over the baseline. We make the resources developed as part of this work (parallel corpus, training code, and fine-tuned models) publicly available at 
+                    <ref target="https://github.com/mrapacz/interlinear-translation">github.com/mrapacz/interlinear-translation</ref>.
+                </p>
+                <p style="text-align: left; ">Our work bridges multiple research domains: machine translation of ancient texts, which remains largely unexplored with only a few dedicated models like 
+                    <hi rend="italic">GreTa</hi> and 
+                    <hi rend="italic">PhilTa</hi> (Riemenschneider / Frank 2023); biblical translation studies, which typically focus on modern language pairs rather than original ancient sources; and automated interlinear translation, which has not been previously attempted despite its importance in classical scholarship. With Ancient Greek having fewer than 0.1M training pairs available in standard parallel corpora, this research also contributes to our understanding of low-resource neural machine translation, where models typically achieve BLEU scores between 4 and 15 in zero-shot scenarios (Zhang et al. 2020).
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methodology</head>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Dataset Preparation</head>
+                    <p style="text-align: left; ">We developed two parallel corpora comprising interlinear translations of the 
+                        <hi rend="italic">Greek New Testament</hi>: one into Polish (from 
+                        <hi rend="italic">Oblubienica</hi>) and one into English (from 
+                        <hi rend="italic">BibleHub</hi>). The corpora utilize different textual editions, with 
+                        <hi rend="italic">Oblubienica</hi> following NA28 and 
+                        <hi rend="italic">BibleHub</hi> merging NA27 with other critical editions. The final aligned dataset contains 7,940 verses with 137,323 Greek words, 133,581 Polish words, and 185,722 English words. Each Greek word is maintained in two forms: with diacritics (following 
+                        <hi rend="italic">BibleHub</hi>'s spelling) and normalized (stripped of diacritics and converted to lowercase). The dataset is further accompanied by two distinct sets of morphological tags (one from 
+                        <hi rend="italic">BibleHub</hi> and one from 
+                        <hi rend="italic">Oblubienica</hi>).
+                    </p>
+                    <p style="text-align: left; ">To ensure consistency across translations, we implemented an alignment process that matched words between the two versions. This process successfully aligned over 99% of words, with the remaining unmatched words being excluded to maintain data quality.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Base Models</head>
+                    <p style="text-align: left; ">We evaluated four base models:</p>
+                    <list type="unordered">
+                        <item>
+                            <hi rend="italic">GreTa</hi>: T5-base variant pre-trained specifically on Ancient Greek texts,
+                        </item>
+                        <item>
+                            <hi rend="italic">PhilTa</hi>: T5-base variant pre-trained on Ancient Greek, Latin and English,
+                        </item>
+                        <item>
+                            <hi rend="italic">mT5-base</hi> and 
+                            <hi rend="italic">mT5-large</hi>: Pre-trained on mC4 corpus covering 101 languages including English and Polish, though notably excluding Ancient Greek.
+                        </item>
+                    </list>
+                    <p style="text-align: left; ">These models were chosen to represent different approaches to language understanding: specialized ancient language models (
+                        <hi rend="italic">GreTa</hi>, 
+                        <hi rend="italic">PhilTa</hi>), and modern multilingual models (
+                        <hi rend="italic">mT5</hi> variants). We included 
+                        <hi rend="italic">mT5-large</hi> to investigate whether increased model capacity through additional parameters would improve translation performance.
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Morphological Encoding</head>
+                    <p style="text-align: left; ">To handle Ancient Greek's rich morphology, we tested five approaches for including its grammatical information in our translation models:</p>
+                    <list type="unordered">
+                        <item>Baseline: No morphological information, providing a control scenario.</item>
+                        <item>Tags Within Text: Here morphological tags are encoded as part of model’s textual input alongside words using special marker tokens as delimiters.</item>
+                        <item>Morphological Embeddings: Three approaches using dedicated embedding layers, varying how text and tag information was combined for the model's encoder:
+                            <list type="unordered">
+                                <item>Sum (
+                                    <hi rend="italic">emb-sum</hi>): Direct addition of text and tag embeddings.
+                                </item>
+                                <item>Autoencoder (
+                                    <hi rend="italic">emb-auto</hi>): Compression and decompression of tag embeddings before addition.
+                                </item>
+                                <item>Concatenation (
+                                    <hi rend="italic">emb-concat</hi>): Word and tag embeddings are concatenated.
+                                </item>
+                            </list>
+                        </item>
+                    </list>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Other Test Variables</head>
+                    <p style="text-align: left; ">Beyond the encoding methods, we also tested whether text preprocessing (with or without diacritics and casing) and morphological tag set choice (sourced from BibleHub or Oblubienica) would affect the translation quality.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Total Experiments</head>
+                    <p style="text-align: left; ">In total, we evaluated 144 unique configurations. Each configuration involved fine-tuning a model for the interlinear translation task, systematically varying: target language (2 options), base model (4 options), morphological tag encoding (5 approaches), text preprocessing (2 strategies), and tag set (2 options).</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Evaluation</head>
+                <p style="text-align: left; ">To assess translation quality, we employed two complementary metrics: 
+                    <hi rend="italic">BLEU</hi> (Papineni et al. 2002), which measure exact word matches and sequence accuracy, and 
+                    <hi rend="italic">SemScore</hi> (Aynetdinov / Akbik 2024), which evaluates semantic similarity using the 
+                    <hi rend="italic">all-mpnet-base-v2</hi> language model (Sentence Transformers n.d.). This dual approach helps capture both lexical accuracy and meaning preservation, particularly important for translations of ancient texts where word-for-word correspondence may not always indicate the best translation. In evaluation process, we removed separator tokens from the output sequences before comparing with references to ensure fair evaluation without artificially rewarding proper output formatting.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results</head>
+                <p style="text-align: left; ">Our experiments revealed several key findings.</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Overall Translation Feasibility</head>
+                    <p style="text-align: left; ">Our experiments demonstrated the feasibility of automated interlinear translation, achieving SemScore values above 0.8 and BLEU scores exceeding 60 for both languages. While both languages received comparable top results, Polish translations showed more variability, with approximately 40% of experiments not surpassing a BLEU score of 2. The correlation between SemScore and BLEU was stronger for English (r=0.97) than Polish (r=0.89), suggesting that BLEU scores may not fully capture translation quality for morphologically complex, inflectional languages.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Morphological Encoding Impact</head>
+                    <p style="text-align: left; ">Morphologically enhanced models outperformed baselines by approximately 35-38% for both Polish (59.33 vs 42.92) and English (60.40 vs 44.67). Among morphological encoding strategies, the embedding-based approaches 
+                        <hi rend="italic">emb-auto</hi> and 
+                        <hi rend="italic">emb-sum</hi> consistently delivered the strongest performance, significantly outperforming text-based tag incorporation. In contrast, the 
+                        <hi rend="italic">emb-concat</hi> strategy, while also embedding-based, performed worse than the baseline on average — potentially due to compression disrupting pre-trained representations — though it demonstrated a capacity for high scores in specific instances (up to 55.55 for Polish and 55.93 for English).
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Base Model Comparison</head>
+                    <p style="text-align: left; ">In terms of base model performance, 
+                        <hi rend="italic">PhilTa</hi> achieved state-of-the-art performance for English translations (BLEU 60.40), while 
+                        <hi rend="italic">mT5-large</hi> performed best for Polish translations (BLEU 59.33). For Polish translations, 
+                        <hi rend="italic">mT5-large</hi>'s result significantly outperformed all other models (p &lt; 0.01). For English, 
+                        <hi rend="italic">PhilTa</hi>'s scores were significantly better than 
+                        <hi rend="italic">GreTa</hi>’s and 
+                        <hi rend="italic">mT5-base</hi>’s (p &lt; 0.01), though not significantly different from 
+                        <hi rend="italic">mT5-large</hi> (p = 0.46). 
+                    </p>
+                    <p style="text-align: left; ">We went further ahead to compare how much data is needed for the two top-performing models (
+                        <hi rend="italic">Philta</hi>, 
+                        <hi rend="italic">mT5-large</hi>) to get proper performance on the English translation task. In this analysis, 
+                        <hi rend="italic">PhilTa</hi> demonstrated remarkable efficiency in low-resource scenarios, achieving BLEU scores between 36.20-43.52 with just 10% of the corpus (794 verses) used for training. In contrast, 
+                        <hi rend="italic">mT5-large</hi> showed instability with smaller datasets, requiring the full training set to match 
+                        <hi rend="italic">PhilTa</hi>'s performance. This suggests that targeted pre-training on Ancient Greek can compensate for model size in this specialized translation task.
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Impact of Preprocessing and Tag Set Choice</head>
+                    <p style="text-align: left; ">Text preprocessing strategies (preserving vs. removing diacritics) showed no statistically significant differences in translation performance for either language (p &gt; 0.4). Similarly, the choice of morphological tag sets (Bible Hub vs. Oblubienica) had no significant impact (p &gt; 0.07), indicating that the encoding strategy matters more than the specific tag set used. The poor performance of concatenation-based embedding approaches suggests that maintaining pre-trained representations is crucial for effective translation.</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p style="text-align: left; ">Our work demonstrates the effectiveness of neural approaches in interlinear translation of classic texts. The inclusion of morphological metadata significantly improves translation quality, challenging the notion that pre-trained transformers cannot utilize such information effectively. The superior performance of models pre-trained on both source and target languages suggests that developing similar models for other language pairs could yield even better results.</p>
+                <p style="text-align: left; ">The research revealed interesting differences in correlations of evaluation metrics for the two languages (r=0.97 for English, r=0.89 for Polish), highlighting potential limitations in using BLEU for morphologically complex languages. While models trained with preserved diacritics showed numerically better results, these differences weren't statistically significant. Similarly, the choice of morphological tag sets had minimal impact across both target languages.</p>
+                <p style="text-align: left; ">Our study has several limitations worth noting. The exclusive use of the New Testament, while providing a consistent dataset, may limit generalizability across different textual genres. There's also potential bias in the models, which may have encountered biblical texts during pre-training.</p>
+                <p style="text-align: left; ">The automation of interlinear translations demonstrated in this research opens new possibilities for making ancient texts more accessible to broader audiences. While traditionally, interlinear translations have been limited to select texts and languages due to the intensive manual effort required, our approach could facilitate their creation for previously uncovered language pairs and texts. This democratization of access to ancient texts could particularly benefit students, researchers, and enthusiasts who lack extensive training in ancient languages, enabling them to engage more directly with historical sources while still maintaining a connection to the original text structure.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Aynetdinov, Ansar / Alan Akbik (2024): "SemScore: Automated evaluation of instruction-tuned llms based on semantic textual similarity". arXiv:2401.17072 &lt;
+                        <ref target="https://arxiv.org/abs/2401.17072">https://arxiv.org/abs/2401.17072</ref>&gt; [07.05.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">Benjamin, Walter (1923/2000): "The task of the translator", in: Venuti, Lawrence / Mona Baker (eds.): The Translation Studies Reader. London: Routledge.</bibl>
+                    <bibl style="text-align: left; ">BibleHub (n.d.): Interlinear Bible. &lt;https://biblehub.com/interlinear/&gt; [07.05.2025].</bibl>
+                    <bibl style="text-align: left; ">Nestle, Eberhard / Barbara Aland / Kurt Aland / Holger Strutwolf / Universität Münster Institut für Neutestamentliche Textforschung (2012): Novum Testamentum Graece (Na28): Nestle-Aland 28th Edition. Stuttgart: Deutsche Bibelgesellschaft.</bibl>
+                    <bibl style="text-align: left; ">Oblubienica (n.d.): Ewangeliczny Przekład Interlinearny Biblii. &lt;https://biblia.oblubienica.eu/&gt; [07.05.2025].</bibl>
+                    <bibl style="text-align: left; ">Papineni, Kishore / Salim Roukos / Todd Ward / Wei-Jing Zhu (2002): "Bleu: a Method for Automatic Evaluation of Machine Translation", in: Association for Computational Linguistics (ed.): Proceedings of the 40th Annual Meeting of the Association for Computational Linguistics, Philadelphia, Pennsylvania, USA: 311–318.</bibl>
+                    <bibl style="text-align: left; ">Riemenschneider, Frederick / Anette Frank (2023): "Exploring Large Language Models for Classical Philology", in: Association for Computational Linguistics (ed.): Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), Toronto, Canada: 15181–15199.</bibl>
+                    <bibl style="text-align: left; ">Sentence Transformers (n.d.): all-mpnet-base-v2. &lt;
+                        <ref target="https://huggingface.co/sentence-transformers/all-mpnet-base-v2">https://huggingface.co/sentence-transformers/all-mpnet-base-v2</ref>&gt; [07.05.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">Shuttleworth, Mark / Moira Cowie (2014): Dictionary of Translation Studies. London: Routledge.</bibl>
+                    <bibl style="text-align: left; ">Xue, Linting / Noah Constant / Adam Roberts / Mihir Kale / Rami Al-Rfou / Aditya Siddhant / Aditya Barua / Colin Raffel (2020): "mt5: A massively multilingual pre-trained text-to-text transformer". arXiv:2010.11934 &lt;
+                        <ref target="https://arxiv.org/abs/2010.11934">https://arxiv.org/abs/2010.11934</ref>&gt; [07.05.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">Zhang, Biao / Philip Williams / Ivan Titov / Rico Sennrich (2020): "Improving massively multilingual neural machine translation and zero-shot translation", in: Association for Computational Linguistics (ed.): Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics, Online: 1628–1639. </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

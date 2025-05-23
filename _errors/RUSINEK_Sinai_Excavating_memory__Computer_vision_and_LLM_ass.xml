@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="RUSINEK_Sinai_Excavating_memory__Computer_vision_and_LLM_ass">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Excavating memory: Computer vision and LLM-assisted Classification workflow for a Digitized Archive</title>
+                <author>
+                    <persName>
+                        <surname>Rusinek</surname>
+                        <forename>Sinai</forename>
+                    </persName>
+                    <affiliation>Haifa University</affiliation>
+                    <email>sinai.rusinek@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Netzer</surname>
+                        <forename>Yael</forename>
+                    </persName>
+                    <affiliation>Haifa University</affiliation>
+                    <email>yael.netzer@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Shuster</surname>
+                        <forename>Keren</forename>
+                    </persName>
+                    <affiliation>Independent Scholar</affiliation>
+                    <email>shusterk@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Kurant</surname>
+                        <forename>Sharon</forename>
+                    </persName>
+                    <affiliation>Technion</affiliation>
+                    <email>kurnetto2@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Alyagon Dar</surname>
+                        <forename>Adam</forename>
+                    </persName>
+                    <affiliation>Haifa University</affiliation>
+                    <email>adami4.a.d@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Archives</term>
+                    <term>large language models (LLMs)</term>
+                    <term>ontology</term>
+                    <term>classification</term>
+                    <term>machine vision</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>data publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>digital archiving</term>
+                    <term>digital libraries creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>History</term>
+                    <term>Humanities computing</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Abstract</head>
+                <p style="text-align: left; "> Working on digitized personal and family archives is akin to archaeological dig: it has to pay careful attention to the preservation of not only the deepest layer of the original documents but also to subsequent layers of contributors, from the original authors, to the donors or scholars that added their knowledge, and especially the layers of knowledge contribution by previous archival endeavors that predated the digitization. Part of the challenge is also addressing the damage incurred by the process of digitization itself.  </p>
+                <p style="text-align: left; ">In the proposed paper we describe workflows, complexities and challenges in a digital pilot project on the Archive of German Speaking Jews in Israel, concentrating specifically on the aspect of classification in two complementing workflows: image classification of the digitized scans as a preliminary step for document analysis, and LLM assisted parsing and classification of folder level catalog entries. </p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Keywords:</head>
+                    <p style="text-align: left; "> Archives, large language models (LLMs), ontology, classification, machine vision </p>
+                    <p style="text-align: left; ">Acknowledgement: The first part of this paper, concerning computer vision clustering and visualization was conducted with prof. Ilan Shimshoni's supervision in the framework of Elijah Lab, and supported with a dataset building grant by the Haifa University Data Science Research Center.  The AI parsing and metadata extraction aspects were performed in the framework of The Archive of German Speaking Jews and with their funding.</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">AGSJI: The Archive of German Speaking Jews in Israel contains 1440 boxes of documents from personal and family collections of so-called “Jeckes”: Jews who immigrated to Mandatory Palestine from German-speaking countries and places in Central Europe, mainly following the rise of Nazism in the 1930. The materials themselves include, among others, correspondences, diaries, photographs, certificates, newspaper articles, essays and more.  At the time our project commenced, we had in our hands the folders of the digitized images, with a catalogue in the form of a spreadsheet, containing 1440 rows, each describing a folder. The text of the folder descriptions include the unstructured concatenation of descriptions that originated from a PDF catalog that was available to past archivists through a data management platform that is no longer accessible. </p>
+                <p style="text-align: left; ">Digitization of archives enhances both accessibility and preservation, and datafication opens venues for new research (Colavizza et al., 2021; Hawkins, 2022). As a survey published on Spring 2025 shows, the recent arrival of AI to the field of archives brings large promises for automating labour-intensive tasks in an understaffed, under-resourced heritage institutions, thereby enhancing access, searchability, and discoverability of collections, though these are very much the early days of realization of the potential benefits and risks of the adoption of AI to the workflows (Bushey et al., 2025). Early and enthusiastic adoption of digitization, datafication and AI has its pitfalls when workflows are not carefully thought out: digitizing the contents of a  folder in an image stream without separating documents, OCR’ing pages with no record to the semantic import of different formats and layouts are two such common pitfalls; Disregarding layers of previous archival work is another: Responsible workflows should preserve the contribution of previous knowledge work on the archive. With this in mind, the goal of our digital project was to try and make sense of the collection, and set the system to an open, accessible, enriched and dynamic digital archive. </p>
+                <p style="text-align: left; ">In our pilot studies we have approached this endeavor in two directions: First, starting at the level of the digitized images and using machine vision, we  classify them into separate groups that represent different processing needs, in the assumption that if and when funding for the processing of the entire collection becomes available, the groups will then be sent to appropriate pipelines of document analysis, OCR/HTR, natural language processing and entity matching. We piloted the post-classification processes on selected collections. </p>
+                <p style="text-align: left; ">The second approach we took advanced from the catalogue spreadsheet and used artificial intelligence assisted processes:  The folder descriptions, that often enumerated individual documents, were parsed to general descriptions and items, in order to reverse the damage that was incurred when the legacy software output of the descriptions were extracted into unstructured text blocks for each folder.  The parsed items were then classified using the double-layered schema which we will describe below, and enriched with named entities that are then linked to internal and external authorities. The results are uploaded to an Omeka-S website. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Cataloging bottom up: using machine vision to analyze the digitized archive</head>
+                <p style="text-align: left; ">In our initial approach we adopted a bottom-up pipeline that begins with the scanned images and designates each image to the appropriate process of document analysis.  Our guiding principle was that each production mode - handwriting, print, typewriter, drawing or photography - will require its own dedicated processing pipeline, and that each textual mode will require dedicated models - be it OCR/HTR or NLP - for different languages - primarily German, Hebrew and English (Chen and Blostein, 2007). We will get back to reconsider this guiding principle in our conclusion. </p>
+                <p style="text-align: left; ">An effective document analysis pipeline necessitates both a classification architecture and an appropriate dimensionality reduction technique to enable visual interpretability. In the following section, we detail our approach and choices for both:</p>
+                <p style="text-align: left; ">Existing machine vision and AI
+                    <hi style="font-family:Cambria Math">‐</hi>driven classification frameworks in archival research have employed various architectures such as VGG (
+                    <ref target="https://arxiv.org/abs/1409.1556">Simonyan and Zisserman, 2015</ref>), Inception (
+                    <ref target="https://arxiv.org/abs/1512.00567">Szegedy et al., 2015</ref>), and DenseNet (
+                    <ref target="https://arxiv.org/abs/1608.06993">Huang et al., 2018</ref>). However, these earlier models often proved insufficient to deal with the multimodality and imbalanced nature of archival datasets (Colavizza et al., 2021). In our evaluation, EfficientNet (
+                    <ref target="https://arxiv.org/abs/1905.11946">Tan and Le, 2019</ref>), while promising on large-scale benchmarks, struggled to generalize on our smaller dataset of approximately 10,000 labeled images due to its sensitivity to data distribution and training parameters. Consequently, we opted to train a classification model based on the ResNet-50 architecture, which had established a strong reputation for balancing performance, interpretability, and computational efficiency (
+                    <ref target="https://arxiv.org/abs/1512.03385">He et al, 2015</ref>).
+                </p>
+                <p style="text-align: left; ">ResNet-50 leverages residual connections that helps it to learn image representations and overcome the vanishing gradient problem (Benjio et al., 1994). Given an input image 
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <mi xmlns="http://www.w3.org/1998/Math/MathML">X</mi>
+                            <mo xmlns="http://www.w3.org/1998/Math/MathML">∈</mo>
+                            <msup xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mrow>
+                                    <mi>R</mi>
+                                </mrow>
+                                <mrow>
+                                    <mi>H</mi>
+                                    <mo>×</mo>
+                                    <mi>W</mi>
+                                    <mo>×</mo>
+                                    <mn>3</mn>
+                                </mrow>
+                            </msup>
+                        </mml:math>
+                    </formula> it is first augmented to increase variability and minimize overfitting. The augmented image 
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <mi xmlns="http://www.w3.org/1998/Math/MathML">X</mi>
+                            <mo xmlns="http://www.w3.org/1998/Math/MathML">∈</mo>
+                            <msup xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mrow>
+                                    <mi>R</mi>
+                                </mrow>
+                                <mrow>
+                                    <mn>256</mn>
+                                    <mo>×</mo>
+                                    <mn>256</mn>
+                                    <mo>×</mo>
+                                    <mn>3</mn>
+                                </mrow>
+                            </msup>
+                        </mml:math>
+                    </formula> is then fed into the convolutional network, where successive layers perform operations such as convolution, non-linear activation, and pooling, ultimately transforming the image into a set of feature maps. After the final convolutional block, a global average pooling operation condenses these feature maps into a feature vector 
+                </p>
+                <p style="text-align: left; ">
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <mi xmlns="http://www.w3.org/1998/Math/MathML">v</mi>
+                            <mo xmlns="http://www.w3.org/1998/Math/MathML">=</mo>
+                            <mi xmlns="http://www.w3.org/1998/Math/MathML">F</mi>
+                            <mo xmlns="http://www.w3.org/1998/Math/MathML">(</mo>
+                            <mi xmlns="http://www.w3.org/1998/Math/MathML">X</mi>
+                            <mo xmlns="http://www.w3.org/1998/Math/MathML">,</mo>
+                            <mi xmlns="http://www.w3.org/1998/Math/MathML">θ</mi>
+                            <mo xmlns="http://www.w3.org/1998/Math/MathML">)</mo>
+                            <mo xmlns="http://www.w3.org/1998/Math/MathML">∈</mo>
+                            <msup xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mrow>
+                                    <mi>R</mi>
+                                </mrow>
+                                <mrow>
+                                    <mi>d</mi>
+                                </mrow>
+                            </msup>
+                        </mml:math>
+                    </formula>
+                </p>
+                <p style="text-align: left; ">Here, 
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <mi xmlns="http://www.w3.org/1998/Math/MathML">F</mi>
+                        </mml:math>
+                    </formula> represents the mapping defined by the ResNet architecture with parameters 
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <mi xmlns="http://www.w3.org/1998/Math/MathML">θ</mi>
+                        </mml:math>
+                    </formula> (the learned weights), and 
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <mi xmlns="http://www.w3.org/1998/Math/MathML">d</mi>
+                        </mml:math>
+                    </formula> is the dimensionality of the feature space, in our case 
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <mi xmlns="http://www.w3.org/1998/Math/MathML">d</mi>
+                            <mo xmlns="http://www.w3.org/1998/Math/MathML">=</mo>
+                            <mn xmlns="http://www.w3.org/1998/Math/MathML">2048</mn>
+                        </mml:math>
+                    </formula>. The feature vector 
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <mi xmlns="http://www.w3.org/1998/Math/MathML">v</mi>
+                        </mml:math>
+                    </formula> is then used by the classification head to differentiate between production modes such as handwriting, print, typewriter, drawing, or photography.
+                </p>
+                <p style="text-align: left; ">Given high-dimensional feature vectors 
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <msub xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mrow>
+                                    <mi>v</mi>
+                                </mrow>
+                                <mrow>
+                                    <mi>i</mi>
+                                </mrow>
+                            </msub>
+                        </mml:math>
+                    </formula> obtained from images, and in order to evaluate our model’s performance, we employed t-distributed Stochastic Neighbor Embedding (t-SNE) for dimensionality reduction (van der Maaten and Hinton, 2008). Let 
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <msub xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mrow>
+                                    <mi>v</mi>
+                                </mrow>
+                                <mrow>
+                                    <mi>t</mi>
+                                </mrow>
+                            </msub>
+                            <mo xmlns="http://www.w3.org/1998/Math/MathML">∈</mo>
+                            <msup xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mrow>
+                                    <mi>R</mi>
+                                </mrow>
+                                <mrow>
+                                    <mn>2048</mn>
+                                </mrow>
+                            </msup>
+                        </mml:math>
+                    </formula> be the feature vector corresponding to the i-th image. T-SNE projects these high-dimensional vectors onto a two-dimensional space, yielding embeddings 
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <msub xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mrow>
+                                    <mi>z</mi>
+                                </mrow>
+                                <mrow>
+                                    <mi>i</mi>
+                                </mrow>
+                            </msub>
+                            <mo xmlns="http://www.w3.org/1998/Math/MathML">∈</mo>
+                            <msup xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mrow>
+                                    <mi>R</mi>
+                                </mrow>
+                                <mrow>
+                                    <mn>2</mn>
+                                </mrow>
+                            </msup>
+                        </mml:math>
+                    </formula> that preserve the local structure of the data. The t-SNE algorithm works by measuring the similarity between pairs of images in the original high-dimensional space and finding a configuration in 2D where these similarities are approximately preserved using a heavy-tailed distribution. This process ensures that images with similar visual features remain close together in the 2D scatter plot, while dissimilar images are positioned farther apart. Such a visual representation made it straightforward to detect clusters, identify misclassifications, and iteratively fine-tune our training parameters.
+                </p>
+                <figure>
+                    <graphic n="1001" width="15.24cm" height="7.6065611111111116cm" url="/tmp/tmppmbxjssn/Pictures/4a39af98024927ef8077e4925faddca5.jpeg" rend="inline"/>
+                    <head>Exploring the evaluation of the classification (left) into three production modes (handwriting, print, typewriting) on a manually tagged set, revealed two prominent red error clusters (right). Small red specks were expected (e.g., cursive fonts flagged as handwriting or neat block letters flagged as print. The two large clusters, however, came from non-text objects and pointed to a real gap as they contained non-textual content. That led us to add a fourth class, “Other,” which immediately absorbed those items and later split into the sub-types photograph and drawing. </head>
+                </figure>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Parsing and classification</head>
+                <p style="text-align: left; ">The Archive catalog was handed to us in the form of a spreadsheet, where each row represented a sub-series in the archive, which in its turn stands for a physical folder in the archive, and a digital directory of images. Our goal was to enable a more refined and exact access to each document in the archive.</p>
+                <p style="text-align: left; ">In the original descriptions, written in different text editors or into software solutions which are no longer available to us, formatting provided clearer delineation of the different items or parts of the description to the human eye. However, in the resulting spreadsheet the inconsistency of using semicolon, numbering or other methods to organize the description internally, made any rule based parsing impossible. We therefore resorted to artificial intelligence. </p>
+                <figure>
+                    <graphic n="1002" width="16.002cm" height="11.33651388888889cm" url="/tmp/tmppmbxjssn/Pictures/4a39af98024927ef8077e4925faddca5.jpeg" rend="inline"/>
+                    <head>The folder descriptions contain general descriptions (yellow), item descriptions (green and blue) and listings of themes or named entities (red), with no consistent delineation.</head>
+                </figure>
+                <p style="text-align: left; ">Having automatically parsed the descriptions, the items are machine translated into both German and English, and then sent to classification, based on a system defined by (Netzer and Shuster, 2025) -
+                    <hi rend="color(0E0E0E)"> a feasible solution of a terminology for describing and referencing individual documents and the use of identity files.</hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="color(0E0E0E)" xml:space="preserve">This registration system uses two key conceptual pillars: </hi>
+                    <hi rend="bold color(0E0E0E)">classes</hi>
+                    <hi rend="color(0E0E0E)" xml:space="preserve"> and </hi>
+                    <hi rend="bold color(0E0E0E)">types</hi>
+                    <hi rend="color(0E0E0E)" xml:space="preserve"> which provide a robust mechanism for describing archival content. Classes address the </hi>
+                    <hi rend="bold color(0E0E0E)">functional aspect</hi>
+                    <hi rend="color(0E0E0E)">, </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="color(0E0E0E)">defining the fundamental role or nature of a document within the archival system. Classes are derived from ontological models and existing standards, such as Dublin Core and Records in Contexts Ontology (RiC-O) (</hi>EGAD 2021)
+                    <hi rend="color(0E0E0E)" xml:space="preserve">. Each class encapsulates essential properties and relationships for the described entity, including its origin, context, and purpose. The complementing axis is the definition of </hi>
+                    <hi rend="bold color(0E0E0E)" xml:space="preserve">Types: </hi>
+                    <hi rend="color(0E0E0E)"> types capture mostly the diplomatic form offering an orthogonal layer of categorization. Types focus on the physical or structural attributes of a document. This layered approach ensures a detailed, flexible, and systematic representation of archival materials, supporting both human readability and computational analysis.</hi>
+                </p>
+                <figure>
+                    <graphic n="1003" width="16.002cm" height="4.332111111111111cm" url="/tmp/tmppmbxjssn/Pictures/4a39af98024927ef8077e4925faddca5.jpeg" rend="inline"/>
+                    <head>An example of Class vs. Types assignment of documents. On the second row, a document with the diplomatic form of postcard is classified as a “communication document”, while in the last row, a document of type postcard is classified as Ephemera.</head>
+                </figure>
+                <p style="text-align: left; ">The python code we use to automate classification employs Large Language Models (LLMs), with OpenAI's gpt-4o serving as the primary model to classify the items based on Netzer and Shuster’s schema. To ensure the generated classifications aligned precisely with our specific vocabularies, we utilized Pydantic (Python Library) for enforcing structured output.</p>
+                <p style="text-align: left; ">Despite the closed list given in the prompt, the LLM nevertheless suggested new classes and document types. Instead of treating this as a failure in the model’s performance, we see in these suggestions an opportunity to reconsider our closed lists. Results that defy our expectations are also taken seriously, as a trigger for discussion and revision of our categories, in a similar way that one would consider human annotators' disagreement.  Thus it is exactly these aberrations that are making the AI into a team member, involved in negotiating both the schema itself and its application.</p>
+                <p style="text-align: left; ">The notebook we offer is configurable, so that the list of types and classes can be edited. While it can be used on any similarly structured catalog, the recommended workflow is to first run it as is as a preliminary inventory, then survey the results and refine the lists and the explanations in the prompt in view of the specific holdings that are described. Such an iterative workflow that combines closing vocabularies, then opening and revising them will be beneficial for any adoption of our code and workflow to other archival catalogs. The process will enable adaptation to the different domains of other archives. </p>
+                <p style="text-align: left; ">As a continuation of this workflow, we are extracting and linking named entities to external authorities and records in related archives, and sharing the outcome on an Omeka website. Most importantly, the results are accompanied with a caveat when they are the product of artificial translation and invite correction by the users. </p>
+                <p style="text-align: left; ">By doing so, we transition from an unwieldy spreadsheet to an intuitive interface that offers users multiple entry points into the archive, serves as a dynamic research tool, invites exploration and fosters connections.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Further research and conclusion</head>
+                <p style="text-align: left; ">These days, with the accelerated speed of advances in ML and AI, it is risky to propose a paper; in the months passed from the completion of the work described in this paper, through the date of submission and to the actual conference, better models were published, and new solutions came to the market. In our Github repository (
+                    <ref target="http://github.com/sinairusinek/JeckeArchive">github.com/sinairusinek/JeckeArchive</ref>) we share colab notebooks of the code we used for image classification, catalog descriptions parsing and item classification. Keeping up to date with continuous evaluation of newer models against relevant performance benchmarks and technical capabilities is important for model selection in a given moment in time. Although not implemented within the current scope, we recommend that future similar production systems be built using dedicated orchestration frameworks, such as LangChain, to allow for easy integration with new models in the fast-changing world of Large Language Models. To enhance transparency and traceability, we also intend to design paradata referencing the specific LLM used for each instance of automatically assigned metadata (Davet et al. 2023).
+                </p>
+                <p style="text-align: left; ">Already by the time of writing this proposal, multilingual models and multimodal AI loom and threaten — or promise — to overturn the basic assumptions that motivated our choices in production mode and language classification. More and more agents in the field (e.g., Alabama Libraries in Robertson J., and Colonna-Romano, 2025) are experimenting with — and even offering as services (e.g., JSTOR’s AI-assisted digital stewardship) — AI-based classification and metadata extraction, not only from old catalogs but from the images themselves.</p>
+                <p style="text-align: left; ">Today, image classification can be replaced by prompting the VLM to determine the production type and language, or even assuming that the required classification will be performed as part of the transcription task. The advancement of HTR capabilities enhanced the plausibility of pipelines that can combine existing metadata with metadata extracted from the records themselves by the same VLM. In our case, for example, this can already be achieved for cursive German and English scripts, though HTR for Hebrew and for German Shorthand level is not yet sufficient at the present. For the rest of the materials, it is now possible (if resources will be allocated to the task) to align the items in our extracted and enriched catalog to the single images, and further enrich their metadata.</p>
+                <p style="text-align: left; ">There is, however, a remaining challenge that still calls for future research and development: document delineation in an image stream. We are not aware of an available automated solution. Until such a solution appears, we underline the need to include human document parsing at the time of document scanning, either by inserting separator images with document metadata or by registering the exact page numbers for each document. </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bahdanau, Dzmitry, Kyunghyun Cho / Yoshua Bengio</hi> (2014): “Neural Machine Translation by Jointly Learning to Align and Translate”, in: arXiv preprint arXiv:1409.0473. 
+                        <ref target="https://arxiv.org/abs/1409.0473">&lt;https://arxiv.org/abs/1409.0473</ref>&gt; [April 14, 2025].
+                        <lb/>
+                        <hi rend="bold">Bengio Y. / Simard P. / Frasconi P</hi>. (1994: “Learning long-term dependencies with gradient descent is difficult”. 
+                        <hi rend="italic">IEEE Transactions on Neural Networks</hi>, 5(2):157–166, 1994. &lt;
+                        <ref target="https://www.comp.hkbu.edu.hk/~markus/teaching/comp7650/tnn-94-gradient.pdf">https://www.comp.hkbu.edu.hk/~markus/teaching/comp7650/tnn-94-gradient.pdf</ref>&gt;
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bushey Jessica / De Souza Marina /Fukushima Kailey / Iglésias David / Riess Marta, Sengsavang Eng / Stancic Hrvoje / Trbusic Zeljko</hi> (2025): Report on the Survey “Digitization and Artificial Intelligence for Archives and Documentary Heritage Materials,” 
+                        <hi rend="italic">InterPARES Trust AI</hi>, (May 2025). &lt;
+                        <ref target="https://interparestrustai.org/assets/public/dissemination/RA03-InterPARESAI-Survey_Report_FINAL.pdf">https://interparestrustai.org/assets/public/dissemination/RA03-InterPARESAI-Survey_Report_FINAL.pdf</ref>&gt; 
+                    </bibl>
+                    <bibl style="text-align: left; "> 
+                        <hi rend="bold">Chen, N./ Blostein, D</hi>. (2007): “A survey of document image classification: problem statement, classifier architecture and performance evaluation”. 
+                        <hi rend="italic">IJDAR 10</hi>, 1–16 (2007). &lt;
+                        <ref target="https://doi.org/10.1007/s10032-006-0020-2">https://doi.org/10.1007/s10032-006-0020-2</ref>&gt; 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Colavizza, Giovanni / Tobias Blanke / Charles Jeurgens / Julia Noordegraaf</hi> (2022): “Archives and AI: An Overview of Current Debates and Future Perspectives”, in: 
+                        <hi rend="italic" xml:space="preserve">ACM Journal on Computing and Cultural Heritage </hi>15(1): 1–15. &lt;https://doi.org/10.1145/3479010&gt; (last accessed April 14, 2025).
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Davet, Jeremy / Hamidzadeh, Babak / Franks, Patricia (2023):</hi> Archivist in the machine: paradata for AI-based automation in the archives. 
+                        <hi rend="italic">Archival Science</hi>. 23 (2023).  1-21. &lt;https://doi.org/10.1007/s10502-023-09408-8&gt;. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">EGAD (Expert Group on Archival Description)</hi> (2021): 
+                        <hi rend="italic">Records in Contexts Ontology (RiC-O), Version 0.2. International Council on Archive</hi>s (2021)  Accessed April 20, 2025. &lt;https://ica-egad.github.io/RiC-O/&gt;
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Hawkins, Ashleigh</hi> (2022): Archives, linked data and the digital humanities: increasing access to digitised and born-digital archives via the semantic web. 
+                        <hi rend="italic">Archival Science</hi> 22, 319–344 (2022). &lt;
+                        <ref target="https://link.springer.com/article/10.1007/s10502-021-09381-0">https://link.springer.com/article/10.1007/s10502-021-09381-0</ref>&gt; (last accessed April 20, 2025)
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">He, Kaiming / Xiangyu Zhang / Shaoqing Ren / Jian Sun</hi> (2015): “Deep Residual Learning for Image Recognition”, in
+                        <hi rend="italic">: arXiv</hi> preprint arXiv:1512.03385. 
+                        <ref target="https://arxiv.org/abs/1512.03385">&lt;https://arxiv.org/abs/1512.03385</ref>&gt;  (last accessed April 14, 2025).
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Huang, Gao et al</hi>. (2018): “Densely Connected Convolutional Networks”. 
+                        <hi rend="italic">in: arXiv preprint</hi> arXiv:1608.06993. &lt;
+                        <ref target="https://arxiv.org/abs/1608.06993">https://arxiv.org/abs/1608.06993</ref>&gt; (last accessed April 19, 2025).
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">JSTOR. </hi>JSTOR Digital Stewardship. Retrieved April 13, 2025, from &lt;
+                        <ref target="https://about.jstor.org/get-jstor/digital-stewardship/">https://about.jstor.org/get-jstor/digital-stewardship/</ref>&gt; 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Netzer, Yael / Shuster, Keren</hi> (2025): Cataloging Personal Digital Archives in Past 
+                        <hi rend="italic">Touching Tomorrow: The Legacy of Paul Abraham Elsberg Through the Lens of the 21st Century</hi>, Association of Israeli Archivists, Haifa, (2025. In Hebrew)
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Mingxing, Tan /  Le, Quoc V.</hi> (2020): “EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks”, in
+                        <hi rend="italic">: arXiv preprin</hi>t arXiv:1905.11946. &lt;
+                        <ref target="https://arxiv.org/abs/1905.11946">https://arxiv.org/abs/1905.11946</ref>&gt; (last accessed April 19, 2025). 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Pandolfo, Laura, / Pulina, Luca,/ Zieli´nski, Marek. </hi>(2017) “Towards an ontology for describing archival resources.” In: 
+                        <hi rend="italic">Proceedings of the Second Workshop on Humanities in the Semantic Web</hi> (WHiSe II) Co-located with 16th International Semantic Web Conference: 111–116. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Radford, Alec / Luke Metz, / Soumith Chintala</hi> (2015): “Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks”, 
+                        <hi rend="italic">in: arXiv preprint</hi> arXiv:1511.06434. 
+                        <ref target="https://arxiv.org/abs/1511.06434">&lt;https://arxiv.org/abs/1511.06434</ref>&gt; (last accessed April 14, 2025).
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Colonna-Romano Jeremiah, / Jessica Kincaid</hi> (2003 ) “
+                        <hi rend="italic">Implementing and Assessing AI Tools in Archival Metadata Workflows</hi>” on fromthepage youtube channel, &lt;
+                        <ref target="https://youtu.be/ZehwzO6wO8U?si=H1mmBYd35iY_qZOL">https://youtu.be/ZehwzO6wO8U?si=H1mmBYd35iY_qZOL</ref>&gt; accessed April 13, 2025.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Simonyan, Karen / Zisserman, Andrew</hi> (2015): “Very Deep Convolutional Networks for Large-Scale Image Recognition”, University of Oxford. in: 
+                        <hi rend="italic">arXiv preprint</hi> arXiv:1409.1556. &lt;
+                        <ref target="https://arxiv.org/abs/1409.1556">https://arxiv.org/abs/1409.1556</ref>&gt; (last accessed April 19, 2025).
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve"> Ioffe, Sergey / Szegedy, Christian /  Vanhoucke, Vincent / Shlens, Jonathon / Zbigniew, Wojna</hi> (2015): “Rethinking the Inception Architecture for Computer Vision”. in: arXiv preprint arXiv:1512.00567. &lt;
+                        <ref target="https://arxiv.org/abs/1512.00567">https://arxiv.org/abs/1512.00567</ref>&gt; (last accessed April 19, 2025).
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">van der Maaten, L., / Hinton,</hi> G. (2008): “Visualizing Data using t-SNE” 9(86):2579−2605, 2008. &lt;
+                        <ref target="https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf">https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf</ref>&gt;
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Zhang, Yinda / Jianxiong Xiao / James Hays / Ping Tan</hi> (2016): “FrameNet: Learning Local Canonical Frames of 3D Surfaces from a Single RGB Image”, 
+                        <hi rend="italic">in: arXiv preprint</hi> arXiv:1903.12305. 
+                        <ref target="https://arxiv.org/abs/1903.12305">&lt;https://arxiv.org/abs/1903.12305</ref>&gt; (last accessed April 14, 2025).
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

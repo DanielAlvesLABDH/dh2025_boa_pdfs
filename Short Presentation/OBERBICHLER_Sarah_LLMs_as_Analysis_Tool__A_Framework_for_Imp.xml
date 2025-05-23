@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="OBERBICHLER_Sarah_LLMs_as_Analysis_Tool__A_Framework_for_Imp">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>LLMs as Analysis Tool: A Framework for Implementation, Evaluation and Critical Assessment</title>
+                <author>
+                    <persName>
+                        <surname>Oberbichler</surname>
+                        <forename>Sarah</forename>
+                    </persName>
+                    <affiliation>Leibniz Institute of European History, Germany</affiliation>
+                    <email>oberbichler@ieg-mainz.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Petz</surname>
+                        <forename>Cindarella</forename>
+                    </persName>
+                    <affiliation>Leibniz Institute of European History, Germany</affiliation>
+                    <email>petz@ieg-mainz.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-28T21:43:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>LLMs</term>
+                    <term>AI Framework</term>
+                    <term>Critical Digital Literacy</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>copyright</term>
+                    <term>licensing</term>
+                    <term>and permissions standards</term>
+                    <term>systems</term>
+                    <term>and processes</term>
+                    <term>digital access</term>
+                    <term>privacy</term>
+                    <term>and ethics analysis</term>
+                    <term>natural language processing</term>
+                    <term>project design</term>
+                    <term>organization</term>
+                    <term>management</term>
+                    <term>History</term>
+                    <term>Humanities computing</term>
+                    <term>Literacy</term>
+                    <term>composition</term>
+                    <term>and creative writing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">Large Language Models (LLMs), accessible through chat bots, APIs, or as local models, have become increasingly accessible to both researchers and the public as analytical tools. While the higher accessibility of data, digital methods, and lower technical barriers present great opportunities for increasing access to knowledge, critical AI literacy needs to become essential for meaningful engagement with research sources. Using LLMs for data analysis requires developing new skill sets for both researchers and the public. </p>
+            <p style="text-align: left; ">For example, in December 2024, the 
+                <hi rend="italic">Neue Zürcher Zeitung (NZZ)</hi> published an analysis comparing how newspapers present right-wing versus left-wing German politicians, using GPT and Gemini models for sentiment analysis (Neue Zürcher Zeitung December 2, 2024). While many aspects of ‘good scientific practice’; were followed in this article, such as sharing code and prompts (as expendable text at the very end of the article), several methodological and ethical concerns were not raised: Was the data set appropriate to be able to answer the research question? (E.g., were direct quotes removed before analyzing the texts?) Was the data set – comprising of one conservative and two liberal newspapers – representative for the claims made? Can results of a sentiment analysis be used without human validation, and as the sole evidence? Are LLMs able to achieve the best results for sentiment analysis? A gold standard evaluation of sentiment analysis using GPT-4 and GPT-4o by Krušič and Scholger showed that even human annotators often disagree when annotating sentiments (Krušič 2024), and approximately 30% of the automatically generated results were still classified incorrectly even with the largest language models currently available. The results also revealed that LLMs can outperform lexicon-based methods or fine-tuned transformer models (Scholger &amp; Krušič 2024). While this better performance can justify the usage of very large language models, those models raise other ethical concerns when they are not employed locally: Newspaper articles, printed after 1945, are copyright protected and their usage is possibly restricted through licenses. Archival sources such as court records have even more stricter rules protecting the sensitive information they contain. Sending copyrighted material via APIs to commercial AI tools for analysis might infringe on European copyright law (European Parliament 2024).
+            </p>
+            <p style="text-align: left; ">The integration of LLMs to answer research questions in and outside of academia therefore demands a careful balance between automation, updating established hermeneutical practices, ethical considerations of biases, and legal as well as environmental considerations. While ethical, legal and environmental aspects were frequently discussed in scientific contexts (Smit et al. 2024; Deng et al. 2024; Bär, 2024; Ren et al. 2024; Hämäläinen 2024; Bender et al. 2021; Navigli, Conia, &amp; Ross 2023; Vyas 2022), Digital Humanities scholars need to systematically reflect how LLMs are used for analysis by integrating these considerations into their research work flows, and by creating frameworks that include source, data, method and prompting criticism. We therefore propose such an integrated LLM evaluation workflow as outlined in our working paper (Oberbichler &amp; Petz 2025).</p>
+            <figure>
+                <graphic n="1001" width="16.002cm" height="10.840861111111112cm" url="/tmp/tmpbsccomvj/Pictures/d3979a17d7ed940d03030266be751bae.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 1: Integrated LLM evaluation framework, (Image: S. Oberbichler and C. Petz 2024).</p>
+            <p style="text-align: left; ">Drawing from the authors’ research projects on ‘Transnational Flows of News in Historical Newspapers’ and the ‘Construction of Political Criminality during the Dollfuß-/Schuschnigg-Regime,’ this paper demonstrates how LLMs can be integrated into critical research work flows. Both projects utilize distinct types of historical sources with different legal considerations: historical newspapers that are no longer under copyright protection but remain subject to licensing agreements, and historical court records containing sensitive information protected by national data privacy regulations. Figure 1 visualizes an integrated LLM framework and illustrates the interconnections between source criticism, data criticism, and method criticism with prompt and output evaluation for such different use cases. This framework highlights how each step requires decisions that address legal, sustainability, and quality considerations, and provides guidance in addressing those</p>
+            <p style="text-align: left; ">The proposed framework addresses three interconnected dimensions. The first dimension focuses on source and data criticism, where traditional research practices must evolve to meet new challenges. While evaluating representativeness, appropriateness, quality, authenticity, and bias of used sources has a long tradition in humanities research and remains essential, most of these questions also need to be transferred to LLMs, which need to be considered as both data and tool. Additionally, researchers must carefully consider copyright protection, licensing restrictions, and the handling of personal data under EU AI Act and or national laws requirements when creating and working with user corpora.</p>
+            <p style="text-align: left; ">The second dimension centers on tool and model criticism, emphasizing the replicability, reliability, and sustainability of chosen LLM tools. This includes careful consideration of model parameters and types, whether working with small or large models, text-only or multi-modal systems. For anyone using LLMs as an analysis tool, it is suggested to evaluate different access options, weighing the implications of open-source, open-weighted access and closed-source model options, and assess the advantages and limitations of local versus cloud-based deployment options. When in doubt if copyright or licensing restrictions are present in the data base at question, using local models should be considered the most responsible option. While small local models have the advantage of not needing additional computing power unlike larger LLMs, comparative evaluations can determine whether larger LLMs achieve significantly better results that justify their usage. </p>
+            <p style="text-align: left; ">The final dimension involves prompt and output evaluation, requiring the implementation of robust prompting techniques and evaluation guidelines. This includes systematic edge case testing, A/B testing, and the integration of model self-verification protocols. Critical to this dimension is the establishment of the human-in-the-loop validation processes and systematic comparison of different models and methods. </p>
+            <p style="text-align: left; ">Throughout all these dimensions, maintaining comprehensive documentation and transparency remains crucial. This includes ensuring both prompts and outputs comply with copyright regulations, i.e., avoiding prompts that request reproduction of copyrighted material and carefully monitoring model responses for potential copyright violations.</p>
+            <p style="text-align: left; ">Based on insights gained from the two different historical research projects, this proposed framework aims to emphasize that increased accessibility of data and (large) language models need to be balanced with responsible use aligned with good scientific practice. Providing guidance through critical LLM evaluation frameworks such as this one is another step into the democratization of knowledge, empowerment, and thus further diversification of research.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Bär, Dominik (2024): "Über die Verwendung von Large Language Models in der Wissenschaft: Eine überschätzte Gefahr?". 
+                        <ref target="https://doi.org/10.13154/294-12469">https://doi.org/10.13154/294-12469</ref>. 
+                    </bibl>
+                    <bibl style="text-align: left; ">Bender, Emily M., et al. (2021): "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?", in: Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency: 610–23. 
+                        <ref target="https://doi.org/10.1145/3442188.3445922">https://doi.org/10.1145/3442188.3445922</ref>. 
+                    </bibl>
+                    <bibl style="text-align: left; ">Deng, Chengyuan, et al. (2024): Deconstructing the Ethics of Large Language Models from Long-standing Issues to New-emerging Dilemmas: A Survey. arXiv:2406.05392. 
+                        <ref target="https://doi.org/10.48550/arXiv.2406.05392">https://doi.org/10.48550/arXiv.2406.05392</ref>- 
+                    </bibl>
+                    <bibl style="text-align: left; ">European Parliament (2024, March 13): Artificial Intelligence Act. European Parliament legislative resolution on the proposal for a regulation of the European Parliament and of the Council on laying down harmonised rules on Artificial Intelligence (Artificial Intelligence Act) and amending certain Union Legislative Acts (COM(2021)0206 – C9-0146/2021 – 2021/0106(COD)). 
+                        <ref target="https://www.europarl.europa.eu/doceo/document/TA-9-2024-0138_EN.pdf">https://www.europarl.europa.eu/doceo/document/TA-9-2024-0138_EN.pdf</ref>. 
+                    </bibl>
+                    <bibl style="text-align: left; ">Hämäläinen, Mika (2024): "Legal and Ethical Considerations that Hinder the Use of LLMs in a Finnish Institution of Higher Education", in: Proceedings of the Workshop on Legal and Ethical Issues in Human Language Technologies @ LREC-COLING 2024: 24-27. ELRA and ICCL. 
+                        <ref target="https://aclanthology.org/2024.legal-1.5.pdf">https://aclanthology.org/2024.legal-1.5.pdf</ref>. 
+                    </bibl>
+                    <bibl style="text-align: left; ">Krušič, Lucija (2024): "Constructing a Sentiment-Annotated Corpus of Austrian Historical Newspapers: Challenges, Tools, and Annotator Experience", in: Proceedings of the 4th International Conference on Natural Language Processing for Digital Humanities: 51-62. Association for Computational Linguistics.</bibl>
+                    <bibl style="text-align: left; ">Navigli, Roberto, et al. (2023): "Biases in Large Language Models: Origins, Inventory, and Discussion", in: J. Data and Information Quality 15, 2: 
+                        <ref target="https://doi.org/10.1145/3597307">https://doi.org/10.1145/3597307</ref>. 
+                    </bibl>
+                    <bibl style="text-align: left; ">Neue Zürcher Zeitung (2024, December 2): "Friedrich Merz ist «populistisch», Robert Habeck «pragmatisch»: So ungleich behandeln deutsche Medien linke und rechte Politiker" [Data Analysis]. 
+                        <ref target="https://www.nzz.ch/visuals/medien-analyse-politiker-habeck-merz-lindner-baerbock-ld.1854395">https://www.nzz.ch/visuals/medien-analyse-politiker-habeck-merz-lindner-baerbock-ld.1854395</ref>. 
+                    </bibl>
+                    <bibl style="text-align: left; ">Oberbichler, Saran / Petz, Cindarella (2025): Working Paper: Implementing Generative AI in the Historical Studies (1.0). Zenodo. 
+                        <ref target="https://doi.org/10.5281/zenodo.14924737">https://doi.org/10.5281/zenodo.14924737</ref>. 
+                    </bibl>
+                    <bibl style="text-align: left; ">Ren, Shaolei, et al. (2024): "Reconciling the contrasting narratives on the environmental impact of large language models", in: Scientific Reports 14: 26310. 
+                        <ref target="https://doi.org/10.1038/s41598-024-76682-6">https://doi.org/10.1038/s41598-024-76682-6</ref>. 
+                    </bibl>
+                    <bibl style="text-align: left; ">Scholger, Martina / Krušič, Lucija (2024): LLMs for NLP: Sentiment Analysis. AGKI-AG. 
+                        <ref target="https://agki-dh.github.io/pages/page-7.html">https://agki-dh.github.io/pages/page-7.html</ref>. 
+                    </bibl>
+                    <bibl style="text-align: left; ">Smit, Rik, et al. (2024): "Stochastic Remembering and Distributed Mnemonic Agency: Recalling Twentieth Century Activists with ChatGPT", in: Memory Studies Review. 
+                        <ref target="https://doi.org/10.1163/29498902-202400015">https://doi.org/10.1163/29498902-202400015</ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

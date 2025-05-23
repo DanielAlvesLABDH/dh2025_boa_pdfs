@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="HERNANDEZ_PEREZ_Jose_Advanced_Computing_Education_in_the_Hum">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Advanced Computing Education in the Humanities: A review of the Interdisciplinary Data Humanities Initiative from 2022-2024</title>
+                <author>
+                    <persName>
+                        <surname>Hernandez Perez</surname>
+                        <forename>Jose</forename>
+                    </persName>
+                    <affiliation>Florida State University</affiliation>
+                    <email>jose.hndz.prz@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Nagales</surname>
+                        <forename>Marcelina</forename>
+                    </persName>
+                    <affiliation>Florida State University</affiliation>
+                    <email>mnagales@fsu.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-07T15:20:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>education</term>
+                    <term>research support</term>
+                    <term>high-performance computing</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>curricular and pedagogical development and analysis</term>
+                    <term>project design</term>
+                    <term>organization</term>
+                    <term>management</term>
+                    <term>Education/ pedagogy</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; "> Advanced computing tools are no longer a luxury for digital humanities practitioners. In the era of large language models and their transformative impact, advanced tools such as these are reshaping practices and research projects across the humanities, social sciences, and the arts (the HSSA disciplines). For instance, in linguistics we have seen the pioneering use of natural language processing, which has now been used as foundation for work in fields like History and English to study language evolution and patterns in large text corpora (Piotrowski 2012). On another vein, archaeology and the visual arts have leveraged 3D modeling and virtual reality to enable in-depth exploration and archiving efforts that were previously unattainable in their fields.(Izaguirre et al. 2024) And these are only a few examples of emerging and constantly advancing technologies that have inched their way into our workflows and, in turn, been shaped by our research over the last few decades.</p>
+            <p style="text-align: left; ">However, despite these advances and necessary collaborations, many academic curricula cannot support advanced computing education, particularly in specialized tools such as high-performance computing (critical for working with large language model use and large-scale 3D modeling). Faculty face immense pressures from teaching, publishing, and traditional responsibilities making it a challenge for them to integrate these tools efficiently into their courses. At the same time, our students often lack the time, access, or necessary technical knowledge to develop these skills. In addition, many computational tools require specialized hardware, such as graphical processing units or great archival capacity, which can only be found in academic research computing centers, many of which do not have approachable user interfaces or humanities specific tools already available to their communities.</p>
+            <p style="text-align: left; ">To address these critical gaps, institutional support is necessary for the instruction and continued use of these tools in the humanities, by providing facilitators that understand our community’s needs. To take a step in this direction, Florida State University’s Research Computing Center (RCC) launched the Interdisciplinary Data Humanities Initiative (IDHI) in September 2022, to enhance computational resources and training opportunities for faculty and students across the HSSA disciplines (Hernandez et al. 2024). In this paper, we detail the initiative’s founding efforts, such as the hiring of an additional application specialist for the humanities, and the gathering of feedback across departments to be able to meet their needs. Here, we will share the successful strategies, setbacks, and reproducible methods that may benefit researchers seeking to establish similar support structures at their institutions. But the majority of our paper, and the initiative for that matter, centers on our three codeveloped efforts, designed to provide a comprehensive environment for computational advancement in our DH community.</p>
+            <p style="text-align: left; ">The first of these was to offer research support at all levels, from institutional grants to individual scholar projects. Given our previous experience, we decided to start by offering support to faculty and students that already had ongoing digital projects and upcoming grants, resulting in at least one NEH grant award for the department of philosophy and a handful of publications along the way (Department of Philosophy, 2024).However, it became evident that the perceived difficulty of these tools was steering away many of the students and faculty that we wanted to impact through IDHI.</p>
+            <p style="text-align: left; ">Our second prong addressed this stigma by creating tailored curriculum development programs that acknowledged and adapted to the technological background of our students. Prior to the creation of IDHI, the RCC was already providing four to six workshops a year on highly specific topics such as parallel programming and Python use. Building upon this foundation, we decided to develop HSSA specific versions of these workshops tailored for the educational background of our participants. For example, we created Web Development for Music, a ninety-minute workshop where students walk away with a minimal computing portfolio website that can showcase video, pictures, and even composition files in the Musical Encoding Initiative format. </p>
+            <p style="text-align: left; ">By 2024, IDHI had offered more than nineteen workshops benefitting more than two hundred students across our institution, made possible by partnering with eight of our instructors. In addition, these workshop materials are publicly available for our students, and we have created an internal reproducible framework for editing similar basic workshops in Python, R, and Web development for any departments that need it from Music to Political Science, which we hope to share with attendees.</p>
+            <p style="text-align: left; ">Lastly, we focused on the installation of tools specifically tailored for digital humanities practitioners, providing easy access to these programs without needing to know command line practices. To achieve this, we installed DH tools in our Open OnDemand platform, a graphical user interface that is utilized across the globe by academic research computing centers. Tools such as Open Refine, Agisoft Metashape, and TEI Publisher are currently installed in our cluster and are accessible to any student and faculty member across campus. This format encouraged experimentation and facilitated their seamless integration into our workshops and outside courses, making them more approachable for both students and instructors. Also, by pioneering the OOD installations we will provide feedback on how to achieve cluster use of these DH specific tools, which alleviates students and faculty from needing to increase their personal archival or hardware requirements.</p>
+            <p style="text-align: left; ">Having outlined our efforts and current results, we aim to provide other institutions with a clear roadmap of our objectives and the strategies that we employed over the last two years. This paper will also address specific concerns, such as tool installations, video resource maintenance, and customizing educational materials to meet the unique needs of our diverse academic communities. Through these insights, we hope to convey that advanced computing tools can be taught in the digital humanities but can only be fostered by deliberate and sustained institutional action.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Piotrowski, Michael </hi>(2012): Natural Language Processing for Historical Texts. 
+                        <hi rend="italic">Cham: Springer.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Izaguirre, Joaquin I. / Ferrari, Alejandro A. / Acuto, Felix A.</hi> (2024): “Exploring cultural heritage and archaeological research from a VR-based approach”, in: 
+                        <hi rend="italic">Digital Applications in Archaeology and Cultural Heritage</hi> 32: e00318. https://doi.org/10.1016/j.daach.2024.e00318.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Hernandez, José A. / Nagales, Marcelina / Van der Mark, Paul</hi> (2024): “Education and Outreach Strategy Design for High-Performance Computing Centers: Lessons from Florida State University's Research Computing Center”, in: 
+                        <hi rend="italic">Practice and Experience in Advanced Research Computing 2024: Human Powered Computing (</hi>PEARC '24). New York, NY: Association for Computing Machinery, Article 84: 1–4. https://doi.org/10.1145/3626203.3670587.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Department of Philosophy</hi> (2023): “Associate Professor Courtney Fugate awarded an NEH grant from the Scholarly Editions and Scholarly Translations program”, https://philosophy.fsu.edu/article/associate-professor-courtney-fugate-awarded-neh-grant-scholarly-editions-and-scholarly [09.11.2024].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

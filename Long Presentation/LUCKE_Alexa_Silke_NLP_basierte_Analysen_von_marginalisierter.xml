@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LUCKE_Alexa_Silke_NLP_basierte_Analysen_von_marginalisierter">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">NLP-basierte Analysen von marginalisierter serieller Frauenliteratur im 19. Jahrhundert. Ein Vergleich von Frauenzeitschriften im deutschsprachigen Raum</title>
+                    <title type="sub">(NLP-based Analyses of Marginalized Women's Literature in the 19th Century)</title>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Lucke</surname>
+                        <forename>Alexa Silke</forename>
+                    </persName>
+                    <affiliation>Universität Siegen, Germany</affiliation>
+                    <email>alexa.lucke@uni-siegen.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Johannes</surname>
+                        <forename>Hermann</forename>
+                    </persName>
+                    <affiliation>Fachhochschule Südwestfalen in Hagen, Germany</affiliation>
+                    <email>HJohannes@t-online.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-07T19:47:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Frauenliteratur</term>
+                    <term>Frauenzeitung</term>
+                    <term>Faktorenanalyse</term>
+                    <term>Paratext</term>
+                    <term>Literaturgeschichte</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>digital archiving</term>
+                    <term>meta-criticism (reflections on digital humanities and humanities computing)</term>
+                    <term>natural language processing</term>
+                    <term>Computer science</term>
+                    <term>Cultural studies</term>
+                    <term>History</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">Der Beitrag widmet sich der digitalen Modellierung von De-Kanonisierungsprozessen deutschsprachiger serieller Frauenliteratur in Frauenzeitschriften des 19. Jahrhunderts sowie der theoretischen Reflexion multipler 
+                <hi rend="italic">biases</hi> in den Studien digitaler Literaturgeschichte – und zeigt Lösungsansätze auf der Basis von multivariaten NLP-basierten Analysen. Unter ‚Dekanonisierung‘ wird hier das Ergebnis von Prozessen verstanden, die dazu führen, dass historische Frauenliteratur marginalisiert, nicht (mehr) in den Kanon erinnerungswürdiger Texte aufgenommen wurde und infolgedessen bis heute in digitalen Korpusanalysen unterrepräsentiert ist.
+            </p>
+            <p style="text-align: left; ">Die Literaturgeschichtsschreibung ist seit jeher mit dem Problem der Auswahl von Texten, Korpora und deren (Gattungs-)Kriterien konfrontiert, die historisch oft auf bildungs-, literatur- und kulturpolitischen Normen oder hierarchischen Differenzierungen beruhen (
+                <hi rend="italic">selection bias</hi>). Die Ergebnisse quantitativer Studien zu bereits digitalisierten Texten und Archiven, die als Teil des kulturellen Erbes gesehen werden, enthalten somit die Dynamik von literaturhistoriographischen 
+                <hi rend="italic">biases</hi>. Der westliche Kanon weist außerdem einen signifikanten 
+                <hi rend="italic">gender bias</hi> auf, da dort von wenigen Ausnahmen abgesehen, fast ausschließlich männliche Autoren vertreten sind (Weitin 2021). Die (numerische) Dominanz epochaler Konzepte und Gattungen, unter die seltenere Einzel-Gattungen – auf Kosten ihrer Individualität – subsumiert werden, ist ein weiteres literaturgeschichtliches Problem (Hempfer/Rosen 2021), aber auch des so genannten 
+                <hi rend="italic">distant reading</hi> (Weitin 2021). Die digitalen und explorativen Methoden, die auf statistischen Verfahren beruhen, erzeugen so multiple 
+                <hi rend="italic">biases</hi>, indem sie stereotype, kanonische und normative Zuschreibungen (von Weiblichkeit, Ästhetik, Werte- und Glaubenssystemen) reproduzieren, was zu weiterer Nicht-Beachtung von Minderheitenliteraturen und von literaturgeschichtlichen Einzel- oder Grenzfällen führt. Eine digitale Literaturgeschichtsschreibung, deren Korpora auf dem westlichen Literaturkanon basiert, läuft daher Gefahr, die ästhetischen und epistemologischen Verzerrungen des Kanons (Moretti 2000) zu perpetuieren und zu recyclen. Auch die Interpretation der (quantitativen) Ergebnisse orientiert sich an literaturgeschichtlichem Vor- und Kontextwissen, das wiederum von epochen- und gattungstypischen Mustern der traditionellen Literaturhistoriografie geprägt ist. Mit quantitativ-explorativen Methoden allein ist so den historischen Epistemologien, wie sie in literarischen Texten zum Ausdruck kommen, nicht beizukommen, da diese mit den Theorien (Kleymann 2022), ästhetischen Programmen, politischen Dimensionen und medialen Bedingungen ihrer jeweiligen Zeit verschränkt sind. Deren Bedeutungen, die nur in den jeweiligen historischen Kontexten verstanden werden können, unterliegen einem prozessualen Zeitindex, der ein adäquates zeitgenössisches hermeneutisches Verständnis erschwert.
+            </p>
+            <p style="text-align: left; ">Digitale Archive können wie analoge Archive als Gedächtnisinstitutionen gesehen werden, die kulturelle Erinnerungspraktiken repräsentieren und dabei meistens vorgeprägte Kategorien- und Wissenssysteme reproduzieren (Latour 2008, Lucke 2025). Kritische Ansätze haben in Bezug auf die Wissensproduktion in digitalen Studien die Frage aufgeworfen, wie (digitale) Archive dekolonisiert (Risam 2018) oder nicht beachtete Erzählungen und Geschichte(n) außerhalb des Kanons sicht- und lesbar werden können (Rawson 2014, Thorat 2015, Earheart 2022). Was passiert aber, wenn von literarischen Texten nur Digitalisate in Frakturschrift existieren? Wie ist eine digitale Epistemologie und Vermittlung jenseits von digitaler Zugänglichkeit und Lesbarkeit überhaupt möglich (da z.B. nicht jede/r Leser:in mit Frakturschrift vertraut ist oder immer noch Fehler bei der OCR-Texterkennung auftreten)? Bleiben solche literarischen Randphänomene wie die nicht kanonisierte und rudimentär digitalisierte Frauenliteratur im Zuge eines politisch engagierten Journalismus des 19. Jahrhunderts bloß weiter der ‚blinde Fleck‘ der Literaturgeschichte, da sie in den digitalen Archiven, Korpora und Projekten nicht auftauchen? 
+                <hi rend="italic">Die Lehnspflichtigen</hi> von Louise Otto(-Peters), geschrieben zu Beginn der deutschen Frauenbewegung 1848/49, geriet nach drei erfolglosen Kanonisierungsversuchen wieder in Vergessenheit. In den 1980er Jahren war es immerhin der einzige Text von einer Frau, den Hartmut Kircher in seine zweibändige Sammlung 
+                <hi rend="italic">Dorfgeschichten aus dem Vormärz</hi> (1981) aufgenommen hat, die aber inzwischen wieder vergriffen ist.
+            </p>
+            <p style="text-align: left; ">Um ein komplexes Phänomen wie die De-Kanonisierung von serieller Frauenliteratur im 19. Jahrhundert und seine vielfältigen Facetten digital zu modellieren, kombinieren wir quantitative Analysen wie z.B. NLP-basierte Verfahren mit philologisch-qualitativen, praxeologischen und hermeneutischen Ansätzen. Zunächst werden in einer qualitativen Analyse Themen, soziale Hintergründe, paratextuelle Aushandlungsprozesse wie Wertungs- und Kommentarpraktiken von 
+                <hi rend="italic">Gatekeepern</hi> (wie Herausgeber oder Verleger) als potentielle Einflussfaktoren für die Marginalisierung von serieller Frauenliteratur in deutschsprachigen Frauenzeitschriften, insbesondere einer frauenrechtlerisch engagierten Presse im Zuge der Vormärz-Revolution 1848/49 (Freund 2004, Bittermann-Wille / Hofmann-Weinberger 2001), eruiert. Wir untersuchen hierfür die Relationen zwischen den literarischen Texten und ihren Paratexten und historischen Kontexten. Dabei berücksichtigen wir beispielsweise die „paratextual negotiations“ (Stein 2021: 39ff.) zwischen Herausgebern und den (oft unter Pseudonymen agierenden) Autorinnen und ‚Redakteurinnen‘, um deren Rückkopplungseffekte auf die Produktion von (serieller) Frauenliteratur zu erfassen (im Sinne einer 
+                <hi rend="italic">Serienpolitik</hi>, vgl. Werber / Stein 2023). Mit NLP-basierten Verfahren überprüfen wir dann die Hypothese, ob die Aufnahme politischer Themen durch Frauen in die literarischen Texte und die nicht-literarischen Paratexte tendenziell mit Prozessen der De-Kanonisierung oder dem Einstellen der Serie bzw. der Zeitschrift korreliert. Für die vergleichende Analyse nutzen wir unter anderem das 
+                <hi rend="italic">Deutsche Zeitungsportal der Deutschen Digitalen Bibliothek</hi>, 
+                <hi rend="italic">ANNO</hi> (österreichische Zeitschriftendatenbank), die 
+                <hi rend="italic">Impresso</hi>-Datenbank der Universität Luxemburg und digitale Archive der TU Dresden bzw. der Universität München. 
+            </p>
+            <p style="text-align: left; ">Das Erfassen multimodaler Artefakte (Lucke 2024) wie serielle literarische Texte und ihre komplexen Wechselwirkungen zwischen Rezeption und Produktion erfordert interdisziplinäre Ansätze zwischen dem (automatisierten) deterministischen und heuristischen Erkennen, Modellieren und Klassifizieren von literarischer Sprache (Femmer / Lucke 2024). Diesen Herausforderungen begegnen wir mit einem interdisziplinären und multiperspektivischen 
+                <hi rend="italic">Mixed Methods</hi>-Ansatz – als Kombination von NLP- und filterbasierten Verfahren (z.B. basierend auf 
+                <hi rend="italic">dictionaries</hi>, Identifikation, morphologische Analyse auf der Basis von 
+                <hi rend="italic">POS-Tagging</hi>, vgl. ebd.) mit hermeneutischen Verfahren – insbesondere iterative Verfahren, manuelle Überprüfung und hermeneutische Validierung der Ergebnisse sowie historische Kontextualisierung durch literaturwissenschaftliches Expert:innenwissen. Zur technischen Umsetzung haben wir einen digitalen NLP-Workflow konzipiert und programmiert, der Open-Source-Bibliotheken, -Pipelines und -Toolkits (u.a. 
+                <hi rend="italic">spaCy</hi>, 
+                <hi rend="italic">NLTK</hi>) nutzt und durch lexikonbasierte Filter sowie morphologische Analysen für die deutsche Sprache erweitert wurde. Damit werden bestimmte sprachliche Vorkommnisse, so genannte 
+                <hi rend="italic" xml:space="preserve">findings </hi>wie z.B. Negationen, Superlative, Komparative, lange Sätze, modale Hilfsverben und Gegensatzpaare in den literarischen Texten erkannt und ihre Häufigkeiten (Dichte, vgl. Femmer / Lucke 2024) ermittelt. So lassen sich aus den Daten Rückschlüsse auf sprachliche, thematische und publizistische Muster ableiten, die auf literarische, politische und gesellschaftliche Zusammenhänge verweisen und zur Beantwortung der Fragestellung beitragen. Es geht methodologisch auch um die Frage, wie sich aus der Dichte bestimmter 
+                <hi rend="italic">findings</hi> kulturelle Semantiken (wie z.B. ‚weibliche‘ Autorschaft, gesellschaftliche Selbstbeschreibungen, Geschlechterrollen oder paratextuelle Aushandlungsprozesse) heuristisch ableiten lassen. In der Präsentation stellen wir das von uns entwickelte Toolkit und seine einzelnen Analyseschritte vor, das einstellbare Filtermechanismen für die Identifikation nutzt, die nach einer Testphase an Testkorpora und durch manuelles Feedback von Literaturwissenschaftler:innen weiter angepasst werden. Dabei beleuchten wir auch kritisch die methodologischen Implikationen dieses iterativen Ansatzes, insbesondere in der Verschränkung von computationellen und hermeneutischen Verfahren. Im Rahmen von Daten- und Methodenkritik (Dalton / Thatcher 2014) gehen wir auch auf das Konzept der Datendiffraktion ein (Kleymann 2022).
+            </p>
+            <p style="text-align: left; ">Der Beitrag bezieht sich auf die folgenden Topics: Critical Digital Literacy, Digital Archives &amp; Collections, FAIR and CARE principles, Open, Public, Participatory Humanities, Innovations in Free/Libre and Open-Source Software.</p>
+            <p style="text-align: left; ">The presentation in Lisbon will be held in English and German. An English version of the abstract is available; please contact the authors.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bittermann-Wille, Christa / Hofmann-Weinberger, Helga</hi> (2001): “Historische Frauenzeitschriften”, in: 
+                        <hi rend="italic">KolloquiA: frauenbezogene, feministische Dokumentation und Informationsarbeit in Österreich</hi>. Wien, 355–384.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Dalton, Craig / Thatcher, Jim</hi> (2014): “What does critical data studies look like, and why do we care? Seven points for a critical approach to ‘big data’”, in: 
+                        <hi rend="italic">Society and Space Open Site</hi>. &lt;https://www.societyandspace.org/articles/what-does-a-critical-data-studies-look-like-and-why-do-we-care&gt; [17.02.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Earhart, Amy E.</hi> (2022): “Feminist Digital Humanities”, in: James O’Sullivan (ed.): 
+                        <hi rend="italic">The Bloomsbury Handbook to the Digital Humanities</hi>. New York: Bloomsbury Academic Press 73–80.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Femmer, Henning / Lucke, Alexa</hi> (2024): “Über den Nutzen des Natural Language Processing in der computationellen Analyse literarischer Texte des ‚Naturalismus‘ und der ‚literarischen Moderne‘”, in: Lucke, Alexa / Johannes, Hermann (eds.): 
+                        <hi rend="italic">Literaturwissenschaft und Informatik. Transdisziplinäre Perspektiven, digitale Methoden und selbstlernende Algorithmen</hi>. Bielefeld: transcript 47–92. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Freund, Marion</hi> (2004): 
+                        <hi rend="italic">Mag der Thron in Flammen glühn! Schriftstellerinnen und die Revolution von 1848/49</hi>. Königstein/Taunus.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Hempfer, Klaus W. / Rosen, Valeska von</hi> (eds.) (2021): 
+                        <hi rend="italic">Multiple Epochisierungen. Literatur und Bildende Kunst 1500-1800</hi>. Berlin. DOI:10.1007/978-3-476-05794-5.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kircher, Hartmut</hi> (1981): 
+                        <hi rend="italic">Dorfgeschichten aus dem Vormärz</hi>. Köln.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Kleymann, Rabea </hi>(2022): “Datendiffraktion. Von Mixed zu Entangled Methods in den Digital Humanities”, in: M. Burghardt / L. Dieckmann / T. Steyer / P. Trilcke / N. Walkowski / J. Weis, U. Wuttke (eds.): 
+                        <hi rend="italic">Fabrikation von Erkenntnis – Experimente in den Digital Humanities. Wolfenbüttel</hi> 2022 (=ZfdG, 5). DOI: 10.17175/sb005_008.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Latour, Bruno</hi> (2008): 
+                        <hi rend="italic">Wir sind nie modern gewesen. Versuch einer symmetrischen Anthropologie</hi>. Frankfurt / M.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Lucke, Alexa</hi> (2025, Februar 19): “Modul Repräsentation”, in: DHd AG Digital Humanities Theorie: 
+                        <hi rend="italic">Starterkit DH Theorie</hi>. Zenodo. DOI: 10.5281/zenodo.14894069. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Lucke, Alexa</hi> (2024): “Methodologische Potenziale und Herausforderungen einer transdisziplinären Zusammenarbeit – Eine Einleitung”, in: Lucke, Alexa / Johannes, Hermann (eds.): 
+                        <hi rend="italic">Literaturwissenschaft und Informatik. Transdisziplinäre Perspektiven, digitale Methoden und selbstlernende Algorithmen</hi>. Bielefeld: transcript 7–33.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Moretti, Franco</hi> (2000): “Conjectures on World Literature”, in: 
+                        <hi rend="italic">New Left Review</hi> 1. &lt;https://newleftreview.org/issues/ii1/articles/franco-moretti-conjectures-on-world-literature&gt; [17.02.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Otto, Louise</hi> (1849): “Die Lehnspflichtigen”, in: 
+                        <hi rend="italic">Frauen-Zeitung</hi>, hg. v. Theodor Haffner, redig. v. Louise Otto, 1. Jg., Nr. 26, 27, 28. &lt;https://digital.slub-dresden.de/werkansicht?tx_dlf%5Bid%5D=276210&amp;cHash=873aff441d93612bf33befdbb3035929&gt; [17.02.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Rawson, K. J.</hi> (2014): “Archive”, in: 
+                        <hi rend="italic">Transgender Studies Quarterly</hi> 1, 1: 24–26.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Risam, Roopika</hi> (2018): “Decolonizing The Digital Humanities In Theory And Practice”, in: 
+                        <hi rend="italic">The Routledge Companion to Media Studies and Digital Humanities</hi>. London: Routledge 78–86.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Schrattenthal, Karl</hi> (1894/95): “Frauen-Literatur, für der Frauen Kunst und Willen”, in: 
+                        <hi rend="italic">Schrattenthal’s Rundschau</hi> 1, 1:1 1. Oktober 1894. Ed. by Karl Schrattenthal. 1. Oktober 1894-1. Oktober 1895. &lt;https://www.digitale-sammlungen.de/de/view/bsb11520501?q=%28Louise+Otto+Frauenzeitung%29&amp;page=,1&gt; [17.02.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Stein, Daniel</hi> (2021): 
+                        <hi rend="italic">Authorizing Superhero Comics. On the Evolution of a Popular Serial Genre</hi>. Columbus: Ohio State University Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Thorat, D.</hi> (2015): “Postcolonial Studies and Digital Archiving”, paper presented at HASTAC Conference, East Lansing, MI, May 27–30.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Weitin, Thomas</hi> (2021): 
+                        <hi rend="italic">Digitale Literaturgeschichte. Eine Versuchsreihe mit sieben Experimenten</hi>. Berlin.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Werber, Niels / Stein, Daniel</hi> (2023): “Partizipation und Paratext. Die ‘Leserkontaktseite’ und das Perry Rhodan-Fan-Forum als serielle Peri- und Epitexte”, in: 
+                        <hi rend="italic">Zeitschrift für Literaturwissenschaft und Linguistik</hi> 53: 655–694.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

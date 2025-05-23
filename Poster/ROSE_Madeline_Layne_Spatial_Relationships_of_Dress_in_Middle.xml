@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ROSE_Madeline_Layne_Spatial_Relationships_of_Dress_in_Middle">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Spatial Relationships of Dress in Middle English Texts: Approaches to Visualisation </title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Rose</surname>
+                        <forename>Madeline Layne</forename>
+                    </persName>
+                    <affiliation>Trinity College Dublin, Ireland</affiliation>
+                    <email>rosema@tcd.ie</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-08T22:35:25.946589000</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>medieval literature</term>
+                    <term>digital mapping</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>manuscripts description</term>
+                    <term>representation</term>
+                    <term>and analysis</term>
+                    <term>network analysis and graphs theory and application</term>
+                    <term>user experience design and analysis</term>
+                    <term>Geography and geo-humanities</term>
+                    <term>Humanities computing</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head/>
+                <p>Mapping projects have gained popularity across a multitude of humanities disciplines, and certainly within the realm of literary studies (Engberg-Pedersen 2017). The many literary mapping projects rely on traditional close reading of the text for data extraction, with a focus on innately localisable features such as place names and topographical features. Mapping projects that employ digital tools to extract data typically use tools geared towards Named Entity Recognition (NER), and thus extract only instances with reference to proper place names in the text (Luchetta 2017). Within medieval literary studies, mapping projects have also primarily focused on extracting place names from texts. The Visualizing Medieval Places project, which identified and mapped place names that occurred across a corpus of medieval French texts (Wrisley 2017) and the Icelandic Outlaw Sagas Project, which mapped place names, geospatial data, and stylistic qualities of the text within the Icelandic Sagas, both focused on the mapping of place names within texts (Kinniburgh 2018).</p>
+                <p>However, terms which are not named entities or otherwise immediately localisable also represent the complex spatial and economic relationships underlying many texts. Specifically, this project looks to represent the spatial-economic relationships represented by dress and adornment objects in late medieval literary texts as represented by a corpus of Middle English texts in verse from the period 1250-1450 drawn from the Middle English Text Series. While dress and adornment terms are not as immediately localisable as place names or geographic features, the objects themselves exist in spatial relationships between the production location of the manuscript, and the location of production for the dress object (e.g. although ‘selk’ [silk] is mentioned in John Gower’s a section of Confessio Amantis, and it is possible it may have been produced in Greece, where the section is set, it would have been necessary to import silk to England, where Gower wrote the Confessio Amantis). Thus the project described herein seeks to develop a methodology for the representation of terms which are not named entities within medieval texts, that may be generalisable as to be applied to other medieval mapping projects.</p>
+                <p>Although maps and digital or data-driven projects are often viewed as neutral or abstract, maps in particular do not exist as simple conveyors of geospatial information, maps are “a specific form of the operationalization of political action” and “also an operationalization of the imagination, as Dünne argues in “Map Line Narratives.” As such, digital mapping projects ought to place special consideration on how spatial relationships are presented, particularly as modern conceptualisations of spatial relationships differ significantly from medieval ones, and how different forms of visual communication affect interpretation of project results. For example, the medieval mapping project “Mapping Lived Religion: the Medieval Cults of Saints in Sweden and Finland”, working with a variety of cultural heritage data including texts, augmented geospatial mappings with a temporal slider in order to enrich user understanding of the development of the cults of saints (Nilsson et al. 2023).</p>
+                <p>This project utilises Python toolkits GeoPandas and NetworkX to produce three different, digital interactive maps for consideration:</p>
+                <p>(1) heat map, representing the density of a location’s references;</p>
+                <p>(2) line map, tracing the narrative’s setting through the dress object’s creation and production; and</p>
+                <p>(3) network graph, abstracting geographic data from the viewer.</p>
+                <p>The overall aim of the project is to articulate a methodology for creation of digital maps for the unique challenges posed by projects on medieval literary studies, and to provide a framework for the critique of digital mapping projects throughout literary studies, by analysing the user value of different styles of digital mappings. Thus the project seeks to contribute to digital archives and cultural preservation through the creation of new tools for medievalist scholars, and to critical digital literacy through providing a framework for the critique of digital mapping projects.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Dünne, Jörg</hi> (2017): “Map Line Narratives.” in: 
+                        <hi rend="italic">Literature and Cartography: Theories, Histories, Genres</hi>, edited by Anders Engberg-Pedersen. Cambridge: MIT Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Engberg-Pedersen, Anders</hi> (2017): “Introduction.” in 
+                        <hi rend="italic">Literature and Cartography: Theories, Histories, Genres</hi>, edited by Anders Engberg-Pedersen. Cambridge: MIT Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Kinniburgh, Mary Catherine</hi> (2018): “Spatial Reading: Digital Literary Maps of the Icelandic Outlaw Sagas,” in: 
+                        <hi rend="italic">Digital Medievalist</hi> 11, 1.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Luchetta, Sara</hi> (2017): “Exploring the Literary Map: An Analytical Review of Online Literary Mapping Projects,” in 
+                        <hi rend="italic">Geography Compass</hi> 11, 1.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Nilsson, Sara Ellis / Zachrisson, Terese / Fröjmark, Anders / Liepe, Lena / Åhlfeldt, Johan / Petrulevich, Alexandra / Boeck, Simon Skovgaard</hi> (2023): “MAPPING SAINTS: CREATING A DIGITAL SPATIAL RESEARCH INFRASTRUCTURE TO STUDY MEDIEVAL LIVED RELIGION,” In: 
+                        <hi rend="italic">Digital Spatial Infrastructures and Worldviews in Pre-Modern Societies</hi>. Amsterdam: Amsterdam University Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Wrisley, David Joseph</hi> (2017): “Locating Medieval French, or Why We Collect and Visualize the Geographic Information of Texts,” in: 
+                        <hi rend="italic">Speculum</hi> 92, 1: S148-S150.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

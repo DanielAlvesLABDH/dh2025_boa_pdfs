@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KAPITAN_Katarzyna_Anna_Crossing_the_Bifrost__Towards_an_open">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Crossing the Bifrost: Towards an open access FAIR HTR model for Old Norse manuscripts.</title>
+                <author>
+                    <persName>
+                        <surname>Kapitan</surname>
+                        <forename>Katarzyna Anna</forename>
+                    </persName>
+                    <affiliation>ENC - PSL, France</affiliation>
+                    <email>k.kapitan@yahoo.co.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Vidal-Gorène</surname>
+                        <forename>Chahan</forename>
+                    </persName>
+                    <affiliation>ENC - PSL, France</affiliation>
+                    <email>chahan.vidal-gorene@chartes.psl.eu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-08T14:49:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Handwritten Text Recognition</term>
+                    <term>Old Norse</term>
+                    <term>Medieval Studies</term>
+                    <term>Manuscript Studies</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>data</term>
+                    <term>object</term>
+                    <term>and artefact preservation</term>
+                    <term>manuscripts description</term>
+                    <term>representation</term>
+                    <term>and analysis</term>
+                    <term>optical character recognition and handwriting recognition</term>
+                    <term>Book and print history</term>
+                    <term>History</term>
+                    <term>Humanities computing</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Aim</head>
+                <p style="text-align: left; ">This paper presents the initial results of a project devoted to creating the first-ever FAIR model for handwritten text recognition (HTR) of Old Norse-Icelandic manuscripts, accompanied by an open-access dataset of ground truths for manuscripts from the 13
+                    <hi rend="superscript">th</hi> and 14
+                    <hi rend="superscript">th</hi> centuries–the golden age of manuscript production in Iceland. Compared with other medieval languages written in Latin scripts, Old Norse-Icelandic does not benefit from the same amount of training data, which are crucial for developing strong HTR models. Therefore, we turn to an approach applied by scholars in other under-resourced fields, such as Arabic, to find sustainable solutions for the acquisition of texts. The goal of this paper is not only the presentation of another HTR model and its underlying dataset.<ref n="1" target="ftn1"/> By incrementally evaluating the accuracy of the model, we provide insights into the amount of data actually needed to produce usable transcriptions. We provide reflections on the accessibility and influence of technology on research in smaller, often under-resourced disciplines, as well as on the position of individual researchers who are based outside large DH centres benefiting from state-of-the-art infrastructure. We also position our experiments with HTR in the broader context of research questions concerning Icelandic palaeography and scribal culture. One of the important points demonstrated by our paper is that all training and testing were done with Kraken 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"6lOU0Hte","properties":{"formattedCitation":"(Kiessling 2019)","plainCitation":"(Kiessling 2019)","noteIndex":0},"citationItems":[{"id":2014,"uris":["http://zotero.org/users/2826034/items/M5Y5479G"],"itemData":{"id":2014,"type":"paper-conference","container-title":"Digital Humanities Book of Abstracts","DOI":"https://dev.clariah.nl/files/dh2019/boa/0673.html","event-place":"Utrecht","event-title":"Annual ADHO conference","publisher-place":"Utrecht","title":"Kraken – A Universal Text Recognizer for the Humanities","author":[{"family":"Kiessling","given":"B"}],"issued":{"date-parts":[["2019"]]},"citation-key":"kiessling2019a"}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(Kiessling 2019), run locally on a 2020 M1 MacBook Air (8 CPU, 16 GB). A comparable machine today can be purchased for around EUR 1.000, making it more accessible for many researchers than obtaining access to GPUs. 
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Background</head>
+                <p style="text-align: left; ">While medieval Iceland is by many exclusively associated with vikings, volcanoes, and glaciers, few know that it was also home to impressive cultural production including the composition of native literature and the production of countless manuscripts. The Old Norse-Icelandic literary corpus has hitherto received little attention from the HTR community. While there are over 900 Icelandic manuscripts produced between the twelfth and the sixteenth centuries, only a fraction of them has been used in scholarly editions and even fewer in digital ones. A significant portion of these manuscripts (at least 50%), however, has already been digitised, and thousands of high-quality digital images are freely available online. Hence, there is great and hitherto unexploited potential for leveraging computer-assisted methods to approach this material and make it more accessible to the scholarly community by producing auto-generated transcriptions. The applications for auto-generated transcriptions are countless and already play an important role in digital palaeographical and philological workflows in certain fields of medieval studies, e.g. Latin, German, and French, but are much less common in smaller fields. Captivated by the great promise of generic HTR models that they can be easily and quickly fine-tuned for new contexts without great computational effort, we decided to test the applicability of existing HTR models for the Icelandic context and the amount of data needed to fine-tune them. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Dataset and Method</head>
+                <p style="text-align: left; ">Starting with the Icelandic TranscriboQuest2024 dataset 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"hQUNXgyg","properties":{"formattedCitation":"(Kapitan et al. 2024)","plainCitation":"(Kapitan et al. 2024)","noteIndex":0},"citationItems":[{"id":2017,"uris":["http://zotero.org/users/2826034/items/YXK9Z36J"],"itemData":{"id":2017,"type":"dataset","DOI":"https://doi.org/10.5281/zenodo.13757377","title":"TranscriboQuest24 Icelandic [dataset]","author":[{"family":"Kapitan","given":"KA"},{"family":"Latham","given":"K"},{"family":"Pinche","given":"A"},{"family":"Verri","given":"G"},{"family":"Yavuz","given":"NK"}],"issued":{"date-parts":[["2024"]]},"citation-key":"kapitan2024"}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(Kapitan et al. 2024), we used eScriptorium for additional data acquisition 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"Kf3daNzZ","properties":{"formattedCitation":"(Stokes et al. 2021; Kiessling et al. 2019)","plainCitation":"(Stokes et al. 2021; Kiessling et al. 2019)","noteIndex":0},"citationItems":[{"id":2015,"uris":["http://zotero.org/users/2826034/items/8WALASEA"],"itemData":{"id":2015,"type":"chapter","container-title":"Classics@18: Ancient Manuscripts and Virtual Research Environments","title":"The eScriptorium VRE for Manuscript Cultures","URL":"https://classics-at.chs.harvard.edu/classics18-stokes-kiessling-stokl-ben-ezra-tissot-gargem/","author":[{"family":"Stokes","given":"P"},{"family":"Kiessling","given":"B"},{"family":"Stökl Ben Ezra","given":"D"},{"family":"Tissot","given":"R"},{"family":"Gargem","given":"H"}],"issued":{"date-parts":[["2021"]]},"citation-key":"stokes2021"}},{"id":2016,"uris":["http://zotero.org/users/2826034/items/34FLE8TP"],"itemData":{"id":2016,"type":"paper-conference","container-title":"2019 International Conference on Document Analysis and Recognition Workshops (ICDARW)","DOI":"http://doi.org/10.1109/ICDARW.2019.10032","title":"eScriptorium: An Open Source Platform for Historical Document Analysis","author":[{"family":"Kiessling","given":"B"},{"family":"Tissot","given":"R"},{"family":"Stökl Ben Ezra","given":"D"},{"family":"Stokes","given":"P"}],"issued":{"date-parts":[["2019"]]},"citation-key":"kiessling2019"}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(Stokes et al. 2021; Kiessling et al. 2019), creating the corpus summarised in Table 1. The transcriptions of all manuscripts, with the exception of AM 334 fol., the transcription of which is based on the digital facsimiles prepared with the aid of the printed edition 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"gz9lxKB2","properties":{"formattedCitation":"({\\i{}Gr\\uc0\\u225{}g\\uc0\\u225{}s Efter Det Arnamagn\\uc0\\u230{}anske Haandskrift Nr. 334 Fol., Sta\\uc0\\u240{}arh\\uc0\\u243{}lsb\\uc0\\u243{}k} 1879)","plainCitation":"(Grágás Efter Det Arnamagnæanske Haandskrift Nr. 334 Fol., Staðarhólsbók 1879)","noteIndex":0},"citationItems":[{"id":2023,"uris":["http://zotero.org/users/2826034/items/SX9URFF3"],"itemData":{"id":2023,"type":"book","event-place":"Copenhagen","publisher-place":"Copenhagen","title":"Grágás efter det Arnamagnæanske Haandskrift Nr. 334 fol., Staðarhólsbók","issued":{"date-parts":[["1879"]]},"citation-key":"1879"}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(
+                    <hi rend="italic">Grágás</hi> 1879), are based on the MENOTA corpus 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"Iy9HMlYR","properties":{"formattedCitation":"(Odd Einar Haugen et al. 2019)","plainCitation":"(Odd Einar Haugen et al. 2019)","noteIndex":0},"citationItems":[{"id":2021,"uris":["http://zotero.org/users/2826034/items/RL9TJMPQ"],"itemData":{"id":2021,"type":"standard","title":"Handbook 3.0: Guidelines for the electronic encoding of Medieval Nordic primary sources","URL":"https://www.menota.org/HB3_index.xml","author":[{"literal":"Odd Einar Haugen"},{"literal":"Ivar Berg"},{"literal":"Marco Bianchi"},{"literal":"Haraldur Bernharðsson"}],"issued":{"date-parts":[["2019"]]},"citation-key":"oddeinarhaugen2019"}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(Haugen et al. 2019). The layout for most of the manuscripts was corrected by Ariane Pinche in eScriptorium, and the others were done by Chahan Vidal-Gorène in Calfa Vision 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"yhbHLd9l","properties":{"formattedCitation":"(Vidal-Gor\\uc0\\u232{}ne et al. 2021)","plainCitation":"(Vidal-Gorène et al. 2021)","noteIndex":0},"citationItems":[{"id":2022,"uris":["http://zotero.org/users/2826034/items/EZD5UX4R"],"itemData":{"id":2022,"type":"paper-conference","container-title":"Document Analysis and Recognition – ICDAR","DOI":"hal-03971691","title":"A Modular and Automated Annotation Platform for Handwritings: Evaluation on Under-Resourced Languages","author":[{"family":"Vidal-Gorène","given":"C"},{"family":"Dupin","given":"Boris"},{"family":"Decours-Perez","given":"Aliénor"},{"family":"Riccioli","given":"Thomas"}],"issued":{"date-parts":[["2021"]]},"citation-key":"vidal-gorene2021"}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(Vidal-Gorène et al. 2021). 
+                </p>
+                <p style="text-align: left; ">For the model, we took our point of departure in the recent efforts to create a generic model for Latin medieval manuscripts. We used the recently released CATMuS-medieval model 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"kXEjKiah","properties":{"formattedCitation":"(Pinche 2023; Cl\\uc0\\u233{}rice et al. 2024; Pinche et al. 2024)","plainCitation":"(Pinche 2023; Clérice et al. 2024; Pinche et al. 2024)","noteIndex":0},"citationItems":[{"id":2018,"uris":["http://zotero.org/users/2826034/items/NBT6KJT2"],"itemData":{"id":2018,"type":"article-journal","container-title":"Journal of Data Mining and Digital Humanities","DOI":"hal-03837519v4","title":"Generic HTR Models for Medieval Manuscripts. The CREMMALab Project","author":[{"family":"Pinche","given":"Ariane"}],"issued":{"date-parts":[["2023"]]},"citation-key":"pinche2023"}},{"id":2019,"uris":["http://zotero.org/users/2826034/items/5RIAG7II"],"itemData":{"id":2019,"type":"paper-conference","DOI":"hal-04453952","event-title":"International Conference on Document Analysis and Recognition (ICDAR)","title":"CATMuS Medieval: A multilingual large-scale cross-century dataset in Latin script for handwritten text recognition and beyond","author":[{"family":"Clérice","given":"Thibault"},{"family":"Pinche","given":"Ariane"},{"family":"Vlachou-Efstathiou","given":"Malamatenia"},{"family":"Chagué","given":"Alix"},{"family":"Camps","given":"Jean-Baptiste"},{"family":"Gille-Levenson","given":"Matthias"},{"family":"Brisville-Fertin","given":"Olivier"},{"family":"Fischer","given":"Franz"}],"issued":{"date-parts":[["2024"]]},"citation-key":"clerice2024"},"label":"page"},{"id":2020,"uris":["http://zotero.org/users/2826034/items/UWGYUSUL"],"itemData":{"id":2020,"type":"dataset","DOI":"https://doi.org/10.5281/zenodo.12743230","title":"CATMuS Medieval (1.5.0)","author":[{"family":"Pinche","given":"Ariane"},{"family":"Clérice","given":"Thibault"},{"family":"Chagué","given":"A"},{"family":"Camps","given":"J-B"},{"family":"Vlachou-Efstathiou","given":"M"}],"issued":{"date-parts":[["2024"]]},"citation-key":"pinche2024"}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(Pinche 2023; Clérice et al. 2024; Pinche et al. 2024). Following the example of Lucas 
+                    <hi rend="italic">et al.</hi>
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"XZ30YilG","properties":{"formattedCitation":"(2022)","plainCitation":"(2022)","noteIndex":0},"citationItems":[{"id":2013,"uris":["http://zotero.org/users/2826034/items/6T5A98NZ"],"itemData":{"id":2013,"type":"article-journal","DOI":"hal-03874725","title":"New Results for the Text Recognition of Arabic Maghribī Manuscripts - Managing an Under-resourced Script (pre-print)","author":[{"family":"Lucas","given":"N"},{"family":"Salah","given":"C"},{"family":"Vidal-Gorène","given":"C"}],"issued":{"date-parts":[["2022"]]},"citation-key":"lucas2022"},"label":"page","suppress-author":true}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(2022), we fine-tuned it incrementally using two manuscripts as training data. We tested its performance on four manuscripts, two in-domain manuscripts (but with different page ranges) and two out-of-domain manuscripts.
+                </p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: center;" rend="DH-Default">Shelfmark</cell>
+                        <cell style="text-align: center;" rend="DH-Default">Page range and lines</cell>
+                        <cell style="text-align: center;" rend="DH-Default">Date</cell>
+                        <cell style="text-align: center;" rend="DH-Default">Script</cell>
+                        <cell style="text-align: center;" rend="DH-Default">Layout</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: center;" rend="DH-Default">AM 242 fol.</cell>
+                        <cell style="text-align: center;" rend="DH-Default">
+                            <p style="text-align: left; text-align: center;">4v–6r (training), 127 lines</p>
+                            <p style="text-align: left; text-align: center;">8r-8v (testing), 64 lines</p>
+                        </cell>
+                        <cell style="text-align: center;" rend="DH-Default">1340-1370</cell>
+                        <cell style="text-align: center;" rend="DH-Default">
+                            <hi style="font-size:10pt">Gothic Textualis 
+                                <lb/>(influence from Cursive)
+                            </hi>
+                        </cell>
+                        <cell style="text-align: center;" rend="DH-Default">one column</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: center;" rend="DH-Default">AM 334 fol.</cell>
+                        <cell style="text-align: center;" rend="DH-Default">
+                            <hi style="font-size:10pt">1v–3r (training), 296 lines
+                                <lb/>4r–4v (testing), 148 lines
+                            </hi>
+                        </cell>
+                        <cell style="text-align: center;" rend="DH-Default">1260-1281</cell>
+                        <cell style="text-align: center;" rend="DH-Default">
+                            <hi style="font-size:10pt">Gothic Textualis</hi>
+                        </cell>
+                        <cell style="text-align: center;" rend="DH-Default">two columns</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: center;" rend="DH-Default">AM 132 fol.</cell>
+                        <cell style="text-align: center;" rend="DH-Default">130r-130v (testing), 167 lines</cell>
+                        <cell style="text-align: center;" rend="DH-Default">1330-1370</cell>
+                        <cell style="text-align: center;" rend="DH-Default">
+                            <hi style="font-size:10pt">Gothic Textualis 
+                                <lb/>(influence from Cursive)
+                            </hi>
+                        </cell>
+                        <cell style="text-align: center;" rend="DH-Default">one column</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: center;" rend="DH-Default">AM 519 a 4to</cell>
+                        <cell style="text-align: center;" rend="DH-Default">2v-3r (testing) 70 lines</cell>
+                        <cell style="text-align: center;" rend="DH-Default">1270-1290</cell>
+                        <cell style="text-align: center;" rend="DH-Default">
+                            <hi style="font-size:10pt">Gothic Textualis</hi>
+                        </cell>
+                        <cell style="text-align: center;" rend="DH-Default">two columns</cell>
+                    </row>
+                </table>
+                <p style="text-align: left; text-align: center;">
+                    <hi rend="bold" style="font-size:10pt" xml:space="preserve">Table </hi>
+                    <hi rend="bold" style="font-size:10pt">1</hi>
+                    <hi rend="bold" style="font-size:10pt">.</hi>
+                    <hi style="font-size:10pt" xml:space="preserve"> An overview of the corpus.</hi>
+                </p>
+                <figure>
+                    <graphic n="1001" width="10.471508333333333cm" height="3.365136111111111cm" url="/tmp/tmpctcydl59/Pictures/d8464f79d68062a6160f98a40815a508.png" rend="inline"/>
+                    <head>
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Figure </hi>
+                        <hi rend="bold" style="font-size:10pt">1</hi>
+                        <hi rend="bold" style="font-size:10pt">.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> AM 519 a 4to, f. 2v, see full resolution images here: </hi>
+                        <ref target="https://handrit.is/manuscript/view/da/AM04-0519-a/0?iabr=on#mode/2up">
+                            <hi style="font-size:10pt">https://handrit.is/manuscript/view/da/AM04-0519-a/0?iabr=on#mode/2up</hi>
+                        </ref>
+                    </head>
+                </figure>
+                <figure>
+                    <head>
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Figure </hi>
+                        <hi rend="bold" style="font-size:10pt">1</hi>
+                        <hi rend="bold" style="font-size:10pt">.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> AM 519 a 4to, f. 2v, see full resolution images here: </hi>
+                        <ref target="https://handrit.is/manuscript/view/da/AM04-0519-a/0?iabr=on#mode/2up">
+                            <hi style="font-size:10pt">https://handrit.is/manuscript/view/da/AM04-0519-a/0?iabr=on#mode/2up</hi>
+                        </ref>
+                    </head>
+                    <graphic n="1002" width="10.513133333333334cm" height="2.9204944444444445cm" url="/tmp/tmpctcydl59/Pictures/d8464f79d68062a6160f98a40815a508.png" rend="inline"/>
+                    <head>
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Figure </hi>
+                        <hi rend="bold" style="font-size:10pt">2</hi>
+                        <hi rend="bold" style="font-size:10pt">.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> AM 242 fol., f. 8r, see full resolution images here: </hi>
+                        <ref target="https://handrit.is/manuscript/view/da/AM02-0242/0?iabr=on#mode/2up">
+                            <hi style="font-size:10pt">https://handrit.is/manuscript/view/da/AM02-0242/0?iabr=on#mode/2up</hi>
+                        </ref>
+                    </head>
+                </figure>
+                <figure>
+                    <head>
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Figure </hi>
+                        <hi rend="bold" style="font-size:10pt">2</hi>
+                        <hi rend="bold" style="font-size:10pt">.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> AM 242 fol., f. 8r, see full resolution images here: </hi>
+                        <ref target="https://handrit.is/manuscript/view/da/AM02-0242/0?iabr=on#mode/2up">
+                            <hi style="font-size:10pt">https://handrit.is/manuscript/view/da/AM02-0242/0?iabr=on#mode/2up</hi>
+                        </ref>
+                    </head>
+                    <graphic n="1003" width="10.614133333333333cm" height="2.863438888888889cm" url="/tmp/tmpctcydl59/Pictures/d8464f79d68062a6160f98a40815a508.png" rend="inline"/>
+                    <head>
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Figure </hi>
+                        <hi rend="bold" style="font-size:10pt">3</hi>
+                        <hi rend="bold" style="font-size:10pt">.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> AM 334 fol., f. 4r, see full resolution images here:  </hi>
+                        <ref target="https://handrit.is/manuscript/view/is/AM02-0334/0?iabr=on#mode/2up">
+                            <hi style="font-size:10pt">https://handrit.is/manuscript/view/is/AM02-0334/0?iabr=on#mode/2up</hi>
+                        </ref>
+                    </head>
+                </figure>
+                <figure>
+                    <head>
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Figure </hi>
+                        <hi rend="bold" style="font-size:10pt">3</hi>
+                        <hi rend="bold" style="font-size:10pt">.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> AM 334 fol., f. 4r, see full resolution images here:  </hi>
+                        <ref target="https://handrit.is/manuscript/view/is/AM02-0334/0?iabr=on#mode/2up">
+                            <hi style="font-size:10pt">https://handrit.is/manuscript/view/is/AM02-0334/0?iabr=on#mode/2up</hi>
+                        </ref>
+                    </head>
+                    <graphic n="1004" width="10.805252777777778cm" height="3.1508305555555554cm" url="/tmp/tmpctcydl59/Pictures/d8464f79d68062a6160f98a40815a508.png" rend="inline"/>
+                    <head>
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Figure </hi>
+                        <hi rend="bold" style="font-size:10pt">4</hi>
+                        <hi rend="bold" style="font-size:10pt">.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> AM 132 fol., f. 130r, see full resolution images here:   </hi>
+                        <ref target="https://handrit.is/manuscript/view/is/AM02-0132/0?iabr=on#mode/2up">
+                            <hi style="font-size:10pt">https://handrit.is/manuscript/view/is/AM02-0132/0?iabr=on#mode/2up</hi>
+                        </ref>
+                    </head>
+                </figure>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results and Discussion</head>
+                <p style="text-align: left; ">The fine-tuning process of the CATMuS-medieval model demonstrates significant improvement in both character and word accuracy across in-domain and out-of-domain datasets. As presented in Table 2 and Figure 5, just eight pages of training data improved the model’s performance by 20 percent points. Initially, at Step 0 (without fine-tuning), CATMuS-medieval exhibited character accuracy around 65.8% and word accuracy below 20%, with frequent errors in spacing, punctuation, similar letters (‘i’ vs. ‘u’), and combining marks. Step 1 (two images in training) brought substantial gains, especially in-domain, with character accuracy rising to 83.1% and word accuracy surpassing 50%, while errors in spacing and punctuation decreased noticeably. Out-of-domain performance improved more slowly but steadily. By Step 2 (two more images), error rates for combining marks and rare characters decreased, with character accuracy reaching 85.2% in-domain and 72.8% out-of-domain. Word accuracy continued to rise, reaching 54.7% in-domain. Persistent issues included confusion between similar letters and combining marks. Step 3 marked further reduction in frequent errors, such as mistaking ‘m’ for ‘n’, with character accuracy climbing to 86.2% in-domain and 73.2% out-of-domain. Finally, Step 4 achieved the best results, with in-domain character accuracy at 88.0% and word accuracy at 63.0%. Out-of-domain improvements were slower but consistent. </p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: center;" rend="DH-Default">Iteration</cell>
+                        <cell style="text-align: center;" rend="DH-Default">Number of pages used</cell>
+                        <cell style="text-align: center;" rend="DH-Default">Val Accuracy (Training)</cell>
+                        <cell style="text-align: center;" rend="DH-Default">In-domain character accuracy (Testing)</cell>
+                        <cell style="text-align: center;" rend="DH-Default">Out-of-domain character accuracy (Testing)</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: center;" rend="DH-Default">Step 0</cell>
+                        <cell style="text-align: center;" rend="DH-Default">
+                            <hi style="font-size:10pt">0 
+                                <lb/>(CATMuS)
+                            </hi>
+                        </cell>
+                        <cell style="text-align: center;" rend="DH-Default">-</cell>
+                        <cell style="text-align: center;" rend="DH-Default">0.658</cell>
+                        <cell style="text-align: center;" rend="DH-Default">0.689</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: center;" rend="DH-Default">Step 1</cell>
+                        <cell style="text-align: center;" rend="DH-Default">
+                            <hi style="font-size:10pt">2 
+                                <lb/>(1 per MS)
+                            </hi>
+                        </cell>
+                        <cell style="text-align: center;" rend="DH-Default">0.898</cell>
+                        <cell style="text-align: center;" rend="DH-Default">0.83</cell>
+                        <cell style="text-align: center;" rend="DH-Default">0.75</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: center;" rend="DH-Default">Step 2</cell>
+                        <cell style="text-align: center;" rend="DH-Default">
+                            <hi style="font-size:10pt">4 
+                                <lb/>(2 per MS)
+                            </hi>
+                        </cell>
+                        <cell style="text-align: center;" rend="DH-Default">0.885</cell>
+                        <cell style="text-align: center;" rend="DH-Default">0.852</cell>
+                        <cell style="text-align: center;" rend="DH-Default">0.749</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: center;" rend="DH-Default">Step 3</cell>
+                        <cell style="text-align: center;" rend="DH-Default">
+                            <hi style="font-size:10pt">6 
+                                <lb/>(3 per MS)
+                            </hi>
+                        </cell>
+                        <cell style="text-align: center;" rend="DH-Default">0.92</cell>
+                        <cell style="text-align: center;" rend="DH-Default">0.86</cell>
+                        <cell style="text-align: center;" rend="DH-Default">0.752</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: center;" rend="DH-Default">Step 4</cell>
+                        <cell style="text-align: center;" rend="DH-Default">
+                            <hi style="font-size:10pt">8 
+                                <lb/>(4 per MS)
+                            </hi>
+                        </cell>
+                        <cell style="text-align: center;" rend="DH-Default">0.913</cell>
+                        <cell style="text-align: center;" rend="DH-Default">0.88</cell>
+                        <cell style="text-align: center;" rend="DH-Default">0.782</cell>
+                    </row>
+                </table>
+                <p style="text-align: left; text-align: center;">
+                    <hi rend="bold" style="font-size:10pt" xml:space="preserve">Table </hi>
+                    <hi rend="bold" style="font-size:10pt">2</hi>
+                    <hi rend="bold" style="font-size:10pt">.</hi>
+                    <hi style="font-size:10pt" xml:space="preserve"> Iterative training and testing.</hi>
+                </p>
+                <figure>
+                    <graphic n="1005" width="11.866877777777777cm" height="7.874cm" url="/tmp/tmpctcydl59/Pictures/d8464f79d68062a6160f98a40815a508.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; text-align: center;">
+                    <hi rend="bold" style="font-size:10pt">Figure 5.</hi>
+                    <hi style="font-size:10pt" xml:space="preserve"> Evolution of accuracy (character and word accuracy) across steps. Step 0 represents the testing of CATMuS-medieval without fine-tuning.</hi>
+                </p>
+                <figure>
+                    <graphic n="1006" width="13.838552777777778cm" height="12.820277777777777cm" url="/tmp/tmpctcydl59/Pictures/d8464f79d68062a6160f98a40815a508.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; text-align: center;">
+                    <hi rend="bold" style="font-size:10pt">Figure 6.</hi>
+                    <hi style="font-size:10pt" xml:space="preserve"> Heatmaps illustrating the evolution of the most frequent error types made by the model across steps, both in-domain and out-of-domain. Each row represents a specific confusion type with colour intensity indicating error rate (top) and error count (bottom). Brighter colours denote higher error frequencies.</hi>
+                </p>
+                <p style="text-align: left; ">Overall, as illustrated by the heatmaps in Figure 6, fine-tuning with incremental data led to effective error reduction in both in-domain and out-of-domain settings, with in-domain data benefiting more significantly. The improvement in the “Letter → Letter” error category (replacing one standard alphanumeric character with another) is the most pronounced, with absolute error counts decreasing across stages. Simultaneously, error rates also decrease substantially for punctuation, especially in the “Punctuation → Punctuation” and “Punctuation → Special” categories. Improvements across other categories, particularly those involving diacritics are less clear, suggesting that fine-tuning with a small amount of data primarily benefits standard character recognition rather than more complex or less frequent tokens.</p>
+                <p style="text-align: left; ">Finally, as visually oriented humanists, we turned back to eScriptorium for a more visual representation of the performance. We managed to get some good lines, which were almost completely correct (Figure 7), but also some awful lines (Figure 8). </p>
+                <figure>
+                    <graphic n="1007" width="13.629675cm" height="5.241372222222222cm" url="/tmp/tmpctcydl59/Pictures/d8464f79d68062a6160f98a40815a508.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; text-align: center;">
+                    <hi rend="bold" style="font-size:10pt">Figure 7.</hi>
+                    <hi style="font-size:10pt" xml:space="preserve"> A success story: AM 519 a 4to, 2v:23. A screenshot showing the comparison of the manual transcription with the text predictions by CATMuS and our model in eScriptorium.</hi>
+                </p>
+                <figure>
+                    <graphic n="1008" width="13.713258333333334cm" height="6.311194444444444cm" url="/tmp/tmpctcydl59/Pictures/d8464f79d68062a6160f98a40815a508.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; text-align: center;">
+                    <hi rend="bold" style="font-size:10pt">Figure 8.</hi>
+                    <hi style="font-size:10pt" xml:space="preserve"> Not-so-much of a success story, AM 519 a 4to, 2v:7. A screenshot showing the comparison of the manual transcription with the text predictions by CATMuS and our model in eScriptorium.</hi>
+                </p>
+                <p style="text-align: left; ">The types of errors observed allow us to revise the transcription guidelines for the next iteration of our experiments. Originally, prioritising the characteristics of Old Norse-Icelandic manuscripts, we decided to add multiple special characters to the CATMuS character set. Among them were those representing the phonetic system of Old Norse-Icelandic, such as the vowels introduced by the First Grammatical Treatise ‘ǫ’, ‘ę’, ‘ø’, and the fricatives ‘þ’ and ‘ð’ 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"yDQXfu66","properties":{"formattedCitation":"(Gu\\uc0\\u240{}var\\uc0\\u240{}ur M\\uc0\\u225{}r Gunnlaugsson 2008; Stef\\uc0\\u225{}n Karlsson 2002)","plainCitation":"(Guðvarður Már Gunnlaugsson 2008; Stefán Karlsson 2002)","noteIndex":0},"citationItems":[{"id":330,"uris":["http://zotero.org/users/2826034/items/MQSP6395"],"itemData":{"id":330,"type":"chapter","collection-number":"5","collection-title":"Veröffentlichungen der Kommission für Schrift- und Buchwesen des Mittelalters","container-title":"Régionalisme et Internationalisme – Problémes de Paléographie et de Codicologie du Moyen Age. Actes du XVe Colloque du Comité International de Paléographie Latine (13-17 September 2005)","event-place":"Wien","language":"eng","note":"bibtex: gudvardurmargunnlaugsson2008","page":"87-97","publisher":"Verlag der Österreichischen Akademie der Wissenschaften","publisher-place":"Wien","title":"The origin and development of Icelandic script","author":[{"literal":"Guðvarður Már Gunnlaugsson"}],"issued":{"date-parts":[["2008"]]},"citation-key":"gudvardurmargunnlaugsson2008"}},{"id":1542,"uris":["http://zotero.org/users/2826034/items/FZ2L8WUS"],"itemData":{"id":1542,"type":"chapter","container-title":"The Nordic Languages: An International Handbook of the History of the North Germanic Languages","event-place":"Berlin","page":"832-840","publisher":"De Gruyter","publisher-place":"Berlin","title":"The development of Latin script II: in Iceland","volume":"1","author":[{"literal":"Stefán Karlsson"}],"editor":[{"family":"Bandle","given":"Oskar"},{"family":"Braunmüller","given":"Kurt"},{"family":"Jahr","given":"Ernst Håkon"},{"family":"Karker","given":""},{"family":"Naumann","given":"Hans-Peter"},{"family":"Teleman","given":"Ulf"}],"issued":{"date-parts":[["2002"]]},"citation-key":"stefankarlsson2002a"}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(Guðvarður Már Gunnlaugsson 2008; Stefán Karlsson 2002). We also included some characters which appear in continental manuscripts but are ignored in CATMuS. For example, ‘r-rotunda’, which does not occur in the earliest Icelandic manuscripts but becomes increasingly common from the 13
+                    <hi rend="superscript">th</hi> century onwards. Depending on which letters it follows, it gives us clues about chronology and may serve as evidence for the u-insertion, which appears around 1300 and becomes common by the late 14
+                    <hi rend="superscript">th</hi> century. At the same time, to minimise the number of classes, we were not equally inclusive for all characters, e.g., ‘d’ and ‘uncial-d’, and this decision seems to confuse the model. When the manuscript features an ‘uncial-d’ for {d}, our model transcribes it as ‘ð’ (see Figure 8). This prompts further consideration of whether such characters should be reintroduced into the training data. 
+                </p>
+                <p style="text-align: left; ">Therefore, these experiments allowed us to refine the principles and objectives for a larger-scale project whose primary goal is to expand the training dataset by producing transcriptions of new manuscripts. This will allow us to train new models in different configurations, test their performance, and assess the impact of an increased number of classes. Furthermore, it will facilitate discussions about the trade-offs between data modelling and the ability to address specific palaeographic questions regarding the chronological distribution of ‘r-rotunda’, ‘insular-f’, ‘uncial-d’, and the various shapes of the Tironian nota.</p>
+                <p style="text-align: left; ">At the current stage of the project, our study demonstrates that even four pages per manuscript are sufficient for fine-tuning the CATMuS-medieval model, significantly improving its performance. Our results are promising, showcasing that HTR technology can be successfully used in Old Norse-Icelandic studies. Moreover, our case demonstrates that fine-tuning existing models with Kraken can be done easily and locally on an affordable machine, without requiring GPU access, or a subscription to external infrastructure, thus highlighting the accessibility of HTR technology today. We are finally able to offer a quick, open-access solution for scholars interested in incorporating HTR models into their research workflows, even if they are not directly involved in HTR development.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                         After our paper was accepted for the conference, we published the model and its underlying dataset on Zenodo (Kapitan and Vidal-Gorène 2025a, 2025b). Regardless of the publication date, it still represents the state of the project as of December 2024.
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Clérice, Thibault et al</hi>. (2024): “CATMuS Medieval: A Multilingual Large-Scale Cross-Century Dataset in Latin Script for Handwritten Text Recognition and Beyond”, in: 
+                        <hi rend="italic">International Conference on Document Analysis and Recognition (ICDAR)</hi>: 174-194. DOI: 
+                        <ref target="https://dl.acm.org/doi/10.1007/978-3-031-70543-4_11">10.1007/978-3-031-70543-4_11</ref>. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="italic bold">Grágás</hi>
+                        <hi rend="italic">efter Det Arnamagnæanske Haandskrift Nr. 334 Fol., Staðarhólsbók</hi> (1879): Edited by [Vilhjálmur Finsen]. Copenhagen: Gylendal.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Guðvarður Már Gunnlaugsson</hi> (2008): “The Origin and Development of Icelandic Script”, in: 
+                        <hi rend="italic">Régionalisme et internationalisme – problèmes de paléographie et de codicologie du Moyen Âge</hi>. Wien: Verlag der Österreichischen Akademie der Wissenschaften 87–97.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kapitan, Katarzyna Anna</hi> et al. (2024): “TranscriboQuest24 Icelandic [Dataset]”. 
+                        <hi style="font-family:Helvetica;font-size:10.5pt">Zenodo.</hi>
+                        <hi rend="apple-converted-space"> </hi>DOI: 
+                        <ref target="https://doi.org/10.5281/zenodo.13757377">10.5281/zenodo.13757377</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kapitan, Katarzyna Anna / Vidal-Gorène, Chahan</hi> (2025a): “Bifrost: A Handwritten Text Recognition Model for Old Norse (0.1)”. Zenodo. DOI: 
+                        <ref target="https://doi.org/10.5281/zenodo.15366732">10.5281/zenodo.15366732</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kapitan, Katarzyna Anna / Vidal-Gorène, Chahan</hi> (2025b): 
+                        <hi style="font-family:Helvetica;font-size:10.5pt">“</hi>Crossing the Bifrost: Towards an open access FAIR HTR model for Old Norse manuscripts [Data set]”. Zenodo. DOI: 
+                        <ref target="https://doi.org/10.5281/zenodo.15366896">10.5281/zenodo.15366896</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kiessling, Benjamin</hi> (2019): “Kraken – A Universal Text Recognizer for the Humanities”, in: 
+                        <hi rend="italic">Digital Humanities Book of Abstracts</hi>. Utrecht &lt;
+                        <ref target="https://dev.clariah.nl/files/dh2019/boa/0673.html">https://dev.clariah.nl/files/dh2019/boa/0673.html</ref>&gt; (last accessed 7/12/2024).
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Kiessling, Benjamin et al. </hi>(2019): “eScriptorium: An Open Source Platform for Historical Document Analysis,” in: 
+                        <hi rend="italic">International Conference on Document Analysis and Recognition Workshops (ICDARW)</hi>: 19. DOI: 
+                        <ref target="https://doi.org/10.1109/ICDARW.2019.10032">10.1109/ICDARW.2019.10032</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Lucas, Noëmie / Salah, Clément / Vidal-Gorène, Chahan</hi> (2022): “New Results for the Text Recognition of Arabic Maghribī Manuscripts - Managing an Under-Resourced Script (Pre-Print) &lt;
+                        <ref target="https://arxiv.org/pdf/2211.16147">https://arxiv.org/pdf/2211.16147</ref>&gt; (last accessed 7/12/2024).
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Haugen, Odd Einar</hi> et al. (2019): “Handbook 3.0: Guidelines for the Electronic Encoding of Medieval Nordic Primary Sources.” &lt;
+                        <ref target="https://www.menota.org/HB3_index.xml">https://www.menota.org/HB3_index.xml</ref>&gt; (last accessed 7/12/2024).
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Pinche, Ariane</hi> (2023): “Generic HTR Models for Medieval Manuscripts. The CREMMALab Project”, in: 
+                        <hi rend="italic">Journal of Data Mining and Digital Humanities</hi>. DOI: 
+                        <ref target="https://doi.org/10.46298/jdmdh.10252">10.46298/jdmdh.10252</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Pinche, Ariane et al.</hi> (2024): “CATMuS Medieval (1.5.0) [Model]”. DOI: 
+                        <ref target="https://doi.org/10.5281/zenodo.12743230">10.5281/zenodo.12743230</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Stefán Karlsson</hi> (2002): “The Development of Latin Script II: In Iceland”, in: Bandle, Oskar et al. (eds.): 
+                        <hi rend="italic">The Nordic Languages: An International Handbook of the History of the North Germanic Languages</hi>. Berlin: De Gruyter I:832–840.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Stokes, Peter et al.</hi> (2021): “The eScriptorium VRE for Manuscript Cultures”, in: 
+                        <hi rend="italic">Classics@18: Ancient Manuscripts and Virtual Research Environments</hi> &lt;
+                        <ref target="https://classics-at.chs.harvard.edu/classics18-stokes-kiessling-stokl-ben-ezra-tissot-gargem/">https://classics-at.chs.harvard.edu/classics18-stokes-kiessling-stokl-ben-ezra-tissot-gargem/</ref>&gt; (last accessed 7/12/2024).
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Vidal-Gorène, Chahan et al.</hi> (2021): “A Modular and Automated Annotation Platform for Handwritings: Evaluation on Under-Resourced Languages”, in: 
+                        <hi rend="italic">Document Analysis and Recognition – ICDAR 2021, Proceedings, Part III</hi>: 507–522. DOI: 
+                        <ref target="https://doi.org/10.1007/978-3-030-86334-0_33">10.1007/978-3-030-86334-0_33</ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

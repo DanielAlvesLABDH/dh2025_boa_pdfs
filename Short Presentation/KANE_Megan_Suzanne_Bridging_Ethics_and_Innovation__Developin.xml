@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KANE_Megan_Suzanne_Bridging_Ethics_and_Innovation__Developin">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Bridging Ethics and Innovation: Developing Tools for Responsible AI Use in Writing Instruction</title>
+                <author>
+                    <persName>
+                        <surname>Kane</surname>
+                        <forename>Megan Suzanne</forename>
+                    </persName>
+                    <affiliation>Seton Hall University, United States of America</affiliation>
+                    <email>kanemega@shu.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T12:53:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>artificial intelligence</term>
+                    <term>composition pedagogy</term>
+                    <term>citation</term>
+                    <term>ChatGPT</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>natural language processing</term>
+                    <term>rhetorical analysis</term>
+                    <term>Linguistics</term>
+                    <term>Literacy</term>
+                    <term>composition</term>
+                    <term>and creative writing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>The integration of artificial intelligence (AI) tools like ChatGPT into writing processes across educational and professional settings has sparked widespread debate. These technologies offer new possibilities for generating and revising text but also challenge long-held principles of authorship, originality, and ethical engagement with sources. Scholars have raised concerns about the erosion of intellectual ownership, as AI-driven writing risks replacing hands-on engagement with automated outputs (Lieberman 2024). Others point to the ways AI blurs the boundaries between genuine and assisted authorship, calling for a reevaluation of what constitutes academic integrity and ethical use in writing (Anson 2022). These issues extend to any context where writing is a critical mode of communication and intellectual inquiry.</p>
+            <p>This tension between AI's potential benefits and its challenges is particularly evident in educational settings, where students eagerly embrace these tools while educators struggle to adapt their teaching practices. The technological landscape further complicates this dynamic, as existing plagiarism detection tools struggle to keep pace with advancements in AI text generation, often falling short of reliably identifying content produced by tools like GPT-4 (Khalil / Er 2023; Walters 2023). While qualitative methods for identifying AI-generated text have emerged as a promising complement to detection software, they demand more time, expertise, and nuanced evaluation (Garib / Coffelt 2024). Moreover, educators must grapple with the task of fostering students' ethical use of AI while also leveraging these tools' potential to enhance creativity and rhetorical awareness (Zimotti et al. 2024).</p>
+            <p>As a writing professor at a four-year university in the northeastern United States, I have faced these dilemmas in my own classrooms and firmly believe that the rise of AI in writing presents both an opportunity and a challenge. On the one hand, AI can foster creativity and help students improve their drafts by providing suggestions, refining structure, and identifying areas for revision. On the other hand, AI can also lead to over-reliance on automated outputs, eroding the critical engagement that composition courses aim to cultivate. To address these concerns, I have developed a platform designed to help instructors integrate AI responsibly into their teaching. The platform offers a structured framework that empowers educators to define specific, assignment-based guidelines for AI use. For example, instructors can allow students to use AI for brainstorming, generating ideas, or refining drafts, and they can also restrict AI’s role in composing entire essays or in making major rhetorical decisions. This flexibility ensures that students use AI as a complement to their own work, rather than a replacement for it.</p>
+            <p>This short paper presentation begins with a comprehensive overview of my prototype platform supporting ethical AI use in the classroom, the AI Aware Writing Environment. The platform has been developed using Django, Python, and JavaScript, and it can be accessed at 
+                <ref target="https://aawe.ai/">https://aawe.ai</ref>. It features two distinct interfaces: an instructor portal and a student workspace. In the instructor portal, faculty can upload assignment prompts and configure specific parameters including word count requirements, citation expectations, and permissible levels of AI assistance. These instructor-defined settings directly influence the type and extent of AI support available in the student interface, ranging from basic grammar checking to prompt-based feedback and structural revision suggestions. The student interface centers around a streamlined, distraction-free word processor that stands in contrast to the feature-heavy environments of Google Docs or Microsoft Word. Students benefit from clear visibility of assignment parameters and AI usage guidelines, receiving real-time feedback when AI assistance is enabled. Upon assignment submission, instructors gain access to a detailed analytics dashboard that provides comprehensive insights into the writing process, including tracked changes showing AI feedback integration, copy/paste frequency analysis, typing speed metrics, word count statistics, and other relevant data points. This systematic approach ensures transparency while maintaining academic integrity throughout the writing process. My work on this interface has been recognized with several awards, including the grand prizes at Temple University’s 27th Annual Innovative Idea Competition and the 27
+                <hi rend="superscript">th</hi> Annual Be Your Own Boss Bowl. 
+            </p>
+            <p>After demonstrating the platform’s functionalities, I will share findings from piloting the tool in my classroom through a series of low-stakes writing exercises. During these exercises, students used the distraction-free environment for brainstorming and drafting, focusing on developing their ideas without the temptation to multitask or rely on automated suggestions. When AI assistance was selectively enabled for revision tasks, students reported that the tool helped them maintain focus during drafting and provided valuable, targeted support during editing. Many found the simple interface less overwhelming than traditional word processors and more trustworthy than traditional AI platforms. I will discuss next steps for fine-tuning the platform based on feedback received. </p>
+            <p>Finally, this presentation will address current challenges facing the tool's implementation. While it must distinguish itself from established platforms like Grammarly or ProWritingAid, its unique emphasis on instructor control and distraction-free design positions it as a "teaching-first" platform prioritizing educational outcomes over convenience. Beyond its practical applications, this paper will explore how the tool aligns with broader trends in writing education and technology use. The growing emphasis on AI literacy underscores the need for tools that teach students to engage with AI responsibly. By allowing instructors to scaffold AI use—starting with minimal assistance and gradually introducing more advanced features—the platform supports students' development of critical thinking skills regarding when and how to use AI effectively.</p>
+            <p>Ultimately, this presentation seeks to engage in a collaborative dialogue that will guide the platform's future development. Further, by sharing an approach to controlled AI integration and documenting preliminary classroom experiences, I aim to contribute to the broader discourse on effective and ethical AI implementation in academic courses. The platform's development represents one attempt of many–and, I believe, a particularly significant one–in addressing the evolving needs of instruction while maintaining academic integrity and fostering student development.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Anson, Chris M. (2022):</hi> “AI-based text generation and the social construction of ‘fraudulent authorship’: A revisitation”, in: 
+                        <hi rend="italic">Composition Studies</hi> 50, 1: 37-46. 
+                        <ref target="https://files.eric.ed.gov/fulltext/EJ1361686.pdf">
+                            <hi rend="underline color(1155CC)">https://files.eric.ed.gov/fulltext/EJ1361686.pdf</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Lieberman, Lisa (2024):</hi> “AI and the death of student writing: The move away from true hands-on scholarship feels tragic”, in: 
+                        <hi rend="italic" xml:space="preserve">The Chronicle of Higher Education, </hi>
+                        <ref target="https://www.chronicle.com/article/ai-and-the-death-of-student-writing">
+                            <hi rend="underline color(1155CC)">https://www.chronicle.com/article/ai-and-the-death-of-student-writing</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Garib, Ali / Coffelt, Tina (2024):</hi> “DETECTing the anomalies: Exploring implications of qualitative research in identifying AI-generated text for AI-assisted composition instruction”, in: 
+                        <hi rend="italic">Computers and Composition</hi> 73.
+                        <ref target="https://doi.org/10.1016/j.compcom.2024.102869" xml:space="preserve"> </ref>
+                        <ref target="https://doi.org/10.1016/j.compcom.2024.102869">
+                            <hi rend="underline color(1155CC)">https://doi.org/10.1016/j.compcom.2024.102869</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Khalil, Mohammad / Er, Erkan (2023):</hi> “Will ChatGPT get you caught? Rethinking of plagiarism detection”, in: 
+                        <hi rend="italic">Learning and Collaboration Technologies.</hi> HCII 2023. 
+                        <ref target="https://doi.org/10.48550/arXiv.2302.04335">
+                            <hi rend="underline color(1155CC)">https://doi.org/10.48550/arXiv.2302.04335</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Walters, William H. (2023):</hi> “The effectiveness of software designed to detect ai-generated writing: A comparison of 16 AI text detectors”, in: 
+                        <hi rend="italic" xml:space="preserve">Open Information Science </hi>7, 1.
+                        <ref target="HYPERLINK" xml:space="preserve"> </ref>
+                        <ref target="HYPERLINK">
+                            <hi rend="underline color(1155CC)">https://doi.org/10.1515/opis-2022-0158</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Zimotti, Giovanni / Frances, Claire / Whitaker, Luke (2024): “</hi>The future of language education: Teachers’ perceptions about the surge of AI writing tools”, in: 
+                        <hi rend="italic" xml:space="preserve">Technology in Language Teaching &amp; Learning </hi>6, 2.
+                        <ref target="https://doi.org/10.29140/tltl.v6n1.1136" xml:space="preserve"> </ref>
+                        <ref target="https://doi.org/10.29140/tltl.v6n1.1136">
+                            <hi rend="underline color(1155CC)">https://doi.org/10.29140/tltl.v6n1.1136</hi>
+                        </ref>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

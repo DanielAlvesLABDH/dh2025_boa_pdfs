@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="FREYBERG_Linda_The_ReFa_Reader__A_visual_makeover_for_your_s">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The ReFa Reader- A visual makeover for your semantic data</title>
+                <author>
+                    <persName>
+                        <surname>Freyberg</surname>
+                        <forename>Linda</forename>
+                    </persName>
+                    <affiliation>DIPF | Leibniz Institute for Research and Inf. in Education, Germany</affiliation>
+                    <email>l.freyberg@dipf.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Nanni</surname>
+                        <forename>Giacomo</forename>
+                    </persName>
+                    <affiliation>metaLAB (at) FU Berlin, Germany</affiliation>
+                    <email>giacomo.nanni@fu-berlin.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-09T21:15:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>visual interface</term>
+                    <term>narration</term>
+                    <term>exploration</term>
+                    <term>cultural heritage data</term>
+                    <term>semantic data</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>linked (open) data</term>
+                    <term>spatial &amp; spatio-temporal analysis</term>
+                    <term>modeling and visualization</term>
+                    <term>Art history</term>
+                    <term>History</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>The Refa Reader (see ReFa Reader) is the main result of the interdisciplinary digitization and research project "Restaging Fashion" (see Restaging Fashion) situated at the UCLAB at the University of Applied Sciences in Potsdam, funded (11.2020 – 11.2023) by the Federal Ministry of Education and Research (BMBF).<ref n="1" target="ftn1"/>
+                </p>
+                <p>In this project on the history of fashion from the late Middle Ages to the 19th century a semantic database has been modelled mainly with CIDOC-CRM. The data collection includes paintings, prints and drawings from Lipperheide’s costume library (see Sammlung Modebild) as well as text sources and has been enriched by 15 historical clothing ensembles and accessories from the Germanisches Nationalmuseum (see Germanisches Nationalmuseum). Visualization played a central role as an epistemic tool in all phases of this project, in the data modeling (see Nanni 2023) as well as in presenting the catalog (see ReFa Catalog). </p>
+                <p>Cultural heritage data comes in diverse forms and formats and the humanistic research process is text driven and based on hermeneutics as a main method. On a data level this creates a tension between conventions of humanities research and a logic, which is based on mathematics and statistics and requires clearness, standardization and unification in order to provide for machine readability.<ref n="2" target="ftn2"/> While some aspects regarding cultural heritage objects like the measures of a painting easily fit into this logic, already the artist and the creation date can evoke uncertainty. And then the detailed interpretation including the discourse on an object and its specific history can definitely not be squeezed in a database field. The results of humanities research for a great majority still remain interrelative texts, which create a certain narrative. 
+                </p>
+                <p>The ReFa Reader offers a potential solution to this conflict by combining a graph-based representation with introductory essays on certain topics.</p>
+                <p>In an extensive process design process (see de Günther et al., 2023) uniting expertises from Art History, Information Science and Interface Design this visual interface has been created.</p>
+                <figure>
+                    <graphic n="1001" width="9.696980555555555cm" height="9.342605555555556cm" url="/tmp/tmp4o_bfhdi/Pictures/d6fade0a91d20cdbb78ee78f6ba11b74.png" rend="inline"/>
+                </figure>
+                <p>Figure 1: Screenshot ReFa Reader "A family portrait"</p>
+                <p>Link: 
+                    <ref target="https://refareader.fh-potsdam.de/05_family_portrait_en">
+                        <hi rend="underline color(1155CC)">https://refareader.fh-potsdam.de/05_family_portrait_en</hi>
+                    </ref>
+                </p>
+                <p>It is not a traditional visualization in terms of the depiction of abstract data, but it uses iconicity<ref n="3" target="ftn3"/> on a structural level by showing the relations and displaying the objects itself.
+                </p>
+                <p>Inspired by museum catalogs as well as the hyperlink principles of digital editions, introductive essays are the leading element of the data presentation. The annotations in the text (see red lines in Fig. 1) show relations, which unfold at the right side of the screen. By clicking on the linked objects, which can be different types of media (images, digitized text etc.), references to standard vocabularies or literature references or links to similar objects within the database, a network of relations appears.</p>
+                <p>This interrelation between knowledge graphs and essaying offers an overview about the database, its objects and their relations as well as entry points to a close reading.</p>
+                <p>The Refa Reader is an Open-Source Prototype, which can be reused for any kind of semantic data.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>How to implement the Prototype?</head>
+                <p>First of all, a detailed documentation on Github<ref n="4" target="ftn4"/> guides you step by step through the implementation of the Reader. The foundation of the Reader is a semantic database in the format of JSON-LD extracted from an Omeka S database (see Omeka S). The texts are written as Markdown documents and all the links will be highlighted according to a style sheet and based on the main json-file. Colors can be customized as well as the header of the page including information on the author, date and title (see Fig. 2).
+                </p>
+                <figure>
+                    <graphic n="1002" width="15.92cm" height="8.995833333333334cm" url="/tmp/tmp4o_bfhdi/Pictures/d6fade0a91d20cdbb78ee78f6ba11b74.png" rend="inline"/>
+                </figure>
+                <p>Figure 2: Customizable ReFa Reader Visual Interface</p>
+                <p>There are different workflows and scenarios to use the ReFa Reader and in the following we present three:</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Long term approach: Project ReFa</head>
+                    <p>In the project ReFa, as mentioned earlier, we used Omeka S as a semantic data foundation. The multimodal data (texts, images, 3D-data, references and links to vocabularies) has been modelled in detail with CIDOC-CRM and SKOS. This deep modelling concept has been created within a three-year project with an interdisciplinary team. It resulted in an extensive semantic network, which builds the foundation for a catalog (see ReFa catalog), in which precise queries are feasible and the presentation in the visual interface guided by essays providing a curated access to selected data on a certain topic. This research-driven scenario is characterized by a high degree of detailedness and 
+                        <ref target="https://www.dict.cc/?s=interconnectedness">interconnectedness</ref> and aims for a presentation of the complete data. This approach is a good fit for long term DH-research projects dealing with rich cultural heritage data.
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>
+                        <anchor xml:id="qp356xcand8w"/>Mid-length approach: Schularchive-Wiki Reader
+                    </head>
+                    <p>The Schularchive-Wiki (see Schularchive-Wiki) is situated at the Research Library for the History of Education (BBF) at DIPF (Leibniz Institute for Research and Information in Education) in Berlin and includes data on nearly 2.000 schools in German speaking countries and links to archival sources. While the basic information on the schools is extracted from Wikipedia and has been enriched by scholars, in a Citizen-Science-approach the data has been augmented by for instance former pupils and employees of the schools. This implementation of the Reader is based on the data of a Semantic MediaWiki (SMW), which is an extension of a regular wiki including the description of the relations. </p>
+                    <p>After a full export of the database in a RDF file, the data has been converted in JSON-LD. This file has been uploaded to a GitHub-environment using the provided documentation and structural information files. In the visual presentation of the data of three selected schools the introduction texts based on Wikipedia articles have been edited and linked to media files like digitized archival materials, images and external sources like the website of the schools (see Schularchive-Wiki Reader).</p>
+                    <p>Since the semantic structure of the original SMW is not that detailed and extended in terms of connectivity the implementation workflow also includes enriching the data on the fly going back and forth between the JSON-file and the original database. This extends the Reader to a Writer by adding new contents for the visual presentation. This process is currently conducted and will be finished by January 2025.</p>
+                    <p>Depending on the resources and the desired result this approach takes several months while some kind of semantic database is already required. This scenario is feasible for smaller academic or Citizen Science projects.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>
+                        <anchor xml:id="jo0r8keawjm8"/>Quick approach: Interlinking Pictura Reader
+                    </head>
+                    <p>The ReFa Reader could also be implemented for single publications or texts. In the last scenario we are in the process of presenting a historic monograph (consisting of 12 volumes) from 1790-1830, a children's picture book by Friedrich Justin Bertuch (1747-1822) on natural sciences and human culture, in particular offering a classification of animals and plants, with a visual interface. Every volume is illustrated by (80-100) image panels accompanied by introductive texts. The data foundation is also a SMW (see Interlinking) hosted by the BBF, so the workflow is the same like in example 2). Very few entities are linked to external sources like Wikidata or other vocabularies. The visual presentation will follow the internal structure of the book as well as the overall context of the 12 volumes. Therefore, only links within these publications are already there and every further relation has to be generated in the implementation process. This implementation will be finished in Spring 2025.</p>
+                    <p>In this scenario the focus lies on the visual presentation of one specific (digitized or digital-native) textual source. The augmentation process can start afterwards, using a basic already existing semantic database or starting it from scratch. This approach highly depends on the text form (single paper or extensive compilation of text), its length and the desired level of connectivity, but could be a quick solution to present a text in a visual interface.</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="p7cyg8i3mqf3"/>Conclusion
+                </head>
+                <p>In conclusion the ReFa Reader is a flexible Open Source tool, which offers different scenarios to approach data depending on individual research questions and project environments.</p>
+                <p>It is situated at the intersection of data modeling, visualization design and academic writing and provides for an open access on semantic graph structures guided by annotated texts. With this it offers a proper digital presentation infrastructure for multimodal data by embracing the synergies of textual and visual forms instead of contributing to binary boundaries. </p>
+            </div>
+            <div/>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                        
+                            <hi style="font-size:10pt" xml:space="preserve"> Beside the both authors Sabine de Günther, Marian Dörk and Ilias Kyriazis (in the last year of the project) were part of the team. </hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                        
+                            <hi style="font-size:10pt" xml:space="preserve"> For a detailed description on this conflict see Nanni et al. (2023) and for a more general perspective on ambiguity and uncertainty see Drucker (2011), 2-3.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                        
+                            <hi style="font-size:10pt" xml:space="preserve"> For iconicity as an epistemic tool see Freyberg (2021), 79 ff.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn4" n="4">
+                        
+                            <ref target="https://github.com/sinanatra/refa-reader">
+                                <hi rend="underline color(1155CC)" style="font-size:10pt">https://github.com/sinanatra/refa-reader</hi>
+                            </ref>
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">de Günther, Sabine / Nanni, Giacomo / Kyriazis, Ilias / Freyberg, Linda / Dörk, Marian (2023)</hi>: "Tracing and Telling: Exploring collection holdings through graph-based narratives", in: 
+                        <hi rend="italic">Konferenzband zur 27. Berliner Veranstaltung der internationalen EVA-Serie: Electronic Media and Visual Arts</hi>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Drucker, Johanna (2011)</hi>: "Humanities Approaches to Graphical Display", in: 
+                        <hi rend="italic">Digital Humanities Quarterly</hi>, 005.1 2011, 
+                        <ref target="http://www.digitalhumanities.org/dhq/vol/5/1/000091/000091.html">http://www.digitalhumanities.org/dhq/vol/5/1/000091/000091.html</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Freyberg, Linda (2021)</hi>: "Ikonizität der Information. Die Erkenntnisfunktion struktureller und gestalteter Bildlichkeit in der digitalen Wissensorganisation. Berlin 2021, 
+                        <ref target="https://doi.org/10.18452/23813">https://doi.org/10.18452/23813</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" xml:space="preserve">Germanisches Nationalmuseum: </hi>
+                        <ref target="https://www.gnm.de/sammlungen/sammlungen-a-z/textilien-kleidung-und-schmuck/">
+                            <hi rend="underline color(1155CC)">https://www.gnm.de/sammlungen/sammlungen-a-z/textilien-kleidung-und-schmuck/</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Interlinking Pictura</hi>: 
+                        <ref target="https://interlinking.bbf.dipf.de/index.php/Hauptseite">
+                            <hi rend="underline color(1155CC)">https://interlinking.bbf.dipf.de/index.php/Hauptseite</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" xml:space="preserve">Omeka S: </hi>
+                        <ref target="https://omeka.org/s/">
+                            <hi rend="underline color(1155CC)">https://omeka.org/s/</hi>
+                        </ref>
+                        <hi rend="underline color(1155CC)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Nanni, Giacomo (2023)</hi>: CIDOC CRM, 
+                        <ref target="https://observablehq.com/@sinanatra/cidoc-crm">
+                            <hi rend="underline color(1155CC)">https://observablehq.com/@sinanatra/cidoc-crm</hi>
+                        </ref>. 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Nanni, Giacomo / Freyberg, Linda / de Günther, Sabine / Dörk, Marian (2023)</hi>: "The research is happening in the text fields: Are Linked Open Data and Art History a good match?", in: 
+                        <hi rend="italic">Digital Humanities 2023. Collaboration as Opportunity (DH2023)</hi>, Graz, Austria.
+                        <ref target="https://doi.org/10.5281/zenodo.8107731" xml:space="preserve"> https://doi.org/10.5281/zenodo.8107731</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" xml:space="preserve">ReFa Catalog: </hi>
+                        <ref target="https://uclab.fh-potsdam.de/refa-catalog/s/c/page/home">
+                            <hi rend="underline color(1155CC)">https://uclab.fh-potsdam.de/refa-catalog/s/c/page/home</hi>
+                        </ref>. 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">ReFa Reader</hi>: 
+                        <ref target="https://refareader.fh-potsdam.de/">
+                            <hi rend="underline color(1155CC)">https://refareader.fh-potsdam.de/</hi>
+                        </ref>
+                        <hi rend="underline color(1155CC)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">ReFa Reader Documentation</hi>: 
+                        <ref target="https://github.com/sinanatra/refa-reader">
+                            <hi rend="underline color(1155CC)">https://github.com/sinanatra/refa-reader</hi>
+                        </ref>. 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Restaging Fashion</hi>: 
+                        <ref target="https://uclab.fh-potsdam.de/projects/restaging-fashion/">
+                            <hi rend="underline color(1155CC)">https://uclab.fh-potsdam.de/projects/restaging-fashion/</hi>
+                        </ref>. 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Sammlung Modebild - Lipperheidesche Kostümbibliothek</hi>: 
+                        <ref target="https://www.smb.museum/museen-einrichtungen/kunstbibliothek/sammeln-forschen/ueber-die-sammlungen/sammlung-modebild-lipperheidesche-kostuembibliothek/">https://www.smb.museum/museen-einrichtungen/kunstbibliothek/sammeln-forschen/ueber-die-sammlungen/sammlung-modebild-lipperheidesche-kostuembibliothek/</ref>. 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Schularchive-Wiki Reader:</hi>
+                        <ref target="https://sinanatra.github.io/schularchive/">https://sinanatra.github.io/schularchive/</ref>. 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Schularchive-Wiki</hi>: 
+                        <ref target="https://schularchive.bbf.dipf.de/index.php/Hauptseite">
+                            <hi rend="underline color(1155CC)">https://schularchive.bbf.dipf.de/index.php/Hauptseite</hi>
+                        </ref>. 
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

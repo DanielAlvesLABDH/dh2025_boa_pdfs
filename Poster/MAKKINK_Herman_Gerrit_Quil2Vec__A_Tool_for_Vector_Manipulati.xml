@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MAKKINK_Herman_Gerrit_Quil2Vec__A_Tool_for_Vector_Manipulati">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Quil2Vec: A Tool for Vector Manipulation of Medieval Latin Script</title>
+                <author>
+                    <persName>
+                        <surname>Makkink</surname>
+                        <forename>Herman Gerrit</forename>
+                    </persName>
+                    <affiliation>University of Vienna, Austria</affiliation>
+                    <email>herman.gerrit.makkink@univie.ac.at</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-25T10:19:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>SVG</term>
+                    <term>Medieval Latin Palaeography</term>
+                    <term>HTR</term>
+                    <term>image tracing</term>
+                    <term>computer vision</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>digitization (2D &amp; 3D)</term>
+                    <term>image processing and analysis</term>
+                    <term>Book and print history</term>
+                    <term>History</term>
+                    <term>Linguistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">This poster will present a tool currently being developed for doing image vectorization of medieval script, called “Quill2Vec”. This tool to intended to expedite the production of image vectors as ground truth for multiple different text-based machine learning research applications.</p>
+            <p style="text-align: left; ">As discussed by Benjamin Pohl, little has been done with using vectorized images for the use of Medieval Latin Paleography (Pohl 2024). Most of the quantitative approaches to machine vision of medieval manuscripts at the moment focus on bitmaps. This is the approach has shown to be useful for HTR applications especially. While image vectorization might still be used during the process of field tagging in the HTR pipeline, Transkribus and Kraken (which is used by eScriptorium) use bitmaps as the visual input data for the training of models and for handwriting detection (Kiessling 2022). However, this approach does not allow for as many applications to paleographic study, or is as script- and language-agnostic as isolating quill-strokes. </p>
+            <figure>
+                <graphic n="1001" width="10.512777777777778cm" height="9.622013888888889cm" url="/tmp/tmp53ekraqq/Pictures/ba818ac5aca2e86a99998bfe67449c63.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 1 Prototype image preprocessing window for the vector trace application of Groningen, UB HS 405, f. 15r.</p>
+            <p style="text-align: left; ">The mechanical action of writing by hand involves the creation of building-blocks. While there is a wide variety of writing systems in existence, they all use a set group of symbols to convey linguistic information. In alphabetic writing systems, these are called graphemes. To extract words or graphemes from an image is to vectorize the image using an image trace algorithm. However, an issue with this, is that many scanned images of handwriting introduce to much noise. Graphemes, when produced by hand, tend to start to overlap. As a result, basic image vectorization will lump multiple graphemes together into one shape. Quill2Vec will enable the user to cut up these lumps, not just to the grapheme level, but to its anatomical building-block. Graphemes, when mechanically created, themselves are built from creating different strokes. The ultimate purpose of Quill2Vec is to isolate and annotate these quill strokes.</p>
+            <p style="text-align: left; ">Quill2Vec uses a high-quality digital facsimile of a medieval manuscript as input. This image is then pre-processed to increase contrast before a vector-tracing algorithm is applied to get the outline of shapes on the page as vector graphics (Salinger 2003). The user can then use Quill2Vec’s GUI to manipulate the vectors produced by image tracing. In this GUI, users can cut vectors to isolate strokes, group strokes by grapheme and word and annotate the different (groups of) strokes with transcription data and other meta-data. </p>
+            <figure>
+                <graphic n="1002" width="8.505472222222222cm" height="12.061472222222223cm" url="/tmp/tmp53ekraqq/Pictures/ba818ac5aca2e86a99998bfe67449c63.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 2 Output of vector trace of Groningen, UB HS 405, f. 15r.</p>
+            <p style="text-align: left; ">Quill2Vec is intended to produce ground truth data for multiple different machine learning research applications. It could for example be used as a ground truth to train a Handwritten Text Recognition model. This could be focused more on individual graphemes, than existing approaches to HTR. This enables a more precise recognition of spelling variations and (un)intentional copy errors between different copies of the same text. This focus on graphemes also allows the model to be language-agnostic. Which makes it easier to transcribe multi-lingual texts. Lastly, since this approach focusses on detecting the fundamental building-blocks of all written language, the strokes which make up a symbol, it works just as well for non-Latin scripts like Arabic, Cyrillic or Chinese.</p>
+            <p style="text-align: left; ">A second possible application of the data is for the quantitative study of scripts itself. For example, examining the evolution of different scripts. Further, the different vectors can be compared along a wide variety of axis: like shape or relative size to determine a hands characteristic ductus. This facilitates for the recognition of individual hands within a corpus. The recognition of scribes could open up the possibility to study networks of scribes and scriptoria. Image vectorization is already successfully applied for signature recognition, proving the viability of this approach (Srivastava 2022).</p>
+            <p style="text-align: left; ">A third possible application could be to train models to “repair” damaged texts. When the shapes of strokes are known, it should be possible to predict how a stroke looked like with limited data. All these applications do not have to exist in a vacuum either, a model can be trained on data to not only deal with damaged text, but also to transcribe that text. Done on a large corpus, a lot of paleographic data is created which can be used to recognize different scribes and chains of copyists, for example. </p>
+            <figure>
+                <graphic n="1003" width="12.13883888888889cm" height="7.032819444444445cm" url="/tmp/tmp53ekraqq/Pictures/ba818ac5aca2e86a99998bfe67449c63.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 3 The grapheme 'h' isolated from Groningen, UB HS 405, f. 15r and roughly cut into two strokes.</p>
+            <p style="text-align: left; ">I hope to present a poster for Quill2Vec at DH2025 to demonstrate the tool in a more finished state and to gather feedback from the academic community on how to further improve my approach and tool.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kiessling, Benjamin</hi>. (2022). The kraken OCR system. &lt;https://kraken.re&gt;.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Pohl, Benjamin</hi>. (2024). Using scalable vector graphics in medieval Latin palaeography: new approaches, new conversations. Digital Scholarship in the Humanities. 39(4):1123–1133. DOI: doi.org/10.1093/llc/fqae058.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Selinger, Peter</hi>. (2003) Potrace: a polygon-based tracing algorithm. &lt;http://ftp.nara.wide.ad.jp/pub/Linux/momonga/development/source/SOURCES/potrace.pdf&gt; [6 .December. 2024].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

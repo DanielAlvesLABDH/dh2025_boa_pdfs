@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VAN_STIPHOUT_Mees_Design_Qualitative_Research_on_Large_Text_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Design Qualitative Research on Large Text Corpora using I-Analyzer (Workshop)</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>van Stiphout</surname>
+                        <forename>Mees</forename>
+                    </persName>
+                    <affiliation>Utrecht University</affiliation>
+                    <email>m.vanstiphout@uu.nl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Janssen</surname>
+                        <forename>Berit</forename>
+                    </persName>
+                    <affiliation>University of Amsterdam</affiliation>
+                    <email>b.d.janssen@uu.nl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>van Boheemen</surname>
+                        <forename>Jelte</forename>
+                    </persName>
+                    <affiliation>Utrecht University</affiliation>
+                    <email>j.vanboheemen@uu.nl</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-06T11:34:17.424915000</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Pre-Conference Workshop and Tutorial</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>text mining</term>
+                    <term>qualitative research</term>
+                    <term>large datasets</term>
+                    <term>word models</term>
+                    <term>research design</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>open access methods</term>
+                    <term>text mining and analysis</term>
+                    <term>Cultural studies</term>
+                    <term>History</term>
+                    <term>Literary studies</term>
+                    <term>Political science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Whether you are a historian, a political scientist, or a literary scholar, at the heart of your research there is often text. Books, articles, transcribed speech; many researchers spend countless hours poring over near-infinite collections of words and sentences, especially when they are performing qualitative research, where close reading is usually an essential part of creating understanding.</p>
+            <p>With the advent of the digital age, the amount of text that is available to researchers has increased exponentially: digital text corpora are now larger, richer, and more accessible than ever. This opens the door to many exciting research opportunities, as the increase in data provides more information, detail, and context, as well as increased prestige and better optics for the research. However, there is some resistance to using large datasets within the Humanities research community as well, especially from qualitative scholars. It can be difficult to make sense of the oftentimes highly abstract and technical methods involved in mining large datasets or analyzing and interpreting the results of such an excavation. Furthermore, researchers are being warned about the ‘blinding’ effect of large datasets, where researchers trust the dataset simply because it contains millions of documents, disregarding potential issues of independence or even reliability (Guldi, 2023). Moreover, researchers fall into the traps of biasing their research by being uncritical on their list of key search words and phrases (Underwood, 2014; Ros, 2024). We regularly speak to researchers who tell us that they refrain from using large datasets because of their imperfect understanding of the underlying theory and digital tools of text mining.</p>
+            <p>This workshop is intended to be a gentle introduction to using text mining tools such as 
+                <hi rend="italic">I-Analyzer </hi>for qualitative research, on both a theoretical and practical level. The workshop will be hosted by a team of engineers and scholars who can discuss the research design process on a theoretical as well as on a practical level, and there will be much hands-on support and many individual discussions throughout the workshop. In other words, this workshop will be an opportunity to design your research using digital text mining tools, with the help and support of trained engineers.
+            </p>
+            <p>Our Research Software Lab created 
+                <ref target="https://ianalyzer.hum.uu.nl/home">
+                    <hi rend="color(#1155cc)underline">I-Analyzer</hi>
+                </ref>, an online text corpus interface, in order to help researchers use digital text mining methods, regardless of coding experience. It supports full-text search, several visualization methods, and the use of Word2Vec word models to analyze the corpora in our collection. The interface is designed to present users with a clear and simple interface to apply these methods that would otherwise require coding knowledge or expensive proprietary software such as Gale Digital Scholar, which is out of reach for many underfunded academics globally. Our collection of 27 corpora includes parliamentary debates, newspapers, literature collections, online reviews, and several other data types. Several languages are currently represented in the corpora, especially in the parliamentary debates, with more than 20 additional corpora to be added in the first half of 2025 in various non-English languages. I-Analyzer was created with the values of openness in mind, and as such it is completely open-source, and many of the corpora are open access.
+            </p>
+            <p>This workshop will be an opportunity for researchers to be introduced to both the theory and application of text mining methods, as well as techniques to enhance critical use of these methods. We are developing educational materials in collaboration with the researchers who frequently use I-analyzer for their projects, and we include their findings and best practices in the curriculum. These researchers have used I-Analyzer for finding parliamentary debates related to democracy and participation (Ihalainen et al., 2022); finding funerary inscriptions containing a certain given name (Saar, 2021); finding the emergence of the fairtrade concept in newspaper corpora; or tracking the decision forming process in annual reports of family businesses. Thus, this workshop offers both a free, easy-to-use software interface with freely accessible datasets as well as examples of how the tool has been put into practice by fellow academics.</p>
+            <p>The workshop is designed as a three-hour program where participants are taught the theoretical foundations of these methods as well as the practical knowledge to apply them. Participants are encouraged to design their own research question or find ways in which to complement their ongoing research with I-Analyzer. Every hour starts with a 20-minute lecture, whereafter there will be 25 minutes for discussion and doing the exercises, followed by a 15-minute break. The first hour will be a history of text mining and its applications alongside I-Analyzer’s basic functionality, such as simple querying and filtering and term frequency visualisations. The second hour will concern the best practices and pitfalls of using large datasets in qualitative research, illustrated with exercises using the more advanced functionalities of I-Analyzer, such as advanced queries and filtering and the n-gram visualisation. In the third hour we will explain more about how to use and interpret language models and semantic distance metrics, and we will illustrate this segment with examples from the word models in I-Analyzer. The last hour will have a shorter lecture, to create more time for the final research design exercises.</p>
+            <p>This workshop is aimed at qualitative humanities scholars and is not restricted to a specific discipline. I-Analyzer already contains several large corpora which will be used to illustrate the methodologies during the workshop, but researchers will have the opportunity to upload their own corpora to I-Analyzer and receive technical support from us in doing so. We estimate that we will be able to support between 20 and 30 people in this workshop.</p>
+            <p>Theoretical themes that will be discussed during the workshop are:</p>
+            <list type="unordered">
+                <item>Data exploration strategies</item>
+                <item>How to enhance your list of key search terms</item>
+                <item>How to counteract your bias in your research design</item>
+                <item>How to interpret semantic distance metrics such as cosine similarity</item>
+                <item>Methods of exploration versus methods of analysis</item>
+            </list>
+            <p>These themes are explored through practical exercises and group discussions. Participants will be asked to prepare research topics based on the available corpora and their own expertise. In the workshop, participants will learn the following practical skills to perform research:</p>
+            <list type="unordered">
+                <item> How to query and filter corpora in I-Analyzer</item>
+                <item> How to use the n-gram visualisation to focus their close reading</item>
+                <item> How to use word models to expand their close reading and include more context</item>
+                <item> How to design research questions that can be answered by a mixed approach</item>
+                <item> How to think critically about qualitative research using large text corpora</item>
+                <item> How to avoid the pitfalls of using large datasets in qualitative research</item>
+                <item> How to upload their own data to I-Analyzer</item>
+            </list>
+            <p>At the end of the workshop participants will have designed a research project using one of the datasets available, and will be able to use I-Analyzer and its methods in a critical way.</p>
+            <p>In sum, we have observed a real need for more in-depth theoretical discussions of the methods used in an increasing amount of humanities research. Moreover, we want to educate researchers about the theory by having them engage with the datasets, the tools, and each other in a practical research context. We aim to provide this opportunity for interested researchers to include larger corpora in their research and analyse them consciously and cogently.</p>
+            <p>You can try I-Analyzer for yourself here: 
+                <ptr target="https://ianalyzer.hum.uu.nl/home"/>
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Guldi, J. (2023). 
+                        <hi rend="italic">The dangerous art of text mining: A methodology for digital history</hi>.
+                        <hi rend="bold"> </hi>Cambridge University Press.
+                    </bibl>
+                    <bibl>Ihalainen, P., Janssen, B., Marjanen, J,. Vaara, V. (2022). “Building and Testing a Comparative Interface on Northwest European Historical Parliamentary Debates: Relative Term Frequency Analysis of British Representative Democracy.” In 
+                        <hi rend="italic">CEUR Workshop Proceedings</hi> (Vol. 3133). CEUR-WS.
+                    </bibl>
+                    <bibl>Ros, R. (2014) Historici, stop met zoeken! 
+                        <hi rend="italic">Over de Muur.</hi>
+                    </bibl>
+                    <bibl>Saar, O. (2021). The PEACE Portal-Revisiting the Sea of Stone. DH Benelux 2021, 1-21. </bibl>
+                    <bibl>Underwood, T. (2014). Theorizing research practices we forgot to theorize twenty years ago. 
+                        <hi rend="italic">Representations</hi>, 
+                        <hi rend="italic">127</hi>(1), 64-72.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

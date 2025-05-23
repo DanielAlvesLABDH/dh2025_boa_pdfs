@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="CHIFFOLEAU_Floriane_Pandore__automating_text_processing_work">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Pandore: automating text-processing workflows for humanities researchers</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Chiffoleau</surname>
+                        <forename>Floriane</forename>
+                    </persName>
+                    <affiliation>ObTIC - Sorbonne Université, France</affiliation>
+                    <email>chiffoleau.floriane@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Biriuchinskii</surname>
+                        <forename>Mikhail</forename>
+                    </persName>
+                    <affiliation>ObTIC - Sorbonne Université, France</affiliation>
+                    <email>m.biriuchinskii@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Roe</surname>
+                        <forename>Glenn</forename>
+                    </persName>
+                    <affiliation>ObTIC - Sorbonne Université, France</affiliation>
+                    <email>glenn.roe@sorbonne-universite.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Alrahabi</surname>
+                        <forename>Motasem</forename>
+                    </persName>
+                    <affiliation>ObTIC - Sorbonne Université, France</affiliation>
+                    <email>motasem.alrahabi@sorbonne-universite.fr</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T08:29:05.792970304</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>NLP toolkit</term>
+                    <term>GUI</term>
+                    <term>Digital Humanities</term>
+                    <term>Data processing</term>
+                    <term>Python scripts</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digital libraries creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>user experience design and analysis</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading">
+                <head>
+                    <anchor xml:id="id_docs-internal-guid-75a7970c-7fff-ce62-00bd-0527b4a75d53"/>Introduction
+                </head>
+                <p>The recent integration of AI-powered workflows in digital humanities projects has led to the development of new tools and software to (semi-)automatically work on textual editions. However, many of these tools are less than intuitive and can be hard to grasp for less technically-savvy users. To address this issue, several data-science pipelines have been created to facilitate access to large digitized collections, including EHRI (Bénière et al., 2024) and Gallic(orpor)a (Sagot, Benoît et al. 2022), among others. Likewise, 
+                    <ref target="https://obtic-gpu1.mesu.sorbonne-universite.fr:8550/">Pandore</ref> aims to provide user-friendly access to a suite of digital tools to collect, prepare, convert, and analyze data, extract relevant insights, and create interpretive visualizations. Pandore was developed by our team at Sorbonne Université (Cordova et al., 2022; Alrahabi et al., 2023), a team dedicated to the design and experimentation of new digital methodologies for humanities researchers (ObTIC, 2021). In this short paper, we will introduce the current Pandore interface (Figure 1), including an overall description, before expanding on the recent implementations based on user feedback, reflecting on its ongoing development in the context with our partnership with the French national library’s BnF DataLab, and finally concluding with technical considerations based on new GPU computational infrastructures. 
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>Description of the toolbox</head>
+                <p>The Pandore toolbox integrates numerous digital tools to assist users in automating various tasks aimed at creating and exploiting textual corpora. Eight essential tasks are currently proposed: automatic text recognition (ATR), format conversion, automatic annotation tasks, data mining, visualization, corpus harvesting, text correction, and pipelines. Format conversion allows users to either encode a text in TEI XML, or more generally, to convert digitized documents from one format to another, notably with the tool Teinte (ObTIC, s.d.). The automatic annotation module retrieves part-of-speech tagging, or semantic categories and does named entities recognition (NER), while the data mining module performs various information extraction tasks, including keyword generation using KeyBERT (Sharma et Li, 2019), topic modelling, and text summarization. In terms of visualization, users can generate geolocated maps, networks of characters or co-occurrences, as well as corpus statistics, and ontological relationships in an annotated corpus using Ariane (Alrahabi 2021). Lastly, Pandora enables users to create their own corpora of digitized texts using available APIs, either from Wikisource (Wikisource, 2003) or Gallica (BnF, 1997). Users can then apply several layers of corrections to these corpora, such as automatically normalizing the spelling of old French texts with the tool Normalisa (ObTIC, s.d.) or post-ATR correction.</p>
+                <p>Additionally, the toolbox allows users to combine multiple tasks in the form of automated workflows or pipelines: the combination of ATR and NER, for example, to retrieve the named entities of an image that has been transcribed; or the extraction of spatial or topographical named entities from a text (digitized or not), which are then geolocated on a digital map (Koudoro-Parfait et al., 2023). Among the current functionalities present in the toolbox, many offer multiple tools for a given task, meaning that users can test different outputs and pick the one that best suits their research question, before finally executing the task. In the case of ATR, for instance, users can choose to use Tesseract (printed texts), or our eScriptorium instance (handwritten or typescript documents). Likewise, for NER tasks, users can select three different tools: spaCy, Flair or BERT. Furthermore, these NER tools can be used to treat texts in multiple languages, including English or Spanish, rather than our main target language French, and we plan on including additional language models soon.</p>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>Incorporating user feedback, improving the user experience and expanding the toolbox </head>
+                <p>
+                    <hi rend="color(#000000)">Building upon several campaigns of targeted user-feedback, the beta version of Pandore was significantly upgraded in order to address user-identified bugs, and to improve its overall design, documentation, and user interface. In so doing, we added a suite of new tutorials and documentation where needed, and modified existing ones to suit, all of which will allow users to properly and efficiently employ each tool and workflow. The design of Pandore itself was also modified, in order to provide a smoother and more seamless navigation between modules. Regarding the implementation of future functionalities, our objective is to integrate more tasks oriented towards natural language processing (NLP) workflows, as some can be very useful for humanities researchers but are not always easy to grasp. Through the use of interoperable and modular Python scripts, these NLP pipelines would encompass tasks such as preprocessing and normalization (lemmatization), statistical language analysis (words frequency), and advanced text analysis (readability scoring) </hi>
+                    <hi rend="color(#000000)">(</hi>
+                    <hi rend="color(#000000)">ObTIC, s.d.</hi>
+                    <hi rend="color(#000000)">)</hi>
+                    <hi rend="color(#000000)">.</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>Shaping the relations between the team and the BnF</head>
+                <p>Thanks to an ongoing partnership between Sorbonne Université and the BnF, the ObTIC team is currently in residence at the BnF DataLab (BnF, 2021), a service intended for researchers who wish to work on the BnF’s considerable digital resources. One common shared objective between our two teams is to help humanities researchers with the automatization of their workflows through targeted access to BnF data. As such, the Pandore toolbox will, hopefully, be progressively integrated into the Gallica digital library ecosystem. We are thus actively developing several Gallica-related tools, including corpus extraction via the 
+                    <ref target="https://obtic-gpu1.mesu.sorbonne-universite.fr:8550/extraction_gallica">Gallica API</ref>, and Gallica-Obvie (ObTIC, s.d.), a tool that combines the advanced text-search capabilities of Obvie (ObTIC, s.d.), including lexical statistics and text comparison (Alrahabi 2022) with the BnF’s digital collections. 
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>Optimizing performances through the use of a GPU </head>
+                <p>Finally, we will discuss current technical and infrastructural concerns that underpin the development and sustainability of multipurpose tools such as Pandore. While the Pandore toolbox is currently accessible and functional, multiple users performing multiple tasks would likely quickly overload the capacity of our current CPU installation, a situation that could hinder its overall utilization and uptake to wider communities of users. Indeed, some tools present in the toolbox are built explicitly for the exploration of large datasets or, conversely, individual users might want to work on particularly voluminous documents, both of which can’t be properly done with a simple CPU. In order to remediate this, the toolbox will be implemented onto a GPU platform, as well as some of the outside tools connected to the toolbox, to guarantee optimal use. This move should provide both efficiencies in computation and user-submitted tasks, while optimizing server performance, however both the financial and ecological costs of such a move should be discussed further.</p>
+                <p>
+                    <anchor xml:id="id_docs-internal-guid-ffdfcc6b-7fff-40aa-794d-5337f68a6e83"/>
+                    <hi rend="color(#000000)underline">
+                        <figure>
+                            <graphic url="/tmp/tmp5jibgnan/Pictures/2300ea65d66cd7a2dd9af6de8ed26bb5.png"/>
+                        </figure>
+                    </hi>
+                </p>
+                <p>
+                    <anchor xml:id="id_docs-internal-guid-375a6ea6-7fff-142f-d490-f202e1ba44f4"/>
+                    <hi rend="color(#000000)italic">Figure 1 – Interface of the Pandore toolbox</hi>
+                </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <anchor xml:id="id_docs-internal-guid-29405add-7fff-2286-7488-fd9f9e6fd62e"/>Alrahabi, Motasem (2021). 
+                        <hi rend="italic">Ariane: dispositif de fouille et de lecture synthétique de textes</hi>. DigitAl Humanities and cuLtural herItAge: data and knowledge management and analysis (Atelier Dahlia), Montpellier (virtuel), France. ⟨hal-03167271⟩
+                    </bibl>
+                    <bibl>Alrahabi, Motasem (2022) 
+                        <hi rend="italic">Obvie: interface web pour la fouille et la comparaison de textes</hi>. Atelier DigitAl Humanities and cuLtural herItAge: data and knowledge management and analysis durant la conférence francophone sur l'Extraction et la Gestion des Connaissances (egc2022), Jan 2022, Blois, France. ⟨hal-03543362⟩
+                    </bibl>
+                    <bibl>Alrahabi, Motasem / Fedchenko, Valentina / Petkovic, Ljudmila / Roe, Glenn / Cordova, Johanna (2023). 
+                        <hi rend="italic">Pandore: a toolbox for digital humanities text-based workflows</hi>. Poster. Digital Humanities 2023. Collaboration as Opportunity (DH2023), Graz, Austria.
+                    </bibl>
+                    <bibl>Bénière, Sarah / Chiffoleau, Floriane / Scheithauer, Hugo (2024). 
+                        <hi rend="italic">Streamlining the Creation of Holocaust-related Digital Editions with Automatic Tools</hi>. In EHRI Academic Conference - Researching the Holocaust in the Digital Age, EHRI-3, Warsaw, Poland. url
+                    </bibl>
+                    <bibl>BNF (1997), Gallica, https://gallica.bnf.fr</bibl>
+                    <bibl>BNF (2021), Datalab  https://www.bnf.fr/fr/bnf-datalab</bibl>
+                    <bibl>Cordova, Johanna / Dupont, Yoann / Petkovic, Ljudmila / Gawley, James / Alrahabi, Motasem / Roe, Glenn (2022), 
+                        <hi rend="italic">Toolbox : une chaîne de traitement de corpus pour les humanités numériques, </hi>TALN 2022 (Démo), Paris, France, url
+                    </bibl>
+                    <bibl>Koudoro-Parfait, Caroline / Alrahabi, Motasem / Dupont, Yoann / Lejeune, Gael / Roe, Glenn (2023). 
+                        <hi rend="italic">Mapping spatial named entities from noisy OCR output: Epimetheus from OCR to map</hi>. Digital Humanities 2023. Collaboration as Opportunity (DH2023), Graz, Austria. doi
+                    </bibl>
+                    <bibl>ObTIC (2021) Website ObTIC, https://obtic.sorbonne-universite.fr/</bibl>
+                    <bibl>ObTIC (s.d.), Modernisation, GitHub website, https://github.com/obtic-sorbonne/Modernisation</bibl>
+                    <bibl>ObTIC (s.d.), LegoNLP for DH, GitHub website, https://github.com/obtic-sorbonne/LegoNLP </bibl>
+                    <bibl>ObTIC (s.d.), Web application Gallica-Obvie, https://obtic.huma-num.fr/gallica-obvie/</bibl>
+                    <bibl>ObTIC (s.d.), Web application Obvie,  https://obtic.huma-num.fr/obvie/</bibl>
+                    <bibl>ObTIC (s.d.), Web application Teinte, https://obtic.huma-num.fr/teinte/</bibl>
+                    <bibl>Sagot, Benoît, et al. (2022). 
+                        <hi rend="italic">Gallic(orpor)a : Extraction, annotation et diffusion de l’information textuelle et visuelle en diachronie longue</hi>. In DataLab de la BnF : Restitution des travaux 2022, DataLab de la BnF, Paris, France. url
+                    </bibl>
+                    <bibl>Sharma, Prafull / Li, Yingbo (2019). 
+                        <hi rend="italic">Self-Supervised Contextual Keyword and Keyphrase Retrieval with Self-Labelling</hi>. Preprints, 2019080073. doi 
+                    </bibl>
+                    <bibl>Wikisource (2003), Wikisource, the free library, 
+                        <lb/>https://fr.wikisource.org/wiki/Wikisource:Accueil
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

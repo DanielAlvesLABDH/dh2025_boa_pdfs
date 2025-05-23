@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="GIRARD_Paul_Gephi_Lite__a_lighter_web_based_version_of_Gephi">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Gephi Lite: a lighter web based version of Gephi</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Girard</surname>
+                        <forename>Paul</forename>
+                    </persName>
+                    <affiliation>OuestWare, France</affiliation>
+                    <email>paul@ouestware.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Jacomy</surname>
+                        <forename>Alexis</forename>
+                    </persName>
+                    <affiliation>OuestWare, France</affiliation>
+                    <email>alexis@ouestware.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Simard</surname>
+                        <forename>Benoît</forename>
+                    </persName>
+                    <affiliation>OuestWare, France</affiliation>
+                    <email>benoit@ouestware.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Jacomy</surname>
+                        <forename>Mathieu</forename>
+                    </persName>
+                    <affiliation>Aalborg University, Denmark</affiliation>
+                    <email>mathieu.jacomy@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T10:09:03.120027747</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>visual network analysis</term>
+                    <term>web application</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>network analysis and graphs theory and application</term>
+                    <term>Statistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>We present Gephi Lite, a network analysis tool consisting of a new and different version of Gephi that requires no install and runs in the browser (important in the classroom), and can be easily integrated into other tools (important for DH toolmakers).</p>
+            <p>Gephi is a widely used network visualization software (Bastian et al. 2009). It is a desktop application coded in Java. Gephi Lite offers a similar user experience (UX), centered on the user and their direct manipulation of a network visualization, but as a web application executed in any web browser. This difference allows it to address a different public, notably in educational situations.</p>
+            <div type="div1" rend="DH-Heading1">
+                <head>Motivations</head>
+                <p>Gephi’s development started in 2008. In the early 2020s, with the rise of web-based data visualisation libraries, a set of network web viewers emerged, a few of them being integrated in the Gephi software as plugins (Girard et al. 2024). Gephi Lite draws inspiration from those tools and goes further by allowing users to not only view, but also edit networks on the web. It has been acknowledged as a Gephi community tool from the first day of conception (Jacomy 2022). We aimed at easing using both Gephi and Gephi Lite by reusing the same human computer interaction concepts. Interoperability between the two pieces of software is enabled by the common GEXF and GRAPHML file formats. Gephi Lite aims at pursuing Gephi’s original ambition: democratizing network visualisation edition through visual means.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Design compromises and differences </head>
+                <p>Building an application for the web or for the desktop presents different sets of constraints and opportunities. Web applications are not hosted by an operating system but executed by a web browser which further distances the code from computing resources (Jacomy et al. 2019). Yet recent works on two JavaScript libraries (
+                    <ref target="https://graphology.github.io/">graphology</ref> and 
+                    <ref target="https://www.sigmajs.org/">sigma.js</ref>) greatly improved the scalability of web-based graph drawing. Gephi Lite was made possible by those improvements. The performance drawback of being executed in a web browser is offset by a significant advantage: distribution. Web applications do not need anything else than a standard web browser to be executed. Accessing Gephi Lite is as simple as consulting the 
+                    <ptr target="https://gephi.org/gephi-lite"/> URL. This seamless access is lighter than installing a desktop application. This feature is particularly welcomed in classrooms where installing Gephi is difficult or sometimes impossible.
+                </p>
+                <p>The “lite” also indicates a design choice: Gephi Lite will focus on lowering complexity to propose a straightforward user experience leaving complex use cases to Gephi. This decision opened up the possibility to code Gephi Lite as a serverless application running entirely in the browser, which makes it lighter to operate, maintain and deploy.</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpk5x0f_ae/Pictures/10f2209c202e31853993b438601575b7.png"/>
+                    </figure>
+                </p>
+                <p>Figure (1) Gephi Lite screenshot showing a graph of “Les misérables” novel characters linked by co-occurrence. The nodes are filtered by weighted-degree greater than 9. A caption on the bottom of the graph visualisation shows the data attributes used to represent nodes and edges color and size.</p>
+                <p>Gephi Lite also proposes evolutions regarding Gephi. It notably moves towards a data-binded approach by continuously keeping track of which data attributes are used to set visual features (node/edge color and size). This allows generating an always-up-to-date caption of the network visualisation.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Integration within other tools</head>
+                <p>Being a web application, Gephi Lite can be opened with a URL search parameter pointing to a GEXF file. This means that existing web applications producing GEXF files can seamlessly redirect their users to the Gephi Lite interface with their own dataset. It can even be done in an iframe. Using the visual network analysis approach typically conducted with Gephi can be easily done in many research web applications by simply reusing Gephi Lite as a service (which can be also self hosted).</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpk5x0f_ae/Pictures/10f2209c202e31853993b438601575b7.png"/>
+                    </figure>
+                </p>
+                <p>Figure (2) the Digital Methods Initiative in Amsterdam added a “Open in Gephi Lite” link in their
+                    <ref target="https://github.com/digitalmethodsinitiative/4cat"> </ref>
+                    <ref target="https://github.com/digitalmethodsinitiative/4cat">4CAT tool for social media research</ref> (Peeters and Hagen, 2022) network page, screenshot by Stijn Peeters
+                </p>
+                <p>Our roadmap includes working on a colour palette tool, extending Gephi Lite integrations with existing web applications using the 
+                    <ref target="https://developer.mozilla.org/fr/docs/Web/API/BroadcastChannel">Broadcast Channel browser API</ref>, a Gephi Lite file format to save the application state to be shared or reused later and a set of specific features to handle 
+                    <ref target="https://en.wikipedia.org/wiki/Multipartite_graph">multipartite networks</ref>.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Wrap-up</head>
+                <p>Gephi Lite extends Gephi, a powerful visual network editor, to the web. by proposing a simple yet powerful web network visual editor. Its simple yet powerful architecture makes it easy to reuse in existing web applications, eliminating the need for installation. Additionally, its lightness caters to the needs of the classroom. Both Gephi and Gephi Lite will keep evolving at their own pace, offering the community the benefit of both web-based and desktop applications.</p>
+                <p>Gephi Lite code is released under GPLv3 on github: 
+                    <ptr target="https://github.com/gephi/gephi-lite"/>.
+                </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Bastian, Mathieu / Heymann, Sébastien / Jacomy, Mathieu</hi> (2009): “Gephi: An Open Source Software for Exploring and Manipulating Networks” in: 
+                        <hi rend="italic">International AAAI Conference on Web and Social Media</hi> 3 
+                        <hi rend="italic"> </hi>&lt;https://www.aaai.org/ocs/index.php/ICWSM/09/paper/view/154&gt;[11.04.2025]. DOI: 10.1609/icwsm.v3i1.13937.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Girard, P</hi>
+                        <hi rend="bold">aul /</hi>
+                        <hi rend="bold"> Jacomy, A</hi>
+                        <hi rend="bold">lexis /</hi>
+                        <hi rend="bold"> Simard, Benoit</hi> (2024): “Bridging Research and Open Source: the genesis of Gephi Lite” in 
+                        <hi rend="italic">FOSDEM</hi>, Bruxelles, Belgium&lt;https://fosdem.org/2024/schedule/event/fosdem-2024-3253-bridging-research-and-open-source-the-genesis-of-gephi-lite/&gt;[11.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Jacomy, Mathieu / Bastian, Mathieu / Jacomy, Alexis</hi> (2019): “Gephi JS: Exploring the dystopian future of a Javascript Gephi” in 
+                        <hi rend="italic">FOSDEM</hi>, Bruxelles, Belgium &lt;
+                        <ptr target="https://archive.fosdem.org/2019/schedule/event/graph_gephi_js/"/>&gt;[11.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Jacomy, Mathieu</hi> (2022): “Gephi Week 2022: debriefing” in 
+                        <hi rend="italic">Gephi Blog</hi> &lt;https://gephi.wordpress.com/2022/10/16/gephi-week-2022-debriefing/&gt;[11.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Peeters, Stijn / Hagen, Sal </hi>(2022):
+                        <ref target="https://doi.org/10.5117/ccr2022.2.007.hage">
+                            <hi rend="bold"> </hi>
+                        </ref>“The 4CAT Capture and Analysis Toolkit: A Modular Tool for Transparent and Traceable Social Media Research”, in 
+                        <hi rend="italic">Computational Communication Research</hi>, 4(2): 571-589. &lt;https://doi.org/10.5117/ccr2022.2.007.hage&gt;[11.04.2025]
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

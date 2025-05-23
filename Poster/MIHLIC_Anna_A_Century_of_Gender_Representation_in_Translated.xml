@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MIHLIC_Anna_A_Century_of_Gender_Representation_in_Translated">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>A Century of Gender Representation in Translated Children's Literature: Early Findings from a Computational Linguistics Study</title>
+                <author>
+                    <persName>
+                        <surname>Mihlic</surname>
+                        <forename>Anna</forename>
+                    </persName>
+                    <affiliation>University of Amsterdam, The Netherlands</affiliation>
+                    <email>amihlic@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>gender</term>
+                    <term>children's literature</term>
+                    <term>translation</term>
+                    <term>computational linguistics</term>
+                    <term>corpus analysis</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>attribution studies and stylometric analysis</term>
+                    <term>text mining and analysis</term>
+                    <term>Gender and sexuality studies</term>
+                    <term>Linguistics</term>
+                    <term>Translation studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">Children's literature often reflects and plays a critical role in shaping cultural attitudes towards gender, and the translation of such literature introduces additional layers of complexity in how gender is represented. Using computational linguistics methods, the first phase of this PhD project explores how gender is portrayed in original Hungarian children’s literature and the translation of these books into English, German and Dutch over the past century. The project uses a combination of close and distant reading methods to focus on key linguistic markers such as pronouns, gendered nouns, adjectives and verbs. In particular, this study investigates:</p>
+            <list type="ordered">
+                <item>How gender is represented in original Hungarian children's books.</item>
+                <item>How gender is represented in the translations of these books into English, German and Dutch.</item>
+                <item>Changes in gender portrayal over time, particularly in response to sociocultural shifts.</item>
+                <item>The impact of linguistic systems (e.g., gendered vs. non-gendered grammatical structures) on translation choices.</item>
+            </list>
+            <p style="text-align: left; ">The poster for this conference presents insights from the initial stages of corpus development and preliminary analyses, highlighting how translation choices reflect cultural attitudes towards gender over time. The corpus consists of original Hungarian children’s books and their translations into English, German and Dutch. The texts are analyzed using AntConc, and various packages in Python and R to identify linguistic features, such as gendered pronouns, nouns, verbs, adjectives, and occupational titles. This distant reading approach enables the identification of large-scale patterns, offering insights into translation trends and their alignment with or divergence from cultural gender norms.</p>
+            <p style="text-align: left; ">The languages are selected for three primary reasons: (a) differences in (perceived) progressiveness when it comes to literary traditions and children’s literature between cultures, (b) considerable differences between the grammatical gender systems and the lexical ways of expressing gender differences in the four languages and (c) the researcher’s proficiency in the languages.</p>
+            <p style="text-align: left; ">Regarding grammatical gender, Hungarian for instance has minimal grammatical gender marking, therefore when translated into Dutch, translators are often required to assign genders to certain characters. An obvious example for this would be animals, who may not have any gender marking in a Hungarian text, but when translated into Dutch, they are assigned a gender through the pronouns that are used to refer to them:</p>
+            <quote>Kígyó már három napja egy falatot sem evett. Már nagyon éhes.</quote>
+            <quote>
+                <hi rend="italic">Snake already three days one bite not ate. (It) already very hungry.</hi>
+            </quote>
+            <quote>Snake hasn’t eaten a bite in three days. She/he/it is very hungry.</quote>
+            <quote>Slang heeft al drie dagen niet gegeten. Ze heeft grote honger.</quote>
+            <quote>
+                <hi rend="italic">Snake has already three days not eaten. She has big hunger.</hi>
+            </quote>
+            <quote>Snake hasn’t eaten in three days. She is very hungry.</quote>
+            <p style="text-align: left; ">From the bilingual children’s book 
+                <hi rend="italic">Kip is slim/Az okos csirke</hi> by Christine Sterkens (2022)
+            </p>
+            <p style="text-align: left; ">Apart from pronoun choices, the study also investigates adjectives and agreements, i.e. whether in the cases of translations from more grammatically gendered languages into less grammatically gendered languages translators will come up with other ways to indicate gender, for example through the use of adjectives. Other linguistic markers will include adverbs and verbs, examining whether female characters are associated with more passive adverbs and verbs and how this shifts during the translation process. Additionally, occupational titles will be analysed, as they vary considerably across the four languages. For instance, in English, occupational titles are increasingly neutralised (e.g. “doctor”, “teacher”), in Dutch they vary to a large extent (e.g. “dokter” is neutral, but teacher can be expressed as the neutral/masculine “leraar” or the feminine “lerares”) and in German, professions are highly gendered as well (“der Lehrer” is male teacher, “die Lehrerin” is female teacher, “der Arzt” is male doctor and “die Ärztin” is female doctor).</p>
+            <p style="text-align: left; ">A comparative translation analysis using computational methods allows for examining these linguistic features in the sociocultural context of the source and target language communities and the longitudinal approach of the study ensures that any changes in translation practices over time can be investigated and understood in relation to shifts in social norms and views on gender</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Sterkens, C. (2022) 
+                        <hi rend="italic">Kim is slim/Az okos csirke</hi>. Niknak.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

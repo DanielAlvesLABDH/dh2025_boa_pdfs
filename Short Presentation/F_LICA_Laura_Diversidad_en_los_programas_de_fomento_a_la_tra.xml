@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="F_LICA_Laura_Diversidad_en_los_programas_de_fomento_a_la_tra">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Diversidad en los programas de fomento a la traducción editorial en Iberoamérica: construcción de un dataset sobre traducciones subvencionadas (2001-2022)</title>
+                <author>
+                    <persName>
+                        <surname>Fólica</surname>
+                        <forename>Laura</forename>
+                    </persName>
+                    <affiliation>Instituto de Lengua, Literatura y Antropología, CSIC</affiliation>
+                    <email>laurafolica@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Roig-Sanz</surname>
+                        <forename>Diana</forename>
+                    </persName>
+                    <affiliation>IN3, Universitat Oberta de Catalunya</affiliation>
+                    <email>dsanzr@uoc.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Campanella</surname>
+                        <forename>Lucia</forename>
+                    </persName>
+                    <affiliation>IN3, Universitat Oberta de Catalunya</affiliation>
+                    <email>lcampanella@uoc.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Manterola</surname>
+                        <forename>Elizabete</forename>
+                    </persName>
+                    <affiliation>Universidad del País Vasco/ Eusak Herrika Universitatea</affiliation>
+                    <email>elizabete.manterola@ehu.eus</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ikoff</surname>
+                        <forename>Ventsislav</forename>
+                    </persName>
+                    <affiliation>IN3, Universitat Oberta de Catalunya</affiliation>
+                    <email>vikoff@uoc.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-28T14:57:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>diversidad cultural</term>
+                    <term>inclusión</term>
+                    <term>Big Translation History</term>
+                    <term>políticas de traducción</term>
+                    <term>programas de ayuda a la traducción</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>bibliographic analysis</term>
+                    <term>data modeling</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>network analysis and graphs theory and application</term>
+                    <term>Book and print history</term>
+                    <term>Feminist studies</term>
+                    <term>Sociology</term>
+                    <term>Translation studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>En el cruce de las Humanidades Digitales con los Estudios de Traducción, a partir del concepto de “Big Translation History” (Roig-Sanz y Fólica 2021), y con un foco en la noción de diversidad, esta investigación<ref n="1" target="ftn1"/> estudia en qué medida los programas de políticas públicas de apoyo, promoción y difusión de la traducción literaria en Iberoamérica<ref n="2" target="ftn2"/> alientan la diversidad cultural, la equidad e inclusión lingüística, bibliográfica y sexo-genérica en el campo editorial internacional. 
+            </p>
+            <p>Los Estudios de Traducción –y específicamente la Historia de la Traducción–, se han visto enriquecidos recientemente por la digitalización masiva de los archivos, así como por las técnicas de exploración a gran escala y lectura distante promovidas por las Humanidades Digitales (Bowker 2021; Wakabayashi 2019; Dolmaya 2024). Esto ha permitido una mayor sistematización de los metadatos de traducción relativos a catálogos de bibliotecas (McFall 2015), la realización de estudios bibliométricos (Zhou et al 2017; Rovira-Esteva et al. 2015) sobre la bibliodiversidad en el terreno de la traducción (Ryan 2022; Bosshard 2022), la geolocalización de publicaciones para construir mapas de los flujos de traducción (Teichmann 2022; Hofeneder y Kosiner 2022).</p>
+            <p>Respecto del estudio específico de los programas de subsidio a la traducción literaria desde una perspectiva de datos a gran escala, resultan de interés para el área europea el Report 2020 (Wischenbart et al 2020) o las investigaciones de O. Vimr (2022; 2020). En relación con la curadoría de datasets (Kruusmaa et al. 2025a, 2025b)
+                <hi rend="color(222222)">, cabe mencionar algunos</hi> datasets como: “Base de datos de la literatura checa al español” 
+                <hi rend="color(222222) background(white)" xml:space="preserve">o “Litprax.org”, base de datos sobre la recepción en Eslovenia, Rumania y Serbia de la literatura escrita en España y Latinoamérica). Para el espacio iberoamericano, es dable mencionar la base de datos “150 años de traducción en Uruguay”, las obras modernas de la literatura vasca traducida de “Euskal Literatura Itzuliaren katalogoa” </hi>
+                <hi rend="color(222222)" xml:space="preserve">o el dataset con traducciones literarias en revistas latinoamericanas (Ikoff, Fólica y Roig-Sanz 2018; Fólica, Ikoff 2024). Asimismo, algunos programas de subsidios a la traducción ya han sido analizados de una perspectiva nacional, por ejemplo, el programa argentino ProSur (Ádamo 2024; Dujovne 2024; </hi>Szpilbarg, 2017).
+            </p>
+            <p>En esta comunicación, expondremos nuestro flujo de trabajo relativo a la primera etapa de extracción masiva, limpieza, estructuración y enriquecimiento manual de los datos de traducción de los programas de subsidio a la traducción literaria concedidos por instituciones públicas de los países iberoamericanos: Programa Sur (Argentina), Programa de Apoio à Tradução e à Publicação de Autores Brasileiros (Brasil), Programa de apoyo a la traducción para editoriales extranjeras de la DIRAC (Chile), Reading Colombia (Colombia), Ministerio de Cultura y Deporte (España) y Acción Cultural Española (España), PROTRAD (México), Linha de apoio à tradução e edição (Portugal), Programa Ida (Uruguay), y los regionales Etxepare Euskal Institutua (País Vasco) e Institut Ramon Llull (Catalunya). </p>
+            <p>Así pues, presentaremos las distintas fases de procesamiento los datos: </p>
+            <list type="unordered">
+                <item>recolección de datos: los datos de los programas de subsidios a la traducción literaria se suelen ofrecer en un formato tabular que permite el procesado masivo; sin embargo, en otros casos es necesario recurrir a la recolección manual o bien a técnicas como el 
+                    <hi rend="italic">webscraping</hi>.
+                </item>
+                <item>modelado inicial para combinar los datos de los distintos programas en un único conjunto de datos. Si bien cada fuente consultada estructura sus datos de un modo singular, preferimos estandarizar todos los datos en único dataset que subiremos, luego, al entorno relacional nodegoat (Bree y Kessels 2013) con el objetivo de seguir enriqueciendo los datos de forma colaborativa.</item>
+                <item>limpieza y uniformización de los datos, para conseguir categorías homogéneas como título, autor/a, traductor/a, editorial, lengua de partida/llegada, lugar y fecha de edición, fecha de subvención, entre otras. </item>
+                <item>enriquecimiento de los datos: a partir de los datos disponibles en algunos registros, podemos completar los valores omitidos en otros. Por ejemplo, en muchos casos se puede completar “país de edición” a partir de la ubicación de la “editorial”; también a partir del “nombre del autor/a”, se puede inferir su “género” mediante herramientas de detección del género basadas en 
+                    <hi rend="italic">machine learning</hi>. El primer ejemplo nos permitiría observar la diversidad geográfica de los lugares de edición, en tanto que el segundo ejemplo apunta a estudiar la diversidad de género autoral. 
+                </item>
+            </list>
+            <p>Esta comunicación presentará también las primeras exploraciones masivas de los datos recogidos hasta el presente a través de visualizaciones geográficas, que destacan los flujos y direccionalidades de las lenguas subvencionadas, o relacionales en esquemas de grafos, a partir de agentes traductores o editores presentes en diferentes programas de ayuda a la traducción. Si bien muchos de los datos recogidos ya están disponibles en abierto, la reutilización que hacemos en esta investigación, al reunir las informaciones provenientes de diferentes programas iberoamericanos, permite entender mejor cómo está operando la diversidad cultural a nivel transnacional a la hora de apoyar o no determinada traducción y, por tanto, fomentar una determinada circulación de las literaturas en este inicio de siglo XXI para el ámbito regional de las obras producidas en Iberoamérica. </p>
+            <p>Con respecto a la periodización, si bien los programas tienen duraciones, alcances y criterios de selección diferentes, nuestro estudio comienza en 2001 (año de la Declaración de la Diversidad Cultural de la UNESCO) y acaba en 2022 (año en el que España fue país invitado de honor en la Feria del Libro de Fráncfort). El análisis de estas dos décadas nos permitirá observar patrones generales respecto de, por ejemplo, el incremento de las ayudas para la traducción de escritoras mujeres, el aumento de la presencia de traductoras y 
+                <hi rend="italic">traducteres</hi> profesionales o de las lenguas menos traducidas. Asimismo, se podrá valorar la manera en que las ayudas fomentan la traducción desde o hacia lenguas minoritarias, la representación de entidades editoriales diversas o el alcance de la diversidad temática en los textos cuya traducción ha sido financiada a través de estas ayudas.
+            </p>
+            <p>Por último, es preciso subrayar que la comunicación pretende demostrar cómo las técnicas básicas de las ciencias de datos pueden ser aplicadas a datos culturales y empleadas para avanzar en el estudio de políticas de traducción literaria y 
+                <hi rend="italic">soft power</hi> nacional (Carbó, Roig-Sanz 2022) desde una perspectiva digital y a gran escala. Un diagnóstico de este tipo resulta útil para incidir en el rediseño de políticas culturales que buscan la internacionalización de sus literaturas respetando los principios de equidad, diversidad e inclusión.
+            </p>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                    
+                        <hi style="font-size:10pt" xml:space="preserve"> Esta comunicación se realiza en el marco de la ayuda PID2023-147380NB-I00, financiada por el MICIU/AEI/10.13039/501100011033/FEDER,EU, y vinculada al proyecto "Translating Diversity: Institutional Agents and Literary Translation Policy-Making in Iberoamerica (2001-2022)"dirigido por Diana Roig-Sanz y Laura Fólica.</hi>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                     Iberoamerica refiere al espacio integrado por los países de América Latina junto a España y Portugal.
+                </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="color(222222)">150 años de traducción en Uruguay (dataset)</hi>
+                        <ref target="https://traduccionuruguay.uy/">https://traduccionuruguay.uy/</ref>
+                    </bibl>
+                    <bibl>Adamo, Gabriela, y V. Rodríguez Lacroturs (2024): “¿Y dónde están Los Datos? Reflexiones Sobre La información Disponible En El Campo De La traducción Editorial”, in: 
+                        <hi rend="italic">Mutatis Mutandis. Revista Latinoamericana De Traducción</hi> 17, 2: 478-91. DOI: 10.17533/udea.mut.v17n2a12.
+                    </bibl>
+                    <bibl>Bree, Pim van y Geert Kessels (2013): nodegoat: a web-based data management, network analysis &amp; visualisation environment,
+                        <ref target="http://nodegoat.net" xml:space="preserve"> </ref>
+                        <ref target="http://nodegoat.net">http://nodegoat.net</ref> from LAB1100,
+                        <ref target="http://lab1100.com" xml:space="preserve"> </ref>
+                        <ref target="http://lab1100.com">http://lab1100.com</ref>
+                    </bibl>
+                    <bibl>Bosshard, Marco (2022): “Measuring the Consumption of Bibliodiversity and Foreign Literatures in Translation”, in: Mabel Moraña y Ana Gallego Cuiñas (eds.): 
+                        <hi rend="italic">Latin American Literatures in Global Markets: The World Inside</hi>. Leiden: Brill 281-302.
+                        <ref target="https://doi.org/10.1163/9789004523494" xml:space="preserve"> </ref>
+                        <ref target="https://doi.org/10.1163/9789004523494">
+                            <hi rend="color(4F81BD)">DOI:10.1163/9789004523494</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Bowker, Lynne (2021): “Digital humanities and translation studies”, in: Y. Gambier, L. van Doorslaer (eds.):
+                        <hi rend="italic" xml:space="preserve"> Handbook of Translation Studies Volume 5</hi>. Amsterdam &amp; Philadelphia: John Benjamins 37-44.
+                    </bibl>
+                    <bibl>Carbó-Catalan, Elisabet y Diana Roig-Sanz (2022): 
+                        <hi rend="italic">Culture as Soft Power: Bridging Cultural Relations, Intellectual Cooperation, and Cultural Diplomacy</hi>. De Gruyter. DOI: 
+                        <ref target="https://doi.org/10.1515/9783110744552">
+                            <hi rend="underline color(467886)">10.1515/9783110744552</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>Dolmaya, Julie McDonough (2024): 
+                        <hi rend="italic">Digital Research Methods for Translation Studies</hi>. London &amp; New York: Routledge.
+                    </bibl>
+                    <bibl>Dujovne, Alejandro (2024). “Traducir y publicar en el sur global. El programa Sur de traducciones y la difusión de obras de autores/as argentinos, 2010-2022”, in: 
+                        <hi rend="italic">Revista Chilena De Literatura</hi> 109: 255-286. 
+                        <ref target="https://revistaliteratura.uchile.cl/index.php/RCL/article/view/71625">
+                            <hi rend="underline color(467886)">https://revistaliteratura.uchile.cl/index.php/RCL/article/view/71625</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(222222)">Euskal Literatura Itzuliaren katalogoa (dataset) (</hi>
+                        <ref target="https://www.ehu.eus/ehg/eli/">
+                            <hi rend="underline color(1155CC)">https://www.ehu.eus/ehg/eli/</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>Fólica, Laura y Ventsislav Ikoff (2024): 
+                        <hi rend="italic">Authors reviewed and translated in a data set of 24 Latin American magazines (1898-1959)</hi> (dataset). Zenodo. 10.5281/zenodo.13365324.
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(222222)">Fólica, Laura, Ventsislav Ikoff y Diana Roig-Sanz (2018): "Translations and Reviews in Iberoamerican Modernist Periodicals” (</hi>
+                        <hi rend="il">
+                            <hi rend="color(222222)">dataset</hi>
+                        </hi>
+                        <hi rend="color(222222)" xml:space="preserve">).  </hi>
+                        <ref target="http://doi.org/10.23728/b2share.eb5c468d3dc3401c8b2fb4605d868a00">
+                            <hi rend="color(1155CC)">DOI: 10.23728/b2share.eb5c468d3dc3401c8b2fb4605d868a00</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>Hofeneder, Philipp y Eva Kosinar (2022): “A Cartography of Translation: Visualizing Translation Spaces”, in: 
+                        <hi rend="italic" xml:space="preserve">Translation Spaces </hi>11, 2: 157-183.
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(222222)">Litprax.org (dataset). https://litprax.org/es/prevodi/</hi>
+                    </bibl>
+                    <bibl>Kruusmaa, Krister, Peeter Tinits y Laura Nemvalts (2025ª): 
+                        <hi rend="italic">Curated Estonian National Bibliography - books (Version 3)</hi> (dataset). National Library of Estonia. DOI: 10.5281/zenodo.14708287
+                    </bibl>
+                    <bibl>Kruusmaa, Krister, Peeter Tinits y Laura Nemvalts (2025b): “Curated Bibliographic Data: the Case of the Estonian National Bibliography”, in: 
+                        <hi rend="italic">Journal of Open Humanities Data</hi> 11. 
+                    </bibl>
+                    <bibl>McFall, Lisa (2015): “Beyond the Back Room: The Role of Metadata and Catalog Librarians in Digital Humanities”, in: Kathleen L. Sacco, Scott S. Richmond, Sara M. Parme, Kerrie Fergen Wilkes (ed.): 
+                        <hi rend="italic" xml:space="preserve">Supporting Digital Humanities for Knowledge Acquisition in Modern Libraries. </hi>Hershey, Pennsylvania: IGI Global 21-43.
+                        <ref target="https://doi.org/10.4018/978-1-4666-8444-7" xml:space="preserve"> </ref>
+                        <ref target="https://doi.org/10.4018/978-1-4666-8444-7">
+                            <hi rend="color(4F81BD)">DOI: 10.4018/978-1-4666-8444-7</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Rovira-Esteva, Sara, Pilar Orero y Javier Franco Aixelá (2015): “Bibliometric and Bibliographical Research in Translation Studies”, in: 
+                        <hi rend="italic">Perspectives</hi> 23, 2:159-60.
+                        <ref target="https://doi.org/10.1080/0907676X.2015.1026361" xml:space="preserve"> </ref>
+                        <ref target="https://doi.org/10.1080/0907676X.2015.1026361">
+                            <hi rend="color(4F81BD)">DOI:10.1080/0907676X.2015.1026361</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Roig-Sanz, Diana y Laura Fólica (2021): “Big Translation History. Data science applied to translated literature in the Spanish-speaking world, 1898-1945”, in: 
+                        <hi rend="italic">Translation Spaces</hi> 10,2: 231-259. DOI: 10.1075/ts.21012.roi
+                    </bibl>
+                    <bibl>Ryan, Marianne (2022): “Building Bibliodiversity”, in: 
+                        <hi rend="italic">Portal: Libraries and the Academy</hi> 22, 4:777-781.
+                        <ref target="https://doi.org/10.1353/pla.2022.0040" xml:space="preserve"> </ref>
+                        <ref target="https://doi.org/10.1353/pla.2022.0040">
+                            <hi rend="color(4F81BD)">DOI: 10.1353/pla.2022.0040</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Szpilbarg, Daniela (2017): “Entre el mercado y la política cultural: una mirada sociológica sobre la extraducción en Argentina. El caso del Programa Sur (2010-2012)”, in: 
+                        <hi rend="italic">El Taco en la Brea</hi> 4, 5: 1-16.
+                    </bibl>
+                    <bibl>Teichmann, Lisa Maria (2022). “Geomapping Bibliographic Translation Data from the German National Library Catalogue: A Casestudy”
+                        <ref target="https://doi.org/10.5281/zenodo.7058385" xml:space="preserve"> </ref>
+                        <ref target="https://doi.org/10.5281/zenodo.7058385">
+                            <hi rend="color(4F81BD)">DOI: 10.5281/zenodo.7058385</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>TraduCzechLit (dataset). 
+                        <ref target="https://traduczechlit.com/es">https://traduczechlit.com/es</ref>
+                    </bibl>
+                    <bibl>Vimr, Ondřej (2020): “Supply-Driven Translation: Compensating for Lack of Demand”, in: 
+                        <hi rend="italic">Translating the Literatures of Small European Nations</hi>. Liverpool: Liverpool University Press 48–68.
+                        <ref target="https://doi.org/10.3828/liverpool/9781789620528.003.0006" xml:space="preserve"> </ref>
+                        <ref target="https://doi.org/10.3828/liverpool/9781789620528.003.0006">
+                            <hi rend="color(4F81BD)">DOI: 10.3828/liverpool/9781789620528.003.0006</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Vimr, Ondřej (2022): “Choosing Books for Translation: A Connectivity Perspective on International Literary Flows and Translation Publishing”, in: Diana Roig-Sanz y Neus Rotger (eds.):
+                        <hi rend="italic" xml:space="preserve"> Global Literary Studies</hi>. Boston/Berlin: De Gruyter 279–300.
+                        <ref target="https://doi.org/10.1515/9783110740301-012" xml:space="preserve"> </ref>
+                        <ref target="https://doi.org/10.1515/9783110740301-012">
+                            <hi rend="color(4F81BD)">DOI: 10.1515/9783110740301-012</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Wakabayashi, Judy (2019): “Digital Approaches to Translation History”, in: 
+                        <hi rend="italic">The International Journal of Translation and Interpreting Research</hi> 11, 2: 132-45.
+                        <ref target="https://doi.org/10.12807/ti.111202.2019.a11" xml:space="preserve"> </ref>
+                        <ref target="https://doi.org/10.12807/ti.111202.2019.a11">
+                            <hi rend="color(4F81BD)">DOI: 10.12807/ti.111202.2019.a11</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Wischenbart, Rüdiger, Michaela Anna Fleischhacker y Miha Kovač (2020): “Diversity Report 2020. Trends in Literary Translation in Europe Authoring and Publishing Models, Market Developments and Sponsorship Policies in Austria, Czech Republic, Germany, France, Italy, Poland, Slovenia, Spain, and Sweden”, in: Verein für kulturelle Transfers.
+                        <ref target="https://www.npage.org/uploads/d8c3371f779dd882f602337ce0d952de4fba1d2c.pdf" xml:space="preserve"> </ref>
+                        <ref target="https://www.npage.org/uploads/d8c3371f779dd882f602337ce0d952de4fba1d2c.pdf">
+                            <hi rend="color(4F81BD)">https://www.npage.org/uploads/d8c3371f779dd882f602337ce0d952de4fba1d2c.pdf</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Zhou, Xiaoyan, Sun, Sanjun (2017): “Bibliography-based quantitative translation history”, in: 
+                        <hi rend="italic">Perspectives</hi> 25, 1: 98-119.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

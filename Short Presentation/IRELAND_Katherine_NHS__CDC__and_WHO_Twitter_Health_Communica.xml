@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="IRELAND_Katherine_NHS__CDC__and_WHO_Twitter_Health_Communica">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>NHS, CDC, and WHO Twitter Health Communication: A Preliminary Shiny App</title>
+                <author>
+                    <persName>
+                        <surname>Ireland</surname>
+                        <forename>Katherine</forename>
+                    </persName>
+                    <affiliation>University of Georgia, United States of America</affiliation>
+                    <email>katherine.ireland@uga.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-05T17:50:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>natural language processing</term>
+                    <term>R Shiny</term>
+                    <term>health communication</term>
+                    <term>Twitter communication</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>natural language processing</term>
+                    <term>open access methods</term>
+                    <term>social media analysis and methods</term>
+                    <term>text mining and analysis</term>
+                    <term>Humanities computing</term>
+                    <term>Linguistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">This work reports on ongoing and preliminary development of an R Shiny application to display and understand trends in health communication by three key public health agencies during 2020. Specifically, the data used for this application are a corpus of tweets by official accounts of the National Health Service (NHS), the Centers for Disease Control and Prevention (CDC), and the World Health Organization (WHO) throughout 2020. The dataset has been examined previously using different techniques through semantic analysis of trigrams and keywords (Ireland 2024) but has not been made available for users to interact with and analyze the texts. Figure 1 displays an example visualization of CDC trigrams for users to view.</p>
+            <p style="text-align: left; ">Figure 1: CDC Top Trigrams 2020 </p>
+            <figure>
+                <graphic n="1001" width="14.345477777777777cm" height="8.662316666666667cm" url="/tmp/tmpxk7z292i/Pictures/5c233166cf9a0ad2583a36c593d56eca.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">At present, the application only includes English language tweets, although the full dataset includes other languages like Spanish and Hindi. Linguistic data and characteristics are gathered and compiled using R, specifically the following packages: tidytext (Silge and Robinson 2016), udpipe (Wijffels 2021), tidyverse (Wickham et al. 2019) and quanteda (Benoit et al. 2018). Visualizations are created using ggplot2 from the tidyverse (Wickham and Grolemund 2017, Wickham et al. 2019).</p>
+            <p style="text-align: left; ">Related studies have considered the language of COVID-19 and of other health communication scenarios through news and social media, for example (Collins and Nerlich 2016, Gui et al. 2018, Hunt and Harvey 2015, Hunt and Brookes 2020, Semino and Koller 2020, Ireland 2024), but no studies have used R shiny to visualize textual analytics and differences in units like the three listed above. Additionally, the dataset provides a unique perspective on CDC, NHS, and WHO public health communication during the COVID-19 pandemic. Official accounts analyzed are available by request and are composed of over 2 million words.</p>
+            <p style="text-align: left; ">This presentation will highlight the current version of the Shiny application and visualizations and discuss additional plans for development. This work will be of interest to interdisciplinary researchers because of the methodologies involved and because of the topic area of public and governmental health communication on social media.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Arnold, T</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">. (2021). A tidy data model for natural 393 language processing using cleannlp. </hi>
+                        <hi rend="italic" style="font-size:10pt">IW3C2 (International World Wide Web Conference Committee).</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Collins, L., and Nerlich, B</hi>
+                        <hi style="font-size:10pt">. (2016): “Uncertainty discourses in the context of climate change: A corpus-assisted analysis of UK national newspaper articles”,</hi>
+                        <hi rend="italic" style="font-size:10pt">Communications.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> De Gruyter Mouton. (pp. 291-313).</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Feinerer, I.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2020): “Introduction to the tm Package: Text Mining in R”,</hi>
+                        <ref target="https://cran.r-project.org/web/packages/tm/vignettes/tm.pdf">
+                            <hi style="font-size:10pt">https://cran.r-project.org/web/packages/tm/vignettes/tm.pdf</hi>
+                        </ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Gabrielatos, C</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">. (2018): “Keyness Analysis: Nature, Metrics and Techniques”, in Taylor, C / Marchi, A. (eds.): </hi>
+                        <hi rend="italic" style="font-size:10pt">Corpus Approaches To Discourse: A Critical Review</hi>
+                        <hi style="font-size:10pt">. Routledge.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Gui, X., Wang, Y., Kou, Y., Reynolds, T. L., Chen, Y., Mei, Q., and Zheng, K</hi>
+                        <hi style="font-size:10pt">. (2018): “Understanding the Patterns of Health Information Dissemination on Social Media during the Zika Outbreak”, AMIA ... Annual Symposium proceedings. AMIA Symposium, 2017, 820–829.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Hunt, D., and Harvey, K.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2015): “Health Communication and Corpus Linguistics: Using Corpus Tools to Analyse Eating Disorder Discourse Online”, In:</hi>
+                        <hi rend="italic" style="font-size:10pt">Corpora and Discourse Studies</hi>
+                        <hi style="font-size:10pt">. Palgrave Advances in Language and Linguistics.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Hunt, D., and Brookes, G.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2020): </hi>
+                        <hi rend="italic" style="font-size:10pt">Corpus, Discourse and Mental Health</hi>
+                        <hi style="font-size:10pt">. Bloomsbury Publishing.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Ireland, K</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">. (2024): “Wash your hands: CDC, WHO, and NHS tweets in the #COVID19 pandemic”, </hi>
+                        <hi rend="italic" style="font-size:10pt">Applied Corpus Linguistics.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Python</hi>
+                        <hi style="font-size:10pt">. Version 3.7.4. July 8 2019.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="italic bold" style="font-size:10pt">R Core Team</hi>
+                        <hi rend="italic" style="font-size:10pt" xml:space="preserve">. (2014). R: A language and environment for statistical computing. </hi>
+                        <hi style="font-size:10pt">R Foundation for Statistical Computing. Vienna, Austria.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Semino, E., and Koller, V.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2020): “Talking about lockdown language”, Lancaster University Public Lecture.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Silge, J. and Robinson, D.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">(2016): </hi>
+                        <hi rend="italic" style="font-size:10pt">tidytext: Text mining and analysis using tidy data principles in r. JOSS, 1(3).</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Wickham, H., and Grolemund, G</hi>
+                        <hi style="font-size:10pt">. (2017):</hi>
+                        <hi rend="italic" style="font-size:10pt" xml:space="preserve"> R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. </hi>
+                        <hi style="font-size:10pt">1</hi>
+                        <hi rend="superscript" style="font-size:10pt">st</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> ed. O’Reilly Media, Inc.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Wickham et al.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2019). “Welcome to the tidyverse”,</hi>
+                        <hi rend="italic" style="font-size:10pt">Journal of Open Source Software</hi>
+                        <hi style="font-size:10pt">, 4(43), 1686,</hi>
+                        <ref target="https://doi.org/10.21105/joss.01686">
+                            <hi style="font-size:10pt">https://doi.org/10.21105/joss.01686</hi>
+                        </ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">WHO.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2009): “WHO: Public Health Campaigns: getting the message across”, WHO Press: Switzerland.</hi>
+                        <hi rend="bold" style="font-size:10pt">WHO.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2021): “WHO Coronavirus (COVID-19) Dashboard”, World Health Organization. covid19.who.int</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Wijffels, J. et al.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2023): “Udpipe: Tokenization, Parts of Speech Tagging, Lemmatization and Dependency Parsing with the ‘UDPipe’ ‘NLP’ Toolkit”. Version 0.8.11.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Zarcadoolas, C.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2010):</hi>
+                        <hi rend="italic" style="font-size:10pt" xml:space="preserve"> The simplicity complex: exploring simplified health messages in a complex world. Health Promotion International</hi>
+                        <hi style="font-size:10pt">. Oxford University Press.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

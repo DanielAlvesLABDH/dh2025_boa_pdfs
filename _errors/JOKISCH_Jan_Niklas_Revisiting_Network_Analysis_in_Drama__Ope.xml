@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="JOKISCH_Jan_Niklas_Revisiting_Network_Analysis_in_Drama__Ope">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Revisiting Network Analysis in Drama: Operational Challenges and Methodological Insights</title>
+                <author>
+                    <persName>
+                        <surname>Jokisch</surname>
+                        <forename>Jan Niklas</forename>
+                    </persName>
+                    <affiliation>Max Planck Institute for Empirical Aesthetics, Germany</affiliation>
+                    <email>jan.jokisch@ae.mpg.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Rojas Castro</surname>
+                        <forename>Antonio</forename>
+                    </persName>
+                    <affiliation>Eberhard Karls Universität Tübingen, Germany</affiliation>
+                    <email>antonio.rojas-castro@uni-tuebingen.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>drama</term>
+                    <term>network analysis</term>
+                    <term>methodology</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>meta-criticism (reflections on digital humanities and humanities computing)</term>
+                    <term>network analysis and graphs theory and application</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>Humanities computing</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">Network analysis offers powerful tools for exploring character dynamics in dramatic texts, but key methodological choices remain under
+                <hi style="font-family:Cambria Math">‐</hi>specified. This paper evaluates the precision and validity of common segmentation strategies—such as act
+                <hi style="font-family:Cambria Math">‐</hi>scene divisions and speech
+                <hi style="font-family:Cambria Math">‐</hi>based presence—by comparing them against a “gold
+                <hi style="font-family:Cambria Math">‐</hi>standard” derived from fully encoded stage directions.
+            </p>
+            <p style="text-align: left; ">The use of network analysis for research was popularized by Solomon Marcus in the 1970s (Marcus 1973). As a part of a movement called "Mathematical Drama Analysis," it sought to interpret dramatic texts merely based on their character constellations and the mathematical metrics that could be derived from them. Marcus imagined the process through the lens of a unique spectator, who is only capable of perceiving specific character constellations on stage, which undergo changes through entrances and exits (Marcus 1973: 289–91). These changes can be represented as a binary matrix, which maps the characters onto the scenes they appear in. This matrix, in turn, can be used to represent the play as a co-occurrence network of the characters. Moretti (Moretti 2013) re-introduced this method into literary studies in the early 2010s, which has become one of the central methods within digital drama research (Escobar Varela 2021). </p>
+            <p style="text-align: left; ">While the method seems straightforward and almost commonplace in Digital Humanities, it relies on some unclear principles. According to Marcus and others, what the binary matrix tracks is the interaction of characters in scenes, with scenes being the segments between entrances and/or exits. In 1988, Draxler had already pointed out the lack of terminological specificity in this approach (Draxler 1988: 11–14). Thus, at least three key components of network analyses are unclear: </p>
+            <list type="unordered">
+                <item>What constitutes an exit or entrance—is a character hiding, sleeping or dead on stage still present? </item>
+                <item>In certain ambiguous cases, what constitutes a character—e.g., is the “generic” character identified with the speech prefix "SOLDADO" (Soldier) in the second act of Calderón's 
+                    <hi rend="italic">Afectos de odio y amor</hi> identical with any of the soldiers, e.g., "SOLDADO 1.º" (first soldier), in the third act of the same play? 
+                </item>
+                <item>What does it mean for two characters to have an interaction? As for Marcus, interaction is merely co-occurrence on stage, while for Moretti, "[…] two characters are linked if some words have passed between them: an interaction is a speech act." (Moretti 2013: 214)</item>
+            </list>
+            <p style="text-align: left; ">These three key components can be found in many plays published by DraCor, one of the most prominent ongoing digital drama research initiatives (Fischer 2019). DraCor segments plays using act and scene divisions and measures "scenic co-presence," defined as co-occurrence of characters with assigned speeches within scenes (Trilcke 2022: 568). While this operationalization is practical for large-scale analysis, it relies more on convenience than robust theoretical underpinnings. Scene divisions in dramatic texts are historically contingent, reflecting authorial or editorial decisions, not necessarily marking the span between entrances and/or exits (Pfister 2001: 312-318). Similarly, equating speech prefixes with character presence overlooks nuances like silent or off-stage characters. Scaling up from close reading to distant reading inevitably entails some loss of accuracy. However, understanding and quantifying this "loss" is crucial to ensure that the resulting metrics remain meaningful. To quantify these effects, we select a small corpus of Calderón de la Barca and Christopher Marlowe plays encoded in TEI XML, where every entrance and exit is explicitly marked. This analysis highlights critical trade-offs between operational convenience and methodological rigor. Ultimately, we aim to offer insights into improving network analysis for drama research and refining the balance between scalability and accuracy in digital humanities methodologies.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Draxler, Christoph</hi> (1988): “Computerunterstützte Dramenanalyse”. Magister, Institut für romanische Philologie, Ludwig-Maximilians-Universität München. DOI: 
+                        <ref target="https://doi.org/10.5282/ubm/epub.29404">https://doi.org/10.5282/ubm/epub.29404</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Escobar Varela, Miguel</hi> (2021) 
+                        <hi rend="italic">Theater as Data: Computational Journeys into Theater Research</hi>. Ann Arbor, MI: University of Michigan Press. DOI: 
+                        <ref target="https://doi.org/10.3998/mpub.11667458">https://doi.org/10.3998/mpub.11667458</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Fischer, Frank / Börner, Ingo / Göbel, Mathia / Hechtl, Angelika / Kittel, Christopher / Milling, Carsten / Trilcke, Peer</hi> (2019): “Programmable Corpora: Introducing DraCor, an Infrastructure for the Research on European Drama”. DOI: https://doi.org/10.5281/ZENODO.4284002.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Marcus, Solomon</hi> (1973) 
+                        <hi rend="italic">Mathematische Poetik</hi>. Translated by Edith Mândroiu. Linguistische Forschungen 13. Frankfurt am Main: Athenäum Verlag.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Moretti, Franco </hi>(2013): “Network Theory, Plot Analysis”, in: 
+                        <hi rend="italic">Distant Reading</hi>, 211–40. London: Verso.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Pfister, Manfred</hi> (2000): 
+                        <hi rend="italic">Das Drama. Theorie und Analyse</hi> 10. München: Wilhelm Fink Verlag.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Trilcke, Peer</hi> (2022). “Small Worlds, Beat Charts und die Netzwerkanalyse dramatischer Texte. Reflexionen aus dem Rabbit Hole”, in: 
+                        <hi rend="italic">Digitale Literaturwissenschaft</hi>, edited by Fotis Jannidis, 563–96. Germanistische Symposien. Stuttgart: J.B. Metzler. DOI: 
+                        <ref target="https://doi.org/10.1007/978-3-476-05886-7_23">https://doi.org/10.1007/978-3-476-05886-7_23</ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

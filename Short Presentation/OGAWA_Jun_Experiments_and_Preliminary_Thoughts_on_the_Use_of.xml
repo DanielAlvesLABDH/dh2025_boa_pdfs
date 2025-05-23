@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="OGAWA_Jun_Experiments_and_Preliminary_Thoughts_on_the_Use_of">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Experiments and Preliminary Thoughts on the Use ofGraph RAG in the Humanities</title>
+                <author>
+                    <persName>
+                        <surname>Ogawa</surname>
+                        <forename>Jun</forename>
+                    </persName>
+                    <affiliation>The University of Tokyo</affiliation>
+                    <email>htjk6513khbk@yahoo.co.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Iwata</surname>
+                        <forename>Naoya</forename>
+                    </persName>
+                    <affiliation>Nagoya University</affiliation>
+                    <email>iwata.naoya.y7@f.mail.nagoya-u.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Tanaka</surname>
+                        <forename>Ikko</forename>
+                    </persName>
+                    <affiliation>J. F. Oberlin University</affiliation>
+                    <email>ikkotana@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ohmukai</surname>
+                        <forename>Ikki</forename>
+                    </persName>
+                    <affiliation>The University of Tokyo</affiliation>
+                    <email>i2k@l.u-tokyo.ac.jp</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Graph RAG</term>
+                    <term>AI</term>
+                    <term>LLM</term>
+                    <term>knowledge graph</term>
+                    <term>digital history</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>information retrieval and querying algorithms and methods</term>
+                    <term>semantic analysis</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>Computer science</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Background</head>
+                <p>The authors are developing 
+                    <hi rend="italic">Humanitext Antiqua</hi> (hereafter 
+                    <hi rend="italic">Humanitext</hi>), an AI dialogue system for classical studies designed to generate reliable, source-cited answers using Retrieval Augmented Generation (RAG) [1]. While RAG retrieves documents relevant to queries through vector similarity, it faces significant limitations, particularly in capturing horizontal relationships between documents and incorporating external knowledge beyond the texts. To address these challenges, the authors are investigating the potential benefits of applying the Graph RAG method.
+                </p>
+                <p>Graph RAG enhances the RAG retrieval process by integrating knowledge extraction from knowledge graphs, enabling the use of semantically rich and well-structured information [2]. While Microsoft’s GraphRAG Project indicates that their approach outperforms conventional RAG [3], its applicability to the humanities has yet to be thoroughly explored. This study seeks to bridge this gap by evaluating Graph RAG for the humanities through the experimental construction of a knowledge graph, the implementation of a Graph RAG system, and a detailed analysis of its accuracy.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Construction of a Knowledge Graph</head>
+                <p>The first volume of Caesar’s 
+                    <hi rend="italic">Gallic Wars</hi> was chosen as a case study. A knowledge graph was constructed using English-translated text from the Perseus Digital Library [4], with automated extraction performed by LLMGraphTransformer (LGT) [5], utilizing the GPT-4o model. The resulting knowledge graph was stored in Neo4j, enabling searches through the Cypher query language (Figure 1).
+                </p>
+                <figure>
+                    <graphic n="1001" width="15.000111111111112cm" height="7.129638888888889cm" url="/tmp/tmpxaztoosd/Pictures/3c1be99e5dcd12854a65cd0cbcb342d8.png" rend="inline"/>
+                </figure>
+                <p style="text-align: center;">
+                    <hi rend="bold" style="font-size:10pt">Figure 1:</hi>
+                    <hi style="font-size:10pt" xml:space="preserve"> Knowledge graph of Caesar’s </hi>
+                    <hi rend="italic" style="font-size:10pt">Gallic Wars</hi>
+                    <hi style="font-size:10pt" xml:space="preserve"> (Book 1) stored in Neo4j</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Implementation and Evaluation of Graph RAG</head>
+                <p>A Graph RAG system processes input queries by tokenizing them to identify entities, uses these entities as starting nodes, and retrieves connected nodes and relationships within two hops. The retrieved elements are then provided as contextual information to an LLM, which generates natural language responses.</p>
+                <p>To assess the system's performance, eight interpretative questions related to 
+                    <hi rend="italic">Gallic Wars</hi> Book 1 were generated using ChatGPT (Table 1). Three retrieval methods were tested:
+                </p>
+                <list type="ordered">
+                    <item>Conventional RAG (Vector Similarity Only)</item>
+                    <item>Graph RAG (Graph + Vector Similarity)</item>
+                    <item>
+                        <hi rend="bold">Graph Only RAG</hi>
+                    </item>
+                </list>
+                <p>Responses were generated using GPT-4o and Claude-3.5 Sonnet.</p>
+                <p style="text-align: center;">
+                    <hi rend="bold" style="font-size:10pt">Table 1</hi>
+                    <hi style="font-size:10pt">: Questions concerning the interpretation of the text</hi>
+                </p>
+                <figure>
+                    <graphic n="1002" width="13.890625cm" height="3.128147222222222cm" url="/tmp/tmpxaztoosd/Pictures/3c1be99e5dcd12854a65cd0cbcb342d8.png" rend="inline"/>
+                </figure>
+                <p>Four Roman history experts evaluated the responses based on the following criteria, using a five-point scale:</p>
+                <list type="ordered">
+                    <item>
+                        <hi rend="bold">Accuracy of Information</hi>: Does the response accurately reflect the content of the text?
+                    </item>
+                    <item>
+                        <hi rend="bold">Relevance to the Question</hi>: Does the response align with the intent of the question?
+                    </item>
+                    <item>
+                        <hi rend="bold">Comprehensiveness of Information</hi>: Does the response cover all relevant information?
+                    </item>
+                    <item>
+                        <hi rend="bold">Clarity of the Answer</hi>: Is the response clear, well-structured, and logically consistent?
+                    </item>
+                </list>
+                <p>The average scores for each retrieval method are presented in Figure 2.</p>
+                <figure>
+                    <graphic n="1003" width="11.598088888888888cm" height="6.958308333333333cm" url="/tmp/tmpxaztoosd/Pictures/3c1be99e5dcd12854a65cd0cbcb342d8.png" rend="inline"/>
+                </figure>
+                <p style="text-align: center;">
+                    <hi rend="bold" style="font-size:10pt">Figure 2:</hi>
+                    <hi style="font-size:10pt" xml:space="preserve"> Average scores of 5-point scale evaluation</hi>
+                </p>
+                <p>The results indicate no significant difference between Conventional RAG and Graph RAG (Graph + Vector Similarity). However, the Graph Only method performed considerably worse, highlighting the system's reliance on vector similarity for Graph RAG retrieval accuracy. This suggests that current limitations in knowledge graph-based retrieval significantly hinder the system's overall effectiveness. </p>
+                <p>To delve deeper into this issue, eight simple factual questions were generated using ChatGPT (Table 2), and answers were produced using both Graph Only and Vector Only retrieval methods.</p>
+                <p style="text-align: center;">
+                    <hi rend="bold" style="font-size:10pt" xml:space="preserve">Table 2: </hi>
+                    <hi style="font-size:10pt">Questions concerning the facts in the text</hi>
+                </p>
+                <figure>
+                    <graphic n="1004" width="13.820069444444444cm" height="3.1061638888888887cm" url="/tmp/tmpxaztoosd/Pictures/3c1be99e5dcd12854a65cd0cbcb342d8.png" rend="inline"/>
+                </figure>
+                <p>These questions were designed for binary correctness evaluation, with the results summarized in Table 3 (triangles denote partial answers for questions requiring multiple responses).</p>
+                <p style="text-align: center;">
+                    <hi rend="bold" style="font-size:10pt" xml:space="preserve">Table 3: </hi>
+                    <hi style="font-size:10pt" xml:space="preserve">Comparison between Graph and Vector </hi>
+                </p>
+                <figure>
+                    <graphic n="1005" width="9.525cm" height="4.00445cm" url="/tmp/tmpxaztoosd/Pictures/3c1be99e5dcd12854a65cd0cbcb342d8.png" rend="inline"/>
+                </figure>
+                <p>The results clearly show that Graph Only retrieval currently falls short in accuracy. For example, in Q2, which inquired about individuals holding magistracies in the Aedui tribe, the expected answers—Liscus and Divitiacus—were not retrieved. An analysis of the corresponding graph section revealed the following relationships:</p>
+                <list type="unordered">
+                    <item>
+                        <hi rend="bold">Liscus</hi> – INVESTED_WITH → 
+                        <hi rend="bold">Vergobretus</hi> – STYLE → 
+                        <hi rend="bold">Aedui</hi>
+                    </item>
+                    <item>
+                        <hi rend="bold">Divitiacus</hi> – MEMBER_OF → 
+                        <hi rend="bold">Aedui</hi>
+                    </item>
+                </list>
+                <p>Here, “Vergobretus” represents the magistracy title, expressed through the “STYLE” relationship, while Liscus is linked via “INVESTED_WITH.” However, the term “magistrate” was not explicitly represented in the graph, resulting in failed retrieval. Furthermore, no information beyond tribal affiliation was available for Divitiacus.</p>
+                <p>These findings underscore how the quality and structure of a knowledge graph significantly influence the performance of Graph RAG, emphasizing the need for more robust and semantically expressive graphs. Concerning this, it should be noted that supplementing the graph with missing information successfully resolved previously failed queries. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Evaluation of the Knowledge Graph</head>
+                <p>Recognizing the critical role of knowledge graph quality, this study conducted a preliminary evaluation focused on nodes, using their accuracy as a quantitative indicator of graph performance.</p>
+                <p>Entities from the first volume of 
+                    <hi rend="italic">Gallic Wars</hi> in the categories ‘Group,’ ‘Person,’ ‘Region,’ and ‘Settlement’ were manually extracted as ground truth. Nodes in the constructed knowledge graph corresponding to these categories were assessed based on Precision, Recall, and F1 Score. The graphs were constructed and compared using both GPT-4o and Claude-3.5 Sonnet.
+                </p>
+                <p style="text-align: center;">
+                    <hi rend="bold" style="font-size:10pt">Table 4:</hi>
+                    <hi style="font-size:10pt" xml:space="preserve"> Evaluation of the nodes contained in the knowledge graph</hi>
+                </p>
+                <figure>
+                    <graphic n="1006" width="12.144375cm" height="4.244908333333333cm" url="/tmp/tmpxaztoosd/Pictures/3c1be99e5dcd12854a65cd0cbcb342d8.png" rend="inline"/>
+                </figure>
+                <p>The evaluation revealed consistently low precision and recall for ‘Region,’ whereas ‘Group’ and ‘Person’ demonstrated relatively high accuracy. Moreover, the performance for ‘Settlement’ varied considerably depending on the LLM used for graph construction. These findings indicate that node extraction accuracy serves as a meaningful metric for assessing the quality of knowledge graphs.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p>This study highlights that, at least for the text selected, current Graph RAG does not significantly surpass conventional RAG in performance, with substantial challenges remaining—particularly in knowledge extraction from graphs. However, the findings suggest that enhancing the quality of knowledge graphs could enable more precise information retrieval. </p>
+                <p>While this study was limited to a single text, the potential of Graph RAG could greatly expand through the integration of metadata and external knowledge, facilitating broader interpretations beyond the capabilities of conventional RAG. However, realizing this potential requires:</p>
+                <list type="ordered">
+                    <item>Developing robust evaluation methods for Graph RAG outputs and knowledge graphs, akin to Ragas for conventional RAG [6].</item>
+                    <item>Establishing workflows for incorporating expert knowledge into graph construction and scaling the development of high-quality knowledge graphs.</item>
+                </list>
+                <p>Future research will address these challenges, driving the advancement of Graph RAG systems for practical applications in the humanities. By improving graph quality and integrating diverse knowledge sources, Graph RAG has the potential to complement and enhance conventional RAG systems, opening new avenues not only for 
+                    <hi rend="italic">Humanitext</hi> but also for a wide range of AI dialogue systems in humanities research.
+                </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Iwata, N., Tanaka, I. and Ogawa, J., ‘Improving Semantic Search Accuracy of Classical Texts Through Context-Oriented Translation,’ 
+                        <hi rend="italic">The Proceedings of Jinmoncon 2024</hi>, IPSJ, Vol. 2024. 
+                    </bibl>
+                    <bibl>Peng, B. et al., ‘Graph Retrieval-Augmented Generation: A Survey,’ 
+                        <ref target="https://arxiv.org/abs/2408.08921">https://arxiv.org/abs/2408.08921</ref> [cs.AI], 10 Sep. 2024. 
+                    </bibl>
+                    <bibl>Edge, D. et al., ‘From Local to Global: A Graph RAG Approach to Query-Focused Summarization,’ 
+                        <ref target="https://arxiv.org/abs/2404.16130">https://arxiv.org/abs/2404.16130</ref> [cs.CL], 24 Apr. 2024. 
+                    </bibl>
+                    <bibl>https://scaife.perseus.org/reader/urn:cts:latinLit:phi0448.phi001.perseus-eng2:1. </bibl>
+                    <bibl>
+                        <ref target="https://python.langchain.com/api_reference/experimental/graph_transformers/langchain_experimental.graph_transformers.llm.LLMGraphTransformer.html">https://python.langchain.com/api_reference/experimental/graph_transformers/langchain_experimental.graph_transformers.llm.LLMGraphTransformer.html</ref>. 
+                    </bibl>
+                    <bibl style="text-align: left; ">Es, S. et al., ‘RAGAS: Automated Evaluation of Retrieval Augmented Generation,’ 
+                        <ref target="https://arxiv.org/abs/2309.15217">https://arxiv.org/abs/2309.15217</ref> [cs.CL], 26 Sep. 2023.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="CASAVOLA_Silvia_Stereoscopic_Journals__An_archive_interface_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Stereoscopic Journals: An archive interface entangling diary segments with photo series</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Casavola</surname>
+                        <forename>Silvia</forename>
+                    </persName>
+                    <affiliation>Fachhochschule Potsdam, Germany; Politecnico di Milan, Italy</affiliation>
+                    <email>silvia.casavola@fh-potsdam.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Colombo</surname>
+                        <forename>Gabriele</forename>
+                    </persName>
+                    <affiliation>Politecnico di Milan, Italy</affiliation>
+                    <email>gabriele1.colombo@polimi.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Dörk</surname>
+                        <forename>Marian</forename>
+                    </persName>
+                    <affiliation>Fachhochschule Potsdam, Germany</affiliation>
+                    <email>marian.doerk@fh-potsdam.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T11:15:55</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>photo archives</term>
+                    <term>diaries</term>
+                    <term>information design</term>
+                    <term>interface design</term>
+                    <term>digital storytelling</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>data publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>public humanities collaborations and methods</term>
+                    <term>Cultural studies</term>
+                    <term>Design studies</term>
+                    <term>Humanities computing</term>
+                    <term>Media studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmpddweuzd6/Pictures/7243acd0117639947848e956273024cc.png"/>
+                </figure>Figure 1: The archive contains various materials, including photographs, diaries, contact sheets, previously curated publications, and metadata.
+            </p>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction </head>
+                <p>Archives have long been the subject of critical inquiry and, more recently, of experimentation with the new possibilities offered by computation and new media (Baldacci 2016). Today, our memory palaces “have much more permeable walls than their 19th and 20th century predecessors” (Burdick et al. 2016: 49). The ubiquity of the web and digital devices offers unprecedented tools for memory institutions and their visitors to access, interpret, create, and share information, akin to the vision of “living archives” (Dekker 2017). </p>
+                <p>Within this context, information design emerges as a critical interdisciplinary practice that integrates perspectives from humanities, computing, and design to rethink the form and function of interfaces to our cultural heritage. Foundational principles like Shneiderman's (1996) visual information seeking mantra—“overview first, zoom and filter, then details on demand”—are joined by commitments to serendipity, generosity, and criticality (Dörk et al. 2011; Thudt et al. 2012; Glinka et al. 2015; Whitelaw 2015). These approaches aim to address the diverse needs of different audiences, from researchers to casual visitors, while supporting multiple perspectives and pathways through archival material (Glinka et al. 2017; Windhager et al. 2019).</p>
+                <p>This research, part of the Granularities of Dispersion and Materiality (GraDiM) project, focuses on the Frédéric Brenner Archive. Brenner, a photographer who spent forty years documenting Jewish diasporic communities worldwide, has amassed a complex collection of over 100,000 photographs, personal diaries, and other materials. These artifacts capture diverse cultural contexts and reflect Brenner’s anthropological and artistic approaches (see figure 1). </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpddweuzd6/Pictures/7243acd0117639947848e956273024cc.png"/>
+                    </figure>Figure 2: Connections between diaries and photos series in the FB Archive.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Interfacing narratives and data </head>
+                <p>The archive is rich in narrative potential, particularly through its integration of diaries that provide context, personal reflections, and ethnographic insights complementing the photographic work. Regarding the relationship between narrative and database, Manovich (2001: 226) suggested the famous definition of “natural enemies”, as the two seem to operate in tension. Hayles (2012: 176) reframed this relationship as “natural symbionts,” emphasizing their mutual potential when combined thoughtfully. As for the role of texts, Bilansky (2016) pointed out, after Latham (2004), that the rise of the database rather introduced a new form of textuality, both different from the cases of traditional archives and “living literature”, and popularized a new way of reading. Arguably, databases can serve as substrates for storytelling, while narratives help structure and humanize data, offering interpretive entry points. Especially in journalistic contexts, storytelling techniques are already used to provide contextual information for data visualizations (Segel / Heer 2010; Hullman et al. 2013).</p>
+                <p>In this project, Brenner’s diaries provide a foundation for exploring the interplay of narrative and archival materials. Personal storytelling, as seen in ethnographic and historical communication, has proven effective in conveying complex themes and fostering emotional connections (Ladeira / Marsden 2014). For photographic collections, researchers have developed methods to extract and reorganize archival content into linear, networked, or screen-like narrative structures (Zeng et al. 2022). These approaches inform the design of an archive interface, Stereoscopic Journals, that combines textual and visual materials in dynamic ways (see figure 2). </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Intermediality and design inspiration </head>
+                <p>Inevitable reference points are drawn from centuries of paper-based textuality, centred around the constraints of print and the format of the book (Drucker 2014). Bibliographic elements like indices, page markers, and captions, rooted in physical necessity, still form central conventions of digital interfaces. The discourse that relates old and new media often emphasizes those with prominent features of intermediality, like cinema (Manovich 2001) and comics (McCloud 1993; Bach et al. 2018), which demonstrate how the interplay of different media can create compelling narratives (Grishakova / Ryan 2011). Another example is the photo-novel: while remaining an underexplored medium, its integration of sequential storytelling, layout, text and photographs can provide a creative model for intermedial interfaces (Baetens / Bleyen 2010). </p>
+                <p>For the design of Stereoscopic Journals, we draw on these traditions, aiming to present Brenner’s archival materials in ways that balance guidance and exploration. A central challenge is navigating the tension between linear narrative flows and open-ended discovery. Inspired by experimental literary techniques like William Burroughs’ “cut-up method,” which deconstructs and reassembles text to create new meanings, the interface encourages viewers to engage in both structured and serendipitous exploration. It is no surprise that the cut-up technique has been a reference for authors of electronic literature, for its affinity with the combinatorial techniques underlying generative text and non-linear narratives (Hayles 2008). </p>
+                <p>Designing interfaces that mediate cultural data requires rethinking traditional user interface paradigms. Instead of privileging efficiency and simplicity, “cultural interfaces” (Manovich 2001) can benefit from embracing complexity and multiplicity (Burdick et al. 2016). Contemporary approaches to digital cultural heritage visualizations move beyond search-centric and grid-based displays (Windhager et al. 2019). Instead, they explore multifaceted, interactive information spaces, often incorporating diverse forms of abstraction to encourage a profound exploration and understanding of the represented material. This development aligns with design principles such as serendipity, generosity, and criticality. While serendipity fosters the accidental discovery of connections within the collection (Thudt et al. 2012), generous interfaces aim at revealing its complexity and abundance without overwhelming viewers (Whitelaw 2015). A critical approach makes visitors more sensitive towards absences, biases, and exclusions (Glinka et al. 2015).</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpddweuzd6/Pictures/7243acd0117639947848e956273024cc.png"/>
+                    </figure>
+                    <anchor xml:id="id_docs-internal-guid-72c93e0e-7fff-bc7b-6613-ea6cd28f42ea"/>
+                    <anchor xml:id="id_docs-internal-guid-94585d7c-7fff-9f67-a709-d15a874da4be"/>Figure 3: The Stereoscopic Journals interface juxtaposes photo series (left) and passages of diaries (right).
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Towards a stereoscopic view </head>
+                <p>Inspired by practices from intermediality and cultural visualization, the design of Stereoscopic Journals integrates two parallel streams: one presenting diary segments and the other displaying photo series (see figure 3). The interface incorporates semantic linkages and scroll-based anchors to synchronize these streams, offering viewers an experience that is both linear and interactive. </p>
+                <p>Drawing on the prevalence of scroll-based interfaces in data journalism and faceted filtering in collection interfaces, the interface allows the exploration of individual photographs and the perusal of diary episodes, while providing contextual access to larger thematic and relational structures. This dual approach—balancing guided storytelling with open-ended navigation—addresses the diverse needs from casual browsers to dedicated researchers. Key features of the resulting interface are: </p>
+                <list type="unordered">
+                    <item>
+                        <hi rend="bold">Dual content streams:</hi> Textual and photographic materials are presented in synchronized vertical streams. The interface allows the reading of diary passages while viewing related photo series side-by-side. This pairing affords a deeper understanding of the contexts behind Brenner’s work, and engages visitors through the intermedial storytelling.
+                    </item>
+                </list>
+                <list type="unordered">
+                    <item>
+                        <hi rend="bold">Semantic linkages:</hi> Semantic connections between diary entries and photographs are encoded as “scroll anchors,” acting as keyframes within the narrative. These anchors guide through a curated flow but also serve as access points for deeper exploration.
+                    </item>
+                    <item>
+                        <hi rend="bold">Dynamic folding:</hi> Drawing inspiration from interactive visualization techniques (Brüggemann et al. 2020), the interface incorporates folding mechanisms in both content streams. Viewers can select entities (e.g., people, places, or keywords) to reorganize the interface around thematic relationships rather than temporal progression; as a consequence, the content that is not relevant is folded into minimal slices. Switches between different selections are accompanied by smooth transitions, useful to provide continuity and maintain engagement.
+                    </item>
+                    <item>
+                        <hi rend="bold">Bibliographic affordances:</hi>
+                        <hi rend="italic"> </hi>Borrowing from the traditions of print design, the interface incorporates established conventions such as annotations, cross-references, and visual markers. These elements guide navigation and create a sense of familiarity while leveraging the flexibility of digital media.
+                    </item>
+                </list>
+                <p>The design process involved iterative design, prototyping, and feedback. Preliminary work on Brenner’s personal and spontaneous diaries required significant effort to prepare the material for computation. Semantic tagging and database structuring enabled the creation of meaningful links between text and images. </p>
+                <p>Feedback sessions with collaborators and external evaluators revealed diverse attitudes toward the interface’s dual modes of interaction. Some people emphasized the feature of guidance, while others highlighted the serendipity of open exploration. This polarity was viewed as a strength, reflecting the project’s goal to cater to multiple preferences. Participants highlighted the playful nature of the interface and its ability to evoke curiosity about the archive’s content. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion and outlook </head>
+                <p>The Stereoscopic Journals project illustrates how digital tools can transform archives into dynamic spaces. By combining narrativity, interactivity, and intermediality, the interface provides a model for engaging diverse audiences with complex cultural collections. Its design approach underscores the potential of archives not merely as repositories of information but as platforms for storytelling, discovery, and critical engagement. </p>
+                <p>Looking ahead, the interface offers opportunities for further refinement and application. Expanding its modular framework could allow integration with other archival collections, adapting the system to different types of narrative and data. Additionally, enhancing the platform with user-generated content or collaborative annotation tools could deepen engagement and foster community-driven exploration of cultural heritage.</p>
+                <p>The Stereoscopic Journals interface exemplifies a contemporary shift in archival practices—one that embraces the richness of ambiguity, multiplicity, and subjectivity. It aligns with broader trends in digital humanities to democratize access to cultural memory while challenging traditional notions of hierarchy and linearity in archival representation. Through this project, the photo archive becomes more than a collection of artifacts—it becomes an active participant in the creation of new meanings and connections. </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Bach, Benjamin / Wang, Zezhong / Farinella, Matteo / Murray-Rust, Dave / Henry Riche, Nathalie</hi> (2018): “Design patterns for data comics”, in: 
+                        <hi rend="italic">Proceedings of the 2018 CHI conference on human factors in computing systems,</hi> paper 38. DOI: 
+                        <ref target="https://doi.org/10.1145/3173574.3173612">10.1145/3173574.3173612</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Baetens, Jan / Bleyen, Mieke</hi> (2010): “Photo narrative, sequential photography, photonovels”, in: Grishakova, Marina / Ryan, Marie-Laure (eds.): 
+                        <hi rend="italic">Intermediality and Storytelling.</hi> Berlin: De Gruyter 165–182. DOI: 
+                        <ref target="https://doi.org/10.1515/9783110237740.165">10.1515/9783110237740.165</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Baldacci, Cristina </hi>(2016): 
+                        <hi rend="italic">Archivi impossibili. Un’ossessione dell’arte contemporanea.</hi> Monza: Johan &amp; Levi.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Bilansky, Alan</hi> (2016): “Search, Reading, and the Rise of Database”, in: 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi> 32, 3: 511–527. DOI: 
+                        <ref target="https://doi.org/10.1093/llc/fqw023">10.1093/llc/fqw023</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Brüggemann, Viktoria / Bludau, Mark-Jan / Dörk, Marian</hi> (2020): “The Fold: Rethinking Interactivity in Data Visualization”, in: 
+                        <hi rend="italic">DHQ: Digital Humanities Quarterly</hi> 14, 3 &lt;
+                        <ptr target="http://www.digitalhumanities.org/dhq/vol/14/3/000487/000487.html"/>&gt; [24.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Burdick, Anne / Drucker, Johanna / Lunenfeld, Peter / Presner, Todd / Schnapp, Jeffrey</hi> (2016): 
+                        <hi rend="italic">Digital_Humanities.</hi> Cambridge: MIT Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Dekker, Annet</hi> (ed.) (2017): 
+                        <hi rend="italic">Lost and Living (In) Archives: Collectively Shaping New Memories.</hi> Amsterdam: Valiz.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Dörk, Marian / Carpendale, Sheelagh / Williamson, Carey L.</hi> (2011): “The Information Flaneur: A Fresh Look at Information Seeking”, in: 
+                        <hi rend="italic">Proceedings of the SIGCHI Conference </hi>
+                        <hi rend="italic">on Human Factors in Computing Systems (CHI '11)</hi>: 1215–1224. DOI: 
+                        <ref target="https://doi.org/10.1145/1978942.1979124">10.1145/1978942.1979124</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Drucker, Johanna</hi> (2014): 
+                        <hi rend="italic">Graphesis: Visual Forms of Knowledge Production.</hi> Cambridge: Harvard University Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Glinka, Katrin / Meier, Sebastian / Dörk, Marian</hi> (2015): “Visualising the Un-seen: Towards Critical Approaches and Strategies of Inclusion in Digital Cultural Heritage Interfaces”, in: Busch, Carsten / Sieck, Jürgen (eds.): 
+                        <hi rend="italic">Kultur und Informatik: Cross Media.</hi> Berlin: vwh 105–118.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Glinka, Katrin / Pietsch, Christopher / Dörk, Marian</hi> (2017): “Past Visions and Reconciling Views: Visualizing Time, Texture and Themes in Cultural Collections”, in: 
+                        <hi rend="italic">DHQ: Digital Humanities Quarterly </hi>11, 2 &lt;
+                        <ptr target="http://www.digitalhumanities.org/dhq/vol/11/2/000290/000290.html"/>&gt; [24.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Grishakova, Marina / Ryan, Marie-Laure</hi> (2011): “Editors’ Preface” in: Grishakova, Marina / Ryan, Marie-Laure (eds.): 
+                        <hi rend="italic">Intermediality and Storytelling.</hi> Berlin: De Gruyter 1–7. DOI: 
+                        <ref target="https://doi.org/10.1515/9783110237740">10.1515/9783110237740</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hayles, N. Katherine</hi> (2008): 
+                        <hi rend="italic">Electronic literature: New horizons for the literary. </hi>Notre Dame: University of Notre Dame Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hayles, N. Katherine </hi>(2012): 
+                        <hi rend="italic">How we think. Digital Media and Contemporary Technogenesis.</hi> Chicago: The University of Chicago Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hullman, Jessica / Drucker, Steven / Henry Riche, Nathalie / Lee, Bongshin / Fisher, Danyel / Adar, Eytan</hi> (2013): “A Deeper Understanding of Sequence in Narrative Visualization”, in: 
+                        <hi rend="italic">IEEE Transactions on Visualization and Computer Graphics</hi> 19, 12: 2406–2415. DOI: 
+                        <ref target="https://doi.org/10.1109/TVCG.2013.119">10.1109/TVCG.2013.119</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Ladeira, Ilda / Marsden, Gary</hi> (2014): “Interactive personal storytelling: an ethnographic study and simulation of apartheid-era narratives”, in: 
+                        <hi rend="italic">Proceedings of the 2014 Conference on Designing Interactive Systems:</hi> 249–258. DOI: 
+                        <ref target="https://doi.org/10.1145/2598510.2598597">10.1145/2598510.2598597</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Latham, Sean</hi> (2004): “New age scholarship: the work of criticism in the age of digital reproduction”, in: 
+                        <hi rend="italic">New Literary History</hi> 35: 411–426. DOI: 
+                        <ref target="https://doi.org/10.1353/nlh.2004.0043">10.1353/nlh.2004.0043</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Manovich, Lev</hi> (2001): 
+                        <hi rend="italic">The Language of New Media.</hi> Cambridge: MIT press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">McCloud, Scott</hi> (1993): 
+                        <hi rend="italic">Understanding comics: The invisible art.</hi> Northampton: Mass.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Segel, Edward / Heer, Jeffrey</hi> (2010): “Narrative Visualization: Telling Stories with Data”, in: 
+                        <hi rend="italic">IEEE Transactions on Visualization and Computer Graphics</hi> 16, 6: 1139–1148. DOI: 
+                        <ref target="https://doi.org/10.1109/TVCG.2010.179">10.1109/TVCG.2010.179</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Shneiderman, Ben</hi> (1996): “The Eyes Have It: A Task by Data Type Taxonomy for Information Visualizations”, in: 
+                        <hi rend="italic">Proceedings of 1996 IEEE Symposium on Visual Languages:</hi> 336–343. DOI: 
+                        <ref target="https://doi.org/10.1109/vl.1996.545307">10.1109/vl.1996.545307</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Thudt, Alice / Hinrichs, Uta / Carpendale, Sheelagh</hi> (2012): “The Bohemian Bookshelf: Supporting Serendipitous Book Discoveries through Information Visualization”, in: 
+                        <hi rend="italic">Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ‘12)</hi>: 1461–1470. ACM. DOI: 
+                        <ref target="https://doi.org/10.1145/2207676.2208607">10.1145/2207676.2208607</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Whitelaw, Mitchell</hi> (2015): “Generous Interfaces for Digital Cultural Collections”, in: 
+                        <hi rend="italic">DHQ: digital humanities quarterly</hi> 9, 1: &lt;
+                        <ptr target="https://www.digitalhumanities.org/dhq/vol/9/1/000205/000205.html"/>&gt; [24.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Windhager, Florian / Federico, Paolo / Schreder, Günther / Glinka, Katrin / Dörk, Marian / Miksch, Silvia / Mayr, Eva</hi> (2019): “Visualization of Cultural Heritage Collection Data: State of the Art and Future Challenges”, in: 
+                        <hi rend="italic">IEEE Transactions on Visualization and Computer Graphics</hi> 25, 6: 2311–2330. DOI: 
+                        <ref target="https://doi.org/10.1109/TVCG.2018.2830759">10.1109/TVCG.2018.2830759</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Zeng, Jingyi / Xu, Yongjun / Niu, Li</hi> (2022): “Storified narrative: Awake photo archives in digital humanities”, in: 
+                        <hi rend="italic">Digital Scholarship in the Humanities </hi>37, 4: 1394–1410. DOI: 
+                        <ref target="https://doi.org/10.1093/llc/fqac004">10.1093/llc/fqac004</ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PALLADINO_Chiara_Digital_Camerarius___Tracing_the_Classical_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Digital Camerarius – Tracing the Classical origins of Pre-Linnean Science</title>
+                <author>
+                    <persName>
+                        <surname>Palladino</surname>
+                        <forename>Chiara</forename>
+                    </persName>
+                    <affiliation>Furman University, United States of America</affiliation>
+                    <email>chiara.palladino@furman.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Vignoli</surname>
+                        <forename>Michela</forename>
+                    </persName>
+                    <affiliation>AIT Austrian Institute of Technology GmbH</affiliation>
+                    <email>michela.vignoli@ait.ac.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Wilson</surname>
+                        <forename>Kathryn</forename>
+                    </persName>
+                    <affiliation>Furman University, United States of America</affiliation>
+                    <email>wilska2@furman.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>transcription</term>
+                    <term>book history</term>
+                    <term>multimodal representation</term>
+                    <term>retrieval augmented generation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>image processing and analysis</term>
+                    <term>scholarly editing and editions development</term>
+                    <term>analysis</term>
+                    <term>and methods</term>
+                    <term>Book and print history</term>
+                    <term>Media studies</term>
+                    <term>Philology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>This poster presents the 
+                <hi rend="italic">Digital Camerarius</hi>, a digital edition of the 
+                <hi rend="italic">Symbola et Emblemata</hi> by Joachim Camerarius. The goal of the project is to provide a machine-readable transcription enriched with structural and semantic markup, and to facilitate multimodal exploration with Retrieval Augmented Generation (RAG). The project is a work in progress managed by Classics undergraduates at Furman University (
+                <ref target="https://furman-editions-in-progress.github.io/camerarius/">
+                    <hi rend="underline color(1155CC)">https://furman-editions-in-progress.github.io/camerarius/</hi>
+                </ref>) with the collaboration of AIT Austrian Institute of Technology. 
+            </p>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>Joachim Camerarius the Younger (1534-1598) was a German botanist, zoologist, and humanist. The 
+                    <hi rend="italic">Symbola et Emblemata</hi>, one of the most influential emblem books of Early Modern Europe, was published in several editions between 1595 and 1668, with the last edition divided in four 
+                    <hi rend="italic">centuriae</hi>, each focusing on plants, animals, reptiles and birds, or aquatic animals. The work is a collection of emblems with one-page descriptions of each exemplar, where empirical information is mixed with citations and quotations from ancient sources. As such, the 
+                    <hi rend="italic" xml:space="preserve">Symbola </hi>document an intellectual environment half-way between a moral-religious 
+                    <hi rend="italic">Weltanschauung</hi> entangled with Classical knowledge, and the rationalism of the Enlightenment. 
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Workflow</head>
+                <p>The project, which started as an offshoot of the Homer Multitext (
+                    <ref target="https://www.homermultitext.org/">
+                        <hi rend="underline color(1155CC)">https://www.homermultitext.org/</hi>
+                    </ref>), has recently moved onto Transkribus, where we are currently migrating the transcription data. 
+                </p>
+                <figure>
+                    <graphic n="1001" width="16.51cm" height="8.219722222222222cm" url="/tmp/tmpy_vuuoch/Pictures/b5418f5067a07d140597c790b0080a7e.png" rend="inline"/>
+                </figure>
+                <p>Figure 1. A standard emblem page in Transkribus.</p>
+                <p>The workflow includes automatic layout and text recognition, which are manually revised by undergraduates at Furman University. Text and Layout recognition are performed using the Noscemus GM 6 model provided by Transkribus (Fröstl et al. 2023). The resulting XML/TEI transcription is enriched with custom markup for places, languages, and citations. Named Entities are matched against WikiData wherever possible. Classical sources, when identifiable, are cross-referenced to passages or works in the Scaife Digital Library through CTS URNs.</p>
+                <p>To enable multimodal search functionality of texts and images, a Marqo index will be created from the material (
+                    <ref target="https://www.marqo.ai/">
+                        <hi rend="underline color(1155CC)">https://www.marqo.ai/</hi>
+                    </ref>). We will vectorize the cleaned texts and images with a multimodal open-source Large Language Model (LLM) to enable embedding-based retrieval (Pan et al. 2024) and index the vectors along with enriched metadata and full texts. As the captions to the emblems are notoriously extraneous from the content of the images, we will have to rely on section titles and full text content to generate appropriate keywords for each image. We will attempt to enrich the metadata using open source LLMs (e.g., LLAMA3) for unsupervised generation of keywords from the available text-image pairs for improved query results (Maragheh et al. 2023).
+                </p>
+                <p>Multimodal search will be enhanced by a RAG process, which generates a response to the user query in combination with the retrieval mechanism (Li et al. 2024). Both text and images can be queried for contents with natural language prompts, analogously to models already established in projects analyzing early scientific depictions, e.g. Emblematica Online (
+                    <ref target="http://emblematica.library.illinois.edu/">
+                        <hi rend="underline color(1155CC)">http://emblematica.library.illinois.edu/</hi>
+                    </ref>), and ONiT explorer (
+                    <ref target="https://travelogues.app/">
+                        <hi rend="underline color(1155CC)">https://travelogues.app/</hi>
+                    </ref>, Vignoli et al. 2024). The prompt is passed to the retriever, which provides the most relevant sources from the previously created Marqo index. Subsequently, the RAG generates a suitable answer to the user question based on the most relevant data provided by the retriever. In addition to summarising the content found, the AI will generate a transparent collection of direct, further links to the original resources used as a basis for creating the answer.
+                </p>
+                <p>Figure 2. The proposed workflow. 
+                    <graphic n="1002" width="20.240294444444444cm" height="7.702313888888889cm" url="/tmp/tmpy_vuuoch/Pictures/b5418f5067a07d140597c790b0080a7e.png" rend="block"/>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion and future work </head>
+                <p>The project is the result of several summer research fellowships. Currently, the 
+                    <hi rend="italic">Index Locorum</hi> of recognizable citations includes 169 corrected entries, and approximately 30 fully reviewed entries with the corresponding emblems and captions. While in the previous years the transcription work had been almost entirely manual, switching to an automatic recognition model will enable us to work much faster than in previous years. 
+                </p>
+                <p>One of the most important challenges is the structured markup of text reuses, such as quotations and citations from other authors: these are sometimes vague, with omitted information, translated in a different language, quoted from anthologies, or abbreviated in non-standard ways. However, they are especially important to understand the background of Camerarius’ knowledge and the dynamics of text reuse in the 
+                    <hi rend="italic">Symbola</hi>.
+                </p>
+                <figure>
+                    <graphic n="1003" width="16.51cm" height="5.291666666666667cm" url="/tmp/tmpy_vuuoch/Pictures/b5418f5067a07d140597c790b0080a7e.png" rend="inline"/>
+                </figure>
+                <p>Figure 3. Current tagset used for quotations in Camerarius.</p>
+                <p>This work will enable the production of the first computationally manipulable version of Camerarius’ work, and it will make use of state-of-the-art AI-technology to support the extraction of multimodal information, enabling the exploration of his library, the analysis of the interplay between text and image, and the investigation of the continuous interchange between ancient knowledge and early modern science.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10.5pt">Fröstl, Michael / Zathammer, Stefan / Lang, Sarah</hi>
+                        <hi style="font-size:10.5pt" xml:space="preserve"> (2023): "Zur Transkription von Alchemica mithilfe der Transkribus-Software: Zu Handschriften, Drucken und dem NOSCEMUS GM 6 Modell", in: Lang, Sarah (ed.): </hi>
+                        <hi rend="italic" style="font-size:10.5pt">Alchemische Labore</hi>
+                        <hi style="font-size:10.5pt">. Alchemical Laboratories. Graz: Graz University Library Publishing 363–378. DOI: 10.25364/978390337404119.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10.5pt">Li, Xiaoxi / Jin, Jiajie / Zhou, Yujia / Zhang, Yuyao / Zhang, Peitian / Zhu, Yutao / Dou, Zhicheng</hi>
+                        <hi style="font-size:10.5pt" xml:space="preserve"> (2024): </hi>
+                        <hi rend="italic" style="font-size:10.5pt">From Matching to Generation: A Survey on Generative Information Retrieval</hi>
+                        <hi style="font-size:10.5pt">. arXiv. http://arxiv.org/abs/2404.14851 [03.12.2024].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10.5pt">Maragheh, Reza Yousefi</hi>
+                        <hi style="font-size:10.5pt" xml:space="preserve"> et al. (2023): </hi>
+                        <hi rend="italic" style="font-size:10.5pt">LLM-TAKE: Theme Aware Keyword Extraction Using Large Language Models</hi>
+                        <hi style="font-size:10.5pt">. arXiv. http://arxiv.org/abs/2312.00909 [03.12.2024].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10.5pt">Pan, James Jie</hi>
+                        <hi style="font-size:10.5pt" xml:space="preserve"> / </hi>
+                        <hi rend="bold" style="font-size:10.5pt">Wang, Jianguo</hi>
+                        <hi style="font-size:10.5pt" xml:space="preserve"> / </hi>
+                        <hi rend="bold" style="font-size:10.5pt">Li, Guoliang</hi>
+                        <hi style="font-size:10.5pt" xml:space="preserve"> (2024): "Survey of vector database management systems", in: </hi>
+                        <hi rend="italic" style="font-size:10.5pt">The VLDB Journal</hi>
+                        <hi style="font-size:10.5pt" xml:space="preserve"> 33 (5): 1591–1615. DOI: 10.1007/s00778-024-00864-x.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10.5pt">Vignoli, Michela</hi>
+                        <hi style="font-size:10.5pt" xml:space="preserve"> / </hi>
+                        <hi rend="bold" style="font-size:10.5pt">Gruber, Doris</hi>
+                        <hi style="font-size:10.5pt" xml:space="preserve"> / </hi>
+                        <hi rend="bold" style="font-size:10.5pt">Seidl, Michael</hi>
+                        <hi style="font-size:10.5pt" xml:space="preserve"> (2024): "Revolution or Evolution? AI-Driven Retrieval of Nature Representations in Historical Prints", in: </hi>
+                        <hi rend="italic" style="font-size:10.5pt">Proceedings of the DH2023 Conference</hi>
+                        <hi style="font-size:10.5pt" xml:space="preserve"> (=DSH Special Issue): under review.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

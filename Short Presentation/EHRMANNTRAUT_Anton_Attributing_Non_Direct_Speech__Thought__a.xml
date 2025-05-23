@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="EHRMANNTRAUT_Anton_Attributing_Non_Direct_Speech__Thought__a">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Attributing Non-Direct Speech, Thought, and Writing to Characters</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Ehrmanntraut</surname>
+                        <forename>Anton</forename>
+                    </persName>
+                    <affiliation>Julius-Maximilians-Universität Würzburg, Germany</affiliation>
+                    <email>anton.ehrmanntraut@uni-wuerzburg.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-20T18:27:26.722646684</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>natural language processing</term>
+                    <term>speech attribution</term>
+                    <term>computational literary studies</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>natural language processing</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>text mining and analysis</term>
+                    <term>Computer science</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>Speech, thought, and writing representation (STWR) encompasses various techniques through which fictional characters’ voices, thoughts, and written communications are integrated into a narrative text. These modes of STWR play a central part of many narrative theories (e.g., Leech and Short 2007, Martínez and Scheffel 2019), and are typically categorized into four main forms: direct STWR (exact quotations; “Then he thought: 
+                    <hi rend="italic">I’m hungry</hi>”), indirect STWR (paraphrased content; “She asked 
+                    <hi rend="italic">where the food was</hi>”), free indirect STWR (character’s voice mediated through the narrator; “He was at a loss. 
+                    <hi rend="italic">Where should he ever find lunch here?</hi>”), and reported STWR (mentioned communications; “She wrote 
+                    <hi rend="italic">about the </hi>
+                    <hi rend="italic">lunch</hi>”).
+                </p>
+                <p>This talk presents first results of ongoing work on automatic detection of STWR in German narrative text and attributing them to speakers, extending upon previous work (e.g., Su et al. 2024, Vishnubhotla et al. 2023) that focuses on 
+                    <hi rend="italic">direct</hi> speech only. The primary goal is to investigate how different presentation techniques of STW are employed by authors for specific fictional characters along certain dimensions, e.g., characters’ and authors’ gender. Similar to research on gender visibility in fiction (Kraicer and Piper 2019), emotions in gendered characters (Schumacher and Flüh 2020), character agency and gender (Jockers and Kirilloff 2016, Viane et al. 2023), or character descriptions (Underwood et al. 2018) we want to examine which characters “get to speak” and how authors present this speech.
+                </p>
+                <p>For training and evaluation, the REDEWIEDERGABE corpus (Brunner et al. 2020) was employed, which annotated STWR in German news texts and fiction from c. 1840–1920 (488K tokens). Each STWR span is annotated with a type (direct, indirect, free indirect, reported), and a speaker span. The speaker span is on the textual surface level, usually covering a pronoun of the speaking character.</p>
+                <p>We divide the task of STWR recognition into two token classification sub-tasks: First, the 
+                    <hi rend="italic">detection</hi> of STWR instances, identifying spans with their respective type, and second, the 
+                    <hi rend="italic">attribution</hi> of STWR, where, given a specific STWR instance in context, annotate the speaker mention tokens.
+                </p>
+                <p>While many corpora with direct speech annotation exist (e.g. DROC for German, Krug et al. 2017; PNDC for English, Vishnubhotla et al. 2022), REDEWIEDERGABE is one of few literary corpora including free indirect and reported STWR, next to the English STOP corpus (Semino and Short 2004). However, STOP lacks speaker mention spans. This is why this study primarily focuses on German language.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor type="bookmark-start" xml:id="id_method-results"/>Method &amp; Results
+                    <ptr type="bookmark-end" target="#id_method-results"/>
+                </head>
+                <p>Given above training data, two different Transformer-based systems were trained: (a) A state-of-the-art encoder-decoder model (mT5-large, Xue et al. 2021)<ref n="1" target="ftn1"/> to jointly perform the two tasks of detection and attribution, fine-tuned to “translate” the input to pseudo-XML output.<ref n="2" target="ftn2"/> Such structured generation has proven successful in a similar-fashioned STWR task on German news texts (Petersen-Frey and Biemann 2024). (b) Two BERT-based encoders (XLM-roBERTa-large, Conneau et al. 2020) fine-tuned for detection resp. attribution using sequence tagging. Both systems are evaluated on a test set of narrative texts from the REDEWIEDERGABE corpus (42k Tokens; overall Fleiss’ kappa of the annotations is 0.73).
+                </p>
+                <p>Surprisingly, GPT-4o proved challenging to prompt effectively. Even with extensive prompt engineering and few-shot examples, GPT-4o could not outperform above BERT system (Speech/Speaker CEAF F1 of 0.35/0.14).</p>
+                <p>Figure 1 shows the performance of the different systems on the test set, grouped by 
+                    <hi rend="italic">type</hi>, reporting raw classification performance next to CEAF metrics (Luo 2005) on STWR instances, where the latter metric aligns system outputs with gold references.
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpk72ro02t/Pictures/75481aef7563868e26aa788634cd1c2d.jpg"/>
+                    </figure>Figure 1: Performance on the REDEWIEDERGABE test set.
+                </p>
+                <p>Both models demonstrate satisfactory results in STWR recognition. Free indirect STWR is recognized worst, likely due to limited training examples. The systems also struggle with reported STWR, which was challenging even for human annotators (Fleiss’ kappa 0.49), having often blurry boundaries with pure narration and indirect STWR (Brunner et al. 2020). BERT outperforms the other model in most aspects, except for direct STWR instances, where it struggles with extended passages. These results, combined with the low performance of GPT-4o, add to accumulating evidence that small fine-tuned models can often compete with more resource-intensive ones (e.g., Bamman et al. 2024). As such, BERT should not be disregarded and still remains an affordable, fast, effective, and accessible method for DH, especially when high-quality training data is available.</p>
+                <p>Additionally, the models also showed potential for zero-shot cross-lingual transfer learning: while trained on German data only, they successfully annotated examples in English, French, and Italian. However, a thorough evaluation would require high-quality evaluation data in these languages.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor type="bookmark-start" xml:id="id_proof-of-concept"/>Proof of Concept
+                    <ptr type="bookmark-end" target="#id_proof-of-concept"/>
+                </head>
+                <p>As a proof of concept, I annotated the German novel 
+                    <hi rend="italic">Effi Briest</hi> using above BERT models, combining the results with existing gold coreference annotations to attribute STWR to specific characters. Figure 2 shows the distribution of direct, indirect, and reported speech for each character with ≥20 STWR instances (excluding free indirect STWR due to low prevalence). For now, this analysis limits its notion of characters’ gender to that marked by their pronouns (“he/him” and “she/her”)<ref n="3" target="ftn3"/>.
+                </p>
+                <p>While STWR presentation techniques vary considerably between characters, particularly along the 
+                    <hi rend="italic">direct vs. reported</hi> axis, only subtle gender-based patterns can be observed, with “he/him” characters showing a slight tendency toward more reported and less direct STWR. However, these differences are possibly confounded by the characters’ narrative functions.
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpk72ro02t/Pictures/75481aef7563868e26aa788634cd1c2d.jpg"/>
+                    </figure>Figure 2: Distribution of STWR type per character in 
+                    <hi rend="italic">Effi Briest</hi>.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor type="bookmark-start" xml:id="id_outlook"/>Outlook
+                    <ptr type="bookmark-end" target="#id_outlook"/>
+                </head>
+                <p>Starting with the exploratory proof of concept, for future work, we want to extend the investigation with broader theoretical foundations, a larger corpus, and rigorous methodological validation. Next to this, we plan to continuously improve above models by incorporating more training data (e.g., direct speech corpora), and to build a multilingual test set to quantitatively assess applicability to other languages.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn1" rend="footnote text" n="1">mT5-xl was also fine-tuned (using LoRA), but did not outperform mT5-large. This is in line with negative results by Petersen-Frey and Biemann (2024).</note>
+<note xml:id="ftn2" rend="footnote text" n="2">E.g., &lt;speaker&gt;She&lt;1&gt;&lt;/speaker&gt; asked &lt;span&gt;where the food was&lt;indirect/&gt;&lt;1&gt;&lt;/span&gt;, for indirect speech, and &lt;1&gt; connects speaker and speech.</note>
+<note xml:id="ftn3" rend="footnote text" n="3">Of course, this binary conceptualization is insufficient to capture the full extend of gender, and, e.g., ignores performative dimensions; here however, we heuristically follow the approach of 
+                        <hi rend="italic">referential gender</hi> like in BookNLP, as we are primarily concerned with conventional roles of characters (cf. Underwood et al., 2018).
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Bamman, David / Chang, Kent K. / Lucy, Li / Zhou, Naitian (2024): "On Classification with Large Language Models in Cultural Analytics", in: Haverals, Wouter / Koolen, Marijn / Thompson, Laure (eds.): 
+                        <emph>Proceedings of the Computational Humanities Research Conference 2024</emph>
+                        <emph>, Aarhus, </emph>
+                        <emph>Denmark, </emph>
+                        <emph>December 2024</emph>
+                        <emph>: </emph>494-527 
+                        <ptr target="https://ceur-ws.org/Vol-3834/#paper119"/> [20.04.2024].
+                    </bibl>
+                    <bibl>Brunner, Annelen / Engelberg, Stefan / Jannidis, Fotis / Tu, Ngoc Duyen Tanja / Weimer, Lukas (2020): "Corpus REDEWIEDERGABE", in: Calzolari, Nicoletta / Béchet, Frédéric / Blache, Philippe / Choukri, Khalid / Cieri, Christopher / Declerck, Thierry / Goggi, Sara et al. (eds.): 
+                        <emph>Proceedings of the Twelfth Language Resources and Evaluation </emph>
+                        <emph>Conference</emph>, Marseille, France, May 2020: European Language Resources Association 803-812 
+                        <ptr target="https://aclanthology.org/2020.lrec-1.100"/> [20.04.2024].
+                    </bibl>
+                    <bibl>Conneau, Alexis / Khandelwal, Kartikay / Goyal, Naman / Chaudhary, Vishrav / Wenzek, Guillaume / Guzmán, Francisco / Grave, Edouard / Ott, Myle / Zettlemoyer, Luke / Stoyanov, Veselin (2020): "Unsupervised Cross-Lingual Representation Learning at Scale", in: Jurafsky, Dan / Chai, Joyce / Schluter, Natalie / Tetreault, Joel (eds.): 
+                        <emph>Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</emph>, Online, July 2020: Association for Computational Linguistics 8440-8451. DOI: 10.18653/v1/2020.acl-main.747.
+                    </bibl>
+                    <bibl>Jockers, Matthew / Kirilloff, Gabi (2016): "Understanding Gender and Character Agency in the 19th Century Novel", in: 
+                        <emph>Journal of Cultural Analytics</emph> 2, 2. DOI: 10.22148/16.010.
+                    </bibl>
+                    <bibl>Kraicer, Eve / Piper, Andrew (2019): "Social Characters: The Hierarchy of Gender in Contemporary English-Language Fiction", in: 
+                        <emph>Journal of Cultural Analytics</emph> 3, 2. DOI: 10.22148/16.032.
+                    </bibl>
+                    <bibl>Krug, Markus / Weimer, Lukas / Reger, Isabella / Macharowsky, Luisa / Feldhaus, Stephan / Puppe, Frank / Jannidis, Fotis (2017): "Description of a Corpus of Character References in German Novels – DROC [Deutsches ROman Corpus]", in: 
+                        <emph>DARIAH-DE Working Paper</emph> 27, Göttingen, Germany 
+                        <ptr target="https://publications.goettingen-research-online.de/handle/2/108301"/> [20.04.2024].
+                    </bibl>
+                    <bibl>Leech, Geoffrey N. / Short, Mick (2007): 
+                        <emph>Style in Fiction: A Linguistic Introduction to English Fictional Prose</emph>. 2nd ed. New York, USA: Pearson Longman.
+                    </bibl>
+                    <bibl>Luo, Xiaoqiang (2005): "On Coreference Resolution Performance Metrics", in: Mooney, Raymond / Brew, Chris / Chien, Lee-Feng / Kirchhoff, Katrin (eds.): 
+                        <emph>Proceedings of Human Language Technology Conference and Conference on Empirical Methods in Natural Language Processing</emph>, Vancouver, Canada, October 2005: Association for Computational Linguistics 25-32 
+                        <ptr target="https://aclanthology.org/H05-1004"/> [20.04.2024].
+                    </bibl>
+                    <bibl>Martínez, Matías / Scheffel, Michael (2019): 
+                        <emph>Einführung in die Erzähltheorie</emph>. 11th ed. München, Germany: C.H. Beck.
+                    </bibl>
+                    <bibl>Petersen-Frey, Fynn / Biemann, Chris (2024): "Fine-Grained Quotation Detection and Attribution in German News Articles", in: Luz de Araujo, Pedro Henrique / Baumann, Andreas / Gromann, Dagmar / Krenn, Brigitte / Roth, Benjamin / Wiegand, Michael (eds.): 
+                        <emph>Proceedings of the 20th Conference on Natural Language Processing (KONVENS 2024)</emph>, Wien, Austria, September 2024: Association for Computational Linguistics 196-208 
+                        <ptr target="https://aclanthology.org/2024.konvens-main.22"/> [20.04.2024].
+                    </bibl>
+                    <bibl>Schumacher, Mareike / Flüh, Marie (2020): "m*w Figurengender zwischen Stereotypisierung Und literarischen und theoretischen Spielräumen: Genderstereotype und -bewertungen in der Literatur des 19. Jahrhunderts", in: Schöch, Christof (ed.): 
+                        <emph>Abstracts Zur 7. Tagung Des Verbands Digital Humanities Im Deutschsprachigen Raum e.V.</emph>, Paderborn, Germany, March 2020. DOI: 10.5281/zenodo.3666690.
+                    </bibl>
+                    <bibl>Semino, Elena / Short, Mick (2004): 
+                        <emph>Corpus Stylistics: Speech, Writing and Thought Presentation in a Corpus of English Writing</emph>. London, UK: Routledge.
+                    </bibl>
+                    <bibl>Su, Zhenlin / Xu, Liyan / Xu, Jin / Li, Jiangnan / Huangfu, Mingdu (2024): "SIG: Speaker Identification in Literature via Prompt-Based Generation", in: 
+                        <emph>Proceedings of the AAAI Conference on Artificial Intelligence</emph> 38, 17: 19035-19043. DOI: 10.1609/aaai.v38i17.29870.
+                    </bibl>
+                    <bibl>Underwood, Ted / Bamman, David / Lee, Sabrina (2018): "The Transformation of Gender in English-Language Fiction", in: 
+                        <emph>Journal of Cultural Analytics</emph> 3, 2. DOI: 10.22148/16.019.
+                    </bibl>
+                    <bibl>Viane, Laurine / Dupont, Yoann / Barré, Jean (2023): "Gender Bias in French Literature", in: Šeļa, Artjoms / Jannidis, Fotis / Romanowska, Iza (eds.): 
+                        <emph>Proceedings of the Computational Humanities Research Conference 2023: </emph>
+                        <emph>Paris, </emph>
+                        <emph>France, </emph>
+                        <emph>December 2023:</emph>
+                        <emph> </emph>247-262 
+                        <ptr target="https://ceur-ws.org/Vol-3558/#paper2449"/> [20.04.2024].
+                    </bibl>
+                    <bibl>Vishnubhotla, Krishnapriya / Hammond, Adam / Hirst, Graeme (2022): "The Project Dialogism Novel Corpus: A Dataset for Quotation Attribution in Literary Texts", in: Calzolari, Nicoletta / Béchet, Frédéric / Blache, Philippe / Choukri, Khalid / Cieri, Christopher / Declerck, Thierry / Goggi, Sara et al. (eds.): 
+                        <emph>Proceedings of the Thirteenth Language Resources and Evaluation Conference</emph>, Marseille, France, June 2022: European Language Resources Association 5838-5848 
+                        <ptr target="https://aclanthology.org/2022.lrec-1.628"/> [20.04.2024].
+                    </bibl>
+                    <bibl>Vishnubhotla, Krishnapriya / Rudzicz, Frank / Hirst, Graeme / Hammond, Adam (2023): "Improving Automatic Quotation Attribution in Literary Novels", in: Rogers, Anna / Boyd-Graber, Jordan / Okazaki, Naoaki (eds.): 
+                        <emph>Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)</emph>, Toronto, Canada, July 2023: Association for Computational Linguistics 737-746. DOI: 10.18653/v1/2023.acl-short.64.
+                    </bibl>
+                    <bibl>Xue, Linting / Constant, Noah / Roberts, Adam / Kale, Mihir / Al-Rfou, Rami / Siddhant, Aditya / Barua, Aditya / Raffel, Colin (2021): "mT5: A Massively Multilingual Pre-Trained Text-to-Text Transformer", in: Toutanova, Kristina / Rumshisky, Anna / Zettlemoyer, Luke / Hakkani-Tur, Dilek / Beltagy, Iz / Bethard, Steven / Cotterell, Ryan / Chakraborty, Tanmoy / Zhou, Yichao (eds.): 
+                        <emph>Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</emph>, Online, June 2021: Association for Computational Linguistics 483-498. DOI: 10.18653/v1/2021.naacl-main.41.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

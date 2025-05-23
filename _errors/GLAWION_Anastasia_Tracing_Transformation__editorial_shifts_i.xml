@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="GLAWION_Anastasia_Tracing_Transformation__editorial_shifts_i">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Tracing Transformation: editorial shifts in the Grimm brothers’ tales </title>
+                <author>
+                    <persName>
+                        <surname>Glawion</surname>
+                        <forename>Anastasia</forename>
+                    </persName>
+                    <affiliation>FAU Erlangen Nürnberg, Germany</affiliation>
+                    <email>anastasia.glawion@fau.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Lechner</surname>
+                        <forename>Dhara</forename>
+                    </persName>
+                    <affiliation>FAU Erlangen Nürnberg, Germany</affiliation>
+                    <email>lechner-dhara@t-online.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-08T07:57:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>digital literature</term>
+                    <term>fairy tales</term>
+                    <term>digital editions</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>manuscripts description</term>
+                    <term>representation</term>
+                    <term>and analysis</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Background</head>
+                <p>The Children's and Household Tales (CHT) by the Brothers Grimm is among the most globally recognized works of German literature. Less known, however, is the editorial history of the collection: Jacob and Wilhelm Grimm repeatedly revised the tales across various editions published during their lifetimes. These revisions often mirrored political and social changes in German society, as well as the evolving aesthetic norms of 19th-century literature. While scholars frequently note this dynamic (e.g., Spinner 1992; Rölleke 2014; Pöge-Alder 2023 and many more), detailed studies of the Grimms' specific alterations have only recently begun to emerge (Winzer 2021, Rimasson-Fertin et al. 2024).</p>
+                <p>Variations in the 
+                    <hi rend="italic">CHT</hi> reflect the public sphere's influence on this formalized literary genre, including a post-Napoleonic shift from French terms, increased religious references, stricter norms on premarital relationships, and more detailed depictions of romantic love. Karl Spinner linked these changes to the rise of bourgeois values (Spinner 1992).
+                </p>
+                <p>Feminist literary scholar Ruth Bottigheimer expands this point: she argues that Wilhelm Grimm has gradually reduced the speech acts of female characters over the editions of the 
+                    <hi rend="italic">CHT</hi>, reflecting a societal shift toward valuing silence as a “positive feminine attribute” (Bottigheimer 1987, 116). Bottigheimer also highlights gendered differences between verbs used to describe speech acts, noting that for female characters, Grimm uses “say” (“sagen”) more often than its more poetic synonym “speak” (“sprechen”) and that female characters are depicted as answering but never asking questions. 
+                </p>
+                <p>The variations of the 
+                    <hi rend="italic">CHT</hi> present a curious case for empirical digital literary studies. The presented project is in its early stages and aims to compare versions of each fairy tale with a particular focus on speech acts. The absence of an accessible, comprehensive overview over the tales’ editorial transformations is a gap in research for folklorists, literary scholars and historians alike. 
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Method</head>
+                <p>The digitized versions of the seven “large editions” (
+                    <hi rend="italic">Große Ausgaben</hi>) of the 
+                    <hi rend="italic">CHT</hi> (published in 1812/1815, 1819, 1837, 1840, 1843, 1850, and 1857) are available in xml format via the German Textual Archive. Initial analyses of text distance using the stylo package (Eder et al. 2020) show that most texts of the first edition (1812/1815) have greater stylistic similarity among themselves than they do with later versions of the tales. Figure 1 illustrates one such analysis with 100 most frequent words, cosine delta and 10% culling. Notably, this stylistic consistency within the first edition remains stable across a range of parameter settings. (For a higher-resolution image, please visit the GitHub repository.)
+                </p>
+                <figure>
+                    <graphic n="1001" width="3.5277777777777777cm" height="25.200680555555557cm" url="/tmp/tmpk9l6xkr1/Pictures/a8d4ca94c12518efb3114a355cbeebca.png" rend="inline"/>
+                    <head>Figure 1 Cluster analysis with stylo (100 MFW, Cosine Delta, 10 % culling. The red and green texts represent the first edition of 1812/1815. See Github for better resolution.</head>
+                </figure>
+                <p>The presentation showcases a pipeline using the LERA software to highlight and visualize changes in order to develop a taxonomy of change types. A pilot study annotated and analyzed speech descriptions in “Rapunzel” (KHM 12) and “Allerleirauh” (KHM 65, “Thousandfurs”) (Figure 2).</p>
+                <figure>
+                    <graphic n="1002" width="16.002cm" height="5.819069444444445cm" url="/tmp/tmpk9l6xkr1/Pictures/a8d4ca94c12518efb3114a355cbeebca.png" rend="inline"/>
+                    <head>Figure 2. An overview of changes in a passage from “Allerleirauh” (KHM 65).</head>
+                </figure>
+                <p>Figure 2 demonstrates stylistic changes in "Allerleirauh," including shifts in text length and direct speech proportions, contextualizing the first edition’s dissimilarity (Figure 1). “Rapunzel” provides evidence for the stylistic transformation as well, but in a more complex manner: in the 1812 edition, there are 9 speech acts, while the last version of 1857 contains 17. While the number of speech acts initiated by male characters rises from 22% to 35% over course of the editorial transformation, Rapunzel is the main benefactor, as her direct speech acts rise from 1 to 4 in the final edition. </p>
+                <p>Further, a short analysis of speech descriptors as proposed by Bottigheimer was conducted, whereby both provide evidence for her claims: in “Allerleirauh”, male characters are “speaking” most of the time, only the king asks questions and only Allerleirauh and the cook answer those questions (Figure 3). The verb use for the cook depends on the status of his counterparts: when talking to Allerleirauh, who in his presence is acting as a kitchen maid, the verb “speak” is used, when the cook is in a scene with the king, he answers the latter’s questions. </p>
+                <figure>
+                    <table rend="rules">
+                        <row>
+                            <cell style="text-align: left;"/>
+                            <cell style="text-align: center;">
+                                <p style="text-align: center;">Allerleirauh</p>
+                                <p style="text-align: center;">(absolute / relative frequency)</p>
+                            </cell>
+                            <cell style="text-align: left;">Who speaks?</cell>
+                            <cell style="text-align: center;">
+                                <p style="text-align: center;">Rapunzel</p>
+                                <p style="text-align: center;">(absolute / relative frequency)</p>
+                            </cell>
+                            <cell style="text-align: left;">Who speaks?</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;">Sagte (“said”)</cell>
+                            <cell style="text-align: left;">12 / 0.087</cell>
+                            <cell style="text-align: left;">Allerleirauh (8), cook (3), king (1)</cell>
+                            <cell style="text-align: left;">22 / 0.271 %</cell>
+                            <cell style="text-align: left;">Rapunzel (12), her father (7), Frau Gothel (3)</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;">Sprach (“spoke”)</cell>
+                            <cell style="text-align: left;">73 / 0.529</cell>
+                            <cell style="text-align: left;">King (42), cook (18), Allerleirauh (7), Queen (6) </cell>
+                            <cell style="text-align: left;">25 / 0.308 %</cell>
+                            <cell style="text-align: left;">Frau Gothel (20), the prince (3), Rapunzel (2) </cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;">Fragte (“asked”)</cell>
+                            <cell style="text-align: left;">25 / 0.181</cell>
+                            <cell style="text-align: left;">King (25)</cell>
+                            <cell style="text-align: left;">12 / 0.147 %</cell>
+                            <cell style="text-align: left;">Rapunzel’s father (7), the Prince (5)</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;">Antwortete (“answered”)</cell>
+                            <cell style="text-align: left;">47 / 0.341</cell>
+                            <cell style="text-align: left;">Cook (24), Allerleirau (25) </cell>
+                            <cell style="text-align: left;">10 / 0.123 %</cell>
+                            <cell style="text-align: left;">Rapunzel’s father (5), Rapunzel’s mother (5)</cell>
+                        </row>
+                    </table>
+                    <head>Figure 3. Absolute and relative frequencies of speech-related verbs introducing direct speech in all versions of “Allerleirauh” and “Rapunzel”.</head>
+                </figure>
+                <p>In “Rapunzel”, the verb "spoke" is closely tied to expressions of power, with the sorceress Frau Gothel using it most frequently. Notably, only male characters ask questions, but Rapunzel’s father challenges these gendered norms by responding directly to the more powerful Frau Gothel. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Outlook</head>
+                <p>As the preliminary results have shown, the speech acts in the 
+                    <hi rend="italic">CHT</hi> are an exciting source for studying gender imbalance in literature. Bottigheimer’s brief yet insightful observations call for a more in-depth study of the 
+                    <hi rend="italic">CHT</hi> using computational methods. The creation of an annotated dataset of editorial transformations in line with FAIR principles is an additional goal in the project that addresses a critical gap in Grimm scholarship. 
+                </p>
+                <p>Next steps include annotating more tales and possibly incorporating the “small editions” of 1825 and 1836 into the analysis. The project’s overarching goal is to make the evolution of the fairy tales accessible and understandable to a wider audience, thus demonstrating the adaptable nature of canonical cultural heritage. A future phase aims to develop a rich Linked Open Data corpus that integrates information from the “Handbook of Children's and Household Tales” (Uther 2013), alongside insights from extensive research literature, including the ATU fairy tale index (Uther 2011), and Stith Thompson’s Motif-Index of Folk-Literature (Thompson 1989).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Github</head>
+                <p>For better resolution of Figure 1 please visit https://github.com/anastasiaglawion/fairy-tales/tree/main/DH2025.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Bottigheimer, Ruth B.</hi> (1987): “Silenced Women in the Grimm’s Tales: The ‘Fit’ between Fairy Tales and Society in Their Historical Context”, in: Bottigheimer, Ruth B. (ed.): Fairy Tales and Society: Illusion, Allusion, and Paradigm. Philadelphia: University of Pennsylvania Press , 115–33. DOI: 10.9783/9780812201505.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Eder, Maciej / Rybicki, Jan / Kestemont, Mike / Pielström, Steffen</hi> (2020): “Package ‚stylo‘“, in: CRAN, 2020. 
+                        <ref target="https://cran.r-project">https://cran.r-project</ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Pöckelmann, Marcus / Medek, André / Ritter, Jörg / Molitor, Paul</hi> (2023): “LERA—an interactive platform for synoptical representations of multiple text witnesses”, in: Digital Scholarship in the Humanities 38, 1: 330–346. DOI: 10.1093/llc/fqac021.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Pöge-Alder, Kathrin</hi> (2023): “Forschungsgeschichte“, in: Bluhm, Lothar / Neuhaus, Stefan (eds.): Handbuch Märchen. Berlin, Heidelberg: Springer Berlin Heidelberg 529-533. DOI: 10.1007/978-3-662-66803-0.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Rölleke, Heinz</hi> (2014): Kinder- und Hausmärchen: Ausgabe letzter Hand mit den Originalanmerkungen der Brüder Grimm. Stuttgart: Reclam.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Rimasson-Fertin, Natacha / François, Cyrille / Kraif, Olivier / Roux, Pascale / Jalilian Elnaz</hi> (2024): “Grimm Tradalign: plateforme de comparaison de traductions de contes des frères Grimm”. UGA-UNIL. https://grimm.unil.ch
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" xml:space="preserve">Spinner, Kaspar H. </hi>(1992): “Die ‚Kinder- Und Hausmärchen‘ Der Brüder Grimm“, in: Geppert, Hans Vilmar (ed.): Große Werke Der Literatur: Eine Ringvorlesung an Der Universität Augsburg. Augsburg: Presse-Dr. und Verl.-GmbH 143–62.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Thompson, Stith</hi> (1989). Motif-index of folk-literature: a classification of narrative elements in folktales, ballads, myths, fables, mediaeval romances, exempla, fabliaux, jest-books, and local legends. Bloomington, IN: Indiana University Press, 1989.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Uther, Hans-Jörg</hi> (2011): The Types of International Folktales. 1: Animal Tales, Tales of Magic, Religious Tales, and Realistic Tales, with an Introduction. Helsinki: Suomalainen Tiedeakatemia.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Uther, Hans-Jörg</hi> (2013): Handbuch zu den „Kinder- und Hausmärchen“ der Brüder Grimm: Entstehung - Wirkung – Interpretation. Berlin: de Gruyter.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Winzer, Axel</hi> (2021): Permanente Metamorphosen: Neues zur Verlags- und Editionsgeschichte der Kinder- und Hausmärchen der Brüder Grimm. Marburg: Büchner Verlag.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

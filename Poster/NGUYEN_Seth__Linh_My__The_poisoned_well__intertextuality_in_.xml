@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NGUYEN_Seth__Linh_My__The_poisoned_well__intertextuality_in_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The poisoned well: intertextuality in American trans-antagonistic legislation</title>
+                <author>
+                    <persName>
+                        <surname>Nguyen</surname>
+                        <forename>Seth {Linh My}</forename>
+                    </persName>
+                    <affiliation>Trans Legislation Tracker, United States of America</affiliation>
+                    <email>seth.mnguyen@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-08T04:51:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>text reuse</term>
+                    <term>cultural analytics</term>
+                    <term>citation studies</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>attribution studies and stylometric analysis</term>
+                    <term>cultural analytics</term>
+                    <term>digital activism and advocacy</term>
+                    <term>text mining and analysis</term>
+                    <term>Gender and sexuality studies</term>
+                    <term>Law and legal studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Abstract</head>
+                <p>
+                    <hi style="font-size:10pt">In March 2023, a corpus of emails between rightwing political actors principally regarding two attempts to pass transgender youth transition treatment bans in South Dakota and Florida (USA) was made available to the public. These correspondences include debates on criminal penalties for healthcare providers, political implications of certain definitions, and strategic diction choices to maximize the proposed bills’ viability. News articles about this corpus broadly concur that these actors have impacted trans-antagonistic legislation nationwide; this project is a computational investigation of that claim.</hi>
+                </p>
+                <p>
+                    <hi style="font-size:10pt">Investigations into the anti-trans political movement in the United States have focused on the social and psychological impact of trans-antagonistic legislation (some examples: Horne et al., 2022; Tebbe et al., 2022; Lombardi and Sahni, 2024). To date, only a few authors have evaluated these bills in terms of their rhetorical content or historical context. Notable examples include Chan Tov McNamarah’s 2023 paper on the “Cis-Woman-Protective'' argument and Jessica A. Clarke’s 2022 essay “Sex Assigned at Birth,” both published in the Columbia Law Review, which describe and evaluate arguments on which anti-trans bills are founded. In either case, the academic work on this movement have primarily discussed its qualitative and affective characteristics.</hi>
+                </p>
+                <p>
+                    <hi style="font-size:10pt" xml:space="preserve">The goal of this study is to broaden the scope of critical investigations into the movement and its impact on the legislative landscape with a quantitative analysis. Specifically, it calculates the similarity between language crafted by this sub-network of the anti-trans movement (in its communications) and language found in legislation postdating these correspondences using TextPAIR, an open-source sequence-alignment detection software. </hi>
+                </p>
+                <p>
+                    <hi style="font-size:10pt">This project adds to existing research on intertextuality in legal NLP through its comparison of colloquial language to domain-specific language. Other projects on text reuse in the legal sector, such as LobbyBack and the Legislative Influence Detector, has used the Smith-Waterman local-alignment algorithm to produce bill-to-bill and model-legislation-to-bill comparisons and trace the diffusion of language and policy ideas across legislatures. Since they are either model or actual legislation, the compared documents are about the same length, format, and style. This project provides some strategies to compare bills and correspondences, which are uniformly much shorter and less formal.</hi>
+                </p>
+                <p>
+                    <hi style="font-size:10pt" xml:space="preserve">Two text datasets were created: a correspondence corpus and a legislative corpus. For the former, 2,600+ emails comprising 400 conversations were redacted of personal identifying information (email address, phone numbers, etc.) and coded as plaintext documents, with one email thread represented as one document. For the latter, 1,634 PDF and HTML bills listed as tracked by the ACLU were extracted from LegiScan and parsed into plaintext. Each document is then represented using TextPAIR as overlapping shingles of bigrams, which are stored and indexed against shingles from other documents in the corresponding paired corpus. Regions of similarity shared by two strings or sequences of sufficient lengths are logged as matches. </hi>
+                </p>
+                <p>
+                    <hi style="font-size:10pt" xml:space="preserve">The results show that 357 bills from the legislative corpus contain significant reuses of language proposed by this network, many of which are explicitly based on political expediency and rationale instead of medical or scientific knowledge. Notable reuses include a definition of sex that does not recognize that sex can be assigned (151 times) and a definition of trans healthcare that maximizes the number of scenarios in which a bill that contains the definition can be used to penalize doctors (45 times). </hi>
+                </p>
+                <p>
+                    <hi style="font-size:10pt">The findings suggest that this coalition has directly influenced laws regarding transgender people in the United States by introducing strategically curated terms and definitions that support arguments portraying transgender healthcare as delusional, impossible, or harmful. The ideological arguments accompanying these terms and definitions also reveal how legal definitions are politically motivated, formulated, and justified. The findings raise ethical and democratic concerns about transparency, accountability, and the influence of ideologically motivated groups in crafting laws that significantly impact marginalized communities and advise against relying on legal definitions and language as politically neutral examples of “common sense.”</hi>
+                </p>
+                <p>
+                    <hi style="font-size:10pt" xml:space="preserve">This project bridges the gap between legal natural language processing and critical social justice research by offering a novel lens through which to study the diffusion of ideologically charged rhetoric in policy. The legislative text corpus will be updated to include legislation proposed through May 2025 and released publicly; we hope that researchers working on queer policy and advocacy, dehumanization research, systemic transphobia, and other social justice issues will find them useful. By making this analysis and its supporting materials widely available, the project seeks to foster informed public discourse and equip interested parties with tools to critically engage with legislative language. </hi>
+                </p>
+                <list type="ordered">
+                    <item>
+                        <hi rend="bold" style="font-size:14pt">Figures</hi>
+                    </item>
+                </list>
+                <p>
+                    <hi rend="italic" style="font-size:10pt">Fig. 1-6: Number of bills reusing language from the correspondence corpus, by state (2019-2024)</hi>
+                </p>
+                <figure>
+                    <graphic n="1001" width="16.002cm" height="21.297194444444443cm" url="/tmp/tmpc7mbuhh1/Pictures/fbacd7742c7f47c8ca89d55fd6bbce8f.png" rend="inline"/>
+                </figure>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi style="font-size:10pt" xml:space="preserve">Burgess, M., Giraudy, E., Katz-Samuels, J., Walsh, J., Willis, D., Haynes, L., &amp; Ghani, R. (2016). The Legislative Influence Detector. Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 57–66. https://doi.org/10.1145/2939672.2939697 </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi style="font-size:10pt" xml:space="preserve">Clarke, J. A. (2022). SEX ASSIGNED AT BIRTH. </hi>
+                        <hi rend="italic" style="font-size:10pt">Columbia Law Review</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">, </hi>
+                        <hi rend="italic" style="font-size:10pt">122</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">(7), 1821–1898. </hi>
+                        <ref target="https://www.jstor.org/stable/27178460">
+                            <hi style="font-size:10pt">https://www.jstor.org/stable/27178460</hi>
+                        </ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi style="font-size:10pt" xml:space="preserve">Crimew, M. A. (2023). the emails - 2600 pages of hate. </hi>
+                        <ref target="https://maia.crimew.gay/posts/the-emails/">
+                            <hi style="font-size:10pt">https://maia.crimew.gay/posts/the-emails/</hi>
+                        </ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi style="font-size:10pt" xml:space="preserve">Horne, S. G., McGinley, M., Yel, N., &amp; Maroney, M. R. (2022). The stench of bathroom bills and anti-transgender legislation: Anxiety and depression among transgender, nonbinary, and cisgender LGBQ people during a state referendum. </hi>
+                        <hi rend="italic" style="font-size:10pt">Journal of Counseling Psychology</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">, 69(1), 1–13. </hi>
+                        <ref target="https://psycnet.apa.org/doi/10.1037/cou0000558">
+                            <hi style="font-size:10pt">https://doi.org/10.1037/cou0000558</hi>
+                        </ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi style="font-size:10pt" xml:space="preserve">Katz, Daniel Martin and Hartung, Dirk and Gerlach, Lauritz and Jana, Abhik and Jana, Abhik and Bommarito, Michael James, Natural Language Processing in the Legal Domain (January 24, 2023). Available at SSRN: </hi>
+                        <ref target="https://ssrn.com/abstract=4336224">
+                            <hi style="font-size:10pt">https://ssrn.com/abstract=4336224</hi>
+                        </ref>
+                        <hi style="font-size:10pt" xml:space="preserve"> or </hi>
+                        <ref target="https://dx.doi.org/10.2139/ssrn.4336224">
+                            <hi style="font-size:10pt">http://dx.doi.org/10.2139/ssrn.4336224</hi>
+                        </ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi style="font-size:10pt" xml:space="preserve">Lombardi, E., Sahni, H. The Impact of Anti-discrimination Legislation on Transgender People within the USA. </hi>
+                        <hi rend="italic" style="font-size:10pt">Sex Res Soc Policy</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 21, 76–85 (2024). </hi>
+                        <ref target="https://doi.org/10.1007/s13178-023-00851-x">
+                            <hi style="font-size:10pt">https://doi.org/10.1007/s13178-023-00851-x</hi>
+                        </ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi style="font-size:10pt" xml:space="preserve">McNamarah, C. T. (2023). CIS-WOMAN-PROTECTIVE ARGUMENTS. </hi>
+                        <hi rend="italic" style="font-size:10pt">Columbia Law Review</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">, </hi>
+                        <hi rend="italic" style="font-size:10pt">123</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">(3), 845–928. </hi>
+                        <ref target="https://www.jstor.org/stable/27211377">
+                            <hi style="font-size:10pt">https://www.jstor.org/stable/27211377</hi>
+                        </ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi style="font-size:10pt" xml:space="preserve">Pauly M (2023, 8 March) Inside the Secret Working Group that Helped Pushed Anti-Trans Laws Across the Country. </hi>
+                        <hi rend="italic" style="font-size:10pt">Mother Jones.</hi>
+                        <ref target="https://www.motherjones.com/politics/2023/03/anti-trans-transgender-health-care-ban-legislation-bill-minors-children-lgbtq/">
+                            <hi style="font-size:10pt">https</hi>
+                        </ref>
+                        <ref target="https://www.motherjones.com/politics/2023/03/anti-trans-transgender-health-care-ban-legislation-bill-minors-children-lgbtq/">
+                            <hi style="font-size:10pt">://www.motherjones.com/politics/2023/03/anti-trans-transgender-health-care-ban-legislation-bill-minors-children-lgbtq/</hi>
+                        </ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi style="font-size:10pt" xml:space="preserve">Tebbe, E. A., Simone, M., Wilson, E., &amp; Hunsicker, M. (2022). A dangerous visibility: Moderating effects of antitrans legislative efforts on trans and gender-diverse mental health. </hi>
+                        <hi rend="italic" style="font-size:10pt">Psychology of Sexual Orientation and Gender Diversity</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">, 9(3), 259–271. </hi>
+                        <ref target="https://psycnet.apa.org/doi/10.1037/sgd0000481">
+                            <hi style="font-size:10pt">https://doi.org/10.1037/sgd0000481</hi>
+                        </ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi style="font-size:10pt">Tharsen J (2023) Identifying and Visualizing Intertextuality: From N-grams to Neural Networks</hi>
+                        <hi rend="italic" style="font-size:10pt">. New Horizons in Digital Humanities and Cultural Data Science Conference, Hong Kong University.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi style="font-size:10pt" xml:space="preserve">Valdez D, Goodson P. Neutral or Framed? A Sentiment Analysis of 2019 Abortion Laws. </hi>
+                        <hi rend="italic" style="font-size:10pt" xml:space="preserve">Sex Res Social Policy. </hi>
+                        <hi style="font-size:10pt">2022;19(3):936-945. doi: 10.1007/s13178-022-00690-2. Epub 2022 Jan 18. PMID: 35069923; PMCID: PMC8764246.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi style="font-size:10pt" xml:space="preserve">Zoledziowski A (2023, 14 April) Leaked Emails Reveal Just How Powerful the Anti-Trans Movement Has Become. </hi>
+                        <hi rend="italic" style="font-size:10pt">VICE News</hi>
+                        <hi style="font-size:10pt">. https://www.vice.com/en/article/lobbyist-anti-trans-leaked-emails/</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="CHEN_Zhan_A_Context_Sensitive_Parser_for_Semitic_Languages">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>A Context-Sensitive Parser for Semitic Languages</title>
+                <author>
+                    <persName>
+                        <surname>Chen</surname>
+                        <forename>Zhan</forename>
+                    </persName>
+                    <affiliation>Beijing Normal University – Hong Kong Baptist University United International College, China, People's Republic of</affiliation>
+                    <email>zhanchen@uic.edu.cn</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Parsing</term>
+                    <term>Fine-tuning</term>
+                    <term>Semitic Languages</term>
+                    <term>Transformer</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>manuscripts description</term>
+                    <term>representation</term>
+                    <term>and analysis</term>
+                    <term>natural language processing</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>text mining and analysis</term>
+                    <term>Computer science</term>
+                    <term>Linguistics</term>
+                    <term>Theology and religious studies</term>
+                    <term>Translation studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">Abstract</p>
+            <p style="text-align: left; ">This project explores a multi-pronged approach to creating a context-sensitive parser for ancient languages, particularly Syriac, within the framework of the ETCBC’s new website project, Qoroyo, featuring Syriac versions such as the Peshitta and Syro-Hexapla. By developing a custom-built encoder-only transformer model, the initiative addresses key challenges in parsing Semitic texts. The project also benchmarks a complementary strategy: leveraging state-of-the-art large language models (LLMs) to parse texts in ancient languages. This comprehensive effort aims to 1) achieve unprecedented accuracy in parsing Syriac and other ancient texts and 2) raise questions about the possibility of establishing a quantifiable evaluation for the morphological analysis of ancient languages, analogous to GLUE for language understanding or BLEU for translation.</p>
+            <p style="text-align: left; ">A New Attempt at a Syriac Parser Through an Encoder-Only Transformer Architecture</p>
+            <p style="text-align: left; ">The first part of this presentation describes a collaborative effort with the ETCBC. The ETCBC (Eep Talstra Centre for Bible and Computer, University of Amsterdam) has long been a pioneer in computational linguistic analysis of Biblical texts, particularly Hebrew and Syriac. With the launch of its new digital platform, Qoroyo, which incorporates ancient Syriac versions such as the Peshitta and Syro-Hexapla, the need for advanced parsing tools tailored to Semitic languages is more pressing than ever. Semitic languages pose unique computational challenges, including non-concatenative morphology, context-dependent morphology, and limited annotated datasets. ETCBC researchers have developed a Syriac parser based on an encoder-decoder transformer architecture, which frames parsing as a “translational” task (Martijn, etc., 2023). However, a new perspective may shed light on this task by reframing the parsing problem as a “classification” task. From this perspective, the morphological information in the text can be viewed as different classes of markups assigned to each morpheme. For this task, a lighter encoder-only model may be best suited and can reach a character-level accuracy of 97%.</p>
+            <p style="text-align: left; ">This task not only aims to achieve practical outcomes but also demonstrates the validity of light-weighed small language models for specific vertical NLP tasks, especially in the era of LLMs. For sure, the ETCBC’s well-designed method for encoding morphological information serves as the foundation for this work. If this similar method can be developed for ancient languages, it may not be too difficult to develop similar context-sensitive parsers for languages such as Akkadian or ancient Tibetan.</p>
+            <p style="text-align: left; ">Structured Output for Parsing Ancient Languages</p>
+            <p style="text-align: left; ">Many cutting-edge LLMs now offer structured output, i.e., a well-controlled format that the LLM’s output must adhere to. This feature provides a valuable opportunity for researchers to mass-produce parsed texts that meet the practical needs of digital humanities (DH) practitioners working with ancient texts. We have built a pipeline to enable the mass production of morphological analyses of words in context. However, the results are suboptimal to varying degrees, partly because most LLMs are undertrained in low-resource languages, which include most ancient languages.</p>
+            <p style="text-align: left; ">
+                <graphic n="1001" width="16.002cm" height="5.5809444444444445cm" url="/tmp/tmp_1zpm8rm/Pictures/645bc97118c53ce27c4cc226c9c18691.png" rend="inline"/>
+            </p>
+            <p style="text-align: left; ">Figure {1} The Pipeline for Parsing a Single Semitic Word in Context</p>
+            <p style="text-align: left; ">The greatest challenge is that mistakes are often partial, not binary (correct/incorrect). Errors may occur in the identification of a prefix, tense, or part of speech for some words, while other information remains valuable and accurate. Especially since different dimensions of morphological information are normally incommensurable, how can we understand and measure the degree of correctness of an LLM’s performance in morphological analysis for a given language? This question leads to the third part of the presentation:</p>
+            <p style="text-align: left; ">The Possibility of Establishing a Benchmark for the Morphological Analysis of Ancient Languages</p>
+            <p style="text-align: left; ">As mentioned, LLMs perform significantly worse in the specific task of morphological analysis, not only in terms of granularity, but also in overall accuracy. This is due not only to LLMs being generally undertrained in low-resource languages but also because LLMs are designed for more general purposes and lack a well-defined procedure to handle highly specific word forms.</p>
+            <p style="text-align: left; ">However, we know that for learners of ancient languages, the capabilities of LLMs—beyond general text translation—must include the precise identification of each word’s grammatical and semantic information, which is critically important. Could we develop a benchmark, at least for the most significant ancient languages, to create a comparable database that evaluates the performance of different LLMs in morphological analysis across these languages? If feasible, such a benchmark would provide a significant incentive for developers to focus on this niche domain, encouraging them to gather more training data in ancient studies to improve performance on the benchmark.</p>
+            <p style="text-align: left; ">Two challenges arise along the way. First, the collection of data and its manual markup. However, most major ancient languages already have general databases, such as Perseus for ancient Greek, where all words are parsed based on their forms but not according to context. The markup work can be reduced to selecting the correct choice among multiple morphological possibilities in a specific context (a task partially addressed through reader voting in the case of Perseus). Second, developing a measurable and definable way to quantify the correctness of LLM outputs. For most ancient languages, there is no comprehensive, machine-readable system for encoding morphological information. For each language with its unique grammar, this encoding system must be designed separately. This underscores the importance of interdisciplinary cooperation in the post-LLM era.</p>
+            <p style="text-align: left; ">Summary</p>
+            <p style="text-align: left; ">This project presents a multi-faceted approach to developing a context-sensitive parser for Semitic languages, focusing on Syriac within the ETCBC’s Qoroyo platform. By designing a lightweight encoder-only transformer model, we achieve high accuracy (97% at the character level) in parsing Syriac texts, addressing challenges like non-concatenative morphology and limited datasets. Additionally, we explore the use of structured outputs from LLMs for mass-producing morphological analyses, though results are suboptimal due to LLMs’ undertraining in low-resource languages. Finally, we propose establishing a benchmark to evaluate LLMs’ morphological analysis capabilities for ancient languages, which could incentivize improvements in this niche domain. Despite challenges in data collection and quantifying correctness, leveraging existing databases and interdisciplinary collaboration offers a promising path forward.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Anderson, Adam / Gordin, Shai / Li, Bin / Liu, Yudong / Passarotti, Marco C.</hi> (2023): "Machine Learning for Ancient Languages: A Survey", in: 
+                        <hi rend="italic">Computational Linguistics</hi> 49, 3: 703-736.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Naaijer, Martijn / Sikkel, Constantijn / Coeckelbergs, Mathias / van Peursen, Willem / Attema, Jisk</hi> (2023): “A Transformer-based parser for Syriac morphology”, in: Proceedings of the Ancient Language Processing Workshop, Adam Anderson / Shai Gordin / Bin Li / Yudong Liu / Marco C. Passarotti (Eds.), Varna, Bulgaria: Incoma Ltd.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Sikkel, Constantijn</hi> (2022): "Morphological Parser for Inflectional Languages Using Deep Learning (Part II)", in: 
+                        <hi rend="italic">ETCBC Blog</hi>, February 15, 2022 https://etcbc.nl/uncategorized/morphological-parser-for-inflectional-languages-using-deep-learning-part-ii [30.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Candito, Marie / Hall, Johan / Palermo, Srinivas</hi> (2013): "Overview of the SPMRL 2013 Shared Task: Cross-Framework Evaluation of Parsing Morphologically Rich Languages", in: 
+                        <hi rend="italic">Proceedings of the Seventh Workshop on Treebanks and Linguistic Theories (TLT)</hi>, Lancaster, UK, 2013: 152-171.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Felt, Paul / Ringger, Eric / Seppi, Kevin / Heal, Kristian / Haertel, Robbie / Lonsdale, Deryle</hi> (2012): "First Results in a Study Evaluating Pre-annotation and Correction Propagation for Machine-Assisted Syriac Morphological Analysis", in: 
+                        <hi rend="italic">European Language Resources Association (ELRA) (ed.): Proceedings of the Eighth International Conference on Language Resources and Evaluation (LREC'12)</hi>, Istanbul, Turkey, May 2012: 1281-1288.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">McClanahan, Peter / Busby, George / Haertel, Robbie / Heal, Kristian / Lonsdale, Deryle / Seppi, Kevin / Ringger, Eric</hi> (2010): "A Probabilistic Morphological Analyzer for Syriac", in: 
+                        <hi rend="italic">Association for Computational Linguistics (ed.): Proceedings of the 2010 Conference on Empirical Methods in Natural Language Processing</hi>, Cambridge, MA, USA, October 2010: 810-820.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

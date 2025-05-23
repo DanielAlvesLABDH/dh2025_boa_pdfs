@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VERSTRAETE_Mathilde__________________________________Harmoni">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Ὅσοι ἄνθρωποι, τοσαῦται γνῶμαι ! Harmonizing Guidelines for Handwritten Text Recognition of Ancient Greek (Workshop)</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Verstraete</surname>
+                        <forename>Mathilde</forename>
+                    </persName>
+                    <affiliation>University of Montreal, Canada</affiliation>
+                    <email>mathilde.verstraete@umontreal.ca</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Guénette</surname>
+                        <forename>Maxime</forename>
+                    </persName>
+                    <affiliation>University of Montreal, Canada</affiliation>
+                    <email>maxime.guenette@umontreal.ca</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Vitali-Rosati</surname>
+                        <forename>Marcello</forename>
+                    </persName>
+                    <affiliation>University of Montreal, Canada</affiliation>
+                    <email>marcello.vitali.rosati@umontreal.ca</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Efstathiou</surname>
+                        <forename>Malamatenia Vlachou</forename>
+                    </persName>
+                    <affiliation>IRHT - ENPC, France</affiliation>
+                    <email>malamatenia.vlachou@irht.cnrs.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Reboul</surname>
+                        <forename>Marianne</forename>
+                    </persName>
+                    <affiliation>École Normale Supérieure de Lyon, France</affiliation>
+                    <email>marianne.reboul@ens-lyon.fr</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-26T15:35:58.182686402</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Pre-Conference Workshop and Tutorial</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Handwritten Text Recognition</term>
+                    <term>Ancient Greek</term>
+                    <term>Guidelines</term>
+                    <term>Collaboration</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>optical character recognition and handwriting recognition</term>
+                    <term>public humanities collaborations and methods</term>
+                    <term>Humanities computing</term>
+                    <term>Philology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Since 2014, the Canada Research Chair on Digital Textualities<ref n="1" target="ftn1"/> has led the collaborative digital edition of the 
+                <hi rend="italic">Greek Anthology</hi> proejct<ref n="2" target="ftn2"/> [Verstraete 2024, Verstraete et al. 2024, Vitali-Rosati et al. 2021, 2020; Mellet 2020]. The 
+                <hi rend="italic">codex Palatinus graecus </hi>23<ref n="3" target="ftn3"/>, a Xth century Byzantine manuscript, is the primary source for the transmission of this collection of epigrams. As part as the project, three HTR models – based on the palatinian manuscript – have been created [Guénette et al. 2024a, 2024b, 2024c]. While the creation of a model for the 
+                <hi rend="italic">Palatinus</hi> was fairly straightforward – the manuscript is clean, clear, and contains few abbreviations – transcription choices become much more complex with less explicit manuscripts. This workshop aims to build a community of practice for transcribers of Ancient Greek manuscripts using HTR. Through this collaborative effort, a first set of guidelines will be developed to ensure consistent transcriptions across multiple document collections.
+            </p>
+            <div type="div1" rend="DH-Heading1">
+                <head>Context</head>
+                <p>In recent years, there have been significant developments in the field of HTR with the rise of several general public software such as Transkribus (Muehlberger et al. 2019) and eScriptorium (Stokes et al. 2021). In conjunction with technological progress, there has been a growing emphasis on the development of datasets and guidelines to standardize procedures and thereby facilitate their implementation. This growing interest is evidenced by a significant increase in the number of publications and conferences on the subject (Nockels et al. 2022), as well as a notable increase in the number of HTR-related initiatives, including summer schools and hackathons.<ref n="4" target="ftn4"/>
+                </p>
+                <p>For Latin script manuscripts, a critical mass of data appears to have been reached (Pinche et al. 2024, Chagué et al. 2023), paving the way for collaborative projects such as the Consortium for the Recognition of Handwritten Ancient Materials (CREMMA) (Pinche 2022) or the CATMuS project (Consistent Approaches to Transcribing Manuscripts) (Pinche et al. 2024).</p>
+                <p>However, non-Latin scripts often remain on the margins from this progress. Although promising projects have emerged, e.g. for Arabic (Kiessling 2021) and Ancient Greek (Guénette, Verstraete, Vitali-Rosati, et al. 2024, Tsochatzidis et al. 2021), these efforts remain fragmented. Currently, researchers often work on their own, following diverse practices and standards tailored to the needs of their specific projects. This situation mirrors the early days of Latin script HTR, before the development of comprehensive guidelines that slowly gained the potential to transform the field. Similarly, the establishment of a collaborative and interdisciplinary community could facilitate significant progress in non-Latin script HTR.</p>
+                <p>Thus, HTR for Ancient Greek faces several challenges, including a limited and dispersed corpus compared to Latin scripts, which hinders the development of effective models. Another issue is the lack of consistent encoding practices for Greek paleographic features. While Unicode provides basic characters for the Greek alphabet, it does not account for all the paleographic elements (such as ligatures and abbreviations) found in Ancient Greek manuscripts. This gap has led to varying encoding practices, complicating data standardization and limiting interoperability.</p>
+                <p>Current HTR approaches are often highly specialized, focusing on specific periods, regions, or manuscript types, with most projects excluding other document types like papyri. This specialization restricts the broader applicability of models. To improve data reuse and collaboration, a more generalized approach is needed, with harmonized practices across projects to enable data aggregation, sharing, and pre-annotation (Chagué et al. 2023, Hodel et al. 2021).</p>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>Aims of the Workshop </head>
+                <p>This workshop is not intended to be a technical training session on HTR, but rather a space for reflection, collaboration, and community building. It aims to bring together researchers and practitioners from a range of disciplines, including philologists, paleographers, HTR users (across various languages), and dataset creators, to address the technical and methodological challenges that have hindered the development of effective HTR for Ancient Greek.</p>
+                <p>The primary goals are:</p>
+                <list type="unordered">
+                    <item>To foster the development of an interdisciplinary community of practice that combines complementary expertise to address the challenges posed by the automatic recognition of Greek documents.</item>
+                    <item>To develop common guidelines for the transcription and encoding of ancient Greek texts, especially for the training of automatic text recognition models.</item>
+                </list>
+                <p>To achieve this, the workshop will adopt a participatory, use case-driven approach. A call will be issued inviting participants to share their perspectives, experiences and challenges through lightning talks, allowing the workshop to tailor its program to their specific needs. The discussion will be rigorously documented to ensure a transparent record of the guidelines and methodologies developed during the workshop.</p>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>Results</head>
+                <p>The workshop will result in the presentation of case studies illustrating the challenges specific to the transcription of Ancient Greek manuscripts with HTR technologies. The identification of recurring issues and collaborative discussions will lead to the establishment of a preliminary set of guidelines aimed at harmonizing transcription practices for Ancient Greek manuscripts. </p>
+                <p>These initial guidelines will be made publicly available on the project’s website<ref n="5" target="ftn5"/>, providing a shared reference point for ongoing and future work. Our longer-term goal is to establish a sustainable community of practice dedicated to refining and expanding these guidelines, ensuring they remain aligned with technological advances and the evolving needs of the field.
+                </p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn1" rend="footnote text" n="1">See 
+                    <ref target="https://www.ecrituresnumeriques.ca/">https://www.ecrituresnumeriques.ca</ref>.
+                </note>
+<note xml:id="ftn2" rend="footnote text" n="2">See 
+                    <ref target="https://anthologiagraeca.org/">https://anthologiagraeca.org</ref>.
+                </note>
+<note xml:id="ftn3" rend="footnote text" n="3">The manuscript is held at the Heidelberg University Library and its digitization can be consulted at this link: 
+                    .
+                </note>
+<note xml:id="ftn4" rend="footnote text" n="4">See for example the TranscriboQuest 2024 &lt;
+                        &gt; and 2025 &lt;
+                        &gt; ; the Winter school of Handwritten Text Recognition of Medieval Manuscripts (Institute for Medieval Research of the Austrian Academy of Sciences, 29-30
+                        <hi rend="sup">th</hi> of January 2023) &lt;
+                        &gt; ; the workshop Hands-on Introduction to eScriptorium, an Open-SourcePlatform for HTR organized by Peter Stokes and Daniel Stökl Ben Ezra at DH2022 &lt;
+                        &gt;. 
+                    </note>
+<note xml:id="ftn5" rend="footnote text" n="5">See 
+                        .
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Chagué, Alix / Clérice, Thibault / Norindr, Jade / Humeau, Maxime / Davoury, Baudoin / Kote, Elsa Van / Mazoue, Anaïs / Faure, Margaux / Doat, Soline (2023): “Manu McFrench, from zero to hero: impact of using a generic handwriting recognition model for smaller datasets”, in: Alliance of Digital Humanities Organizations and University of Graz (ed.): 
+                        <hi rend="italic">Digital Humanities 2023: Collaboration as Opportunity</hi>, Graz, Austria, July 2023 &lt;
+                        <ptr target="https://inria.hal.science/hal-04094241"/>&gt; [26.04.2025].
+                    </bibl>
+                    <bibl>Guénette, Maxime / Verstraete, Mathilde / Chagué, Alix / Vitali-Rosati, Marcello (2024a): 
+                        <hi rend="italic">HTR Model Palatinus graecus 23 (Meleagre-NFC) </hi>[Version v3], 
+                        <hi rend="italic">Zenodo </hi>&lt;
+                        <ptr target="https://zenodo.org/records/10932711"/>&gt; [26.04.2025].
+                    </bibl>
+                    <bibl>Guénette, Maxime / Verstraete, Mathilde / Chagué, Alix / Vitali-Rosati, Marcello (2024a): 
+                        <hi rend="italic">HTR Model Palatinus graecus 23 (Meleagre-NF</hi>
+                        <hi rend="italic">D</hi>
+                        <hi rend="italic">) </hi>[Version v3], 
+                        <hi rend="italic">Zenodo </hi>&lt;
+                        <ptr target="https://zenodo.org/records/10932742"/>&gt; [26.04.2025].
+                    </bibl>
+                    <bibl>Guénette, Maxime / Verstraete, Mathilde / Chagué, Alix / Vitali-Rosati, Marcello (2024a): 
+                        <hi rend="italic">HTR Model Palatinus graecus 23 (Meleagre-NF</hi>
+                        <hi rend="italic">D-finetuned</hi>
+                        <hi rend="italic">) </hi>[Version v3], 
+                        <hi rend="italic">Zenodo </hi>&lt;
+                        <ptr target="https://zenodo.org/records/10932751"/>&gt; [26.04.2025].
+                    </bibl>
+                    <bibl>Guénette, Maxime / Verstraete, Mathilde / Chagué, Alix / Vitali-Rosati, Marcello (2024): “Transcrire un manuscrit en grec ancien” in: Association francophone des humanités numériques (ed): 
+                        <hi rend="italic">Humanistica 2024</hi>, Meknès, Morocco &lt;
+                        <ptr target="https://hal.science/hal-04563548"/>&gt; [26.04.2025].
+                    </bibl>
+                    <bibl>Hodel, Tobias / Schoch, David / Schneider, Christa / Purcell, Jake (2021): “General Models for Handwritten Text Recognition: Feasibility and State-of-the Art. German Kurrent as an Example” in: 
+                        <hi rend="italic">Journal of Open Humanities Data </hi>7 (0):13 &lt;
+                        <ptr target="https://doi.org/10.5334/johd.46"/>&gt; [26.04.2025].
+                    </bibl>
+                    <bibl>Kiessling, Benjamin (2021): 
+                        <hi rend="italic">Avancées en Reconnaissance Optique des Caractères pour les Documents Arabes Historiques</hi>. Ph.D. thesis, Université Paris sciences et lettres &lt;
+                        <ptr target="https://theses.hal.science/tel-03854403"/>&gt; [26.04.2025].
+                    </bibl>
+                    <bibl>Muehlberger, Guenter / Seaward, Louise / Terras, Melissa / Oliveira, Sofia Ares / Bosch, Vicente / Bryan, Maximilian / Colutto, Sebastian / Déjean, Hervé / Diem, Markus / Fiel, Stefan / Gatos, Basilis / Greinoecker, Albert / Grüning, Tobias / Hackl, Guenter / Haukkovaara, Vili / Heyer, Gerhard / Hirvonen, Lauri / Hodel, Tobias / Jokinen, Matti / Kahle, Philip / Kallio, Mario / Kaplan, Frederic / Kleber, Florian / Labahn, Roger / Lang, Eva Maria / Laube, Sören / Leifert, Gundram / Louloudis, Georgios / McNicholl, Rory / Meunier, Jean-Luc / Michael, Johannes / Mühlbauer, Elena / Nathanael, Philipp / Pratikakis, Ionnis / Puigcerver Pérez, Joan / Putz, Hannelore / Retsinas, George / Romero, Verónica / Sablatnig, Robert / Andreu Sánchez, Joan / Schofield, Philip / Sfikas, Giorgos / Sieber, Christian / Stamatopoulos, Nikolaos / Strauß, Tobias / Terbul, Tamara / Héctor Toselli, Alejandro / Ulreich, Berthold / Villegas, Mauricio / Vidal, Enrique / Walcher, Johanna / Weidemann, Max / Wurster, Herbert, Zagoris, Konstantinos (2019): “Transforming scholarship in the archives through handwritten text recognition: Transkribus as a case study” in: 
+                        <hi rend="italic">Journal of Documentation</hi>
+                        <hi rend="italic"> </hi>75 (5): 954-976 &lt;
+                        <ptr target="https://www.emerald.com/insight/content/doi/10.1108/jd-07-2018-0114/full/html"/>&gt; [26.04.2025].
+                    </bibl>
+                    <bibl>Pinche, Ariane (2022): “HTR Models and genericity for Medieval Manuscripts” &lt;
+                        <ptr target="https://hal.science/hal-03736532v1"/>&gt; [26.04.2025].
+                    </bibl>
+                    <bibl>Pinche, Ariane / Clérice, Thibault / Chagué, Alix / Camps, Jean-Baptiste / Vlachou-Efstathiou, Malamatenia / Gille Levenson, Matthias / Brisville-Fertin, Olivier / Boschetti, Federico / Fischer, Franz / Gervers, Michael / Boutreux, Agnès / Manton, Avery / Gabay, Simon / Haverals, Wouter / Kestemont, Mike / Vandyck, Caroline / O'Connor, Patricia (2024): “CATMuS-Medieval: Consistent Approaches to Transcribing ManuScripts” in: 
+                        <hi rend="italic">Digital Humanities – DH2024</hi>, Washington DC &lt;
+                        <ptr target="https://inria.hal.science/hal-04346939"/>&gt; [26.04.2025].
+                    </bibl>
+                    <bibl>Stokes, Peter Anthony / Kiessling, Benjamin / Stökl Ben Ezra, Daniel / Tissot, Robin / Gargem / El Hassane(2021): “The eScriptorium VRE for Manuscript Cultures” in 
+                        <hi rend="italic">Classics@ Journal</hi> 18 (1) &lt;
+                        <ptr target="https://classics-at.chs.harvard.edu/classics18-stokes-kiessling-stokl-ben-ezra-tissot-gargem/"/>&gt; [26.04.2025].
+                    </bibl>
+                    <bibl>Tsochatzidis, Lazaros / Symeonidis, Symeon / Papazoglou, Alexandros / Pratikakis , Ioannis (2021): “HTR for Greek Historical Handwritten Documents” in: 
+                        <hi rend="italic">Journal of Imaging</hi> 7 (12), 260 &lt;
+                        <ptr target="https://doi.org/10.3390/jimaging7120260"/>&gt; [26.04.2025].
+                    </bibl>
+                    <bibl>Verstraete, Mathilde (2024): “Dynamiques auctoriales au sein du projet d’édition numérique collaborative de l’ Anthologie grecque”, in: 
+                        <hi rend="italic">Sens public </hi>(Del Lungo, Andrea / Mouton-Rovira, Estelle (eds.) 
+                        <hi rend="italic">L’écrivain et la machine</hi>) &lt;
+                        <ptr target="https://sens-public.org/articles/1692/"/>&gt; [26.04.2025].
+                    </bibl>
+                    <bibl>Verstraete, Mathilde / Mellet, Margot (2024): “Passés et présents anthologiques. Le projet d’édition numérique collaborative de l’
+                        <hi rend="italic">Anthologie grecque</hi>” in: Sauret, Nicolas / Severo, Marta (eds.): Communautés et pratiques d’écritures des patrimoines et des mémoires. Paris: Presses universitaires de Paris-Nanterre. 
+                    </bibl>
+                    <bibl>Vitali-Rosati, Marcello / Mellet, Margot / Monjour, Servanne / Fauchié, Antoine / Guicherd, Timothée / Larlet, David / Agostini-Marchese, Enrico (2021): “L’épopée numérique de l’
+                        <hi rend="italic">Anthologie grecque</hi> : entre questions épistémologiques, modèles techniques et dynamiques collaboratives”, in: 
+                        <hi rend="italic">Sens public</hi> (Agostini-Marchese, Enrico / Château-Dutier, Emmanuel / Sinatra, Michael (eds.) 
+                        <hi rend="italic">Nouvelles perspectives sur les humanités numériques</hi>) &lt;
+                        <ptr target="http://sens-public.org/articles/1603/"/>&gt; [26.04.2025].
+                    </bibl>
+                    <bibl>Vitali-Rosati, Marcello / Monjour, Servanne / Casenave, Joana / Bouchard, Elsa / Mellet, Margot (2020): “Editorializing the 
+                        <hi rend="italic">Greek Anthology</hi>: The palatin manuscript as a collective imaginary”, in 
+                        <hi rend="italic">Digital Humanities Quarterly</hi> 14 (1) &lt;
+                        <ptr target="https://www.digitalhumanities.org/dhq/vol/14/1/000447/000447.html"/>&gt; [26.04.2025].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

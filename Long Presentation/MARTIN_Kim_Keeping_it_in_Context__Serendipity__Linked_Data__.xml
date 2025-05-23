@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MARTIN_Kim_Keeping_it_in_Context__Serendipity__Linked_Data__">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Keeping it in Context: Serendipity, Linked Data, and User Experience at LINCS</title>
+                <author>
+                    <persName>
+                        <surname>Martin</surname>
+                        <forename>Kim</forename>
+                    </persName>
+                    <affiliation>University of Guelph, Canada</affiliation>
+                    <email>kmarti20@uoguelph.ca</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-08T19:28:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>linked data</term>
+                    <term>serendipity</term>
+                    <term>user experience</term>
+                    <term>context</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>linked (open) data</term>
+                    <term>user experience design and analysis</term>
+                    <term>Design studies</term>
+                    <term>Humanities computing</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">
+                <hi rend="italic">Linked Infrastructure for Networked Cultural Scholarship</hi> (LINCS) mobilizes Canadian scholarship through making, disseminating, and promoting the use of linked open data (LOD). Our goal is to allow scholars from fields including history, media studies, music, performance, and literary studies to interweave their research material meaningfully with data from cultural data publishers (galleries, museums, archives, libraries) to transform web research for the humanities. The author of the present paper has performed two inter-related roles over the past 4 years: as Research Board Chair, working with humanities scholars to understand what they wanted from linked data infrastructure, and as lead of the user-experience (UX) team at LINCS
+                <hi rend="endnote_reference">
+                    <note place="end">
+                        <p rend="endnote text">I am indebted to the knowledge and hard work of the LINCS UX team, including Robin Bergart, Susan Brown, Nem Brunell, Sana Javeed, Rashmeet Kaur, Jordan Lum, Kathleen McCulloch-Cop, Alliyya Mo, and Evan Rees.</p>
+                    </note>
+                </hi>, investigating the various tools and interfaces developed or extended by the LINCS technical team to determine their usability.
+            </p>
+            <p style="text-align: left; ">Extending research on serendipity and digital environments (Martin, 2016, Martin and Quan-Haase 2016), the 
+                <hi rend="italic">Serendipity, Context, and Agency in Linked Environments</hi> (SCALE) project investigated the use of LOD by the LINCS research community. Through the application of user-experience evaluations, surveys, interviews, and think-aloud protocols, LINCS has kept users front of mind throughout the iterative development of everything from our research portal (
+                <ref target="https://lincsproject.ca/">https://lincsproject.ca/</ref>) to the creation of web plug-ins and interactive websites. This paper will summarize the findings of the SCALE project, reflecting on UX work done at LINCS. It will address the following research questions: 
+            </p>
+            <list type="ordered">
+                <item>Can digital information environments be made more useful for scholars by utilizing the linked structure of the web to provide contextual information from a variety of sources? </item>
+                <item>Can they be designed so that scholars have agency in the way this structure is built and how it is visualized? </item>
+                <item>Will interfaces that combine the features to support context and agency lead to digital environments that are ripe for serendipity?</item>
+            </list>
+            <p style="text-align: left; ">Three tools will be the focus of the reflections in this paper: 
+                <hi rend="bold">LINCS ResearchSpace</hi>, a semantic-web platform originally built by a team at the British Museum and now supported by Kartography (Oldman, 2021, Kartography), the 
+                <hi rend="bold">LINCS Context-Explorer</hi>, a web-plugin that layers the data available through the LINCS triplestore on the wider web to expose connections, and 
+                <hi rend="bold">Linked-Lists</hi>, a visualization of researcher-connections using ORCIDs, a linked-data extension of a website designed by Marian Dörk (Dörk). 
+            </p>
+            <p rend="DH-Heading2">A Web of Context</p>
+            <p style="text-align: left; ">In her PhD thesis on historians and their experience of serendipity, Martin (2016) found that historians were reluctant to use digital search strategies due to a lack of two forms of contextual information: the relationship between the documents themselves (books on a shelf, articles in a journal) and the original context of the historical information itself (where quotes originated, the larger newspaper page surrounding a specific article). Following earlier findings by Woolwine (2014) and Duff and Johnson (2002), Martin concluded that context was vital to experiencing serendipity in digital environments and suggested that digital tools created to support serendipity should be carefully constructed with respect to how they visualize relationships between materials. Scholars using linked environments will not only be interested in the direct context of the entities and connections they are investigating, but they will also want to understand the providence of these statements. Just as they might follow a location of a single reference along a shelf or through a box of archival materials, the digital contexts that humanities scholars build up around their sources are of utmost importance to assembling their research arguments.</p>
+            <p style="text-align: left; ">The semantic web, a network of linked data that enables “people to create data stores on the Web, build vocabularies, and write rules for handling data” is, at its core, a web of connections (W3C 2015). Over 8.2 million scholars world-wide are actively participating in this web by creating ORCIDs (Open Researcher &amp; Contributor IDs), where they are given a unique Uniform Resource Identifier (URI) or number code that represents them and a page that shows their interests, publications, and employment history (ORCID 2024). At LINCS, the data from 18 datasets (4 published, 14 in progress) currently make up 246 000 unique entities (each with their own URI). Although these URIs representing people, places, works, or events, are important for disambiguation, interfaces must also be able to demonstrate their context to be useful for humanities research.</p>
+            <p style="text-align: left; ">
+                <hi rend="bold">LINCS ResearchSpace</hi> relies on connections between entities to demonstrate context for users. The LINCS UX team has supported the developers at LINCS through many iterations of the interface, working against two difficulties: first, ResearchSpace was built with a single project or collection in mind, and LINCS has rescoped the interface so that linked data can connect across multiple projects, and second, the complexity of CIDOC-CRM, our core ontology, often means exposing more connections than researchers can easily comprehend. This section of the presentation will demonstrate how UX testing (think-alouds) led to decisions about the LINCS RS interface.
+            </p>
+            <p rend="DH-Heading2">Agency of the User</p>
+            <p style="text-align: left; ">Recently, the potential benefits of the semantic web for supporting agency in these serendipitous connections have begun to be explored. Researchers of linked open data (LOD) environments similarly find it useful to consider the agency of the user when building platforms: Hyvönen (2020) writes of “future portals” to be “used for finding research problems in the first place, for addressing them, and even for solving them automatically 
+                <hi rend="italic">under the constraints set by the human researcher</hi>” (emphasis added). Khalili et al. (2018) stress the importance of personalization and customization of a LOD interface when attempting to support serendipitous encounters: the user, then, must have both choice and control over their interface to benefit from these environments.
+            </p>
+            <p style="text-align: left; ">The LINCS Context Explorer invites users to discover information on the web by contextualizing this content with information about people, places, organizations, and creative works drawn from the LINCS triplestore. It works by scanning pages for potential matches to LINCS URIs and then allowing them to traverse a web of related information as they wish, leaving the decision-making up to users. The UX team was involved in several stages of the development of this tool, from its conceptualization to the development of categories for search. Two Design Frolics (
+                <ref target="https://frolics.lincsproject.ca/">https://frolics.lincsproject.ca/)</ref> will be the focus of reflection here: demonstrating how collaborative design can impact large DH projects.
+            </p>
+            <p rend="DH-Heading2">Serendipity and Collaboration</p>
+            <p style="text-align: left; ">Studies of serendipity in physical locations have found that there are many factors involved in the experience, from the colour and size of a book on a shelf (Martin, Greenspan, and Quan-Haase 2017) to an unopened box in the archives (Kirsch and Rohan 2008). Online, other factors help scholars create connections between research material. These include proximity (Solberg 2012), context (Martin 2016), awareness (McCay-Peet and Toms 2015), and the ability to browse (Carr 2015). Serendipity can be facilitated through social collaboration (Taramigkou et al. 2013) and especially in interdisciplinary communities (Arboleda 2017; Darbellay et al. 2014) like the digital humanities. In developing and fostering these collaborative environments, scholars can better understand and incorporate diverse perspectives into their practice. </p>
+            <p style="text-align: left; ">Linked Lists is a visualization of connections between researchers, their publications, projects, and institutions, aimed at locating points of connection between researchers, centres, labs, and research groups. Developed as a method of leveraging the data that researchers maintain about their work, this final section will reflect on the UX team’s testing of this interface, and what elements act as a catalyst for serendipity, before concluding the paper with some final thoughts about the importance of UX for digital humanities projects. </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Arboleda</hi>, 
+                        <hi rend="bold">Stephanie Gabriela Arevalo</hi>. (2017): “Influencing Collaboration to Enhance Knowledge Work Through Serendipity: User-study and Design Considerations.” Masters Thesis. Tampere University of Technology.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Carr, Patrick L.</hi> (2015): “Serendipity in the Stacks: Libraries, Information Architecture, and the Problems of Accidental Discovery.” 
+                        <hi rend="italic" xml:space="preserve">College &amp; Research Libraries </hi>76 (6): 831–42.  
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Darbellay</hi>, 
+                        <hi rend="bold">Frédéric / Moody, Zoe / Sedooka, Ayuko</hi> / 
+                        <hi rend="bold">Steffen, Gabriela</hi>. (2014): 
+                        <hi rend="italic">Creativity Research Journal</hi> 26(1): 1-10. 
+                        <ref target="https://doi.org/10.1080/10400419.2014.873653">https://doi.org/10.1080/10400419.2014.873653</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Dörk</hi>, 
+                        <hi rend="bold">Marian</hi>. (2024): 
+                        <hi rend="italic">Marian Dörk: Research professor for information visualization</hi>. 
+                        <ref target="https://mariandoerk.de/">https://mariandoerk.de/</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Duff, Wendy M</hi>. / 
+                        <hi rend="bold">Johnson, Catherine A.</hi>. (2002): “Accidentally Found on Purpose: Information-Seeking Behavior of Historians in Archives.” 
+                        <hi rend="italic" xml:space="preserve">The Library Quarterly </hi>72 (4): 472–96. 
+                        <ref target="https://doi.org/10.2307/40039793">https://doi.org/10.2307/40039793</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Hyvönen, Eero</hi>. (2020): “Using the Semantic Web in Digital Humanities: Shift from Data Publishing to Data-analysis and Serendipitous Knowledge Discovery.” 
+                        <hi rend="italic" xml:space="preserve">Semantic Web </hi>11 (1): 187-193.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kartography</hi> CIC: The Home of ResearchSpace. (2024): 
+                        <ref target="https://kartography.org/index.html">https://kartography.org/index.html</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Khalili, Ali / Van Den Besselaar, Peter</hi> / 
+                        <hi rend="bold">De Graaf, Klaas Andries</hi>. (2018): “FERASAT: A Serendipity Fostering Faceted Browser for Linked Data.” in 
+                        <hi rend="italic">European Semantic Web Conference</hi>, 351–66.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kirsch, Gesa E</hi>. / 
+                        <hi rend="bold">Rohan, Liz</hi>. (2008): 
+                        <hi rend="italic">Beyond the Archives: Research as a Lived Process</hi>. Carbondale: Southern Illinois University Press. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Martin, Kim</hi>. (2016): Doctoral Thesis “Creating Context from Curiosity: The Role of Serendipity in the Research Process of Historians.” University of Western Ontario. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Martin, Kim</hi> / 
+                        <hi rend="bold">Quan-Haase, Anabel</hi>. (2016): “The Role of Agency in Historians’ Experiences of Serendipity in Physical and Digital Information Environments.” 
+                        <hi rend="italic">Journal of Documentation</hi> 72 (6). 
+                        <ref target="https://doi.org/10.1108/JD-11-2015-0144">https://doi.org/10.1108/JD-11-2015-0144</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Martin, Kim</hi> / 
+                        <hi rend="bold">Greenspan</hi>, 
+                        <hi rend="bold">Brian</hi> / 
+                        <hi rend="bold">Quan-Haase, Anabel</hi>. (2017): “STAK – Serendipitous Tool for Augmenting Knowledge: A Conceptual Tool for Bridging Digital and Physical Resources.” 
+                        <hi rend="italic">Digital Studies/Le Champ Numerique</hi> 9.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">McCay-Peet, Lori / Toms, Elaine G</hi>. (2015): “Investigating Serendipity: How It Unfolds and What May Influence It.” 
+                        <hi rend="italic" xml:space="preserve">Journal of the Association for Information Science and Technology </hi>66 (7): 1463–76. https://doi.org/10.1002/asi.23273. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Oldman, Dominic</hi>. (2021): "Digital research, the legacy of form and structure and the ResearchSpace system." In 
+                        <hi rend="italic">Information and Knowledge Organisation in Digital Humanities</hi>, pp. 131-153. Routledge.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">ORCID</hi>. (2023): “ORCID Shares 2023 Highlights in Annual Community Town Hall.” https://info.orcid.org/orcid-shares-2023-highlights-in-annual-community-town-hall/
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Solberg, Janine.</hi> (2012): “Googling the Archive: Digital Tools and the Practice of History.” 
+                        <hi rend="italic" xml:space="preserve">Advances in the History of Rhetoric </hi>15 (1): 53–76. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Taramigkou, Maria / Bothos, Efthimios / Christidis, Konstantinos / Apostolou</hi>, 
+                        <hi rend="bold">Dimitris / Mentzas, Gregoris.</hi> (2013): "Escape the bubble: Guided exploration of music preferences for serendipity and novelty." In 
+                        <hi rend="italic">Proceedings of the 7th ACM conference on Recommender systems</hi>, pp. 335-338.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">W3C</hi>. (2015): “Semantic Web.” W3C. 2015. 
+                        <ref target="https://www.w3.org/standards/semanticweb/">https://www.w3.org/standards/semanticweb/</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Woolwine, David E.</hi> (2014): “Collection Development in the Humanities and Social Sciences in a Transitional Age: Deaccession of Print Items.” 
+                        <hi rend="italic">Library Philosophy and Practice</hi>, no. 1173.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

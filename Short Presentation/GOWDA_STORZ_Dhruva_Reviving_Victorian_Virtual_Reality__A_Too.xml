@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="GOWDA_STORZ_Dhruva_Reviving_Victorian_Virtual_Reality__A_Too">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Reviving Victorian Virtual Reality: A Toolkit for Restoring and Disseminating Historical Stereographs in Contemporary VR</title>
+                <author>
+                    <persName>
+                        <surname>Gowda Storz</surname>
+                        <forename>Dhruva</forename>
+                    </persName>
+                    <affiliation>Laboratory for Experimental Museology, EPFL, Switzerland</affiliation>
+                    <email>dhruva.gowdastorz@epfl.ch</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Kenderdine</surname>
+                        <forename>Sarah</forename>
+                    </persName>
+                    <affiliation>Laboratory for Experimental Museology, EPFL, Switzerland</affiliation>
+                    <email>sarah.kenderdine@epfl.ch</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Automatic Image Restoration</term>
+                    <term>Virtual Reality (VR)</term>
+                    <term>Digital Archives</term>
+                    <term>Stereographs</term>
+                    <term>3D Visualization</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>digital archiving</term>
+                    <term>image processing and analysis</term>
+                    <term>virtual and augmented reality creation</term>
+                    <term>systems</term>
+                    <term>and analysis</term>
+                    <term>Computer science</term>
+                    <term>Galleries and museum studies</term>
+                    <term>Humanities computing</term>
+                    <term>Media studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Stereo Photography and Challenges to its Dissemination</head>
+                <p style="text-align: left; ">Stereo Photography was the first 3D immersive medium and a dominant form of optical entertainment in the 19th and 20th centuries. Invented in London shortly after the advent of commercially viable photography in 1839 (Gernsheim / Gernsheim 1969), stereography (sometimes called ’Victorian Virtual Reality’) operates by encoding depth within the difference between two simultaneously captured side-by-side images (figure 1). When viewed in a stereoscope, the two images in a stereograph are fused into a single depth perspective by the viewer’s brain, completely enveloping them in the captured scene. Due to its immersive nature, the medium was immensely popular in the Western world for nearly a century and significantly influenced the visual culture and entertainment media that succeeded it (Gurevitch 2013). During this period, stereography was used to document a variety of historical events and perspectives, including the First World War (Mendelson / Kitch 2011), global culture (DeLeskie 2000), and scientific subjects (Gavin 2018), among many others. Millions of stereographs from this period survive in cultural repositories around the globe, representing a treasure trove of priceless three-dimensional historical records of the past that have much to reveal not only in terms of history but also through diverse topics such as media archaeology and the nature of immersion.</p>
+                <p style="text-align: left; ">Despite the wealth of digitized stereographs available online, disseminating them proves challenging due to the difficulty of transmitting the depth of information they encode. Traditional viewing through a stereoscope requires physical handling, which risks jeopardizing the fragile artifacts, the dominant form of digital dissemination as side-by-side stereo pairs fail to immerse the observer in their 3D historical contexts, and other popular 3D viewing methods such as anaglyphs are not as compelling as comparable visualization methods (Peixoto et al. 2019). However, Virtual reality, which has become increasingly ubiquitous in personal and museological spheres<ref n="1" target="ftn1"/>, offers avenues towards a renaissance for the stereographic medium.
+                </p>
+                <figure>
+                    <graphic n="1001" width="15.998472222222222cm" height="8.09625cm" url="/tmp/tmpsc7e2_x4/Pictures/6e623b7556627b7f15364780b190d586.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">
+                    <hi rend="italic bold" style="font-size:10pt">Figure 1:</hi>
+                    <hi rend="italic" style="font-size:10pt" xml:space="preserve"> “A wonder to the primitive inhabitants – Santa Fe train crossing Canon Diablo, Arizona” (1902), a stereograph whose full 3D relief is completely lost in this flat 2D archival scan.</hi>
+                </p>
+                <p style="text-align: left; ">Yet, the visualization of this material on VR and stereoscopic displays is not as straightforward as simply scanning and displaying it (Luz / Peixoto 2015). Accumulated damage, exposure differences, noise, and misalignment generate asymmetries in the stereo view, triggering binocular rivalry and other sources of strain that our visual systems are highly sensitive to (Terzić / Hansard 2016).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Background &amp; Related Work</head>
+                <p style="text-align: left; ">Several projects have explored visualizing stereographs in VR and AR (Boehlert 2016; Taipina / Cardoso 2022; Sommerer et al. 1999; Sandheinrich / Hutson 2023); however, they all focus on creating demonstrators from small curated datasets, and none have thus far addressed systemic barriers to broader dissemination. Pipelines for creating digital stereograph datasets (Luo et al. 2020; Ricupero et al. 2019) still rely on manual processing and do not address sources of discomfort in VR visualization.</p>
+                <p style="text-align: left; ">While automatic restoration methods have widely been explored for monoscopic photographs (Ardizzone et al. 2018; Wan et al. 2020), and a strong precedent exists for comfort optimization in 3D cinema (Baumgartner 2014; Mendiburu 2012), only one project has attempted the automatic restoration of stereographs to the best of our knowledge (Fanfani et al. 2021), but only addresses limited sources of discomfort, focusing more on visual improvement than comfort optimization.</p>
+                <p style="text-align: left; ">Research into facilitating the dissemination of stereographs through VR is a largely untapped frontier for research, making the goals of our proposed toolkit novel in scope, breadth, and depth.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>A Toolkit for Disseminating Digitized Historical Stereo Photographs</head>
+                <p style="text-align: left; ">This project aims to build a set of open-source computational tools that archivists, restoration professionals, and stereo enthusiasts can use to process stereographs on a large scale and visualize them in VR. The kit also aims to explore new visualization techniques and augmentations, defining new visualization paradigms for the historical medium through virtual reality. The computational tools in our toolkit fall under three main categories: restoration, augmentation, and visualization.</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Restoration</head>
+                    <p style="text-align: left; ">Our toolkit’s core is an automatic end-to-end restoration pipeline that prepares digitized stereographs for VR. This involves cropping the two images out of their scanned frames and correcting various sources of discomfort. To this end, we identified eight restoration steps (Gowda-Storz / Kenderdine in press) that must be automated by examining manual stereo restoration and 3D cinema post-processing workflows employed by professionals. These eight steps, described in figure 2, process stereographs for both HMD and screen-based VR systems and are modular, with each step designed to be used in isolation. At its core, the pipeline is based on matching and comparing the two images based on disparity and using one image to correct the other. This, along with a focus on classical rather than generative methods, ensures transparency and minimizes the possibility of our algorithm introducing new, historically inaccurate content. The restoration pipeline is in active development and is shaped by input from the archives and restoration professionals who would benefit from it.</p>
+                    <figure>
+                        <graphic n="1002" width="15.998472222222222cm" height="8.060972222222222cm" url="/tmp/tmpsc7e2_x4/Pictures/6e623b7556627b7f15364780b190d586.png" rend="block"/>
+                    </figure>
+                    <p style="text-align: left; ">
+                        <hi rend="italic" style="font-size:10pt">Figure 2: Overview of the eight sequential stages in our automated stereo-restoration pipeline, from initial frame extraction and disparity alignment through artifact correction and colour correction to the final restored stereograph.</hi>
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Augmentation</head>
+                    <p style="text-align: left; ">In addition to preparing digitized stereographs for visualization in VR, our toolkit also explores the uncharted frontier of augmenting historical stereographs using computer vision methods to elevate them beyond their intended viewing format, leveraging the computing power and interactive modalities that contemporary VR devices offer. While this remains open-ended, we are working on reconstructing 3D scenes from the depth information encoded in stereo pairs, recolouring tools, automatic sonification tools, and NLP tools for linking the vast textual archives related to stereographs with the images they contextualize. As the augmentation tools deviate from the original material due to their use of generative AI, this facet of the toolkit is speculative. It aims to chart new paradigms for visualizing, interacting with, and creating narratives from stereoscopic archives that enhance and encourage their dissemination to the general public.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Visualization</head>
+                    <p style="text-align: left; ">The final facet of our toolkit is a set of visualization tools for deploying the restored and augmented stereographs on various VR systems, bridging the final gap between digitized stereo pairs and VR architectures. These visualization systems will be instrumental in evaluating the efficacy of the comfort improvements of our restoration pipeline and testing augmentations in a 3D context.</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Acknowledgments</head>
+                <p style="text-align: left; ">We thank our collaborators, Dr. Edward Andò, Mallory Wittwer, and Dr. Florian Aymanns from the EPFL Center for Imaging for their invaluable help in automatically restoring and reconstructing stereo pairs.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                         Such as the advanced visualization systems at our laboratory: 
+                            <ref target="https://www.epfl.ch/labs/emplus/systems/">https://www.epfl.ch/labs/emplus/systems/</ref>
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <lb/>
+                        <hi rend="bold">Ardizzone, Edoardo / Dindo, Haris / Mazzola, Giuseppe</hi> (2018): “A knowledge based architecture for the virtual restoration of ancient photos”, in: Pattern Recognition 74: 326–339. DOI: 10.1016/j.patcog.2017.09.031
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <lb/>
+                        <hi rend="bold">Barreda-Ángeles, Miguel / Pépion, Romuald / Bosc, Emilie / Le Callet, Patrick / Pereda-Baños, Alexandre</hi> (2014): “Exploring the effects of 3D visual discomfort on viewers’ emotions”, in: 2014 IEEE International Conference on Image Processing (ICIP): 753–757. DOI: 10.1109/ICIP.2014.7025151
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <lb/>
+                        <hi rend="bold">Baumgartner, Rick</hi> (2014): 3D postproduction: Stereoscopic workflows and techniques. CRC Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <lb/>
+                        <hi rend="bold">Boehlert, Krystal</hi> (2016): “Stereographs On Your Smartphone”, in: Visual Resources Association Bulletin 43, 1 (Article 4). 
+                        <ref target="https://online.vraweb.org/index.php/vrab/article/view/10">https://online.vraweb.org/index.php/vrab/article/view/10</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <lb/>
+                        <hi rend="bold">DeLeskie, Robert</hi> (2000): The Underwood stereograph travel system: A historical and cultural analysis. Ph.D. thesis, Concordia University.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <lb/>
+                        <hi rend="bold">Fanfani, Marco / Colombo, Carlo / Bellavia, Fabio</hi> (2021): “Restoration and enhancement of historical stereo photos”, in: Journal of Imaging 7, 7: 103. DOI: 10.3390/jimaging7070103
+                        <lb/>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Gavin, Erin</hi> (2018): The Keystone 600 Set and its role in early twentieth-century education. Ph.D. thesis, University of Rochester.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <lb/>
+                        <hi rend="bold">Gernsheim, Helmut / Gernsheim, Alison</hi> (1969): The history of photography: from the camera obscura to the beginning of the modern era, pp. 253–254. Thames and Hudson.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <lb/>
+                        <hi rend="bold">Gowda-Storz, Dhruva / Kenderdine, Sarah</hi> (2025): “Automatic Restoration of Historical Stereoscopic Photographs for 3D Visualization at Scale”, in: Proceedings of IS&amp;T Archiving 2025. in press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <lb/>
+                        <hi rend="bold">Gurevitch, Leon</hi> (2013): “The stereoscopic attraction: Three-dimensional imaging and the spectacular paradigm 1850–2013”, in: Convergence 19, 4: 396–405. DOI: 10.1177/1354856513494175
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <lb/>
+                        <hi rend="bold">Luo, Xuan / Kong, Yanmeng / Lawrence, Jason / Martin-Brualla, Ricardo / Seitz, Steven M.</hi> (2020): “KeystoneDepth: History in 3D”, in: International Conference on 3D Vision (3DV), November 2020: 463–472.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <lb/>
+                        <hi rend="bold">Luz, Filipe Costa / Peixoto, Rodrigo</hi> (2015): “The spectacle of stereoscopy: historical analysis and inputs to the creation of a digital archive of analog stereoscopic photography”, in: Proceedings of the IX Congresso Sopcom: 494–504.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <lb/>
+                        <hi rend="bold">Mendelson, Andrew L. / Kitch, Carolyn</hi> (2011): “Creating a Photographic Record of World War I: ‘Real History’ and Recuperative Memory in Stereography”, in: Journalism History 37, 3: 142–150. DOI: 10.1080/00947679.2011.12062854
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <lb/>
+                        <hi rend="bold">Mendiburu, Bernard</hi> (2012): 3D movie making: stereoscopic digital cinema from script to screen. Routledge.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <lb/>
+                        <hi rend="bold">Peixoto, Rodrigo / Luz, Filipe Costa / Oliveira, Jorge</hi> (2019): “The digitalization of analogue stereo photographs and the creation of the digital stereo archive”, in: Archiving Conference 16: 171–176. Society for Imaging Science and Technology.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <lb/>
+                        <hi rend="bold">Ricupero, Bryan / Dalton, Glory / Lehman, Amanda</hi> (2019): “Building and enhancing stereographic digital collections: working across departments to augment reality”, in: 2019 ACM/IEEE Joint Conference on Digital Libraries (JCDL): 343–344. DOI: 10.1109/JCDL.2019.00062
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <lb/>
+                        <hi rend="bold">Sandheinrich, Paige / Hutson, James</hi> (2023): “Haptic Preservation of Cultural Ephemera: An Extended Reality Solution Using Stereoscopic Experience Replication for Victorian Parlor Culture”, in: Metaverse Basic and Applied Research 2: 48. DOI: 10.56294/mr202348
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <lb/>
+                        <hi rend="bold">Sommerer, Christa / Mignonneau, Laurent / Lopez-Gulliver, Roberto</hi> (1999): “Time_lapse: immersive interaction with historic 3-D stereo images”, in: Proceedings of the International Conference on Virtual Systems and MultiMedia (VSMM’99): 295–307.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <lb/>
+                        <hi rend="bold">Taipina, Daniel / Cardoso, Jorge C. S.</hi> (2022): “Spectare: Re-designing a stereoscope for a cultural heritage XR experience”, in: Electronics 11, 4: 620. DOI: 10.3390/electronics11040620
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <lb/>
+                        <hi rend="bold">Terzić, Kasim / Hansard, Miles</hi> (2016): “Methods for reducing visual discomfort in stereoscopic 3D: A review”, in: Signal Processing: Image Communication 47: 402–416. DOI: 10.1016/j.image.2016.08.002
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <lb/>
+                        <hi rend="bold">Wan, Ziyu / Zhang, Bo / Chen, Dongdong / Zhang, Pan / Chen, Dong / Liao, Jing / Wen, Fang</hi> (2020): “Bringing old photos back to life”, in: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition: 2747–2757. DOI: 10.1109/CVPR42600.2020.00282
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

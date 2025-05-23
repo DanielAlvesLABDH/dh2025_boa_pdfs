@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="TSAI_Richard_Tzong_Han_Uncovering_Historical_Insights__A_Fra">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Uncovering Historical Insights: A Framework for Explaining Historical Data through Graphs and LLM</title>
+                <author>
+                    <persName>
+                        <surname>Ko</surname>
+                        <forename>Han-Chun</forename>
+                    </persName>
+                    <affiliation>Department of Computer Science and Information Engineering, National Central University, Taiwan</affiliation>
+                    <email>hanchunkk@g.ncu.edu.tw</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Lee</surname>
+                        <forename>Pin-Yi</forename>
+                    </persName>
+                    <affiliation>Department of Computer Science and Information Engineering, National Central University, Taiwan</affiliation>
+                    <email>pinyi@g.ncu.edu.tw</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Chan</surname>
+                        <forename>Ya-Chi</forename>
+                    </persName>
+                    <affiliation>Institute for Sustainable Heritage, University College London, United Kingdom</affiliation>
+                    <email>ya-chi.chan.21@ucl.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Tsai</surname>
+                        <forename>Richard Tzong-Han</forename>
+                    </persName>
+                    <affiliation>Department of Computer Science and Information Engineering, National Central University, Taiwan; Center for GIS, Research Center for Humanities and Social Sciences, Academia Sinica, Taiwan</affiliation>
+                    <email>thtsai@csie.ncu.edu.tw</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Graph-Based Explainability</term>
+                    <term>Historical Relationship Analysis</term>
+                    <term>Retrieval-Augmented Generation (RAG)</term>
+                    <term>Ming Dynasty Power Dynamics</term>
+                    <term>Large Language Models (LLMs)</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data modeling</term>
+                    <term>natural language processing</term>
+                    <term>network analysis and graphs theory and application</term>
+                    <term>semantic analysis</term>
+                    <term>Asian studies</term>
+                    <term>Computer science</term>
+                    <term>History</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Introduction</p>
+            <p style="text-align: left; ">
+                <hi style="font-size:10pt">Historical research highlights the critical role of social relationships and interactions in shaping historical contexts. By analyzing official roles and textual descriptions in historical records, historians can construct relationship network graphs that elucidate power dynamics, social connections, and interaction patterns. 
+                    <lb/>In this study, we propose a novel framework for explainable historical network analysis, leveraging relationship graphs to enhance knowledge retrieval and aggregation with the support of Large Language Models (LLMs). This approach provides transparent insights into historical power structures and relationships, offering researchers a robust tool to interpret complex historical narratives with clarity.
+                    <lb/>Focusing on the Ming Dynasty, a period characterized by the formal separation of civil and military domains, this study examines the nuanced interplay between these spheres. While the civil-military dichotomy often oversimplified the underlying power dynamics, our methodology uncovers hidden connections and interactions. By utilizing a constructed network graph of Ming officials and their roles 
+                </hi>
+                <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"3YANNffA","properties":{"formattedCitation":"(Chen, Hsieh, Lin, & Tsai, 2023)","plainCitation":"(Chen, Hsieh, Lin, & Tsai, 2023)","noteIndex":0},"citationItems":[{"id":1,"uris":["http://zotero.org/users/local/I7gQfGJN/items/MLVWZ44I"],"itemData":{"id":1,"type":"paper-conference","container-title":"DH","source":"Google Scholar","title":"Modeling the evolving social dynamics of political figures with chronological historical records.","author":[{"family":"Chen","given":"You-Jun"},{"family":"Hsieh","given":"Hsin-Yi"},{"family":"Lin","given":"Yu-Tung"},{"family":"Tsai","given":"Richard Tzong-Han"}],"issued":{"date-parts":[["2023"]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>
+                <hi style="font-size:10pt">(Chen, et al., 2023)</hi>
+                <hi style="font-size:10pt" xml:space="preserve"> in conjunction with textual records of military activities </hi>
+                <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"L5Esyu3F","properties":{"formattedCitation":"(Chen, Hsieh, Lin, Tian, et al., 2023)","plainCitation":"(Chen, Hsieh, Lin, Tian, et al., 2023)","noteIndex":0},"citationItems":[{"id":2,"uris":["http://zotero.org/users/local/I7gQfGJN/items/WRYMR4LL"],"itemData":{"id":2,"type":"paper-conference","container-title":"Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing","page":"4380–4401","source":"Google Scholar","title":"MingOfficial: A Ming Official Career Dataset and a Historical Context-Aware Representation Learning Framework","title-short":"MingOfficial","URL":"https://aclanthology.org/2023.emnlp-main.266/","author":[{"family":"Chen","given":"You-Jun"},{"family":"Hsieh","given":"Hsin-Yi"},{"family":"Lin","given":"Yu"},{"family":"Tian","given":"Yingtao"},{"family":"Chan","given":"Bert"},{"family":"Liu","given":"Yu-Sin"},{"family":"Lin","given":"Yi-Hsuan"},{"family":"Tsai","given":"Richard"}],"accessed":{"date-parts":[["2024",12,2]]},"issued":{"date-parts":[["2023"]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>
+                <hi style="font-size:10pt">(Chen, et al., 2023)</hi>
+                <hi style="font-size:10pt">, we reveal the intricate relationships that defined this era. 
+                    <lb/>To illustrate, we present an example from our graph-based Retrieval-Augmented Generation (RAG) system, as shown in Figure 1 and Figure 2. The system identifies Bai Gui as primarily associated with civil positions but highlights his strong connections to multiple military officials, suggesting involvement in military affairs. By integrating these connections with descriptions from military-related texts, the system demonstrates that Bai Gui possessed a degree of military authority. The LLM generates clear, comprehensible natural language responses that justify these conclusions, providing users with both interpretability and accessibility to complex historical data.
+                    <lb/>Unlike traditional RAG systems that primarily rely on semantic similarity, our framework utilizes relationship graphs to explicitly model connections and derive nuanced insights embedded in historical narratives. This method enhances the transparency of historical analysis and mitigates the 'black box' limitations of conventional deep learning approaches. Researchers can trace and understand intricate historical relationships and dynamics with greater precision, offering a transformative tool for the field of digital humanities.
+                </hi>
+            </p>
+            <figure>
+                <graphic n="1001" width="16.002cm" height="9.001125cm" url="/tmp/tmptpe8hi7m/Pictures/0b59aa2facd31d268e0e4b85b20de3c0.png" rend="inline"/>
+                <head>Bai Gui's graph-based analysis.</head>
+            </figure>
+            <figure>
+                <graphic n="1002" width="16.002cm" height="9.001125cm" url="/tmp/tmptpe8hi7m/Pictures/0b59aa2facd31d268e0e4b85b20de3c0.png" rend="inline"/>
+                <head>Bai Gui's translated graph-based analysis.</head>
+            </figure>
+            <p style="text-align: left; ">
+                <hi rend="bold" style="font-size:10pt">Dataset</hi>
+                <lb/>
+                <hi rend="bold" style="font-size:10pt">Graph Data</hi>
+                <lb/>
+                <hi style="font-size:10pt" xml:space="preserve">We utilize the MingOfficial dataset </hi>
+                <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"m0PDghrz","properties":{"formattedCitation":"(Chen, Hsieh, Lin, Tian, et al., 2023)","plainCitation":"(Chen, Hsieh, Lin, Tian, et al., 2023)","noteIndex":0},"citationItems":[{"id":2,"uris":["http://zotero.org/users/local/I7gQfGJN/items/WRYMR4LL"],"itemData":{"id":2,"type":"paper-conference","container-title":"Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing","page":"4380–4401","source":"Google Scholar","title":"MingOfficial: A Ming Official Career Dataset and a Historical Context-Aware Representation Learning Framework","title-short":"MingOfficial","URL":"https://aclanthology.org/2023.emnlp-main.266/","author":[{"family":"Chen","given":"You-Jun"},{"family":"Hsieh","given":"Hsin-Yi"},{"family":"Lin","given":"Yu"},{"family":"Tian","given":"Yingtao"},{"family":"Chan","given":"Bert"},{"family":"Liu","given":"Yu-Sin"},{"family":"Lin","given":"Yi-Hsuan"},{"family":"Tsai","given":"Richard"}],"accessed":{"date-parts":[["2024",12,2]]},"issued":{"date-parts":[["2023"]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>
+                <hi style="font-size:10pt">(Chen, et al., 2023)</hi>
+                <hi style="font-size:10pt">, which details Ming Dynasty officials' biographical and professional records from the IHP database. Officials are represented as nodes, with edges denoting hierarchical ties, co-occurrences in roles, and shared service under specific reign titles. To analyze civil officials' military authority, military-related passages from the Ming Shi Lu (<hi rend="Chinese">明實錄</hi>) provided by Academia Sinica (2013) were extracted using keyword matching and context analysis, then linked to officials via named entity recognition and temporal alignment.</hi>
+            </p>
+            <p style="text-align: left; ">
+                <hi rend="bold" style="font-size:10pt">Query Data</hi>
+                <lb/>
+                <hi style="font-size:10pt">Based on the graph data, 438 queries were generated by extracting officials and their corresponding reign titles. These queries cover various historical periods and administrative levels, enabling targeted retrieval of subgraphs and textual data for detailed analysis of officials' roles and potential military involvement, as shown in Figure 3.</hi>
+            </p>
+            <figure>
+                <anchor xml:id="Figure3"/>
+                <graphic n="1003" width="12.431347222222222cm" height="4.4137305555555555cm" url="/tmp/tmptpe8hi7m/Pictures/0b59aa2facd31d268e0e4b85b20de3c0.png" rend="inline"/>
+                <head>Query template of our system.</head>
+            </figure>
+            <p style="text-align: left; ">
+                <hi rend="bold" style="font-size:10pt">Methodology</hi>
+                <lb/>
+                <hi style="font-size:10pt" xml:space="preserve">To address hallucinations and the context window limitations of LLMs, we adopt a RAG framework </hi>
+                <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"Cj7bUBXX","properties":{"formattedCitation":"(He et al., 2024)","plainCitation":"(He et al., 2024)","noteIndex":0},"citationItems":[{"id":6,"uris":["http://zotero.org/users/local/I7gQfGJN/items/YDV72GWC"],"itemData":{"id":6,"type":"article","abstract":"Given a graph with textual attributes, we enable users to `chat with their graph': that is, to ask questions about the graph using a conversational interface. In response to a user's questions, our method provides textual replies and highlights the relevant parts of the graph. While existing works integrate large language models (LLMs) and graph neural networks (GNNs) in various ways, they mostly focus on either conventional graph tasks (such as node, edge, and graph classification), or on answering simple graph queries on small or synthetic graphs. In contrast, we develop a flexible question-answering framework targeting real-world textual graphs, applicable to multiple applications including scene graph understanding, common sense reasoning, and knowledge graph reasoning. Toward this goal, we first develop a Graph Question Answering (GraphQA) benchmark with data collected from different tasks. Then, we propose our G-Retriever method, introducing the first retrieval-augmented generation (RAG) approach for general textual graphs, which can be fine-tuned to enhance graph understanding via soft prompting. To resist hallucination and to allow for textual graphs that greatly exceed the LLM's context window size, G-Retriever performs RAG over a graph by formulating this task as a Prize-Collecting Steiner Tree optimization problem. Empirical evaluations show that our method outperforms baselines on textual graph tasks from multiple domains, scales well with larger graph sizes, and mitigates hallucination.~\\footnote{Our codes and datasets are available at: \\url{https://github.com/XiaoxinHe/G-Retriever}}","DOI":"10.48550/arXiv.2402.07630","note":"arXiv:2402.07630","number":"arXiv:2402.07630","publisher":"arXiv","source":"arXiv.org","title":"G-Retriever: Retrieval-Augmented Generation for Textual Graph Understanding and Question Answering","title-short":"G-Retriever","URL":"http://arxiv.org/abs/2402.07630","author":[{"family":"He","given":"Xiaoxin"},{"family":"Tian","given":"Yijun"},{"family":"Sun","given":"Yifei"},{"family":"Chawla","given":"Nitesh V."},{"family":"Laurent","given":"Thomas"},{"family":"LeCun","given":"Yann"},{"family":"Bresson","given":"Xavier"},{"family":"Hooi","given":"Bryan"}],"accessed":{"date-parts":[["2024",12,2]]},"issued":{"date-parts":[["2024",5,27]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>
+                <hi style="font-size:10pt">(He et al., 2024)</hi>
+                <hi style="font-size:10pt">. This framework bridges the gap between graph-based data and textual outputs by combining the retrieval of relevant graph segments with the generative reasoning of LLMs. The system consists of four components: graph construction, retrieval, graph-to-text conversion, and LLM-based generation, as depicted in Figure 4.</hi>
+            </p>
+            <figure>
+                <graphic n="1004" width="16.002cm" height="4.0005cm" url="/tmp/tmptpe8hi7m/Pictures/0b59aa2facd31d268e0e4b85b20de3c0.png" rend="inline"/>
+                <head>Overview of our system.</head>
+            </figure>
+            <p style="text-align: left; ">
+                <hi rend="bold" style="font-size:10pt">Graph Construction</hi>
+                <lb/>
+                <hi style="font-size:10pt">We utilize a heterogeneous graph constructed from the MingOfficial dataset, designed to encode relationships between officials, positions, and military-related texts. This graph includes:</hi>
+            </p>
+            <list type="ordered">
+                <item>Nodes:
+                    <list type="unordered">
+                        <item>
+                            <hi style="font-size:10pt" xml:space="preserve">Person Nodes (P): Representing 8,721 officials, excluding royal family members and unrelated nobles, as they are outside the scope of military power analysis. Each node is enriched with embeddings generated using the metapath2vec model </hi>
+                            <hi rend="italic" style="font-size:10pt">(Dong et al., 2017).</hi>
+                        </item>
+                        <item>Office Nodes (O): Capturing all official titles, categorized as civil or military roles.</item>
+                        <item>
+                            <hi style="font-size:10pt">Text Nodes (T): Embedding military-related passages from the Ming Shi Lu using a BERT-based Chinese model (Wang et al., 2021).</hi>
+                        </item>
+                    </list>
+                </item>
+                <item>Edges:
+                    <list type="unordered">
+                        <item>P-O Edges: Linking officials to their positions.</item>
+                        <item>P-T Edges: Connecting officials to military-related textual passages.</item>
+                        <item>
+                            <hi style="font-size:10pt">P-P Edges: Dynamically updated during Graph Convolutional Network (Kipf et al., 2017) training. These edges are based on cosine similarity in embeddings, reflecting shared experiences inferred from textual data.</hi>
+                        </item>
+                        <item>P-MT Edges: Connecting officials to military-related texts for targeted analysis.</item>
+                    </list>
+                </item>
+            </list>
+            <p style="text-align: left;">This graph structure captures complex relationships between individuals, positions, and texts, forming a comprehensive database for downstream tasks.</p>
+            <p style="text-align: left; ">Retrieval</p>
+            <p style="text-align: left; ">Given the graph's size and complexity, a retrieval mechanism isolates query-relevant subgraphs to ensure computational efficiency and context preservation. The retrieval process consists of three steps:</p>
+            <list type="ordered">
+                <item>
+                    <hi style="font-size:10pt">Person Node Retrieval: Identifying the top-k officials most similar to the queried individual based on dynamically updated P-P edges.</hi>
+                </item>
+                <item>Office Node Retrieval: Extracting positions linked to the retrieved officials via P-O edges.</item>
+                <item>Text Node Retrieval: Selecting military-related passages associated with the retrieved officials through P-MT edges.</item>
+            </list>
+            <p style="text-align: left; ">By isolating relevant subgraphs, this step reduces noise while retaining the contextual data necessary for analysis.</p>
+            <p style="text-align: left; ">Graph-to-Text Conversion</p>
+            <p style="text-align: left; ">The retrieved subgraph is transformed into a textual representation for LLM reasoning. This textualization process encodes:</p>
+            <list type="unordered">
+                <item>Node Attributes: Including the official's name and role classification (civil or military).</item>
+                <item>Relationships: Captured using "from" and "to" attributes that define edges between nodes.</item>
+            </list>
+            <p style="text-align: left; ">The converted subgraph is stored in JSON format, ensuring compatibility with LLM inputs and preserving semantic relationships for generative reasoning.</p>
+            <p style="text-align: left; ">LLM-Based Generation</p>
+            <p style="text-align: left; ">
+                <hi style="font-size:10pt">The system integrates user queries with the textualized subgraph into a structured prompt, as illustrated in Figure 5. This prompt enables the LLM to analyze relationships between nodes and edges, providing explanatory responses on whether the queried official held military power.
+                    <lb/>We use ChatGPT-4o-latest to enhance interpretability by generating explanations based on the textualized subgraph. The prompt structure, shown in Figure 6, guides the model to determine whether the official had military authority alongside civil duties or was exclusively a civil official.
+                    <lb/>The system interface, as shown in Figure 7 and Figure 8, enables users to select predefined questions. Upon submission, the system retrieves the relevant subgraph, generates an explanation, and presents the output, as illustrated in Figure 9 and Figure 10, ensuring that the analysis is both interpretable and accessible to end-users.
+                </hi>
+            </p>
+            <figure>
+                <graphic n="1005" width="11.550844444444444cm" height="12.089425cm" url="/tmp/tmptpe8hi7m/Pictures/0b59aa2facd31d268e0e4b85b20de3c0.png" rend="inline"/>
+                <head>Textualized subgraph for Yang Wen Yue(<hi rend="Chinese">楊文岳</hi>).</head>
+            </figure>
+            <figure>
+                <graphic n="1006" width="11.503269444444445cm" height="6.8446444444444445cm" url="/tmp/tmptpe8hi7m/Pictures/0b59aa2facd31d268e0e4b85b20de3c0.png" rend="inline"/>
+                <head>The prompt guiding the LLM's explanation.</head>
+            </figure>
+            <figure>
+                <graphic n="1007" width="16.002cm" height="9.001125cm" url="/tmp/tmptpe8hi7m/Pictures/0b59aa2facd31d268e0e4b85b20de3c0.png" rend="inline"/>
+                <head>Users can choose questions provided by us.</head>
+            </figure>
+            <figure>
+                <graphic n="1008" width="16.002cm" height="9.001125cm" url="/tmp/tmptpe8hi7m/Pictures/0b59aa2facd31d268e0e4b85b20de3c0.png" rend="inline"/>
+                <head>Users can choose questions provided by us (translated version).</head>
+            </figure>
+            <figure>
+                <graphic n="1009" width="16.002cm" height="9.001125cm" url="/tmp/tmptpe8hi7m/Pictures/0b59aa2facd31d268e0e4b85b20de3c0.png" rend="inline"/>
+                <head>Our system will output the subgraph along with explanation.</head>
+            </figure>
+            <figure>
+                <graphic n="10010" width="16.002cm" height="9.001125cm" url="/tmp/tmptpe8hi7m/Pictures/0b59aa2facd31d268e0e4b85b20de3c0.png" rend="inline"/>
+                <head>Our system will output the subgraph along with explanation (translated version).</head>
+            </figure>
+            <p style="text-align: left; ">Experiments &amp; Evaluation</p>
+            <p style="text-align: left; ">To evaluate the effectiveness of our proposed explanation framework, we conducted experiments comparing three different input formats for generating explanations using LLMs. These formats were designed to assess the impact of providing structured reference information on the quality of generated explanations:</p>
+            <list type="unordered">
+                <item>
+                    <hi style="font-size:10pt">Proposed Framework: Supplies a query-relevant subgraph, encoding structural relationships and textual data.</hi>
+                </item>
+                <item>Text Only: Provides only textual passages related to the query.</item>
+                <item>No Reference: Offers no query-related reference information, relying solely on the LLM's pretrained knowledge.</item>
+            </list>
+            <p style="text-align: left; ">Evaluation Criteria</p>
+            <p style="text-align: left; ">
+                <hi style="font-size:10pt">The quality of generated explanations was assessed based on five key criteria:</hi>
+            </p>
+            <list type="unordered">
+                <item>Relevance: The degree to which the explanation aligns with the query.</item>
+                <item>Clarity: The ease with which the explanation can be understood.</item>
+                <item>Consistency: Logical coherence and internal consistency of the explanation.</item>
+                <item>Verifiability: The extent to which the explanation is supported by the provided reference data.</item>
+                <item>Logical Structure: The organization and presentation of ideas within the explanation.</item>
+            </list>
+            <p style="text-align: left; ">
+                <hi style="font-size:10pt">Explanations were scored on a scale of 1 to 10 for each criterion, with higher scores indicating better performance. The evaluation was conducted using GPT-based scoring, guided by the structured prompt shown in Figure 11 and Figure 12. Scores were averaged across multiple queries for each scenario.</hi>
+            </p>
+            <p style="text-align: left; ">Results</p>
+            <p style="text-align: left; ">
+                <hi style="font-size:10pt">The evaluation results are summarized in Figure 13. Our proposed framework achieved the highest average scores across all five criteria, with particularly significant improvements in Verifiability and Logical Structure compared to the other scenarios. Key findings include:</hi>
+            </p>
+            <list type="unordered">
+                <item>Proposed Framework: Consistently scored above 8.8 across all criteria, with a notable advantage in Verifiability, showing a 27.6% improvement over No Reference and an 8.15% improvement over Text Only. This indicates that the structured subgraph provided critical reference information, enabling the LLM to generate explanations grounded in specific relationships and textual evidence.</item>
+                <item>Text Only: While producing moderately relevant and clear explanations, this scenario lacked consistency and verifiability due to the absence of relational context.</item>
+                <item>No Reference: Explanations generated without reference information were often vague and less relevant, highlighting the limitations of relying solely on the LLM's pretrained knowledge.</item>
+            </list>
+            <figure>
+                <graphic n="10011" width="13.614522222222222cm" height="24.19287222222222cm" url="/tmp/tmptpe8hi7m/Pictures/0b59aa2facd31d268e0e4b85b20de3c0.png" rend="inline"/>
+                <head>The prompt for explanation evaluation</head>
+            </figure>
+            <figure>
+                <graphic n="10012" width="13.614522222222222cm" height="24.19287222222222cm" url="/tmp/tmptpe8hi7m/Pictures/0b59aa2facd31d268e0e4b85b20de3c0.png" rend="inline"/>
+                <head>The translated prompt for explanation evaluation</head>
+            </figure>
+            <figure>
+                <graphic n="10013" width="13.359425cm" height="6.9100472222222225cm" url="/tmp/tmptpe8hi7m/Pictures/0b59aa2facd31d268e0e4b85b20de3c0.png" rend="inline"/>
+                <head>The evaluation results</head>
+            </figure>
+            <p style="text-align: left; ">Conclusion</p>
+            <p style="text-align: left; ">
+                <hi style="font-size:10pt">This study proposed a novel explainability framework integrating graph-structured data and LLM capabilities to enhance the analysis of historical datasets. By leveraging RAG techniques, the system effectively retrieves query-relevant subgraphs, and enable historians to analyze complex power structures and social interactions while providing clear, human-readable explanations.
+                    <lb/>Our experimental results validate the framework's effectiveness, with significant improvements in verifiability and logical structure compared to text-only and reference-free approaches. These findings demonstrate the value of integrating graph-based data with LLMs for producing accurate and substantiated explanations.
+                    <lb/>This framework offers a scalable solution for analyzing complex relationships and interpreting historical datasets, with potential applications in fields such as social history, economic networks, and cultural studies.
+                </hi>
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl rend="Bibliography">
+                        <hi rend="bold" style="font-size:10pt">Chen, Y.-J., Hsieh, H.-Y., Lin, Y., Tian, Y., Chan, B., Liu, Y.-S., Lin, Y.-H., &amp; Tsai, R.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2023). MingOfficial: A Ming Official Career Dataset and a Historical Context-Aware Representation Learning Framework. Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing, 4380–4401. https://aclanthology.org/2023.emnlp-main.266/</hi>
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <hi rend="bold" style="font-size:10pt">Chen, Y.-J., Hsieh, H.-Y., Lin, Y.-T., &amp; Tsai, R. T.-H.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2023). Modeling the evolving social dynamics of political figures with chronological historical records. DH.</hi>
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <hi rend="bold" style="font-size:10pt">Dong, Y., Chawla, N. V., &amp; Swami, A.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2017). metapath2vec: Scalable Representation Learning for Heterogeneous Networks. Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 135–144. https://doi.org/10.1145/3097983.3098036</hi>
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <hi rend="bold" style="font-size:10pt">He, X., Tian, Y., Sun, Y., Chawla, N. V., Laurent, T., LeCun, Y., Bresson, X., &amp; Hooi, B.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024). G-Retriever: Retrieval-Augmented Generation for Textual Graph Understanding and Question Answering (No. arXiv:2402.07630). arXiv. https://doi.org/10.48550/arXiv.2402.07630</hi>
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <hi rend="bold" style="font-size:10pt">Kipf, T. N., &amp; Welling, M.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2017). Semi-Supervised Classification with Graph Convolutional Networks (No. arXiv:1609.02907). arXiv. </hi>
+                        <ref target="https://doi.org/10.48550/arXiv.1609.02907">
+                            <hi style="font-size:10pt">https://doi.org/10.48550/arXiv.1609.02907</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Wang, Z., Wang, L., Huang, C., &amp; Luo, X.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2021). BERT-based Chinese Text Classification for Emergency Domain with a Novel Loss Function (No. arXiv:2104.04197). arXiv. https://doi.org/10.48550/arXiv.2104.04197</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

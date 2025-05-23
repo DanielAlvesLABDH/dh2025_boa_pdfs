@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PLANK_Lukas_RDFProxy__A_Model_Centric_Approach_to_Transformi">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>RDFProxy: A Model-Centric Approach to Transforming SPARQL Result Sets for Linked Data Clients</title>
+                <author>
+                    <persName>
+                        <surname>Plank</surname>
+                        <forename>Lukas</forename>
+                    </persName>
+                    <affiliation>Austrian Academy of Sciences, Austria</affiliation>
+                    <email>lukas.plank@oeaw.ac.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Wünsche</surname>
+                        <forename>Katharina</forename>
+                    </persName>
+                    <affiliation>Austrian Academy of Sciences, Austria</affiliation>
+                    <email>katharina.wuensche@oeaw.ac.at</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T08:15:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>rdf sparql api python pydantic</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data modeling</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>Computer science</term>
+                    <term>Cultural studies</term>
+                    <term>Humanities computing</term>
+                    <term>Informatics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>1 Introduction</head>
+                <p>Knowledge Graphs and Linked Data have become invaluable tools in the Digital Humanities (DH), enabling the representation of complex, interconnected datasets essential to the various fields of DH research. DH Knowledge Graphs typically utilize sophisticated ontologies, such as CIDOC CRM and CRM–compatible models, which are tailored to capture the often intricate domain knowledge of humanities scholarship. However, despite their value, integrating DH Knowledge Graphs into client applications, such as web frontends, and backend APIs serving those clients, presents significant challenges.<ref n="1" target="ftn1"/>
+                </p>
+                <p>SPARQL, the W3C-standard query language and specification for retrieving data from Knowledge Graphs is designed primarily for pattern-based retrievals, delivering results of whatever binding projections satisfy a given query pattern in flat, basically row-based structures. In contrast, modern RESTful API consumers typically expect potentially deeply nested JSON shapes, hierarchical object groupings, and seamless integration with pagination and documentation standards. These expectations underscore a considerable gap between the structure of SPARQL result sets and the requirements of contemporary API design.</p>
+                <p>This paper introduces RDFProxy (RDFProxy 2024), a Python library designed to bridge the gap between the inherently flat solution sets of SPARQL responses and the rich, nested JSON models required by modern API consumers. To this end, RDFProxy implements a mapping mechanism that allows the projection of SPARQL result rows onto Pydantic (Pydantic 2024) models, which provide a robust modeling abstraction built on top of Python’s type annotation system.</p>
+                <p>By choosing Pydantic as the modeling grammar for RDFProxy, developers not only gain the ability to express and validate typed and nested data models but also benefit from seamless integration with FastAPI, a modern, high performance web framework for building APIs with Python. This integration allows RDFProxy-based backends to leverage the powerful capabilities of Pydantic and FastAPI for RDF data sets, including model pre- and post-validation hooks, along with custom data serializers, native support for asynchronous API calls and automatic generation of detailed API documentation according to the OpenAPI standard (OpenAPI Specification 2024).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>2 Related Work</head>
+                <p>Prior approaches in developing REST APIs on top of SPARQL endpoints have resulted in various tools and frameworks. Ramose (Daquino et al. 2022) provides a lightweight wrapper for SPARQL endpoints, allowing simplified RESTful interactions but with limited capabilities for nested outputs or paginated result lists. Similarly, BASIL (Daga et al. 2015) allows users to define SPARQL queries and query parameters that are provided via a REST API and a corresponding OpenAPI description. Schröder et al. (Schröder et al. 2018) follow a “zero-configuration” approach by directly transforming RDF graphs into path-based APIs, similar to SPARQL property paths. Grlc (Meroño-Peñuela / Hoekstra 2016) automates the creation of RESTful APIs by leveraging SPARQL queries stored in GitHub repositories, which simplifies version control and API adaptations but does not support applying transformations to the query results. SPARQL Transformer (Lisena / Troncy 2018) enables the transformation of SPARQL results into customizable JSON or JSON-LD structures using a custom query syntax at the expense of requiring query adaptations.</p>
+                <p>A synopsis of the features provided by the aforementioned work can be found in table 1. The comparison illustrates that each approach has its own focus, with RDFProxy currently being the only solution meeting all of the above criteria. It should also be mentioned that, while SPARQL Transformer provides grouping and pagination functionality, these transformations are applied in a post-processing step after SPARQL query execution, which potentially imposes significant performance penalties, particularly for larger graphs.</p>
+                <figure>
+                    <table rend="rules">
+                        <row>
+                            <cell style="text-align: left;">
+                                <hi rend="bold">Tool</hi>
+                            </cell>
+                            <cell style="text-align: left;">
+                                <p>
+                                    <hi rend="bold">Reusable</hi>
+                                </p>
+                                <p>
+                                    <hi rend="bold">SPARQL</hi>
+                                </p>
+                                <p>
+                                    <hi rend="bold">queries</hi>
+                                </p>
+                            </cell>
+                            <cell style="text-align: left;">
+                                <hi rend="bold">Grouping</hi>
+                            </cell>
+                            <cell style="text-align: left;">
+                                <hi rend="bold">Pagination</hi>
+                            </cell>
+                            <cell style="text-align: left;">
+                                <p>
+                                    <hi rend="bold">OpenAPI</hi>
+                                </p>
+                                <p>
+                                    <hi rend="bold">specification</hi>
+                                </p>
+                            </cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;">
+                                <hi rend="bold" xml:space="preserve">Ramose </hi>
+                                <hi rend="normalweight">(Daquino et al. 2022)</hi>
+                            </cell>
+                            <cell style="text-align: left;">Yes</cell>
+                            <cell style="text-align: left;">Partial</cell>
+                            <cell style="text-align: left;">No</cell>
+                            <cell style="text-align: left;">No</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;">
+                                <hi rend="bold" xml:space="preserve">Basil </hi>
+                                <hi rend="normalweight">(Daga et al. 2015)</hi>
+                            </cell>
+                            <cell style="text-align: left;">Yes</cell>
+                            <cell style="text-align: left;">Partial</cell>
+                            <cell style="text-align: left;">No</cell>
+                            <cell style="text-align: left;">Yes</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;">
+                                <hi rend="bold" xml:space="preserve">Schröder et al. </hi>
+                                <hi rend="normalweight">(Schröder et al. 2018)</hi>
+                            </cell>
+                            <cell style="text-align: left;">No</cell>
+                            <cell style="text-align: left;">Yes</cell>
+                            <cell style="text-align: left;">No</cell>
+                            <cell style="text-align: left;">No</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;">
+                                <hi rend="bold">Grlc (</hi>
+                                <hi rend="normalweight">Meroño-Peñuela / Hoekstra 2016)</hi>
+                            </cell>
+                            <cell style="text-align: left;">Yes</cell>
+                            <cell style="text-align: left;">No</cell>
+                            <cell style="text-align: left;">No</cell>
+                            <cell style="text-align: left;">Yes</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;">
+                                <hi rend="bold" xml:space="preserve">SPARQL Transformer </hi>
+                                <hi rend="normalweight">(Lisena / Troncy 2018)</hi>
+                            </cell>
+                            <cell style="text-align: left;">No</cell>
+                            <cell style="text-align: left;">Yes</cell>
+                            <cell style="text-align: left;">Yes</cell>
+                            <cell style="text-align: left;">No</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;">
+                                <hi rend="bold">RDFProxy</hi>
+                                <hi rend="normalweight">(ours)</hi>
+                            </cell>
+                            <cell style="text-align: left;">Yes</cell>
+                            <cell style="text-align: left;">Yes</cell>
+                            <cell style="text-align: left;">Yes</cell>
+                            <cell style="text-align: left;">Yes</cell>
+                        </row>
+                    </table>
+                    <head>Table 1: Overview of related work compared to RDFProxy</head>
+                </figure>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>3 RDFProxy: Overview and Practical Use</head>
+                <p>The following provides a terse general overview of the functionality and design of RDFProxy as well as an example of implementing a simple RDFProxy-based FastAPI route to retrieve, reshape and relay (i.e. proxy) data from a remote SPARQL endpoint, illustrating how the RDFProxy mapping mechanism enables the projection of SPARQL result sets onto nested and grouped data shape definitions.</p>
+                <p>The primary code interface for defining API routes with RDFProxy is the 
+                    <hi rend="italic">SPARQLModelAdapter</hi> class, which is designed to establish and handle a connection between a triplestore, a SPARQL query and a Pydantic model on a perroute basis. By associating a 
+                    <hi rend="italic">SPARQLModelAdapter</hi> instance with each route, RDFProxy suggests a modular and flexible approach to defining endpoints, allowing the modification and extension of individual routes without affecting the rest of the API and also enabling a single RDFProxy-based backend to potentially connect with multiple SPARQL endpoints.
+                </p>
+                <p>Based on these parameters (endpoint, query, model), the 
+                    <hi rend="italic">SPARQLModelAdapter</hi> employs a query constructor mechanism to dynamically modify the incoming SPARQL query - for instance, by injecting certain clauses and subqueries to implement purely SPARQL-based pagination. The modified query is then executed against the triplestore’s endpoint, and the resulting SPARQL response is delegated to a mapping component, which is responsible for reshaping the SPARQL result row data by projecting it onto the given Pydantic model definition.
+                </p>
+                <figure>
+                    <graphic n="1001" width="16.002cm" height="8.800041666666667cm" url="/tmp/tmpu9039iw0/Pictures/fcdb2d64c0d390ed2df204b1b60a74dd.png" rend="inline"/>
+                    <head>Figure 1: SPARQLModelAdapter Architecture: Dynamic Query Construction and Result Mapping in RDFProxy</head>
+                </figure>
+                <p>The RDFProxy shapes mapping facility handles the instantiation of Pydantic model objects by mapping the SPARQL result row bindings to corresponding Pydantic model fields. By default, SPARQL variable names are mapped directly to Pydantic field names, with aliasing being supported through explicit annotation of a field type using 
+                    <hi rend="italic">rdfproxy.SPARQLBinding</hi>. For fields typed as lists of Pydantic 
+                    <hi rend="italic">BaseModel</hi> subclasses, RDFProxy triggers an aggregation mechanism, grouping applicable models into arrays. In that case, the 
+                    <hi rend="italic">group_by</hi> configuration parameter, defined within 
+                    <hi rend="italic">model_config</hi>, determines the model field by which the list items should be grouped. For list fields parameterized with non-model (scalar) types, such as 
+                    <hi rend="italic">list[str]</hi>, the mapping process gathers multiple values into arrays, again based on the 
+                    <hi rend="italic">group_by</hi> configuration parameter.
+                </p>
+                <p>Building on this brief technical overview, the remainder of the section showcases a practical implementation of an RDFProxy-based FastAPI route, highlighting the role of shape definitions using Pydantic models to structure and organize the retrieved SPARQL result sets.</p>
+                <p>The example query below uses a VALUES clause to statically define a solution sequence and thus retrieves a set of four result rows expressing basic author/work data from any SPARQL 1.1 endpoint:</p>
+                <figure>
+                    <graphic n="1002" width="16.002cm" height="5.279319444444444cm" url="/tmp/tmpu9039iw0/Pictures/fcdb2d64c0d390ed2df204b1b60a74dd.png" rend="inline"/>
+                    <head>Listing 1: Static SPARQL query retrieving basic author/work data</head>
+                </figure>
+                <p>Note how this illustrates the previously outlined problem of SPARQL result sets representing conceptually composed (or generally 
+                    <hi rend="italic">composable</hi>) information as flat binding mappings: Two distinct author entities associated with three distinct work entities, where the same work may have multiple VIAF identifiers asserted about it, are retrieved as four partially redundant result rows.
+                </p>
+                <p>Given the result rows retrieved by the example query, to represent the shape of an Author entity associated with one or more Work entities, where each Work can have multiple values for a single field, one can come up with the following Pydantic model definition:</p>
+                <figure>
+                    <graphic n="1003" width="16.002cm" height="9.039930555555555cm" url="/tmp/tmpu9039iw0/Pictures/fcdb2d64c0d390ed2df204b1b60a74dd.png" rend="inline"/>
+                    <head>Listing 2: RDFProxy/Pydantic model definition for Author/Work data</head>
+                </figure>
+                <p>Here, the 
+                    <hi rend="italic">Author</hi> model defines three fields: the 
+                    <hi rend="italic">gnd</hi> field corresponds directly to a name in the set of SPARQL bindings and will be mapped accordingly; the 
+                    <hi rend="italic">surname</hi> field is explicitly allocated using the 
+                    <hi rend="italic">rdfproxy.SPARQLBinding</hi> aliasing feature, i.e. the value of the SPARQL variable 
+                    <hi rend="italic">nameLabel</hi> will be assigned to the 
+                    <hi rend="italic">surname</hi> field in the model; and the 
+                    <hi rend="italic">works</hi> field references another model, 
+                    <hi rend="italic">Work</hi>, which shall be aggregated into an array based on their common gnd values (as indicated in the model_config). The Work model is defined similarly, with the 
+                    <hi rend="italic">viafs</hi> field aggregating a scalar type and using an 
+                    <hi rend="italic">rdfproxy.SPARQLBinding</hi> alias. Based on the above SPARQL query and corresponding Pydantic model, an 
+                    <hi rend="italic">rdfproxy.SPARQLModelAdapter</hi> object targeting an arbitrary SPARQL 1.1 endpoint can be instantiated and directly used in a FastAPI route.
+                </p>
+                <figure>
+                    <graphic n="1004" width="16.002cm" height="7.598833333333333cm" url="/tmp/tmpu9039iw0/Pictures/fcdb2d64c0d390ed2df204b1b60a74dd.png" rend="inline"/>
+                    <head>Listing 3: FastAPI route definition using a SPARQLModelAdapter instance</head>
+                </figure>
+                <p>FastAPI query parameters (i.e. route function parameters not corresponding to any path parameter definitions) are expected to be passed along to the 
+                    <hi rend="italic">SPARQLModelAdapter.query</hi> method,<ref n="2" target="ftn2"/> which initiates the RDFProxy query and mapping mechanism and returns an 
+                    <hi rend="italic">rdfproxy.Page</hi> instance.
+                </p>
+                <p>The 
+                    <hi rend="italic">rdfproxy.Page</hi> class is itself a composite Pydantic model that encapsulates the generated data shapes (within its 
+                    <hi rend="italic">items</hi> field) as well as dynamically computed pagination data, resulting in the JSON-serialized response shown in listing 4. Note that the 
+                    <hi rend="italic">rdfproxy.Page</hi> model is also a Python typing generic which enables type parameterization of the route response model on the shapes model; i.e., for instance, the route defined in Listing 3 is type-annotated to return a parameterized generic, 
+                    <hi rend="italic">Page[Author]</hi>. Providing a generic response model type not only enhances type safety and static analysis, but also enables Pydantic runtime validation and refined OpenAPI schema and documentation generation, leveraging the powerful type annotation-based features of both Pydantic and FastAPI.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>4 Conclusion</head>
+                <p>While significant related work has been conducted in the area of building REST APIs on top of RDF Graphs, currently no existing solution fully meets the specific needs and expectations of contemporary API consumers.</p>
+                <p>To address this problem, RDFProxy proposes a model-centric approach to bridging the gap between Knowledge Graphs and modern data-driven client applications. By building on robust existing tools like Pydantic and FastAPI, RDFProxy aims to provide a flexible and extensible framework that simplifies the integration of RDF graphs into RESTful services.</p>
+                <p>Currently, RDFProxy is being developed at the Austrian Centre for Digital Humanities and Cultural Heritage (ACDH-CH) and will serve as the backend solution for the Releven project at University of Vienna. (Andrews et al. 2024) The Releven project, with its intricate and highly reified CRM-based STAR model, presents an excellent and challenging initial trial for RDFProxy’s practical capabilities.</p>
+                <p>By aligning the strengths of RDF Knowledge Graphs with the accessibility of contemporary standards-based REST APIs, RDFProxy aspires to make semantic data sets more accessible, usable, and impactful in the context of Digital Humanities and beyond.</p>
+                <figure>
+                    <graphic n="1005" width="16.002cm" height="19.053527777777777cm" url="/tmp/tmpu9039iw0/Pictures/fcdb2d64c0d390ed2df204b1b60a74dd.png" rend="inline"/>
+                    <head>Listing 4: JSON response from the FastAPI route defined in Listing 3</head>
+                </figure>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                         This difficulty of KG/UI integration is especially problematic in Digital Humanities contexts, where user interfaces ideally serve as academically curated mediations between users and data; e.g. Scholarly Editions can in that sense be understood as "critically argued interface[s] to the text" (Andrews / Zundert 2014). This perspective on interfaces as "argumentative utilities" also shifts the representation/presentation dichotomy towards more of an interdependency relationship, enabling an understanding of interfaces as semiotically significant, rule-based, documented and particularly informed interpretive acts that constitute an integral part of the argument a Knowledge Graph makes about its represented data. (Andrews / Zundert 2018)
+                    </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                         Currently, only the required 
+                            <hi rend="italic">page</hi> and 
+                            <hi rend="italic">size</hi> query parameters are supported. Planned
+                        
+                        features are e.g. ordering and complex filtering, which should be implemented using FastAPI
+                        Query Model Parameters. See 
+                            <ref target="https://fastapi.tiangolo.com/tutorial/query-param-models/">https://fastapi.tiangolo.com/tutorial/query-param-models/</ref>
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Andrews, Tara / Rózsa, Márton / Prajda, Katalin / Read, Lewis / Anđelović, Aleksandar (2024): “Re-Evaluating the Eleventh Century through Linked Events and Entities”. In: Historical Studies on Central Europe 4.1, pp. 217–245. doi: 10.47074/HSCE.2024-1.12. url: 
+                        <ref target="https://doi.org/10.47074/HSCE.2024-1.12">https://doi.org/10.47074/HSCE.2024-1.12</ref>.
+                    </bibl>
+                    <bibl>Andrews, Tara / Zundert, Joris J. van (2014): “Apparatus vs Graph - an Interface as Scholarly Argument”. In: Graph - an Interface as Scholarly Argument. Interface Critique. Berlin.</bibl>
+                    <bibl>Andrews, Tara / Zundert, Joris J. van (2018): “What Are You Trying to Say? The Interface as an Integral Element of Argument”. In: Digital Scholarly Editions as Interfaces. Ed. by Roman Bleier et al. Books on Demand. Chap. 1, pp. 3–33. isbn: 9783748109259.</bibl>
+                    <bibl>Daga, Enrico / Panziera, Luca / Pedrinaci, Carlos (2015): “A BASILar approach for building web APIs on top of SPARQL endpoints”. In: CEUR Workshop Proceedings. Vol. 1359, pp. 22–32.</bibl>
+                    <bibl>Daquino, Marilena / Heibi, Ivan / Peroni, Silvio / Shotton, David (2022): “Creating RESTful APIs over SPARQL endpoints using RAMOSE”. In: Semantic Web 13.2, pp. 195–213.</bibl>
+                    <bibl>Lisena, Pasquale / Troncy, Raphaël (2018): “Transforming the JSON output of SPARQL queries for linked data clients”. In: Companion Proceedings of the The Web Conference 2018, pp. 775–780.</bibl>
+                    <bibl>Meroño-Peñuela, Albert / Hoekstra, Rinke (2016): “grlc Makes GitHub Taste Like Linked Data APIs”. In: The Semantic Web. Ed. by Harald Sack et al. Cham: Springer International Publishing, pp. 342–353. isbn: 978-3-319-47602-5.</bibl>
+                    <bibl>OpenAPI Specification (2024). Accessed: 2024-11-22. url: 
+                        <ref target="https://swagger.io/specification/">https://swagger.io/specification/</ref>.
+                    </bibl>
+                    <bibl>Pydantic (2024). Accessed: 2024-10-27. url: 
+                        <ref target="https://pydantic-docs.helpmanual.io/">https://pydantic-docs.helpmanual.io/</ref>.
+                    </bibl>
+                    <bibl>RDFProxy (2024). Accessed: 2024-10-27. url: 
+                        <ref target="https://github.com/acdh-oeaw/rdfproxy">https://github.com/acdh-oeaw/rdfproxy</ref>.
+                    </bibl>
+                    <bibl>Schröder, Markus / Hees, Jörn / Bernardi, Ansgar / Ewert, Daniel / Klotz, Peter / Stadtmüller, Steffen (2018): “Simplified SPARQL REST API: CRUD on JSON Object Graphs via URI Paths”. In: The Semantic Web: ESWC 2018 Satellite Events: ESWC 2018 Satellite Events, Heraklion, Crete, Greece, June 3-7, 2018, Revised Selected Papers 15. Springer, pp. 40–45.</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="EMSLEY_Iain_Generated_Sounds__Towards_Audio_Generative_AI_as">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Generated Sounds: Towards Audio Generative AI as a Computational Audible Infrastructure</title>
+                <author>
+                    <persName>
+                        <surname>Emsley</surname>
+                        <forename>Iain</forename>
+                    </persName>
+                    <affiliation>University of Warwick, United Kingdom</affiliation>
+                    <email>iain.emsley@warwick.ac.uk</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T15:58:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>infrastructure</term>
+                    <term>critical code</term>
+                    <term>sound</term>
+                    <term>platforms</term>
+                    <term>generative AI</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>music and sound digitization</term>
+                    <term>encoding</term>
+                    <term>and analysis</term>
+                    <term>spatial &amp; spatio-temporal analysis</term>
+                    <term>modeling and visualization</term>
+                    <term>Media studies</term>
+                    <term>Musicology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Music and machines have a long and fruitful history. Experimental music, such as Steve Reich (Reich 2002) and Iannis Xennakis (Harley 2002), and the practice of live coding (Blackwell et al. 2022) work with the possibilities presented within this relationship. The rise of generative AI and its move into audio and music models (Dhariwal et al. 2020; Evans et al. 2024) brings in new actors and ways of creating with the machine. Unlike livecoding or experimental music, these new opportunities abstract the user from the machine and direct the types of sound that can be created to make creativity a calculation. This paper introduces the concept of computational audible infrastructures to extend the definition of audible infrastructures (Devine and Boudreault-Fournier, 2021) to include software. This paper explores how infrasomatisation, the capacity for creating the possibility of new forms and knowledge (Berry 2016), is shaped through infrastructures. </p>
+            <p>Initial work is presented on identifying and tracing specific generative AI and Language Models through following the models and platforms involved. It draws from the idea of platforms that become infrastructure (Plantin et al. 2018; Plantin and Punathambekar 2019) as platforms - such as Google or Stability AI - are embedded through models and algorithms. The studied models create their own universes by synthesising both user and data signals into a cultural object. Reading the infrastructures enables us to view ways that these systems generate their responses from underlying model to create their own ontologies and contexts of the traditions and concepts within the dataset.</p>
+            <p>This approach raises questions about how traditions, or aura (Benjamin 2015), are being instrumentally re-created within software. While prompts enable the creation of audio, these computational aspects place the same tradition within a new form, that of the machine, which is less rich and shaped by the model developers. In contrast to the mechanical reproduction, the artefact presented is not easily traced to its origin. Audio becomes the result of a calculation that is excited by a prompt that is constructed by software within constraints. </p>
+            <p>I focus on two generative AI models – Jukebox and Stability AI’s Open Audio – using their publications to look at the models, algorithms, and data sets used before looking at who created the item. An initial finding is that platforms become infrastructural by providing algorithms, models, or datasets that are re-used in other services. Models that are adapted from the image domain point to a data-driven environment that minimises cultural and audio specificities.</p>
+            <p>Models and their training data shape how and what sound can be used within the computational arrangements on that platform. The models offered limit the ways that sound might be understood and computationally accessed as a service. The underlying datasets do have limits in what they are trained on. Google’s Maestro metadata is versioned to remove unwanted instruments and Stability Open Audio draws from the Free Music Archive that provides a small range of genres. Both limit the potential sounds to those from aspects of Western music traditions that can be processed. Models depict an ontology of the world, developing considerations of databases (Manovich 2002; Dourish 2014), that distances the user from the underlying data, the original creators, and the conditions under which the dataset was collected while limiting what can be created. </p>
+            <p>Domain specificity is removed through the re-use of models from other domains. The response to stimuli is reliant on generalisations as well as the small specificities of their training data. Stability AI reuses the Diffusion model (Evans et al. 2024) while Jukebox re-used the VQ-VAE (Dhariwal et al. 2020) model to create sound, both created for their image services. The removal of specificity is noted as a challenge to coherent responses in models like Jukebox, which notes that a better response is obtained where the lyric requested is more closely associated with one artist (Dhariwal et al. 2020). The Stability toolkit uses Google’s T5-base model to create more noise for their Diffusion model by providing embeddings from general text at the loss of domain specific meaning. Image and audio specificities are removed unless they can be processed as tensors that develop the limited the potential sound terms for generation.</p>
+            <p>Context aware approaches (Turnbull et al. 2009; Miotto and Orio 2010) where external signals are considered, are replaced by statistical models that construct their own probabilistic context. Larger patterns, such as repeating chorus or verse in a song, are not necessarily created in the generated audio, but coherence to features or patterns is maintained within the individual sample (Dhariwal et al., 2020) without reference to its neighbours. Classifier-Free Diffusion Guidance merges scores from trained and untrained models within the algorithm (Ho and Salimans, 2022). The latter option feeds into the context free grammars that move between adhering more closely or away from the grammar. Existing traditions, such as pop, that have their own structural form are being re-formed within sample size that places its understanding of a coherent response. The data is altered within the computational medium, placing software as the space that creates the sound.</p>
+            <p>This paper presents the concept of computational audible infrastructure as a media infrastructure to understand the medium’s role in shaping the possibility of generated sound. Initial readings of the platforms as infrastructures shows a re-use of algorithms and models within the system that can be understood through Benjamin’s aura. The infrastructural aspects help illuminate the way in which a concept of sound is based on narrow concepts of music that respond to more general text model through the re-use of sound models from other platforms. The algorithmic reading argues that the generated music has its own algorithmic context that further removes the underlying sound concepts. This also goes to the notion of creating sound and the specificities that are lost. Future work will continue tracing these links and their datasets with the generative AI platforms that use them.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Benjamin, Walter.</hi> (2015) “The Work of Art in an Age of Mechanical Reproduction” In: 
+                        <hi rend="bold">Benjamin, Walter / Arendt Hannah</hi> (ed.), 
+                        <hi rend="italic">Illuminations</hi>. Bodley Head: London.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Berry, David M.</hi> (2016): Infrasomatization, &lt;
+                        <ref target="https://stunlaw.blogspot.com/2016/12/infrasomatization.html">https://stunlaw.blogspot.com/2016/12/infrasomatization.html</ref>&gt;, [1.12. 2024]
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Blackwell, Alan F / Cocker, Emma / Cox, Geoff / McLean, Alex / Magnusson, Thor</hi> (2022): 
+                        <hi rend="italic">Live coding: a user's manual</hi>. MIT Press: Cambridge
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Devine, Kyle / Boudreault-Fournier, Alexandrine. eds</hi>. (2021): 
+                        <hi rend="italic">Audible Infrastructures</hi>. Oxford University Press: New York and Oxford
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Dhariwal, Prafulla / Jun, Heewoo / Payne, Christine / Kim, Jong Wook / Radford, Alec / Sutskever, Ilya</hi> (2020): Jukebox: A Generative Model for Music. Arxiv. https://arxiv.org/abs/2005.00341
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Dourish, Paul</hi> (2014): No SQL: The shifting materialities of database technology. 
+                        <hi rend="italic">Computational Culture</hi>, 4.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Evans, Zach / Parker, Julian D./ Carr, C. J./ Zukowski, Zack/ Taylor, Josiah/ Pons Jordi</hi> (2024): Stable Audio Open arXiv. 
+                        <ref target="http://arxiv.org/abs/2407.14358">http://arxiv.org/abs/2407.14358</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Harley, James</hi> (2002): The electroacoustic music of Iannis Xenakis. 
+                        <hi rend="italic">Computer Music Journal</hi>, 
+                        <hi rend="italic">26</hi>,1:33-57.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Ho, Jonathan and Salimans, Tim</hi> (2022): Classifier-free diffusion guidance. 
+                        <hi rend="italic">arXiv preprint arXiv:2207.12598</hi>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Manovich, Lev</hi> (2002): 
+                        <hi rend="italic">The language of new media</hi>. MIT press: Cambridge, Mass. 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Miotto, Riccardo / Orio, Nicola</hi> (2010): A Probabilistic Approach to Merge Context and Content Information for Music Retrieval. In: Proceedings of the 11th International Society for Music Information Retrieval Conference, ISMIR 2010
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Plantin, Jean-Christophe / Lagoze, Carl / Edwards, Paul N / Sandvig, Christian</hi> (2018): Infrastructure studies meet platform studies in the age of Google and Facebook. 
+                        <hi rend="italic">New media &amp; society</hi>, 
+                        <hi rend="italic">20</hi>,1: 293-310.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Plantin, Jean-Christophe / Punathambekar, Aswin</hi> (2019): Digital media infrastructures: pipes, platforms, and politics. 
+                        <hi rend="italic">Media, culture &amp; society</hi>, 
+                        <hi rend="italic">41</hi>,2: 163-174.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Reich, Steve / Hillier, Paul (ed)</hi> (2002): Writings on Music, 1965-2002. Oxford University Press: Oxford
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Turnbull, Douglas R. / Barrington, Luke / Lanckriet, Gert / Yazdani, Mehrdad</hi> (2009). Combining audio content and social context for semantic music discovery. In: 
+                        <hi rend="italic">Proceedings of the 32nd international ACM SIGIR conference on Research and development in information retrieval</hi>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="WILSON_Daniel_C_S__Text_in_Place__A_MultiModal_Approach_to_D">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Text in Place: A MultiModal Approach to Distant Reading Historical Maps</title>
+                <author>
+                    <persName>
+                        <surname>Wilson</surname>
+                        <forename>Daniel C.S.</forename>
+                    </persName>
+                    <affiliation>University College London; The Alan Turing Institute, United Kingdom</affiliation>
+                    <email>daniel.c.s.wilson@ucl.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>McDonough</surname>
+                        <forename>Katherine</forename>
+                    </persName>
+                    <affiliation>Lancaster University; The Alan Turing Institute, United Kingdom</affiliation>
+                    <email>kmcdono2@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Beelen</surname>
+                        <forename>Kaspar</forename>
+                    </persName>
+                    <affiliation>School of Advanced Study; The Alan Turing Institute, United Kingdom</affiliation>
+                    <email>kaspar.beelen@sas.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Wood</surname>
+                        <forename>Rosie</forename>
+                    </persName>
+                    <affiliation>The Alan Turing Institute, United Kingdom</affiliation>
+                    <email>rwood@turing.ac.uk</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-07T22:25:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>History</term>
+                    <term>Maps</term>
+                    <term>Multimodal</term>
+                    <term>Geography</term>
+                    <term>CV</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>mixed-media analysis</term>
+                    <term>spatial &amp; spatio-temporal analysis</term>
+                    <term>modeling and visualization</term>
+                    <term>text mining and analysis</term>
+                    <term>Geography and geo-humanities</term>
+                    <term>History</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">Maps have their own visual grammar that combines graphical and textual elements in a unique form of meaning-making that is both multimodal and geospatial. Yet to acknowledge text on maps as being meaningful is to depart from long-held assumptions that have ignored its semiotic value. When scholars have noted text on maps, it has been read as 
+                <hi rend="italic">additional</hi> to the graphical elements it appears alongside: to label features on the image in specific locations. In contrast, we ask: what can we learn by approaching the text found on maps systematically as research data in its own right for the first time? By not reducing text to the role of self-evident ‘labels’, we open the possibility of analysing text on maps 
+                <hi rend="italic">in conjunction</hi> with visual content. Recent technical advances in computer vision (CV) for finding text on images are now being used by researchers working with a range of ‘document’ types, from road signs to receipts; however, it remains a significant challenge to adapt such tools to work with maps. These algorithms are referred to by a few names, and combine approaches from adjacent tasks such as “text in the wild” and “scene text detection.” “Text spotting” is emerging as a common name for the task of finding sparsely-printed (or written) text on complex documents like maps.
+            </p>
+            <p style="text-align: left; ">In this short paper, we present a major new development of the award-winning MapReader software library which now includes a text-spotting module, alongside the existing CV module (https://github.com/maps-as-data/MapReader). In addition to describing this new functionality we showcase new research-in-progress which makes use of this dual – or ‘multimodal’ – approach to do the following: 1) detect and recognise text on maps 2) aggregate this into a corpus of structured and geo-located form of text data 3) perform advanced text analysis on this corpus to create new understandings of existing spatial datasets.</p>
+            <p style="text-align: left; ">Therefore, we demonstrate how MapReader allows users to decompose maps into textual and visual elements, and then to recombine them in creative ways to perform new types of historical and geographical analysis. In, particular, we expand on a recently published case study on the historical impact of railway infrastructure in Britain by incorporating text identified on the maps, which we use to distinguish between different instances of what we call ‘railspace’. To do this, we create new text data from a large collection of digitised maps; namely, the National Library of Scotland’s world-renowned collection of historical Ordnance Survey (OS) Maps. To make this data more manageable for our initial experiment, we use a limited sample of maps relating to Greater London: 329 sheets from the second edition, six-inch-to-one-mile scale, scanned and georeferenced by the NLS.</p>
+            <p style="text-align: left; ">The hypothesis on which our method is based is that, just as there is semantic structure to sentences which can be explored linguistically according to their distribution, there is also likely to be a structure to language printed on maps which has geospatial meaning. In this sense, we bring text on maps into our analysis by treating it as if it has its own grammar: similar, but not the same as that found in books, newspapers, or other written documents. But is there an equivalent of a ‘phrase’ or a ‘sentence’ on maps to provide a meaningful unit of analysis? We experiment by aggregating text detected in proximity to relevant map features in order to create meaningful units of text on a map. Then, we encode (or ‘embed’) all text within one unit as a vector, and finally we cluster these vectors to find semantically-similar groupings within these encoded texts. In greater detail, the method consists of 1) loading our patch and text datasets into a jupyter notebook, filtering both datasets in basic ways like making all text lowercase and removing only numeric strings, text strings with fewer than three characters, and text strings with non-alphabetic characters; 2) collecting text that intersects with patch polygons so that each group of words for one patch is a set, and which is collectively patch_text; 3) collecting text intersecting with a patch and its context patch, i.e. a patch plus 100m of its surroundings, so that each group of words is a new set of near_text; 4) calculating the frequency of words across patch_text and near_text; 5) calculating vectors using the distilBERT model (e.g. all text from one patch is a set encoded as a vector); 6) clustering railspace patches based on the semantic similarity of their near_text using k-means clustering. We tested clusters (the number is defined by ‘k’) where k=4 to 10, using the Silhouette method to pick the most appropriate number of clusters. We settled on 8 clusters. You can see our method in the accompanying jupyter notebook, which will be openly available.</p>
+            <p style="text-align: left; ">This allows us to project each unit of text in semantic vector space, which can thus be treated like sentences or other assemblages of words. This kind of approach has been powerful in understanding linguistic patterns across very large text collections. We use k-means clustering to find similarities between these vectors which, because they are geolocated in relation to our existing spatial research objects – in this case, ‘Railspace’ – allows us explore the characteristics of particular places that have previously been identified on the maps using MapReader’s CV module.</p>
+            <p style="text-align: left; ">The result of this procedure is to generate a series of clusters with specific textual features which are a proxy for some feature of the map being described by that text. On inspection, these clusters are highly meaningful and can be visualised both in textual terms, but also on a map, in their own right, which allows us to find unexpected examples of places which conform to a particular type – or that have a certain characteristic – only discoverable by virtue of the text data.</p>
+            <p style="text-align: left; ">Our use of clustering to explore text on maps adds nuance to our existing understanding of historical places. The clustering experiment enhances our previous hypotheses about types of railspace and allows finer distinctions to be made between existing types of geospatial data. The method we present draws parallels between the semantic ‘space’ of text on maps – understood as a linguistic form with semiotic value – and the geographical space depicted on the map. Future work will continue to explore the relation between these two layers of meaning, shedding fresh light on Britain’s historical geography, as well as the surveying and printing practices of its map-makers.</p>
+        </body>
+    </text>
+</TEI>

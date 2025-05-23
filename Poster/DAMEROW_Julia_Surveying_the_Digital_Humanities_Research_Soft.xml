@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="DAMEROW_Julia_Surveying_the_Digital_Humanities_Research_Soft">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Surveying the Digital Humanities Research Software Engineering Landscape</title>
+                <author>
+                    <persName>
+                        <surname>Damerow</surname>
+                        <forename>Julia</forename>
+                    </persName>
+                    <affiliation>Arizona State University, United States of America</affiliation>
+                    <email>jdamerow@asu.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Koeser</surname>
+                        <forename>Rebecca Sutton</forename>
+                    </persName>
+                    <affiliation>Princeton University</affiliation>
+                    <email>rkoeser@princeton.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Crawford</surname>
+                        <forename>Cole</forename>
+                    </persName>
+                    <affiliation>Harvard University</affiliation>
+                    <email>cole_crawford@fas.harvard.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-01T00:40:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>research software engineering</term>
+                    <term>dh developer</term>
+                    <term>career path</term>
+                    <term>survey</term>
+                    <term>community</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>project design</term>
+                    <term>organization</term>
+                    <term>management</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>Computer science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">DHTech<ref n="1" target="ftn1"/> is a community for people doing technical work in digital humanities. It is an ADHO Special Interest Group that aims to provide a platform for the exchange of knowledge, to share expertise, and to foster collaboration among digital humanities software practitioners. In 2020, DHTech ran a survey to better understand who is developing code in the digital humanities, including what technologies they use, what formal and informal training they have, and their career expectations and experiences (DHTech 2020). The results of the survey showed the diversity of this group of people. About 25% of respondents considered themselves a minority in their field. Interestingly, besides traditional diversity measures such as gender and ethnicity, categories typically not traditionally considered such as position type and field of study were listed. Beyond traditional diversity measures, the responses to the survey also highlighted diversity in formal education and degrees attained (just barely 50% had a PhD), a wide range of technical backgrounds, and a diverse array of programming languages and technology frameworks. In summary, the survey results emphasized many of the challenges for anyone interested in pursuing a technical role in a digital humanities project, when there are no established career paths and such little overlap across projects. 
+            </p>
+            <p style="text-align: left; ">Since that 2020 survey, the DHTech community has grown and the Research Software Engineer (RSE) career path has gained increased visibility and support with organizations like the Society of Research Software Engineering in the UK<ref n="2" target="ftn2"/>, de-RSE in Germany<ref n="3" target="ftn3"/>, and the US-RSE Association in the United States<ref n="4" target="ftn4"/>. While this is encouraging, it also highlights the wide range of backgrounds and aspirations of those doing research software engineering work. Many of these developers do research software engineering work, but not all consider themselves research software engineers or aspire to become one. While this gap is not exclusive to the digital humanities, it seems to be especially pronounced in DH. 
+            </p>
+            <p style="text-align: left; ">To understand how the environment for research software engineering practitioners in DH has changed, we are now repeating an expanded version of the 2020 survey<ref n="5" target="ftn5"/>. It is currently running and will be closed in the spring of 2025. Our poster at DH2025 presents the survey results. We are retaining some of the original survey questions to enable longitudinal comparisons. This enables us to compare the prevalence of different programming languages and frameworks, the types of technical work that DH developers undertake, and where and in what kinds of teams DH development happens institutionally now versus in 2020. We have also added several new questions to better understand the careers of DH research software engineers and those doing research software engineering work. These new questions include topics such as research output, the disciplines in which DH developers typically work, advancement opportunities, motivations for working within digital humanities, compensation, DH RSE engagement in professional organizations, and code review practices across the community. In 2020, we received a total of 66 responses. For the 2024 survey, we hope to collect at least these many responses, if not more. 
+            </p>
+            <p style="text-align: left; ">Our poster communicates our analysis of the survey results, provides an overview of the current state of the digital humanities technical community and compares the current state to the responses from the 2020 survey. We hope that the survey results will provide insights into how DHTech as well as the wider DH community can better support and collaborate with those who are doing technical work for DH projects, since they are so often critical for a project’s success. By better understanding questions such as what technology stacks are used and what training needs exist, whether recognition for technical roles in DH has increased or is perceived to have changed, and what role code quality plays in DH research software engineering practices and culture, we hope to increase DHTech’s impact regarding advocacy and networking opportunities for its members.</p>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                      https://dh-tech.github.io/
+                </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                      https://society-rse.org/
+                </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                     https://de-rse.org/
+                </note>
+<note rend="footnote text" xml:id="ftn4" n="4">
+                     https://us-rse.org/
+                </note>
+<note rend="footnote text" xml:id="ftn5" n="5">
+                     The 2024-25 survey can be found here: https://dh-tech.github.io/2024/11/20/dhtech-survey-2024/.
+                </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">DHTech</hi> (2020): “DH RSE Survey Results”, DHTech. &lt;https://dh-tech.github.io/survey-results-2020&gt; [30.4.2025].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

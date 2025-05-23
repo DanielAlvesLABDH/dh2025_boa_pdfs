@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="CALVO_TELLO_Jos__New_Features_in_the_TextGrid_Repository__Fa">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">New Features in the TextGrid Repository: Facilitating Long-Term Open Access to TEI files</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Calvo Tello</surname>
+                        <forename>José</forename>
+                    </persName>
+                    <affiliation>Göttingen State and University Library, Germany</affiliation>
+                    <email>calvotello@sub.uni-goettingen.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Dogaru</surname>
+                        <forename>George</forename>
+                    </persName>
+                    <affiliation>GWDG</affiliation>
+                    <email>george.dogaru@gwdg.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Funk</surname>
+                        <forename>Stefan</forename>
+                    </persName>
+                    <affiliation>Göttingen State and University Library, Germany</affiliation>
+                    <email>funk@sub.uni-goettingen.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Klammer</surname>
+                        <forename>Ralf</forename>
+                    </persName>
+                    <affiliation>TUD Dresden University of Technology</affiliation>
+                    <email>ralf.klammer@tu-dresden.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Rißler-Pipka</surname>
+                        <forename>Nanette</forename>
+                    </persName>
+                    <affiliation>Max Weber Stiftung</affiliation>
+                    <email>Rissler-Pipka@MaxWeberStiftung.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Veentjer</surname>
+                        <forename>Ubbo</forename>
+                    </persName>
+                    <affiliation>Göttingen State and University Library, Germany</affiliation>
+                    <email>veentjer@sub.uni-goettingen.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Göbel</surname>
+                        <forename>Mathias</forename>
+                    </persName>
+                    <affiliation>Göttingen State and University Library, Germany</affiliation>
+                    <email>goebel@sub.uni-goettingen.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T08:29:05.792970304</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>repository</term>
+                    <term>TEI</term>
+                    <term>literature</term>
+                    <term>metadata</term>
+                    <term>FAIR principles</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digital archiving</term>
+                    <term>open access methods</term>
+                    <term>public humanities collaborations and methods</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>Literary studies</term>
+                    <term>Philology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="id__qw2zh4cd6xzi"/>TextGrid Repository
+                </head>
+                <p>The TextGrid Repository is a research data repository specialised in TEI files (Neuroth, Rapp, and Söring 2015). Its roots go back almost 20 years and it has been developed and extended through research data infrastructure projects such as DARIAH-DE, CLARIAH-DE and currently under the German NFDI consortium Text+ (Calvo Tello et al. 2023). Documents are not only openly accessible in the repository, it's open and cost-free to all researchers, regardless of institution or country, language or genre of document. The repository is provided by the Göttingen State and University Library and the GWDG. The data is harvested on record level by several resources, such as OpenAire (Weimer 2021), EOSC Resource Hub,
+                    <hi rend="sup"><ref n="1" target="ftn1"/>
+                    </hi> or the CLARIN Virtual Language Observatory.
+                </p>
+                <p>Some of the basic features of the repository are transformation of TEI files into HTML or plain text, bulk download options, assignment of PIDs, recompilation of corpora using the shelf function, on-the-fly connection to other tools such as the Voyant Tools or the CLARIN Switchboard, or access to the data via APIs. This covers a range of use cases: just reading the text, use in classroom, or application of NLP methods. The repository has also been certified with the CoreTrustSeal.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="id__trb188k8kq0g"/>New 
+                    <hi rend="italic">Fluffy</hi> Import
+                </head>
+                <p>One of the challenges since the beginning of the TextGrid repository has been the integration of new projects. This difficulty was partly due to technological challenges, but also to the complexity of the repository's metadata model. In recent years, we have addressed this issue with the clear aim of creating a more user-friendly and less demanding import workflow: the Fluffy Import.</p>
+                <p>Firstly, projects now have personal support and advice on project data, trying to improve the quality of metadata with minimal effort. Secondly, the import workflow takes place in a Jupyter Notebook environment using several new (tg-model, Notebook Actions) components, APIs, and standard services (tg-crud, tg-publish) of TextGrid (Buddenbohm et al. 2024). This new import assumes that most of the required metadata is already present in the TEI files and that this data can be retrieved via xPaths. The workflow suggests xPaths and the main task of the researcher is to confirm or correct these xPaths. This way, the user is no longer required to fully understand the metadata model. Moreover, the import process allows researchers to curate their metadata when it is not available in the original TEI file, thereby improving its FAIR status (Wilkinson et al. 2016).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="id__l9suetwuzirs"/>New Features
+                </head>
+                <p>Besides the new import workflow, several other features have been implemented recently. For the ELTeC corpora (see next section) several new metadata fields and facets have been added, including the author's gender.</p>
+                <p>Projects can now use the Basic Classification (an open resource widely used in the German-speaking libraries) to classify their data into specific disciplines (Calvo Tello et al. 2023; Balakrishnan and Voß 2022; Schulz 1991). In addition, projects can now use the entities of the GND authority file system to describe, for example, the genre of the publication. Other new features relate to project-specific aspects, such as a configurable landing page and project-specific XSLT transformations.</p>
+                <p>In addition to the existing API for TextGrid, data can now also be accessed via a Python library (Hynek et al. 2024). This allows researchers to filter and access data in the TextGrid Repository in a programming environment as they would in a browser. In addition, the repository has recently made it possible for researchers to publish TEI data derived from copyrighted documents that cannot be published in their original form (Calvo Tello et al. 2025).
+                    <hi rend="sup"><ref n="2" target="ftn2"/>
+                    </hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="id__hycaa448dl0x"/>New Corpora
+                </head>
+                <p>For a long time, the TextGrid Repository was mainly known for the TextGrid Digital Library (Betz 2015), a large collection of German texts.
+                    <hi rend="sup"><ref n="3" target="ftn3"/>
+                    </hi> Recently, new German corpora have been added, such as "The Beginnings of German Modern Poetry Corpus".
+                    <hi rend="sup"><ref n="4" target="ftn4"/>
+                    </hi> Furthermore, in recent years the team behind the repository has made great efforts to make the repository truly multilingual by adding resources in languages other than German. Some examples of this are the corpus of Spanish novels CoNSSA (Calvo Tello 2021),
+                    <hi rend="sup"><ref n="5" target="ftn5"/>
+                    </hi> the collection of corpora in Romance languages textbox (Schöch et al. 2019),
+                    <hi rend="sup"><ref n="6" target="ftn6"/>
+                    </hi> the collection of French novels
+                    <hi rend="sup"><ref n="7" target="ftn7"/>
+                    </hi> or the The Folger Digital Texts.
+                    <hi rend="sup"><ref n="8" target="ftn8"/>
+                    </hi> The publication of 15 of the ELTeC corpora was a major milestone, with hundreds of texts in Romance, Germanic, Slavic and Finno-Ugric languages (Schöch et al. 2021; Burnard, Schöch, and Carolin Odebrecht 2021; Rißler-Pipka et al. 2023). Later, a collection of Caucasian folklore was published, with tales in languages such as Georgian, Russian, Avaric, Tsez and Mingrelian.
+                    <hi rend="sup"><ref n="9" target="ftn9"/>
+                    </hi>
+                </p>
+                <p>We are currently working on the preparation of several new corpora, in German, of a large multilingual corpus of the Bible (Christodouloupoulos and Steedman 2015),
+                    <hi rend="sup"><ref n="10" target="ftn10"/>
+                    </hi> and on the integration of the Göttingen Register of Electronic Texts in Indian Languages (GRETIL)
+                    <hi rend="sup"><ref n="11" target="ftn11"/>
+                    </hi> with hundreds of documents in Sanskrit, Pali, Prakrit, Tamil and other Asian languages.
+                </p>
+                <p>With this poster, we would like to invite more researchers from the DH community to publish their data in TEI in the TextGrid Repository and to benefit from its current and future features.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn1" rend="footnote text" n="1">
+                            
+                        </note>
+<note xml:id="ftn2" rend="footnote text" n="2">
+                            
+                        </note>
+<note xml:id="ftn3" rend="footnote text" n="3">
+                            
+                        </note>
+<note xml:id="ftn4" rend="footnote text" n="4">
+                            
+                        </note>
+<note xml:id="ftn5" rend="footnote text" n="5">
+                            
+                        </note>
+<note xml:id="ftn6" rend="footnote text" n="6">
+                            
+                        </note>
+<note xml:id="ftn7" rend="footnote text" n="7">
+                            
+                        </note>
+<note xml:id="ftn8" rend="footnote text" n="8">
+                            
+                        </note>
+<note xml:id="ftn9" rend="footnote text" n="9">
+                            
+                        </note>
+<note xml:id="ftn10" rend="footnote text" n="10">
+                            
+                        </note>
+<note xml:id="ftn11" rend="footnote text" n="11">
+                            
+                        </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Balakrishnan, Uma, and Jakob Voß. 2022. ‘Automatische Anreicherung der Sacherschließung des Verbundkatalogs K10plus mittels coli-rich’. In 
+                        <hi rend="italic">#FreiräumeSchaffen</hi>. Leipzig: Bibliothek und Information Deutschland.
+                        <ref target="https://bid2022.abstractserver.com/program/#/details/presentations/27">
+                            <hi rend="color(#1155cc)underline">https://bid2022.abstractserver.com/program/#/details/presentations/27</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Betz, Katrin. 2015. ‘Ein virtuelles Bücherregal: Die Digitale Bibliothek im TextGrid Repository’. In 
+                        <hi rend="italic">TextGrid: Von der Community - für die Community</hi>, edited by Heike Neuroth, Andrea Rapp, and Sibylle Söring, 229–39. Glückstadt: Verlag Werner Hülsbusch.
+                        <ref target="https://publications.goettingen-research-online.de/handle/2/14388">
+                            <hi rend="color(#1155cc)underline">https://publications.goettingen-research-online.de/handle/2/14388</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Buddenbohm, Stefan, José Calvo Tello, George Dogaru, Stefan E. Funk, Ralf Klammer, Nanette Rißler-Pipka, Alex Steckel, Ubbo Veentjer, and Lukas Weimer. 2024. ‘Fluffy Import: Preserving Humanities Research Data with the TextGrid Repository’. Zenodo.
+                        <ref target="https://doi.org/10.5281/ZENODO.14025198">
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.5281/ZENODO.14025198</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Burnard, Lou, Christof Schöch, and Carolin Odebrecht. 2021. ‘In Search of Comity: TEI for Distant Reading’. 
+                        <hi rend="italic">Journal of the Text Encoding Initiative</hi>, no. Issue 14 (March).
+                        <ref target="https://doi.org/10.4000/jtei.3500">
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.4000/jtei.3500</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Calvo Tello, José. 2021. 
+                        <hi rend="italic">The Novel in the Spanish Silver Age: A Digital Analysis of Genre Using Machine Learning</hi>. Digital Humanities Research 4. Bielefeld: transcript.
+                        <ref target="https://www.transcript-verlag.de/978-3-8376-5925-2/the-novel-in-the-spanish-silver-age/?c=331025282">
+                            <hi rend="color(#1155cc)underline">https://www.transcript-verlag.de/978-3-8376-5925-2/the-novel-in-the-spanish-silver-age/?c=331025282</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Calvo Tello, José, Stefan E. Funk, Daniel Kurzawe, and Ubbo Veentjer. 2023. ‘Inhaltserschließung für Forschungsdaten: TextGrid Repository, Normdaten und Basisklassifikation’. In 
+                        <hi rend="italic">FORGE23</hi>. Tübingen.
+                        <ref target="https://doi.org/10.5281/zenodo.8341605">
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.5281/zenodo.8341605</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Calvo Tello, José, Stefan E. Funk, Mathias Göbel, Daniel Kurzawe, Nanette Rißler-Pipka, and Ubbo Veentjer. 2023. ‘Between Corpora, Tools, and Authority Files: TextGrid Repository for Hispanic Studies’, Revista de Humanidades Digitales, 8:90–108.
+                        <ref target="https://doi.org/10.5944/rhd.vol.8.2023.37994">
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.5944/rhd.vol.8.2023.37994</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Calvo Tello, José, Mathias Göbel, Ubbo Veentjer, Stefan E. Funk, Nanette Rißler-Pipika, and Keli Du. 2025. ‘FAIR Derived Data in TEI and Its Publication in the TextGrid Repository’. 
+                        <hi rend="italic">jTEI</hi>.
+                    </bibl>
+                    <bibl>Christodouloupoulos, Christos, and Mark Steedman. 2015. ‘A Massively Parallel Corpus: The Bible in 100 Languages’. 
+                        <hi rend="italic">Language Resources and Evaluation</hi> 49 (2): 375–95.
+                        <ref target="https://doi.org/10.1007/s10579-014-9287-y">
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.1007/s10579-014-9287-y</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Hynek, Stefan, Ubbo Veentjer, José Calvo Tello, Florian Barth, Stefan Funk, Mathias Goebel, Daniel Kurzawe, and Lukas Weimer. 2024. ‘TextGrid Python Clients: Making the Repository Programmable’. In 
+                        <hi rend="italic">Quo Vadis DH?</hi> Passau: DHd-Verband.
+                        <ref target="https://doi.org/10.5281/zenodo.10698477">
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.5281/zenodo.10698477</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Neuroth, Heike, Andrea Rapp, and Sibylle Söring, eds. 2015. 
+                        <hi rend="italic">TextGrid: Von der Community - für die Community: eine virtuelle Forschungsumgebung für die Geisteswissenschaften</hi>. Glückstadt: Verlag Werner Hülsbusch.
+                        <ref target="https://publications.goettingen-research-online.de/handle/2/14388">
+                            <hi rend="color(#1155cc)underline">https://publications.goettingen-research-online.de/handle/2/14388</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Rißler-Pipka, Nanette, José Calvo Tello, Stefan E. Funk, Carolin Odebrecht, Christof Schöch, and Ubbo Veentjer. 2023. ‘The European Literary Text Collection in TextGrid Repository’. In 
+                        <hi rend="italic">Collaboration as Opportunity</hi>, edited by Walter Scholger, Georg Vogeler, Toma Tasovac, Anne Baillot, Elisabeth Raunig, Martina Scholger, Elisabeth Steiner, and Patrick Helling. Graz: ADHO.
+                        <ref target="https://doi.org/10.5281/ZENODO.8107707">
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.5281/ZENODO.8107707</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Schöch, Christof, José Calvo Tello, Ulrike Henny-Krahmer, and Stefanie Popp. 2019. ‘The CLiGS Textbox: Building and Using Collections of Literary Texts in Romance Languages Encoded in XML-TEI’. 
+                        <hi rend="italic">Journal of the Text Encoding Initiative</hi>.
+                        <ref target="https://journals.openedition.org/jtei/2085">
+                            <hi rend="color(#1155cc)underline">https://journals.openedition.org/jtei/2085</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Schöch, Christof, Tomaz Erjavec, Roxana Patras, and Diana Santos. 2021. ‘Creating the European Literary Text Collection (ELTeC): Challenges and Perspectives’. 
+                        <hi rend="italic">Modern Languages Open</hi>, no. 1 (December), 25.
+                        <ref target="https://doi.org/10.3828/mlo.v0i0.364">
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.3828/mlo.v0i0.364</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Schulz, Ursula. 1991. ‘Die Niederländische Basisklassifikation: Eine Alternative Für Die “Sachgruppen” Im Fremddatenangebot Der Deutschen Bibliothek’. 
+                        <hi rend="italic">Bibliotheksdienst</hi> 25:1196–1219.
+                    </bibl>
+                    <bibl>Weimer, Lukas. 2021. ‘Das TextGrid Repository Nun Verfügbar in OpenAIRE Explore | DHd-Blog’. 
+                        <hi rend="italic">DHd-Blog</hi> (blog). 21 January 2021.
+                        <ref target="https://dhd-blog.org/?p=14915">
+                            <hi rend="color(#1155cc)underline">https://dhd-blog.org/?p=14915</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Wilkinson, Mark D., Michel Dumontier, IJsbrand Jan Aalbersberg, Gabrielle Appleton, Myles Axton, Arie Baak, Niklas Blomberg, et al. 2016. ‘The FAIR Guiding Principles for Scientific Data Management and Stewardship’. 
+                        <hi rend="italic">Scientific Data</hi> 3 (March).
+                        <ref target="https://doi.org/10.1038/sdata.2016.18">
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.1038/sdata.2016.18</hi>
+                        </ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

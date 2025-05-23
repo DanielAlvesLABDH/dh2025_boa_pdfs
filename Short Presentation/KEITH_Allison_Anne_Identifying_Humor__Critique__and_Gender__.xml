@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KEITH_Allison_Anne_Identifying_Humor__Critique__and_Gender__">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Identifying Humor, Critique, and Gender: Computational Analysis of the Gracioso Archetype in Spanish Golden Age Theater</title>
+                <author>
+                    <persName>
+                        <surname>Keith</surname>
+                        <forename>Allison Anne</forename>
+                    </persName>
+                    <affiliation>University of Stuttgart, Germany</affiliation>
+                    <email>allison.keith@ims.uni-stuttgart.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Rojas Castro</surname>
+                        <forename>Antonio</forename>
+                    </persName>
+                    <affiliation>University of Tübingen, Germany</affiliation>
+                    <email>antonio.rojas-castro@uni-tuebingen.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Jung</surname>
+                        <forename>Kerstin</forename>
+                    </persName>
+                    <affiliation>University of Stuttgart, Germany</affiliation>
+                    <email>kerstin.jung@ims.uni-stuttgart.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ehrlicher</surname>
+                        <forename>Hanno</forename>
+                    </persName>
+                    <affiliation>University of Tübingen, Germany</affiliation>
+                    <email>hanno.ehrlicher@uni-tuebingen.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Padó</surname>
+                        <forename>Sebastian</forename>
+                    </persName>
+                    <affiliation>University of Stuttgart, Germany</affiliation>
+                    <email>pado@ims.uni-stuttgart.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-24T09:47:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>siglo de oro</term>
+                    <term>automatic classification</term>
+                    <term>clustering</term>
+                    <term>calderon de la barca</term>
+                    <term>machine learning</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>natural language processing</term>
+                    <term>semantic analysis</term>
+                    <term>History</term>
+                    <term>Humanities computing</term>
+                    <term>Literary studies</term>
+                    <term>Performance Studies: Dance</term>
+                    <term>Theatre</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">During the period of the Spanish “Golden Age”, the Siglo de Oro (16th-17th century), theatrical production relied on characters of various archetypes to serve differing functions throughout a play, for example to drive action or to engage the audience. These archetypes are part of the standard repertory of Spanish Baroque authors and are used in many plays across various genres. The 
+                <hi rend="italic">gracioso</hi>, one such archetype, is a servant character (a 
+                <hi rend="italic">criado</hi>) who makes humorous remarks and comments on action in plays (Barone 2012). The 
+                <hi rend="italic">gracioso</hi> is a very common character trope and is present across hundreds of plays.
+            </p>
+            <p style="text-align: left; ">The 
+                <hi rend="italic">gracioso</hi> is a unique character because he embodies multiple distinct traits that have a specific purpose in the theatrical works; he can serve as comic relief, audience engagement, or as an author write-in. Also, Siglo de Oro playwrights relied heavily on comedy, frequently blurring the lines between tragic and comedic plays. Thus, it has been argued that the Spanish Baroque theater subverts, rewrites, and adapts codified norms from classical European Renaissance theatre, and it is highly interesting to better understand what implicit norms the playwrights of this period do follow. 
+            </p>
+            <p style="text-align: left; ">We attempt to uncover these norms regarding the portrayal of the 
+                <hi rend="italic">gracioso</hi>, but doing so is a challenging task. Analysis based on traditional close reading is arguably limited to taking into account a small number of works. In this study, we examine the 
+                <hi rend="italic">gracioso</hi> with a scalable reading approach, combining quantitative analysis and manual analysis in order to reveal larger patterns (following Siglo de Oro analyses by Ehrlicher 2020 and Lehmann &amp; Padó 2022). We propose to use word embedding-based methods from Natural Language Processing to characterize the 
+                <hi rend="italic">gracioso</hi> in lexical-semantic terms and use explainable machine learning techniques to scrutinize the resulting analysis. Due to his vast production of theatrical works, his status as an emblematic playwright of the period, and the conveniently available digitized collection of his works (
+                <ref target="https://dracor.org/cal">CalDracor</ref>), we base our investigation on the plays of Pedro Calderon de la Barca (1600-1681).
+            </p>
+            <p style="text-align: left; ">We test our approach under the assumption that, because of the unique characteristics of the 
+                <hi rend="italic">gracioso</hi>, this archetype should be distinguishable from a regular 
+                <hi rend="italic">criado</hi>. We use statistical analysis to reveal patterns about the 
+                <hi rend="italic">gracioso</hi> in the works of Calderón. We then train a BERT-based classification model on character lines, to distinguish between normal criados from criados 
+                <hi rend="italic">graciosos</hi>. We build on our earlier work on attribution methods (Keith / Rojas-Castro / Padó 2024) to translate the knowledge inherent in these classification methods back into a human-readable form to ensure that the criteria found by the classifier correspond with the expert-defined traits of 
+                <hi rend="italic">graciosos</hi>. This combination of heuristics, machine learning and expertise helps us gain insight into the implicit norms used to portray this prevalent archetype.
+            </p>
+            <p style="text-align: left; ">In many corpora and even in the original dramatis personae, the 
+                <hi rend="italic">graciosos</hi> are not always labelled as such in databases (
+                <ref target="https://calderondigital.tespasiglodeoro.it/">Calderón Digital</ref>) or corpora (CalDracor). We therefore utilize the character line-trained model, combined with heuristics based on corpus statistics, to propose un-annotated characters as candidates for either 
+                <hi rend="italic">graciosos</hi> or 
+                <hi rend="italic">criados</hi>. These candidates can then be reviewed, tagged with markup, and the confirmed archetype be stored in the corpus or database.
+            </p>
+            <p style="text-align: left; ">It has also been argued that some female characters serve similar purposes as the 
+                <hi rend="italic">gracioso</hi> (Vacari 2020). This raises intriguing questions about gendered dynamics in Spanish theater and whether the 
+                <hi rend="italic">graciosa</hi> operates as a parallel to the 
+                <hi rend="italic">gracioso</hi> or embodies a distinctly different archetype (García Lorenzo 2008). We aim to see if female 
+                <hi rend="italic">graciosas</hi> can be identified and mapped onto the difference between 
+                <hi rend="italic">gracioso</hi> and regular criados. Based on our earlier work on gender portrayal in Calderón (Keith / Rojas-Castro / Padó 2024), we are confident that this can be done successfully. Consequently, we use the model trained to classify 
+                <hi rend="italic">graciosos</hi> on female 
+                <hi rend="italic">criadas</hi> in the works, to determine if the model would classify any of these characters as 
+                <hi rend="italic">graciosas</hi>. Again, we follow up with a close reading analysis of some of the character classifications.
+            </p>
+            <p style="text-align: left; ">This study aims to contribute to both Digital Humanities and Golden Age studies by demonstrating how machine learning can enhance our understanding of theatrical archetypes and their evolution. From a computational perspective, it contributes to our understanding about what it takes to make NLP techniques work on non-contemporary, poetic text, moving beyond modern datasets and opening up new avenues for interdisciplinary collaboration. From a literary perspective, this work offers new insights into the structure of Golden Age plays and the cultural functions of comedic characters. Specifically, we investigate the 
+                <hi rend="italic">gracioso</hi> as a recurring yet dynamic archetype in Spanish Golden Age theater and explore the potential for computational methods to uncover nuanced patterns in its portrayal. By extending the analysis to female characters, we aim to provide a more comprehensive understanding of how humor, social critique, and character construction intersect in this influential theatrical tradition.
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Barone, Lavinia </hi>(2013): “La figura del gracioso en las comedias serias de Calderón”, in: 
+                        <hi rend="italic">Festina lente: Actas del II Congreso Internacional Jóvenes Investigadores Siglo de Oro</hi>, JISO 2012: BIADIG: Biblioteca áurea digital 17: 23-34.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">García Lorenzo, Luciano</hi> (2008): 
+                        <hi rend="italic">La criada en el teatro español del Siglo de Oro</hi>. Madrid: Fundamentos.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Ehrlicher, Hanno, et al.</hi> (2020): “La poética dramática desde una perspectiva cuantitativa: la obra de Calderón de la Barca”, in: 
+                        <hi rend="italic">Revista de Humanidades Digitales</hi> 5: 1-25. DOI:
+                        <ref target="file:///Users/Antonio/Downloads/10.5944/rhd.vol.5.2020.27716" xml:space="preserve"> 10.5944/rhd.vol.5.2020.27716</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Keith, Allison / Rojas-Castro, Antonio / Padó, Sebastian</hi> (2024): “Computational Analysis of Gender Depiction in the Comedias of Calderón de la Barca”. 
+                        <hi rend="italic">arXiv</hi>. DOI: 
+                        <ref target="https://doi.org/10.48550/arXiv.2411.03895">
+                            <hi style="font-family:Open Sans">https://doi.org/10.48550/arXiv.2411.03895</hi>
+                        </ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Lehmann, Jörg / Sebastian Padó</hi> (2022): “Clasificación de tragedias y comedias en las comedias nuevas de Calderón de la Barca”, in: 
+                        <hi rend="italic">Revista de Humanidades Digitales</hi> 7: 80-103. DOI: 
+                        <ref target="file:///Users/Antonio/Downloads/10.5944/rhd.vol.7.2022.34588">10.5944/rhd.vol.7.2022.34588</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Lorenzo, Laura Hernández</hi> (2024): “Estilometría y género: aproximación a los personajes teatrales de Calderón y Sor Juana Inés de la Cruz”, in: 
+                        <hi rend="italic">Ínsula: revista de letras y ciencias humanas</hi> 930: 32-36.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold color(222222)">Vaccari, Debora</hi>
+                        <hi rend="color(222222)" xml:space="preserve"> (2020):</hi> “
+                        <hi rend="color(222222)">De criadas y graciosas, con unos ejemplos de Moreto</hi>”, in: 
+                        <hi rend="italic color(222222)">Mujer y sociedad en la literatura del Siglo de Oro</hi>
+                        <hi rend="color(222222)" xml:space="preserve">. Biblioteca Áurea Hispánica 137: 295-322. DOI: </hi>
+                        <ref target="https://doi.org/10.31819/9783968691183-018">
+                            <hi rend="underline color(0000FF)">doi.org/10.31819/9783968691183-018</hi>
+                        </ref>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LAMQADDAM_Houda_Motif_Match__Redefining_Similarity_for_Digit">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Motif-Match: Redefining Similarity for Digital Art History Through Multifaceted Image Search</title>
+                <author>
+                    <persName>
+                        <surname>Lamqaddam</surname>
+                        <forename>Houda</forename>
+                    </persName>
+                    <affiliation>Universiteit Van Amsterdam, The Netherlands</affiliation>
+                    <email>h.lamqaddam@uva.nl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Donoso</surname>
+                        <forename>Ivania</forename>
+                    </persName>
+                    <affiliation>KU Leuven, Belgium</affiliation>
+                    <email>ivania.donoso@kuleuven.be</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Mortier</surname>
+                        <forename>Quinten</forename>
+                    </persName>
+                    <affiliation>KU Leuven, Belgium</affiliation>
+                    <email>quinten.mortier@outlook.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Brosens</surname>
+                        <forename>Koenraad</forename>
+                    </persName>
+                    <affiliation>KU Leuven, Belgium</affiliation>
+                    <email>koen.brosens@kuleuven.be</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Verbert</surname>
+                        <forename>Katrien</forename>
+                    </persName>
+                    <affiliation>KU Leuven, Belgium</affiliation>
+                    <email>katrien.verbert@kuleuven.be</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-09T09:51:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>computer vision</term>
+                    <term>art history</term>
+                    <term>image search</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>image processing and analysis</term>
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>user experience design and analysis</term>
+                    <term>Art history</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Motivation</head>
+                <p>The improvement of computer vision models in recent years opened new computational possibilities in the field of digital art history. Where are previous AI advancements had benefitted numerical and text analysis, the ‘visual turn’ of AI has made it possible to apply ‘distant viewing’ to visual cultural heritage (Arnold &amp; Tilton, 2023). This has led to the AI-powered identification of patterns in aspects such as pose (Impett &amp; Süsstrunk, 2016), composition (Lelièvre &amp; Neri, 2021), style (Bar et al., 2014), or brushwork (Lamberti et al., 2014)). At the core of these discoveries is the ability to compute distances between images—a fundamental task in computer vision that aligns closely with a foundational method in art historical research: the analysis of similarities, differences, and proximities between images (Brown, 2020). </p>
+                <p>Traditionally, researchers in visual arts, art history, and semiotics analyzed similarities between artworks manually. The integration of computer vision has dramatically expanded the scale at which such analysis can be conducted. However, the high task specificity required for machine learning algorithm training introduces the risk of flattening nuanced concepts such as similarity into single-dimensional aspects. Moreover, there is limited adoption of mechanisms that allow for user control, transparency, and explicit rendering of a model’s inner workings (Musik, 2018; Biemann, 2014; Hampson, 2013). While control and transparency have been widely discussed in recommendation systems and interactive user interface research (Harambam, 2019; Jannach, 2017), these issues remain underexplored in the digital humanities. This challenge is compounded by findings that humanities researchers frequently feel a lack of control and transparency when using digital tools (Biemann, 2014; Gibbs, 2012; Hampson, 2013).</p>
+                <p>In this article, we address these gaps by contributing (1) a discussion of the concept of similarity in art history research, (2) a prototype of an image search tool supporting multi-faceted similarity searches and (3) an investigation of the effects of control and transparency in an image search tool.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>The multitudes of similarity</head>
+                <p>Currently, the state of the art of similarity matching algorithms used in digital art history fall into two categories: (a) singular-axis similarity matching, in which models are trained to compute similarity for specific tasks (e.g., identifying symbols, hand gestures, or brush strokes), and (b) global similarity matching, in which models compare the overall composition or visual structure of artworks. Both approaches yield valuable insights for specific research questions but remain constrained in their ability to address the multifaceted and contextual understanding of similarity in art history. We propose a broader characterization of the task of similarity matching, emphasizing three key principles:</p>
+                <list type="ordered">
+                    <item>
+                        <hi rend="bold">Similarity is multi-dimensional:</hi> Similarity matching in art history involves analyzing multiple facets of an artwork simultaneously, such as color, texture, composition, iconography, and materiality. These facets often interact in complex ways, meaning that similarity cannot be flattened into a single feature. 
+                    </item>
+                </list>
+                <p>
+                    <hi rend="italic">Take-away 1: Similarity matching tools should support the analysis of multiple axes of similarity.</hi>
+                </p>
+                <list type="ordered">
+                    <item>
+                        <hi rend="bold" xml:space="preserve">Similarity is cumulative: </hi>The cumulative aspect of similarity matching highlights how multiple dimensions of an artwork—such as color, composition, texture, and iconography—interact and influence one another, necessitating their assessment in a combined manner. Rather than treating these features as isolated or independent, cumulative similarity matching recognizes that the interplay between dimensions contributes significantly to the overall understanding of an artwork's resemblance to others. 
+                    </item>
+                </list>
+                <p>
+                    <hi rend="italic">Take-away 2: Similarity must be computed as an integrated measure rather than as isolated features.</hi>
+                </p>
+                <list type="ordered">
+                    <item>
+                        <hi rend="bold" xml:space="preserve">Similarity is defined situationally: </hi>The relevance and weight of different dimensions of similarity depend on the specific context or research question at hand. For example, when studying a particular artist’s oeuvre, stylistic features such as brushwork may take precedence, whereas in cross-cultural analyses, thematic or iconographic elements may be more critical. Situational similarity matching requires adaptable computational frameworks that allow researchers to emphasize different features or dimensions based on the specific research practice.
+                    </item>
+                </list>
+                <p rend="List Paragraph">
+                    <hi rend="italic">Take-away 3: The combination of similarity axes should be customizable for specific users and usage scenarios, rather than being pre-defined.</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Motif-Match</head>
+                <p>We developed Motif-Match to support the multidimensional similarity search over a dataset of visual art. Motif-Match is a similarity search tool that takes an image as input, and uses a combination of similarity axes with customizable weights to compute image distances and output the most similar art in the dataset. </p>
+                <figure>
+                    <graphic n="1001" width="15.91081111111111cm" height="3.76cm" url="/tmp/tmpn_nrbk3v/Pictures/84149a93dba49262b891835726e6837d.png" rend="inline"/>
+                </figure>
+                <p style="text-align: center;">
+                    <hi rend="italic">Figure 1. Overview of the architecture of Motif-Match</hi>
+                </p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Multi-faceted model with user-defined weights</head>
+                    <p>Motif-Match operates through two main processes: feature extraction and similarity matching. The feature extraction phase is divided into three components: pose, object, and color extraction (Figure 1). Each extracted feature is used to calculate a similarity score along its axis, which is then combined into a final overall similarity score. The three selected axes were identified through a participatory design process including a think aloud study, and interviews with scholars from the digital humanities and human-computer-interaction domains. </p>
+                    <list type="unordered">
+                        <item>The pose similarity component uses OpenPose (Cao, 2017), which detects human body key points and has been shown to outperform other pose detection algorithms (Jenicek, 2019). For this model, only body key points are used to reduce complexity and save computation time. To account for variations in scale and orientation, the extracted poses are aligned to the input pose using Procrustes analysis (Gower, 1975).</item>
+                        <item>For object similarity, we used Detectron2<ref n="1" target="ftn1"/> to detect objects within an image. While its focus on contemporary objects can limit its applicability to older artworks, its 80-dimensional vector outputs were found sufficient for this study's scope. Each vector dimension corresponds to an object category, which informs the similarity matching.
+                        </item>
+                        <item>Finally, color similarity is measured using the Color-Thief library<ref n="2" target="ftn2"/>, which extracts the six most prominent colors from an image. These colors are represented as RGB arrays, and their similarity is computed using the Euclidean distance between two color palettes. This approach highlights visually significant colors that contribute to an artwork's overall aesthetic impact.
+                        </item>
+                    </list>
+                    <p>By integrating pose, object, and color similarity scores, Motif-Match provides a multi-faceted and customizable analysis for comparing visual artworks. The overall similarity score is computed based on user-defined weights for each axis, allowing users to tailor searches by assigning different levels of importance to pose, object, or color similarity depending on the research focus.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Results </head>
+                    <p>The tool was tested with a subset of the WikiArt dataset, using Raphael's sketch Study for Adam as input.</p>
+                    <p>Figure 2 illustrates Motif-Match's search features, which extract and display image features such as pose estimates, colors, and objects. Users can adjust weights or deselect features, enabling customization. For example, an incorrectly recognized "elephant" object was removed by unchecking its box, demonstrating adaptability to misclassifications.</p>
+                    <p>Figure 3 showcases results from two searches: 3a emphasizes color similarity, retrieving sketches with matching palettes but varied content, while 3b uses equal weights for pose and object similarity, identifying artworks depicting people with closely matching poses.</p>
+                    <figure>
+                        <graphic n="1002" width="11.526211111111111cm" height="5.489827777777778cm" url="/tmp/tmpn_nrbk3v/Pictures/84149a93dba49262b891835726e6837d.png" rend="inline"/>
+                    </figure>
+                    <p style="text-align: center;">
+                        <hi rend="italic" xml:space="preserve">Figure 2. </hi>‘Study for Adam’ by Raphael used as input for the image search 
+                        <hi rend="italic" xml:space="preserve">(left). </hi>Interface of Motif-Match showing the scanned and processed image and the selection features for similarity axes
+                        <hi rend="italic" xml:space="preserve"> (right)</hi>
+                    </p>
+                    <figure>
+                        <graphic n="1003" width="16.002cm" height="6.108347222222222cm" url="/tmp/tmpn_nrbk3v/Pictures/84149a93dba49262b891835726e6837d.png" rend="inline"/>
+                    </figure>
+                    <p style="text-align: center;">
+                        <hi rend="italic" xml:space="preserve">Figure 3. 3a. </hi>Results of the image search when the similarity is only computed with regards to color weight
+                        <hi rend="italic" xml:space="preserve">. 3b. </hi>Results of the image search when the similarity is only computed with regards to a combination of pose and objects weights.
+                    </p>
+                    <p>Additional interaction with output images shows their extracted features, allowing the user more transparency into the system’s recommendation (see figure 4). </p>
+                    <figure>
+                        <graphic n="1004" width="16.002cm" height="8.851194444444445cm" url="/tmp/tmpn_nrbk3v/Pictures/84149a93dba49262b891835726e6837d.png" rend="inline"/>
+                    </figure>
+                    <p style="text-align: center;">
+                        <hi rend="italic" xml:space="preserve">Figure 4. </hi>The interface has additional transparency features, showing the matched features in the output image.
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Evaluation</head>
+                    <p>Motif-Match was evaluated with 39 participants, including 12 humanities scholars, to assess the impact of control and transparency on user experience. The study explored three questions: how control over similarity definitions affects system effectiveness, differences in control preferences between humanists and the general public, and how transparency influences perceived recommendation accuracy. A between-subjects design tested four application versions varying in control levels (basic vs. advanced) and transparency (explanations shown vs. hidden). The study revealed the following outcomes:</p>
+                    <list type="unordered">
+                        <item>Control over similarity definitions did not significantly affect system effectiveness, accuracy, or user satisfaction.</item>
+                        <item>There was no significant difference between humanists and lay users in terms of the control needed. However, humanist users tend to interact more with the system and make greater use of advanced settings, while lay users may prefer basic settings and be more cautious in their interactions. This finding counters assumptions about humanists’ reluctance to countering to engage with technical tools. </item>
+                        <item>While transparency did not significantly influence perceived accuracy, it positively impacted objective accuracy, as shown by system metrics.</item>
+                    </list>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p>This paper presents our efforts in leveraging emergent computer vision techniques to support art historical research practises. By framing similarity matching as multi-dimensional, cumulative, and situational, we highlight the need to redefine technical concepts to retain the complexity and multi-facetted nature of humanities research. We believe that this approach is needed to conduct research that combines technical innovation with flexibility and attention to the wide variety of scholarly needs. With a user evaluation focused on the effects of control and transparency, we prove that interactive elements and user control do influence system accuracy, and must therefore be designed intentionally and evaluated empirically. </p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                                 https://github.com/facebookresearch/detectron2
+                            </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                                 https://lokeshdhakar.com/projects/color-thief/
+                            </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Arnold, T. and Tilton, L., 2023. 
+                        <hi rend="italic">Distant viewing: computational exploration of digital images</hi>. MIT Press.
+                    </bibl>
+                    <bibl>Bar, Yaniv, Noga Levy, and Lior Wolf. "Classification of artistic styles using binarized features derived from a deep neural network." In 
+                        <hi rend="italic">Computer Vision-ECCV 2014 Workshops: Zurich, Switzerland, September 6-7 and 12, 2014, Proceedings, Part I 13</hi>, pp. 71-84. Springer International Publishing, 2015.
+                    </bibl>
+                    <bibl>Biemann, C., Crane, G.R., Fellbaum, C.D. and Mehler, A., 2014. Computational humanities-bridging the gap between computer science and digital humanities (Dagstuhl Seminar 14301).</bibl>
+                    <bibl>Brown, K. ed., 2020. 
+                        <hi rend="italic">The Routledge companion to digital humanities and art history</hi>. Routledge.
+                    </bibl>
+                    <bibl>Cao, Z., Simon, T., Wei, S.E. and Sheikh, Y., 2017. Realtime multi-person 2d pose estimation using part affinity fields. In 
+                        <hi rend="italic">Proceedings of the IEEE conference on computer vision and pattern recognition</hi> (pp. 7291-7299).
+                    </bibl>
+                    <bibl>Gibbs, F. and Owens, T., 2012. Building Better Digital Humanities Tools: Toward broader audiences and user-centered designs. 
+                        <hi rend="italic">Digital Humanities Quarterly</hi>, 
+                        <hi rend="italic">6</hi>(2).
+                    </bibl>
+                    <bibl>Gower, J.C., 1975. Generalized procrustes analysis. 
+                        <hi rend="italic">Psychometrika</hi>, 
+                        <hi rend="italic">40</hi>, pp.33-51.
+                    </bibl>
+                    <bibl>Hampson, C., Munnelly, G., Bailey, E., Lawless, S. and Conlan, O., 2013, September. Improving user control and transparency in the digital humanities. In 
+                        <hi rend="italic">2013 International Conference on Culture and Computing</hi> (pp. 196-197). IEEE.
+                    </bibl>
+                    <bibl>Harambam, J., Bountouridis, D., Makhortykh, M. and Van Hoboken, J., 2019, September. Designing for the better by taking users into account: A qualitative evaluation of user control mechanisms in (news) recommender systems. In 
+                        <hi rend="italic">Proceedings of the 13th ACM conference on recommender systems</hi> (pp. 69-77).
+                    </bibl>
+                    <bibl>Jannach, D., Naveed, S. and Jugovac, M., 2017. User control in recommender systems: Overview and interaction challenges. In 
+                        <hi rend="italic">E-Commerce and Web Technologies: 17th International Conference, EC-Web 2016, Porto, Portugal, September 5-8, 2016, Revised Selected Papers 17</hi> (pp. 21-33). Springer International Publishing.
+                    </bibl>
+                    <bibl>Jenicek, T. and Chum, O., 2019, September. Linking art through human poses. In 
+                        <hi rend="italic">2019 International Conference on Document Analysis and Recognition (ICDAR)</hi> (pp. 1338-1345). IEEE.
+                    </bibl>
+                    <bibl>Impett, L. and Süsstrunk, S., 2016. Pose and pathosformel in Aby Warburg’s bilderatlas. In 
+                        <hi rend="italic">Computer Vision–ECCV 2016 Workshops: Amsterdam, The Netherlands, October 8-10 and 15-16, 2016, Proceedings, Part I 14</hi> (pp. 888-902). Springer International Publishing.
+                    </bibl>
+                    <bibl>Lamberti, F., Sanna, A. and Paravati, G., 2014. Computer-assisted analysis of painting brushstrokes: digital image processing for unsupervised extraction of visible features from van Gogh’s works. 
+                        <hi rend="italic">EURASIP Journal on Image and Video Processing</hi>, 
+                        <hi rend="italic">2014</hi>, pp.1-17.
+                    </bibl>
+                    <bibl>Lelièvre, P. and Neri, P., 2021. A deep-learning framework for human perception of abstract art composition. 
+                        <hi rend="italic">Journal of vision</hi>, 
+                        <hi rend="italic">21</hi>(5), pp.9-9.
+                    </bibl>
+                    <bibl>Musik, C. and Zeppelzauer, M., 2018. Computer vision and the digital humanities: Adapting image processing algorithms and ground truth through active learning. 
+                        <hi rend="italic">VIEW Journal of European Television History and Culture</hi>, 
+                        <hi rend="italic">7</hi>(14), pp.59-72.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

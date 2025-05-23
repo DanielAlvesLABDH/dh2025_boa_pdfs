@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VAN_ZUNDERT_Joris_J__Introducing_StemmaWeb_2_0__A_Web_Enable">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Introducing StemmaWeb 2.0: A Web Enabled Suite of Stemmatological Tools for the Next Decade</title>
+                <author>
+                    <persName>
+                        <surname>Andrews</surname>
+                        <forename>Tara L.</forename>
+                    </persName>
+                    <affiliation>University of Vienna</affiliation>
+                    <email>tara.andrews@univie.ac.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Van Zundert</surname>
+                        <forename>Joris J.</forename>
+                    </persName>
+                    <affiliation>Huygens Institute for the History of the Netherlands – Royal Netherlands Academy of Arts and Sciences, Netherlands, The</affiliation>
+                    <email>joris.van.zundert@huygens.knaw.nl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Aliabadi-Pongratz</surname>
+                        <forename>Schiwa</forename>
+                    </persName>
+                    <affiliation>University of Vienna</affiliation>
+                    <email>schiwa.aliabadi@univie.ac.at</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T13:37:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>stemmatology</term>
+                    <term>tools</term>
+                    <term>StemmaWeb</term>
+                    <term>historical texts</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>manuscripts description</term>
+                    <term>representation</term>
+                    <term>and analysis</term>
+                    <term>scholarly editing and editions development</term>
+                    <term>analysis</term>
+                    <term>and methods</term>
+                    <term>user experience design and analysis</term>
+                    <term>Book and print history</term>
+                    <term>Philology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Abstract</head>
+                <p style="text-align: left; ">Stemmatology is the discipline that attempts to reconstruct the transmission of a text on the basis of relations between the various surviving manuscripts or (early) print copies. Various methods and technologies have been developed over time to support stemmatological analysis, of which cladistic analysis is the most computational/quantitative approach (Roelli 2020). </p>
+                <p style="text-align: left; ">StemmaWeb is a web-enabled suite of tools to support stemmatological analysis of variant texts. Version 1.0 (Andrews and Macé 2013; Andrews and Van Zundert 2012) has been online since 2012 and has been used by many textual scholars needing to carry out variant analysis and stemmatological computation for historical text traditions. Other tools that may be used for this task either lack a GUI oriented towards textual scholars (e.g. Camps and Cafiero 2018) or tend to a different domain (i.e. phylogenetics) as, for instance, Phylogeny.fr (Dereeper et al. 2008) and PAUP* (Swofford and Bell 2017).</p>
+                <p style="text-align: left; ">Like many software applications in the humanities, the development and maintenance of StemmaWeb must be managed on a shoestring, and sustainability is hard, as many testify (cf. e.g Pitti 2004; Dombrowksi 2014; Rockwell et al. 2014; Barats, Schafer and Fickers 2020). Since StemmaWeb’s inception, maintainers have struggled to keep up with functional demand and the minimally required maintenance regarding platform upgrades, security requirements, and bug fixes. Over ten years old, StemmaWeb has been in dire need of both backend and frontend upgrades. </p>
+                <p style="text-align: left; ">The redevelopment of StemmaWeb towards the new StemmaWeb 2.0 has been ongoing since 2022. On the occasion of its official launch during the Digital Humanities 2025 conference we present our poster detailing the functional and technical highlights of StemmaWeb 2.0. </p>
+                <p style="text-align: left; ">Our poster introduces and explains the following components of the StemmaWeb online suite:</p>
+                <list type="unordered">
+                    <item>Backend model of powering the handling, correction, and annotation of the (alignment of) variants between different witnesses, which may be imported from various sources, e.g. a TEI-XML (“Guidelines [etc.]” 2022) document or the output of a tool such as CollateX (Haentjens Dekker et al. 2015). </item>
+                    <item>The improvements in the functional and design aspects of the frontend component that supports the dynamic interaction with the representation of textual variants as a variant graph (see also Andrews and Van Zundert 2013). This part of StemmaWeb’s GUI enables the user to correct and annotate readings and the alignment of variants, and also supports the creation of arbitrary labeled relations between readings for the analytical uses of the scholar.</item>
+                    <item>The integration with web services offering a choice of different genetic tree inference algorithms that power the stemmatological analysis component of StemmaWeb.</item>
+                </list>
+                <p style="text-align: left; ">We explain the design philosophy behind the revamped frontend GUI. As a suite of tools that was pragmatically developed over the course of more than ten years, StemmaWeb 1.0’s frontend interface suffered from a scattered set of components varying in look and feel, and placement which did not help at all times to support the user through a coherent and clear functional oriented experience.</p>
+                <p style="text-align: left; ">The poster also explains the architectural and technical design of StemmaWeb 2.0, which is based on a minimalist philosophy and geared towards optimizing maintainability by decreasing its dependence on web development frameworks (which tend to last a mere couple of years in the context of IT evolution) and by maximizing delegation of tasks to well-maintained core code libraries, reducing the amount of bespoke code. These architectural choices acknowledge much of the emerging theory and recommendations surrounding research software development, both within the digital humanities and beyond (e.g. Edmond and Morseli 2020:1027-1028; Tucker 2022:101; Hinsen 2019:1098; Matrinez-Ortiz et al. 2022; Chue Hong 2022). As research software maintainers we recognize the usefulness of many of these recommendations, while we must also recognize that they add considerable overhead to a project that can only survive by stretching resources to their limits.</p>
+                <p style="text-align: left; ">Lastly, the poster features a concise overview of a selection of the academic projects in which StemmaWeb has been used, e.g. the edition of the Chronicle of Matthew of Edessa (Andrews 2021), the edition of 
+                    <hi rend="italic">Aghvesagirk</hi> (Safaryan and Shahnazaryan 2018), and the ENLAC project (Macé et al. 2019). This overview demonstrates the relevance and application area of StemmaWeb and shows how various scholars have adopted the tools and integrated the results in their scholarly work.
+                </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Andrews, T. (2021). Die Chronik des Matthäus von Edessa (Mattʿēos Uṙhayecʿi) Online. In Bleier, R. and Klug, H. (eds.), 
+                        <hi rend="italic">Digitale Edition in Österreich</hi>. Norderstedt: Books on Demand, pp. 153–154. &lt;https://kups.ub.uni-koeln.de/70453/&gt; [29.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">Andrews, T. L., and Macé, C. (2013). Beyond the tree of texts: Building an empirical model of scribal variation through graph analysis of texts and stemmata. 
+                        <hi rend="italic">Literary and Linguistic Computing</hi>, 28(4): 504–21. 10.1093/llc/fqt032.
+                    </bibl>
+                    <bibl style="text-align: left; ">Andrews, T. L., and Van Zundert, J. (2013). An Interactive Interface for Text Variant Graph Models. In 
+                        <hi rend="italic">Digital Humanities 2013: Conference Abstracts</hi>. Lincoln (Nebraska): Center for Digital Research in the Humanities. http://dh2013.unl.edu/abstracts/files/downloads/DH2013_conference_abstracts_print.pdf (accessed 29 April 2025).
+                    </bibl>
+                    <bibl style="text-align: left; ">Andrews, T. L., Van Zundert, J. J., Kaufmann, S., Gyarmati, P., Damerow, J., and Baillie, J. (2012, 2024). Stemmaweb: a collection of tools for analysis of collated texts. Perl, Java, Javascript, HTML, CSS, Leuven, Amsterdam, Vienna, London: Vienna University, Huygens Institute, Shadowcat Systems Ltd. &lt;https://stemmaweb.net/stemmaweb/&gt; [29.04.2025].</bibl>
+                    <bibl style="text-align: left; ">Barats, C., Schafer, V., and Fickers, A. (2020). Fading Away... The challenge of sustainability in digital studies. 
+                        <hi rend="italic">DHQ: Digital Humanities Quarterly</hi>, 14(3): 000484. &lt;https://digitalhumanities.org/dhq/vol/14/3/000484/000484.html&gt; [29.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">Camps, J.-B., and Cafiero, F. (2018). Stemmatology: An R Package for the Computer-Assisted Analysis of Textual Traditions. In Frank, A. U., Ivanovic, C., Mambrini, F., Passarotti, M., and Sporleder, C. (eds.), 
+                        <hi rend="italic">Proceedings of the Second Workshop on Corpus-Based Research in the Humanities (CRH-2)</hi>. Presented at the Second Workshop on Corpus-Based Research in the Humanities (CRH-2, Wien: Gerastree, Dept. of Geoinformation, TU Wien. &lt;https://github.com/Jean-Baptiste-Camps/stemmatology/blob/master/inst/doc/Stemmatology_paper_Wien.pdf&gt; [29.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">Chue Hong, N. P., Katz, D. S., Barker, M., Lamprecht, A.-L., Martinez, C., Psomopoulos, F. E., … WG, R. F. (2022, May). FAIR Principles for Research Software (FAIR4RS Principles). Zenodo. 10.15497/RDA00068.</bibl>
+                    <bibl style="text-align: left; ">Dereeper, A., Guignon, V., Blanc, G., Audic, S., Buffet, S., Chevenet, F., … Gascuel, O. (2008). Phylogeny.fr: robust phylogenetic analysis for the non-specialist. 
+                        <hi rend="italic">Nucleic Acids Research</hi>, 36(suppl_2): W465–69. 10.1093/nar/gkn180.
+                    </bibl>
+                    <bibl style="text-align: left; ">Dombrowski, Q. (2014). What Ever Happened to Project Bamboo? 
+                        <hi rend="italic">Literary and Linguistic Computing</hi>, 29(3): 326–39. 10.1093/llc/fqu026.
+                    </bibl>
+                    <bibl style="text-align: left; ">Edmond, J., and Morselli, F. (2020). Sustainability of digital humanities projects as a publication and documentation challenge. 
+                        <hi rend="italic">Journal of Documentation</hi>, 76(5): 1019–31. 10.1108/JD-12-2019-0232.
+                    </bibl>
+                    <bibl style="text-align: left; ">Guidelines for Electronic Text Encoding and Interchange. (n.d.). &lt;http://www.tei-c.org/P5/&gt; [29.04.2025].</bibl>
+                    <bibl style="text-align: left; ">Haentjens Dekker, R., Van Hulle, D., Middell, G., Neyt, V., and Van Zundert, J. (2015). Computer supported collation of modern manuscripts: CollateX and the Beckett Digital Manuscript Project. 
+                        <hi rend="italic">Literary and Linguistic Computing</hi>, 30(3): 452–70. 10.1093/llc/fqu007.
+                    </bibl>
+                    <bibl style="text-align: left; ">K. Hinsen. (2019). Dealing With Software Collapse. 
+                        <hi rend="italic">Computing in Science &amp; Engineering</hi>, 21(3): 104–8. 10.1109/MCSE.2019.2900945.
+                    </bibl>
+                    <bibl style="text-align: left; ">Macé, C., Rouequette, M., Seretan, V., Amsler, F., Andrist, P., and Antonelli, C. (2019). Critical Digital Editions of Christian Apocryphal Literature in Latin and Greek: Transcription and Collation of the
+                        <hi rend="italic" xml:space="preserve"> Acts of Barnabas</hi>. 
+                        <hi rend="italic">Rivista di studi umanistici</hi>, (Special issue: Textual Philology Facing ‘Liquid Modernity’: Identifying Objects, Evaluating Methods, Exploiting Media): 125–145. &lt;https://www.libreriauniversitaria.it/rivista/articolo/download/RIV2217341901097&gt; [29.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">Martinez-Ortiz, C., Martinez Lavanchy, P., Sesink, L., Olivier, B. G., Meakin, J., de Jong, M., and Cruz, M. (2022, October). Practical guide to Software Management Plans. Zenodo. 10.5281/zenodo.7185371.</bibl>
+                    <bibl style="text-align: left; ">Pitti, D. V. (2004). Designing Sustainable Projects and Publications. In Schreibman, S., Siemens, R., and Unsworth, J. (eds.), 
+                        <hi rend="italic">A Companion to Digital Humanities</hi>. Malden (USA), Oxford (UK), Carlton (Australia): Blackwell Publishing, pp. 471–487. &lt;http://www.digitalhumanities.org/companion/&gt; [29.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">Rockwell, G., Day, S., Yu, J., and Engel, M. (2014). Burying Dead Projects: Depositing the Globalization Compendium. 
+                        <hi rend="italic">DHQ: Digital Humanities Quarterly</hi>, 8(2): 000179. &lt;https://www.digitalhumanities.org/dhq/vol/8/2/000179/000179.html&gt; [29.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">Roelli, P. (Ed.). (2020). 
+                        <hi rend="italic">Handbook of Stemmatology</hi>. Berlin, Boston: De Gruyter. &lt;https://www.degruyter.com/view/title/569065&gt; [29.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">Safaryan, A., and Shahnazaryan, A. (2018). After transcription and before collation: Case studies of the projects “The Chronicle of Matthew of Edessa Online” and “A digital critical edition of Ałvesagirk‛.” In 
+                        <hi rend="italic">EADH 2018: “Data in Digital Humanities.”</hi> Presented at the EADH 2018 - European Association of Digital Humanities, Galway: National University of Ireland.
+                    </bibl>
+                    <bibl style="text-align: left; ">Swofford, D. L., and Bell, C. D. (2017). Paup Manual. &lt;http://phylosolutions.com/paup-documentation/paupmanual.pdf&gt; [29.04.2025].</bibl>
+                    <bibl style="text-align: left; ">Tucker, J. (2022). Facing the challenge of digital sustainability as humanities researchers. 
+                        <hi rend="italic">Journal of the British Academy</hi>, 10: 93–120. 10.5871/jba/010.093.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

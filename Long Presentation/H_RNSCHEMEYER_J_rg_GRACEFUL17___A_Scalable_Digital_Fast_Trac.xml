@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="H_RNSCHEMEYER_J_rg_GRACEFUL17___A_Scalable_Digital_Fast_Trac">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>GRACEFUL17 - A Scalable Digital Fast-Track Strategy: Mining, Modelling, and Mastering Early Modern Church Administration Data</title>
+                <author>
+                    <persName>
+                        <surname>Sander</surname>
+                        <forename>Christoph</forename>
+                    </persName>
+                    <affiliation>German Historical Institute Rome, Italy</affiliation>
+                    <email>christoph.rolf.sander@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Hörnschemeyer</surname>
+                        <forename>Jörg</forename>
+                    </persName>
+                    <affiliation>German Historical Institute Rome, Italy</affiliation>
+                    <email>hoernschemeyer@dhi-roma.it</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T09:21:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>AI-Assisted Data Processing</term>
+                    <term>Collaborative Digital Infrastructure</term>
+                    <term>Temporal and Spatial Data Analysis</term>
+                    <term>Early Modern Church Administration</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>data modeling</term>
+                    <term>linked (open) data</term>
+                    <term>spatial &amp; spatio-temporal analysis</term>
+                    <term>modeling and visualization</term>
+                    <term>History</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference online</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">This paper introduces a DH workflow and technology stack tailored to efficiently collect, structure, store, search, and analyze early modern serial sources related to church administration. The Vatican Archives contain vast amounts of material, spanning meters of documents, which record in concise Latin entries who was permitted to hold specific offices across the entire global jurisdiction of the Catholic Church in the premodern era (see Image 1). These sources represent the manifestation of a centrally organized job market, offering invaluable insights for church, administrative, and social history. Until today, these sources have remained largely unexplored—not least because their sheer volume has rendered systematic study seemingly impossible. The multinational project GRACEFUL17 is attempting to unfold this pre-modern mode of governance for the first time in its entirety.<ref n="1" target="ftn1"/>
+                </p>
+                <figure>
+                    <graphic n="1001" width="15.769166666666667cm" height="11.147777777777778cm" url="/tmp/tmpvut5p3yg/Pictures/65b69330b53b77f7bb41a4c6cfa0bb70.png" rend="inline"/>
+                    <head>An example of a volume with records from the Vatican Archive. The so-called apostolic provisions recorded therein are the immediate testimony of a decision made by the apostolic dataria, a Roman office dedicated to the assignment and provision of lower church offices.</head>
+                </figure>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>A Digital Fast-Track Strategy</head>
+                <p style="text-align: left; ">GRACEFUL17’s digital approach fundamentally transforms the prerequisites for working with these sources. The proposed workflow and technology stack demonstrate how a semantically structured ingestion and a rolling and yet deep analysis of these materials can be achieved within a significantly shortened time frame—eschewing the years or even decades typically required for philological editions and detailed processing of such sources.<ref n="2" target="ftn2"/>
+                    <hi rend="bold">Therefore, a central aim of our paper is to showcase a fully-fledged strategy and implementation for projects dealing with large amounts of serial sources, in order to arrive at insights and robust data models in a short time and with few personnel.</hi>
+                    <lb/>Our methodology leverages probabilistic classifications and data structuring, employing artificial intelligence and rule-based processes to organize transcriptions of moderate quality, often written in a highly artificial form of Latin, into structured semantic data. We develop a highly adaptable and flexible data model for a knowledge graph, using ontological inferencing as an efficiency-driven tool for abstraction. This model, equipped with fully adaptive GUI exploration tools, allows for searching and querying even during the initial data collection phase. Finally, we provide a toolkit for exploratory analyses available already during the data collection process.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Challenges</head>
+                <p style="text-align: left; ">The key challenge lies in enabling a structured and reliable access to the data from early on in the project, not only in a final stage of the project. First, user-friendly interfaces are essential to allow historians to efficiently input and analyze data. The entire pipeline must support simultaneous data entry and querying, while also enabling offline work, as the relevant archives often lack internet access. Second, the sources in question cannot be digitized through photomechanical methods—thus no OCT/HTR. This necessitates manual transcription by researchers. Additionally, meaningful but pragmatic semantic data structuring must abstract from textual transcriptions by way of an on-the-fly ‘text as data’ approach 
+                    <ref target="https://www.zotero.org/google-docs/?y0W1f8">(Flanders &amp; Jannidis, 2019; Grimmer et al., 2022)</ref>. Finally, we need to balance the technical complexity against didactic goals, so that we enable students of history to get into the (assisted) cockpit of the DH and Digital history 
+                    <ref target="https://www.zotero.org/google-docs/?IocJIO">(Blaney et al., 2021; Lee, 2002)</ref>.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Solutions</head>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Mining: AI Assisted Data Structuring</head>
+                    <p style="text-align: left; ">Our data entry technology stack is built around a cloud-operated relational database solution provided by Ninox.<ref n="3" target="ftn3"/> This low-code platform offers a secure and collaborative environment for data input, with offline functionality supported by a client app and a scripting language. It facilitates various pre-processing and post-processing workflows.
+                    </p>
+                    <p style="text-align: left; ">This core technology is complemented by a dockerized Python application called 
+                        <hi rend="bold">DATAria</hi>, which handles more complex tasks as an API and a SPARQL endpoint, even offline if needed.<ref n="4" target="ftn4"/> Key processing functionalities of DATAria include:
+                    </p>
+                    <list type="ordered">
+                        <item>
+                            <hi rend="bold">Structuring Transcribed Entries into Information Atoms:</hi> Using natural language processing (NLP) techniques, particularly the serialization of outputs from multiple named entity recognition (NER) models in SpaCy,<ref n="5" target="ftn5"/> DATAria organizes raw transcriptions into granular information atoms (see Image 2). Labels for this process, as well as respective training data, were created by domain experts.
+                        </item>
+                        <item>
+                            <hi rend="bold">Modeling Information Atoms into Spatiotemporal Events:</hi> Machine learning techniques drive this process, employing a 
+                            <hi rend="bold">CatBoost classifier</hi> that uses gradient boosting.<ref n="6" target="ftn6"/> This model generates immediate suggestions for researchers to model the structured data semantically by assigning granular information atoms to their semantic context, such as specific events they qualify.
+                        </item>
+                    </list>
+                    <p style="text-align: left; ">Both pipelines incorporate active learning, continuously retraining the models based on validated ground truth to improve performance and adaptability. Historians continuously review and validate AI results—we employ AI solely to streamline and accelerate manual processes. The underlying ML frameworks are trained on expected results, replacing time-costly and complex rule-based mechanisms. From a social engineering perspective, this methodology has proven to be more pragmatic and efficient than collaboratively defining axioms, rules, and constraints explicitly.</p>
+                    <figure>
+                        <graphic n="1002" width="15.910277777777777cm" height="5.785555555555556cm" url="/tmp/tmpvut5p3yg/Pictures/65b69330b53b77f7bb41a4c6cfa0bb70.png" rend="inline"/>
+                        <head>An example of a NER structured transcription of a record entry. Colors match overarching entity groups, such as dates, names, places, types. Labels written in bold after the marked span capture custom relevant information contained in the tokens. Spans are linked to real-world entities and thesaurus terms in a second automated step, not shown in this rendering.</head>
+                    </figure>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Modelling: Knowledge Graph Integration and LOD</head>
+                    <p style="text-align: left; ">The processed structured data is formalized as a knowledge graph (KG) using the graph database 
+                        <hi rend="bold">Oxigraph</hi>,<ref n="7" target="ftn7"/> which is directly populated via Ninox’s API and DATAria. This system enables seamless integration of structured data into a dynamic, queryable graph through a SPARQL endpoint.
+                    </p>
+                    <p style="text-align: left; ">Our KG builds on our own domain-specific 
+                        <hi rend="bold">GRACE ontology</hi> (specified in OWL, complemented by SHACL), that transforms structured relational data into RDF triples on-the-fly, using JSON-LD serialization. The semantic model is similar to the Simple Event Model 
+                        <ref target="https://www.zotero.org/google-docs/?C4o3W1">(van Hage et al., 2011)</ref>. We implement (basic) reasoning for classes and properties, as well as a full rendering of our KG in SKOS, CIDOC, and RiC-O namespaces for immediate 
+                        <hi rend="bold">semantic and formal interoperability</hi>.<ref n="8" target="ftn8"/>
+                    </p>
+                    <p style="text-align: left; ">For exploration, integrated tools such as 
+                        <hi rend="bold">Sparnatural</hi> and 
+                        <hi rend="bold">SHMARQL</hi> provide interfaces to interact with the RDF data without requiring static templates, user knowledge of SPARQL, or complex web design or CMS solutions (such as Omeka, ResearchSpace, Wikibase).<ref n="9" target="ftn9"/> Our solution dynamically generates configurations that allow researchers to GUI explore the knowledge graph in real time (see Image 3).
+                    </p>
+                    <p style="text-align: left; ">The platform integrates external LOD sources (such as 
+                        <hi rend="bold">Wikidata, EarthWorks, GND, Germania Sacra</hi>) to enrich the dataset with categorical, biographical, temporal or spatial metadata.<ref n="10" target="ftn10"/> This metadata, among other things, enables real-time geographic exploration through dynamic geospatial queries performed live (“search for locations within some boundary” etc).
+                    </p>
+                    <figure>
+                        <graphic n="1003" width="12.417777777777777cm" height="21.060833333333335cm" url="/tmp/tmpvut5p3yg/Pictures/65b69330b53b77f7bb41a4c6cfa0bb70.png" rend="inline"/>
+                        <head>An example of a geospatial query made in the Sparnatural query builder GUI and shown as SPARQL code and on a map. It counts the number of benefices (i.e. positions) given to institutions located within a custom polygon spanning across the Western Europe.</head>
+                    </figure>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Mastering: Advanced and Customized Data Analysis</head>
+                    <p style="text-align: left; ">Our approach supports established and robust visualization techniques, offering, e.g., map-based representations alongside traditional tabular data. These capabilities are powered by clustering and correlation analyses:</p>
+                    <list type="ordered">
+                        <item>
+                            <hi rend="bold">Discretization, Clustering:</hi> Includes basic methods like Natural Breaks and quantiles for numeric target variables, as well as more advanced techniques like feature weighting, k-means, and Random Forest Classifier.
+                        </item>
+                        <item>
+                            <hi rend="bold">Correlations, Trends, Patterns:</hi> In addition to established statistical methods and temporal analyses, we implement custom approaches tailored to the data, such as probabilistic nepotism prediction based on shared family names in office appointments or metrics for administrative efficiency derived from temporal and spatial distances (see Image 4–7).
+                        </item>
+                    </list>
+                    <p style="text-align: left; ">DATAria enhances accessibility for researchers by leveraging performant Python libraries such as 
+                        <hi rend="bold">scikit-learn</hi>, 
+                        <hi rend="bold" xml:space="preserve">scipy, </hi>and (Geo)
+                        <hi rend="bold">Pandas</hi> directly through its API, complemented a dataria Python Package using SPARQL queries to create data input and employing these analytical methods. These integrations empower non-expert historians to adjust parameters without programming.
+                    </p>
+                    <figure>
+                        <graphic n="1004" width="11.25361111111111cm" height="9.66611111111111cm" url="/tmp/tmpvut5p3yg/Pictures/65b69330b53b77f7bb41a4c6cfa0bb70.png" rend="inline"/>
+                        <head>An example of Natural Breaks clustering of ‘administrative efficiency’ of various dioceses, correlating their distances to Rome with median time deltas between vacancy and decision dates of single provisions.</head>
+                    </figure>
+                    <figure>
+                        <graphic n="1005" width="12.3825cm" height="9.807222222222222cm" url="/tmp/tmpvut5p3yg/Pictures/65b69330b53b77f7bb41a4c6cfa0bb70.png" rend="inline"/>
+                        <head>An example of temporal analysis of provisions, with rolling time windows and trend detection.</head>
+                    </figure>
+                    <figure>
+                        <graphic n="1006" width="10.900833333333333cm" height="8.960555555555555cm" url="/tmp/tmpvut5p3yg/Pictures/65b69330b53b77f7bb41a4c6cfa0bb70.png" rend="inline"/>
+                        <head>A Pearson correlation result (r-Values) between taxation and categorical metadata for provisions of church offices</head>
+                    </figure>
+                    <figure>
+                        <graphic n="1007" width="13.158611111111112cm" height="9.313333333333333cm" url="/tmp/tmpvut5p3yg/Pictures/65b69330b53b77f7bb41a4c6cfa0bb70.png" rend="inline"/>
+                        <head>A set intersection UpSet plot for categorical data of relevant church offices in a diocese.</head>
+                    </figure>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>About the Project and the Data</head>
+                <p style="text-align: left; ">This three-year research project GRACEFUL17 is funded by the German Research Foundation (DFG) and the French Agence nationale de la recherche (ANR).<ref n="11" target="ftn11"/> The primary project partners are Goethe University Frankfurt a.M., École nationale des chartes (Paris), École française de Rome and Université de Reims-Champagne-Ardenne.
+                </p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Source Material and RDF Data</head>
+                    <p style="text-align: left; ">The primary sources for the project are held by the 
+                        <hi rend="bold">Vatican Archives</hi>, with samples focusing on the years 
+                        <hi rend="bold">1622/3</hi> and 
+                        <hi rend="bold">1677/8</hi>.<ref n="12" target="ftn12"/> After one year of work, 
+                        <hi rend="bold">21,624 entries</hi> have been transcribed as the ground truth of the structured data. The Knowledge Graph currently contains a fraction of the ground truth data (~50%), and yet amounts to 
+                        <hi rend="bold" xml:space="preserve">5,267,393 triples </hi>already. A Zenodo repository contains the triples in multiple discrete namespace-mappings as RDF.<ref n="13" target="ftn13"/>
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Digital Infrastructure</head>
+                    <list type="unordered">
+                        <item>The 
+                            <hi rend="bold">DATAria API</hi> is publicly available at 
+                            <ref target="http://www.dataria.org">
+                                <hi rend="bold underline color(1155CC)">www.dataria.org</hi>
+                            </ref> and 
+                            <ref target="http://dataria.dhi-roma.it">
+                                <hi rend="bold underline color(1155CC)">dataria.dhi-roma.it</hi>
+                            </ref>. A corresponding Python package serves as a wrapper and tool for query-based analyses.
+                        </item>
+                        <item>The project's 
+                            <hi rend="bold">codebase</hi> can be accessed on 
+                            <hi rend="bold">GitHub</hi>.<ref n="14" target="ftn14"/>
+                        </item>
+                        <item>A (preliminary)
+                            <hi rend="bold" xml:space="preserve"> Knowledge Graph</hi> is available for exploration at 
+                            <ref target="http://www.dataria.org/ask">
+                                <hi rend="bold underline color(1155CC)">www.dataria.org/ask</hi>
+                            </ref> (SPARQL endpoint at 
+                            <ref target="https://graph.dhi-roma.it/query">
+                                <hi rend="bold underline color(1155CC)">graph.dhi-roma.it/query</hi>
+                            </ref>).
+                        </item>
+                        <item>The RDF ontology used in the project can be accessed directly at 
+                            <ref target="https://dhi-roma.github.io/grace-ontology/ontology/grace.ttl">
+                                <hi rend="bold underline color(1155CC)">grace.ttl</hi>
+                            </ref> and as static documentation at 
+                            <ref target="https://w3id.org/grace/ontology">
+                                <hi rend="bold underline color(1155CC)">https://w3id.org/grace/ontology</hi>
+                            </ref>.
+                        </item>
+                    </list>
+                </div>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                        
+                            <ref target="https://graceful17.hypotheses.org/">
+                                <hi rend="underline color(1155CC)" style="font-size:10pt">https://graceful17.hypotheses.org/</hi>
+                            </ref>
+                            <hi style="font-size:10pt" xml:space="preserve"> and below </hi>
+                            <ref target="file:////Users/jorghornschemeyer/Downloads/%3ftab=t.0#heading=h.2b4u29nkyrn7">
+                                <hi rend="underline color(1155CC)" style="font-size:10pt">About the Project and the Data</hi>
+                            </ref>
+                            <hi style="font-size:10pt">.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                        
+                            <hi style="font-size:10pt" xml:space="preserve"> An example of the immense effort involved in creating such a source edition is the ongoing project </hi>
+                            <ref target="http://dhi-roma.it/index.php?id=digital_humanities_singleview0&amp;tx_ttnews%5Byear%5D=2017&amp;tx_ttnews%5Bmonth%5D=08&amp;tx_ttnews%5Bday%5D=31&amp;tx_ttnews%5Btt_news%5D=3078&amp;cHash=7a6150d217ca67758c643bea2aed9974">
+                                <hi rend="italic underline color(1155CC)" style="font-size:10pt">Repertorium Germanicum</hi>
+                            </ref>
+                            <hi style="font-size:10pt">, initiated at the end of the 19th century to catalog all medieval German-related entries from all Vatican register series.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                            
+                                <ref target="http://www.ninox.com">
+                                    <hi rend="underline color(1155CC)" style="font-size:10pt">www.ninox.com</hi>
+                                </ref>
+                            
+                        </note>
+<note rend="footnote text" xml:id="ftn4" n="4">
+                            
+                                <ref target="http://www.dataria.org">
+                                    <hi rend="underline color(1155CC)" style="font-size:10pt">www.dataria.org</hi>
+                                </ref>
+                            
+                        </note>
+<note rend="footnote text" xml:id="ftn5" n="5">
+                                
+                                    <ref target="https://spacy.io/">
+                                        <hi rend="underline color(1155CC)" style="font-size:10pt">https://spacy.io/</hi>
+                                    </ref>
+                                
+                            </note>
+<note rend="footnote text" xml:id="ftn6" n="6">
+                                
+                                    <ref target="https://catboost.ai/">
+                                        <hi rend="underline color(1155CC)" style="font-size:10pt">https://catboost.ai/</hi>
+                                    </ref>
+                                
+                            </note>
+<note rend="footnote text" xml:id="ftn7" n="7">
+                            
+                                <ref target="https://github.com/oxigraph/oxigraph">
+                                    <hi rend="underline color(1155CC)" style="font-size:10pt">https://github.com/oxigraph/oxigraph</hi>
+                                </ref>
+                            
+                        </note>
+<note rend="footnote text" xml:id="ftn8" n="8">
+                            
+                                <ref target="https://www.w3.org/2004/02/skos/">
+                                    <hi rend="underline color(1155CC)" style="font-size:10pt">https://www.w3.org/2004/02/skos/</hi>
+                                </ref>
+                                <hi style="font-size:10pt" xml:space="preserve"> and </hi>
+                                <ref target="https://cidoc-crm.org/">
+                                    <hi rend="underline color(1155CC)" style="font-size:10pt">https://cidoc-crm.org/</hi>
+                                </ref>
+                                <hi style="font-size:10pt" xml:space="preserve"> and </hi>
+                                <ref target="https://www.ica.org/standards/RiC/RiC-O_1-0-2.html">
+                                    <hi rend="underline color(1155CC)" style="font-size:10pt">https://www.ica.org/standards/RiC/RiC-O_1-0-2.html</hi>
+                                </ref>
+                            
+                        </note>
+<note rend="footnote text" xml:id="ftn9" n="9">
+                            
+                                <ref target="https://github.com/epoz/shmarql">
+                                    <hi rend="underline color(1155CC)" style="font-size:10pt">https://github.com/epoz/shmarql</hi>
+                                </ref>
+                                <hi style="font-size:10pt" xml:space="preserve">, </hi>
+                                <ref target="https://sparnatural.eu/">
+                                    <hi rend="underline color(1155CC)" style="font-size:10pt">https://sparnatural.eu/</hi>
+                                </ref>
+                            
+                        </note>
+<note rend="footnote text" xml:id="ftn10" n="10">
+                            
+                                <ref target="https://www.wikidata.org/">
+                                    <hi rend="underline color(1155CC)" style="font-size:10pt">https://www.wikidata.org/</hi>
+                                </ref>
+                                <hi style="font-size:10pt" xml:space="preserve"> and </hi>
+                                <ref target="https://earthworks.stanford.edu/">
+                                    <hi rend="underline color(1155CC)" style="font-size:10pt">https://earthworks.stanford.edu/</hi>
+                                </ref>
+                                <hi style="font-size:10pt" xml:space="preserve"> and </hi>
+                                <ref target="https://www.dnb.de/gnd">
+                                    <hi rend="underline color(1155CC)" style="font-size:10pt">https://www.dnb.de/gnd</hi>
+                                </ref>
+                                <hi style="font-size:10pt" xml:space="preserve">, </hi>
+                                <ref target="https://adw-goe.de/germania-sacra/">
+                                    <hi rend="underline color(1155CC)" style="font-size:10pt">https://adw-goe.de/germania-sacra/</hi>
+                                </ref>
+                            
+                        </note>
+<note rend="footnote text" xml:id="ftn11" n="11">
+                        
+                            <ref target="https://gepris-extern.dfg.de/gepris/projekt/510246510?context=projekt&amp;task=showDetail&amp;id=510246510&amp;">
+                                <hi rend="underline color(1155CC)" style="font-size:10pt">https://gepris-extern.dfg.de/gepris/projekt/510246510</hi>
+                            </ref>
+                            <hi style="font-size:10pt" xml:space="preserve"> and </hi>
+                            <ref target="https://anr.fr/Project-ANR-22-FRAL-0010">
+                                <hi rend="underline color(1155CC)" style="font-size:10pt">https://anr.fr/Project-ANR-22-FRAL-0010</hi>
+                            </ref>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn12" n="12">
+                            
+                                <hi style="font-size:10pt" xml:space="preserve"> The main sources are: Archivio Apostolico Vaticano, Dat. Ap. Expedit. 9 and 2.</hi>
+                            
+                        </note>
+<note rend="footnote text" xml:id="ftn13" n="13">
+                            
+                                <ref target="https://doi.org/10.5281/zenodo.14945481">
+                                    <hi rend="underline color(1155CC)" style="font-size:10pt">https://doi.org/10.5281/zenodo.14945481</hi>
+                                </ref>
+                            
+                        </note>
+<note rend="footnote text" xml:id="ftn14" n="14">
+                                
+                                    <ref target="https://github.com/ch-sander/dataria">
+                                        <hi rend="underline color(1155CC)" style="font-size:10pt">https://github.com/ch-sander/dataria</hi>
+                                    </ref>
+                                    <hi style="font-size:10pt" xml:space="preserve"> and </hi>
+                                    <ref target="https://github.com/ch-sander/dataria-py-utils">
+                                        <hi rend="underline color(1155CC)" style="font-size:10pt">https://github.com/ch-sander/dataria-py-utils</hi>
+                                    </ref>
+                                
+                            </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <lb/>Blaney, Jonathan / Winters, Jane / Milligan, Sarah / Steer, Martin (2021): Doing digital history: A beginner’s guide to working with text as data. Manchester University Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">Flanders, Julia / Jannidis, Fotis (eds.) (2019): The shape of data in the digital humanities: Modeling texts and text-based resources. Routledge, Taylor &amp; Francis Group.</bibl>
+                    <bibl style="text-align: left; ">Grimmer, Justin / Roberts, Margaret E. / Stewart, Brandon M. (2022): Text as data: A new framework for machine learning and the social sciences. Princeton University Press.</bibl>
+                    <bibl style="text-align: left; ">Lee, John K. (2002): “Digital History in the History/Social Studies Classroom.”, in: The History Teacher 35, 4: 503–517. https://doi.org/10.2307/1512472</bibl>
+                    <bibl style="text-align: left; ">van Hage, Willem R. / Malaisé, Véronique / Segers, Roxane / Hollink, Laura / Schreiber, Guus (2011): “Design and use of the Simple Event Model (SEM)”, in: Journal of Web Semantics 9, 2: 128–136. 
+                        <ref target="https://doi.org/10.1016/j.websem.2011.03.003">https://doi.org/10.1016/j.websem.2011.03.003</ref>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

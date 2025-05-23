@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="TERRIEL_Lucas__From_questions_to_insights__a_reproducible_qu">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main"> From questions to insights: a reproducible question-answering pipeline for historiographical corpus exploration </title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Terriel</surname>
+                        <forename>Lucas</forename>
+                    </persName>
+                    <affiliation>École nationale des chartes – PSL, France</affiliation>
+                    <email>lucas.terriel@chartes.psl.eu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Jolivet</surname>
+                        <forename>Vincent</forename>
+                    </persName>
+                    <affiliation>École nationale des chartes – PSL, France</affiliation>
+                    <email>vincent.jolivet@chartes.psl.eu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T20:46:10.731585697</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>historiography;information retrieval;large language model;natural language processing;semantic search</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data</term>
+                    <term>object</term>
+                    <term>and artefact preservation</term>
+                    <term>information retrieval and querying algorithms and methods</term>
+                    <term>natural language processing</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>Computer science</term>
+                    <term>History</term>
+                    <term>Humanities computing</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Context </head>
+                <p>Since 1849, the École des Chartes-PSL has been publishing longform abstracts of institutional theses defended by its students (Guyotjeannin 1997). It is an 
+                    <ref target="https://theses.chartes.psl.eu/">online corpus</ref> of over 3,000 scientific texts, in French, covering the transcription, criticism and diplomatic editing of ancient texts. This is a rare witness of the evolution of historical disciplines since the second half of the 19th century, and some of its works are pioneers in the renewal of analytical methods in history (Figure 1). However, this corpus is actually underexploited by researchers due to limited search capabilities.
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpuf3vcj_4/Pictures/4fae2c06a23e403118f67173a65b1831.jpg"/>
+                        <head>Longform thesis abstract (called “positions de thèses”) first page exemple. Guy Beaujouan, « Recherches sur l’histoire de l’arithmétique au Moyen Âge », in Positions des thèses soutenues par les élèves de la promotion de 1947 pour obtenir le diplôme d’archiviste paléographe, École nationale des chartes, Paris, 1947, p.17-22.</head>
+                    </figure>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Issues. Limited search capabilities</head>
+                <p>Full-text searching, only based on term occurrences, involves browsing a large collection of “noisy” results before identifying the most relevant document. Furthermore, this type of search does not allow the discovery of documents based on their semantic or thematic similarity.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>State of the art. Opportunities and limitations </head>
+                <p>Information retrieval (IR) systems, which typically rely on proximity measure applied to pre-trained vector representations (also called “embeddings”), prove to be effective in retrieving the most relevant documents according to their semantic proximity to a concept or sentence (top-k embedding-based lookup). These IR systems are generally based on hybrid combinations of embedding models such as Word2Vec or Doc2Vec (Mikolov et al. 2013; Le / Mikolov 2014) or even on transformer-type architectures (Vaswani et al. 2023). In Digital humanities, they facilitate for researchers the identification of specific concepts in complex textual collections (Camps et al. 2023) while offering powerful tools for document retrieval based on semantic proximity. More recently, Large Language Models (LLM), which are based on a prompt system and Retrieval-Augmented Generation (RAG) frameworks such as 
+                    <ref target="http://langchain.com/">LangChain</ref>, offer more intuitive querying modalities, making it possible to personalize or synthesize output content. However, these models present some limitations applied to humanities: responses are too short and often decontextualized, “hallucinations” sometimes give the illusion of structured output, and finally, the lack of traceability is prohibitive from the educational point of view.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Open question </head>
+                <p>How can these systems be adapted to domain-specific corpora? Is it possible to structure and contextualize (i.e. to provide sources) the answer to a user question? These tools offer researchers the opportunity to discover unsuspected connections between documents. For example, a seemingly simple query such as “What are popular musical practices in the cultural history of France?” could lead to unexpected abstracts: from medieval songs with 
+                    <ref target="https://theses.chartes.psl.eu/document/ENCPOS_1987_14">troubadours</ref>, to 
+                    <ref target="https://theses.chartes.psl.eu/document/ENCPOS_2023_25">Eurovision show history</ref>, to 
+                    <ref target="https://theses.chartes.psl.eu/document/ENCPOS_2021_07">rock and pop broadcasts on French television</ref>.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Objectives</head>
+                <p>The goal is not to develop a conversational bot, but to design a reproducible IR question answering (Q&amp;A) pipeline (Figure 2) where each step is documented and adapted to our use case of theses abstracts. We aim to provide the user with a structured and sourced response to allow them to easily navigate the entire collection (i.e. bounces between documents). For that, we propose a response template that contains three main elements (Figure 3):</p>
+                <list type="ordered">
+                    <item>
+                        <hi rend="bold">Keywords:</hi> extraction of the main topics of the identified sections, enabling navigation to other abstracts close by subject.
+                    </item>
+                    <item>
+                        <hi rend="bold">Sources:</hi> providing links to abstracts and their associated sections, relevant to the user question.
+                    </item>
+                    <item>
+                        <hi rend="bold">Contextual synthesis and semantic orientation:</hi> a natural language response that synthesizes the documents identified and retrieved relates to the user question. This content is also designed to spark the researcher’s curiosity, suggesting new ways of interest.
+                    </item>
+                </list>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpuf3vcj_4/Pictures/4fae2c06a23e403118f67173a65b1831.jpg"/>
+                        <head>The Information Retrieval Question-Answering pipeline as document retrieval system to explore large corpora.</head>
+                    </figure>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methodology</head>
+                <p>The pipeline (Figure 2) designed to produce the final structured response consists into three main stages:</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Vector-Based corpus indexing</head>
+                    <p>The first stage, conducted as part of a pre-production phase, involves generating embeddings to support downstream retrieval and content generation tasks. These embeddings capture both the internal structure of theses abstracts (e.g. introduction, chapters, appendices) and, optionally, a document-level representation (e.g. named entities, keywords). We use open-source 
+                        <ref target="https://sbert.net/">pre-trained BERT-type sentence embedding models</ref> (Devlin et al. 2019; Reimers / Gurevych 2019), specifically 
+                        <ref target="https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v1">fine-tuned and distilled</ref> to obtain these representations. A chunking method—segmenting abstracts into smaller, semantically coherent units—is considered to improve granularity and contextual alignment. To further enhance the expressiveness of the embeddings, we enrich them with metadata such as keywords (extracted using 
+                        <ref target="https://maartengr.github.io/KeyBERT/">KeyBERT</ref>) and named entities (identified with 
+                        <ref target="https://spacy.io/">spaCy</ref>), following a previous experiment on the same corpus (Jolivet / Torres Aguilar 2022). These representations, along with their associated metadata, are then indexed in a vector store (e.g. 
+                        <ref target="https://ai.meta.com/tools/faiss/">FAISS</ref>; Douze et al. 2024), enabling efficient semantic retrieval. We also explore whether dimensionality reduction (e.g. principal component analysis — PCA) can optimize storage space within the vector store while preserving semantic expressiveness.
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Document-Retrieval module </head>
+                    <p>During this second stage, the researcher expresses a query in natural language, which is converted into a dense vector using the same embedding model as in the corpus indexing stage. The system then compares the semantic representation of the query to those of the indexed documents in order to retrieve the most relevantdocuments based on semantic proximity (top-k most similar documents).</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Content generation and enrichment </head>
+                    <p>The final experimental stage aims to post-process and aggregate document content into a coherent context in order to build a prompt and ultimately enrich the results using a large language model (LLM) to generate original content. This stage addresses two main issues: assessing the relevance and added value of the generated output in complementing the initial retrieval, and evaluating the performance of open-source models adapted to French (e.g. 
+                        <ref target="http://huggingface.co/lmstudio-community/Mistral-7B-Instruct-v0.3-GGUF">Mistral-7B</ref> or 
+                        <ref target="https://huggingface.co/lmstudio-community/Mistral-Nemo-Instruct-2407-GGUF">Mistral-Nemo</ref>). It also examines the limitations of such systems, particularly constraints related to the maximum number of input tokens. Several optimizations are explored. The use of lightweight quantized models enables local execution in dedicated environments (e.g. 
+                        <ref target="https://lmstudio.ai/">LM Studio</ref>, 
+                        <ref target="https://github.com/ggml-org/llama.cpp">Llama.cpp</ref>, 
+                        <ref target="https://ollama.com/">Ollama</ref>), thereby reducing reliance on paid external APIs while maintaining acceptable performance for simple tasks. Prompt engineering and structured output formatting—via JSON schemas—further contribute to the coherence and determinism of the generated content.
+                    </p>
+                    <p>
+                        <figure>
+                            <graphic url="/tmp/tmpuf3vcj_4/Pictures/4fae2c06a23e403118f67173a65b1831.jpg"/>
+                            <head>Mock-up showing interaction between user and information retrieval system.</head>
+                        </figure>
+                    </p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p>The Q&amp;A pipeline we propose relies on a combination of advanced technologies to go beyond traditional documentary retrieval approaches in large corpora by integrating semantic and contextual dimensions. Based on BERT models for hybrid embedding, vector stores for indexing and semantic search, and LLM for content generation, our system aims to offer a more contextualized exploration of corpora. However, several technological and methodological limitations appear. The re-use of pre-trained models, although efficient, remains dependent on their fine-tuning to the specific domain. LLM, in particular, raise a lot of challenges too, which we are attempting to explore in this experiment. These limitations highlight the need to control each stage of this pipeline by combining optimization techniques (dimensional reduction, structured prompts, reranking and output validation) and validation methods to guarantee the quality and reliability of the answers produced. We explore the construction of dynamic, interconnected document corpora, offering researchers not only relevant documents, but also unexpected thematic links. Finally, this method, while not revolutionary, is a way of enhancing the access to the content of humanities textual databases.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Camps, Jean-Baptiste / Baumard, Nicolas / Langlais, Pierre-Carl / Morin, Olivier / Clérice, Thibault / Norindr, Jean (2023): “Make Love or War? Monitoring the Thematic Evolution of Medieval French Narratives”, in: 
+                        <emph>Computational Humanities Research (CHR 2023)</emph>. HAL: 
+                        <ref target="https://enc.hal.science/hal-04250657">04250657</ref>.
+                    </bibl>
+                    <bibl>Devlin, Jacob / Chang, Ming-Wei / Lee, Kenton / Toutanova, Kristina (2019): “BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding”, arXiv:
+                        <ref target="https://arxiv.org/abs/1810.04805">1810.04805</ref>.
+                    </bibl>
+                    <bibl>Douze, Matthijs / Guzhva, Alexandr / Deng, Chen / Johnson, Jeff / Szilvasy, Gergely / Mazaré, Pierre-Emmanuel / Lomeli, Manuel / Hosseini, Laleh / Jégou, Hervé (2024): “The Faiss library”, arXiv:
+                        <ref target="https://arxiv.org/html/2401.08281v3">2401.08281</ref>.
+                    </bibl>
+                    <bibl>Guyotjeannin, Olivier (1997): “Naissance de la thèse (1849–1914)”, in: 
+                        <emph>L’École nationale des chartes, histoire de l’école depuis 1821</emph>. Paris: École nationale des chartes.
+                    </bibl>
+                    <bibl>Jolivet, Vincent / Torres Aguilar, Sergio (2022): “Document similarity and topic clues. A historiographical study case”, in: 
+                        <emph>Digital Humanities 2022 Conference, Tokyo (Japan)</emph>. HAL: 
+                        <ref target="https://enc.hal.science/hal-04087517">04087517</ref>.
+                    </bibl>
+                    <bibl>Le, Quoc V. / Mikolov, Tomas (2014): “Distributed Representations of Sentences and Documents”, arXiv:
+                        <ref target="https://arxiv.org/abs/1405.4053">1405.4053</ref>.
+                    </bibl>
+                    <bibl>Martin, Louis / Muller, Benjamin / Suárez, Pedro Javier Ortiz / Dupont, Yoann / Romary, Laurent / de La Clergerie, Éric Villemonte / Seddah, Djamé / Sagot, Benoît (2020): “CamemBERT: a Tasty French Language Model”, in: 
+                        <emph>Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics (ACL 2020)</emph>. arXiv:
+                        <ref target="https://arxiv.org/abs/1911.03894">1911.03894</ref>.
+                    </bibl>
+                    <bibl>Mikolov, Tomas / Chen, Kai / Corrado, Greg / Dean, Jeffrey (2013): “Efficient Estimation of Word Representations in Vector Space”, arXiv:
+                        <ref target="https://arxiv.org/abs/1301.3781">1301.3781</ref>.
+                    </bibl>
+                    <bibl>Reimers, Nils / Gurevych, Iryna (2019): “Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks”, in: 
+                        <emph>Conference on Empirical Methods in Natural Language Processing 2019 (EMNLP 2019)</emph>. arXiv:
+                        <ref target="https://arxiv.org/abs/1908.10084">1908.10084</ref>.
+                    </bibl>
+                    <bibl>Vaswani, Ashish / Shazeer, Noam / Parmar, Niki / Uszkoreit, Jakob / Jones, Llion / Gomez, Aidan N. / Kaiser, Łukasz / Polosukhin, Illia (2023): “Attention Is All You Need”, arXiv:
+                        <ref target="https://arxiv.org/abs/1706.03762">1706.03762</ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

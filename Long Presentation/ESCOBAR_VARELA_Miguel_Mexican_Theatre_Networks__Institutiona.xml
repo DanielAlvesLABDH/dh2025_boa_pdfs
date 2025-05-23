@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESCOBAR_VARELA_Miguel_Mexican_Theatre_Networks__Institutiona">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Mexican Theatre Networks: Institutional Changes and Collaboration Patterns, 1900-1989</title>
+                <author>
+                    <persName>
+                        <surname>Franco</surname>
+                        <forename>Israel</forename>
+                    </persName>
+                    <affiliation>Centro Nalcional de Investigación, Documentación e Información Teatral Rodolfo Usigli, Mexico</affiliation>
+                    <email>ifranco.citru@inba.edu.mx</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Escobar Varela</surname>
+                        <forename>Miguel</forename>
+                    </persName>
+                    <affiliation>National University of Singapore, Singapore</affiliation>
+                    <email>m.escobar@nus.edu.sg</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>network analysis</term>
+                    <term>theatre</term>
+                    <term>Mexico</term>
+                    <term>collaborations</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>network analysis and graphs theory and application</term>
+                    <term>Performance Studies: Dance</term>
+                    <term>Theatre</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">In this paper, we analyze collaboration networks in Mexican theatre productions from 1900 to 1989, drawing from the comprehensive dataset “Fuentes para el registro de la escena mexicana” [Sources for the Documentation of Mexican Theatre, hereafter Fuentes] maintained by the Centro de Investigación Teatral Rodolfo Usigli or CITRU (Franco, 2024). This dataset, which includes detailed information about casts, producers, and production dates, enables us to examine how institutional changes affected artistic collaboration patterns over nearly a century. Similar to established theatrical databases like AusStage (2013) and IbsenStage (UiO Universitetet i Oslo, n.d.), the Fuentes dataset provides a unique opportunity to apply quantitative methods to understand the evolution of theatrical networks in Mexico. This approach builds on previous work that uses networks to understand the evolution of collaborative networks in the arts (Bollen 2017; Caplan, 2018; Verhoeven at al. 2020; Zemaityte, 2024; Herrera-Guzmán, 2023; Bardiot, 2018).</p>
+            <div type="div1" rend="DH-Heading1">
+                <head>Historical Context and Research Question</head>
+                <p style="text-align: left; ">The evolution of Mexican theatre through the 20th century reflects broader social and political transformations in Mexican society. Theatre scholars have identified four distinct periods characterized by different funding models and institutional structures (Olguín, 2011; Franco, 2011):</p>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Commercial Repertoire Theatre (1900-1928):</hi> Characterized by private enterprises and commercial productions.
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Institutional Period I, “Experimental Theatre” (1928-1954):</hi> This area of ​​“art theatre” was marked by experimental approaches and the incipient participation of the public sector as a producer, together with diverse funding sources.
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Institutional Period II, “Modernization and the Mexican Miracle” (1954-1970):</hi> A period where experimental theatre enjoyed great critical success. This modernization of the country and its institutions promoted by the state coincides with Mexico's economic boom known as the "Mexican Miracle".
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Institutional Period III “Consolidation and Prosperity” (1970-1989):</hi> Defined by a predominance of state sponsorship, and specifically by the increase and formalization of funds from various public institutions such as the National Institute of Fine Arts (INBA), Universidad Nacional Autónoma de México (UNAM) and the Instituto Mexicano del Seguro Social (IMSS).
+                </p>
+                <p style="text-align: left; ">The first and fourth periods are typically considered "stable" due to their consistent funding streams, though from different sources—commercial enterprises in the early period and state institutions in the later period. This contrast provides an excellent opportunity to examine how different types of funding might affect artistic collaborations.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Materials and methods</head>
+                <p style="text-align: left; ">Our analysis focuses exclusively on cast members rather than including directors, producers, and other theatrical roles. This methodological choice stems from several considerations. First, cast members represent the most consistently documented aspect of theatrical productions in our dataset, providing a more reliable basis for longitudinal analysis. Second, casting decisions directly reflect both artistic and economic constraints - actors cannot simultaneously perform in multiple productions, making their collaborative patterns particularly sensitive to institutional structures. Finally, while directors and producers certainly influence theatrical networks, their relationships often extend beyond individual productions through informal mentorship and training. In contrast, cast co-appearances provide concrete evidence of collaboration within specific temporal boundaries, allowing us to more precisely trace how different funding models affected working relationships in Mexican theatre. This approach towards using co-occurrence networks for studying the evolution of creative networks in theatre was previously outlined in Escobar Varela (2021). </p>
+                <p style="text-align: left; ">Our data preparation involved several careful considerations. First, we removed singleton actors (those appearing in only one production) from the dataset. This decision was based on both practical and theoretical considerations:</p>
+                <p style="text-align: left; ">Data quality: Single appearances might represent transcription errors or incomplete records (this is something that we will continue to investigate).</p>
+                <p style="text-align: left; ">Network significance: Even if correctly registered, these individuals likely did not participate in the sustained collaborative relationships we aim to study.</p>
+                <p style="text-align: left; ">Historical practice: Theatre historians suggest that professional actors typically participated in multiple productions.</p>
+                <p style="text-align: left; ">To construct co-occurrence networks of theatrical collaborations, we adopted a 24-month "extended season" window, advancing one year at a time. This method offers several key benefits:</p>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Capturing Collaborations Beyond Seasonal Boundaries</hi>. By extending the window to two years, we account for collaborations that span multiple traditional theatrical seasons. This reflects the practical realities of production schedules and allows us to observe connections that might otherwise appear disjointed in single-season analyses.
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Temporal Overlap for Richer Insights</hi>: Each year is counted twice due to the overlapping windows. This deliberate overlap enhances the robustness of our analysis by maintaining continuity between successive periods, preventing artificial segmentation in the network.
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Balancing Data Density and Temporal Resolution.</hi> A 24-month window strikes an optimal balance. While smaller windows risk insufficient data density for meaningful network analysis, excessively large windows, such as 5- or 10-year periods, dilute temporal precision and may obscure short-term shifts. We tested these larger windows and found no appreciable difference in network structure, further supporting our chosen timeframe as a practical middle ground.
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Capturing Gradual Changes</hi>: The one-year step size maintains temporal precision while still allowing us to observe gradual changes in the network over time. This approach emphasizes evolving collaborative patterns while avoiding abrupt transitions.
+                </p>
+                <p style="text-align: left; ">This approach not only ensures a thorough analysis but also aligns with the realities of theatre production and collaboration. By balancing overlap, density, and temporal precision, the methodology provides a rich and reliable basis for understanding how collaborative networks evolve over time.</p>
+                <p style="text-align: left; ">Once the networks were constructed, we calculated the triadic closure, density and degree assortativity of each network using Python’s networkX package (version 3.4.2). While triadic closure and density are commonly used, it is worth pausing on the definition of degree assortativity for clarity on the meaning of this metric. Degree assortativity measures the tendency of nodes in a network to connect with other nodes that have similar degrees (number of connections). If high-degree nodes are more likely to connect to other high-degree nodes, the network has positive assortativity. If high-degree nodes prefer to connect to low-degree nodes, the network has negative assortativity.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results and Discussion</head>
+                <p style="text-align: left; ">For each metric, we grouped the results by historical period and calculated the median, along with the 25th and 75th percentiles, to summarize the central tendency and variability within each period. These summaries were visualized using boxplots, a standard way to represent the distribution of values across different categories. The boxplots (Figures 1-3) illustrate not only the central trends but also the range and potential outliers, providing a clear comparative view across periods.</p>
+                <p style="text-align: left; ">1. Triadic Closure (Figure 1). We observe that that triadic closure follows a U-shaped pattern across the periods. The highest values appear in the first period (1902-1928, median ~0.67) and the last period (1970-1989, median ~0.65). The middle periods show notably lower values, with the Modernization and the Mexican Miracle period (1954-1970) showing the lowest triadic closure (median ~0.45). This suggests that during the stable funding periods, the theatre community was more tightly knit, with more interconnected relationships. This was perhaps due to higher investment from the public sector.</p>
+                <p style="text-align: left; ">2. Density (Figure 2). The trend shows the highest density (around 0.06) in 1902-1928, and a steady decline across subsequent periods, which culminates in the lowest density (about 0.015) in the final period, 1970-1989. This suggests that while early theatre networks were more densely connected, the network became progressively more spread out over time, indicating a more diverse theatre community with more selective collaborations.</p>
+                <p style="text-align: left; ">3. Assortativity (Figure 3). The data shows moderate levels (around 0.2) in 1902-1928, a dip to lower levels in 1928-1954 and a dramatic increase in 1970-1989 (reaching around 0.6). This means that in the institutional period we see some stratification were the most connected actors tend to collaborate with each other. The overall network is also less dense, which suggests more distinct and separate communities. The increase in public investment might have also led to a bigger theatre community (something we haven’t yet explored in this paper).</p>
+                <p style="text-align: left; ">
+                    <graphic n="1001" width="15.910277777777777cm" height="5.005916666666667cm" url="/tmp/tmps345at66/Pictures/8669baf3fbcdcc5491e1ba26ec81532d.png" rend="inline"/>
+                    <hi rend="bold">Figure 1. Distribution of Triadic Closure by Temporal Cuts</hi>
+                </p>
+                <p style="text-align: left; ">
+                    <graphic n="1002" width="15.910277777777777cm" height="4.965347222222222cm" url="/tmp/tmps345at66/Pictures/8669baf3fbcdcc5491e1ba26ec81532d.png" rend="inline"/>
+                    <hi rend="bold">Figure 2. Distribution of density by Temporal Cuts</hi>
+                </p>
+                <figure>
+                    <graphic n="1003" width="15.910277777777777cm" height="5.005916666666667cm" url="/tmp/tmps345at66/Pictures/8669baf3fbcdcc5491e1ba26ec81532d.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Figure 3. Distribution of assortativity by Temporal Cuts</hi>
+                </p>
+                <p style="text-align: left; ">Taken together, these three metrics reveal interesting patterns:</p>
+                <p style="text-align: left; ">The period of Commercial Repertoire Theatre (1902-1928) was characterized by a tight-knit, densely connected community, where highly connected actors collaborated with lesser known actors. </p>
+                <p style="text-align: left; ">The middle periods of “Experimental Theatre” and “Modernization and the Mexican Miracle” (1928-1970), which are associated with experimental and highly acclaimed productions show a general loosening of network structures. </p>
+                <p style="text-align: left; ">The most recent Consolidation and Prosperity (1970-1989) shows high triadic closure and degree assortativity but low overall density, suggesting a more structured network with distinct subgroups or communities, possibly indicating specialization or the formation of distinct theatrical movements or schools of thought. Here, the most connected actors tend to collaborate with other highly connected actors, but the level of triadic closure, an indication of the tightness of those collaborations, returns to the levels seen at the beginning of the 20th century, when commercial theatre dominated. </p>
+                <p style="text-align: left; ">These results suggest that the periods with more stable funding (be it commercial or institutional) tended to have higher triadic closure, and perhaps more closely knit communities. But there is a significant difference between these periods. The institutional era is dominated by more stratified (higher degree assortativity) and more distinct communities (lower density). While stable funding appears to promote closer collaboration (higher triadic closure), the decrease in connected components suggests that the state-sponsored period may have created more stratified and disconnected networks than the commercial period. These patterns raise important questions about the relationship between institutional structures and artistic collaboration.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Limitations and future research</head>
+                <p style="text-align: left; ">Any study of historical collaboration networks faces important limitations that should inform future research directions. The broad periodization used in this analysis, while useful for identifying long-term patterns, may obscure significant short-term fluctuations in response to specific policy changes or cultural moments. The available historical records likely underrepresent informal collaborations and may contain systematic biases in documentation across different periods. Additionally, the metrics used cannot capture the qualitative nature or artistic significance of these collaborative relationships. </p>
+                <p style="text-align: left; ">Future research would benefit from comparative studies with theatre networks in other countries experiencing similar transitions between commercial and state-sponsored models, as well as analysis of other artistic fields in Mexico during the same periods. More granular examination of shorter time periods around key policy changes could illuminate immediate effects of funding transitions, while mixed-methods approaches that incorporate interviews with artists from recent periods could provide crucial context about collaborative decision-making. The relationship between institutional structures and artistic networks could be further explored through detailed examination of specific funding mechanisms, the trajectory of specific people and companies, infrastructure support, and educational programs. Additional network metrics could help identify key bridging figures between communities and examine how network position relates to artistic innovation, or commercial success. Finally, expanding the analysis to more recent Mexican theatre networks would help establish longer-term trends and current impacts of historical institutional changes. Such research would deepen our understanding of how funding structures shape artistic communities and their creative output.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">AusStage</hi> (2013): “AusStage”, [https://www.ausstage.edu.au/](https://www.ausstage.edu.au/) \[accessed 09.05.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bardiot, Clarisse</hi> (2018): “Measuring Merce Cunningham: A Theatre Analytics Research”, in: Bridges/Puentes. Mexico City: ADHO.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bollen, Jonathan</hi> (2017): “Data Models for Theatre Research: People, Places, and Performance”, in: Theatre Journal 68, 4: 615–632. DOI: 10.1353/tj.2016.0109.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Caplan, Debra</hi> (2018): Yiddish Empire: The Vilna Troupe, Jewish Theater, and the Art of Itinerancy. Ann Arbor: University of Michigan Press. DOI: 10.3998/mpub.9533320.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Escobar Varela, Miguel</hi> (2021): Theater as Data: Computational Journeys into Theater Research. Ann Arbor: University of Michigan Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Franco, Israel</hi> (2011): “Memorial del Ahora”, in: Franco, Israel / Escobar, Antonio (coord.): El Teatro de Ahora: un primer ensayo de teatro político en México. México: Instituto Nacional de Bellas Artes.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Franco, Israel</hi> (2024): “Fuentes Para El Registro de La Escena Mexicana”, [https://criticateatral2021.org/html/fuen1\_intro.php](https://criticateatral2021.org/html/fuen1_intro.php) \[accessed 09.05.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Herrera-Guzmán, Yessica / Lee, Eun / Kim, Heetae</hi> (2023): “Structural Gender Imbalances in Ballet Collaboration Networks”, in: EPJ Data Science 12, 1: 1–17. DOI: 10.1140/epjds/s13688-023-00428-z.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Olguín, David</hi> (coord.) (2011): Un siglo de teatro en México. México: Consejo Nacional para la Cultura y las Artes / Fondo de Cultura Económica.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Serino, Marco / D’Ambrosio, Daniela / Ragozini, Giancarlo</hi> (2017): “Bridging Social Network Analysis and Field Theory through Multidimensional Data Analysis: The Case of the Theatrical Field”, in: Poetics 62: 66–80. DOI: 10.1016/j.poetic.2016.12.002.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">UiO Universitetet i Oslo</hi> (2018): “IbsenStage”, [https://ibsenstage.hf.uio.no/](https://ibsenstage.hf.uio.no/) \[accessed 05.09.2018].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Verhoeven, Deb / Musial, Katarzyna / Palmer, Stuart / Taylor, Sarah</hi> (2020): “Controlling for Openness in the Male-Dominated Collaborative Networks of the Global Film Industry”, in: PLoS ONE 15, 6: e0234460. DOI: 10.1371/journal.pone.0234460.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Zemaityte, Vejune / Karjus, Andres / Rohn, Ulrike / Schich, Maximilian / Ibrus, Indrek</hi> (2024): “Quantifying the Global Film Festival Circuit: Networks, Diversity, and Public Value Creation”, in: PLOS ONE 19, 3: e0297404. DOI: 10.1371/journal.pone.0297404.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

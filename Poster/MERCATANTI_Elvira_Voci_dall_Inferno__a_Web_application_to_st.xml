@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MERCATANTI_Elvira_Voci_dall_Inferno__a_Web_application_to_st">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Voci dall'Inferno: a Web application to study and analyze the Lager testimonies</title>
+                <author>
+                    <persName>
+                        <surname>Mercatanti</surname>
+                        <forename>Elvira</forename>
+                    </persName>
+                    <affiliation>ILC: CNR-Istituto di Linguistica Computazionale "A. Zampolli", Italy</affiliation>
+                    <email>elvira.mercatanti@ilc.cnr.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Congiu</surname>
+                        <forename>Carla</forename>
+                    </persName>
+                    <affiliation>Università di Pisa, Italy</affiliation>
+                    <email>c.congiu1@studenti.unipi.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Del Grosso</surname>
+                        <forename>Angelo Mario</forename>
+                    </persName>
+                    <affiliation>ILC: CNR-Istituto di Linguistica Computazionale "A. Zampolli", Italy</affiliation>
+                    <email>angelo.delgrosso@ilc.cnr.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Riccucci</surname>
+                        <forename>Marina</forename>
+                    </persName>
+                    <affiliation>Università di Pisa, Italy</affiliation>
+                    <email>marina.riccucci@unipi.it</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-04T15:22:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>XML-TEI</term>
+                    <term>Holocaust Testimonies</term>
+                    <term>Digital Archives</term>
+                    <term>Web Application</term>
+                    <term>XQuery</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>digital archiving</term>
+                    <term>public humanities collaborations and methods</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>Computer science</term>
+                    <term>History</term>
+                    <term>Humanities computing</term>
+                    <term>Linguistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">
+                <hi rend="italic">Voci dall'Inferno</hi> is a research project based at the University of Pisa, directed by Professor Marina Riccucci since 2016 and supported by Dr. Angelo Mario Del Grosso (CNR-ILC, Pisa) since 2019 (Del Grosso et al. 2024).
+            </p>
+            <p style="text-align: left; ">The project has two main objectives: a) to digitize and encode, using XML-TEI (Burnard 2014),<ref n="1" target="ftn1"/> the first digital corpus of 
+                <hi rend="italic">non-literary</hi> testimonies by concentration camp survivors, including both written and oral sources; and b) to identify, quantify and evaluate the presence of Dante's lexicon and allusions within these testimonies.
+            </p>
+            <p style="text-align: left; ">The project focuses on
+                <hi rend="italic" xml:space="preserve"> non-literary</hi> testimonies, encompassing both oral sources such as audio and video recordings, and written documents including diaries, letters, and memoirs (Calderini / Riccucci 2020). These testimonies constitute a distinct textual typology through which survivors of the Lager describe their experiences. Each category of testimonies presents structural, functional and semantic specificities that must be recognized and appropriately represented during the encoding process.
+            </p>
+            <p style="text-align: left; ">The research is based on the premise that many Italian survivors, regardless of their educational or cultural background, employed Dante's lexicon — particularly that of the 
+                <hi rend="italic" xml:space="preserve">Inferno </hi>from the 
+                <hi rend="italic" xml:space="preserve">Divine Comedy </hi>— to express the experience of the Lager (Calderini / Riccucci 2020, Levi 1997). Dante has provided words even for those who had never formally studied his works. His language and imagery had become part of the shared Italian culture and lexicon, with expressions that had permeated everyday speech and common usage. This enabled witnesses to name events and realities that had previously defied expression, thereby mitigating the incommunicability of the concentration camp experience. Serving both as a linguistic framework and a shared cognitive model with the reader, Dante’s poem first acts as a bridge between survivors and their own experiences, and subsequently between the testimonies and their audience, enabling those who had not endured the camps to understand that reality, at least in part.
+            </p>
+            <p style="text-align: left; ">The creation of the digital corpus serves, firstly, to collect, encode, and preserve non-literary testimonies and, secondly, to facilitate the application of computational tools and methods for their study, analysis and further exploration.</p>
+            <p style="text-align: left; ">The 
+                <hi rend="italic">Voci dall’Inferno</hi> web application enables users to catalogue, explore, analyze, and query all the available testimonies.<ref n="2" target="ftn2"/> Among its main features, the application allows users to read and listen to each encoded testimony (Fig. 1), as well as to access statistical data on phenomena characterizing the primary sources (Fig. 2), identified during the encoding phase (movements, gaps, unclear words, pauses, exclamations, background noises, etc.). It also supports the scholarly investigation of Dante's lexicon, both within individual testimonies (Fig. 3) and across the entire corpus (Fig. 4). Both explicit and implicit references to Dante’s expressions are considered.
+            </p>
+            <p style="text-align: left; ">The structural features of the testimonies are analyzed through annotated phenomena (e.g., pauses, damages, etc.), enabling more effective exploration of the corpus and the seamless integration of the findings into the web application.</p>
+            <figure>
+                <graphic n="1001" width="12.7635cm" height="5.7785cm" url="/tmp/tmp5ph6heyb/Pictures/1bc03c33db2bf0ae99bd59359654047d.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 1. Transcription excerpt with speakers’ initials (AS = Anna Segre; LS = Liliana Segre) and a legend of the main encoded phenomena.</p>
+            <figure>
+                <graphic n="1002" width="14.689666666666668cm" height="6.381391666666667cm" url="/tmp/tmp5ph6heyb/Pictures/1bc03c33db2bf0ae99bd59359654047d.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 2. Statistical overview of key features in oral testimonies, including movements, gaps, unclear words, pauses, exclamations, and background noises.</p>
+            <figure>
+                <graphic n="1003" width="14.735991666666667cm" height="6.836833333333334cm" url="/tmp/tmp5ph6heyb/Pictures/1bc03c33db2bf0ae99bd59359654047d.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 3. Occurrences of Dante in Artom’s testimony, including explicit and implicit quotations, allusions, and lexical items from the 
+                <hi rend="italic">Divine Comedy</hi>.
+            </p>
+            <figure>
+                <graphic n="1004" width="15.093863888888889cm" height="5.101166666666667cm" url="/tmp/tmp5ph6heyb/Pictures/1bc03c33db2bf0ae99bd59359654047d.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 4. Distribution of Dante’s lexicon across the corpus: a total of 61 references, including 15 explicit quotations, 4 implicit quotations, 7 allusions, and 35 terms.</p>
+            <p style="text-align: left; ">The application was developed using the eXist-db platform, with specific functionalities implemented in XQuery, following the framework provided by the HTML templating module. A restricted-access demo has been deployed; however, the full application is not yet publicly available, as appropriate licensing procedures must be established to regulate access to the sensitive data contained in the testimonies. Ethical considerations concerning the management of such sensitive materials are still under active discussion and are being addressed in collaboration with the involved institutions, including the EHRI Infrastructure<ref n="3" target="ftn3"/> and the CDEC archive.<ref n="4" target="ftn4"/>
+            </p>
+            <p style="text-align: left; ">In compliance with TEI guidelines, primarily through the use of the Transcription of Speech and Transcription of Primary Sources modules, and supported by a carefully curated set of metadata describing the encoded resources, the digital archive will be submitted to the CLARIN-IT trusted repository.<ref n="5" target="ftn5"/> This process will result in a structured collection of texts aligned with the FAIR principles (Calamai et al. 2021, Vagionakis et al. 2022
+                <hi rend="bold">)</hi>, thereby enhancing data findability, accessibility, interoperability and reusability. Adherence to the FAIR principles also contributes to the long-term sustainability of both the encoded corpus and the digital archive implementation (Ciula / Smithies 2023).
+            </p>
+            <p style="text-align: left; ">At present, the archive contains 23 testimonies from 18 individuals, comprising 13 oral sources and 10 written ones. In total, 18 hours and 35 minutes of audio recordings and 390 pages of written materials have been transcribed and encoded. Preliminary analyses indicate that 10 of the 18 witnesses use quotations, allusions, lexical elements, or terms from the 
+                <hi rend="italic">Divine Comedy</hi>, amounting to a total of 61 references to Dante's poem (Del Grosso et al. 2024a).
+            </p>
+            <p style="text-align: left; ">The current phase of the project focuses on the development of a tool for automatic speech transcription and for detecting phenomena characteristic of oral sources. Additionally, it aims to extract quotations from the 
+                <hi rend="italic">Divine Comedy</hi> by applying embedding-based techniques to measure sentence-level semantic similarity, such as BERT-score in conjunction with the Weaviate vector database.<ref n="6" target="ftn6"/> The 
+                <hi rend="italic">Voci dall'Inferno Verse Similarity Search</hi> project<ref n="7" target="ftn7"/> (Fig. 5) is being developed based on the 
+                <hi rend="italic" xml:space="preserve">Latin Vulgate Verse Similarity Search project </hi>(Mattingly 2024). Figure 5 shows how scholars can perform semantic similarity searches using verses from Dante's 
+                <hi rend="italic">Inferno</hi> through an application built with Streamlit. Consequently, quantitative lexical analysis has been employed to identify and count both explicit and implicit references to Dante’s Divine Comedy across the testimonies. Semantic similarity techniques have been applied specifically to detect implicit allusions that cannot be easily captured by standard string-matching methods. These approaches were selected over traditional techniques due to their superior performance in recognizing paraphrased or recontextualized idiomatic expressions.
+            </p>
+            <figure>
+                <graphic n="1005" width="16.002cm" height="7.870258333333333cm" url="/tmp/tmp5ph6heyb/Pictures/1bc03c33db2bf0ae99bd59359654047d.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 5. 
+                <hi rend="italic">Voci dall’Inferno Verse Similarity Search</hi>: a sentence from a testimony is used as input, and the output returns the verses from Dante’s 
+                <hi rend="italic">Divine Comedy</hi> that are most semantically similar.
+            </p>
+            <p style="text-align: left; ">In addition, the project is actively developing data visualization tools, including graph-based charts to display relationships among individuals mentioned in the texts, and maps to visualize locations referenced in the testimonies or the movements of the witnesses (Fig. 6). Efforts are also underway to implement transcription conventions for oral sources, such as CHAT<ref n="8" target="ftn8"/> and DT1, not only for data presentation but also for encoding purposes, using a Domain-Specific Language approach (Del Grosso et al. 2023).
+            </p>
+            <p style="text-align: left; ">Future developments of the project will be closely aligned with ongoing collaborations with CLARIN-IT and the EHRI infrastructure, supported by DiPTEXT-KC<ref n="9" target="ftn9"/> and the 
+                <hi rend="italic">Voices from Ravensbrück</hi> project (Calamai et al. 2021). The continuation of the project is made possible through the contributions of numerous Digital Humanities students and partner research institutions, including the Department of Philology, Literature and Linguistics at the University of Pisa; the Contemporary Jewish Documentation Center of Italy (CDEC), the Interdepartmental Center for Jewish Studies of Italy (CISE), the CoPhiLab laboratory at the Institute of Computational Linguistics (CNR-ILC), and the CLARIN-IT DiPText-KC Knowledge Center.
+            </p>
+            <figure>
+                <graphic n="1006" width="8.435925cm" height="9.84191388888889cm" url="/tmp/tmp5ph6heyb/Pictures/1bc03c33db2bf0ae99bd59359654047d.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 6. Map depicting the movements of the witness as reconstructed from the testimony.</p>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                    
+                        <ref target="https://tei-c.org/">https://tei-c.org/</ref>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                     An demo version of the applet will be available at 
+                        <ref target="https://48001.omega.ilc.cnr.it/exist/apps/voci_inferno/index.html">https://48001.omega.ilc.cnr.it/exist/apps/voci_inferno/index.html</ref>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                    
+                        <ref target="https://www.ehri-project.eu/">https://www.ehri-project.eu/</ref>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn4" n="4">
+                    
+                        <ref target="https://www.cdec.it/">https://www.cdec.it/</ref>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn5" n="5">
+                    
+                        <ref target="https://dspace-clarin-it.ilc.cnr.it/repository/xmlui/page/deposit">https://dspace-clarin-it.ilc.cnr.it/repository/xmlui/page/deposit</ref>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn6" n="6">
+                    
+                        <ref target="https://weaviate.io/">https://weaviate.io/</ref>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn7" n="7">
+                     The 
+                        <hi rend="italic" xml:space="preserve">Voci dall'Inferno Verse Similarity Search </hi>will be demonstrated via a live demo and deployed on Hugging Face Spaces.
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn8" n="8">
+                    
+                        <ref target="https://talkbank.org/manuals/CHAT.pdf">https://talkbank.org/manuals/CHAT.pdf</ref>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn9" n="9">
+                    
+                        <ref target="https://diptext-kc.clarin-it.it/">https://diptext-kc.clarin-it.it/</ref>
+                    
+                </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Burnard, Lou</hi> (2014): 
+                        <hi rend="italic">What Is the Text Encoding Initiative?: How to Add Intelligent Markup to Digital Resources</hi>. Marsiglia: OpenEdition Press. DOI: 10.4000/books.oep.426. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Calamai, Silvia / Beeken, Jeannine / Van Den Heuvel, Henk / Broekhuizen, Max / Van Hessen, Arjan / Draxler, Christoph / Scagliola, Stefania</hi> (2021): “Voices from Ravensbrück. Towards the creation of an oral and multilingual resource family”, in: CLARIN ERIC (ed.): 
+                        <hi rend="italic" xml:space="preserve">Proceedings of CLARIN Annual Conference 2021: </hi>16-19.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Calderini, Sara / Riccucci, Marina</hi> (2020): “L’ineffabilità della nefandezza: Dante ‘per dire’ il Lager: un sondaggio preliminare nelle testimonianze non letterarie”, in: Fabrizio Serra (ed.): 
+                        <hi rend="italic">Italianistica</hi>: 213–228.  DOI: 10.19272/202001301011. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Ciula, Arianna / Smithies, James</hi> (2023). “Sustainability and Modelling at King’s Digital Lab: Between Tradition and Innovation”, in: University College London Press (ed.): 
+                        <hi rend="italic">On Making in the Digital Humanities</hi>: 78-104. DOI: 10.14324/111.9781800084209.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Del Grosso, Angelo Mario / Boschetti, Federico / Zenzaro, Simone / Ranocchia, Graziano</hi> (2023): “GreekSchools: Making Traditional Papyrology Machine Actionable Through Domain-Driven Design”, in:
+                        <hi rend="italic" xml:space="preserve"> 2023 7th IEEE Congress on Information Science and Technology (CiSt)</hi>, Agadir - Essaouira, Morocco, 2023:  621-626. DOI: 10.1109/CiSt56084.2023.10409929. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Del Grosso, Angelo Mario / Riccucci, Marina / Mercatanti, Elvira</hi> (2024a). “The Impact of Digital Editing on the Study of Holocaust Survivors’ Testimonies in the context of Voci dall’Inferno Project”, in ELRA and ICCL (eds.): 
+                        <hi rend="italic">Proceedings of the First Workshop on Holocaust Testimonies as Language Resources (HTRes) @ LREC-COLING 2024</hi>, Torino, Italia, Maggio, 2024: 1-9. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Del Grosso, Angelo Mario / Riccucci, Marina / Mercatanti, Elvira</hi> (2024b). “Voci Dall’Inferno: Dante per Dire Il Lager - Digitalizzare e Studiare Le Testimonianze.”, in: AIUCD (ed): 
+                        <hi rend="italic">ME.TE. Digitali: Mediterraneo in Rete Tra Testi e Contesti</hi>, Catania, 2024: 267-273. DOI: 10.6092/unibo/amsacta/7927. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Levi, Primo</hi> (1997): 
+                        <hi rend="italic">Conversazioni e interviste (1963-1987)</hi>. Torino: Einaudi. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Mattingly, William J.B.</hi> (2024): 
+                        <hi rend="italic">vulgata-spacy</hi>. GitHub repository. &lt;
+                        <ref target="https://github.com/wjbmattingly/vulgata-spacy%3E">https://github.com/wjbmattingly/vulgata-spacy&gt;</ref> [28.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Vagionakis, Irene / Del Gratta, Riccardo / Boschetti, Federico / Baroni, Paola / Del Grosso, Angelo Mario / Mancinelli, Tiziana / Monachini, Monica</hi> (2022). “‘Cretan Institutional Inscriptions’ Meets CLARIN-IT”, in: Selected Papers from the CLARIN Annual Conference 2021 (ed): 
+                        <hi rend="italic" xml:space="preserve">Linköping Electronic Conference Proceedings 189, </hi>2022: 139-150. DOI: 10.3384/ecp18913.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

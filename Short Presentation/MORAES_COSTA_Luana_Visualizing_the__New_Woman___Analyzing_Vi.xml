@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MORAES_COSTA_Luana_Visualizing_the__New_Woman___Analyzing_Vi">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Visualizing the 'New Woman': Analyzing Visual Content in &lt;em&gt;The Delineator&lt;/em&gt; Using CLIP.</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Moraes Costa</surname>
+                        <forename>Luana</forename>
+                    </persName>
+                    <affiliation>University of Göttingen, Germany</affiliation>
+                    <email>moraescostaluana@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T08:29:05.792970304</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>New Woman</term>
+                    <term>Visual Culture</term>
+                    <term>CLIP</term>
+                    <term>Illustrated Periodicals</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>digital archiving</term>
+                    <term>image processing and analysis</term>
+                    <term>Art history</term>
+                    <term>Cultural studies</term>
+                    <term>Gender and sexuality studies</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>In the late 19th and early 20th centuries, 
+                <hi rend="italic">The Delineator</hi> was considered one of the 'big six' magazines in the U.S., focusing on the emerging female audience of that era (Bland, 2009). This research
+                <hi rend="sup"><ref n="1" target="ftn1"/>
+                </hi> examines the magazine's visual content, specifically the attire of the 'New Woman' from 1894 to 1914. By shifting from textual to visual analysis, it offers new insights into her representation, employing CLIP (Contrastive Language-Image Pre-training) to explore and deconstruct these nuanced visual depictions.
+            </p>
+            <p>The concept of the "New Woman" emerged during the transition from the Gilded Age to the Progressive Era in the United States, a time of significant political and social reform, including expanded voting rights and labor unions (Richardson, 2017). This era reshaped cultural understandings of femininity and increased scrutiny of women's roles (Bland, 2009). The term was originally used pejoratively to criticize women's independence and choices beyond traditional roles (Patterson, 2008). Representing a complex figure of modernity, emancipation, and social awareness, the New Woman's fluid identity allows her to navigate diverse experiences while challenging conventional notions of femininity (Stroup, 2019)—a tension captured in periodicals, which serve as multimodal vehicles documenting the evolving definitions of femininity (Beetham / Boardman, 2001; Binckes / Snyder, 2019).</p>
+            <p>Advancements in machine learning and AI for analyzing historical datasets provide valuable insights into visual and textual representations, as shown in Lee. (2020), who explored the extraction and categorization of visual content from historic American newspapers using the Newspaper Navigator model. Digital analysis of periodical visual materials underscores the importance of visuality in historical research. Smits et al. (2023b) demonstrated this in their analysis of the London Illustrated, using Newspaper Navigator for image extraction and CLIP for exploration. Additionally, the Visual Contagions
+                <hi rend="sup"><ref n="2" target="ftn2"/>
+                </hi> (2023) project investigates image circulation across millions of historical illustrated publications, providing new perspectives on visual approaches to history.
+            </p>
+            <p>To develop this research, I implemented the Newspaper Navigator model to extract and classify images from 
+                <hi rend="italic">The Delineator</hi>, categorizing them into Photograph, Illustration/Photograph, Map, Comics/Cartoon, Editorial Cartoon, Headline, and Advertisement. I created a CSV file containing metadata for 126,469 images, including image_id, image_path, and crop coordinates while utilizing ChromaDB
+                <hi rend="sup"><ref n="3" target="ftn3"/>
+                </hi> for storing image embeddings (Störiko, 2023).
+            </p>
+            <p>I evaluated the model's performance, finding the best results based on Intersection over Union (IoU) (Rezatofighi, 2019) in the Illustration and Advertisement classes. However, relying on approximately 600 images from such a large dataset appears tenuous, and many non-rectangular images may not align with the model's box-centric cropping method. Additionally, unclear definitions of classifications led to misclassification between Photography and Illustration/Photography, a concern noted by Smits et al. (2023).</p>
+            <p>After processing the images, I used OpenCLIP to analyze a sample and explore the New Woman's depiction. While CLIP requires critical application due to its dataset transparency issues, it can still provide valuable insights into historical concepts. However, researchers must consider the potential for 'historical bias' when applying computer vision models to historical collections. (Smits / Wevers, 2022). </p>
+            <p>Preliminary findings suggest that when querying "New Woman" as text, images obtained with OpenCLIP show that the model primarily focuses on the term "woman" and occasionally detects "new" in context. However, determining what the model considers as "new" is challenging, as this concept is not explicitly defined and requires further contextualization.</p>
+            <p>Previous studies have shown that simple modifications in query construction significantly impact image search results (Smits / Wevers, 2023a; Radford, 2021). Therefore, when I incorporated various characteristics outlined in the literature, such as suffragist, clubwoman, college girl, socialist, capitalist, anarchist, pickpocket, bicyclist, barren spinster, mannish woman, outdoor girl, birth-control advocate, modern girl, eugenicist, flapper, blues woman, lesbian, and vamp (Stroup, 2019), I obtained interesting results.</p>
+            <p>For instance, when querying "women voting" (Figure 1a, Figure 1b) the initial results appear to possibly depict political environments where women are collectively engaging in some public role. In contrast, when I queried "woman voting" (Figure 2a, Figure 2b) the images portrayed women in positions that resemble the act of voting in a contemporary ballot box, but in reality, they were performing other activities, such as painting or engaging in domestic tasks. This raises questions about the training of CLIP and how it understands what is correct, which may not reflect the actual context of the image.</p>
+            <p>A similar phenomenon occurs with the category of clubwomen. The singular query (Figure 3) yields results of women participating in sports, while a plural search (Figure 4) results in photographs of women in clubs, not necessarily sports-related. The plural query seems to be more specific in searching for groups of women who participated in clubs and presenting classic photos of annual events or group photos of women. The same pattern applies to the category of college, where "women going to college" (Figure 5) produces more accurate results than the singular query (Figure 6). The plural query allows for a more complex representation of women's experiences, while the singular query delivers results that are often ambiguous or unrelated to higher education.</p>
+            <p>An intriguing result appears in the category of "pickpocket," where the outcomes do not significantly differ between singular (Figure 7) and plural terms (Figure 8), yet often depict situations involving women and men, typically showing women receiving some form of "kindness" from a man. While this last example is difficult to interpret in any way other than as a gender bias, the queries related to political movements and collective voting, education, and women's organization seem to have more results when searched in the plural, an interesting finding for future research using CLIP for visualizing historical collections.</p>
+            <p>The research will continue to explore and refine the analyses of the queries, with next steps including a deeper exploration of the concepts researched in the queries in relation to the quantity of available images. These methodologies and findings highlight the complex interplay between visual representations and textual narratives in understanding the concept of the New Woman as portrayed in 
+                <hi rend="italic">The Delineator</hi> during this transformative period, and is a promising search for guiding queries in future research.
+            </p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp8xub55h6/Pictures/086dd4b50e1c0eb01d037f87d15f0cb7.png"/>
+                </figure>
+            </p>
+            <p>Figure 1a: Query: “women voting”.</p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp8xub55h6/Pictures/086dd4b50e1c0eb01d037f87d15f0cb7.png"/>
+                </figure>
+            </p>
+            <p>Figure 1b. Query: “a picture of women voting”.</p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp8xub55h6/Pictures/086dd4b50e1c0eb01d037f87d15f0cb7.png"/>
+                </figure>
+            </p>
+            <p>Figure 2a. Query: “woman voting”</p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp8xub55h6/Pictures/086dd4b50e1c0eb01d037f87d15f0cb7.png"/>
+                </figure>Figure 2b. Query: “a picture of a woman voting”.
+            </p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp8xub55h6/Pictures/086dd4b50e1c0eb01d037f87d15f0cb7.png"/>
+                </figure>
+            </p>
+            <p>Figure 3. Query: “clubwoman”.</p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp8xub55h6/Pictures/086dd4b50e1c0eb01d037f87d15f0cb7.png"/>
+                </figure>
+            </p>
+            <p>Figure 4. Query: “clubwomen”.</p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp8xub55h6/Pictures/086dd4b50e1c0eb01d037f87d15f0cb7.png"/>
+                </figure>
+            </p>
+            <p>Figure 5. Query: “women going to college”.</p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp8xub55h6/Pictures/086dd4b50e1c0eb01d037f87d15f0cb7.png"/>
+                </figure>
+            </p>
+            <p>Figure 6. Query: “woman going to college”.</p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp8xub55h6/Pictures/086dd4b50e1c0eb01d037f87d15f0cb7.png"/>
+                </figure>
+            </p>
+            <p>Figure 7. Query: “the woman is pickpocket”.</p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp8xub55h6/Pictures/086dd4b50e1c0eb01d037f87d15f0cb7.png"/>
+                </figure>
+            </p>
+            <p>Figure 8. Query: “the women are pickpockets”.</p>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn1" rend="footnote text" n="1">This study has been developed as a research project for the Master's in Digital Humanities at the University of Göttingen, under the supervision of Johanna Störiko, M.Sc., and has benefited greatly from the work conducted at the Intermediality and Computational Humanities Hackathon in Vienna in 2024.</note>
+<note xml:id="ftn2" rend="footnote text" n="2">https://visualcontagions.unige.ch/explore/</note>
+<note xml:id="ftn3" rend="footnote text" n="3">https://www.trychroma.com/</note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Beetham, Margaret (1998): “The reinvention of the English domestic woman: Class and ‘race’ in the 1890s’ woman’s magazine”, in: 
+                        <emph>Women’s Studies International Forum</emph> 21, 3: 223–233.
+                    </bibl>
+                    <bibl>Beetham, Margaret (2003): 
+                        <emph>A Magazine of Her Own?: Domesticity and Desire in the Woman’s Magazine, 1800–1914</emph>. London/New York: Routledge.
+                    </bibl>
+                    <bibl>Beetham, Margaret / Boardman, Kay (Eds.) (2001): 
+                        <emph>Victorian Women's Magazines: An Anthology</emph>. Manchester: Manchester University Press.
+                        <lb/>Binckes, Faith (Ed.) (2019): 
+                        <emph>Women, Periodicals and Print Culture in Britain, 1890s–1920s: The Modernist Period</emph>. Edinburgh: Edinburgh University Press.
+                        <lb/>
+                    </bibl>
+                    <bibl>Bland, Sidney R. (2009): “Shaping the Life of the New Woman: The Crusading Years of the 
+                        <emph>Delineator</emph>”, in: 
+                        <emph>American Periodicals</emph> 19, 2: 165–188. 
+                        <ptr target="https://doi.org/10.1353/amp.0.0030"/>
+                    </bibl>
+                    <bibl>Champenois, Rémi / Joyeux-Prunel, Béatrice (2023): “Visual contagions: Extracting and tracing the circulation of images in illustrated prints [Artificial vision]”, in: 
+                        <emph>Humanistica</emph>. 
+                        <ptr target="https://hal.science/hal-04108205"/> [05.11.2024].
+                    </bibl>
+                    <bibl>Lee, Benjamin (2020): 
+                        <emph>Compounded Mediation: A Data Archaeology of the Newspaper Navigator Dataset</emph>. 
+                        <ptr target="https://doi.org/10.17613/k9gt-6685"/> [08.07.2024].
+                        <lb/>
+                    </bibl>
+                    <bibl>Marks, Patricia (1990): 
+                        <emph>Bicycles, Bangs, and Bloomers: The New Woman in the Popular Press</emph>. Lexington: University Press of Kentucky.
+                        <lb/>
+                    </bibl>
+                    <bibl>Patterson, Martha H. (Ed.) (2008): 
+                        <emph>The American New Woman Revisited: A Reader, 1894–1930</emph>. New Brunswick: Rutgers University Press.
+                    </bibl>
+                    <bibl>Radford, Alec / Kim, Jong Wook / Hallacy, Chris / Ramesh, Aditya / Goh, Gabriel / Agarwal, Sandhini / Sastry, Girish / Askell, Amanda / Mishkin, Pamela / Clark, Jack / Krueger, Gretchen / Sutskever, Ilya (2021): “Learning transferable visual models from natural language supervision”, in: 
+                        <emph>arXiv:2103.00020 [cs.CV]</emph>. 
+                        <ptr target="https://doi.org/10.48550/arXiv.2103.00020"/> [12.08.2024].
+                    </bibl>
+                    <bibl>Rezatofighi, Hamid / Tsoi, Nathan / Gwak, JunYoung / Sadeghian, Amir / Reid, Ian / Savarese, Silvio (2019): “Generalized intersection over union: A metric and a loss for bounding box regression”, in: 
+                        <emph>arXiv</emph>. 
+                        <ptr target="https://arxiv.org/abs/1902.09630"/> [24.09.2024].
+                        <lb/>
+                    </bibl>
+                    <bibl>Richardson, Heather Cox (2017): “Reconstructing the Gilded Age and Progressive Era”, in: Magliocca, Gerard N. (Ed.): 
+                        <emph>A Companion to the Gilded Age and Progressive Era</emph>. Hoboken: Wiley-Blackwell, 5–20.
+                    </bibl>
+                    <bibl>Smits, Thomas / Wevers, Melvin (2023a): “A multimodal turn in Digital Humanities. Using contrastive machine learning models to explore, enrich, and analyze digital visual historical collections”, in: 
+                        <emph>Digital Scholarship in the Humanities</emph> 38, 3 (September): 1267–1280. 
+                        <ptr target="https://doi.org/10.1093/llc/fqad008"/> [09.09.2024].
+                    </bibl>
+                    <bibl>
+                        <lb/>Smits, Thomas / Lee, Benjamin / Fyfe, Paul (2023b): “Using Multimodal Machine Learning to Distant View the Illustrated World of the 
+                        <emph>Illustrated London News</emph>, 1842–1900”, in: 
+                        <emph>Digital Humanities 2023. Collaboration as Opportunity (DH2023)</emph>, Graz, Austria. 
+                        <ptr target="https://doi.org/10.5281/zenodo.8107671"/> [18.10.2024].
+                    </bibl>
+                    <bibl>Störiko, Johanna (2023): “Erkennen von Varianten historischer Werbeanzeigen mit CLIP und ChromaDB”, in: 
+                        <emph>Göttingen Edition Lab</emph>. 
+                        <ptr target="https://editionlab.hypotheses.org/304"/> [04.12.2024].
+                        <lb/>
+                    </bibl>
+                    <bibl>Stroup, Rachel L. (2019): “American Womanhood and The New Woman: A Rhetorical Consideration of the Development and Circulation of Female Stereotypes, 1890–1920”, in: 
+                        <emph>Young Scholars in Writing</emph> 16: 25–38.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

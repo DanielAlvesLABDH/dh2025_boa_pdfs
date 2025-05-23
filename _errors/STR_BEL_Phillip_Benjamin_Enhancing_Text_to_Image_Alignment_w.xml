@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="STR_BEL_Phillip_Benjamin_Enhancing_Text_to_Image_Alignment_w">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Enhancing Text-to-Image Alignment with Retrieval-Augmented GPT for Historical Event Reconstruction: Evaluating with Multimodal LLMs</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Guo</surname>
+                        <forename>Zejie</forename>
+                    </persName>
+                    <affiliation>University of Zurich, Switzerland</affiliation>
+                    <email>zejie.guo@uzh.ch</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ströbel</surname>
+                        <forename>Phillip Benjamin</forename>
+                    </persName>
+                    <affiliation>University of Zurich, Switzerland</affiliation>
+                    <email>phillip.stroebel@uzh.ch</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Maier</surname>
+                        <forename>Felix Klaus</forename>
+                    </persName>
+                    <affiliation>University of Zurich, Switzerland</affiliation>
+                    <email>felix.maier@hist.uzh.ch</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-08T14:40:38.103418787</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>digital history</term>
+                    <term>education</term>
+                    <term>image generation</term>
+                    <term>multimodal large language models</term>
+                    <term>evaluation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>digital ecologies and digital communities creation management and analysis</term>
+                    <term>image processing and analysis</term>
+                    <term>History</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>A picture is worth a thousand words, particularly in history, where visuals complement text to deepen understanding of past events (Dussel &amp; Priem 2017). E.g., visualizing a Roman triumph can animate ancient rituals in ways that textual descriptions alone cannot. Beyond enhancing engagement (Dehouche &amp; Dehouche 2023), such visualizations offer valuable tools for scholarly research, enabling historians to model and interpret the spatial, performative, and political dimensions of historical phenomena more concretely. While some scholars criticize visual media in historical narratives (Depaepe &amp; Henkens 2000), others argue that images function as semiotic systems comparable to language (Peim 2005), underscoring their analytical potential in reconstructing and contextualizing the past.</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp60tsdrjm/Pictures/192f10d0c550f4aa69253476f4b4abfb.png"/>
+                        <head>Figure 1: Failed cases from DALL-E 3, SDXL, and FLUX.1-dev, with 
+                            <hi rend="color(#ff3838)">wrongly represented elements</hi>.
+                        </head>
+                    </figure>
+                </p>
+                <p>Recent advances in text-to-image (T2I) models (Yu et al. 2022, Rombach et al. 2022, Saharia et al. 2022, Ramesh et al. 2022, Betker et al. 2023) have improved generative quality, but aligning complex prompts with accurate visuals remains challenging. Misrepresentations, such as incorrect attire or architecture, are common (Figure 1), especially when prompts involve rare cultural or temporal references.</p>
+                <p>Manual prompt engineering is time-consuming and requires domain-specific expertise (Gal et al. 2023). For example, accurately describing a Roman general’s attire or the Lupercalia festival can easily overwhelm non-experts. This paper addresses these challenges by introducing an automatic prompt refinement approach using retrieval-augmented GPT-4o (OpenAI 2024), which improves historical text-to-image generation through evidence-based alignment. By lowering the barrier to producing accurate visualizations, this method enables a wider range of scholars to incorporate visual representations into their research and teaching, thus expanding the use of AI-generated imagery as a tool for historical inquiry.</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Our Contributions</head>
+                    <list type="ordered">
+                        <item>A historical domain prompt-image dataset comprising 200 prompts and 6,000 images by five T2I models.</item>
+                        <item>An automatic T2I alignment evaluation and assessment of evaluation consistency with three MLLMs.</item>
+                        <item>A human evaluation of a subset.</item>
+                    </list>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Related Work</head>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Prompt Engineering</head>
+                    <p>Prompt engineering designs instructions to guide pre-trained models in generating outputs without modifying core parameters. T2I models typically employ (1) prompt tuning and (2) prompt optimization. Prompt tuning (Jia et al. 2022) adapts models with task-specific templates and few-shot examples, but scaling to large models becomes computationally intensive. Prompt optimization methods (e.g., 
+                        <hi rend="italic">Promptist</hi> (Hao et al. 2023)) refine user prompts to enhance image aesthetics. Building on these, our approach focuses on improving T2I alignment rather than aesthetics by leveraging an LLM for prompt refinement. We integrate domain-specific knowledge into prompts using retrieval-augmented generation (RAG) (Lewis et al. 2020), enabling historically accurate image generation.
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Parameter-Efficient Fine-Tuning (PEFT) for Image Models</head>
+                    <p>PEFT methods (Ding et al. 2023) adapt large-scale models for downstream tasks by updating only a subset of parameters. Techniques such as Low-Rank Adaptation (LoRA) (Hu et al. 2022) and adapter-based tuning (Houlsby et al. 2019) enable efficient customization. Originally developed for LLMs, these methods are now widely applied to T2I diffusion models (Saharia et al. 2022, Rombach et al. 2022, Hu et al. 2022, Mou et al. 2024, Sohn et al. 2023). Our work employs LoRA to fine-tune T2I models on a small dataset, balancing efficiency and performance to improve alignment in historical contexts.</p>
+                    <p>
+                        <figure>
+                            <graphic url="/tmp/tmp60tsdrjm/Pictures/192f10d0c550f4aa69253476f4b4abfb.png"/>
+                            <head>Figure 2: Comparison of triumph images (3 random samples) generated by five T2I models using initial and refined prompts; 
+                                <hi rend="color(#5983b0)">main objects used for retrieval</hi>, 
+                                <hi rend="color(#ff3838)">added historical context</hi>.
+                            </head>
+                        </figure>
+                    </p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Dataset Preparation</head>
+                <p>Our dataset was prepared in two steps:</p>
+                <list type="ordered">
+                    <item>
+                        <hi rend="bold">Prompt Generation</hi> We used 100 manually crafted prompts from (Ströbel et al. 2024), comprising 75 depicting triumphal processions in ancient Rome and 25 centered on the 
+                        <hi rend="italic">Lupercalia</hi> festival.
+                    </item>
+                    <item>
+                        <hi rend="bold">Image Model Fine-tuning and Image Generation</hi> We generated 3,000 images using five models: DALL-E 3 (Betker et al. 2023), SDXL (Podell et al. 2024), fine-tuned SDXL, FLUX.1-dev,<ref n="1" target="ftn0"/> and fine-tuned FLUX.1-dev.<ref n="2" target="ftn1"/> Each prompt from step 1 was used to generate six images. For fine-tuning, we curated 276 caption-image pairs, of which 177 pairs are from two historical books (Gorski &amp; Packer 2015b, Kiley 2013) on architecture, clothing, and weapons, and 99 are frames from the TV series Rome, S1E10,<ref n="3" target="ftn2"/> automatically captioned with Claude 3.5 Sonnet.<ref n="4" target="ftn3"/> We fine-tuned on Replicate using LoRA (Hu et al. 2022) and textual inversion (Gal et al. 2023) for SDXL, and Ostris’s AI Toolkit for FLUX.1-dev. We applied three lora_scale values (0.2, 0.4, 0.6), generating two images per value for each prompt with the fine-tuned models. The complete dataset will be publicly available on GitHub.<ref n="5" target="ftn4"/>
+                    </item>
+                </list>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>RAG with GPT-4o</head>
+                <p>The goal of this study is to enhance T2I alignment through automatic prompt refinement using RAG via OpenAI’s Assistant API,<ref n="6" target="ftn5"/> leveraging the Chain-of-Thought prompting strategy (Wei et al. 2022).
+                </p>
+                <p>GPT-4o extracts historical objects from initial prompts within predefined categories and uses them as queries to retrieve contextual content from a historical domain database.<ref n="7" target="ftn6"/> The retrieved content enriches the prompts, enabling better alignment with the historical objects described.
+                </p>
+                <p>The experiment refined the 100 human-generated prompts, generating six images per refined prompt across five T2I models, yielding 3,000 images. We applied the same lora_scale settings from the initial dataset generation for fine-tuned models. Appendix A Figure 6 provides detailed instructions on the refinement process.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Evaluation</head>
+                <p>T2I alignment evaluates how well an image’s visual semantics match a prompt’s textual se-</p>
+                <p>mantics (Yarom et al. 2023). We adopted two evaluation criteria from (Ströbel et al. 2024): (1)</p>
+                <p>QG-VQA using MLLMs across the full dataset and (2) a 5-point Likert scale evaluation with</p>
+                <p>both MLLMs and human raters on a subset. The MLLMs used were GPT-4o, Gemini 1.5 Pro</p>
+                <p>(Reid et al. 2024), and Claude 3.5 Sonnet.</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>
+                        <figure>
+                            <graphic url="/tmp/tmp60tsdrjm/Pictures/192f10d0c550f4aa69253476f4b4abfb.png"/>
+                            <head>Figure 3: Comparison of Lupercalia images (three random samples) from five T2I models using initial and refined prompts; 
+                                <hi rend="color(#5983b0)">main objects used for retrieval</hi>, 
+                                <hi rend="color(#ff3838)">added historical context</hi>.
+                            </head>
+                        </figure>QG-VQA Setup
+                    </head>
+                    <p>The QG-VQA metric (Hu et al. 2023, Cho et al. 2024) involved generating questions with GPT-3.5 (Brown et al. 2020) and answering them using the MLLMs. Binary responses (1 for “Yes,” 0 for “No”) were averaged per image to compute a final alignment score ranging from 0 (no alignment) to 1 (perfect alignment). See Appendix A Figure 8 for the prompt.</p>
+                    <p>
+                        <figure>
+                            <graphic url="/tmp/tmp60tsdrjm/Pictures/192f10d0c550f4aa69253476f4b4abfb.png"/>
+                            <head>Table 1: VQA-based T2I alignment evaluation.</head>
+                        </figure>
+                    </p>
+                    <p>
+                        <figure>
+                            <graphic url="/tmp/tmp60tsdrjm/Pictures/192f10d0c550f4aa69253476f4b4abfb.png"/>
+                            <head>Table 2: Human 5-point Likert scale evaluation.</head>
+                        </figure>
+                    </p>
+                    <p>
+                        <figure>
+                            <graphic url="/tmp/tmp60tsdrjm/Pictures/192f10d0c550f4aa69253476f4b4abfb.png"/>
+                            <head>Table 3: MLLM 5-point Likert scale evaluation.</head>
+                        </figure>
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>5-point Likert Scale Setup</head>
+                    <p>We conducted a Likert scale evaluation on 150 randomly sampled prompt-image pairs, with 15 pairs per T2I model (10 from Triumph and 5 from 
+                        <hi rend="italic">Lupercalia</hi>). Human and MLLM raters assessed alignment on a scale from 1 (no match) to 5 (perfect match). Refined prompt-image pairs were evaluated alongside their initial counterparts, and Appendix A Figure 7 details the evaluation guidelines.
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Results</head>
+                    <p>Table 1 presents the average VQA scores for five T2I models: DALL-E 3, SDXL, fine-tuned SDXL, FLUX.1-dev, and fine-tuned FLUX.1-dev, using initial and refined prompts. Refined prompts consistently achieved higher VQA scores, particularly for DALL-E 3, FLUX.1, and fine-tuned FLUX.1, with the largest improvement observed for FLUX.1, which achieved a 0.22-point increase. Tables 2 and 3 detail the 5-point Likert scale evaluations by humans and MLLMs, respectively. Refined prompts notably improved alignment in the 
+                        <hi rend="italic">Lupercalia</hi> category for DALL-E 3, although performance varied in the Triumph category.
+                    </p>
+                    <p>
+                        <hi rend="bold">LoRA Fine-Tuning Enhances SDXL Performance.</hi> The results indicate that LoRA fine-tuning improves SDXL’s T2I alignment across both VQA and Likert-scale evaluations. Fine-tuned SDXL consistently outperformed its base version, achieving the largest improvement in the Triumph category. As Tables 2 and 3 show, human 
+                        <hi rend="italic">and</hi> MLLM assessments favored fine-tuned SDXL, confirming the effectiveness of combining textual inversion with LoRA for modeling intricate historical concepts.
+                    </p>
+                    <p>
+                        <figure>
+                            <graphic url="/tmp/tmp60tsdrjm/Pictures/192f10d0c550f4aa69253476f4b4abfb.png"/>
+                            <head>Figure 4: VQA score distribution from three MLLMs for DALL-E 3 images using initial (lighter saturation) and refined (darker saturation) prompts.</head>
+                        </figure>
+                    </p>
+                    <p>
+                        <figure>
+                            <graphic url="/tmp/tmp60tsdrjm/Pictures/192f10d0c550f4aa69253476f4b4abfb.png"/>
+                            <head>Figure 5: VQA score distribution from three MLLMs for images generated with refined prompts using base (lighter saturation) and fine-tuned (darker saturation) SDXL.</head>
+                        </figure>
+                        <hi rend="bold">Rating Divergences Among MLLMs.</hi> Figures 4 and 5 show notable differences in VQA scores across MLLMs. GPT-4o and Gemini exhibited similar scoring patterns, typically assigning mid-range scores (0.3–0.7), while Claude’s ratings predominantly clustered in the lower range (0.0–0.3). Jensen-Shannon divergence analysis indicated high similarity between GPT-4o and Gemini’s rating distributions for DALL-E 3 and SDXL, while Claude’s scores diverged significantly. These findings are supported by inter-annotator agreement (IAA) results in Table 6, which highlight stronger alignment between GPT-4o and Gemini but lower overall agreement across all MLLMs.
+                    </p>
+                    <p>
+                        <hi rend="bold">Refined Prompts Lead to Better Object Alignment.</hi> As Figures 2 and 3 illustrate, refined prompts consistently produced images that better aligned with the described objects, especially in historically complex scenes. E.g., refined prompts improved depictions of Roman architectural details in Lupercalia, while initial prompts often failed to capture these nuances.
+                    </p>
+                    <p>
+                        <hi rend="bold">Evaluation Complexity.</hi> The IAA results in Table 4 reflect significant discrepancies in VQA evaluations among MLLMs, with all scores falling below the 0.67 threshold. These results highlight the inherent complexity of evaluating T2I alignment and underscore the need for more robust and interpretable metrics.
+                    </p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <figure>
+                        <graphic url="/tmp/tmp60tsdrjm/Pictures/192f10d0c550f4aa69253476f4b4abfb.png"/>
+                        <head>Table 4: Krippendorff’s 𝛼 between MLLM raters’ VQA scores.</head>
+                    </figure>Conclusion
+                </head>
+                <p>This study demonstrates the potential of retrieval-augmented GPT-4o to enhance T2I alignment by refining prompts with historical context. Refined prompts improved alignment across five T2I models (Tables 3 and 4), with LoRA fine-tuning further enhancing SDXL performance. These results emphasize the importance of integrating historical specificity into prompt engineering.</p>
+                <p>Evaluation discrepancies among MLLMs (Table 6) highlight the need for more robust metrics, while GPT-4o’s occasional hallucinations during refinement affect reliability. The small human evaluation dataset limits generalizability. Future work should explore re-ranking strategies and larger datasets to address these challenges.</p>
+                <p>By bridging gaps in T2I alignment, this work advances the generation of historically accurate visualizations, paving the way for deeper insights into historical events.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Acknowledgements</head>
+                <p>We would like to thank Nicola Steger, Olav Henry Fisher, Ülkü Karagöz and Eva Maria Willi for their helpful image evaluation and discussion.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Appendix A – Additional Figures</head>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp60tsdrjm/Pictures/192f10d0c550f4aa69253476f4b4abfb.png"/>
+                        <head>Figure 6: Prompt for contextual information retrieval and image prompt refinement with GPT-4oAssistant API using CoT.</head>
+                    </figure>
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp60tsdrjm/Pictures/192f10d0c550f4aa69253476f4b4abfb.png"/>
+                        <head>Figure 7: Prompt for 5-point Likert scale evaluation.</head>
+                    </figure>
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp60tsdrjm/Pictures/192f10d0c550f4aa69253476f4b4abfb.png"/>
+                        <head>Figure 8: Prompt for VQA with GPT-4o, Claude 3.5 Sonnet, and Gemini 1.5 Pro.</head>
+                    </figure>
+                </p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn0" rend="footnote text" n="1">
+                            
+                        </note>
+<note xml:id="ftn1" rend="footnote text" n="2"> Fine-tuned via Replicate: 
+                            <ref target="https://replicate.com/">https://replicate.com</ref>.
+                        </note>
+<note xml:id="ftn2" rend="footnote text" n="3">
+                            
+                        </note>
+<note xml:id="ftn3" rend="footnote text" n="4">
+                            
+                        </note>
+<note xml:id="ftn4" rend="footnote text" n="5">
+                            
+                        </note>
+<note xml:id="ftn5" rend="footnote text" n="6">
+                        
+                    </note>
+<note xml:id="ftn6" rend="footnote text" n="7"> 31 documents in three categories: (1) Roman architecture (Hales 2003, Miles 2016, Southern 2006, Kleiner 2014, Anderson 2013, Marconi 2015, Müller et al. 2005, Tolqin 2021, Sear 2002, Lott 2018, Ulrich &amp; Quenemoen 2013, Gorski &amp; Packer 2015a), (2) clothing (Matz 2001, Garland 2009, Olson 2012, Fögen &amp; Lee 2009, Noy 2002, Peachin 2011, Boatwright 2012, De Ligt &amp; Northwood 2008, Lo Cascio 2018, Montserrat 2002, Parani 2008, Bonfante &amp; Sebesta 2001, Noy 2018), and (3) the Roman army (Erdkamp 2007, Tacoma 2016, Coulston 2018, Barker 2015, Hassall 2000, Kiley 2012).</note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Anderson, J. C. (2013). 
+                        <hi rend="italic">Roman Architecture in Provence</hi>. Cambridge: Cambridge University Press.
+                    </bibl>
+                    <bibl>Barker, P. (2015). 
+                        <hi rend="italic">The Armies and Enemies of Imperial Rome</hi>, Lulu. Com.
+                    </bibl>
+                    <bibl>Betker, J., Goh, G., Jing, L., Brooks, T., Wang, J., Li, L., Ouyang, L., Zhuang, J., Lee, J., Guo, Y. et al. (2023), ‘Improving Image Generation with Better Captions’. &lt; 
+                        <ptr target="https://cdn.openai.com/papers/dall-e-3.pdf"/>&gt; [08.05.2025].
+                    </bibl>
+                    <bibl>Boatwright, M. T. (2012). 
+                        <hi rend="italic">Peoples of the Roman World</hi>. Cambridge: Cambridge University Press.
+                    </bibl>
+                    <bibl>Bonfante, L. &amp; Sebesta, J. L. (2001). 
+                        <hi rend="italic">The World of Roman Costume</hi>. University of Wisconsin Press. &lt;
+                        <ptr target="https://uwpress.wisc.edu/books/0087.htm"/>&gt; [08.05.2025].
+                    </bibl>
+                    <bibl>Brown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J. D., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A., Agarwal, S., Herbert-Voss, A., Krueger, G., Henighan, T., Child, R., Ramesh, A., Ziegler, D., Wu, J., Winter, C., Hesse, C., Chen, M., Sigler, E., Litwin, M., Gray, S., Chess, B., Clark, J., Berner, C., McCandlish, S., Radford, A., Sutskever, I. &amp; Amodei, D. (2020). “Language Models are Few-Shot Learners”, in: 
+                        <hi rend="italic">Advances in Neural Information Processing Systems</hi>, 33:, 1877–1901 &lt;
+                        <ptr target="https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf"/>&gt; [08.05.2025].
+                    </bibl>
+                    <bibl>Cho, J., Hu, Y., Baldridge, J. M., Garg, R., Anderson, P., Krishna, R., Bansal, M., Pont-Tuset, J. &amp; Wang, S. (2024). “Davidsonian Scene Graph: Improving Reliability in Fine-Grained Evaluation for Text-to-Image Generation”, in: 
+                        <hi rend="italic">The Twelfth International Conference on Learning Representations</hi>. &lt;
+                        <ptr target="https://openreview.net/forum?id=ITq4ZRUT4a"/>&gt; [08.05.2025].
+                    </bibl>
+                    <bibl>Coulston, J. (2018). 
+                        <hi rend="italic">The Army in Imperial Rome</hi>. Wiley Online Library.
+                    </bibl>
+                    <bibl>De Ligt, L. &amp; Northwood, S. (2008). 
+                        <hi rend="italic">People, Land, and Politics: Demographic Developments and the Transformation of Roman Italy, 300 BC-AD 14</hi>: 303, Brill.
+                    </bibl>
+                    <bibl>Dehouche, N. &amp; Dehouche, K. (2023). “What’s in a Text-to-Tmage Prompt? The Potential o Stable Diffusion in Visual Arts Education”, in: 
+                        <hi rend="italic">Heliyon</hi> 9, 6.
+                    </bibl>
+                    <bibl>Depaepe, M. &amp; Henkens, B. (2000). “The History of Education and the Challenge of the Visual”, in: 
+                        <hi rend="italic">Paedagogica Historica</hi> 36, 1: 10–17.
+                    </bibl>
+                    <bibl>Ding, N., Qin, Y., Yang, G., Wei, F., Yang, Z., Su, Y., Hu, S., Chen, Y., Chan, C.-M., Chen, W., Yi, J., Zhao, W., Wang, X., Liu, Z., Zheng, H.-T., Chen, J., Liu, Y., Tang, J., Li, J. &amp; Sun, M. (2023). “Parameter-Efficient Fine-Tuning of Large-Scale Pre-Trained Language Models”, in: 
+                        <hi rend="italic">Nature Machine Intelligence</hi> 5, 3: 220–235. &lt;
+                        <ptr target="https://doi.org/10.1038/s42256-023-00626-4"/>&gt; [08.05.2025]
+                    </bibl>
+                    <bibl>Dussel, I. &amp; Priem, K. (2017). “The Visual in Histories of Education: A Reappraisal”, in: 
+                        <hi rend="italic">Paedagogica Historica</hi> 53, 6: 641–649.
+                    </bibl>
+                    <bibl>Erdkamp, P., ed. (2007). 
+                        <hi rend="italic">A Companion to the Roman Army</hi>.Blackwell.
+                    </bibl>
+                    <bibl>Fögen, T. &amp; Lee, M. M. (2009). 
+                        <hi rend="italic">Bodies and Boundaries in Graeco-Roman Antiquity</hi>. Walter de Gruyter.
+                    </bibl>
+                    <bibl>Gal, R., Alaluf, Y., Atzmon, Y., Patashnik, O., Bermano, A. H., Chechik, G. &amp; Cohen-or, D. (2023). “An Image is Worth One Word: Personalizing Text-to-Image Generation using Textual Inversion”, in: 
+                        <hi rend="italic">The Eleventh International Conference on Learning Representations</hi>. &lt;
+                        <ptr target="https://openreview.net/forum?id=NAQvF08TcyG"/>&gt; [08.05.2025].
+                    </bibl>
+                    <bibl>Garland, R. (2009). 
+                        <hi rend="italic">Daily Life of the Ancient Greeks</hi>. The Greenwood Press Daily Life Through History Series, Greenwood Press.
+                    </bibl>
+                    <bibl>Gorski, G. J. &amp; Packer, J. E. (2015). 
+                        <hi rend="italic">The Roman Forum: </hi>
+                        <hi rend="italic">A</hi>
+                        <hi rend="italic"> </hi>
+                        <hi rend="italic">R</hi>
+                        <hi rend="italic">econstruction and </hi>
+                        <hi rend="italic">A</hi>
+                        <hi rend="italic">rchitectural </hi>
+                        <hi rend="italic">G</hi>
+                        <hi rend="italic">uide</hi>. Cambridge University Press.
+                    </bibl>
+                    <bibl>Hales, S. (2003). 
+                        <hi rend="italic">The Roman House and Social Identity</hi>. Cambridge: Cambridge University Press.
+                    </bibl>
+                    <bibl>Hao, Y., Chi, Z., Dong, L. &amp; Wei, F. (2023). “Optimizing Prompts for Text-to-Image Generation”, in: A. Oh, T. Naumann, A. Globerson, K. Saenko, M. Hardt &amp; S. Levine (eds.) 
+                        <hi rend="italic">Advances in Neural Information Processing Systems</hi> 36: 66923–66939. &lt;
+                        <ptr target="https://proceedings.neurips.cc/paper_files/paper/2023/file/d346d91999074dd8d6073d4c3b13733b-Paper-Conference.pdf"/>&gt; [08.05.2025].
+                    </bibl>
+                    <bibl>Hassall, M. (2000). 
+                        <hi rend="italic">The Cambridge Ancient History.</hi> Cambridge University Press.
+                    </bibl>
+                    <bibl>Houlsby, N., Giurgiu, A., Jastrzebski, S., Morrone, B., De Laroussilhe, Q., Gesmundo, A., Attariyan, M. &amp; Gelly, S. (2019). “Parameter-Efficient Transfer Learning for NLP”, in: 
+                        <hi rend="italic">Proceedings of Machine Learning Research</hi>, 2790–2799. &lt; 
+                        <ptr target="https://proceedings.mlr.press/v97/houlsby19a.html"/>&gt; [08.05.2025].
+                    </bibl>
+                    <bibl>Hu, E. J., yelong shen, Wallis, P., Allen-Zhu, Z., Li, Y., Wang, S., Wang, L. &amp; Chen, W. (2022). “LoRA: Low-Rank Adaptation of Large Language Models”, in: 
+                        <hi rend="italic">International Conference on Learning Representations</hi>. &lt;
+                        <ptr target="https://openreview.net/forum?id=nZeVKeeFYf9"/>&gt; [08.05.2025].
+                    </bibl>
+                    <bibl>Hu, Y., Liu, B., Kasai, J., Wang, Y., Ostendorf, M., Krishna, R. &amp; Smith, N. A. (2023). “TIFA: Accurate and Interpretable Text-to-Image Faithfulness Evaluation with Question Answering”. &lt;
+                        <ptr target="http://arxiv.org/abs/2303.11897"/>&gt; [08.05.2025].
+                    </bibl>
+                    <bibl>Jia, M., Tang, L., Chen, B.-C., Cardie, C., Belongie, S., Hariharan, B. &amp; Lim, S.-N. (2022). “Visual Prompt Tuning”, in: S. Avidan, G. Brostow, M. Cissé, G. M. Farinella &amp; T. Hassner, (eds.), 
+                        <hi rend="italic">Computer Vision</hi>, 709–727.
+                    </bibl>
+                    <bibl>Kiley, K. (2013). 
+                        <hi rend="italic">An Illustrated Encyclopedia of the Uniforms of the Roman World: A Detailed Study of the Armies of Rome and Their Enemies, Including the Etruscans, Samnites, Carthaginians, Celts, Macedonians, Gauls, Huns, Sassanids, Persians and Turks</hi>. Anness Publishing. &lt;
+                        <ptr target="https://books.google.ch/books?id=vB84LgEACAAJ"/>&gt; [08.05.2025].
+                    </bibl>
+                    <bibl>Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., Küttler, H., Lewis, M., Yih, W.-t., Rocktäschel, T., Riedel, S. &amp; Kiela, D. (2020). “Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks”, in: H. Larochelle, M. Ranzato, R. Hadsell, M. F. Balcan &amp; H. Lin (eds.), 
+                        <hi rend="italic">Advances in Neural Information Processing Systems</hi> 33, 9459–9474. &lt; 
+                        <ptr target="https://proceedings.neurips.cc/paper_files/paper/2020/file/6b493230205f780e1bc26945df7481e5-Paper.pdf"/>&gt; [08.05.2025].
+                    </bibl>
+                    <bibl>Lo Cascio, E. (2018). “The Population”, in: C. Holleran and A. Claridge (eds.) 
+                        <hi rend="italic">A Companion to the City of Rome</hi>, 137–153. John Wiley Sons.
+                    </bibl>
+                    <bibl>Lott, J. B. (2018). “Streets and Street Life”, in: C. Holleran and A. Claridge (eds.) 
+                        <hi rend="italic">A Companion to the City of Rome</hi>, 263–278. John Wiley Sons. &lt; 
+                        <ptr target="https://onlinelibrary.wiley.com/doi/abs/10.1002/9781118300664.ch12"/>&gt; [08.05.2025].
+                    </bibl>
+                    <bibl>Marconi, C. (2015). 
+                        <hi rend="italic">The Oxford Handbook of Greek and Roman Art and Architecture</hi>. Oxford University Press.
+                    </bibl>
+                    <bibl>Matz, D. (2001). 
+                        <hi rend="italic">Daily Life of the Ancient Romans</hi>. Greenwood Publishing Group, Inc. &lt; 
+                        <ptr target="https://www.bloomsburycollections.com/monograph?docid=b-9798400637353"/>&gt; [08.05.2025].
+                    </bibl>
+                    <bibl>Miles, M. M., ed. (2016).
+                        <hi rend="italic">A Companion to Greek Architecture Blackwell </hi>
+                        <hi rend="italic">C</hi>
+                        <hi rend="italic">ompanions to the </hi>
+                        <hi rend="italic">A</hi>
+                        <hi rend="italic">ncient </hi>
+                        <hi rend="italic">W</hi>
+                        <hi rend="italic">orld</hi>. Chichester, West Sussex: John Wiley &amp; Sons.
+                    </bibl>
+                    <bibl>Montserrat, D. (2002). 
+                        <hi rend="italic">Changing Bodies, Changing Meanings: Studies on the Human Body in Antiquity</hi>. Routledge.
+                    </bibl>
+                    <bibl>Mou, C., Wang, X., Xie, L., Wu, Y., Zhang, J., Qi, Z. &amp; Shan, Y. (2024). “T2I-Adapter: Learning Adapters to Dig Out More Controllable Ability for Text-to-Image Diffusion Models”, in: 
+                        <hi rend="italic">Thirty-Eighth AAAI Conference on Artificial Intelligence, AAAI 2024, Thirty-Sixth Conference on Innovative Applications of Artificial Intelligence, IAAI 2024, Fourteenth Symposium on Educational Advances in Artificial Intelligence, EAAI 2014</hi>: 4296–4304. DOI: 
+                        <ptr target="https://doi.org/10.1609/aaai.v38i5.28226"/> [08.05.2025].
+                    </bibl>
+                    <bibl>Müller, P., Vereenooghe, T., Ulmer, A. &amp; Van Gool, L. (2005). “Automatic Reconstruction of Roman Housing Architecture”, in: 
+                        <hi rend="italic">International Workshop on Recording, Modeling and Visualization of Cultural Heritage</hi>, 287–297. &lt; 
+                        <ptr target="https://api.semanticscholar.org/CorpusID:477127"/>&gt; [08.05.2025].
+                    </bibl>
+                    <bibl>Noy, D. (2002). 
+                        <hi rend="italic">Foreigners at Rome: Citizens and Strangers</hi>. Duckworth.
+                    </bibl>
+                    <bibl>Noy, D. (2018). 
+                        <hi rend="italic">Social Structure and the Plebs Romana</hi>. Wiley Online Library.
+                    </bibl>
+                    <bibl>Olson, K. (2012). 
+                        <hi rend="italic">Dress and the Roman Woman.</hi> Routledge. &lt; 
+                        <ptr target="https://www.taylorfrancis.com/books/9781134121212"/>&gt;
+                    </bibl>
+                    <bibl>OpenAI (2024), ‘Hello GPT-4o’. &lt;
+                        <ptr target="https://openai.com/index/hello-gpt-4o"/>&gt; [08.05.2025].
+                    </bibl>
+                    <bibl>Parani, M. G. (2008). 
+                        <hi rend="italic">Defining Personal Space: Dress And Accessories in Late Antiquity</hi>, 5: 495–529. Brill.
+                    </bibl>
+                    <bibl>Peachin, M. (2011). 
+                        <hi rend="italic">The Oxford Handbook of Social Relations in the Roman World</hi>. Oxford University Press.
+                    </bibl>
+                    <bibl>Peim, N. (2005). “Introduction: The Life of Signs in Visual History”, in: 
+                        <hi rend="italic">Visual History: Images of Education.</hi> Peter Lang
+                    </bibl>
+                    <bibl>Podell, D., English, Z., Lacey, K., Blattmann, A., Dockhorn, T., Müller, J., Penna, J. &amp; Rombach, R. (2024). “SDXL: Improving Latent Diffusion Models for High-Resolution Image Synthesis”, in: 
+                        <hi rend="italic">The Twelfth International Conference on Learning Representations</hi>. &lt; 
+                        <ptr target="https://openreview.net/forum?id=di52zR8xgf"/>&gt; [08.05.2025].
+                    </bibl>
+                    <bibl>Ramesh, A., Dhariwal, P., Nichol, A., Chu, C. &amp; Chen, M. (2022). “Hierarchical Text-Conditional Image Generation with CLIP Latents”, OpenAI Blog abs/2204.06125. &lt; 
+                        <ptr target="https://cdn.openai.com/papers/dall-e-2.pdf"/>&gt;
+                    </bibl>
+                    <bibl>Reid, M., Savinov, N., Teplyashin, D., Lepikhin, D., Lillicrap, T., Alayrac, J.-b., Soricut, R., Lazaridou, A., Firat, O., Schrittwieser, J. et al. (2024). “Gemini 1.5: Unlocking Multimodal Understanding Across Millions of Tokens of Context”, in: 
+                        <hi rend="italic">arXiv preprint</hi>. ArXiv:2403.05530.
+                    </bibl>
+                    <bibl>Rombach, R., Blattmann, A., Lorenz, D., Esser, P. &amp; Ommer, B. (2022). “High-Resolution Image Synthesis with Latent Diffusion Models”, in: 
+                        <hi rend="italic">Conference on Computer Vision and Pattern Recognition (CVPR)</hi>: 10674–10685. DOI: 
+                        <ptr target="https://doi.ieeecomputersociety.org/10.1109/CVPR52688.2022.01042"/> [08.05.2025].
+                    </bibl>
+                    <bibl>Saharia, C., Chan, W., Saxena, S., Li, L., Whang, J., Denton, E., Ghasemipour, S. K. S., Ayan, B. K., Mahdavi, S. S., Lopes, R. G., Salimans, T., Ho, J., Fleet, D. J. &amp; Norouzi, M. (2022). “Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding”, in: 
+                        <hi rend="italic">Advances in Neural Information Processing</hi>: 36479–36494. &lt;
+                        <ptr target="https://proceedings.neurips.cc/paper_files/paper/2022/file/ec795aeadae0b7d230fa35cbaf04c041-Paper-Conference.pdf"/>&gt; [08.05.2025].
+                    </bibl>
+                    <bibl>Sear, F. (2002). 
+                        <hi rend="italic">Roman Architecture</hi>. Routledge.
+                    </bibl>
+                    <bibl>Sohn, K., Jiang, L., Barber, J., Lee, K., Ruiz, N., Krishnan, D., Chang, H., Li, Y., Essa, I., Rubinstein, M., Hao, Y., Entis, G., Blok, I. &amp; Chin, D. C. (2023). “StyleDrop: Text-to-Image Generation of Any Style”, in: Advances in Neural Information Processing Systems. &lt; 
+                        <ptr target="http://papers.nips.cc/paper_files/paper/2023/hash/d33b177b69425e7685b0b1c05bd2a5e4-Abstract-Conference.html"/>&gt; [08.05.2025].
+                    </bibl>
+                    <bibl>Southern, P. (2006). 
+                        <hi rend="italic">The Roman Army: A Social and Institutional History</hi>. Santa Barbara, Calif: ABC-CLIO.
+                    </bibl>
+                    <bibl>Ströbel, P. B., Guo, Z., Karagöz, Ü., Willi, E. M. &amp; Maier, F. K. (2024). “Bringing Rome to Life: Evaluating Historical Image Generation”, in: 
+                        <hi rend="italic">Proceedings of the Computational Humanities Research Conference 2024</hi>, 113–126. DOI: &lt;
+                        <ptr target="https://doi.org/10.5167/uzh-265462"/>&gt; [08.05.2025].
+                    </bibl>
+                    <bibl>Tacoma, L. E. (2016). 
+                        <hi rend="italic">Moving Romans: Migration to Rome in the Principate</hi>. Oxford University Press.
+                    </bibl>
+                    <bibl>Tolqin, A. (2021). “Ancient Greek and Ancient Rome Architecture and Urban Planning”, in: 
+                        <hi rend="italic">The American Journal of Engineering and Technology</hi> 3, 06: 82–87. &lt;: 
+                        <ptr target="https://theamericanjournals.com/index.php/tajet/article/view/315"/>&gt; [08.05.2025].
+                    </bibl>
+                    <bibl>Ulrich, R. B. &amp; Quenemoen, C. K. (2013). 
+                        <hi rend="italic">A Companion to Roman Architecture</hi>. John Wiley &amp; Sons.
+                    </bibl>
+                    <bibl>Wei, J., Wang, X., Schuurmans, D., Bosma, M., Ichter, B., Xia, F., Chi, E. H., Le, Q. V. &amp; Zhou, D. (2022). “Chain-of-Thought Prompting Elicits Reasoning in Large Language Models”, in: 
+                        <hi rend="italic">Advances in Neural Information Processing Systems. &lt;</hi>
+                        <ptr target="http://papers.nips.cc/paper_files/paper/2022/hash/9d5609613524ecf4f15af0f7b31abca4-Abstract-Conference.html"/>&gt;
+                    </bibl>
+                    <bibl>Yarom, M., Bitton, Y., Changpinyo, S., Aharoni, R., Herzig, J., Lang, O., Ofek, E. &amp; Szpektor, I. (2023). “What You See is What You Read? Improving Text-Image Alignment Evaluation”, in: 
+                        <hi rend="italic">Advances in Neural Information Processing Systems. &lt;</hi>
+                        <ptr target="http://papers.nips.cc/paper_files/paper/2023/hash/056e8e9c8ca9929cb6cf198952bf1dbbAbstract-Conference.html"/>&gt; [08.05.2025].
+                    </bibl>
+                    <bibl>Yu, J., Xu, Y., Koh, J. Y., Luong, T., Baid, G., Wang, Z., Vasudevan, V., Ku, A., Yang, Y., Ayan, B. K., Hutchinson, B., Han, W., Parekh, Z., Li, X., Zhang, H., Baldridge, J. &amp; Wu, Y. (2022). “Scaling Autoregressive Models for Content-Rich Text-to-Image Generation”, in: 
+                        <hi rend="italic">Transactions on Machine Learning Research</hi>. &lt;
+                        <ptr target="https://openreview.net/forum?id=AFDcYJKhND"/>&gt; [08.05.2025].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

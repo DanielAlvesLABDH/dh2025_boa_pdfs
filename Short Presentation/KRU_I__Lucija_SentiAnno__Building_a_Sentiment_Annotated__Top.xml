@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KRU_I__Lucija_SentiAnno__Building_a_Sentiment_Annotated__Top">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>SentiAnno: Building a Sentiment-Annotated, Topic-Specific Corpus of Austrian Historical Newspapers</title>
+                <author>
+                    <persName>
+                        <surname>Krušić Brozić</surname>
+                        <forename>Lucija</forename>
+                    </persName>
+                    <affiliation>Department of Digital Humanities, University of Graz, Austria</affiliation>
+                    <email>lucija.krusic@uni-graz.at</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-02T12:29:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Corpus Creation</term>
+                    <term>Sentiment Annotation</term>
+                    <term>Sentiment Analysis</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>text mining and analysis</term>
+                    <term>Computer science</term>
+                    <term>Cultural studies</term>
+                    <term>Media studies</term>
+                    <term>Central/Eastern European Studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">This contribution presents the extended SentiAnno, a sentiment-annotated, topic-specific corpus of Austrian historical newspapers, covering the period between 1700 and 1938. SentiAnno was developed to identify opinions on migration and minority groups in newspapers with varying political leanings, facilitating fine-tuning of Large Language Models (LLMs) for sentiment analysis and topic classification. The corpus is designed to support sentiment analysis, the automatic detection of opinions and emotions in textual data (Liu, 2012) and focuses on migration and minority-related topics. The practical application of the corpus is demonstrated by the planned fine-tuning of the byt5-small-historic-multilingual model (Schweter, 2020) for sentiment analysis.</p>
+            <p style="text-align: left; ">Sentiment analysis has become a popular method in Digital Humanities (DH) for analyzing literary and historical texts, including novels (Häußler &amp; Gius, 2023), travelogues (Dejaeghere et al., 2024), drama (Schmidt et al., 2021), and periodicals (Koncar et al., 2020). While LLMs like BERT (Devlin, 2019) have replaced dictionaries as the preferred tool for sentiment analysis due to their ability to capture context, there remains a lack of sentiment-annotated corpora tailored to historical texts. SentiAnno addresses this gap by focusing on Austrian newspapers.</p>
+            <p style="text-align: left; ">The corpus includes sentences and short texts from seven newspapers sourced from the ANNO (Österreichische Nationalbibliothek, 2021) and DIGITARIUM (Austrian Academy of Sciences, 2017): Wienerisches Diarium, Der Wanderer, Österreichischer Beobachter, Das Vaterland, Neue Freie Presse, Arbeiter Zeitung and Illustrierte Kronen Zeitung. These newspapers span from 1700 to 1938, encompassing significant societal developments such as 19th-century internal migration and the pre-, during-, and post-war periods of the early 20th century. capturing critical societal developments. Sentences and texts pertaining to topics relevant to migration and minorities (e.g., "Jews," "labour and minorities," "nationalism," and "minority rights") were identified using Dynamic Topic Modeling with BERTopic (Grootendorst, 2022) and annotated by with four sentiment categories: positive (the sentence expresses a positive sentiment), negative (a negative sentiment is conveyed), neutral (no sentiment is expressed), and mixed (two or more sentiments are present without a clear dominant one).</p>
+            <p style="text-align: left; ">The preliminary version of SentiAnno is published in Krušić (2024a), and the annotation process is outlined in Krušić (2024b). It covers the period between 1850 and 1900 and includes 929 sentences from two newspapers: Neue Freie Presse, an upper-middle-class liberal periodical, and Das Vaterland, a Catholic-conservative title. In the scope of this study, it is extended with additional annotations, provided by three semi-experts (Master’s students in Linguistics and Digital Humanities).</p>
+            <p style="text-align: left; ">One goal of this study is to build on the findings of Krušić (2024b) by improving inter-annotator agreement, which in the preliminary study was fair to moderate (Fleiss' kappa = 0.405) with an average percentage agreement of 92.5% for two out of three annotators. Additionally, the study aims to address the preliminary corpus imbalances, particularly the prevalence of negative and neutral annotations. Feedback from annotators in the preliminary study informed improvements, such as retaining positive elements of the process (e.g., including the title, topic, and date of the newspaper issue and conducting feedback rounds after each annotation session) while increasing context around annotation units. Instead of a single preceding and following sentence, annotators are now provided with three sentences before and after the annotation target. To clarify ambiguities reported in the preliminary study—whether to annotate the sentiment of the language, the sentiment toward a minority group, or the emotional state of the speaker—the current study also highlights the aspect, the specific term or multi-word expression to which the sentiment applies.</p>
+            <p style="text-align: left; ">Moreover, the annotation tools were revisited. The preliminary study compared Google Sheets, Google Forms, and Doccano (Hiroki et al., 2018), finding Doccano optimal due to its ease of navigation and commenting features. Building on this, the present study evaluates three specialized annotation tools—Doccano, Prodigy (Klie et al, 2018), and INCEpTION (Montani &amp; Honnibal, 2017)—using the survey methodology established in Krušić (2024b) to identify the most effective tool for historical journalistic texts. The evaluation of the annotation process and tools will be repeated using the previously designed survey (Krušić, 2024b). Once annotations are collected and evaluated using inter-annotator agreement, a gold-standard corpus will be created through majority vote.</p>
+            <p style="text-align: left; ">This study is ongoing, with the annotation collection and evaluation processes still in progress. Insights from the preliminary study are being applied to refine the annotation process and tools, with the aim of enhancing inter-annotator agreement and creating a more balanced corpus. Planned next steps include fine-tuning the byt5-small-historic-multilingual model (Schweter, 2020) for sentiment analysis using SentiAnno, with evaluations conducted through accuracy and F1 scores. The final corpus will be published in Zenodo, supporting the FAIR principles and promoting open access, thus providing a valuable resource for the Digital Humanities community to explore sentiments and topics in historical texts and offer new perspectives on migration and minority-related issues.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Austrian Centre for Digital Humanities and Cultural Heritage - Austrian Academy of Sciences. (2019). Wien[n]erisches Diarium – 18. Jahrhundert. DIGITARIUM. https://digitarium-app.acdh-dev.oeaw.ac.at/start.html?id=jg17xx</bibl>
+                    <bibl style="text-align: left; ">Dejaeghere, T., Singh, P., Lefever, E., &amp; Birkholz, J. (2024). Exploring Aspect-Based Sentiment Analysis Methodologies for Literary-Historical Research Purposes. In R. Sprugnoli &amp; M. Passarotti (Eds.), Proceedings of the Third Workshop on Language Technologies for Historical and Ancient Languages (LT4HALA) @ LREC-COLING-2024 (pp. 129–143). ELRA and ICCL. https://aclanthology.org/2024.lt4hala-1.16</bibl>
+                    <bibl style="text-align: left; ">Devlin, J., Chang, M.-W., Lee, K., &amp; Toutanova, K. (2019). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. ArXiv:1810.04805 [Cs]. http://arxiv.org/abs/1810.04805</bibl>
+                    <bibl style="text-align: left; ">Grootendorst, M. (2022). BERTopic: Neural topic modeling with a class-based TF-IDF procedure (No. arXiv:2203.05794). arXiv. http://arxiv.org/abs/2203.05794</bibl>
+                    <bibl style="text-align: left; ">Hiroki, N., Takahiro, K., Junya, K., Yasufumi, T., &amp; Xu, L. (2018). {doccano}: Text Annotation Tool for Human. https://github.com/doccano/doccano</bibl>
+                    <bibl style="text-align: left; ">Häußler, J., &amp; Gius, E. (2023). Operationalizing and Measuring Conflict in German Novels. Proceedings of the Computational Humanities Research Conference (CHR 2023), 3558. https://doi.org/urn:nbn:de:0074-3558-8</bibl>
+                    <bibl style="text-align: left; ">Klie, J.-C., Bugert, M., Boullosa, B., Eckart de Castilho, R., &amp; Gurevych, I. (2018). The INCEpTION Platform: Machine-Assisted and Knowledge-Oriented Interactive Annotation. In D. Zhao (Ed.), Proceedings of the 27th International Conference on Computational Linguistics: System Demonstrations (pp. 5–9). Association for Computational Linguistics. https://aclanthology.org/C18-2002</bibl>
+                    <bibl style="text-align: left; ">Koncar, P., Fuchs, A., Hobisch, E., Geiger, B. C., Scholger, M., &amp; Helic, D. (2020). Text sentiment in the Age of Enlightenment: an analysis of spectator periodicals. Applied Network Science, 5(1), 33. https://doi.org/10.1007/s41109-020-00269-z</bibl>
+                    <bibl style="text-align: left; ">Krušić, L. (2024a). SentiAnno: Sentiment-Annotated Corpus of Austrian Historical Newspapers [Software]. GitHub. Available at: https://github.com/lucijakrusic/SentiAnno</bibl>
+                    <bibl style="text-align: left; ">Krušić, L. (2024b). Constructing a Sentiment-Annotated Corpus of Austrian Historical Newspapers: Challenges, Tools, and Annotator Experience. In Proceedings of the 4th International Conference on Natural Language Processing for Digital Humanities, pages 51–62, Miami, USA. Association for Computational Linguistics.</bibl>
+                    <bibl style="text-align: left; ">Liu, B. (2012). Sentiment Analysis and Opinion Mining (Synthesis Lectures on Human Language Technologies). Morgan &amp; Claypool Publishers.</bibl>
+                    <bibl style="text-align: left; ">Montani, I., &amp; Honnibal, M. (2017, August 4). Prodigy: A new tool for radically efficient machine teaching. Explosion AI. Retrieved from https://explosion.ai/blog/prodigy-annotation-tool-active-learning</bibl>
+                    <bibl style="text-align: left; ">Österreichischen Nationalbibliothek. (2021). ANNO (AustriaN Newspaper Online). anno.onb.ac.at</bibl>
+                    <bibl style="text-align: left; ">Schmidt, T., Dennerlein, K., &amp; Wolff, C. (2021). Towards a Corpus of Historical German Plays with Emotion Annotations. 11 pages, 741719 bytes. https://doi.org/10.4230/OASICS.LDK.2021.9</bibl>
+                    <bibl style="text-align: left; ">Schweter, S. (2023). hmbyt5-preliminary/byt5-small-historic-multilingual-span20-flax. https://huggingface.co/hmbyt5-preliminary/byt5-small-historic-multilingual-span20-flax</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

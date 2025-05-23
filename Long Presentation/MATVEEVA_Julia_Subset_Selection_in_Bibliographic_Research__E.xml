@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MATVEEVA_Julia_Subset_Selection_in_Bibliographic_Research__E">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Subset Selection in Bibliographic Research: Exploring the Boundaries of Automated and Manual Curation</title>
+                <author>
+                    <persName>
+                        <surname>Matveeva</surname>
+                        <forename>Julia</forename>
+                    </persName>
+                    <affiliation>University of Turku, Finland</affiliation>
+                    <email>yulmat@utu.fi</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Pynttäri</surname>
+                        <forename>Veli-Matti</forename>
+                    </persName>
+                    <affiliation>University of Eastern Finland</affiliation>
+                    <email>veli-matti.pynttari@uef.fi</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Suominen</surname>
+                        <forename>Osma</forename>
+                    </persName>
+                    <affiliation>The National Library of Finland</affiliation>
+                    <email>osma.suominen@helsinki.fi</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Launis</surname>
+                        <forename>Kati</forename>
+                    </persName>
+                    <affiliation>University of Eastern Finland</affiliation>
+                    <email>kati.launis@uef.fi</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Lahti</surname>
+                        <forename>Leo</forename>
+                    </persName>
+                    <affiliation>University of Turku, Finland</affiliation>
+                    <email>leo.lahti@utu.fi</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T14:59:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>bibliographic metadata</term>
+                    <term>manual subset selection</term>
+                    <term>automated subset selection</term>
+                    <term>Fennica</term>
+                    <term>Finnish literature</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>bibliographic analysis</term>
+                    <term>data publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>open access methods</term>
+                    <term>Book and print history</term>
+                    <term>Literary studies</term>
+                    <term>Statistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p rend="No Spacing">Systematic analyses in literary history often focus on a carefully selected subset, or a corpus, based on particular combinations of genre, time period, and other aspects of the printed material (Lahti et al. 2019a). One commonly encountered task in computational humanities is thus the subset selection for more careful manual curation and analysis (Mäkelä et al. 2020). The subset selection task can be approached by both manual or automated means.</p>
+                <p rend="No Spacing">Traditionally, subset selection relies on dedicated manual curation efforts where researchers create custom compilations of titles by assessing available bibliographic information, supported by complementary information sources (Bode 2023; Parente-Čapková et al. 2023). Manual curation guarantees that researchers' subject expertise is fully utilized, making it particularly beneficial for small datasets, where detailed and precise assessment is feasible (Clement 2016). However, manual selection is time-consuming, labor-intensive, and prone to errors. Another pitfall is that subjective choices frequently influence the final collection, making it challenging to objectively assess its representativeness (Tolonen et al. 2016). Automating subset selection can address some of these limitations by scaling up analysis, increasing transparency and reproducibility, and allowing researchers to more efficiently evaluate the robustness of conclusions derived from the selected subsets (Lahti et al. 2019a; Ijaz et al. 2019). Large-scale analysis of bibliographic metadata can support this, and it has gained increasing popularity as a data-intensive research method in computational humanities (Lahti et al. 2019b). However, while algorithmic methods provide tools for extracting insights from large datasets, relying solely on fully automated analyses can miss essential information or yield erroneous results, thus reducing the potential benefits of scale (Lahti et al. 2019a). Analyses of large-scale data collections are likely to benefit from optimized combinations of automated and manual curation, but the methodology for this hybrid approach is yet to be fully developed and standardized (Lahti et al. 2019b).</p>
+                <p rend="No Spacing">Our research focuses on Finnish literature history in general and on nineteenth-century fiction in particular. To understand the fiction published during this period, one of our initial tasks was to identify the relevant works and ensure the quality of the compiled dataset. We sought to generate a list of first editions of fiction published in Finland (the Grand Duchy of Finland) between 1809 and 1917, including novels, short stories, drama, poems, and essays written in Finnish or Swedish and published in book form. Our analysis was based on the National Finnish Bibliography, Fennica, maintained by the National Library of Finland (Parente-Čapková et al. 2023).</p>
+                <p rend="No Spacing">We recognized that subset selection strategies could significantly impact the final dataset and subsequent qualitative conclusions. Therefore, we investigated the extent of variation between different subset selection strategies and assessed their potential impact on expert-driven qualitative analyses in literary history. We hypothesized that such an analysis could highlight selection gaps and biases inherent in particular strategies that might otherwise go unnoticed. By revealing the cumulative impact of the many choices made during subset selection, we aimed to improve transparency and reproducibility in research (Bode 2023).</p>
+                <p rend="No Spacing">Our present work focuses on reporting the alternative subset selection strategies frequently used for compiling collections of bibliographic titles based on manual and automated curation. We describe the commonalities and differences between the two approaches and compare the resulting subsets for overlap and divergence. Our objectives are twofold: first, to explore the boundaries of both approaches and investigate the underlying reasons for observed differences, and second, to propose improved subset selection strategies by combining manual and automated methods. We argue that hybrid methods, which integrate manual and automated techniques, offer a balanced approach for handling complex data tasks.</p>
+                <p rend="No Spacing">Our efforts to define the relevant subset of literature center around a case study of the National Finnish Bibliography Fennica. This is a comprehensive collection dedicated to the Finnish national imprint, covering over a million records, including books, newspapers, and maps, with entries dating from 1488 to the present. For the period 1809 to 1917, it includes approximately 70,000 titles. Additionally, Fennica contains pre-publication data from publishers and information on material published outside Finland that relates to Finland or was authored by Finnish writers. However, it is known to lack approximately 20,000 publications, mainly Swedish-language works from 1810 to 1977, which exist only in the library’s physical card indexes but are absent from the digital database.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methods</head>
+                <p rend="No Spacing">We developed and compared manual and automated approaches to subset selection for creating a dataset of first editions of Finnish fiction from 1809 to 1917.
+                    <lb/>
+                    <lb/>The manual approach began with a semi-automated retrieval of titles by an information specialist and subsequent manual curation by literary historians. The automated approach involved a data dump from Fennica, processed using predefined selection criteria through custom R scripts. Both approaches adhered to a three-stage methodology: primary selection, exclusion, and enrichment.
+                    <lb/>
+                    <lb/>1. Primary Selection:
+                    <lb/>Titles published in Finnish or Swedish during the target period were identified, focusing on classifications indicative of adult fiction.
+                    <lb/>
+                    <lb/>2. Exclusion Criteria:
+                    <lb/>Exclusions were applied to remove translations and children’s literature. In the manual process, exclusions relied on expert reviews, while the automated approach used metadata-based scripts.
+                    <lb/>
+                    <lb/>3. Enrichment:
+                    <lb/>Enrichment aimed to address missing or incomplete data by utilizing Universal Decimal Classification (UDC) numbers and genre data from MARC21 fields. The manual process also included external bibliographic resources like the Reenpää collection for validation.
+                    <lb/>
+                    <lb/>The manual approach began with 9,211 titles retrieved semi-automatically. This dataset was manually curated and refined to 2,788 titles. The automated approach started with 5,287 titles, reduced to 3,652 through exclusions, and expanded to 4,868 after enrichment.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results</head>
+                <p rend="No Spacing">The comparison between the enriched lists revealed both substantial overlap and notable differences. Of the 2,788 titles in the manually curated subset, 90.5% (2,524 titles) were detected in the automated list. However, 265 titles in the manual list were absent from the automated dataset. Among these, 214 were missing from the Fennica data dump used in automation, and 50 were excluded by automated criteria despite meeting manual inclusion standards.
+                    <lb/>
+                    <lb/>The automated list included 2,493 titles that were absent from the manual list. Among these, 941 titles (19.3%) had empty call numbers after the enrichment process. These titles were assigned UDC or genre information to identify their correct category. Additionally, 1,731 call numbers (35.6%) did not match our primary criteria, though their UDC and genre indicated the correct genre.
+                </p>
+                <figure>
+                    <graphic n="1001" width="12.675305555555555cm" height="7.514166666666667cm" url="/tmp/tmp4hwtix7m/Pictures/eb9dc44c75962a0930764252b35384b6.jpg" rend="block"/>
+                </figure>
+                <p rend="No Spacing">
+                    <hi rend="bold" xml:space="preserve">Figure 1. </hi>Selection flowchart for the automatically and manually constructed subsets. 
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Discussion</head>
+                <p rend="No Spacing">Our findings demonstrate the strengths and limitations of both manual and automated methods. Manual curation was critical for validating first editions and resolving inconsistencies in bibliographic records. However, this approach was labor-intensive and occasionally subjective, reducing transparency.
+                    <lb/>
+                    <lb/>Automated processes were faster, scalable, and reproducible, identifying a broader range of titles, including those overlooked manually. However, challenges in handling incomplete or inconsistent metadata led to false positives and missed entries. The hybrid approach integrates automated workflows with expert validation. Automation handles initial filtering and enrichment, while manual curation addresses nuanced tasks. This method offers a more accurate, comprehensive, and transparent dataset.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusions</head>
+                <p rend="No Spacing">Neither manual nor automated subset selection alone can fully address the complexities of bibliographic metadata analysis. A hybrid approach balances the strengths of both methods, enhancing accuracy, transparency, and reproducibility. Automating routine tasks while reserving manual efforts for nuanced decisions enables efficient navigation of large-scale datasets with methodological rigor.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold" xml:space="preserve">Bode, Katherine </hi>(2023): “What's the Matter with Computational Literary Studies?”, in: 
+                        <hi rend="italic">Critical Inquiry</hi> 49, 4: 507–529.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Clement, Tanya E.</hi> (2016): “Where Is Methodology in Digital Humanities?”, in: Gold, Matthew K. / Klein, Lauren F. (eds.): 
+                        <hi rend="italic">Debates in the Digital Humanities 2016</hi>. Minneapolis: University of Minnesota Press 153–175.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Fennica Harmonized Repository</hi> (2024): 
+                        <hi rend="italic">Harmonized Finnish National Bibliography</hi>
+                        <ref target="https://github.com/fennicahub/fennica/blob/master/README.md">https://github.com/fennicahub/fennica/blob/master/README.md</ref> [25.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Ijaz, Agha Zia / Tolonen, Mikko / Lahti, Leo / Tiihonen, Ilkka</hi> (2019): “Analytical Determination of Editions from Bibliographic Metadata”, in: Jantunen, Juhani H. et al. (eds.): 
+                        <hi rend="italic">Proceedings of the Research Data and Humanities (RDHUM) 2019 Conference: Data, Methods and Tools</hi>. Oulu: University of Oulu 9–19.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Lahti, Leo / Marjanen, Jani / Roivainen, Heikki / Tolonen, Mikko</hi> (2019a): “Bibliographic Data Science and the History of the Book (c. 1500–1800)”, in: 
+                        <hi rend="italic">Cataloging &amp; Classification Quarterly</hi> 57, 1: 5–23.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Lahti, Leo / Vaara, Virpi / Marjanen, Jani / Tolonen, Mikko (</hi>2019b): “Best Practices in Bibliographic Data Science”, in: Jantunen, Juhani H. et al. (eds.): 
+                        <hi rend="italic">Proceedings of the Research Data and Humanities (RDHUM) 2019 Conference</hi>. Studia Humaniora Ouluensia 17: 57–65.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Mäkelä, Eetu / Lagus, Krista / Lahti, Leo / Säily, Tanja / Tolonen, Mikko / Hämäläinen, Mika / Kaislaniemi, Samuli / Nevalainen, Terttu</hi> (2020): “Wrangling with Non-Standard Data”, in: Reinsone, Sanita et al. (eds.): 
+                        <hi rend="italic">Proceedings of the Digital Humanities in the Nordic Countries</hi>. CEUR Workshop Proceedings 2612: 81–96.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" xml:space="preserve">National Library of Finland </hi>(2024): 
+                        <hi rend="italic">Finnish National Bibliography as Open Data</hi>
+                        <ref target="http://data.nationallibrary.fi/bib/me/CFENNI">http://data.nationallibrary.fi/bib/me/CFENNI</ref> [25.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Parente-Čapková, Viola / Launis, Katja / Westerlund, Juha</hi> (2023): “Digitaaliset metadata-arkistot ja mesoanalyysi kulttuurisen vaihdon kartoittamisessa”, in: 
+                        <hi rend="italic">Kirjallisuudentutkimuksen aikakauslehti Avain</hi> 20, 1: 100–111.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Rahti Platform</hi> (2024): 
+                        <hi rend="italic">Fennica Metadata Conversions: Statistical Monitoring and Analysis</hi>
+                        <ref target="https://fennica-fennica.2.rahtiapp.fi/">https://fennica-fennica.2.rahtiapp.fi/</ref> [25.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Tolonen, Mikko / Lahti, Leo / Roivainen, Heikki / Ilomäki, Niina</hi> (2016): “Printing in a Periphery: A Quantitative Study of Finnish Knowledge Production, 1640–1828”. Abstract from 
+                        <hi rend="italic">Digital Humanities Conference</hi>, Kraków, Poland.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

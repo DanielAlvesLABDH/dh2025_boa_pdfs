@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MAZZAGUFO_Laura_Moving_towards_a_semantic_archival_edition__">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Moving towards a semantic archival edition: the PAVES-e project</title>
+                <author>
+                    <persName>
+                        <surname>Mazzagufo</surname>
+                        <forename>Laura</forename>
+                    </persName>
+                    <affiliation>CNR-ISTC, Italy</affiliation>
+                    <email>laura.mazzagufo@istc.cnr.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Cristofaro</surname>
+                        <forename>Salvatore</forename>
+                    </persName>
+                    <affiliation>CNR-ISTC, Italy</affiliation>
+                    <email>salvatore.cristofaro@cnr.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>D'Agata</surname>
+                        <forename>Christian</forename>
+                    </persName>
+                    <affiliation>University of Catania, Italy</affiliation>
+                    <email>christian.dagata@unict.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Del Grosso</surname>
+                        <forename>Angelo Mario</forename>
+                    </persName>
+                    <affiliation>CNR-ILC, Italy</affiliation>
+                    <email>angelomario.delgrosso@cnr.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Sichera</surname>
+                        <forename>Pietro</forename>
+                    </persName>
+                    <affiliation>CNR-ILIESI, Italy</affiliation>
+                    <email>pietro.sichera@cnr.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Sichera</surname>
+                        <forename>Antonio</forename>
+                    </persName>
+                    <affiliation>University of Catania, Italy</affiliation>
+                    <email>asichera@unict.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Spampinato</surname>
+                        <forename>Daria</forename>
+                    </persName>
+                    <affiliation>CNR-ISTC, Italy</affiliation>
+                    <email>daria.spampinato@cnr.it</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Digital archives and collections</term>
+                    <term>TEI Publisher</term>
+                    <term>Digital Scholarly Edition</term>
+                    <term>Semantic technologies</term>
+                    <term>Cesare Pavese</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digital archiving</term>
+                    <term>scholarly editing and editions development</term>
+                    <term>analysis</term>
+                    <term>and methods</term>
+                    <term>semantic analysis</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>Education/ pedagogy</term>
+                    <term>Literary studies</term>
+                    <term>Philology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">The paper presents the open-access semantic edition-archive defined within the PAVES-e project (D’Agata et al. 2024)<ref n="1" target="ftn1"/>. The DigitalPavese web environment, specially designed and developed according to the FAIR (Wilkinson et al. 2016) and TRUST (Lin et al. 2020) principles, provides access to the literary and documentary heritage of Cesare Pavese (1908-1950), Italian writer, poet and intellectual.
+                </p>
+                <p style="text-align: left; ">From a theoretical point of view, the PAVES-e project adopts a ‘holistic’ approach to represent data by integrating different perspectives of the text. In particular, the project takes into account: 1) the archival nature, guaranteed by the informative exhaustiveness and objective verification of the documents; 2) the critical-textual dimension, which emerges from the interpretative and subjective expertise of the editor; 3) the factual and functional aspect, formally represented through the explication of the semantics of the data.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Knowledge and Data Organisation</head>
+                <p style="text-align: left; ">This approach is applied to a corpus that includes Pavese's poetic works, novels, the 
+                    <hi rend="italic">Dialoghi con Leucò</hi>, correspondence, essays, and diary, as well as secondary literature. The works are annotated in accordance with the TEI Guidelines and integrated into a knowledge graph representing the entire corpus, aligning with the principles of knowledge organization in the relevant literature (Eggert 2019, Tomasi 2020, Vogeler 2019).
+                </p>
+                <p style="text-align: left; ">An exciting and challenging aspect of the project lies in the highly varied nature of the data and the numerous related properties and relationships (i.e., the 
+                    <hi rend="italic">semantic knowledge base</hi>
+                    <anchor xml:id="Hlk196764683"/>: Allemang et al. 2020) to consider. In fact, a formal ontology—
+                    <hi rend="italic">OntoPavese</hi><ref n="2" target="ftn2"/>—is being developed, providing a comprehensive framework for the 
+                    <hi rend="italic">semantic knowledge organization</hi> within the project. OntoPavese is a highly expressive ontology that covers a wide range of cases in terms of representation and description of Pavese’s production items, their (hierarchical) nature, and relationships, and of several other related entities.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Workflow</head>
+                <p style="text-align: left; ">The process of creating, preserving, processing, publishing, and querying concerning complex textual resources requires a methodological framework that is both broadly applicable and domain-oriented. While its generic design facilitates adoption across diverse contexts, domain features ensure effective implementation. To meet these needs, the CHROMA model (Cristofaro et al. 2023, Sichera et al. 2024) has been proposed (figure 1). The model, already applied in previous projects such as 
+                    <hi rend="italic">BDC</hi> (Cristofaro et al. 2023, Cristofaro et al. 2025, Del Grosso et al. 2023)<ref n="3" target="ftn3"/>, 
+                    <hi rend="italic">COVerLeSS</hi><ref n="4" target="ftn4"/> and 
+                    <hi rend="italic">Pirandello Nazionale</hi> (D’Agata et al. 2022, Sichera et al. 2019)<ref n="5" target="ftn5"/>, envisages text as a complex, multidimensional object managed through an editorial process<ref n="6" target="ftn6"/>. The CHROMA model encompasses a series of activities defined through a double articulation: representation formats on one hand, and multiple tasks on the other. Specifically, the model makes available the digital surrogate of the primary source (IIIF), and represents structural and semantic phenomena using generic languages like XML/TEI and RDF or domain-specific languages (DSLs). Encoding is supported by harmonization strategies<ref n="7" target="ftn7"/>, integrating linguistic and lexicographic analyses. These data gain significance through knowledge graphs, linked to authority records via LOD. The edition is further enriched with interactive visualization tools that enhance accessibility and user engagement.
+                </p>
+                <figure>
+                    <graphic n="1001" width="6.773347222222222cm" height="6.519347222222223cm" url="/tmp/tmpwu011m0m/Pictures/1e8784ebb180248e358089a1473e3502.png" rend="inline"/>
+                    <head>Diagrammatic representation of the CHROMA model.</head>
+                </figure>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Text Encoding</head>
+                <p style="text-align: left; ">The text encoding model follows the schema defined and promoted by the 
+                    <hi rend="italic">TEI</hi> (TEI Consortium 2024) and was developed based on the fundamental distinction between creative works and archival documents. Based on this differentiation, named entities were encoded for archival documents, along with technical terms or unusual words, using the open-source platform LEAF (figure 2).
+                </p>
+                <figure>
+                    <graphic n="1002" width="15.179591666666667cm" height="5.644911111111111cm" url="/tmp/tmpwu011m0m/Pictures/1e8784ebb180248e358089a1473e3502.png" rend="inline"/>
+                    <head>LEAF interface displaying the encoding of a letter.</head>
+                </figure>
+                <p style="text-align: left; ">Texts were subsequently revised to mark their structure and add notes through a different editor: the text of the critical edition was therefore placed within the &lt;body&gt; in the &lt;text&gt; element, encoding the structure, named entities, lexicon, and notes. For creative works, the documentary dimension of the manuscripts was also represented, through various &lt;sourceDoc&gt; elements, each containing one or more &lt;surface&gt; elements. Within these, handwritten lines were marked with the &lt;line&gt; tag, while corrective phenomena were encoded with &lt;del&gt;, &lt;add&gt;, &lt;mod&gt;, &lt;delSpan&gt;. The various levels of encoding are summarized in figure 3, and an example of the encoding of a witness is provided in figure 4.</p>
+                <figure>
+                    <graphic n="1003" width="16.002cm" height="9.145763888888888cm" url="/tmp/tmpwu011m0m/Pictures/1e8784ebb180248e358089a1473e3502.png" rend="inline"/>
+                    <head>Representation of levels in &lt;sourceDoc&gt; and &lt;text&gt;.</head>
+                </figure>
+                <figure>
+                    <graphic n="1004" width="16.002cm" height="6.628694444444444cm" url="/tmp/tmpwu011m0m/Pictures/1e8784ebb180248e358089a1473e3502.png" rend="inline"/>
+                    <head>Encoding of surface 1r of the FE5I.41 witness (poem “Paesaggio [IV]” from “Lavorare stanca”, 1936).</head>
+                </figure>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Visualizing and Analyzing Pavese’s Works</head>
+                <p style="text-align: left; ">The annotation of texts is an essential prerequisite for ensuring the visualization and consultation of the edition on the web, which is being developed within the framework of 
+                    <hi rend="italic">PaveseInTesto</hi>, a digital platform developed using the open-source software TEI Publisher<ref n="8" target="ftn8"/>. TEI Publisher enables the creation of scholarly digital editions of Pavese’s works with maximum adaptability to the unique features of each textual typology, without imposing the constraints of a ‘one-size-fits-all’ framework. Specifically, for archival documents, a full-text layout has been designed, allowing access to comments and explanatory notes, chronological connections between contemporary works by the author, intertextual citations, bibliographic references, and a list of named entities (referred to as the ‘text and comment’ mode). For the edition of creative works, additional features include a viewing mode that combines facsimiles with ‘diplomatic’ transcriptions (figure 5)<ref n="9" target="ftn9"/> and a ‘collation’ mode, which allows users to juxtapose various drafts of the same textual unit with the critical edition in a customizable order.
+                </p>
+                <figure>
+                    <graphic n="1005" width="16.001997222222222cm" height="6.561022222222222cm" url="/tmp/tmpwu011m0m/Pictures/1e8784ebb180248e358089a1473e3502.png" rend="inline"/>
+                    <head>TEI Publisher interface for the ‘facsimile + diplomatic transcription’ viewing mode.</head>
+                </figure>
+                <p style="text-align: left; ">In regard to the 
+                    <hi rend="italic">OntoPavese ontology</hi>, it is in plan the development (currently in progress) of a web tool—
+                    <hi rend="italic">OntoPavesePathExplorer</hi>—that allows the visual exploration of (
+                    <hi rend="italic">ontological</hi>) 
+                    <hi rend="italic">paths</hi> generated by 
+                    <hi rend="italic">property chains</hi>, where a path is, in the present context, a sequence of class instances (the 
+                    <hi rend="italic">nodes</hi> of the path) each of which is connected to the subsequent one by means of an Object property assertion. Thus, after (visually) selecting a 
+                    <hi rend="italic">target instance</hi> of interest, one can explore all paths ending/starting at that instance; this provides an easy and intuitive mechanism for accessing useful information about the semantic organization of the ontology at the level of instance relationships—information that otherwise could/should be retrieved (e.g.) by means of alternative ontology-query interfaces exploiting the "not-so-easy" SPARQL query language (or the likes). The visual interface of 
+                    <hi rend="italic">OntoPavesePathExplorer</hi> (figure 6) will integrate with that of 
+                    <hi rend="italic">PaveseInTesto</hi>, working in synergy with it, and allowing on-demand switching between the views offered by both.
+                </p>
+                <figure>
+                    <graphic n="1006" width="16.002cm" height="8.988777777777777cm" url="/tmp/tmpwu011m0m/Pictures/1e8784ebb180248e358089a1473e3502.png" rend="inline"/>
+                    <head>The visual interface of (an early prototype version of) OntoPavesePathExplorer.</head>
+                </figure>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Further development</head>
+                <p style="text-align: left; ">Pavese’s oeuvre stands out as a rare instance of a twentieth-century author who engaged comprehensively across almost every literary form, from poetry to the novel, culminating in the unique 
+                    <hi rend="italic">Dialoghi con Leucò</hi>. His corpus, which also includes personal (and editorially relevant) correspondence and a diary, provides a rich dataset for analyzing authorial practices and editorial dynamics in the early twentieth century. In the coming months, further development is planned for the lemmatization of the works. Specifically, the project aims to implement an integrated system that will combine concordances, TEI encoding, and the use of lexical ontologies such as BabelNet<ref n="10" target="ftn10"/> under a single processing and querying platform.
+                </p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                        
+                            <ref target="https://digitalpavese.cnr.it/">
+                                <hi style="font-size:10pt">https://digitalpavese.cnr.it/</hi>
+                            </ref>
+                            <hi style="font-size:10pt">(funded by the European Union – Next Generation EU, Mission 4 Component 2, Investment 1.1, CUP E53D23013670006).</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                        
+                            <ref target="https://digitalpavese.cnr.it/ontopavese/">
+                                <hi style="font-size:10pt">https://digitalpavese.cnr.it/ontopavese/</hi>
+                            </ref>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                        
+                            <ref target="https://bellinicorrespondence.cnr.it/">
+                                <hi style="font-size:10pt">https://bellinicorrespondence.cnr.it/</hi>
+                            </ref>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn4" n="4">
+                        
+                            <ref target="https://coverless.cnr.it/">
+                                <hi style="font-size:10pt">https://coverless.cnr.it/</hi>
+                            </ref>
+                            <hi style="font-size:10pt">("Corpus Online del Verismo tra Letteratura, Storia e Società", funded by the European Union – Next Generation EU, Mission 4 Component 1, Investiment 1.1, CUP E53D23018880001).</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn5" n="5">
+                        
+                            <ref target="https://www.pirandellonazionale.it/">
+                                <hi style="font-size:10pt">https://www.pirandellonazionale.it/</hi>
+                            </ref>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn6" n="6">
+                        
+                            <hi style="font-size:10pt" xml:space="preserve"> See also the</hi>
+                            <hi rend="italic" style="font-size:10pt">Verismo Digitale</hi>
+                            <hi style="font-size:10pt">project, funded by the European Union – NextGenerationEU (Project PE 0000020 CHANGES – CUP E63C22001960006, PNRR Mission 4 Component 2 Investment 1.3), aimed at creating a digital ecosystem around the works of Verismo literature.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn7" n="7">
+                        
+                            <hi style="font-size:10pt">See, for example, NormaTEI (Sichera 2024), a harmonization tool developed on the</hi>
+                            <hi rend="italic" style="font-size:10pt" xml:space="preserve">BDC </hi>
+                            <hi style="font-size:10pt">edition and further expanded within the framework of the H2IOSC Project – Humanities and Cultural Heritage Italian Open Science Cloud, funded by the European Union – NextGenerationEU – NRRP M4C2, Project code IR0000029 – CUP B63C22000730005.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn8" n="8">
+                        
+                            <ref target="https://teipublisher.com/">
+                                <hi style="font-size:10pt">https://teipublisher.com/</hi>
+                            </ref>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn9" n="9">
+                        
+                            <hi style="font-size:10pt" xml:space="preserve">A prototype of the ‘facsimile + diplomatic transcription’ viewing mode for all the poems in </hi>
+                            <hi rend="italic" style="font-size:10pt">Lavorare stanca</hi>
+                            <hi style="font-size:10pt" xml:space="preserve">is available at </hi>
+                            <ref target="https://digitalpavese.cnr.it/poesie/">
+                                <hi style="font-size:10pt">https://digitalpavese.cnr.it/poesie/</hi>
+                            </ref>
+                            <hi style="font-size:10pt" xml:space="preserve"> (accessible via the "Vai all’edizione" button in the "Edizione diplomatica" section).</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn10" n="10">
+                        
+                            <ref target="https://babelnet.org/">
+                                <hi style="font-size:10pt">https://babelnet.org/</hi>
+                            </ref>
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Allemang, Dean / Gandon, Fabien / Hendler, Jim </hi>
+                        <hi style="font-size:10pt" xml:space="preserve">(2020): "Semantic Web for the Working Ontologist: Effective Modeling for Linked Data, RDFS, and OWL". New York: Association for Computing Machinery. ISBN: 978-1-4503-7617-4. DOI: 10.1145/3382097 </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Cristofaro, Salvatore / Del Grosso, Angelo M. / Mazzagufo, Laura / Sichera, Pietro / Spampinato, Daria </hi>
+                        <hi style="font-size:10pt" xml:space="preserve">(2025): “Implementing Collaborative Digital Scholarly Editions: Insights from Bellini Digital Correspondence” in: </hi>
+                        <hi rend="italic" style="font-size:10pt">International Journal of Information Science and Technology [S.l.]</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 9, 1: 42–53. &lt;</hi>
+                        <ref target="https://www.innove.org/ijist/index.php/ijist/article/view/297">
+                            <hi style="font-size:10pt">https://www.innove.org/ijist/index.php/ijist/article/view/297</hi>
+                        </ref>
+                        <hi style="font-size:10pt">&gt; [28.04.2025] </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Cristofaro, Salvatore / Del Grosso, Angelo M. / Mazzagufo, Laura / Sichera, Pietro / Spampinato, Daria</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2023): “Bellini Digital Correspondence: A Model for Making Collaborative Digital Scholarly Editions”, in: 7th IEEE Congress on Information Science and Technology (CiSt), Agadir - Essaouira, Morocco, December 2023: 615–620. DOI: 10.1109/CiSt56084.2023.10409920.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">D’Agata, Christian / Di Silvestro, Antonio / Sichera, Antonio </hi>
+                        <hi style="font-size:10pt" xml:space="preserve">(2022): “Edizione critica, edizione digitale, Hyperedizione. “Il fu Mattia Pascal” come paradigma dell’edizione digitale dell’Opera Omnia di Luigi Pirandello”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt" xml:space="preserve">Bollettino – Centro di studi filologici e linguistici siciliani </hi>
+                        <hi style="font-size:10pt">33: 263–280.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">D’Agata, Christian / Del Grosso, Angelo M. / Nay, Laura / Palazzolo, Giuseppe / Sichera, Antonio / Spampinato, Daria</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024): “Paves-e: per una hyperedizione dell’opera di Cesare Pavese” in: Di Silvestro, Antonio / Spampinato, Daria (eds.): </hi>
+                        <hi rend="italic" style="font-size:10pt">AIUCD 2024 Me.Te. Digitali. Mediterraneo in rete tra testi e contesti</hi>
+                        <hi style="font-size:10pt">, Proceedings: 191–196. DOI: 10.6092/unibo/amsacta/7927</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Del Grosso, Angelo M. / Spampinato, Daria </hi>
+                        <hi style="font-size:10pt" xml:space="preserve">(eds.) (2023): </hi>
+                        <hi rend="italic" style="font-size:10pt">Bellini Digital Correspondence</hi>
+                        <hi style="font-size:10pt">, Cnr Edizioni. &lt;</hi>
+                        <ref target="http://bellinicorrespondence.cnr.it">
+                            <hi style="font-size:10pt">http://bellinicorrespondence.cnr.it</hi>
+                        </ref>
+                        <hi style="font-size:10pt">&gt; [28.04.2025]</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Di Silvestro, Antonio / D’Agata, Christian / Palazzolo, Giuseppe / Sichera, Pietro </hi>
+                        <hi style="font-size:10pt" xml:space="preserve">(2022): “Conservazione e fruizione di banche dati letterarie: l’archivio della poesia italiana dell’Otto/Novecento di Giuseppe Savoca”, in: Ciracì, Fabio / Miglietta, Giulia / Gatto, Carola (2022): </hi>
+                        <hi rend="italic" style="font-size:10pt">AIUCD 2022</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> - Proceedings: 98–104. DOI: 10.6092/unibo/amsacta/6848 </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Eggert, Paul</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2019). “The Archival Impulse and the Editorial Impulse” in: </hi>
+                        <hi rend="italic" style="font-size:10pt">Variants</hi>
+                        <hi style="font-size:10pt">14: 3–22. DOI: 10.4000/variants.570</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Lin, Dawei / Crabtree, Jonathan / Dillo, Ingrid </hi>
+                        <hi rend="italic bold" style="font-size:10pt">et al.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">(2020): “The TRUST Principles for digital repositories”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt" xml:space="preserve">Sci Data </hi>
+                        <hi style="font-size:10pt">7, 144. DOI: 10.1038/s41597-020-0486-7</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Sichera, Antonio / Di Silvestro, Antonio / Subialka, Michael </hi>
+                        <hi style="font-size:10pt" xml:space="preserve">(2019): “The Future of Pirandello: On the New Digital Edition of Pirandello's Opera Omnia”, in </hi>
+                        <hi rend="italic" style="font-size:10pt" xml:space="preserve">PSA </hi>
+                        <hi style="font-size:10pt">XXXII: 107–116.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Sichera, Pietro </hi>
+                        <hi style="font-size:10pt">(2024). “pierpaolosichera/NormaTEI” (v0.6-beta). DOI: 10.5281/zenodo.12581646</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Sichera, Pietro / Cristofaro, Salvatore / Mazzagufo, Laura / Spampinato, Daria / Del Grosso, Angelo Mario </hi>
+                        <hi style="font-size:10pt" xml:space="preserve">(2024): “CHROMA model for H2IOSC”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt" xml:space="preserve">CLARIN Annual Conference 2024 </hi>
+                        <hi style="font-size:10pt">(CLARIN2024), Barcelona, Spain, October 2024. DOI: 10.5281/zenodo.13913607</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">TEI Consortium</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (eds.) (2024): </hi>
+                        <hi rend="italic" style="font-size:10pt" xml:space="preserve">Guidelines for Electronic Text Encoding and Interchange. </hi>
+                        <hi style="font-size:10pt">Version 4.7.0. &lt;</hi>
+                        <ref target="http://www.tei-c.org/P5/">
+                            <hi style="font-size:10pt">http://www.tei-c.org/P5/</hi>
+                        </ref>
+                        <hi style="font-size:10pt">&gt; [28.04.2025] </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Tomasi, Francesca </hi>
+                        <hi style="font-size:10pt" xml:space="preserve">(ed.) (2020): </hi>
+                        <hi rend="italic" style="font-size:10pt">Vespasiano da Bisticci, Lettere</hi>
+                        <hi style="font-size:10pt">. Knowledge Site 3.0, Bologna: DH.arc. &lt;</hi>
+                        <ref target="https://vespasianodabisticciletters.unibo.it/">
+                            <hi style="font-size:10pt">https://vespasianodabisticciletters.unibo.it/</hi>
+                        </ref>
+                        <hi style="font-size:10pt">&gt; [28.04.2025] </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Vogeler, Georg</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2019): “The ‘assertive edition’”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt">International Journal of Digital Humanities</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 1: 309–322. DOI: 10.1007/s42803-019-00025-5</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Wilkinson, Mark D. / Dumontier, Michel / Aalbersberg, IJsbrand J. </hi>
+                        <hi rend="italic bold" style="font-size:10pt" xml:space="preserve">et al. </hi>
+                        <hi style="font-size:10pt" xml:space="preserve">(2016): “The FAIR Guiding Principles for scientific data management and stewardship”, in </hi>
+                        <hi rend="italic" style="font-size:10pt" xml:space="preserve">Sci Data </hi>
+                        <hi style="font-size:10pt">3, 160018. DOI: 10.1038/sdata.2016.18</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

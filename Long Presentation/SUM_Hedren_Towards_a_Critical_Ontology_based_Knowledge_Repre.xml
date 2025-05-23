@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SUM_Hedren_Towards_a_Critical_Ontology_based_Knowledge_Repre">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Towards a Critical Ontology-based Knowledge Representation of Archipelagic Performance Histories</title>
+                <author>
+                    <persName>
+                        <surname>Sum</surname>
+                        <forename>Hedren</forename>
+                    </persName>
+                    <affiliation>National University of Singapore, Singapore</affiliation>
+                    <email>hsum@nus.edu.sg</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Lim</surname>
+                        <forename>Alvin Eng Hui</forename>
+                    </persName>
+                    <affiliation>National University of Singapore, Singapore</affiliation>
+                    <email>alim@nus.edu.sg</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Kim</surname>
+                        <forename>Kyueun</forename>
+                    </persName>
+                    <affiliation>National University of Singapore, Singapore</affiliation>
+                    <email>kkim@nus.edu.sg</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T06:57:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Ontology design</term>
+                    <term>datafication</term>
+                    <term>knowledge representation</term>
+                    <term>archipelagic performance</term>
+                    <term>digital methodologies</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digital archiving</term>
+                    <term>metadata standards</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>network analysis and graphs theory and application</term>
+                    <term>semantic analysis</term>
+                    <term>History</term>
+                    <term>Library &amp; information science</term>
+                    <term>South Asian studies</term>
+                    <term>Performance Studies: Dance</term>
+                    <term>Theatre</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">This paper presents the development of a critical domain ontology for mapping the complexities of performance histories in the archipelagic regions of Southeast Asia from the 19th to the 20th centuries. This research is part of an ongoing major grant project awarded by the Social Science Research Council and the Ministry of Education in Singapore. By “critical,” we refer to a reflective examination of the foundational structures and assumptions that underpin how cultural and historical knowledge, particularly its intangible, ephemeral, and living nature, can be unfolded, organised, represented, and revived in a meaningful context (Hou et al. 2022). </p>
+            <p style="text-align: left; ">Recognising the complexities of performance creation and travel within Asian regions as “a collective heritage that was interactive and polycentric,” we recognise that “exclusive histories of nations and civilizations” or “linear narratives of historical process” are not viable (Duara 2019: 89). By incorporating the idea of “archipelago” (Rae 2019) as a theoretical metaphor, we seek to challenge prevailing narratives of continentalism and nation-states, aiming for a more intricate and flexible approach to representing cultural and historical information. Our framework offers a means of positioning performance histories that more effectively “connects ocean to land” (Winter 2024: 631) while highlighting maritime networks and inter-nodal relationships. Here, the term “archipelago" refers to transregional landscapes, encompassing sea and land routes that link nodes throughout Asian regions (East, Southeast, and South). Over time, these routes either converged or diverged, leading to the emergence of parallel histories as performance forms developed. This framework will also consider historical separations and isolation.</p>
+            <p style="text-align: left; ">Performances and practices are vital forms of embodiment, holding deeper cultural meanings, communal identities, and collective memories (Sugimoto / Wijesundara 2024), often reflecting diasporic movements and exchanges. Our goal is to capture a more comprehensive formation and intersection of geo-social relations that enabled the touring of performance practices. The Archipelagic Performance Histories Ontology (APHon) serves as a foundation for recording knowledge production, organisation, preservation, and storytelling. This domain ontology enables a structured yet flexible exploration of how performances that range from English Troupes to Chinese Wayang Troupes and Bangsawan were shaped by and contributed to the archipelagic region’s cultural, historical, and socio-political landscapes. Starting with Singapore as a nodal point, the ontology traces archipelagic travel routes, transnational networks, and the circulation of intercultural performances among and between urban centres, port cities and sea routes, notably the Malacca and Singapore Straits, extending towards Australia, Hong Kong and Japan, to name a few. </p>
+            <p style="text-align: left; ">APHon builds upon internationally recognised cultural heritage data standards, specifically the CIDOC Conceptual Reference Model (CRM), by extending and mapping it with explicit classes that relate to the archipelagic performing histories domain. It addresses significant gaps in generic ontologies by shifting away from object-centric approaches toward representing the fluid and transformative nature of performance traditions as they adapt, integrate, and respond to diverse cultural contexts. The ontology is organised into four primary clusters—Performance, Person &amp; Troupe, Tour, and Society &amp; Community (Figure 1):</p>
+            <figure>
+                <graphic n="1001" width="16.033808333333333cm" height="8.9535cm" url="/tmp/tmpisg9ny58/Pictures/f86365414d59205e15bcd562377e19d4.jpg" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">
+                <hi rend="italic bold" xml:space="preserve">Figure </hi>
+                <hi rend="italic bold">1</hi>
+                <hi rend="italic bold">:</hi>
+                <hi rend="italic" xml:space="preserve"> Conceptual overview of Archipelagic Performance Histories Ontology</hi>
+            </p>
+            <list type="unordered">
+                <item>
+                    <hi rend="bold">Performance:</hi> As at the core of the ontology, this cluster encompasses individual performances, genres, themes, venues, and performance elements. Created by individuals and troupes, performances can be part of larger tours, allowing them to engage various communities throughout the region. This connection is crucial for illustrating how specific performances convey and share cultural values, extending beyond their immediate settings to resonate with a wide range of audiences across the archipelago. For example, the ontology highlights the movement of performances, such as how Cantonese opera troupes sparked operatic aesthetic innovations that later returned to the motherland through transnational opera tours from Guangzhou and Hong Kong to Southeast Asia's towns and ports (Zhang 2022). These tours brought new styles and narratives to local audiences while fostering cultural exchanges that shaped performance practices in both the local areas and the performers’ regions of origin.
+                </item>
+                <item>
+                    <hi rend="bold" xml:space="preserve">Person &amp; Troupe: </hi>This cluster captures individual performers and performance troupes, detailing their demographics, roles, and social significance. Individuals and troupes engage with society and the community, influencing and being shaped by cultural norms, audience expectations, and social values. This relationship highlights the critical role of performers as cultural intermediaries who reflect and challenge societal views, evolving alongside and contributing to shifting cultural landscapes. For instance, European troupes in the late 19th century, such as the Italian Opera Company led by impresarios Giovanni Pompei and Augusto Cagli, influenced the development of Parsi theatre in the region by merging both European and local melodies into their performances (Nicholson 2022).
+                </item>
+                <item>
+                    <hi rend="bold">Tour:</hi> Tours foster cultural exchange by bringing performances to various regions, influencing both the performers and the audiences they engage with. This cluster emphasises the itinerant nature of performers and the intercultural exchanges that thrived along established touring circuits, unveiling patterns of cultural flows and the regional impact of touring troupes. Tours resonate with Society &amp; Community as performances acquire new meanings and significance when presented to diverse audiences, thereby contributing to regional identity. For instance, it was observed that Singapore was a vital nexus in the regional and global entertainment circuit for Western dance, theatre, and variety troupes in the early 20th century, leading to the emergence of new hybrid genres, the development of performance venues, and influencing the evolution of theatre in the region (French 2019).
+                </item>
+                <item>
+                    <hi rend="bold">Society &amp; Community:</hi> This cluster situates performances within the socio-cultural and political landscape. It connects port-city communities and institutions (e.g. temples, clans, and businesses) with the performances and performers they support (or censor), clarifying why certain genres thrived while others diminished. The complexity of the region is evident: “while the port presented itself as an entity of cosmopolitan openness, the social reality was one of strict boundaries between different transnational groups that had converged on the city for trade and work” (Tan 2007: 854). The interplay between society and performance history is central to understanding how the artistic traditions of performances and troupes evolved in response to local and regional shifts.
+                </item>
+            </list>
+            <p style="text-align: left; ">These interlinked clusters drive digital outputs—story maps, visualisations, exhibitions, and interactive essays—rendering intercultural flows visible. Supporting classes and properties to capture descriptions, source, and media preserve provenance, enabling users to trace assertions to archival or scholarly sources. Descriptions record attributes and context; Sources gather textual evidence (e.g. travel accounts, journals, newspaper columns, advertisements, flyers, programme booklets and written records); Media collect visual and audio materials (e.g. photographic images, maps, oral recordings) for analysis and storytelling.</p>
+            <p style="text-align: left; ">Developing the ontology posed methodological challenges requiring a structure that balances coherence with flexibility. Representing diverse genres and contexts demanded careful categorisation and highlighted key tensions in ontology design: structural vs. interpretive flexibility, universality vs. cultural specificity, formalisation vs. tacit knowledge. Resolving these was essential to produce a model both rigorous and contextually attuned.</p>
+            <p style="text-align: left; ">Beyond structure, APHon offers a critical approach to cultural representation. It confronts broader theoretical issues in knowledge representation, interpretation, and ethics, offering Digital Humanities (DH) and its adjacent fields a comprehensive case study of blending structured data with reflective cultural narratives. Unlike conventional ontologies focused on efficiency, APHon’s critical method foregrounds cultural sensitivity and historical depth, recognising ontologies as frameworks that shape—not merely record—understanding.</p>
+            <p style="text-align: left; ">APHon contributes to digital methodologies for developing ontologies for mapping intercultural heritage. Unlike conventional ontologies that prioritise structural efficiency, the critical ontological approach undertaken for the project is rooted in cultural and historical sensitivity, respecting the complexities and interdependencies within the data. This approach underscores the role of ontologies as interpretive frameworks that not only organise but actively shape the understanding of cultural data, balancing universality and cultural specificity.</p>
+            <p style="text-align: left; ">In conclusion, APHon contributes to DH, cultural studies, history, and performance studies by integrating ontology with narrative and digital tools to foreground cross-border interactions, community engagement, and inter- and multi-cultural expressions that define archipelagic performance. It demonstrates how ontological design can drive new inquiries into heritage while engaging with its intangible and experiential dimensions. As a transferable model for narrating intercultural exchanges, APHon merges structural precision with interpretive depth, affirming the potential of critical ontologies to represent, mediate, and reinterpret historical and cultural knowledge in the digital age.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Duara, Prasenjit</hi> (2019): “Circulatory and competitive histories”, in: Kumar, Sanjay / Mohanty, Satya P. / Kumar, Archana / Kumar, Raj (eds.): 
+                        <hi rend="italic">China, India and Alternative Asian Modernities</hi>. NY, Routledge 18
+                        <hi rend="bold">–</hi>41. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">French, Paul</hi> (2019): “Singapore Stopover: The Entertainment Circuit 1920–1940”, in: 
+                        <hi rend="italic">BiblioAsia</hi> 14, 3: 50–55.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Hou, Yumeng / Kenderdine, Sarah / Picca, Davide / Egloff, Mattia / Adamou, Alessandro</hi> (2022): “Digitizing intangible cultural heritage embodied: State of the art”, in: 
+                        <hi rend="italic">Journal on Computing and Cultural Heritage</hi> 15, 3: 1–20.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Nicholson, Rashna Darius</hi> (2022): “Italian Impresarios, American Minstrels and Parsi Theatre: Sonic Networks and the Negotiation of Opera in Colonial South and South East Asia”, in: Körner, Axel / Kühl, Paulo M. (eds.): 
+                        <hi rend="italic">Italian Opera in Global and Transnational Perspective: Reimagining Italianità in the Long Nineteenth Century</hi>. Cambridge: Cambridge University Press 214–238.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Rae, Paul</hi> (2019): “Archipelagic Performance: Scenes from Maritime Southeast Asia”, in: 
+                        <hi rend="italic">Theatre Journal</hi> 71, 4: 455–473. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Sugimoto, Shigeo / Wijesundara, Chiranthi</hi> (2024): “Data modeling for digital archiving of intangible and experiential entities”, in: Wang, Xiaoguang / Zeng, Lei Marcia / Gao, Jin / Zhao, Ke (eds.): 
+                        <hi rend="italic">Intelligent Computing for Cultural Heritage: Global Achievements and China's Innovations</hi>. NY, Routledge 25
+                        <hi rend="bold">–</hi>39. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Tan, Tai-Yong</hi> (2007): “Port cities and hinterlands: A comparative study of Singapore and Calcutta”, in: 
+                        <hi rend="italic">Political Geography</hi> 26, 7: 851–865. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Winter, Tim</hi> (2024): “A maritime turn and ocean ontologies in critical heritage studies”, in: 
+                        <hi rend="italic">International Journal of Heritage Studies</hi> 30, 6: 623–634.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Zhang, Beiyu</hi> (2022): “Cantonese Opera Troupes in Southeast Asia”, in: 
+                        <hi rend="italic">Asian Ethnology</hi> 81, 1/2: 83–106.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

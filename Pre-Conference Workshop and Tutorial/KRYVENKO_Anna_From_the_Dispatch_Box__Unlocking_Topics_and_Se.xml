@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KRYVENKO_Anna_From_the_Dispatch_Box__Unlocking_Topics_and_Se">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>From the Dispatch Box: Unlocking Topics and Sentiments in Multilingual ParlaMint Corpora (Workshop)</title>
+                <author>
+                    <persName>
+                        <surname>Fišer</surname>
+                        <forename>Darja</forename>
+                    </persName>
+                    <affiliation>Institute of Contemporary History, Slovenia</affiliation>
+                    <email>Darja.Fiser@inz.si</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Kryvenko</surname>
+                        <forename>Anna</forename>
+                    </persName>
+                    <affiliation>Institute of Contemporary History, Slovenia; NISS, Ukraine</affiliation>
+                    <email>Ganna.Kryvenko@inz.si</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Pahor de Maiti Tekavčič</surname>
+                        <forename>Kristina</forename>
+                    </persName>
+                    <affiliation>Institute of Contemporary History, Slovenia; University of Ljubljana, Slovenia</affiliation>
+                    <email>Kristina.PahordeMaiti@ff.uni-lj.si</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-18T15:59:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Pre-Conference Workshop and Tutorial</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>natural language processing</term>
+                    <term>parliamentary research data</term>
+                    <term>ParlaMint corpora</term>
+                    <term>political science</term>
+                    <term>artificial intelligence</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>artificial intelligence and machine learning</term>
+                    <term>natural language processing</term>
+                    <term>text mining and analysis</term>
+                    <term>Linguistics</term>
+                    <term>Political science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Background and overview</head>
+                <p>Parliaments are pivotal institutions in democracies, shaping policies that impact citizens by deliberating critical societal issues. The debates are commonly recorded as open-access digital proceedings enriched with metadata. These records are valuable for researchers exploring political, societal, historical, cultural or communicational dynamics. Improved access to data and advancing technologies expand interest in parliamentary studies (Lenardič / Fišer 2022).</p>
+                <p>This 
+                    <hi rend="bold">half-day hands-on tutorial</hi> will present the ParlaMint family of corpora, notable for its adherence to FAIR principles, comparable design for transnational and translingual research, extensive linguistic annotations, and rich metadata. The ParlaMint corpora (Erjavec et al. 2024) contain over a billion words from parliamentary sessions across 29 European countries and regions, spanning at least 2015–2022. Available in the 
+                    <ref target="https://www.clarin.si/repository/xmlui/handle/11356/1911">original languages</ref> and 
+                    <ref target="https://www.clarin.si/repository/xmlui/handle/11356/1910">machine-translated to English</ref>, the corpora feature metadata on speakers, parties and speeches, including names, gender, age, roles, party affiliation, power positions, political leanings, speech dates, sessions and terms. Previous workshops like 
+                    <hi rend="italic">ParlaCLARIN</hi> (Fišer et al. 2024) and 
+                    <hi rend="italic">Digital Parliamentary Data in Action, or DiPaDA</hi> (La Mela et al. 2022) as well as tutorials like 
+                    <hi rend="italic">Put Them In to Get Them Out</hi> (Fišer et al. 2023) and 
+                    <hi rend="italic">Voices of the Parliament</hi> (Fišer / Pahor de Maiti 2021) highlight the ongoing need for in-depth introductions to these data.
+                </p>
+                <p>This tutorial will provide skills and methodological training to explore ParlaMint version 5.0 with an emphasis on two newly introduced variables – topic and sentiment information – offering deeper insights into parliamentary agenda-setting and discourse dynamics (Abercrombie / Batista-Navarro 2020). Under the
+                    <ref target="https://www.oscars-project.eu/projects/parlacap-comparing-agenda-settings-across-parliaments-parlamint-dataset">
+                        <hi rend="underline color(1155CC)">ParlaCAP project</hi>
+                    </ref>, the ParlaMint corpora are annotated with topics following the 
+                    <ref target="https://www.comparativeagendas.net/">Comparative Agendas Project (CAP)</ref> coding schema and sentiment information coded with the ParlaSent multilingual transformer language model (Mochtak et al. 2024).
+                </p>
+                <p>Designed for researchers with no or little familiarity with corpus linguistic tools, in particular noSketchEngine, this tutorial will train participants to leverage extensive content, annotations and metadata via user-friendly concordancers, facilitating research on individual national parliaments, enabling transnational comparisons, and fostering cross-disciplinary collaboration.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Relevance to the Digital Humanities community</head>
+                <p>While parliamentary data are often accessible, most parliamentary corpora are project-specific, limiting reuse for diverse research questions within the heterogeneous DH community. ParlaMint addresses this by offering a large family of fully comparable corpora, annotated with a clear methodology across numerous metadata categories. It was designed as a sustainable initiative to ensure ongoing maintenance, upgrades and free long-term access to the data both via the
+                    <ref target="http://clarin.si/">
+                        <hi rend="underline color(1155CC)">CLARIN.SI repository download option</hi>
+                    </ref> and user-friendly tools like the
+                    <ref target="https://www.clarin.si/ske/#dashboard?corpname=parlamint41_xx">
+                        <hi rend="underline color(1155CC)">CLARIN.SI noSketchEngine concordancer and</hi>
+                    </ref> the
+                    <ref target="https://lindat.mff.cuni.cz/services/teitok/parlamint-41/">
+                        <hi rend="underline color(1155CC)">TEITOK service.</hi>
+                    </ref>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Instructors</head>
+                <p>
+                    <ref target="https://www.inz.si/en/Scientific-research-department/Dr-Anna-Kryvenko_1/">
+                        <hi rend="bold underline color(1155CC)">Anna Kryvenko</hi>
+                    </ref> holds a PhD in linguistics and has over 15 years of experience teaching lexical semantics, corpus analysis and discourse studies at the university level. Her research interests include language corpus approaches to social studies and metaphor in political discourse. Currently she is working on her postdoc MSCA Seal of Excellence project “The Changing Discursive Semantics of EU representations: Identity, Populism, Propaganda” funded by ARIS (Slovenia). She is a contributing partner for the ParlaMint-UA corpus and a participant of the ParlaCAP project.
+                </p>
+                <p>
+                    <ref target="https://www.inz.si/en/Scientific-research-department/Kristina-Pahor-de-MaitiTekavcic/">
+                        <hi rend="bold underline color(1155CC)">Kristina Pahor de Maiti Tekavčič</hi>
+                    </ref> is a linguist utilizing discourse analysis, pragmatics, corpus linguistics and digital methods to explore the descriptive and constitutive nature of language. She focuses on methodological and discourse analytical approaches to figurative language use in various text genres. Currently, she is completing her PhD thesis on the argumentative power of metaphors in socially unacceptable discourse in digitally mediated communication. She also participates in the Horizon Europe ARENAS project, analyzing the use and responses to extremist narratives in the media and parliaments across Europe.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Target audience and expected number of participants</head>
+                <p>This tutorial targets DH and SSH scholars interested in using parliamentary corpora to study socio-cultural phenomena, focusing on metadata annotations for corpus-assisted discourse analysis rather than purely linguistic topics. No programming skills are required. To allow time for hands-on exercises and discussion, the group size should be limited to 15 participants.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Learning outcomes</head>
+                <p>Participants will gain basic skills for querying ParlaMint corpora, including simple search strings and advanced CQL queries. They will learn to analyze extracted results alongside speaker and text metadata, including sentiment and topic analysis under the ParlaCAP project. Additionally, they learn to frame and interpret the results for various Digital Humanities and Social Sciences research questions, such as comparing speeches and attitudes of ruling and opposition parties or exploring parliamentary protocol variations. The techniques taught are transferable to other corpora and concordancers. The showcases will use the ParlaMint-GB and Parlamint_xx_en corpora to ensure all participants can follow queries in English and discuss results, but they will be encouraged to use ParlaMint corpora in other languages for the hands-on activities. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Requirements for technical support</head>
+                <p>Conference organizers should provide an LCD projector with a HDMI output, WIFI and some power extension cords for the participants. Participants should bring their own laptops. Participants are also advised to create a free personal account at 
+                    <ref target="https://www.clarin.si/skelog">https://www.clarin.si/skelog</ref> prior to the beginning of the workshop.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Timeline</head>
+                <p>(3.5 hours total incl. 30 min break)</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Part 1 – Introduction and demo session (1,5h):</head>
+                    <p>15 min. - Introduction and overview of the ParlaMint and ParlaCAP projects</p>
+                    <p>20 min. - Types of metadata and linguistic annotation in ParlaMint v. 5.0</p>
+                    <p>20 min. - Showcase 1: gendered dimension of topic preferences       </p>
+                    <p>20 min. - Showcase 2: sentiment distribution for the concepts of Europe and Brexit</p>
+                    <p>15 min. - Q&amp;A   </p>
+                    <p>Break – 30 min</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Part 2 – Hands-on session (1,5h):  </head>
+                    <p>20 min. - Showcase 3: populist rhetoric in parliament  </p>
+                    <p>10 min. - Q&amp;A  </p>
+                    <p>45 min. - Hands-on work related to participants’ research interests or replication of a use case</p>
+                    <p>15 min. - Discussion of results, potential and user needs for the ParlaMint corpora</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Acknowledgement</head>
+                <p>This tutorial is supported by the 
+                    <ref target="https://www.oscars-project.eu/projects/parlacap-comparing-agenda-settings-across-parliaments-parlamint-dataset">ParlaCAP project</ref> (Horizon Europe, OSCARS SSHOC cluster), Digital Humanities research program (ARIS P6-0436), the ARENAS project (EU Horizon Europe GA No. 101094731), the European research infrastructure 
+                    <ref target="https://www.clarin.eu/">CLARIN ERIC</ref> and its Slovene national consortium 
+                    <ref target="http://clarin.si/">CLARIN.SI</ref>.
+                </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Abercrombie, Gavin / Batista-Navarro, Riza</hi> (2020): “Sentiment and position-taking analysis of parliamentary debates: a systematic literature review”, in: 
+                        <hi rend="italic">Journal of Computational Social Science</hi> 3, 1: 245–270.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Erjavec, Tomaž et al.</hi> (2024): “ParlaMint II: advancing comparable parliamentary corpora across Europe. Language Resources and Evaluation”, in: 
+                        <hi rend="italic">Language Resources and Evaluation</hi>, December 2024. DOI: 10.1007/s10579-024-09798-w.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Fišer, Darja / Pahor de Maiti, Kristina</hi> (2021): 
+                        <hi rend="italic">Voices of the Parliament: ‘First, I’m a Female Politician, Not a Male One, and Second …’: A Corpus Approach to Parliamentary Discourse Research</hi>. Ljubljana: Institute of Contemporary History. &lt;https://sidih.github.io/voices/index.html&gt; [18.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Fišer, Darja / Kryvenko, Anna / Osenova, Petya / Pahor de Maiti, Kristina</hi> (2023): “Put Them In to Get Them Out: the ParlaMint Corpora for Digital Humanities and Social Sciences Research”, in: Baillot / Anne et al. (eds): 
+                        <hi rend="italic">Digital Humanities 2023: Book of Abstracts</hi>, Graz, Austria, July 2023: 56–57. DOI: 10.5281/zenodo.8107938.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Fišer, Darja / Eskevich, Maria / Bordon, David</hi> (2024): “ParlaCLARIN IV @ LREC-COLING2024: Introduction”, in: Fišer, Darja / Eskevich, Maria / Bordon, David (eds): 
+                        <hi rend="italic">Proceedings of the ParlaCLARIN IV Workshop on Creating, Analysing, and Increasing Accessibility of Parliamentary Corpora</hi>, Turin, Italy, May 2024: iii–iv. &lt;https://aclanthology.org/2024.parlaclarin-1.0/&gt; [18.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">La Mela, Matti / Norén, Frederik / Hyvönen, Eero</hi> (2022): “Digital Parliamentary Data in Action (DiPaDA 2022) – Introduction”, in: La Mela, Matti / Norén, Frederik / Hyvönen, Eero (eds.):
+                        <hi rend="color(131314)"> </hi>
+                        <hi rend="italic color(131314)">Workshop colocated with 6th Digital Humanities in the Nordic and Baltic Countries Conference</hi>
+                        <hi rend="color(131314)" xml:space="preserve">, Uppsala, Sweden, March 15, 2022, </hi>
+                        <hi rend="italic color(131314)">CEUR Workshop Proceedings</hi>
+                        <hi rend="color(131314)" xml:space="preserve"> 3133: 1–8. &lt;http://ceur-ws.org/Vol-3133/paper00.pdf&gt; [18.04.2025].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Lenardič, Jakob / Fišer, Darja</hi> (2022): “The CLARIN resource and tool families”, in: Fišer, Darja / Witt, Andreas (eds): CLARIN: The Infrastructure for Language Resources. Berlin, Boston: De Gruyter 343–372. DOI: 10.1515/9783110767377-013.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" xml:space="preserve">Mochtak, Michal / Rupnik, Peter / Ljubešić, Nikola </hi>(2024): “The ParlaSent multilingual training dataset for sentiment identification in parliamentary proceedings”, in: 
+                        <hi rend="italic">arXiv</hi> &lt; https://arxiv.org/abs/2309.09783v2&gt; [18.04.2025].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

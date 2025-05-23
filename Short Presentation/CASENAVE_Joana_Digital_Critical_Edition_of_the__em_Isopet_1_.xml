@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="CASENAVE_Joana_Digital_Critical_Edition_of_the__em_Isopet_1_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Digital Critical Edition of the &lt;em&gt;Isopet 1-Avionnet &lt;/em&gt;Aesopic Fable Collection : Issues and Perspectives</title>
+                <author>
+                    <persName>
+                        <surname>Casenave</surname>
+                        <forename>Joana</forename>
+                    </persName>
+                    <affiliation>University of Lille, Geriico Lab., Department of Information Science, France; Biblissima+ Funding</affiliation>
+                    <email>joana.casenave@univ-lille.fr</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-09T21:22:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>fables ésopiques</term>
+                    <term>édition critique numérique</term>
+                    <term>intertextualité</term>
+                    <term>réception</term>
+                    <term>structures d'indexation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>scholarly editing and editions development</term>
+                    <term>analysis</term>
+                    <term>and methods</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>Literary studies</term>
+                    <term>Philology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">This paper focuses on modeling the digital critical edition of a collection of medieval Aesopic fables. The work is based on a specific corpus: that of 
+                    <hi rend="italic">Isopet 1-Avionnet</hi>, dating from the late 13th and early 14th centuries.
+                </p>
+                <p style="text-align: left; ">The corpus has its own distinctive features: a divergent textual structure due to two successive redactions of the text, intertextual links with its direct and indirect sources, avenues for analytical exploration from a rhetorical and narrative standpoint, due to the literary genre (fables and short narratives) to which this corpus belongs (Casenave 2023a). </p>
+                <p style="text-align: left; ">How can these generic and textual specificities be translated into the indexing structures and XML/TEI encoding of this collection? How can they then be modeled through reading and circulation pathways on the edition's consultation platform? </p>
+                <p style="text-align: left; ">The discussion presented here, which is currently being developed as part of the FabuLab<ref n="1" target="ftn1"/> research project funded by Biblissima+, will attempt to propose some indexing and historicization tools adapted to the editing of texts belonging to this same generic typology.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>The Isopet 1-Avionnet corpus</head>
+                <p style="text-align: left; ">The collection of fables from 
+                    <hi rend="italic">Isopet 1-Avionnet</hi> is uniquely positioned within the medieval Aesopic tradition. Indeed, it has the particularity of inheriting from the two main Western branches of this tradition – the 
+                    <hi rend="italic" xml:space="preserve">Romulus </hi>and the 
+                    <hi rend="italic">Avianus</hi>. The text underwent significant additions, recompositions, and modifications in the hands of a compiler who revised it several decades after its initial composition (Boivin 2006). 
+                </p>
+                <p style="text-align: left; ">Its direct sources are those of the 
+                    <hi rend="italic" xml:space="preserve">Anonymous of Nevelet </hi>for 
+                    <hi rend="italic">Isopet 1</hi>, and the 
+                    <hi rend="italic" xml:space="preserve">Avianus </hi>for 
+                    <hi rend="italic">Avionnet</hi>. The manuscripts of the second redaction integrate these direct sources directly into their text, preceding each Middle French fable with its Latin source. The 
+                    <hi rend="italic" xml:space="preserve">Isopet 1-Avionnet </hi>text has been preserved in 6 manuscripts, equally divided between the two redactions.
+                </p>
+                <p style="text-align: left; ">But beyond these direct sources, the intertextual references present in the corpus of 
+                    <hi rend="italic">Isopet 1-Avionnet</hi> are numerous: references to older collections of fables (Phaedrus, Romulus, Marie de France), references to other medieval literary works (
+                    <hi rend="italic">Roman de Renart</hi>, 
+                    <hi rend="italic">Roman de la Rose</hi>), references to the paremiological repertoire (proverbs, biblical sentences, Cato's couplets) (Boivin 2006). 
+                </p>
+                <p style="text-align: left; ">Furthermore, the Aesopic fables form part of a literary 
+                    <hi rend="italic">continuum</hi>, with each fabulist having rewritten the "Aesop" hypotext in their own way, reappropriating this centuries-old tradition according to a specific ethic and aesthetic. The digital edition seems to me to be an opportunity to develop a diachronic approach to these Aesopic fables (Casenave, 2023a).
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Issues and methodology</head>
+                <p style="text-align: left; ">The aim is to model the different structures of the corpus, whether textual, rhetorical, narrative or intertextual. What encoding model can be developed to integrate this structural plurality and reflect the explicit and implicit intertextual links observable in the corpus? How can the complexity of these critical dimensions be rendered on the edition's consultation platform? In particular, how can we model a diachronic reading path that highlights the narrative and literary continuity of the fables in a digital edition, while making these interwoven structures visible to the reader?</p>
+                <p style="text-align: left; ">The work we are conducting is structured around three axes: consideration of variants and structural divergence in the edition, integration of intertextuality into the indexing modules, and development of reading and navigation pathways that take these different critical dimensions into account in the edition's consultation interface.</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Modeling variants in critical digital editions</head>
+                    <p style="text-align: left; ">The structure of this collection involves a reflection on the encoding of variants considered in their diversity. In critical editions, variants are generally distinguished between lexical, semantic, orthographic and grammatical variants – or, to use Walter Wilson Greg's term: substantive variants and accidental variants (Greg 1950). Other types of variants and variation are sometimes taken into account, particularly when attention shifts beyond the strictly authorial framework to include agents "too often considered secondary" who contribute to the "reformulation and rewriting" of the text – namely, editors and translators. These are then referred to as editorial and translational variations (Adam 2018, pp. 319–334). In genetic editing, additional types of variants are also considered: Hans Gabler, for instance, theorized the concepts of intra-document and inter-document variants (1984).</p>
+                    <p style="text-align: left; ">In this corpus of fables, which presents two distinct redactions of the same text – each containing internal variations specific to its manuscript tradition – we propose the concept of 
+                        <hi rend="italic">structural divergence</hi>. This notion, which we theorized in Casenave (2016), refers to variants that affect the structure of the text, observable across multiple manuscript witnesses – and more frequently, between different redactions. Unlike simple variants, which concern an element within a verse or sentence, structural divergences involve larger textual units: variants affecting a chapter, paragraph, stanza, or an entire verse (such as omissions or additions). Our corpus includes many such instances, necessitating the development of an encoding scheme capable of representing both these structural variants and the more conventional ones. One of the main challenges of the encoding model adopted in the FabuLab project is thus to account for the data in its entirety while enabling a clear hierarchy of variants and a sharp differentiation between types and structural levels of information.
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Intertextuality and diachronic approach to the corpus</head>
+                    <p style="text-align: left; ">The modeling of intertextuality constitutes the second axis of our reflection. This corpus of fables presents complex and diverse intertextual relationships, some internal to the Aesopic tradition and others more broadly linked to medieval literature. The digital edition will thus provide a unique opportunity to model intertextuality in encoding and to represent intertextual links in the consultation platform.</p>
+                    <p style="text-align: left; ">Elements of intertextuality can be identified and listed in an interactive source index. Identifying sources is also part of the classic work of the philologist, but this index system remains attached to the synchronic study of a work. A diachronic approach would highlight the relationships of intertextuality and generic variation that exist between the edited text and its sources. We will work on modeling this diachronic approach.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Reading and navigation pathways in digital editions</head>
+                    <p style="text-align: left; ">The critical edition reflects the discourse established by the editor, including its interpretative and hermeneutic dimensions (Gabler 2012). However, in a digital edition, the conditions under which this discourse is constructed – as well as the authorship that emerges from it – are transformed, leading to a renewed articulation of information (Casenave 2022). The issues addressed in this paper therefore take into account the specific modes of reception inherent to digital editions. These are made possible by a shift in the role of editors, who, from the very stage of encoding model design, anticipate the potential uses of their edition and its associated documentation (Casenave 2023b).</p>
+                    <p style="text-align: left; ">The reflections developed in this study naturally draw on recent theoretical advances in digital critical editing, across its many dimensions: textual structuring and data modularity, authorial and critical implications, contextualization and semantic enrichment, information visualization and multimodal reception, as well as the combination of methods and epistemological approaches (Apollon et al. 2014; Pierazzo 2015; Driscoll &amp; Pierazzo, eds. 2016; McGann 2016).</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Expected outcomes </head>
+                <p style="text-align: left; ">
+                    <lb/>I will begin by outlining the challenges involved in modeling these plural structures, with a particular focus on encoding the structural divergences found in the text. I will provide a state-of-the-art overview of current practices in digital editing (including approaches from genetic criticism, the critical apparatus, and the flexible nature of medieval writing) before presenting the methodological choices made within the FabuLab project.
+                </p>
+                <p style="text-align: left; ">Next, I will address the modeling of intertextuality in the context of digital editions through XML/TEI encoding. I will explain the decisions taken to translate identified intertextual elements into indexed structures using controlled vocabularies.</p>
+                <p style="text-align: left; ">Finally, I will turn to the rhetorical and narrative structures specific to fables and short narratives. These offer an opportunity to develop thesauri enabling fine-grained indexing and semantic enrichment of the encoded data. The goal is to implement search and navigation tools within the edition's consultation platform that enhance users’ understanding of these texts.</p>
+                <p style="text-align: left; ">The design of reading and navigation pathways within the corpus also calls for a reflection on the semiotics of digital editions, aspects of which I will discuss in this presentation.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                        
+                            <hi rend="Footnote_Characters">https://projet.biblissima.fr/fr/appels-projets/projets-retenus/fabulab</hi>
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Adam J-M. (2018): 
+                        <hi rend="italic">Souvent textes varient : génétique, intertextualité, édition et traduction</hi>. Paris: Classiques Garnier.
+                    </bibl>
+                    <bibl style="text-align: left; ">Apollon, D. / Bélisle, C. / Régnier, P. (2014): 
+                        <hi rend="italic">Digital Critical Editions</hi>. Urbana: University of Illinois Press. DOI : 
+                        <ref target="http://dx.doi.org.ressources-electroniques.univ-lille.fr/10.5406/illinois/9780252038402.001.0001">10.5406/illinois/9780252038402.001.0001</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">Boivin, J.-M. (2006): 
+                        <hi rend="italic">Naissance de la fable en français : l’Isopet de Lyon et l’Isopet 1-Avionnet</hi>. Paris: Honoré Champion.
+                    </bibl>
+                    <bibl style="text-align: left; ">Casenave, J. (2016): 
+                        <hi rend="italic">La transposition numérique de l’édition critique: éléments pour une édition de l’Isopet 1- Avionnet</hi>. PhD thesis. Université de Montréal, Université Paris-Est Créteil. 
+                    </bibl>
+                    <bibl style="text-align: left; ">Casenave, J. (2022): “La fonction de l’éditeur-auteur dans les éditions critiques numériques”, in 
+                        <hi rend="italic">Humanités numériques</hi>, no 6. 
+                        <ref target="https://doi.org/10.4000/revuehn.3241">https://doi.org/10.4000/revuehn.3241</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Casenave, J. (2023a): “Les fables ésopiques médiévales, entre traductions et réécritures successives: questions d’édition en diachronie”, In 
+                        <hi rend="italic">Lapurdum</hi>, 24, 2023. DOI : 10.4000/127t5 
+                    </bibl>
+                    <bibl style="text-align: left; ">Casenave, J. (2023b): 
+                        <hi rend="italic">L’édition critique numérique : une nouvelle approche du patrimoine littéraire et documentaire</hi>. Paris: Honoré Champion. 
+                    </bibl>
+                    <bibl style="text-align: left; ">Driscoll, M. J. / Pierazzo, E. éd. (2016): 
+                        <hi rend="italic">Digital Scholarly Editing. Theories and Practices</hi>. Open Book Publishers. DOI : 
+                        <ref target="http://dx.doi.org.ressources-electroniques.univ-lille.fr/10.11647/OBP.0095">10.11647/OBP.0095</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">Gabler, H. éd. (1984): 
+                        <hi rend="italic">Ulysses of James Joyce: a Critical and Synoptic Edition</hi>. New York: Garland.
+                    </bibl>
+                    <bibl style="text-align: left; ">Gabler, H. (2012): “Beyond Author-Centricity in Scholarly Editing”, in: 
+                        <hi rend="italic">Journal of Early Modern Studies</hi> 1 (1): 15-35.  DOI : 
+                        <ref target="http://dx.doi.org.ressources-electroniques.univ-lille.fr/10.13128/JEMS-2279-7149-10691">10.13128/JEMS-2279-7149-10691</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">McGann, J. (2016): “Marking Texts of Many Dimensions”, in: 
+                        <hi rend="italic">A New Companion to Digital </hi>Humanities, Schreibman, S. / Siemens R. G. / Unsworth J. éds. Hoboken: John Wiley &amp; Sons, 358-376.  DOI : 
+                        <ref target="http://dx.doi.org.ressources-electroniques.univ-lille.fr/10.1002/9781118680605.ch25">10.1002/9781118680605.ch25</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">Pierazzo, E. (2015): 
+                        <hi rend="italic">Digital Scholarly Editing. Theories, Models and Methods</hi>. Aldershot: Routledge.  DOI : 
+                        <ref target="http://dx.doi.org.ressources-electroniques.univ-lille.fr/10.4324/9781315577227">10.4324/9781315577227</ref>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

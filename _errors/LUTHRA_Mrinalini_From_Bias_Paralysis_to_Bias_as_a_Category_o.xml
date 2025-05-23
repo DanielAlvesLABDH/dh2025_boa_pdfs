@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LUTHRA_Mrinalini_From_Bias_Paralysis_to_Bias_as_a_Category_o">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">From Bias Paralysis to Bias as a Category of Analysis</title>
+                    <title type="sub">Introducing the Bias Aware Framework</title>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Zijlma</surname>
+                        <forename>Amber</forename>
+                    </persName>
+                    <affiliation>Huygens Institute, The Netherlands</affiliation>
+                    <email>amber.zijlma@huygens.knaw.nl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Luthra</surname>
+                        <forename>Mrinalini</forename>
+                    </persName>
+                    <affiliation>Huygens Institute, The Netherlands</affiliation>
+                    <email>mrinalini.luthra@huygens.knaw.nl</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T14:50:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>bias</term>
+                    <term>digital humanities</term>
+                    <term>archives</term>
+                    <term>AI</term>
+                    <term>ethics</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>digital archiving</term>
+                    <term>metadata standards</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>natural language processing</term>
+                    <term>Computer science</term>
+                    <term>History</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>The digital humanities face a critical challenge: as computational methods increasingly intersect with humanities research, questions of bias take on renewed urgency. While bias has long been a concept of inquiry in the humanities (McCullagh 2000, Trouillot 1995), the use of artificial intelligence (AI) in the field, ranging from automatic transcription to semantic contextualisation, brings both opportunities and risks. These technologies enable access to massive repositories of historical data but risk perpetuating historical and contemporary biases embedded in archival sources, metadata, tools and technology (Navigli et al. 2023, Thylstrup 2019).</p>
+            <p>The digitisation of Dutch East India Company (VOC) testament archives offers a revealing glimpse into how technological progress often preserves historical injustices beneath a veneer of innovation.<ref n="1" target="ftn1"/> In 2017, when the Dutch National Archives converted this collection to digital form, they inadvertently created a perfect metaphor for colonial persistence—an archive simultaneously more accessible yet faithfully reproducing its original exclusions. The 19th-century index, now transformed into searchable digital form, meticulously catalogues approximately 10,000 European male testators while systematically excluding female co-testators, individuals of diverse ethnic backgrounds, and enslaved persons who appear throughout as beneficiaries, partners, and witnesses. Consequently, although the digitisation facilitates large-scale research through the index as a finding aid, it fails to represent the actual diversity of historical actors, as their discoverability remains obscured by the prominence of well-indexed European testators (Luthra et al. 2023). The colonial taxonomies of visibility and invisibility thus migrate seamlessly from parchment to database, their power dynamics not disrupted but rather reinforced through new technologies, as Figure 1 starkly illustrates.
+            </p>
+            <figure/>
+            <p style="text-align: left;">
+                <hi rend="color(434343)" style="font-size:9pt">Figure 1: Silences in the historic index; a: 19th century index; b: Testator: only his name is indexed; c: “Free Christian woman Magdalena van Boegis”</hi>
+            </p>
+            <p>What makes bias particularly insidious in this digital landscape is the way it cascades through systems with multiplying force. These interlocking biases—archival, structural, algorithmic—do not simply coexist; they converse with and amplify one another throughout the research lifecycle. Historical prejudices embedded in archival selection become encoded into metadata structures, which subsequently inform algorithmic design, creating intricate feedback loops that transform subtle historical imbalances into significant digital disparities. The descendants of enslaved peoples must navigate digital archives where their ancestors are categorised among 'commodities', forcing engagements with painful taxonomies that reproduce historical trauma in contemporary research experiences. This concatenation of bias demands not isolated interventions but a fundamental reimagining of how we digitally curate contested pasts.</p>
+            <p>Colonial archives—our primary case study—represent particularly complex sites of biased knowledge production, where the archival impulse itself was often inextricable from the administrative apparatus of empire (Jeurgens / Karabinos 2020). As these collections undergo digital transformation, they raise urgent questions that resonate across technological and postcolonial studies: How might digital infrastructures reconfigure access to information about people and societies affected by or resisting colonialism? In what ways can digital methodologies amplify multiple perspectives and marginalized voices that exist in these archives, often speaking in constrained circumstances? Who constitutes the true beneficiaries of advanced access and research infrastructure, and whose epistemological and ethical frameworks should guide these developments? These questions underscore the necessity for deeply considered practices when applying new digital methods to historically fraught materials (Chilcott 2022, Fuentes 2016, Risam 2018).</p>
+            <p>Despite growing attention to bias and its mitigation (Bender / Friedman 2018, Chu et al. 2023, Ortolja-Baird / Nyhan 2022, Scheuerman et al. 2021), there is a lack of a coherent framework for understanding bias. The term ‘bias’ carries different meanings across contexts: archivists emphasise issues of inventorisation and deceptive categorisation<ref n="2" target="ftn2"/>; historians examine historical power structures (van Rossum 2019, Trouillot 1995)<ref n="3" target="ftn3"/>; digital humanists have focused on unfair representation (Kizhner et al. 2021); machine learning focuses on ground truth bias or representation in training data (Buolamwini / Gebru 2018, Søgaard et al. 2014, Suresh / Guttag 2021). Even within specific academic fields, the concept of bias proves elusive: Blodgett et al.'s (2020) analysis of 146 papers in the field of natural language processing reveals significant confusion in defining 'bias', while in digital cultural heritage, the characterization of offensive terminology as bias remains unclear.<ref n="4" target="ftn4"/> Digital humanists must perform a particularly intricate balancing act, honoring both historical authenticity and contemporary social justice while simultaneously addressing technical concerns of algorithmic fairness. Without a framework specifically attuned to these intersecting demands of digital humanities scholarship, we risk either oversimplifying complex historical realities or becoming immobilized by bias's omnipresence—a condition we term "bias paralysis."
+            </p>
+            <p style="text-align: justify;">
+                <hi style="font-size:11pt">We propose reframing bias not as a problem to be eliminated but as a heuristic—revelatory lens through which to examine interconnected concerns of power, inequality, FAIR and CARE principles, silences, and representation. Drawing inspiration from Joan Scott’s (2010) concept of gender as an analytical category and Sherman et al.'s (2024) treatment of algorithmic absences, we argue that ‘bias’, like Foucault’s concept of power, is relational and dynamic, actively shaping and being shaped by social, cultural, and historical contexts (Foucault / Hurley 2008).</hi><ref n="5" target="ftn5"/>
+                <hi style="font-size:11pt" xml:space="preserve"> This perspective shifts our focus from attempting to </hi>
+                <hi rend="italic" style="font-size:11pt">solve</hi>
+                <hi style="font-size:11pt" xml:space="preserve"> bias - an impossible task - to using bias as a critical tool for reflection and analysis. </hi>
+            </p>
+            <p>Building on this reconceptualization, we are developing a 'Bias Aware Framework' that addresses the complex challenges bias presents in digital humanities while offering pathways to identify, articulate, and navigate its manifestations. The framework consists of three interconnected components:
+                <lb/>
+            </p>
+            <list type="ordered">
+                <item>
+                    <hi rend="bold">A Bias Thesaurus</hi>: A comprehensive list of the concepts connected to bias (such as representation, offensive language, FAIR, CARE, silences, etc.) that creates a shared vocabulary for discussing bias across disciplines (see Figure 2).
+                    <lb/>
+                </item>
+                <item>
+                    <hi rend="bold">A Bias-Aware Data Lifecycle Mode</hi>l: Showing where and how bias manifests at different research stages, allowing for targeted interventions at critical points. 
+                    <lb/>
+                </item>
+                <item>
+                    <hi rend="bold">Guidelines and Toolkit</hi>: Reflective questions at each stage of the dataset lifecycle, illustrative examples, and “good-better-best” recommendations for bias analysis, description, and mitigation. 
+                </item>
+            </list>
+            <p style="text-align: left;">These components form an actionable framework that demystifies ‘bias’ and transforms it into a productive tool for improving current and future research and knowledge production.</p>
+            <p>
+                <hi rend="color(666666)" style="font-size:9pt">Figure 2: Bias as heuristic for distinct yet interrelated issues.</hi>
+            </p>
+            <p>The Framework has been created as part of the the 
+                <hi rend="italic">Combatting Bias</hi> project<ref n="6" target="ftn6"/>, which focuses on ethical creation of datasets for the social sciences and humanities. We particularly focus on the dataset, because creators, users, and digital infrastructures intersect at this point, making it a good unit of analysis. Through a collaborative methodology that combines theoretical analysis and practical validation, we ensured that the Framework is usable at this intersection. We conducted a 
+                <hi rend="bold">literature review</hi>, collating resources (both textual and non-textual) into an open-to-access list of resources.<ref n="7" target="ftn7"/> The Framework’s development is guided by 
+                <hi rend="bold" xml:space="preserve">partnerships </hi>with leading digitisation initiatives and advisors from different geographies and disciplines such as museum studies, critical archival studies, ethnomusicology, history, computer science, and economics. This causes the Framework to be rooted in plurivocality (Sitzia 2023). Finally, we are 
+                <hi rend="bold">validating and refining</hi> the Bias-Aware Framework through two parallel tracks: expert consultations and interactive workshops with digital humanities projects. Feedback and documented use cases will drive iterative improvements to the Framework’s components, ensuring its broader applicability and effectiveness.  
+            </p>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                    
+                        <hi style="font-size:9pt">“1.04.02 Inventaris van Het Archief van de Verenigde Oost-Indische Compagnie (VOC), 1602–1795 (1811) | Nationaal Archief,” https://www.nationaalarchief.nl/onderzoeken/archief/1.04.02 </hi>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                    
+                        <hi style="font-size:9pt" xml:space="preserve">A VOC archival report's simple title 'Missive van den Gouverneur (Ternate) van den 15 September 1767' obscures its contents about an enslaved woman named Soengiraja. ‘Missive van den Gouverneur (Ternate)’ (15 September 1767), N.A. 1.04.02, Inv. No. 8135, Nationaal Archief, Den Haag, Verenigde Oostindische Compagnie (VOC). </hi>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                    
+                        <hi style="font-size:9pt">In the context of the VOC, there is a lingering historiographic bias on viewing it as a European ‘merchant’ company active in Asian trade, as a result of maritime and European bias (van Rossum, 2019).</hi>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn4" n="4">
+                    
+                        <hi style="font-size:9pt">For instance the Words Matter (Modest and Lelijveld 2018), a publication on sensitive words in the museum sector, doesn’t use the term ‘bias’, but projects such as DE-BIAS, based at the Dutch Institute of Sound and Vision, use the term in context of developing a tool to identify harmful language in archives. </hi>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn5" n="5">
+                    
+                        <hi style="font-size:9pt">Looking at its evolution across linguistic and cultural spheres, we find that different languages reveal how bias is understood through varied sensory and conceptual metaphors: visual (French "biais"/slant, Chinese "<hi rend="Chinese">偏見"</hi>/slanted-view), social-political (Sanskrit "</hi>
+                        <hi style="font-family:Mangal;font-size:9pt">पक्षपात</hi>
+                        <hi style="font-size:9pt">"/partisanship, taking sides), temporal-cognitive (Hindi "</hi>
+                        <hi style="font-family:Mangal;font-size:9pt">पूर्वाग्रह</hi>
+                        <hi style="font-size:9pt">"/prior-grasping), and positional (Arabic "تحيز"/taking-a-position, aligning-oneself). Each etymology emphasises different aspects of how bias operates in human understanding: through sight, social alignment, time, and positioning.</hi>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn6" n="6">
+                    
+                        <hi style="font-size:9pt" xml:space="preserve">Combatting Bias project is a collaborative initiative based at the Huygens Institute and International Institute of Social History in Amsterdam, Netherlands. The authors are primary investigators on the project, working to establish frameworks for identifying and navigating bias in (historical) datasets. More information on the project, its partners and advisors can be found on the website: </hi>
+                        <ref target="https://combattingbias.huygens.knaw.nl/">
+                            <hi rend="color(1155CC)" style="font-size:9pt">https://combattingbias.huygens.knaw.nl/</hi>
+                        </ref>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn7" n="7">
+                    
+                        <hi style="font-size:9pt" xml:space="preserve">Combatting Bias Resources List: </hi>
+                        <ref target="https://docs.google.com/spreadsheets/d/17mAClY06JuPQm9qf3Z7ZmdYi08VrZboCUTOv27J6J-E/edit?usp=sharing">
+                            <hi rend="color(1155CC)" style="font-size:9pt">https://docs.google.com/spreadsheets/d/17mAClY06JuPQm9qf3Z7ZmdYi08VrZboCUTOv27J6J-E/edit?usp=sharing</hi>
+                        </ref>
+                        <hi style="font-size:9pt"> </hi>
+                    
+                </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Bender, Emily M.</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> / </hi>
+                        <hi rend="bold" style="font-size:11pt">Friedman, Batya</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2018): “Data Statements for Natural Language Processing: Toward Mitigating System Bias and Enabling Better Science,” in: : </hi>
+                        <hi rend="italic" style="font-size:11pt">Transactions of the Association for Computational Linguistics</hi>
+                        <hi style="font-size:11pt" xml:space="preserve">, 6, 587–604. DOI: </hi>
+                        <ref target="https://doi.org/10.1162/tacl_a_00041">
+                            <hi rend="color(1155CC)" style="font-size:11pt">10.1162/tacl_a_00041</hi>
+                        </ref>
+                        <hi style="font-size:11pt">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt" xml:space="preserve">Blodgett, Su L. </hi>
+                        <hi style="font-size:11pt" xml:space="preserve">/ </hi>
+                        <hi rend="bold" style="font-size:11pt" xml:space="preserve">Barocas, Solon </hi>
+                        <hi style="font-size:11pt" xml:space="preserve">/ </hi>
+                        <hi rend="bold" style="font-size:11pt" xml:space="preserve">Duamé III, Hal </hi>
+                        <hi style="font-size:11pt" xml:space="preserve">/ </hi>
+                        <hi rend="bold" style="font-size:11pt" xml:space="preserve">Wallach, Hanna </hi>
+                        <hi style="font-size:11pt" xml:space="preserve">/ </hi>
+                        <hi rend="bold" style="font-size:11pt">Jurafsky, Dan</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> / </hi>
+                        <hi rend="bold" style="font-size:11pt">Chai, Joyce</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> / </hi>
+                        <hi rend="bold" style="font-size:11pt">Schluter, Natalie</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> / </hi>
+                        <hi rend="bold" style="font-size:11pt">Tetreault, Joel</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2020): “Language (Technology) is Power: A Critical Survey of ‘Bias’ in NLP,” in: D. Jurafsky et al. (ed.): </hi>
+                        <hi rend="italic" style="font-size:11pt">Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</hi>
+                        <hi style="font-size:11pt" xml:space="preserve">, ACL 2020, Online: Association for Computational Linguistics 5454–5476. DOI: </hi>
+                        <ref target="https://aclanthology.org/2020.acl-main.485">
+                            <hi rend="color(1155CC)" style="font-size:11pt">10.18653/v1/2020.acl-main.485</hi>
+                        </ref>
+                        <hi style="font-size:11pt">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Buolamwini, Joy</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> / </hi>
+                        <hi rend="bold" style="font-size:11pt">Gebru, Timnit</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2018): “Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification,” in: </hi>
+                        <hi rend="italic" style="font-size:11pt">Proceedings of the 1st Conference on Fairness, Accountability and Transparency</hi>
+                        <hi style="font-size:11pt">, Conference on Fairness, Accountability and Transparency, PMLR 77–91 &lt;https://proceedings.mlr.press/v81/buolamwini18a.html&gt; [13.07.2023].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Chilcott, Alicia</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2022): “Towards protocols for describing racially offensive language in UK public archives,” in: V. Frings-Hessami and F. Foscarini (ed.): </hi>
+                        <hi rend="italic" style="font-size:11pt">Archives in a Changing Climate - Part I &amp; Part II</hi>
+                        <hi style="font-size:11pt" xml:space="preserve">, Cham, Switzerland: Springer Nature Switzerland 151–168. DOI: </hi>
+                        <ref target="https://doi.org/10.1007/978-3-031-19289-0_10">
+                            <hi rend="color(1155CC)" style="font-size:11pt">10.1007/978-3-031-19289-0_10</hi>
+                        </ref>
+                        <hi style="font-size:11pt">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt" xml:space="preserve">Chu, Charlene H. </hi>
+                        <hi style="font-size:11pt" xml:space="preserve">/ </hi>
+                        <hi rend="bold" style="font-size:11pt" xml:space="preserve">Donato-Woodger, Simon </hi>
+                        <hi style="font-size:11pt" xml:space="preserve">/  (2023): “Age-related bias and artificial intelligence: a scoping review,” in: : </hi>
+                        <hi rend="italic" style="font-size:11pt">Humanities and Social Sciences Communications</hi>
+                        <hi style="font-size:11pt">, 10, 1, 1–17 &lt;https://www.nature.com/articles/s41599-023-01999-y&gt; [24.10.2024]. DOI: 10.1057/s41599-023-01999-y.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Fuentes, Marisa J.</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2016): </hi>
+                        <hi rend="italic" style="font-size:11pt">Dispossessed lives: Enslaved women, violence, and the archive</hi>
+                        <hi style="font-size:11pt">. Philadelphia, United States: University of Pennsylvania Press.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt" xml:space="preserve">Foucault, Michel </hi>
+                        <hi style="font-size:11pt" xml:space="preserve">/ </hi>
+                        <hi rend="bold" style="font-size:11pt">Hurley, Robert</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2008): </hi>
+                        <hi rend="italic" style="font-size:11pt">The history of sexuality. Volume 1, The will to knowledge</hi>
+                        <hi style="font-size:11pt">. Camberwell, Vic.: Penguin.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt" xml:space="preserve">Kizhner, Inna </hi>
+                        <hi style="font-size:11pt" xml:space="preserve">/ </hi>
+                        <hi rend="bold" style="font-size:11pt" xml:space="preserve">Terras, Melissa </hi>
+                        <hi style="font-size:11pt" xml:space="preserve">/ </hi>
+                        <hi rend="bold" style="font-size:11pt" xml:space="preserve">Rumyantsev, Maxim </hi>
+                        <hi style="font-size:11pt" xml:space="preserve">/ </hi>
+                        <hi rend="bold" style="font-size:11pt" xml:space="preserve">Khokhlova, Valentina </hi>
+                        <hi style="font-size:11pt" xml:space="preserve">/ </hi>
+                        <hi rend="bold" style="font-size:11pt">Demeshkova, Elisaveta</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> / </hi>
+                        <hi rend="bold" style="font-size:11pt">Rudov, Ivan</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> / </hi>
+                        <hi rend="bold" style="font-size:11pt">Afansieva, Julia</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2021): “Digital cultural colonialism: measuring bias in aggregated digitized content held in Google Arts and Culture,” in: : </hi>
+                        <hi rend="italic" style="font-size:11pt">Digital Scholarship in the Humanities</hi>
+                        <hi style="font-size:11pt" xml:space="preserve">, 36, 3, 607–640. DOI: </hi>
+                        <ref target="https://doi.org/10.1093/llc/fqaa055">
+                            <hi rend="color(1155CC)" style="font-size:11pt">10.1093/llc/fqaa055</hi>
+                        </ref>
+                        <hi style="font-size:11pt">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold color(222222)" style="font-size:11pt" xml:space="preserve">Jeurgens, Charles </hi>
+                        <hi rend="color(222222)" style="font-size:11pt" xml:space="preserve">/ </hi>
+                        <hi rend="bold color(222222)" style="font-size:11pt" xml:space="preserve">Michael Karabinos </hi>
+                        <hi rend="color(222222)" style="font-size:11pt" xml:space="preserve">(2020). "Paradoxes of curating colonial memory" in  </hi>
+                        <hi rend="italic color(222222)" style="font-size:11pt" xml:space="preserve">Archival    </hi>
+                        <hi rend="italic" style="font-size:11pt">science 20, no. 3: 199-220.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Luthra, Mrinalini</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> / </hi>
+                        <hi rend="bold" style="font-size:11pt">Todorov, Konstantin</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> / </hi>
+                        <hi rend="bold" style="font-size:11pt">Jeurgens, Charles</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> / </hi>
+                        <hi rend="bold" style="font-size:11pt">Colavizza, Giovanni</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2023): “Unsilencing colonial archives via automated entity recognition,” in: : </hi>
+                        <hi rend="italic" style="font-size:11pt">Journal of Documentation</hi>
+                        <hi style="font-size:11pt"> </hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">McCullagh, C. Behan</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2000): “Bias in Historical Description, Interpretation, and Explanation,” in: : </hi>
+                        <hi rend="italic" style="font-size:11pt">History and Theory</hi>
+                        <hi style="font-size:11pt">, 39, 1, 39–66 &lt;https://www.jstor.org/stable/2677997&gt; [24.10.2024].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Modest, Wayne / Lelijveld, Robin</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2018): </hi>
+                        <hi rend="italic" style="font-size:11pt">Words Matter: an unfinished guide to word choices in the cultural sector</hi>
+                        <hi style="font-size:11pt">. The National Museum for World Cultures (Tropenmuseum, Afrikamuseum, Museum Volkenkunde, Wereldmuseum) &lt;https://amsterdam.wereldmuseum.nl/en/about-wereldmuseum-amsterdam/research/words-matter-publication&gt; [23.10.2024].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Navigli, Roberto</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> / </hi>
+                        <hi rend="bold" style="font-size:11pt" xml:space="preserve">Conia, Simone </hi>
+                        <hi style="font-size:11pt" xml:space="preserve">/ </hi>
+                        <hi rend="bold" style="font-size:11pt">Ross, Björn</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2023): “Biases in Large Language Models: Origins, Inventory, and Discussion,” in: : </hi>
+                        <hi rend="italic" style="font-size:11pt">Journal of Data and Information Quality</hi>
+                        <hi style="font-size:11pt" xml:space="preserve">, 15, 2, 10:1-10:21. DOI: </hi>
+                        <ref target="https://doi.org/10.1145/3597307">
+                            <hi rend="color(1155CC)" style="font-size:11pt">10.1145/3597307</hi>
+                        </ref>
+                        <hi style="font-size:11pt">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Ortolja-Baird, Alexandra</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> / </hi>
+                        <hi rend="bold" style="font-size:11pt">Nyhan, Julianne</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2022): “Encoding the haunting of an object catalogue: on the potential of digital technologies to perpetuate or subvert the silence and bias of the early-modern archive1,” in: : </hi>
+                        <hi rend="italic" style="font-size:11pt">Digital Scholarship in the Humanities</hi>
+                        <hi style="font-size:11pt" xml:space="preserve">, 37, 3, 844–867. DOI: </hi>
+                        <ref target="https://doi.org/10.1093/llc/fqab065">
+                            <hi rend="color(1155CC)" style="font-size:11pt">10.1093/llc/fqab065</hi>
+                        </ref>
+                        <hi style="font-size:11pt">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Risam, Roopika</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2018): “Decolonizing the Digital Humanities in Theory and Practice,” in: </hi>
+                        <hi rend="italic" style="font-size:11pt">The Routledge Companion to Media Studies and Digital Humanities</hi>
+                        <hi style="font-size:11pt">, Routledge.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Scott, Joan W.</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2010): “Gender: Still a Useful Category of Analysis?,” in: : </hi>
+                        <hi rend="italic" style="font-size:11pt">Diogenes</hi>
+                        <hi style="font-size:11pt" xml:space="preserve">, 57, 1, 7–14. DOI: </hi>
+                        <ref target="https://www.cambridge.org/core/journals/diogenes/article/abs/gender-still-a-useful-category-of-analysis/737D82DCC7D311B2D7E58C60246EB511">
+                            <hi rend="color(1155CC)" style="font-size:11pt">10.1177/0392192110369316</hi>
+                        </ref>
+                        <hi style="font-size:11pt">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt" xml:space="preserve">Scheuerman, Morgan K. / Hanna, Alex </hi>
+                        <hi style="font-size:11pt" xml:space="preserve">/ </hi>
+                        <hi rend="bold" style="font-size:11pt" xml:space="preserve">Denton, Emily </hi>
+                        <hi style="font-size:11pt" xml:space="preserve">(2021): “Do Datasets Have Politics? Disciplinary Values in Computer Vision Dataset Development,” in: : </hi>
+                        <hi rend="italic" style="font-size:11pt">Proc. ACM Hum.-Comput. Interact.</hi>
+                        <hi style="font-size:11pt">, 5, CSCW2, 317:1-317:37. DOI: 10.1145/3476058.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt" xml:space="preserve">Sherman, Jihan </hi>
+                        <hi style="font-size:11pt" xml:space="preserve">/ </hi>
+                        <hi rend="bold" style="font-size:11pt">Morrison, Romi</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> / </hi>
+                        <hi rend="bold" style="font-size:11pt">Klein, Lauren</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> / </hi>
+                        <hi rend="bold" style="font-size:11pt">Rosner, Daniela</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2024): “The Power of Absence: Thinking with Archival Theory in Algorithmic Design,” in: </hi>
+                        <hi rend="italic" style="font-size:11pt">Designing Interactive Systems Conference</hi>
+                        <hi style="font-size:11pt">, DIS ’24: Designing Interactive Systems Conference, IT University of Copenhagen Denmark: ACM 214–223 &lt;</hi>
+                        <ref target="https://dl.acm.org/doi/10.1145/3643834.3660690">
+                            <hi rend="color(1155CC)" style="font-size:11pt">https://dl.acm.org/doi/10.1145/3643834.3660690</hi>
+                        </ref>
+                        <hi style="font-size:11pt">&gt; [16.10.2024]. </hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Sitzia, Emilie</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2023): “Multiple Narratives and Polyvocality as Strategies of Inclusive Public Participation: Challenges and Disruption in the History Museum,” in: : </hi>
+                        <hi rend="italic" style="font-size:11pt">Muséologies. Les cahiers d’études supérieures</hi>
+                        <hi style="font-size:11pt">, 10, 2, 51–63. DOI: 10.7202/1108037ar.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt" xml:space="preserve">Søgaard, Anders </hi>
+                        <hi style="font-size:11pt">/</hi>
+                        <hi rend="bold" style="font-size:11pt" xml:space="preserve"> Plank, Barbara </hi>
+                        <hi style="font-size:11pt" xml:space="preserve">/  </hi>
+                        <hi rend="bold" style="font-size:11pt" xml:space="preserve">Howy, Dirk </hi>
+                        <hi style="font-size:11pt" xml:space="preserve">(2014): “Selection bias, label bias, and bias in ground truth,” in: </hi>
+                        <hi rend="italic" style="font-size:11pt">Proceedings of COLING 2014, the 25th International Conference on Computational Linguistics: Tutorial Abstracts</hi>
+                        <hi style="font-size:11pt">, COLING, Dublin, Ireland 11–13 &lt;https://aclanthology.org/C14-3005.pdf&gt;.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Suresh, Harini / Guttag, John</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2021): “A Framework for Understanding Sources of Harm throughout the Machine Learning Life Cycle,” in: </hi>
+                        <hi rend="italic" style="font-size:11pt">Equity and Access in Algorithms, Mechanisms, and Optimization</hi>
+                        <hi style="font-size:11pt" xml:space="preserve">, EAAMO ’21: Equity and Access in Algorithms, Mechanisms, and Optimization, -- NY USA: ACM 1–9. DOI: </hi>
+                        <ref target="https://dl.acm.org/doi/10.1145/3465416.3483305">
+                            <hi rend="color(1155CC)" style="font-size:11pt">10.1145/3465416.3483305</hi>
+                        </ref>
+                        <hi style="font-size:11pt">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Thylstrup, Nanna B.</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2019): </hi>
+                        <hi rend="italic" style="font-size:11pt">The politics of mass digitization</hi>
+                        <hi style="font-size:11pt">. Cambridge, Massachusetts, United States: MIT Press.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Trouillot, Michel-Rolph</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (1995): </hi>
+                        <hi rend="italic" style="font-size:11pt">Silencing the Past: Power and the Production of History</hi>
+                        <hi style="font-size:11pt">. Boston, Massachusetts: Beacon Press.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">van Rossum, Matthias</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2019): “Labouring Transformations of Amphibious Monsters: Exploring Early Modern Globalization, Diversity, and Shifting Clusters of Labour Relations in the Context of the Dutch East India Company (1600–1800),” in: : </hi>
+                        <hi rend="italic" style="font-size:11pt">International Review of Social History</hi>
+                        <hi style="font-size:11pt">, 64, S27, 19–42 &lt;https://www.cambridge.org/core/product/6D2A9DF44C70C44B1AA6BFB773AFF7E2&gt;. DOI: 10.1017/S0020859019000014.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

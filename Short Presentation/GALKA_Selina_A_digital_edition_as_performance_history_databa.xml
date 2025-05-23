@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="GALKA_Selina_A_digital_edition_as_performance_history_databa">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>A digital edition as performance-history database: modeling the ephemeral in the theater chronicles of Philipp Gumpenhuber (1758–1763)</title>
+                <author>
+                    <persName>
+                        <surname>Galka</surname>
+                        <forename>Selina</forename>
+                    </persName>
+                    <affiliation>Institut für Digitale Geisteswissenschaften, Austria</affiliation>
+                    <email>selina.galka@uni-graz.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Dittmann</surname>
+                        <forename>Christina</forename>
+                    </persName>
+                    <affiliation>Institut für Digitale Geisteswissenschaften, Austria</affiliation>
+                    <email>christina.dittmann@uni-graz.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Vogeler</surname>
+                        <forename>Georg</forename>
+                    </persName>
+                    <affiliation>Institut für Digitale Geisteswissenschaften, Austria</affiliation>
+                    <email>georg.vogeler@uni-graz.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Zechner</surname>
+                        <forename>Ingeborg</forename>
+                    </persName>
+                    <affiliation>Institut für Kunst- und Musikwissenschaft</affiliation>
+                    <email>ingeborg.zechner@uni-graz.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Leitner</surname>
+                        <forename>Jakob</forename>
+                    </persName>
+                    <affiliation>Institut für Kunst- und Musikwissenschaft</affiliation>
+                    <email>jakob.leitner@uni-graz.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Braquet</surname>
+                        <forename>Véronique</forename>
+                    </persName>
+                    <affiliation>Institut für Kunst- und Musikwissenschaft</affiliation>
+                    <email>veronique.braquet@uni-graz.at</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T17:53:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>digital edition</term>
+                    <term>performing arts ontologies</term>
+                    <term>assertive edition</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data modeling</term>
+                    <term>linked (open) data</term>
+                    <term>scholarly editing and editions development</term>
+                    <term>analysis</term>
+                    <term>and methods</term>
+                    <term>Art history</term>
+                    <term>History</term>
+                    <term>Musicology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>From 2024 to 2028, a digital edition of the theater chronicles by ballet master Philipp Gumpenhuber (see 
+                    <ref target="https://gudieen.hypotheses.org/">
+                        <hi rend="color(1155CC)">project blog</hi>
+                    </ref>, project acronym: GuDiE) is being developed as a collaboration between the Department of Arts and Musicology and the Department of  Digital Humanities at the University of Graz. These chronicles document the cultural activities of the Viennese court–a center of European social and cultural life–in the years 1758 to 1763. The court maintained an extensive network of representation in which the Viennese court theaters (Kärtnertortheater, Burgtheater and the castle theatres Laxenburg and Schönbrunn) through their personnel functioned as key institutions for cultural transmission. The data contained in our edition of the chronicles is modeled in TEI/XML and RDF with a focus on performing arts ontologies. Combining a historical theater database with its textual source is a novelty in both the field of digital scholarly editing and digital scholarship in performing arts research. 
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Content</head>
+                <p>Gumpenhuber’s handwritten chronicles offer insights into the schedules of four theaters between 1758–1759 and 1761–1763, document daily theater operations (performances, rehearsals, and changes), and provide information about theater personnel and performers as well as significant social and political events in the context of theater life. Written primarily in French but also in Italian, the seven leather-bound volumes are largely organized in tabular form. Over time, the volumes were separated and are now housed in the music collection of the Austrian National Library (three volumes, A-Wn Mus.Hs.34580a-c) and in the theater collection of Harvard University’s Houghton Library, Cambridge (MA) (four volumes, US-CAh MS Thr 248-248.3).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Digital Edition</head>
+                <p>The digital edition aims to provide new insights into the complex musical and socio-cultural life of the Viennese court under the perspective of the "performative turn" in musicology, drawing on the concept of “performativity” in theatre studies. This is realized in an assertive edition (Vogeler 2019) by modeling the chronicles with TEI/XML and generating an RDF database from this. The combination offers broad exploratory access to one of the most important resources on Viennese theater life. For example, it will shed light on the genres combined in a single performance, establish connections between personal and court events and performances, and incorporate behind-the-scenes personnel into the database. The digital edition will, for the first time, make the spatially separated volumes (Houghton Library, Austrian National Library) accessible together through the International Image Interoperability Framework (IIIF) and juxtapose them with the semantically enriched transcriptions in a newly developed web interface.</p>
+                <p>Archiving and publication will be carried out using the Humanities Asset Management System (GAMS), an asset management system for managing, publishing, and long-term archiving digital resources from all humanities disciplines. Based on the open-source Fedora framework (Flexible Extensible Digital Object Repository Architecture), GAMS is continuously developed at the Institute for Digital Humanities. With the help of the system, various resources can be managed, enriched with metadata, and persistently published in a citable manner (Stigler/Steiner 2018). All content and data will be made available according to the FAIR principles.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Challenges and modelling</head>
+                <p>This setup allows simultaneous storage of TEI/XML and RDF data and corresponding SPARQL queries, which are not solved by existing generic solutions for digital editions (e.g., EVT, TEI Publisher). The tabular structure of the source provides the semantic baseline for information extraction (each table row corresponds to the performances of a single day). However, there is also abundant data whose semantics cannot be fully derived from the table structure- this includes e.g. metadata like location, multiple dates or "superevents" (overarching events connecting multiple performances and rehearsals).</p>
+                <p>Special attention will be given to linking rehearsals and performances of the same work, enabling detailed tracking of how works were developed and realized. The connection between works and their genres, such as opera, ballet, or spoken drama, plays a central role. To this end, a system for capturing works is being established, considering the specific concept of a theatrical "work" in the eighteenth century (e.g., libretto vs. music, hybridity). Detailed modeling of the performed works is necessary since often only parts of works or specific adaptations were performed.</p>
+                <p>Additionally, questions arise about how to model changes, such as performances that were announced but not executed. These data are essential for reconstructing planning processes and cultural contexts. This includes documenting changes within a performance or event, such as when a performer was replaced due to illness. The data model must thus allow for the modeling of changes and causalities.</p>
+                <p>Another key aspect is the possibility of connecting the data with external databases, such as Corago.it (based on librettos) and the digital catalog of Gluck's works (musical works). Despite differing concepts of "work" in these databases, it is crucial that our data remains compatible and interoperable. The data model is to be discussed in particular with Musiconn.performance and mapping options are to be harmonised.</p>
+                <p>We model these issues starting from the textual evidence. To simplify and clarify encoding, we extend the TEI/XML model with a custom namespace. This is then transformed into valid TEI via XSLT (Extensible Stylesheet Language), using basic linguistic references like &lt;seg&gt; and the @ana attribute to specify semantic information.</p>
+                <p>From the TEI/XML, an RDF database is extracted, building on existing performing arts ontologies such as the Data Model for the Swiss Performing Arts Platform (SPA) or the Performed Music Ontology. SPA integrates the various levels of performance based on the FRBR model (Functional Requirements for Bibliographic Records) as Performance Work, Performance Plan, and Performance Production. The SPA also underpins the “Linked Stage Graph” project, which similarly works with historical theater data, though less extensively and focused on illustrations. The “Detmold Court Theater” project also encoded theater data with TEI and MEI (Music Encoding Initiative), focusing only on people and works, with a work-centered database model. The GuDiE project aims to build on and expand these existing models, e.g., to encode performance changes, causalities, and probabilities. The short paper will introduce how these elements can be represented in the RDF model. A first draft of an example RDF-modeling of the ballet performance 
+                    <hi rend="italic">La Rencontre heureuse des Bergers</hi>, as described in the TEI example, can be found here: 
+                    <ref target="https://github.com/selinagalka1/gudie_draft/blob/main/bergers.ttl">
+                        <hi rend="color(1155CC)">https://github.com/selinagalka1/gudie_draft/blob/main/bergers.ttl</hi>
+                    </ref>. The project will also take into account the history and discussions of the performing arts data models (e.g. Mitsopoulou/Kyprianos/Brattis 2024, Doty 2013) and evaluate how they can be applied to historical theater data. 
+                </p>
+                <p>Many similarly structured sources from the 18th century remain unedited, such as the 
+                    <hi rend="italic">Almanach à l’usage des Théatres</hi> from the years 1758 and 1759 or playbills from other European court and city theaters. Thus, the modeling and encoding of Gumpenhuber’s theater chronicles can serve as a first step and a model for similar endeavors, ensuring a direct linkage of data to a historical text using performing arts ontologies.
+                </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Corago.it. 
+                        <ref target="https://corago.unibo.it/">https://corago.unibo.it/</ref> [26.11.2024].
+                    </bibl>
+                    <bibl>Detmolder Hoftheater (Project). 
+                        <ref target="https://hoftheater-detmold.de/">https://hoftheater-detmold.de/</ref> [26.11.2024].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Doty, Colin 2013</hi>: „The Difficulty of An Ontology of Live Performance“, in 
+                        <hi rend="italic">InterActions: UCLA Journal of Education and Information Studies</hi> 9.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Estermann, Beat / Julien, Frédéric</hi> 2019: „A Linked Digital Future for the Performing Arts: Leveraging Synergies along the Value Chain“, In 
+                        <hi rend="italic">Canadian Arts Presenting Association (CAPACOA) in Cooperation with the Bern University of Applied Sciences</hi>. Ottawa, Bern.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Estermann, Beat / Schneeberger, Christian</hi> 2017: „Data Model for the Swiss Performing Arts Platform”, https://www.bfh.ch/dam/jcr:78a5e853-3c03-4ed8-8e28-86e2791a5829/ [26.11.2024].
+                    </bibl>
+                    <bibl>Edition Visualization Technique (EVT). 
+                        <ref target="http://evt.labcd.unipi.it/">http://evt.labcd.unipi.it/</ref> [26.11.2024].
+                    </bibl>
+                    <bibl>FAIR-Principles. 
+                        <ref target="https://www.go-fair.org/fair-principles">https://www.go-fair.org/fair-principles</ref> [26.11.2024].
+                    </bibl>
+                    <bibl>Geisteswissenschaftliches Asset Management System (GAMS). 
+                        <ref target="https://gams.uni-graz.at">https://gams.uni-graz.at</ref> [26.11.2024].
+                    </bibl>
+                    <bibl>Gluck, Digitales Werkverzeichnis. 
+                        <ref target="https://www.gluck-gesamtausgabe.de/gwv/werksuche.html">https://www.gluck-gesamtausgabe.de/gwv/werksuche.html</ref> [26.11.2024].
+                    </bibl>
+                    <bibl>International Image Interoperability Framework (IIIF). 
+                        <ref target="https://iiif.io/">https://iiif.io/</ref> [26.11.2024].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Mitsopoulou, Evie / Konstantinos, Kyprianos / Brattis, Pantelis 2014</hi>: „Documenting the Ephemeral: An Ontology for the Performing Arts“, in 
+                        <hi rend="italic">Journal of Information Science</hi>, 2024. DOI: 
+                        <ref target="https://doi.org/10.1177/01655515241271052">https://doi.org/10.1177/01655515241271052</ref>.
+                    </bibl>
+                    <bibl>Music Encoding Initiative (MEI). 
+                        <ref target="https://music-encoding.org/">https://music-encoding.org/</ref> [26.11.2024].
+                    </bibl>
+                    <bibl>Musiconn Performance. 
+                        <ref target="https://www.musiconn.de/">https://www.musiconn.de/</ref> [26.11.2024].
+                    </bibl>
+                    <bibl>OAIS Reference Model (ISO 14721). 
+                        <ref target="http://www.oais.info/">http://www.oais.info/</ref> [26.11.2024].
+                    </bibl>
+                    <bibl>Performed Music Ontology. 
+                        <ref target="https://performedmusicontology.org/">https://performedmusicontology.org/</ref> [26.11.2024].
+                    </bibl>
+                    <bibl>GuDiE-Projektblog (Gumpenhuber Digital Edition). 
+                        <ref target="https://gudieen.hypotheses.org/">https://gudieen.hypotheses.org/</ref> [26.11.2024].
+                    </bibl>
+                    <bibl>Resource Description Framework (RDF). 
+                        <ref target="https://www.w3.org/RDF/">https://www.w3.org/RDF/</ref> [26.11.2024].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Skaug, Johanna / Aalberg, Trond 2024</hi>: „The Concept of Work in Theater Performances“, in 
+                        <hi rend="italic">Cataloging &amp; Classification Quarterly</hi> 0, 0 : 1–22. DOI: 
+                        <ref target="https://doi.org/10.1080/01639374.2024.2357208">https://doi.org/10.1080/01639374.2024.2357208</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Stigler, Johannes / Steiner Elisabeth 2018</hi>: „GAMS – Eine Infrastruktur zur Langzeitarchivierung und Publikation geisteswissenschaftlicher Forschungsdaten.“, in 
+                        <hi rend="italic">Mitteilungen der Vereinigung Österreichischer Bibliothekarinnen und Bibliothekare</hi> 71: 207–16.
+                    </bibl>
+                    <bibl>TEI Publisher. 
+                        <ref target="https://teipublisher.com/exist/apps/tei-publisher-home/index.html">https://teipublisher.com/exist/apps/tei-publisher-home/index.html</ref> [26.11.2024].
+                    </bibl>
+                    <bibl>Text Encoding Initiative (TEI). https://tei-c.org/ [26.11.2024].</bibl>
+                    <bibl>
+                        <hi rend="bold">Tietz, Tabea / Bruns, Oleksandra / Sack, Harald 2023</hi>: „
+                        <ref target="https://ceur-ws.org/Vol-3540/short1.pdf">A Data Model for Linked Stage Graph and the Historical Performing Arts Domain</ref>“, in 
+                        <hi rend="italic">Proc. of the International Workshop on Semantic Web and Ontology Design for Cultural Heritage (SWODCH), co-located with ISWC 2023. CEUR WS Vol-3540</hi>. Athens, Greece. 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Tietz, Tabea / Sack, Harald / FIZ Karlsruhe 2024</hi>: „Towards Linked Stage Graph 2.0 - a Knowledge Graph Based Research Resource for the Performing Arts“. DOI: 
+                        <ref target="https://doi.org/10.5281/zenodo.10077479">https://doi.org/10.5281/zenodo.10077479</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Vogeler, Georg 2019</hi>: „The ‘assertive edition’: On the consequences of digital methods in scholarly editing for historians“, in 
+                        <hi rend="italic">International Journal of Digital Humanities</hi> 1: 309–22. DOI: 
+                        <ref target="https://doi.org/10.1007/s42803-019-00025-5">https://doi.org/10.1007/s42803-019-00025-5</ref>&gt;.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

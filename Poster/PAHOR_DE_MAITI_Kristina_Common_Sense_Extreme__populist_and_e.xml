@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PAHOR_DE_MAITI_Kristina_Common_Sense_Extreme__populist_and_e">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Common Sense Extreme: populist and extremist narratives in European parliaments</title>
+                <author>
+                    <persName>
+                        <surname>Pahor de Maiti Tekavčič</surname>
+                        <forename>Kristina</forename>
+                    </persName>
+                    <affiliation>Faculty of Arts, University of Ljubljana, Slovenia; Institute of Contemporary History, Ljubljana, Slovenia</affiliation>
+                    <email>kristina.pahordemaiti@ff.uni-lj.si</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Konovšek</surname>
+                        <forename>Tjaša</forename>
+                    </persName>
+                    <affiliation>Institute of Contemporary History, Ljubljana, Slovenia</affiliation>
+                    <email>tjasa.konovsek@inz.si</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-25T16:05:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>populism</term>
+                    <term>extremist narratives</term>
+                    <term>topic modeling</term>
+                    <term>parliament</term>
+                    <term>ParlaMint</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>rhetorical analysis</term>
+                    <term>text mining and analysis</term>
+                    <term>History</term>
+                    <term>Linguistics</term>
+                    <term>Political science</term>
+                    <term>Sociology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">The rise of extremism poses a significant challenge to constitutional democracies. Extremism fosters divisive narratives, promotes hostility between groups, and perpetuates an "us versus them" worldview (Postigo Fuentes et al. 2024). This becomes especially alarming when combined with populist rhetoric in which the speaker claims to represent "the people" as a homogenous entity (Kock et al. 2022). Extremism’s focus on in-groups and out-groups, perceived as homogenous, aligns with populism in positioning "the people" against elites or the "other". Moreover, populism often emotionalizes discourse, simplifies issues, and amplifies polarization which contributes to its persuasiveness (Zarefsky &amp; Mohammed 2020). In parliamentary contexts, such strategies are particularly alarming due to their potential to shape legislative decisions and impact policy-making processes.</p>
+            <p style="text-align: left; ">This study examines the relationship between populist rhetoric and extremist narratives in European parliaments by analyzing common sense narratives in speeches using corpus linguistic and data-mining techniques. As Fišer et al. (2023) note, terms referencing "the people", used as proxies for populist discourse, vary widely, making detecting populism in multilingual datasets particularly challenging. To address this, we use ParlaMint-en 4.1 (Kuzman et al. 2024), the English machine-translated version of ParlaMint 4.1, and focus on the distribution and context of the single-phrase query common sense.</p>
+            <p style="text-align: left; ">ParlaMint-en 4.1 ensures good cross-linguistic comparability and offers a unique opportunity to observe social phenomena on a large scale, geographically and temporally, through unified queries. The corpus uses data from ParlaMint 4.1 (Erjavec et al. 2024b) which includes parliamentary debates with rich metadata from 29 European parliaments, covering at least the period from 2015 to 2022 and comprising over one billion words (Erjavec et al. 2024a). The data was machine-translated using 
+                <ref target="https://github.com/UKPLab/EasyNMT">EasyNMT</ref> and 
+                <ref target="https://github.com/Helsinki-NLP/Opus-MT">OPUS-MT</ref> models, and for this reason includes errors typical of neural machine translation (Kuzman et al. 2024).
+            </p>
+            <p style="text-align: left; ">Common sense narratives, as shown by Newth (2024) in his study of social media posts by Italian politician Matteo Salvini, help reference the people in populists’ claims and lend them rationality. Drawing on Laclau's (1996) theory of empty signifiers, we understand common sense as a nodal point uniting collective identities while masking dominant, potentially extremist stances as universally acceptable. This motivates our use of common sense as a proxy for populist parliamentary discourse which we analyse with topic modeling and collocation analysis and interpret through the prism of key extremist topics. Querying and collocation analysis was done through 
+                <ref target="https://www.clarin.si/skelog">noSketchEngine</ref> (Kilgarriff 2014), hosted at CLARIN.SI. For topic modelling, we used the LDA-algorithm, available in Orange (Demšar et al. 2013). Extremist topics were identified based on extremist narratives described in Forti (2024) and Wilson and Hainsworth (2012).
+            </p>
+            <p style="text-align: left; ">The analysis considers factors such as party political orientation, government-opposition dynamics, and speaker gender, along with temporal and geographical variations. Our findings, shown in Figure 1, support prior observations (Rodríguez-Pose 2020; Trencsényi et al. 2024) that populism is rising and surges during crises. While far-right politics is well known for featuring populist discourse, we observe common sense narratives across the political spectrum, especially at the extremes (relative frequencies: centrist parties 11.8, right-wing 13.9, left-wing 16.5).</p>
+            <figure>
+                <graphic n="1001" width="16.002cm" height="9.893652777777778cm" url="/tmp/tmpyt78nes9/Pictures/7dedda7245c1654d5fb39baf5a6cc4ad.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 1: Temporal distribution of common sense across 29 European parliaments.</p>
+            <p style="text-align: left; ">Gender and parliamentary power dynamics also influence the use of common sense. While the difference between male and female speakers is less pronounced (13.2 vs. 10.9 per million words), opposition MPs invoke the phrase nearly twice as often as coalition MPs. This aligns with Fišer &amp; Pahor de Maiti (2021) who wrote on gender impact on Slovene parliamentary discourse and Tuttnauer (2018) who analysed opposition behavior in European parliaments, suggesting a gendered dimension to populist language and its rhetorical utility for challenging the establishment.</p>
+            <p style="text-align: left; ">Moreover, we investigate the overlap of common sense and extremist narratives. Topic analysis reveals that while common sense narratives can reinforce extreme ideological positions, such as those on migration and environmental policies, they often serve rhetorical purposes, in particular to hinder debate by framing positions as self-evident truths and establish the speaker as the true representative of voters.</p>
+            <p style="text-align: left; ">By examining common sense narratives across Europe, we highlight how populist rhetoric shapes public discourse and supports extremist positions. Unlike studies focused on specific parties or figures, our approach, using the ParlaMint-en corpus which includes all parliamentary actors for a given period, provides a more comprehensive view of parliamentary discourse and dynamics. This demonstrates the value of digital methods and open-access data in advancing research on populism and political communication, contributing to efforts for more inclusive and evidence-based democratic practices.</p>
+            <p rend="DH-Heading2">Acknowledgement</p>
+            <p style="text-align: left; ">The work was supported by the research programmes Digital Humanities: resources, tools and methods (ARIS P6-0436) and Political History (ARIS P6-0281), and the ARENAS project (EU Horizon Europe GA No. 101094731).</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Demšar, Janez / Curk, Tomaž / Erjavec, Aleš / Gorup, Črt / Hočevar, Tomaž / Milutinovič, Martin / Možina, Marko / Polajnar, Matjaž / Toplak, Marko / Starič, Andrej / Stajdohar, Miha / Umek, Lan / Žagar, Lovro / Žbontar, Jure / Žitnik, Marinka / Zupan, Blaž (2013): “Orange: Data Mining Toolbox in Python”, in: 
+                        <hi rend="italic">Journal of Machine Learning Research</hi> 14, Aug: 2349–2353.
+                    </bibl>
+                    <bibl style="text-align: left; ">Erjavec, Tomaž / Kopp, Matyáš / Ljubešić, Nikola / Kuzman, Taja / Rayson, Paul / Osenova, Petya / Ogrodniczuk, Maciej / Çöltekin, Çağrı / Koržinek, Danijel / Meden, Katja / Skubic, Jure / Rupnik, Peter / Agnoloni, Tommaso / Aires, José / Barkarson, Starkaður / Bartolini, Roberto / Bel, Núria / Calzada Pérez, María / Darģis, Roberts / Diwersy, Sascha / Gavriilidou, Maria / van Heusden, Ruben / Iruskieta, Mikel / Kahusk, Neeme / Kryvenko, Anna / Ligeti-Nagy, Noémi / Magariños, Carmen / Mölder, Martin / Navarretta, Costanza / Simov, Kiril / Tungland, Lars Magne / Tuominen, Jouni / Vidler, John / Vladu, Adina Ioana / Wissik, Tanja / Yrjänäinen, Väinö / Fišer, Darja (2024a): “ParlaMint II: Advancing comparable parliamentary corpora across Europe”, in: 
+                        <hi rend="italic">Language Resources and Evaluation</hi>, online first 
+                        <ref target="https://doi.org/10.1007/s10579-024-09798-w">https://doi.org/10.1007/s10579-024-09798-w</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">Erjavec, Tomaž / Kopp, Matyáš / Ogrodniczuk, Maciej / Osenova, Petya / Agerri, Rodrigo / Agirrezabal, Manex / Agnoloni, Tommaso / Aires, José / Albini, Monica / Alkorta, Jon / Antiba-Cartazo, Iván / Arrieta, Ekain / Barcala, Mario / Bardanca, Daniel / Barkarson, Starkaður / Bartolini, Roberto / Battistoni, Roberto / Bel, Nuria / Bonet Ramos, Maria del Mar / Calzada Pérez, María / Cardoso, Aida / Çöltekin, Çağrı / Coole, Matthew / Darģis, Roberts / de Does, Jesse / de Libano, Ruben / Depoorter, Griet / Depuydt, Katrien / Diwersy, Sascha / Dodé, Réka / Fernandez, Kike / Fernández Rei, Elisa / Frontini, Francesca / Garcia, Marcos / García Díaz, Noelia / García Louzao, Pedro / Gavriilidou, Maria / Gkoumas, Dimitris / Grigorov, Ilko / Grigorova, Vladislava / Haltrup Hansen, Dorte / Iruskieta, Mikel / Jarlbrink, Johan / Jelencsik-Mátyus, Kinga / Jongejan, Bart / Kahusk, Neeme / Kirnbauer, Martin / Kryvenko, Anna / Ligeti-Nagy, Noémi / Ljubešić, Nikola / Luxardo, Giancarlo / Magariños, Carmen / Magnusson, Måns / Marchetti, Carlo / Marx, Maarten / Meden, Katja / Mendes, Amália / Mochtak, Michal / Mölder, Martin / Montemagni, Simonetta / Navarretta, Costanza / Nitoń, Bartłomiej / Norén, Fredrik Mohammadi / Nwadukwe, Amanda / Ojsteršek, Mihael / Pančur, Andrej / Papavassiliou, Vassilis / Pereira, Rui / Pérez Lago, María / Piperidis, Stelios / Pirker, Hannes / Pisani, Marilina / Pol, Henk van der / Prokopidis, Prokopis / Quochi, Valeria / Rayson, Paul / Regueira, Xosé Luís / Rii, Andriana / Rudolf, Michał / Ruisi, Manuela / Rupnik, Peter / Schopper, Daniel / Simov, Kiril / Sinikallio, Laura / Skubic, Jure / Tamper, Minna / Tungland, Lars Magne / Tuominen, Jouni / van Heusden, Ruben / Varga, Zsófia / Vázquez Abuín, Marta / Venturi, Giulia / Vidal Miguéns, Adrián / Vider, Kadri / Vivel Couso, Ainhoa / Vladu, Adina Ioana / Wissik, Tanja / Yrjänäinen, Väinö / Zevallos, Rodolfo / Fišer, Darja (2024b): 
+                        <hi rend="italic">Linguistically annotated multilingual comparable corpora of parliamentary debates ParlaMint.ana 4.1</hi>, Slovenian language resource repository CLARIN.SI 
+                        <ref target="HYPERLINK">http://hdl.handle.net/11356/1911</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">Newth, George (2024): “‘Talking about’ the far right and common sense. A case study of Matteo Salvini’s 
+                        <hi rend="italic">buon senso</hi> trope on Twitter (2018–2023)”, in: 
+                        <hi rend="italic">Acta Politica</hi> 1–24.
+                    </bibl>
+                    <bibl style="text-align: left; ">Forti, Steven (ed.) (2024): 
+                        <hi rend="italic">Historical roots of extremist narratives in Europe</hi>, Zenodo 
+                        <ref target="https://doi.org/10.5281/zenodo.14025605">https://doi.org/10.5281/zenodo.14025605</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Fišer, Darja / Konovšek, Tjaša / Pančur, Andrej (2023): “Referencing the public by populist and non-populist parties in the Slovene parliament”, in: 
+                        <hi rend="italic">Slovenščina 2.0: empirične, aplikativne in interdisciplinarne raziskave</hi> 11, 1: 69–90.
+                    </bibl>
+                    <bibl style="text-align: left; ">Fišer, Darja / Pahor de Maiti, Kristina (2021): “»Prvič, sem političarka in ne politik, drugič pa…«”, in: 
+                        <hi rend="italic">Contributions to Contemporary History</hi> 61, 1.
+                    </bibl>
+                    <bibl style="text-align: left; ">Kilgarriff, Adam / Baisa, Vít / Bušta, Jan / Jakubíček, Miloš / Kovář, Vojtěch / Michelfeit, Jan / Rychlý, Pavel / Suchomel, Vít (2014): “The Sketch Engine: ten years on”, in: 
+                        <hi rend="italic">Lexicography</hi> 1, 1: 7–36.
+                    </bibl>
+                    <bibl style="text-align: left; ">Kock, Christian / Villadsen, Lisa (eds.) (2022): 
+                        <hi rend="italic">Populist rhetorics: case studies and a minimalist definition</hi>, Springer Nature.
+                    </bibl>
+                    <bibl style="text-align: left; ">Kuzman, Taja / Ljubešić, Nikola / Erjavec, Tomaž / Kopp, Matyáš / Ogrodniczuk, Maciej / Osenova, Petya / Rayson, Paul / Vidler, John / Agerri, Rodrigo / Agirrezabal, Manex / Agnoloni, Tommaso / Aires, José / Albini, Monica / Alkorta, Jon / Antiba-Cartazo, Iván / Arrieta, Ekain / Barcala, Mario / Bardanca, Daniel / Barkarson, Starkaður / Bartolini, Roberto / Battistoni, Roberto / Bel, Nuria / Bonet Ramos, Maria del Mar / Calzada Pérez, María / Cardoso, Aida / Çöltekin, Çağrı / Coole, Matthew / Darģis, Roberts / de Does, Jesse / de Libano, Ruben / Depoorter, Griet / Depuydt, Katrien / Diwersy, Sascha / Dodé, Réka / Fernandez, Kike / Fernández Rei, Elisa / Frontini, Francesca / Garcia, Marcos / García Díaz, Noelia / García Louzao, Pedro / Gavriilidou, Maria / Gkoumas, Dimitris / Grigorov, Ilko / Grigorova, Vladislava / Haltrup Hansen, Dorte / Iruskieta, Mikel / Jarlbrink, Johan / Jelencsik-Mátyus, Kinga / Jongejan, Bart / Kahusk, Neeme / Kirnbauer, Martin / Kryvenko, Anna / Ligeti-Nagy, Noémi / Luxardo, Giancarlo / Magariños, Carmen / Magnusson, Måns / Marchetti, Carlo / Marx, Maarten / Meden, Katja / Mendes, Amália / Mochtak, Michal / Mölder, Martin / Montemagni, Simonetta / Navarretta, Costanza / Nitoń, Bartłomiej / Norén, Fredrik Mohammadi / Nwadukwe, Amanda / Ojsteršek, Mihael / Pančur, Andrej / Papavassiliou, Vassilis / Pereira, Rui / Pérez Lago, María / Piperidis, Stelios / Pirker, Hannes / Pisani, Marilina / Pol, Henk van der / Prokopidis, Prokopis / Quochi, Valeria / Regueira, Xosé Luís / Rii, Andriana / Rudolf, Michał / Ruisi, Manuela / Rupnik, Peter / Schopper, Daniel / Simov, Kiril / Sinikallio, Laura / Skubic, Jure / Tamper, Minna / Tungland, Lars Magne / Tuominen, Jouni / van Heusden, Ruben / Varga, Zsófia / Vázquez Abuín, Marta / Venturi, Giulia / Vidal Miguéns, Adrián / Vider, Kadri / Vivel Couso, Ainhoa / Vladu, Adina Ioana / Wissik, Tanja / Yrjänäinen, Väinö / Zevallos, Rodolfo / Fišer, Darja (2024): 
+                        <hi rend="italic">Linguistically annotated multilingual comparable corpora of parliamentary debates in English ParlaMint-en.ana 4.1</hi>, Slovenian language resource repository CLARIN.SI, 
+                        <ref target="http://hdl.handle.net/11356/1910">http://hdl.handle.net/11356/1910</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">Laclau, Ernesto (1996): “Why do empty signifiers matter to politics”, in: Emancipation(s) 36, 46.</bibl>
+                    <bibl style="text-align: left; ">Postigo Fuentes, Ana Yara / Hartmann, Stefan / Kailuweit, Rolf / Ziem, Alexander (2024): 
+                        <hi rend="italic">Defining Extremist Narratives: A review of the current state of the art</hi>, Zenodo 
+                        <ref target="https://doi.org/10.5281/zenodo.13927429">https://doi.org/10.5281/zenodo.13927429</ref> [25.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">Rodríguez-Pose, Andrés (2020): “The rise of populism and the revenge of the places that don’t matter”, in: 
+                        <hi rend="italic">LSE Public Policy Review</hi> 1, 1.
+                    </bibl>
+                    <bibl style="text-align: left; ">Tuttnauer, Or (2018): “If you can beat them, confront them: Party-level analysis of opposition behavior in European national parliaments”, in: 
+                        <hi rend="italic">European Union Politics</hi> 19, 2: 278–298.
+                    </bibl>
+                    <bibl style="text-align: left; ">Trencsényi, Balázs / Balikić, Lucija / Blagojević, Una / Grubački, Isidora (eds.) (2024): 
+                        <hi rend="italic">East Central European Crisis Discourses in the Twentieth Century: A Never-Ending Story?</hi>, London: Routledge.
+                    </bibl>
+                    <bibl style="text-align: left; ">Zarefsky, David / Mohammed, Dima (2020): “The rhetorical stance of populism”, in: 
+                        <hi rend="italic">Vox Populi</hi>, Cheltenham: Edward Elgar Publishing: 17–28.
+                    </bibl>
+                    <bibl style="text-align: left; ">Wilson, Robin / Hainsworth, Paul (2012): 
+                        <hi rend="italic">Far-right parties and discourse in Europe: A challenge for our times</hi>, Brussels: European Network Against Racism.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

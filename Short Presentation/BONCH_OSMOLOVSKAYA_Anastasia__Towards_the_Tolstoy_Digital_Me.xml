@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BONCH_OSMOLOVSKAYA_Anastasia__Towards_the_Tolstoy_Digital_Me">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>"Towards the Tolstoy Digital Metaverse: Integrating Testimonies into a Digital Chronicle of Tolstoy's Life and Works"</title>
+                <author>
+                    <persName>
+                        <surname>Bonch-Osmolovskaya</surname>
+                        <forename>Anastasia</forename>
+                    </persName>
+                    <affiliation>DH CLOUD; Tolstoy Digital; CultTech Association</affiliation>
+                    <email>abonch@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Tolstaya</surname>
+                        <forename>Fekla</forename>
+                    </persName>
+                    <affiliation>Tolstoy Digital</affiliation>
+                    <email>6975991@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Vronskaya</surname>
+                        <forename>Youlya</forename>
+                    </persName>
+                    <affiliation>Tolstoy Digital; Peredelkino Creative Residence</affiliation>
+                    <email>youlya.vronskaya@yandex.ru</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Lukashevski</surname>
+                        <forename>Timofei</forename>
+                    </persName>
+                    <affiliation>Tolstoy Digital</affiliation>
+                    <email>tim.lukashevsky@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-03T18:20:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>digital timeline</term>
+                    <term>digital preservation</term>
+                    <term>Tolstoy</term>
+                    <term>testimonies</term>
+                    <term>TEI</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digital biography</term>
+                    <term>personography</term>
+                    <term>and prosopography</term>
+                    <term>digital publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>scholarly editing and editions development</term>
+                    <term>analysis</term>
+                    <term>and methods</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference online</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">The issue of "Digital Humanities Quarterly" (2009, 3.2) features a special cluster of articles that address the question of whether digital projects can ever be considered finished. The central argument is that the concept of "done" for digital projects differs significantly from that of traditional print-based humanities projects. Digital projects are inherently open and perpetually incomplete due to three main factors: the need for ongoing maintenance, the continuous emergence of new technologies, and the inherent adaptability of digital publications, which can be repurposed for new ideas. As Brown et al. (2009) argue, digital texts can be continuously restructured or recombined, making them ever-evolving.</p>
+            <p style="text-align: left; ">In alignment with this perspective, this paper introduces a new phase of the 
+                <hi rend="italic">Tolstoy Digital</hi> project. The initial phase, presented at the ADHO conference in Graz in 2023 (Bonch-Osmolovskaya et al. 2023), focused on the digitization of Tolstoy's 90-volume collected works, including 45 volumes of his published and unpublished works, 12 volumes of diaries, and 31 volumes of letters. The digitization was carried out as part of the crowdsourcing initiative 
+                <hi rend="italic">All Tolstoy in One Click</hi>. These documents were converted into TEI format, and an additional 91st volume, containing indices, was digitized and incorporated into a database linking the texts to external resources like Wikidata (Bonch-Osmolovskaya et al. 2019). As is well known, Tolstoy renounced the copyright to his works and their subsequent publications during his lifetime. Like many of Tolstoy’s ideas, the notion of openness and accessibility of his writings was far ahead of its time and has created opportunities for those working with Tolstoy’s legacy in the 21st century to follow FAIR DATA principles and provide access to TEI-standardized files for anyone interested in using them for research. All data is published in open access on GitHub at the following link: 
+                <ref target="https://github.com/tolstoydigital/TEI">https://github.com/tolstoydigital/TEI</ref>
+            </p>
+            <p style="text-align: left; ">The goal of the second phase was to extend beyond the 90-volume collection and begin constructing a "Tolstoy Metaverse." This metaverse aims to integrate not only Tolstoy's texts but also a detailed chronicle of his life, social network, and the intellectual life in Russia and beyond during the late 19th and early 20th centuries. Following the concept of modularity in digital projects, as described in 
+                <hi rend="italic">Special Cluster: Done</hi> (Kirschenbaum 2009), this phase focused on creating a comprehensive chronicle of Tolstoy's life and works. Our project aligns with the 
+                <hi rend="italic">FragTrag</hi> initiative, where testimonia, or documentary evidence, are treated as data with a time dimension (Antonopoulos et al. 2024). In our case, this data includes Tolstoy’s dated diary entries, his letters, and similar documents from those in his circle, such as letters, journals, and diaries of his wife, Sophia Andreevna, his friend Alexander Goldenveiser, and his physician Dushan Makovitsky.
+            </p>
+            <p style="text-align: left; "> All these documents had been previously published, often in hard-to-access editions. Tolstoy’s diaries and letters were digitized and converted into TEI markup during the preparation of the digital edition of Tolstoy’s 90-volume collected works. The remaining documents were processed and annotated with TEI markup in this phase. We also incorporated a 
+                <hi rend="italic">capta</hi> source, as defined by Johanna Drucker (2011), namely the 
+                <hi rend="italic">Chronicle of Tolstoy’s Life and Work</hi> compiled by his secretary Nikolai Gusev. This printed edition, consisting of two volumes of tables detailing daily events in Tolstoy's life, posed significant challenges for OCR recognition due to its complex format. As it had not been digitized before, we applied OCR and TEI markup to align it with the project's standards.
+            </p>
+            <p style="text-align: left; ">The sources used in our project were divided into individual documents, each corresponding to a specific date or timespan. This allowed us to link records and correlate entries related to the same date. Researchers and users can view the same day in Tolstoy's life through various perspectives, including Tolstoy's own emotional and often contradictory view, his wife’s contrasting perspective, accounts from friends who recorded their daily conversations with him, and Gusev’s aggregation of known events.</p>
+            <p style="text-align: left; ">Metadata for each record was included in the document headers and also compiled in a separate 
+                <hi rend="italic">listBibl</hi>. Each source was treated as an item with bibliographic details, and each document as a nested related item. The metadata included date, associations with people, geolocation for letters, and links to other documents in the digital archive. These relationships were automatically extracted from Gusev’s references or manually established. The complex and rich critical apparatus of these sources presents a future challenge for semantic annotation and for using AI technologies to identify connections between documents.  Since the date was a central component of the metadata, it was preserved in three formats: the technical date, formatted for machine processing in the classic TEI format; the editorial date, used for display on the website; and the authorial date, provided by the author of the testimony, often containing additional important annotations such as "Midnight" or "Easter," etc.
+            </p>
+            <p style="text-align: left; ">In this phase, we also aimed to create a user-friendly interface for navigating the data, not only for researchers but also for a broader audience, as Tolstoy’s life and works are part of the global cultural heritage. The challenge was organizing the 32,451 documents into an interactive interface, ensuring that they were more than just a digital archive but a tool for meaningful engagement.</p>
+            <p style="text-align: left; ">We follow the ideas of Gerald Ham (Ham 1975) who argued as early as in 1975 that archivists should transition from custodians to curators, actively participating in the accumulation of archival data. These ideas have become central to those involved in the digital preservation of cultural heritage and the creation of digital archives.</p>
+            <p style="text-align: left; ">In our project, we employed two approaches for presenting the data. The first is a calendar of Tolstoy's life, similar to Google Calendar, enabling users to view entries for a specific day at various scales—day, week, month, and year—providing a "zoom-in" into Tolstoy’s life (Fig. 1-2). The second approach is a multimedia timeline, presenting six perspectives of events, selected by experts: literature, family, inner life, private life, public life, and historical events of the time. The timeline entries can be accompanied by photographs from Tolstoy’s archive, audio commentaries by philologists, and links to records collected in the calendar. (Fig 3-4)</p>
+            <figure>
+                <graphic n="1001" width="16.490597222222224cm" height="12.338402777777778cm" url="/tmp/tmpj6a0r6uk/Pictures/3f96bb77c9f75a66a1e9444a63dede11.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure {1}. Calendar view of November 1906. The colors and small icons in the upper right stand for the source of the testimony, each day has a subscripted number of its testimonies</p>
+            <figure>
+                <graphic n="1002" width="16.490597222222224cm" height="11.943291666666667cm" url="/tmp/tmpj6a0r6uk/Pictures/3f96bb77c9f75a66a1e9444a63dede11.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure {2}. View of 01/01/1906. On the left the open record of Dushan Makovicky (blue in the day list)</p>
+            <figure>
+                <graphic n="1003" width="16.490597222222224cm" height="7.558263888888889cm" url="/tmp/tmpj6a0r6uk/Pictures/3f96bb77c9f75a66a1e9444a63dede11.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure {3}. Interactive Timeline in 6 projections: literature - red, inner life - yellow, public life - green, family life - violet, private life - orange, historical events - turquoise. The lines can be switched on and off, the timeline can be moved left or right, a special slider of significance helps regulate the density of events</p>
+            <figure>
+                <graphic n="1004" width="16.490597222222224cm" height="11.629319444444445cm" url="/tmp/tmpj6a0r6uk/Pictures/3f96bb77c9f75a66a1e9444a63dede11.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure {4}. Event from the timeline "Tolstoy decides to leave Yasnaya Poliana", accompanied with explication, photo and the link to Tolstoy's record in his dairy on October 28th, 1910</p>
+            <p style="text-align: left; ">To conclude, we would like to quote Amy E. Enhart, who notes that digital scholarship is, in many ways, "the production of the theoretical and methodological approaches to the digital that we have only just begun to explore" (Enhart, 2010). Considering the rapid development of new AI capabilities emerging almost simultaneously with the work on the project, we are continuously expanding our ambitions and plans, reimagining the concept of the "Tolstoy Metaverse" as a multi-layered, multimedia space, equipped with complex connections between texts, events, dates, people, and works.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Antonopoulos, Andreas P. / Chronopoulos, Stillianos / Ntaliakouras, Nikolaos / Taktikou, Panagiota / Psomiadou, Anastasia / Giakimtsouki-Magaraki, Aikaterini / Markelis, Iraklis</hi> (2024): “A Digital Timeline of Greek Theatre Events”, in: 
+                        <hi rend="italic">Digital Classics Online</hi> 1–15.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bonch-Osmolovskaya, Anastasia / Skorinkin, Daniil / Pavlova, Irina / Kolbasov, Matvey / Orekhov, Boris</hi> (2019): “Tolstoy Semanticized: Constructing a Digital Edition for Knowledge Discovery”, in: 
+                        <hi rend="italic">Journal of Web Semantics</hi> 59: 1–11.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bonch-Osmolovskaya, Anastasia / Orekhov, Boris / Tolstaya, Fekla</hi> (2023): “Digital Edition of Complete Tolstoy's Heritage: OCR Crowdsourcing Initiative, Literary Scholarship and User Scenarios”, in: 
+                        <hi rend="italic">Book of Abstracts ADHO 2023</hi>, Graz. DOI: 10.5281/zenodo.7961821.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Brown, Susan / Clements, Patricia / Grundy, Isobel / Ruecker, Stan / Antoniuk, Jeffry / Balazs, Sharon</hi> (2009): “Published Yet Never Done: The Tension Between Projection and Completion in Digital Humanities Research”, in: 
+                        <hi rend="italic">Digital Humanities Quarterly</hi> 3, 2.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Drucker, Johanna</hi> (2011): “Humanities Approaches to Graphical Display”, in: 
+                        <hi rend="italic">Digital Humanities Quarterly</hi> 5, 1: 1–21.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Earhart, Amy E.</hi> (2010): “Models of Digital Documentation: The 19th-Century Concord Digital Archive”, in: 
+                        <hi rend="italic">Documentary Editing: Journal of the Association for Documentary Editing</hi> 31.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Ham, F.Gerald</hi> (1975): “The Archival Edge”, in: 
+                        <hi rend="italic">The American Archivist</hi> 38, 1: 5–13.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kirschenbaum, Matthew G.</hi> (2009): “Done: Finishing Projects in the Digital Humanities”, in: 
+                        <hi rend="italic">Digital Humanities Quarterly</hi> 3, 2.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

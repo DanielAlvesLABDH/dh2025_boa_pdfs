@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="GORJANC_Vojko_Accessing_Historical_Periodicals__Newspaper_Di">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Accessing Historical Periodicals: Newspaper Discourse on Slovene Language</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Gorjanc</surname>
+                        <forename>Vojko</forename>
+                    </persName>
+                    <affiliation>University of Ljubljana, Slovenia; Institute for Contemporary History, Ljubljana, Slovenia</affiliation>
+                    <email>vojko.gorjanc@inz.si</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Pretnar Žagar</surname>
+                        <forename>Ajda</forename>
+                    </persName>
+                    <affiliation>Institute for Contemporary History, Ljubljana, Slovenia</affiliation>
+                    <email>ajda.pretnar@inz.si</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Dobranić</surname>
+                        <forename>Filip</forename>
+                    </persName>
+                    <affiliation>Institute for Contemporary History, Ljubljana, Slovenia</affiliation>
+                    <email>filip.dobranic@inz.si</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Fišer</surname>
+                        <forename>Darja</forename>
+                    </persName>
+                    <affiliation>Institute for Contemporary History, Ljubljana, Slovenia</affiliation>
+                    <email>darja.fiser@inz.si</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T13:04:02.633971795</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Slovene language</term>
+                    <term>corpus analysis</term>
+                    <term>historical newspapers</term>
+                    <term>national identity</term>
+                    <term>language standardization</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>concordancing and indexing</term>
+                    <term>mixed-media analysis</term>
+                    <term>text mining and analysis</term>
+                    <term>History</term>
+                    <term>Linguistics</term>
+                    <term>Central/Eastern European Studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>Historical newspapers are invaluable sources for exploring past contexts, societal values, and public discourse. Their rich data and metadata enable insights into historical events and cultural narratives. This paper offers a corpus-based analysis of discourse on the Slovene language from the 18th to early 20th centuries—a period of language standardization and cultural development—using the sPeriodika corpus.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Related work</head>
+                <p>As societal norms evolve, newspapers document the changing values and beliefs of society, serving as a mirror to the prevailing attitudes and assumptions of their time (Bowie 2019). The collaborative nature of digital humanities projects fosters interdisciplinary approaches to historical newspaper research, encouraging novel methods and perspectives (Villamor Martin et al. 2023). Metadata, text enrichment, and machine learning approaches for post-processing are crucial for improving the searchability of historical newspaper collections and enhancing their utility (Ali et al. 2023). Diachronic studies often focus on concept shifts (Verheul et al. 2022, Pivovarova et al. 2019), semantic change (Pedrazzini / McGillivray 2022), topic shifts over time (Marjanen et al. 2021), or nation-building vocabularies (Hengchen et al. 2021).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Sociolinguistic background</head>
+                <p>From the late 18th to early 20th centuries, Slovene language underwent major developments in standardization and national identity, shaped by sociopolitical changes. In the late 18th century, modernization (e.g., mandatory schooling) promoted linguistic unification. Slovene first gained prominence in literature, becoming central to cultural identity. The 19th century brought intensified standardization, supported by the rise of periodicals and Slovene’s integration into political, cultural, and scientific spheres. This culminated in the national programme Zedinjena Slovenija (United Slovenia 1848), which elevated language as a key national symbol and spurred both anti-Germanism efforts and Pan-Slavic lexical influences. Central European nationalism further solidified Slovene as a marker of identity. By the early 20th century, Slovene had established itself as a national language in education, administration, and literature, uniting its speakers (Grdina / Stabej 2002).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>The Corpus</head>
+                <p>The sPeriodika corpus is a linguistically annotated collection of Slovenian historical newspapers from 1771 to 1914, developed from OCR-processed data by the National and University Library of Slovenia (Dobranić et al. 2023). After extensive cleaning, the texts were lemmatised, POS-tagged, and enriched with named entity recognition. The corpus includes over 910 million tokens, 708 million words, and 50 million sentences from 216 newspapers and 217 periodicals by 183 publishers. It offers insight into language standardization debates and is available via the CLARIN.SI repository and noSketch Engine.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Analysis of the discourse on the Slovene language</head>
+                <p>Discourse of textbooks on the Slovene language often presents languages and their speakers as distinct and unrelated entities—an approach rooted in 19th-century Central European national movements, which linked language, nation, and state (Kosi 2010). Our analysis explores whether newspapers contributed to shaping this discourse within the broader context of national and linguistic identity. Using corpus analysis, we identify key concepts that emerged in this public narrative. We begin with a corpus analysis of the phrase slovenski jezik ‘Slovene language’ and the lemma slovenščina ‘Slovene’, focusing on typical collocators within a ±3-word window using the LogDice measure. We then perform a close-reading qualitative analysis of the top 40 collocators to identify thematic strands in discourse about the Slovene language. The identified thematic strands are listed in a table according to total collocation frequency, while the collocators within each thematic strand are listed by their LogDice score.</p>
+                <table rend="frame" xml:id="Table1">
+                    <row>
+                        <cell>
+                            <p rend="bold">Collocators</p>
+                            <p>(with LogDice score)</p>
+                        </cell>
+                        <cell>
+                            <p>
+                                <hi rend="bold">Thematic strands in the discourse</hi>
+                            </p>
+                            <p>(with frequency of all collocations for 
+                                <hi rend="italic">slovenski jezik </hi>and
+                                <hi rend="italic"> slovenščina</hi>)
+                            </p>
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <hi rend="italic">zmožen</hi> ’capable’ (8.8), 
+                            <hi rend="italic">vešč</hi> ’able’ (7.8), 
+                            <hi rend="italic">znanje</hi> ’knowledge’ (7.8), 
+                            <hi rend="italic">nezmožen </hi>’incapable’ (6.8)
+                        </cell>
+                        <cell>Language competence (7.596)</cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <hi rend="italic">enakopravnost</hi> ’equality’ (9.9), 
+                            <hi rend="italic">veljava</hi> ’value’ (8.7),
+                            <hi rend="italic"> ravnopravnost</hi> ’equality’ (7.1) 
+                            <hi rend="italic">pravica</hi> ’right’ (7.0), 
+                            <hi rend="italic">izključno</hi> ’exclusively’ (6.5), 
+                            <hi rend="italic">popolnoma</hi> ’entirely’ (6.4)
+                        </cell>
+                        <cell>Language equality and language rights (6.508)</cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <hi rend="italic">učni </hi>’of instruction’ (8.1),
+                            <hi rend="italic"> pouk</hi> ’class’ (7.2), 
+                            <hi rend="italic">sodišče</hi> ’court’ (7.1), 
+                            <hi rend="italic">urad</hi> ’office’ (7.0), 
+                            <hi rend="italic">gimnazija</hi> ’high school’ (6.8), šola ’school’ (6.7), uradnik ’administrator’ (6.5)
+                        </cell>
+                        <cell>Context of use (3.672)</cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <hi rend="italic">učiti se</hi> ’to learn’ (7.1), poučevati ’to teach’ (6.9), 
+                            <hi rend="italic">preložiti</hi> ’to translate’ (6.7), 
+                            <hi rend="italic">občevati</hi> ’to converse’ (6.6), 
+                            <hi rend="italic">raba</hi> ’use’ (6.4),
+                            <hi rend="italic"> znati</hi> ’to know’ (6.3) 
+                            <hi rend="italic">uradovati</hi> ’ to work in public administration’ (6.2) 
+                        </cell>
+                        <cell>Language use (2.886)</cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <hi rend="italic">nemški</hi> ’German’ (7.9), 
+                            <hi rend="italic">nemščina</hi> ’German’ (7.7), 
+                            <hi rend="italic">hrvaščina</hi> ’Croatian’ (7.2), 
+                            <hi rend="italic">hrvatski</hi> ’Croatian’ (6.9), 
+                            <hi rend="italic">italijanski</hi> ’Italian’ (6.6), 
+                            <hi rend="italic">italijanščina</hi> ’Italian’ (6.5)
+                        </cell>
+                        <cell>Other languages (2.771)</cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <hi rend="italic">pravilen</hi> ’correct’ (7.4), 
+                            <hi rend="italic">lep</hi> ‘beautiful’ (7.3), 
+                            <hi rend="italic">mil </hi>’gentle’ (6.8) 
+                            <hi rend="italic">gladek </hi>’smooth’ (6.5)
+                        </cell>
+                        <cell>Standard language ideology (1.199)</cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <hi rend="italic">govor</hi> ’speech’ (6.8), 
+                            <hi rend="italic">pisan</hi> ’written’ (6.4)
+                        </cell>
+                        <cell>Language type (921)</cell>
+                    </row>
+                </table>
+                <p>The discourse on the Slovene language is strongly shaped by national identity and ideology. It promotes a respectful attitude toward the language, positioning it in relation to other languages while warning against its neglect. Collocational patterns reflect language planning topics, including the creation of a cohesive standard language, language rights, competence, and public use in both written and spoken forms. Emotional and ideological ties to the standard language persist, expressed through purist tendencies and strict adherence to linguistic norms—hallmarks of standard language cultures.</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmprah03tdp/Pictures/8145d165d4c75617ad87c520f15cb0b7.png"/>
+                        <head>Relative density of "slovenščina" and "slovenski jezik" through time.</head>
+                    </figure>Using relative density, we identified peak discussion periods on the Slovenian language, especially after the national movement gained momentum. The predominant use of Slovenski jezik gradually shifted toward a more interchangeable use of both terms, reflecting trends in linguistic economy. Peaks in frequency coincide with coverage in mainstream newspapers, though key topics remain consistent.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusions</head>
+                <p>Analysis of historical newspapers from the sPeriodika corpus highlights the Slovene language’s central role in shaping national identity from the 18th to early 20th centuries. The discourse links language, nation, and state, with recurring themes like linguistic competence, equality, and use. Rather than strict norms, emphasis was placed on the language’s ideological and emotional value. Newspapers served both to build cultural identity and support the functional development of Slovene as a national language. The study showcases historical newspapers as invaluable resources for exploring the intricate relationship between language, culture, and identity, offering perspectives that remain pertinent to contemporary discussions of linguistic and national identity.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Acknowledgments</head>
+                <p>The authors acknowledge the financial support of the Slovenian Research and Innovation Agency (ARIS), research core funding No. P6-0436: Digital Humanities: Resources, Tools, and Methods, the support of the DARIAH-SI research infrastructure, and the Slovene Common Language Resources and Technology Infrastructure, CLARIN.SI.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Ali, D</hi>
+                        <hi rend="bold">ilawar</hi>
+                        <hi rend="bold"> / Milleville, K</hi>
+                        <hi rend="bold">enzo</hi>
+                        <hi rend="bold"> / Verstockt, S</hi>
+                        <hi rend="bold">teven</hi>
+                        <hi rend="bold"> / Weghe, N</hi>
+                        <hi rend="bold">ico</hi>
+                        <hi rend="bold"> V</hi>
+                        <hi rend="bold">an</hi>
+                        <hi rend="bold"> d</hi>
+                        <hi rend="bold">er</hi>
+                        <hi rend="bold"> / Chambers, S</hi>
+                        <hi rend="bold">ally</hi>
+                        <hi rend="bold"> / Birkholz, J</hi>
+                        <hi rend="bold">ulie</hi>
+                        <hi rend="bold"> M.</hi> (2023): “Computer vision and machine learning approaches for metadata enrichment to improve searchability of historical newspaper collections”, in: 
+                        <hi rend="italic">Journal of Documentation</hi>. 
+                        <ptr target="https://doi.org/10.1108/jd-01-2022-0029"/>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Bowie, D</hi>
+                        <hi rend="bold">avid</hi> (2019): “Contextual analysis and newspaper archives in management history research”, in: 
+                        <hi rend="italic">Journal of Management History</hi> 25, 4: 516–532. 
+                        <ptr target="https://doi.org/10.1108/jmh-01-2018-0007"/>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Dobranić, F</hi>
+                        <hi rend="bold">ilip</hi>
+                        <hi rend="bold"> / Evkoski, B</hi>
+                        <hi rend="bold">ojan</hi>
+                        <hi rend="bold"> / Ljubešić, N</hi>
+                        <hi rend="bold">ikola</hi> (2023): 
+                        <hi rend="italic">Corpus of Slovenian periodicals (1771–1914) sPeriodika 1.0</hi>. Clarin.si. 
+                        <ptr target="http://hdl.handle.net/11356/1881"/>[15.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Grdina, I</hi>
+                        <hi rend="bold">gor</hi>
+                        <hi rend="bold"> / Stabej, M</hi>
+                        <hi rend="bold">arko</hi>
+                        <hi rend="bold"> </hi>(2002): “Slowenisch”, in: Okuka, M. / Krenn, G. (eds.): 
+                        <hi rend="italic">Wieser Enzyklopädie des europäischen Ostens</hi> Bd. 10: 495–508. Klagenfurt/Celovec: Wieser.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hengchen S</hi>
+                        <hi rend="bold">imon</hi>
+                        <hi rend="bold"> / Ros, R</hi>
+                        <hi rend="bold">uben</hi>
+                        <hi rend="bold"> / Marjanen, J</hi>
+                        <hi rend="bold">ani</hi>
+                        <hi rend="bold"> / Tolonen, M</hi>
+                        <hi rend="bold">ikko</hi> (2021): “A data-driven approach to studying changing vocabularies in historical newspaper collections”, in: 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi> 36, Supplement 2: ii109–ii126. 
+                        <ptr target="https://doi.org/10.1093/llc/fqab032"/>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Kosi, J</hi>
+                        <hi rend="bold">ernej</hi> (2010): “Je bil proces formiranja slovenskega naroda v 19. stoletju res zgolj končni nasledek tisočletne slovenske kontinuitete?”, in: 
+                        <hi rend="italic">Zgodovinski časopis</hi> 64, 1–2: 154–175.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Marjanen, J</hi>
+                        <hi rend="bold">ani</hi>
+                        <hi rend="bold"> / Zosa, E</hi>
+                        <hi rend="bold">laine</hi>
+                        <hi rend="bold"> / Hengchen, S</hi>
+                        <hi rend="bold">imon</hi>
+                        <hi rend="bold"> / Pivovarova, L</hi>
+                        <hi rend="bold">idia</hi>
+                        <hi rend="bold"> / Tolonen, M</hi>
+                        <hi rend="bold">ikko</hi> (2021): “Topic modelling discourse dynamics in historical newspapers”, in: Reinsone, Sanita / Skadiņa, Inguna / Baklāne, Anda / Daugavietis, Jānis (eds.): 
+                        <hi rend="italic">Digital Humanities in the Nordic Countries 2020: Post-Proceedings of the 5th Conference Digital Humanities in the Nordic Countries (DHN 2020)</hi>: 63–77. Digital Humanities in the Nordic Countries, [Online event], 21/10/2020. 
+                        <ptr target="https://dblp.org/rec/conf/dhn/MarjanenZHPT20"/>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Pedrazzini, N</hi>
+                        <hi rend="bold">ilo</hi>
+                        <hi rend="bold"> / McGillivray, B</hi>
+                        <hi rend="bold">arbara</hi> (2022, November): “Machines in the media: Semantic change in the lexicon of mechanization in 19th-century British newspapers”, in: Hämäläinen, Mika / Alnajjar, Khalid / Partanen, Niko / Rueter, Jack (eds.): 
+                        <hi rend="italic">Proceedings of the 2nd International Workshop on Natural Language Processing for Digital Humanities</hi>: 85–95. Association for Computational Linguistics. 
+                        <ptr target="https://aclanthology.org/2022.nlp4dh-1.12"/>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Pivovarova, L</hi>
+                        <hi rend="bold">idia</hi>
+                        <hi rend="bold"> / Zosa, E</hi>
+                        <hi rend="bold">laine</hi>
+                        <hi rend="bold"> / Marjanen, J</hi>
+                        <hi rend="bold">ani</hi>
+                        <hi rend="bold"> </hi>(2019, September): “Word clustering for historical newspapers analysis”, in: Vertan, Cristina / Osenova, Petya / Iliev, Dimitar (eds.): 
+                        <hi rend="italic">Proceedings of the Workshop on Language Technology for Digital Historical Archives</hi>: 3–10. INCOMA Ltd. 
+                        <ptr target="https://doi.org/10.26615/978-954-452-059-5_002"/>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Verheul, J</hi>
+                        <hi rend="bold">aap</hi>
+                        <hi rend="bold"> / Salmi, H</hi>
+                        <hi rend="bold">annu</hi>
+                        <hi rend="bold"> / Riedl, M</hi>
+                        <hi rend="bold">artin</hi>
+                        <hi rend="bold"> / Nivala, A</hi>
+                        <hi rend="bold">sko</hi>
+                        <hi rend="bold"> / Viola, L</hi>
+                        <hi rend="bold">orella</hi>
+                        <hi rend="bold"> / Keck, J</hi>
+                        <hi rend="bold">ana</hi>
+                        <hi rend="bold"> / Bell, E</hi>
+                        <hi rend="bold">mily</hi> (2022): “Using word vector models to trace conceptual change over time and space in historical newspapers, 1840–1914”, in: 
+                        <hi rend="italic">Digital Humanities Quarterly</hi> 16, 2.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Villamor Martin, M</hi>
+                        <hi rend="bold">arta</hi>
+                        <hi rend="bold"> / Kirsch, D</hi>
+                        <hi rend="bold">avid</hi>
+                        <hi rend="bold"> A. / Prieto-Nañez, F</hi>
+                        <hi rend="bold">abian</hi>
+                        <hi rend="bold"> </hi>(2023): “The promise of machine-learning-driven text analysis techniques for historical research: Topic modeling and word embedding”, in: 
+                        <hi rend="italic">Management &amp; Organizational History</hi>: 1–16. 
+                        <ptr target="https://doi.org/10.1080/17449359.2023.2181184"/>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

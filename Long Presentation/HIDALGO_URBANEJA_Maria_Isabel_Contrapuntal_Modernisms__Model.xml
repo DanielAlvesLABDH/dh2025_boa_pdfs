@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="HIDALGO_URBANEJA_Maria_Isabel_Contrapuntal_Modernisms__Model">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Contrapuntal Modernisms. Modeling Situated Transnational Art Histories in Paris and London.</title>
+                <author>
+                    <persName>
+                        <surname>Atta</surname>
+                        <forename>Pansee</forename>
+                    </persName>
+                    <affiliation>Carleton University, Canada</affiliation>
+                    <email>PanseeAbouElatta@cmail.carleton.ca</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Hidalgo Urbaneja</surname>
+                        <forename>Maribel</forename>
+                    </persName>
+                    <affiliation>University of the Arts London, United Kingdom; Carleton University, Canada</affiliation>
+                    <email>m.hidalgourbaneja@arts.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Van Hoeve</surname>
+                        <forename>Janneke</forename>
+                    </persName>
+                    <affiliation>Carleton University, Canada</affiliation>
+                    <email>JannekeVanHoeve@cmail.carleton.ca</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Decolonial Digital Art History</term>
+                    <term>Linked Open Data</term>
+                    <term>Data Visualization</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>linked (open) data</term>
+                    <term>network analysis and graphs theory and application</term>
+                    <term>spatial &amp; spatio-temporal analysis</term>
+                    <term>modeling and visualization</term>
+                    <term>Art history</term>
+                    <term>Cultural studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">Mobile Subjects: Contrapuntal Modernisms (MSCM) examines the movement of artists from decolonizing regions through the colonial artistic hubs of London and Paris during the postwar era. This tale of two cities explores how London and Paris served as critical meeting points, anti-colonial hubs, and centers of exchange driven by postwar mass migration. It introduces a new analytical framework that views metropoles not as origins or global training grounds, but as intersections and conduits of flow, offering insight into the transnational nature of modern art. By working with data on artists who were “exceptional but not exceptions” (Spies Gans 2018), MSCM seeks to challenge the colonial archive by highlighting its characteristic ambiguities, uncertainties, biases, and gaps. Our project emphasizes the “situatedness” of the data (Lavin 2021) and the database structures, which we translate into interactive visual models that challenge definitions of nation and identity. Combining network and spatiotemporal data visualization methodologies at the intersection of art practice and digital humanities illuminates the interconnectedness of the relational database we built, emphasizing (rather than erasing) inconsistencies, biases, and omissions. </p>
+            <p style="text-align: left; ">MSCM features hundreds of artists who came from the so-called “Global South” and contended with barriers related to their identities in their lives as artists in Paris and London. These artists studied in the same schools, showed their work in the same galleries and exhibitions, worked in the same studios, and, at times, lived together. Our data practices present specific challenges due to their heterogeneous nature: some data was generously shared with us by scholars who have extensively researched artists in London and Paris during the postwar era, while other datasets have an institutional origin. Each dataset represents and describes artists’ identities in different ways and focuses on different types of events. </p>
+            <p style="text-align: left; ">MSCM’s web-based relational database is structured using the Committee for International Documentation Conceptual Reference Model (CIDOC CRM) ontology. CIDOC is an event-based schema: it links individuals through temporarily and spatially defined “events” (such as exhibitions, and education and training at art schools and academies) and defines their identities and social relationships (encompassing aspects such as citizenship, gender, social class, political affiliations, languages spoken, and membership in artistic groups). Our mapping of the CIDOC CRM surfaces social aspects of the artists’ lives, while revealing limitations of the ontology that should be extended to accommodate such socially constructed phenomena. The current iteration of the CRM can express the belonging or affiliation of an individual to a political movement, an artistic group, and (depending on how it is interpreted) to a nation and a social class. However, it cannot accommodate categories such as gender and ethnicity. Categorizing individuals becomes particularly complex when considering the role of agency and the influence of context in shaping socially constructed identities. This is also revealed in details such as our aim to capture the spelling or westernization of artists' names we find in our sources, or the different terminologies used to identify individuals. The categorization of events carries similar complexities. For example, many artists studied in MSCM traveled extensively, and attended academies in Paris and London on and off over a period of years - no single “event” can capture this nuance.</p>
+            <p style="text-align: left; ">We chose to use a "universally" recognized ontology along with controlled vocabularies and authority records to facilitate data integration and exchange with GLAM institutions and other art history projects following best Linked Open Data practices. However, we are increasingly aware of the epistemological biases and knowledge gaps inherent in the CIDOC CRM, Getty Vocabularies (AAT and ULAN), Wikidata, and Virtual International Authority File (VIAF). Sometimes it is necessary to contextualize terminologies from controlled vocabularies. Providing an additional layer of information that frames critical elements of the concepts is one of the ways our project’s database engages with situated data in the context of Linked Open Data. The use of controversial categories such as ethnicity or race can reveal colonial customs. Many categories we use were assigned to artists by others (such as art historians and art critics), which “situates” this data (Sant 2023). Hereby, we can approach the necessary step of specifying aspects of the socio-cultural context in which the categories were and are produced. </p>
+            <p style="text-align: left; ">This presentation proposes means of digital mapping and network analysis that work along and against the archival grain (Stoler 2008) to re-assess artists’ global movements and the co-constitution of Modernism as a global phenomenon in a new light. This includes mapping movements, for instance, on an unorthodox cartographic projection to decenter Europe and highlight trans-pacific networks. The visual representations of the trajectories are also transformed, depicted as organic, indeterminate charcoal lines intersected by jagged, unpredictable spikes. This approach affectively conveys their volatility throughout the 20th century, capturing nuances that cannot be represented with more conventional network analysis or mapping tools. Specific nuances surrounding the spatio-temporality of our data structure and visual models and the porosity of geographic and categorical borders have also emerged and evolved over the course of our project. Many of the researched artists are not bound within or defined by geographic borders, frequently crossing between locations for their artistic activities throughout their lives. Considering this, registering locational data for these artists requires addressing the ambiguity and shifting nature of geographic borders, which changes over time and are often politically contested. This challenge extends to designing data structures and visual models, especially when using conventional digital mapping tools, and incorporating the multilingual dimensionality of the dataset into the structure and visualizations. Temporality is another critical factor in the project, as dates play a key role in identifying plausible connections between artists. Visualizing time-based data, particularly when it is inconsistent or vague (e.g., "ca. 1955"), adds further complexity to the process.</p>
+            <p style="text-align: left; ">To tackle these challenges, MSCM uses open-source graphics and animation tools (i.e. p5.js) which are less typically used in Digital Humanities for data visualization, broadening the conventional aesthetic language used to convey context, absences, ambiguities, and multiplicities in the dataset. Using P5.js’s robust linked tool sets, for instance, each node’s visual characteristics — opacity, texture, its ‘visual noise’ — can be generatively mapped onto the dataset’s variables, encoding seemingly decorative visual qualities with quantitative or qualitative meaning. Using a library customarily designed for artistic, rather than analytic tasks yet with robust script-based capabilities, this project visualizes the historical exigencies and lacunae that would otherwise be obscured by data modeling methodologies that use a sharper, more concrete visual language. For example, one early output of this project models the movements of artists from the decolonizing world to the Slade School in London through the midcentury era. Herein, the lines representing artists’ global trajectories use a rough, charcoal-like effect to suggest the dataset’s uncertainty; while their start and end points may be known, their routes and intersections remain speculative. Using a ‘glitchy’ or ‘noisy’ visual language, this approach to data modeling acknowledges and makes visible the geographic (Middle 2022) and temporal uncertainties within the dataset. 
+                <graphic n="1001" width="15.980827777777778cm" height="8.89cm" url="/tmp/tmpm55tmdoj/Pictures/1a3031ec9f99a6ff45514da4f7f35917.png" rend="inline"/>
+            </p>
+            <p style="text-align: left; ">Figure 1: Data model video still. “Slade, London, Asia: Intersections of Decolonial Modernism,” Paul Mellon Centre for British Art, London, 2020.</p>
+            <p style="text-align: left; ">Mobile Subjects’ modeling workflow utilizes three narrative strata to grapple with the geographic, temporal, and relational strata of the project’s multiple datasets. These strata — framed on the public-facing website as People, Places, and Stories — link P5.js’ powerful tools for algorithmic artistic production with Leaflet.js’ mapping utilities using Mappa.js. This permits the overlaying of multiple interactive canvas layers containing separate variables to link the associated historical narratives on both a large and small scale.</p>
+            <figure>
+                <graphic n="1002" width="15.980827777777778cm" height="8.41375cm" url="/tmp/tmpm55tmdoj/Pictures/1a3031ec9f99a6ff45514da4f7f35917.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 2: Data model still, ‘Places’ www.mobilesubjects.org (Under development)</p>
+            <p style="text-align: left; ">
+                <graphic n="1003" width="15.980827777777778cm" height="8.41375cm" url="/tmp/tmpm55tmdoj/Pictures/1a3031ec9f99a6ff45514da4f7f35917.png" rend="inline"/>
+            </p>
+            <p style="text-align: left; ">Figure 3: Data model still, ‘Stories’,’ www.mobilesubjects.org (Under development)</p>
+            <p style="text-align: left; ">In this paper, we will discuss different elements of our project from 2020 to today. Firstly, we will focus on the construction of the relational database and the specific elements and practices that situate our data, with a close examination of our use of Linked Open Data in an effort to better represent the identities of artists and their social contexts. Secondly, we will delve into the visual models we created combining networks with spatio-temporal visualizations. The paper will reflect on the challenges we have encountered in light of the situated nature of our data and the ontologies, controlled vocabularies, and platforms we use. Often, ontologies and controlled vocabularies cannot represent the concepts and ideas we aim to convey. The Open-Source software and content management system (Drupal) we use lacks sufficient options to effectively address the challenges associated with situated data, which is evident in the complexity of the structure of our database. Moreover, commonly used data visualization platforms and suites fall short in their ability to envision global networks, accommodate the porosity of borders, and represent absences, palimpsests, and uncertainties with the required nuance. Identifying feasible alternatives for structuring and visualizing qualitatively complex situated data in the arts and humanities remains a pressing need. The paper will reflect on the solutions we adopted. Namely, we layer critical information associated with terminologies in our relational database, carefully analyzing the impact of identity categorizations and exploring methods for scaling connections between artists and their specific transnational experiences and trajectories.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Agostinho, Daniela / D’Ignazio, Catherine / Ring, Anne / Bonde Thylstrup, Nanna / Veel, Kristin</hi> (2019): “Uncertain Archives: Approaching the Unknowns, Errors, and Vulnerabilities of Big Data through Cultural Theories of the Archive”, in: 
+                        <hi rend="italic">Surveillance &amp; Society</hi> 17, 3/4 : 422–41.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bergmann, Luke</hi> (2016): “Toward Speculative Data: ‘Geographic Information’ for Situated Knowledges, Vibrant Matter, and Relational Spaces”, in: 
+                        <hi rend="italic">Environment and Planning D: Society and Space</hi> 34, 6: 971–89. DOI:10.1177/0263775816665118
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bordalejo, Barbara / Risam, Roopika, eds.</hi> (2019): 
+                        <hi rend="italic">Intersectionality in Digital Humanities</hi>. Leeds: Cambridge University Press &amp; Arc Humanities Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Dávila, Patricio</hi> (2024): 
+                        <hi rend="italic">Diagrams of Power: Visualizing, Mapping, and Performing Resistance</hi>. Eindhoven: Set Margins.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Drucker, Johanna</hi> (2020): 
+                        <hi rend="italic">Visualization and Interpretation: Humanistic Approaches to Display</hi>. Cambridge, MA: The MIT Press. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Drucker, Johanna</hi> (2011): “Humanities Approaches to Graphical Display”, in: Digital Humanities Quarterly 005, 1. &lt;http://www.digitalhumanities.org/dhq/vol/5/1/000091/000091.html&gt; 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Engebretsen, Martin / Kennedy, Helen</hi> (2020): 
+                        <hi rend="italic">Data Visualization in Society</hi>. Amsterdam University Press. DOI:10.5117/9789463722902
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Gagliardi, Susan Elizabeth / Petridis, Constance</hi> (2022): “Mapping Senufo: Making Visible Debatable Information and Situated Knowledge”, in: Lew Fry, Emily / Canning, Erin (eds.) 
+                        <hi rend="italic">Perspectives on Data</hi>. Art Institute of Chicago. DOI:10.53269/9780865593152/03
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Goldfarb, Doron / Merkl, Dieter</hi> (2018): “Visualizing Art Historical Developments Using the Getty ULAN, Wikipedia and Wikidata.” in: 22nd International Conference Information Visualisation, Fisciano, Italy.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Haraway, Donna</hi> (1988): “Situated Knowledges: The Science Question in Feminism and the Privilege of Partial Perspective,” Feminist Studies 14, 3: 575–99. DOI:10.2307/3178066
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Lavin, Matthew</hi> (2021): “Why Digital Humanists Should Emphasize Situated Data over Capta”, in: Digital Humanities Quarterly, 15, 2. &lt;https://www.digitalhumanities.org/dhq/vol/15/2/000556/000556.html&gt;
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Middle, Sarah / Horne, Ryan / McMeekin, David A. / Zuanni, Chiara / Butterworth, Alex</hi> (2022): “Geographies of Place in Digital Art History” in 
+                        <hi rend="italic">International Journal of Humanities and Arts Computing</hi> 16, 1: 94-109. DOI:10.3366/ijhac.2022.0279.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Mandiberg, Michael</hi> (2023): “Wikipedia’s Race and Ethnicity Gap and the Unverifiability of Whiteness”, in: 
+                        <hi rend="italic">Social Text</hi> 41, 1: 21–46. DOI:10.1215/01642472-10174954
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Milan, Stefania / Treré, Emiliano</hi> (2019): “Big Data from the South(s): Beyond Data Universalism”, in: 
+                        <hi rend="italic">Television &amp; New Media</hi> 20, 4: 319–35.
+                        <ref target="https://doi.org/10.1177/1527476419837739" xml:space="preserve"> </ref>DOI:10.1177/1527476419837739
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Risam, Roopika / Baker Josephs, Kelly, eds.</hi> (2021): 
+                        <hi rend="italic">The Digital Black Atlantic</hi>. University of Minnesota Press. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Sant, Toni / Tabone, Enrique</hi> (2023): “Naked Data: Curating Wikidata as an Artistic Medium to Interpret Prehistoric Figurines”, in 
+                        <hi rend="italic" xml:space="preserve">International Journal of Performance Arts and Digital Media </hi>19, 3: 445-62. DOI:
+                        <hi style="font-family:Roboto;font-size:10.5pt">10.1080/14794713.2023.2253335</hi>. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Sekelj, Sanja</hi> (2020): “Qualitative Approaches to Network Analysis in Art History: Research on Contemporary Artist’s Networks”, in: Brown, Kathryn (ed.) 
+                        <hi rend="italic">The Routledge Companion to Digital Humanities and Art History</hi>, 120–34. New York: Routledge. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Spies-Gans, Paris Amanda</hi> (2018): “Exceptional, but not Exceptions: Public Exhibitions and the Rise of the Woman Artist in London and Paris, 1760–1830”, in: Eighteenth Century Studies 51, 4: 393-416. DOI:10.1353/ecs.2018.0009. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Stoler, Ann Laura</hi> (2008): 
+                        <hi rend="italic">Along the Archival Grain: Epistemic Anxieties and Colonial Common Sense</hi>. Princeton NJ: Princeton University Press. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">The Queer Metadata Collective</hi> (2024): 
+                        <hi rend="italic">Best Practices for Queer Metadata</hi>. Zenodo. DOI:10.5281/ZENODO.12633657
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

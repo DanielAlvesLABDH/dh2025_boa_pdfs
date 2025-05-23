@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="YILANDILO_LU_Enes_Developing_Structured_Open_Access_Data_for">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Developing Structured Open Access Data for Ottoman Turkish: Methodology and Applications</title>
+                <author>
+                    <persName>
+                        <surname>Yılandiloğlu</surname>
+                        <forename>Enes</forename>
+                    </persName>
+                    <affiliation>University of Helsinki, Finland</affiliation>
+                    <email>enes.yilandiloglu@helsinki.fi</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T05:01:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Ottoman Turkish Poetry</term>
+                    <term>Aruz</term>
+                    <term>Computational Literary Analysis</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>manuscripts description</term>
+                    <term>representation</term>
+                    <term>and analysis</term>
+                    <term>natural language processing</term>
+                    <term>text mining and analysis</term>
+                    <term>History</term>
+                    <term>Humanities computing</term>
+                    <term>Linguistics</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <hi style="font-size:12pt">Although the advancement in computational methods in recent years has prepared a ground for a remarkable development in Linguistics and Literary Studies for various languages, researchers have largely understudied Ottoman Turkish for corpora. Thus, the creation of structured and openly accessible corpus for Ottoman Turkish remains as a challenge in digital humanities. This study addresses three critical research questions to deal with this challenge: "(I) How can we create an open-access corpus for Ottoman Turkish?", "(II) How can computational methods help resolve the challenges of data wrangling for Ottoman Turkish texts?", and lastly “(III) Can a corpus for Ottoman Turkish be utilized in diachronic studies and practical applications?”.</hi>
+            </p>
+            <p>While open‐access poetry treebanks now exist for many world languages, most notably PoeTree for ten European languages (Plecháč et al. 2024), The Early English Poetry Archive (Huber 2025), and the OpenITI poetry sub-corpus (Nigst et al. 2023) with rich metadata, Ottoman Turkish remains underrepresented. Previous studies on digital open-access corpora for Ottoman Turkish (e.g. Suphan Kirmizialtin et al. 2023) lack detailed and systematic metadata such as information on authors, publication period, and meters of the poem. This study aims at systematically creating a clean and reliable Latin transliterated Ottoman Turkish corpus from a wide range of authors across different centuries, between the 15th and 19th centuries supported by metadata. The study also introduces a use case on the adaptation of the 
+                <hi rend="italic">aruz</hi> meter in Ottoman Turkish poetry via using the corpus.
+            </p>
+            <p>
+                <hi style="font-size:12pt" xml:space="preserve">In this study, 28 Ottoman Turkish </hi>
+                <hi rend="italic" style="font-size:12pt">Divan</hi>
+                <hi style="font-size:12pt" xml:space="preserve"> books (one’s collection of poetry in genres such as </hi>
+                <hi rend="italic" style="font-size:12pt">gazel</hi>
+                <hi style="font-size:12pt" xml:space="preserve"> and </hi>
+                <hi rend="italic" style="font-size:12pt">kasîde</hi>
+                <hi style="font-size:12pt" xml:space="preserve">) were used. The books were manually transliterated from the original Perso-Arabic script into Latin script by domain experts and published as PDF format. These texts were prepared primarily for traditional readers rather than computational processing. Thus, the texts lacked structural elements. For instance, although each text includes bibliographic information, there is no simple and automated way of extracting them as it lacked structure for NLP tasks. Another issue was that most collections contained additional elements not present in the original text, such as editorial footnotes for critical editions, page numbers, and editor’s preface. Last but not least, inconsistencies in transliteration schemes further complicated the analysis. For instance, the Perso-Arabic character ى represented as </hi>
+                <hi rend="italic" style="font-size:12pt">î</hi>
+                <hi style="font-size:12pt" xml:space="preserve"> in IJMES Transliteration System (International Journal of Middle East Studies n.d.)) was inconsistently represented as </hi>
+                <hi rend="italic" style="font-size:12pt">î</hi>
+                <hi style="font-size:12pt" xml:space="preserve">, </hi>
+                <hi rend="italic" style="font-size:12pt">ī</hi>
+                <hi style="font-size:12pt" xml:space="preserve">, or </hi>
+                <hi rend="italic" style="font-size:12pt">ì</hi>
+                <hi style="font-size:12pt" xml:space="preserve"> across different documents. These issues necessitated a preprocessing phase, during which I manually removed footnotes, page numbers, and preface and adapted the texts to align with the IJMES Transliteration System as much as possible.</hi>
+            </p>
+            <p>
+                <hi style="font-size:12pt" xml:space="preserve">Even though bibliographic information for the books was reliably obtained from primary and secondary sources, to segment the books into individual poems requires further data wrangling. To segment a book into poems, the </hi>
+                <hi rend="italic" style="font-size:12pt">aruz</hi>
+                <hi style="font-size:12pt" xml:space="preserve"> meter lines consistently provided at the beginning of the poems were utilized. Firstly, a list of 47 common meter patterns was compiled and used to match the meter lines using exact and fuzzy string matching (threshold ≥ 0.7) ensured to capture both standard and slightly different forms of meter notation. Each detected meter line was treated as a boundary for a new poem, and the next line was collected until the next meter line. Subsequently, titles were extracted using a rule-based system leveraging typographic patterns (e.g., all-caps, brackets, known formulas). After the automatic processing, each candidate poem was manually checked. As a result, the corpus contains 17,840 poems across 36 works, 251,069 lines, 1,570,462 tokens, and 214,853 types. Finally, the poems were linked to a metadata table including work title, author’s name, pen name, gender, rank, and century.</hi>
+            </p>
+            <p>Table 1. The overview of the corpus.</p>
+            <table rend="rules">
+                <row>
+                    <cell style="text-align: center;">Century</cell>
+                    <cell style="text-align: center;">Author Count</cell>
+                    <cell style="text-align: center;">Poem Count</cell>
+                    <cell style="text-align: center;">Line Count</cell>
+                    <cell style="text-align: center;">Token Count</cell>
+                    <cell style="text-align: center;">Type Count</cell>
+                </row>
+                <row>
+                    <cell style="text-align: center;">15</cell>
+                    <cell style="text-align: center;">3</cell>
+                    <cell style="text-align: center;">659</cell>
+                    <cell style="text-align: center;">9,265</cell>
+                    <cell style="text-align: center;">59,713</cell>
+                    <cell style="text-align: center;">19,675</cell>
+                </row>
+                <row>
+                    <cell style="text-align: center;">16</cell>
+                    <cell style="text-align: center;">15</cell>
+                    <cell style="text-align: center;">11,276</cell>
+                    <cell style="text-align: center;">139,086</cell>
+                    <cell style="text-align: center;">886,657</cell>
+                    <cell style="text-align: center;">122,672</cell>
+                </row>
+                <row>
+                    <cell style="text-align: center;">17</cell>
+                    <cell style="text-align: center;">7</cell>
+                    <cell style="text-align: center;">2,191</cell>
+                    <cell style="text-align: center;">29,188</cell>
+                    <cell style="text-align: center;">179,777</cell>
+                    <cell style="text-align: center;">46,432</cell>
+                </row>
+                <row>
+                    <cell style="text-align: center;">18</cell>
+                    <cell style="text-align: center;">4</cell>
+                    <cell style="text-align: center;">847</cell>
+                    <cell style="text-align: center;">28,925</cell>
+                    <cell style="text-align: center;">172,728</cell>
+                    <cell style="text-align: center;">52,759</cell>
+                </row>
+                <row>
+                    <cell style="text-align: center;">19</cell>
+                    <cell style="text-align: center;">7</cell>
+                    <cell style="text-align: center;">2,867</cell>
+                    <cell style="text-align: center;">44,605</cell>
+                    <cell style="text-align: center;">271,587</cell>
+                    <cell style="text-align: center;">55,334</cell>
+                </row>
+                <row>
+                    <cell style="text-align: center;">Total</cell>
+                    <cell style="text-align: center;">36</cell>
+                    <cell style="text-align: center;">17,840</cell>
+                    <cell style="text-align: center;">251,069</cell>
+                    <cell style="text-align: center;">1,570,462</cell>
+                    <cell style="text-align: center;">214,853</cell>
+                </row>
+            </table>
+            <p>
+                <hi style="font-size:12pt" xml:space="preserve">To test the corpus’ usability, a use case was implemented by analyzing the application of the </hi>
+                <hi rend="italic" style="font-size:12pt">aruz</hi>
+                <hi style="font-size:12pt" xml:space="preserve"> meter in Ottoman Turkish poetry. The analysis applied of 101,059 lines illuminated a significant improvement in poets’ adherence to the meter over time showing a positive correlation (</hi>
+                <hi rend="italic" style="font-size:12pt">r</hi>
+                <hi style="font-size:12pt" xml:space="preserve"> = 0.46, </hi>
+                <hi rend="italic" style="font-size:12pt">p</hi>
+                <hi style="font-size:12pt" xml:space="preserve"> &lt; 0.05) between time and the conformity rate of the lines for the </hi>
+                <hi rend="italic" style="font-size:12pt">aruz</hi>
+                <hi style="font-size:12pt" xml:space="preserve"> meter </hi>
+                <hi rend="italic" style="font-size:12pt">mefâʿilün feʿilâtün mefâʿilün feʿilün</hi>
+                <hi style="font-size:12pt" xml:space="preserve">. While positive correlations were also observed for other </hi>
+                <hi rend="italic" style="font-size:12pt">aruz</hi>
+                <hi style="font-size:12pt" xml:space="preserve"> meters such as </hi>
+                <hi rend="italic" style="font-size:12pt">fâʿilâtün fâʿilâtün fâʿilâtün fâʿilâtün</hi>
+                <hi style="font-size:12pt" xml:space="preserve"> (</hi>
+                <hi rend="italic" style="font-size:12pt">r</hi>
+                <hi style="font-size:12pt" xml:space="preserve"> = 0.25, </hi>
+                <hi rend="italic" style="font-size:12pt">p</hi>
+                <hi style="font-size:12pt" xml:space="preserve"> &gt; 0.05) and  </hi>
+                <hi rend="italic" style="font-size:12pt">feʿilâtün feʿilâtün feʿilâtün feʿilün</hi>
+                <hi style="font-size:12pt" xml:space="preserve"> (</hi>
+                <hi rend="italic" style="font-size:12pt">r</hi>
+                <hi style="font-size:12pt" xml:space="preserve"> = 0.08, </hi>
+                <hi rend="italic" style="font-size:12pt">p</hi>
+                <hi style="font-size:12pt" xml:space="preserve"> &gt; 0.05), these results were statistically insignificant. This suggests a partial trend of adapting the </hi>
+                <hi rend="italic" style="font-size:12pt">aruz</hi>
+                <hi style="font-size:12pt" xml:space="preserve"> meter to Ottoman Turkish with less flaw over time, though the limited dataset requires cautious interpretation.</hi>
+            </p>
+            <p>
+                <hi style="font-size:12pt" xml:space="preserve">To conclude, the study introduces one of the initial steps in creating a structured corpus for Ottoman Turkish poetry. It has demonstrated its utility in analyzing the historical adaptation of </hi>
+                <hi rend="italic" style="font-size:12pt">aruz</hi>
+                <hi style="font-size:12pt" xml:space="preserve"> in Ottoman Turkish poetry. The data is publicly available with the metadata via Zenodo</hi><ref n="1" target="ftn1"/>
+                <hi style="font-size:12pt">. Future work includes to enrich the metadata with additional information, such as rhyme schemes and poem titles. Additionally, computational methods with machine learning will be employed to determine the meters for texts lacking meter information. At the end, this structured corpus awaits to be explored more in future. Potential topics include corpus linguistics research on standardized verses in the corpus, sociolinguistic analysis leveraging metadata, and computational linguistics as the corpus offers a resource for training large language models for Ottoman Turkish.</hi>
+            </p>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                     https://zenodo.org/records/15307154
+                </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Huber, Alexander, ed. Eighteenth-Century Poetry Archive. Eighteenth-Century Poetry Archive, 17 Jan 2025 (v1.12 (Winter 2024/25)). Web. 30 Apr 2025. &lt;
+                        <ref target="https://www.eighteenthcenturypoetry.org/index.shtml">https://www.eighteenthcenturypoetry.org/index.shtml</ref>&gt;
+                    </bibl>
+                    <bibl>International Journal of Middle East Studies. (n.d.). 
+                        <hi rend="italic">IJMES Transliteration System</hi>. Cambridge University Press. Retrieved 2024, from https://ijmes.chass.ncsu.edu/docs/TransChart.pdf.
+                    </bibl>
+                    <bibl>Kırmızıaltın, S., Aladağ, F., &amp; Can, E. D. (2022). Crowdsourcing Ottoman Cultural Heritage: OTurC and Participatory Digital Corpora Creation. 
+                        <hi rend="italic">Journal of the Ottoman and Turkish Studies Association</hi>, 
+                        <hi rend="italic">9</hi>(2), 37-42.
+                    </bibl>
+                    <bibl>Nigst, L., Romanov, M., Savant, S. B., Seydi, M., Verkinderen, P., &amp; Hakimi, H. (2023). OpenITI: a Machine-Readable Corpus of Islamicate Texts (2023.1.8) [Data set]. Zenodo. 
+                        <ref target="https://doi.org/10.5281/zenodo.10007820">https://doi.org/10.5281/zenodo.10007820</ref>
+                    </bibl>
+                    <bibl>Plecháč, P., Cinková, S., Kolár, R., Šeļa, A., De Sisto, M., Nugues, L., Haider, T., &amp; Kočnik, N. (2024). PoeTree: Poetry Treebanks in Czech, English, French, German, Hungarian, Italian, Portuguese, Russian, Slovenian and Spanish. 
+                        <hi rend="italic">Research Data Journal for the Humanities and Social Sciences</hi>. 
+                        <ref target="https://doi.org/10.1163/24523666-bja10044">https://doi.org/10.1163/24523666-bja10044</ref>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

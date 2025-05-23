@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BARONCINI_Sofia_An_analysis_of_symbolic_associations_in_the_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>An analysis of symbolic associations in the Arts based on open data</title>
+                <author>
+                    <persName>
+                        <surname>Baroncini</surname>
+                        <forename>Sofia</forename>
+                    </persName>
+                    <affiliation>Leibniz Institute of European History (IEG), Mainz, Germany</affiliation>
+                    <email>baroncini@ieg-mainz.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Sartini</surname>
+                        <forename>Bruno</forename>
+                    </persName>
+                    <affiliation>Ludwig-Maximilians-Universität (LMU), Munich, Germany</affiliation>
+                    <email>b.sartini@lmu.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Daquino</surname>
+                        <forename>Marilena</forename>
+                    </persName>
+                    <affiliation>University of Bologna, Italy</affiliation>
+                    <email>marilena.daquino2@unibo.it</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T12:56:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Symbolism</term>
+                    <term>Linked Open Data</term>
+                    <term>Data Analysis</term>
+                    <term>Digital Art History</term>
+                    <term>Iconology</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>linked (open) data</term>
+                    <term>Art history</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Abstract</head>
+                <p style="text-align: left; ">In this study, we leverage two open datasets, respectively representing a dictionary of art symbols and scholars’ interpretations of ca. 400 artworks, to analyse how symbols and meanings vary in the art history hermeneutic discourse. Results show that the majority of scholars’ interpretations that could be aligned use conventional symbolism. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Keywords </head>
+                <p style="text-align: left; ">Symbolism, Linked Open Data, Data Analysis, Digital Art History, Iconology</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">The culture of Open Science led to an increasing availability of Linked Open Data (LOD), which allowed researchers to study domain-specific subjects with innovative methods. </p>
+                <p style="text-align: left; ">Digital Art History scholars investigated the association of symbols with symbolic meanings in a specific context (e.g., Dragons are associated with lust in Christianity) (Baroncini et al. 2021), also known as simulations (Baudrillard 1981).  </p>
+                <p style="text-align: left; ">In this study, we leverage two open datasets, namely HyperReal (Sartini 2021) and the Iconology Dataset (Baroncini 2024),  to analyze how symbols and meanings vary in the art history hermeneutic discourse. HyperReal provides a baseline for conventional symbolic associations, being populated by more than 40,000 simulations (i.e., pairs of symbols and symbolic meanings) automatically extracted from dictionaries of symbols (Olderr 2012). The LOD Iconology dataset (ID), instead, contains authoritative human-curated interpretations of Middle Ages and Renaissance artworks, mostly derived from Panofsky’s work (1933, 1955, 1969, 1972), concerning iconographical, symbolical, or cultural meanings of subjects of around 400 artworks. </p>
+                <p style="text-align: left; ">The goal is to estimate the extent of (un)conventional symbolism in traditional iconological studies.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Related Work</head>
+                <p style="text-align: left; ">A few works in literature have experimented with quantitative methods to investigate symbolic content in the Arts. Sartini (2024) uses LOD to quantitatively interpret symbolic meanings in still-life art. Kim, Son, and Jeong (2014) extract and analyse visual elements like color saturation on a large scale. Marrow (1986) takes a qualitative approach, analysing aspects beyond conventional symbolism in Northern European Renaissance art, focusing on emotional values and the subjective intent of the artist. Compared to the mentioned work, this study uniquely integrates conventional symbolism and art historical interpretations, bridging the gap between structured symbolic systems and interpretive art analysis for a comprehensive view of symbolism that neither purely data-driven nor solely interpretative methods offer.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Approach</head>
+                <p style="text-align: left; ">First, we extracted 41.756 simulations from HyperReal, combining 11.740 symbols and 18.747 symbolic meanings. Second, we extracted from the Iconology Dataset symbolism attributed to 84 artworks, including 150 symbols and 144 meanings, combined in 168 simulations. Both datasets contain entities that are labelled in English. We used exact and fuzzy string matching to discover that 38 symbolic meanings and 58 symbols are in common between the two datasets, corresponding to 35 simulations (20%) in ID (supported by 24 artworks, 29%), and 78 (0.2%) in HyperReal. Then, we qualitatively analysed the shared and non-shared simulations. The analysis is available on Zenodo (Baroncini et al. 2024)
+                    <hi style="font-size:10pt">.</hi>
+                </p>
+                <figure>
+                    <graphic n="1001" width="11.402658333333333cm" height="8.160933333333332cm" url="/tmp/tmpocp2enrr/Pictures/a83aed23e867371245d773b3f1a14a4a.png" rend="inline"/>
+                    <head>Conventional Meanings (left column) found in shared simulations between Panofsky and HyperReal, along with their cultural context (right column) as specified in HyperReal</head>
+                </figure>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Discussion</head>
+                <p style="text-align: left; ">23 out of 35 simulations belonging to ID (65.7%) are also in HyperReal. These include the following symbols (see Fig. 1): animals (9), plants/flowers (4), colours (2), objects (2), body parts (3), mythological creatures (2), and mythological/historical characters (1). According to HyperReal, shared simulations are associated with 33 cultural contexts (one simulation can have multiple contexts). 78% (18) of the shared simulations are associated with a general, unspecified, cultural context, 5 of which are also associated with more specific ones. To this extent, most conventional meanings referenced by Panofsky are culturally independent. </p>
+                <p style="text-align: left; ">The remaining 12 simulations present in ID but not in HyperReal (34.3%) show us potentially unconventional meanings used in traditional iconological studies. Symbols include deities (5), characters (3), animals (3), and one natural element (fire). Ten of them belong to a Medieval context, two out of three animals appear in allegories, and all simulations appear in 4 artworks. It seems reasonable to conclude that the allegorical interpretation, typical of the Middle Ages, may be a filter between conventional knowledge and the actual interpretation.  The bull-Christ simulation (Fig. 2) exemplifies symbolic complexity, linking Christ with Zeus, symbolized by the bull. The myth of Zeus as a bull in the Rape of Europa was seen by medieval mythographers as Christ saving the soul (Panofsky 1933). Figure 3 shows all the potentially unconventional meanings found in Panofsky. Since all the unconventional simulations are found in 4 paintings out of 24, we can conclude that the majority of artworks are still to be interpreted with conventional symbolism.</p>
+                <figure>
+                    <graphic n="1002" width="9.449152777777778cm" height="6.401152777777778cm" url="/tmp/tmpocp2enrr/Pictures/a83aed23e867371245d773b3f1a14a4a.png" rend="inline"/>
+                    <head>ms. 742, Ovide Moralisé, circa 1390, Lyons, Bibliothèque de la Ville. The abduction of Europa, folio 40. Image license: CCBY-NC 3.0, 
+                        <ref target="http://initiale.irht.cnrs.fr/">http://initiale.irht.cnrs.fr/</ref>
+                    </head>
+                </figure>
+                <figure>
+                    <graphic n="1003" width="10.311694444444445cm" height="6.879166666666666cm" url="/tmp/tmpocp2enrr/Pictures/a83aed23e867371245d773b3f1a14a4a.png" rend="inline"/>
+                    <head>Unconventional meanings found only in Panofsky</head>
+                </figure>
+                <p style="text-align: left; ">Figure 4 presents the distribution of contexts across the shared and not-shared simulations (the latter include symbols and meanings available in both datasets, but for which a simulation is present only in HyperReal). On the one hand, Panofsky does not reference flower language and Japanese, Hindu, and Buddhist contexts. On the other hand, the exclusion of contexts such as Greco-Roman, Biblical, and Middle Ages shows a discrepancy between Panofsky’s areas of interest and conventional symbols traditionally associated with Western Art. At the same time, some interpretations consider symbolism belonging to Chinese, Mithraic, and Sumero-Semitic cultural contexts, which highlight an unexpected link between Panofsky and Eastern cultures.</p>
+                <figure>
+                    <graphic n="1004" width="15.931444444444445cm" height="5.820833333333334cm" url="/tmp/tmpocp2enrr/Pictures/a83aed23e867371245d773b3f1a14a4a.png" rend="inline"/>
+                    <head>Distribution of shared and not shared simulations (between Panofsky and HyperReal) across cultural contexts (from HyperReal)</head>
+                </figure>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p style="text-align: left; ">In conclusion, this study confirms that (i) most of Panofsky’s interpretations of symbols and meanings also present in HyperReal (65.7%) can be reconciled to conventional symbolism, (ii) even if artworks belong to a well-defined cultural context (Western Arts), symbolic interpretations may include references to different cultural contexts and may not include some expected references, which requires further investigation. Finally, (iii) Medieval allegories are not yet captured by conventional symbolisms. </p>
+                <p style="text-align: left; ">Our findings are based on rather simple matching rules, which can be improved to align less common expressions used by Panofsky to conventions in HyperReal and therefore find more matches.</p>
+                <p style="text-align: left; ">As we look towards the future of AI-driven art interpretation, it becomes increasingly important to incorporate a comprehensive approach including both the conventional knowledge automatically extractable from resources (HyperReal) and the rich, curated human interpretations of specific artworks, which may include rare and therefore unexpected meanings (Iconology dataset).</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Baudrillard, Jean</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (1981): </hi>
+                        <hi rend="italic" style="font-size:11pt">Simulacra and Simulation</hi>
+                        <hi style="font-size:11pt">. Ann Arbor, MI, USA: The University of Michigan Press.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt" xml:space="preserve">Baroncini, Sofia / Daquino, Marilena / Tomasi, Francesca </hi>
+                        <hi style="font-size:11pt" xml:space="preserve">(2021): “Modelling Art Interpretation and Meaning. A Data Model for Describing Iconology and Iconography”, in: </hi>
+                        <hi rend="italic" style="font-size:11pt">AIDAinformazioni</hi>
+                        <hi style="font-size:11pt" xml:space="preserve">, </hi>
+                        <hi rend="italic" style="font-size:11pt">1–2</hi>
+                        <hi style="font-size:11pt">:39–62.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Baroncini, Sofia</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2024): </hi>
+                        <hi rend="italic" style="font-size:11pt">Diving into artworks interpretations through the lenses of semantic data: An application on Panofsky’s iconological studies. PhD</hi>
+                        <hi style="font-size:11pt" xml:space="preserve">Thesis, Alma Mater Studiorum - Università di Bologna. </hi>
+                        <ref target="https://doi.org/10.48676/unibo/amsdottorato/11312">
+                            <hi rend="color(1155CC)" style="font-size:11pt">https://doi.org/10.48676/unibo/amsdottorato/11312</hi>
+                        </ref>
+                        <hi style="font-size:11pt"> </hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt" xml:space="preserve">Baroncini, Sofia / Sartini, Bruno / Daquino, Marilena </hi>
+                        <hi style="font-size:11pt" xml:space="preserve">(2024). An analysis of symbolic associations in the Arts based on open data. </hi>
+                        <ref target="https://doi.org/10.5281/zenodo.7277990">
+                            <hi rend="color(1155CC)" style="font-size:11pt">https://doi.org/10.5281/zenodo.7277990</hi>
+                        </ref>
+                        <hi style="font-size:11pt"> </hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Carboni, Nicola, / De Luca, Livio</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2019): “An Ontological Approach to the Description of Visual and Iconographical Representations”, in: </hi>
+                        <hi rend="italic" style="font-size:11pt">Heritage</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> 2, 2:1191–1210. </hi>
+                        <ref target="https://doi.org/10.3390/heritage2020078">
+                            <hi rend="color(1155CC)" style="font-size:11pt">https://doi.org/10.3390/heritage2020078</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Kim, Daniel / Son, Seung-Woo / Jeong, Hawoong</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2014): “Large-Scale Quantitative Analysis of Painting Arts”, in </hi>
+                        <hi rend="italic" style="font-size:11pt">Scientific Reports,</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> 4:7370. </hi>
+                        <ref target="https://doi.org/10.1038/srep07370">
+                            <hi rend="color(1155CC)" style="font-size:11pt">https://doi.org/10.1038/srep07370</hi>
+                        </ref>
+                        <hi style="font-size:11pt"> </hi>
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold" style="font-size:11pt">Marrow, James H.</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (1986): “Symbol and Meaning in Northern European Art of the Late Middle Ages and the Early Renaissance”, in: </hi>
+                        <hi rend="italic" style="font-size:11pt">Simiolus: Netherlands Quarterly for the History of Art 16</hi>
+                        <hi style="font-size:11pt" xml:space="preserve">, 2-3: 150–169. </hi>
+                        <ref target="https://doi.org/10.2307/3780635">
+                            <hi rend="color(1155CC)" style="font-size:11pt">https://doi.org/10.2307/3780635</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Olderr, Steven</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2012). </hi>
+                        <hi rend="italic" style="font-size:11pt" xml:space="preserve">Symbolism: a Comprehensive Dictionary </hi>
+                        <hi style="font-size:11pt">(2 ed.). London: McFarland.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt" xml:space="preserve">Panofsky, Erwin / Saxl, Fritz </hi>
+                        <hi style="font-size:11pt" xml:space="preserve">(1933): “Classical Mythology in Mediaeval Art”, in: </hi>
+                        <hi rend="italic" style="font-size:11pt">Metropolitan Museum Studies</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> 4, 2: 228–280. </hi>
+                        <ref target="https://doi.org/10.2307/1522803">
+                            <hi rend="color(1155CC)" style="font-size:11pt">https://doi.org/10.2307/1522803</hi>
+                        </ref>
+                        <hi style="font-size:11pt"> </hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Panofsky, Erwin</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (1955):</hi>
+                        <hi rend="italic" style="font-size:11pt" xml:space="preserve"> Meaning in the Visual Arts.</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> Garden City, New York: Doubleday</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Panofsky, Erwin</hi>
+                        <hi style="font-size:11pt" xml:space="preserve">  (1969): </hi>
+                        <hi rend="italic" style="font-size:11pt">Renaissance and Renascences in Western Art</hi>
+                        <hi style="font-size:11pt">. New York: Harper and Row</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Panofsky, Erwin</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (1972): </hi>
+                        <hi rend="italic" style="font-size:11pt">Studies in iconology: Humanistic themes in the art of the Renaissance</hi>
+                        <hi style="font-size:11pt">. Boulder, CO, USA: Westview Press.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Sartini, Bruno / van Erp, Marieke / Gangemi, Aldo</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2021): </hi>
+                        <hi rend="italic" style="font-size:10pt">“</hi>
+                        <hi style="font-size:11pt">Marriage is a Peach and a Chalice: Modelling Cultural Symbolism on the Semantic Web</hi>
+                        <hi style="font-size:10pt">”</hi>
+                        <hi style="font-size:11pt" xml:space="preserve">, </hi>
+                        <hi rend="italic" style="font-size:11pt">in: Association for Computing Machinery: 11th Knowledge Capture Conference</hi>
+                        <hi style="font-size:11pt" xml:space="preserve">, Virtual Event, USA, December 2021: 201–208. DOI: </hi>
+                        <ref target="https://doi.org/10.1145/3460210.3493552">
+                            <hi rend="color(1155CC)" style="font-size:11pt">10.1145/3460210.3493552</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:11pt">Sartini, Bruno</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> (2024): </hi>
+                        <hi rend="italic" style="font-size:10pt">“</hi>
+                        <hi style="font-size:11pt">Deciphering Still Life Artworks With Linked Open Data</hi>
+                        <hi style="font-size:10pt">”</hi>
+                        <hi style="font-size:11pt" xml:space="preserve">, </hi>
+                        <hi rend="italic" style="font-size:11pt">in: CEUR Proceedings: Fifth Conference on Computational Humanities Research</hi>
+                        <hi style="font-size:11pt" xml:space="preserve">, Aarhus, Denmark, December 2024. </hi>
+                        <ref target="https://ceur-ws.org/Vol-3834/paper123.pdf">
+                            <hi rend="color(1155CC)" style="font-size:11pt">https://ceur-ws.org/Vol-3834/paper123.pdf</hi>
+                        </ref>
+                        <hi style="font-size:11pt"> </hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

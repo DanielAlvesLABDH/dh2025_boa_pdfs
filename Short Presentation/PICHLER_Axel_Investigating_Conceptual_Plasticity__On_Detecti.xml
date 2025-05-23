@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PICHLER_Axel_Investigating_Conceptual_Plasticity__On_Detecti">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Investigating Conceptual Plasticity: On Detecting a Re-Conceptualization of Focalization with Large Language Models</title>
+                <author>
+                    <persName>
+                        <surname>Pichler</surname>
+                        <forename>Axel</forename>
+                    </persName>
+                    <affiliation>University of Vienna, Austria</affiliation>
+                    <email>axel.pichler@univie.ac.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Pagel</surname>
+                        <forename>Janis</forename>
+                    </persName>
+                    <affiliation>University of Cologne, Germany</affiliation>
+                    <email>jpagel1@uni-koeln.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>prompting</term>
+                    <term>conceptual engineering</term>
+                    <term>computational literary studies</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>artificial intelligence and machine learning</term>
+                    <term>natural language processing</term>
+                    <term>text mining and analysis</term>
+                    <term>Humanities computing</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">2020 saw a paradigm shift in Natural Language Processing (NLP) with the release of GPT-3: with the advent of in-context learning – requesting an answer from a model through the mere input of strings – it became possible to use Large Language Models (LLMs) for new, unseen tasks without having to retrain them for these tasks (Brown et al. 2020). In addition to the previously dominant 
+                <hi rend="italic">pre-train-and-fine-tune-paradigm</hi>, the so-called 
+                <hi rend="italic" xml:space="preserve">prompt-and-predict-paradigm </hi>has emerged as an alternative approach (Liu et. al 2023): from now on, it seems possible to adapt LLMs for domain-specific tasks with minimal effort, namely the aforementioned string manipulation or – to use the common expression – through prompt engineering.
+            </p>
+            <p style="text-align: left; ">In our presentation, we would like to focus on a specific dimension of classification in computational literary studies (CLS) and test whether and – if so – to what extent the 
+                <hi rend="italic">prompt-and-predict-paradigm</hi> does justice to this dimension: domain-specific conceptual engineering. ›Conceptual engineering‹ refers to the practice of describing, evaluating and, if necessary, revising scientific concepts (Cappelen 2018, Chalmers 2020, Koch et al. 2023). In our opinion, this practice is a central characteristic of CLS: the use of digital methods obliges us to operationalize the literary studies concepts used, which presupposes that they are defined in a way that allows this definition to be translated into a rule of measurement (Pichler/Reiter 2022). This repeatedly leads to the intention and extension of technical terms being adapted during operationalization.
+            </p>
+            <p style="text-align: left; ">Our guiding research question can be formulated as to what extent LLMs are able to adequately realize such re-conceptualization of concepts within the 
+                <hi rend="italic">prompt-and-predict-paradigm</hi>. In other words, we want to examine whether LLMs, when prompted with re-defined concepts from literary studies, are able to ›learn‹ the semantic shift of these concepts and accordingly apply them correctly. We call this ability ›conceptual plasticity‹. In addition, we examined whether a specific prompt-optimizing technique, DSPy (Khattab et al. 2024), can potentially contribute to an improvement in this ability.
+            </p>
+            <p style="text-align: left; ">For our experiment, we draw on a concept from narrative theory that has repeatedly been the subject of theoretical debate: focalization. Gérard Genette introduced it in his seminal study on narrative in order to replace the previously dominant concept of perspective in a way that allows the distinction between voice and mode of narration. Since its introduction, the term has been repeatedly criticized and redefined in the process (Niederhoff 2014). For our experiments, we take up one of these criticisms and develop a re-definition of the three forms of focalization based on it. The criticism comes from Andreas Kablitz (Kablitz 1988). He takes Genette at his word by stating that there is »focalization [...] wherever what is depicted is related to a process of perception that takes place within the histoire.« In this respect, he rejects Genette's ultimate conflation of questions of perception with questions of information distribution to determine focalization.</p>
+            <p style="text-align: left; ">Following this criticism by Kablitz, we developed three forms of focalization that are based exclusively on the perceptual processes of the narrative presented: If it is not possible to tie back what is presented in the narrated world to the perception of a single observer, i.e. if what is presented exceeds the perceptual possibilities of a single person, we speak of zero focalization. However, if it is possible or the case that what is presented in the narrated world is bound to the perception of a single observer, we distinguish between internal focalization, when what is presented is bound to the perception of a text-internal figure, and external focalization, when this is not the case, but the presentation could potentially be bound to the perception of a text-internal figure.</p>
+            <p style="text-align: left; ">Based on this re-definition, we conducted the following experiment:<ref n="1" target="ftn1"/> We annotated the first four paragraphs of 26 German 
+                <hi rend="italic">Erzählungen</hi> (mainly novels)<ref n="2" target="ftn2"/> for their focalization (
+                <hi rend="italic">internal</hi>, 
+                <hi rend="italic">external</hi> and 
+                <hi rend="italic">null</hi>).
+            </p>
+            <p style="text-align: left; ">With the annotated data, we let five different LLMs (GPT-4o, GPT-4.1, o3-mini, Claude Haiku, and Claude Sonnet<ref n="3" target="ftn3"/>) in five runs generate an answer for different prompts that requested them to provide a focalization label for a given paragraph. The prompts differed in the following ways: (i) a prompt with the names of the three labels without further specification of what each label means (Prompt 1), (ii) the labels plus an explanation of what we understand under each label (Prompt 2), which also served as the basis for optimization using DSPy; (iii), the same as prompt 2 with the added information that the given label definitions are re-definitions of the standard focalization interpretation (Prompt 3).
+            </p>
+            <figure>
+                <graphic n="1001" width="16.002cm" height="21.046722222222222cm" url="/tmp/tmp0fcj0g34/Pictures/427196812d1d4cdc07dae34b0e5b74a8.jpg" rend="inline"/>
+            </figure>
+            <p>
+                <hi style="font-size:10pt">Figure 1: Evaluation results for all models, given a specific prompt. Shown are weighted F1 score, precision, recall and accuracy.</hi>
+            </p>
+            <p style="text-align: left; ">The evaluation results of all models and the three prompts are given in table 1. Overall, the models achieve moderate (F1 of 0.41) to relatively high (F1 of 0.76) scores, indicating that they are generally able to carry out the task with the given prompts, but still struggle in many places. Prompt optimization using 
+                <hi rend="italic">DSPy</hi> results in improved F1 scores in two out of five cases, performs equally well in two cases, and underperforms in one (GPT-4o), suggesting that while 
+                <hi rend="italic">DSPy</hi> can enhance performance, its effectiveness varies depending on the model and context.
+            </p>
+            <p style="text-align: left; ">In order to check if the differences in performance between the prompts are above chance level, we conducted McNemar’s test and report the results in table 2.<ref n="4" target="ftn4"/> We consider a p-value of 0.05 or lower as evidence for the rejection of the null hypothesis.
+            </p>
+            <figure>
+                <graphic n="1002" width="14.358055555555556cm" height="6.208888888888889cm" url="/tmp/tmp0fcj0g34/Pictures/427196812d1d4cdc07dae34b0e5b74a8.jpg" rend="inline"/>
+            </figure>
+            <p>
+                <hi style="font-size:10pt">Figure 2: Number of statistically significant differences in pairwise McNemar tests across models, separated by comparisons involving optimized prompts (</hi>
+                <hi rend="italic" style="font-size:10pt">DSPy</hi>
+                <hi style="font-size:10pt">) and those using standard templates.</hi>
+            </p>
+            <p style="text-align: left; ">Across all five models, McNemar tests revealed varying degrees of sensitivity to prompt differences. For GPT-4o, a total of 14 significant comparisons were found, 10 of which involved DSPy prompts – all of which performed worse – suggesting that this model is particularly sensitive to prompt modifications, though not necessarily in a beneficial way. GPT-4.1 showed only two significant differences, both of which involved 
+                <hi rend="italic">DSPy</hi>, indicating occasional but clear effects of optimization. In contrast, o3-mini exhibited two significant results, none of which involved 
+                <hi rend="italic">DSPy</hi>, pointing to a lack of responsiveness to conceptual explication and prompt optimization. Claude 3.5 Haiku showed the highest sensitivity overall, with 24 significant comparisons – 14 with and 10 without 
+                <hi rend="italic">DSPy</hi> – highlighting strong effects from both optimized and non-optimized prompts. Finally, Claude 3.7 Sonnet showed 8 significant differences, but only one involved 
+                <hi rend="italic">DSPy</hi>, suggesting that this model is primarily affected by differences between standard templates.
+            </p>
+            <p style="text-align: left; ">Overall, the results suggest that most models – particularly GPT-4.1, o3-mini and Claude 3.7 Sonnet – are relatively unaffected by user-specific prompt optimization and appear to rely on entrenched internal representations of the concepts, which are not easily influenced by manual intervention. GPT-4o and Claude 3.5 Haiku, by contrast, show greater sensitivity to prompt variations, including optimized prompts, indicating a higher degree of conceptual instability. Further investigations should examine whether these findings hold across larger and more diverse datasets, and to what extent different prompt tuning techniques lead to statistically significant improvements in prediction of re-defined concepts.</p>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                    
+                        <hi style="font-size:10pt" xml:space="preserve"> See </hi>
+                        <ref target="https://github.com/AxPic/Reengineering_Focalization_2025/tree/main">
+                            <hi rend="underline color(1155CC)" style="font-size:10pt">https://github.com/AxPic/Reengineering_Focalization_2025</hi>
+                        </ref>
+                        <hi style="font-size:10pt">for the experiment’s complete code and the prompts used.</hi>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                    
+                        <hi style="font-family:Aptos;font-size:10pt" xml:space="preserve"> All of the narratives from which the opening passages were taken are included in the anthology</hi>
+                        <hi rend="italic" style="font-family:Aptos;font-size:10pt">X</hi>
+                        <hi style="font-family:Aptos;font-size:10pt" xml:space="preserve">, which brings together canonical narratives of modern German literature: </hi>
+                        <ref target="https://www.fischerverlage.de/buch/deutsche-erzaehlungen-9783596903733">
+                            <hi rend="underline color(467886)" style="font-family:Aptos;font-size:10pt">https://www.fischerverlage.de/buch/deutsche-erzaehlungen-9783596903733</hi>
+                        </ref>
+                        <hi style="font-family:Aptos;font-size:10pt">.</hi>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                    
+                        <ref target="https://platform.openai.com/docs/models/gpt-4.1">
+                            <hi rend="underline color(467886)" style="font-size:10pt">https://platform.openai.com/docs/models/gpt-4.1</hi>
+                        </ref>
+                        <hi style="font-size:10pt" xml:space="preserve">, </hi>
+                        <ref target="https://platform.openai.com/docs/models/o3-mini">
+                            <hi rend="underline color(467886)" style="font-size:10pt">https://platform.openai.com/docs/models/o3-mini</hi>
+                        </ref>
+                        <hi style="font-size:10pt" xml:space="preserve">, </hi>
+                        <ref target="https://openai.com/index/hello-gpt-4o/">
+                            <hi rend="underline color(1155CC)" style="font-size:10pt">https://openai.com/index/hello-gpt-4o/</hi>
+                        </ref>
+                        <hi style="font-size:10pt" xml:space="preserve">, </hi>
+                        <ref target="https://www.anthropic.com/claude/haiku">
+                            <hi rend="underline color(1155CC)" style="font-size:10pt">https://www.anthropic.com/claude/haiku</hi>
+                        </ref>
+                        <hi style="font-size:10pt" xml:space="preserve">, </hi>
+                        <ref target="https://www.anthropic.com/news/claude-3-7-sonnet">
+                            <hi rend="underline color(1155CC)" style="font-size:10pt">https://www.anthropic.com/news/claude-3-7-sonnet</hi>
+                        </ref>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn4" n="4">
+                    
+                        <hi style="font-size:10pt" xml:space="preserve"> The McNemar test is the standard for determining the statistical significance of two independent classification tests in the NLP, see Card et al. 2020.</hi>
+                    
+                </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Brown, Tom, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, u. a. 2020. „Language Models are Few-Shot Learners“, in: 
+                        <hi rend="italic">Advances in Neural Information Processing Systems</hi>, edited by H. Larochelle, M. Ranzato, R. Hadsell, M. F. Balcan, und H. Lin, 33:1877–1901. Curran Associates, Inc.
+                        <ref target="https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf" xml:space="preserve"> </ref>
+                        <ref target="https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf">
+                            <hi rend="underline color(1155CC)">https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Cappelen, Herman. 2018. 
+                        <hi rend="italic">Fixing Language</hi>. Bd. 1. Oxford University Press.
+                        <ref target="https://doi.org/10.1093/oso/9780198814719.001.0001" xml:space="preserve"> </ref>
+                        <ref target="https://doi.org/10.1093/oso/9780198814719.001.0001">
+                            <hi rend="underline color(1155CC)">https://doi.org/10.1093/oso/9780198814719.001.0001</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Card, Dallas, Peter Henderson, Urvashi Khandelwal, Robin Jia, Kyle Mahowald, und Dan Jurafsky. 2020. „With Little Power Comes Great Responsibility“, in: 
+                        <hi rend="italic">Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)</hi>, 9263–74. Online: Association for Computational Linguistics.
+                        <ref target="https://doi.org/10.18653/v1/2020.emnlp-main.745" xml:space="preserve"> </ref>
+                        <ref target="https://doi.org/10.18653/v1/2020.emnlp-main.745">
+                            <hi rend="underline color(1155CC)">https://doi.org/10.18653/v1/2020.emnlp-main.745</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Chalmers, David J. 2020. „What Is Conceptual Engineering and What Should It Be?“, in: 
+                        <hi rend="italic">Inquiry</hi>, September, 1–18.
+                        <ref target="https://doi.org/10.1080/0020174X.2020.1817141" xml:space="preserve"> </ref>
+                        <ref target="https://doi.org/10.1080/0020174X.2020.1817141">
+                            <hi rend="underline color(1155CC)">https://doi.org/10.1080/0020174X.2020.1817141</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Kablitz, Andreas. 1988. „Erzählperspektive—Point of View—Focalisation: Überlegungen zu einem Konzept der Erzähltheorie.“, in: 
+                        <hi rend="italic">Zeitschrift für französische Sprache und Literatur</hi> 98, 237–55.
+                    </bibl>
+                    <bibl>Khattab, Omar, Arnav Singhvi, Paridhi Maheshwari, Zhiyuan Zhang, Keshav Santhanam, Sri Vardhamanan, Saiful Haq, Ashutosh Sharma, Thomas T. Joshi, Hanna Moazam, Heather Miller, Matei Zaharia, Christopher Potts. 2024. „DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines“, in: 
+                        <hi rend="italic">Proceedings of the Twelfth International Conference on Learning Representations</hi>. 
+                        <ref target="https://openreview.net/forum?id=sY5N0zY5Od">
+                            <hi rend="underline color(1155CC)">https://openreview.net/forum?id=sY5N0zY5Od</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Koch, Steffen, Guido Löhr, und Mark Pinder. 2023. „Recent Work in the Theory of Conceptual Engineering“, in: 
+                        <hi rend="italic">Analysis</hi> 83 (3): 589–603.
+                        <ref target="https://doi.org/10.1093/analys/anad032" xml:space="preserve"> </ref>
+                        <ref target="https://doi.org/10.1093/analys/anad032">
+                            <hi rend="underline color(1155CC)">https://doi.org/10.1093/analys/anad032</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Liu, Pengfei, Weizhe Yuan, Jinlan Fu, Zhengbao Jiang, Hiroaki Hayashi, und Graham Neubig. 2023. „Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing“, in: 
+                        <hi rend="italic">ACM Comput. Surv.</hi> 55 (9).
+                        <ref target="https://doi.org/10.1145/3560815" xml:space="preserve"> </ref>
+                        <ref target="https://doi.org/10.1145/3560815">
+                            <hi rend="underline color(1155CC)">https://doi.org/10.1145/3560815</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Niederhoff, Burkhard. 2014. „Focalization“, in: 
+                        <hi rend="italic">Handbook of Narratology</hi>, herausgegeben von Peter Hühn, Jan Christoph Meister, John Pier, und Wolf Schmid, 197–205. DE GRUYTER.
+                        <ref target="https://doi.org/10.1515/9783110316469.197" xml:space="preserve"> </ref>
+                        <ref target="https://doi.org/10.1515/9783110316469.197">
+                            <hi rend="underline color(1155CC)">https://doi.org/10.1515/9783110316469.197</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl>Pichler, Axel, und Nils Reiter. 2022. „From Concepts to Texts and Back: Operationalization as a Core Activity of Digital Humanities“, in: 
+                        <hi rend="italic">Journal of Cultural Analytics</hi> 7 (4).
+                        <ref target="https://doi.org/10.22148/001c.57195" xml:space="preserve"> </ref>
+                        <ref target="https://doi.org/10.22148/001c.57195">
+                            <hi rend="underline color(1155CC)">https://doi.org/10.22148/001c.57195</hi>
+                        </ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="WARNER_Bethany_Eve_Mapping_Empire__A_Distant_Viewing_Approac">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Mapping Empire: A Distant Viewing Approach to News Maps in Victorian Illustrated Periodicals, 1842-1890</title>
+                <author>
+                    <persName>
+                        <surname>Warner</surname>
+                        <forename>Bethany Eve</forename>
+                    </persName>
+                    <affiliation>International Institute of Social History, Netherlands; University of Amsterdam</affiliation>
+                    <email>bethanyewarner@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Smits</surname>
+                        <forename>Thomas</forename>
+                    </persName>
+                    <affiliation>University of Amsterdam</affiliation>
+                    <email>t.p.smits@uva.nl</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T11:54:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>multimodal AI</term>
+                    <term>Imperial cartography</term>
+                    <term>illustrated newspapers</term>
+                    <term>text detection</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>data publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>image processing and analysis</term>
+                    <term>natural language processing</term>
+                    <term>History</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left;"> On 24th July 1886, 
+                <hi rend="italic">The Graphic</hi> published the Imperial Federation League Map for the Colonial and Indian Exhibition (Figure 1). The map outlines areas of the British Empire surrounded by iconography of peoples across the world. The figure Britannia regally sits on a globe, labelled ‘world’, indicating her position of authority (Crane 1886). To quote Driver, this map is ‘an excellent candidate for the quintessentially imperial map’ (Driver 2010). The map may be an example of a news map which has shaped the public imagination of the British Empire, but it is not the only one. The illustrated periodical press boomed during the nineteenth-century, creating a visual image of the empire for its readers prior to the rise of press photography. In this paper, we propose to take a distant viewing approach to look at many maps from different illustrated periodicals that collectively contributed to the imperial geography of the British Empire.
+            </p>
+            <p style="text-align: left;">In this research, we utilise the multimodal embeddings which we created in our previous project (RSPV 2024) to identify a total of 767 maps from three leading illustrated periodicals of the nineteenth-century in Britain during the period 1842-1890: the 
+                <hi rend="italic" xml:space="preserve">Illustrated London News, The Graphic, </hi>and the
+                <hi rend="italic" xml:space="preserve"> Illustrated Times</hi>, and cluster them into visually similar groups (see, for example, Figures 2 and 3 which contain maps of specific places, in this case London and Delhi respectively).<ref n="1" target="ftn1"/> Building on the MapReader library, we extract ca. 176.000 possible toponyms from these maps, which we plan to use to create a ‘maps of maps’ of the British Empire in the nineteenth-century periodical press (Wood et al. 2024a, Wood et al. 2024b). Conceptually, we argue that these maps functioned at the meeting point of two cartographic genres, news maps and imperial cartography. As news maps, they, as Monmonier argues, functioned to ‘reflect the objectives and values of journalistic institutions’, being highly selective in what they chose to represent of the world (Monmonier 1989). They also function as a form of imperial cartography, which Heffernan argues during this period showed the (potential) colonies as spaces of adventure and risk (Heffernan 2009). Together, the intersection of news maps and imperial cartography functions as a starting point to research the contribution of the illustrated periodical press to the public imaginary of the British Empire for its readers.
+            </p>
+            <figure>
+                <graphic n="1001" width="11.549063888888888cm" height="8.523108333333333cm" url="/tmp/tmpr_854p7l/Pictures/3ac34d009ff0cf236167de928cbed8a3.png" rend="inline"/>
+            </figure>
+            <p>Figure 1: Walter Crane, The Imperial Federation League Map for the Colonial and Indian Exhibition, published as a supplement to 
+                <hi rend="italic">The Graphic</hi>, 24 July 1886.
+            </p>
+            <figure>
+                <graphic n="1002" width="15.920861111111112cm" height="6.089388888888889cm" url="/tmp/tmpr_854p7l/Pictures/3ac34d009ff0cf236167de928cbed8a3.png" rend="inline"/>
+            </figure>
+            <p>Figure 2: Subcluster 28, showing primarily maps of London</p>
+            <figure>
+                <graphic n="1003" width="15.920861111111112cm" height="5.74cm" url="/tmp/tmpr_854p7l/Pictures/3ac34d009ff0cf236167de928cbed8a3.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left;">Figure 3: Subcluster 7, showing primarily maps of Delhi</p>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                    
+                        <hi style="font-size:10pt">Fo</hi>r more information on our use of clustering algorithms and dimension selection, see:
+                        <hi style="font-size:10pt" xml:space="preserve"> Smits</hi>, Thomas/ 
+                        <hi style="font-size:10pt" xml:space="preserve">Paklons, </hi>Elenora (2024). “
+                        <hi style="font-size:10pt">Optimizing Multimodal Clustering (of 10,000 Magic Lantern Slides)</hi>”. Digital Humanities Benelux 2024 Conference. 
+                        <hi style="font-size:10pt">https://doi.org/10.5281/ZENODO.11445566.</hi>
+                    
+                </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Driver, Felix</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2010). “In Search of The Imperial Map: Walter Crane and the Image of Empire”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt">History Workshop Journal</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 69, 149. </hi>
+                        <ref target="https://doi.org/10.1093/hwj/dbp029">
+                            <hi style="font-size:10pt">https://doi.org/10.1093/hwj/dbp029</hi>
+                        </ref>
+                    </bibl>
+                    <bibl style="text-align: left;">
+                        <hi rend="bold" style="font-size:10pt">Heffernan, Michael</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2009). In Akerman, James R. (ed.): </hi>
+                        <hi rend="italic" style="font-size:10pt">The Imperial Map: Cartography and the Mastery of Empire</hi>
+                        <hi style="font-size:10pt">. Chicago: University of Chicago Press, 271, 298.</hi>
+                    </bibl>
+                    <bibl style="text-align: left;">
+                        <hi rend="italic" style="font-size:10pt">Imperial Federation Map of the World Showing the Extent of the British Empire in 1886</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">(24 June 1886). Cornell University – PJ Mode Collection of Persuasive Cartography. </hi>
+                        <ref target="https://digital.library.cornell.edu/catalog/ss:3293793">
+                            <hi style="font-size:10pt">https://digital.library.cornell.edu/catalog/ss:3293793</hi>
+                        </ref>
+                        <hi rend="color(FF0000)" style="font-size:10pt">.</hi>
+                    </bibl>
+                    <bibl style="text-align: left;">
+                        <hi rend="bold" style="font-size:10pt">Monmonier, Mark</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (1989). </hi>
+                        <hi rend="italic" style="font-size:10pt">Maps with the News: The Development of American Journalistic Cartography</hi>
+                        <hi style="font-size:10pt">. Chicago: University of Chicago Press, 16.</hi>
+                    </bibl>
+                    <bibl style="text-align: left;">
+                        <hi rend="bold" style="font-size:10pt">The Research Society for Victorian Periodicals (RSPV):</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> “Past Leary Field Grant Projects”, in RSVP Blog. </hi>
+                        <ref target="https://rs4vp.org/awards/leary-grant/past-winners/">
+                            <hi style="font-size:10pt">https://rs4vp.org/awards/leary-grant/past-winners/</hi>
+                        </ref>
+                        <hi style="font-size:10pt" xml:space="preserve"> [06.08.2024]</hi>
+                    </bibl>
+                    <bibl style="text-align: left;">
+                        <hi rend="bold" style="font-size:10pt">Wood, Rosie / Hosseini, Kasra / Westerling, Kalle / Smith, Andrew / Beleen, Kaspar, Wilson, Daniel C. S. / McDonough, Katherine</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024a). “MapReader: Open Software for the Visual Analysis of Maps”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt">Journal of Open Source Software</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 9, 101: 6434, </hi>
+                        <ref target="https://doi.org/10.21105/joss.06434">
+                            <hi style="font-size:10pt">https://doi.org/10.21105/joss.06434</hi>
+                        </ref>
+                    </bibl>
+                    <bibl style="text-align: left;">
+                        <hi rend="bold" style="font-size:10pt">Wood, Rosie / Hosseini, Kasra / Westerling, Kalle / Smith, Andrew / Beleen, Kaspar, Wilson, Daniel C. S. / McDonough, Katherine</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024b). “MapReader: Open Software for the Visual Analysis of Maps”. Version v1.3.10 </hi>
+                        <ref target="https://doi.org/10.5281/zenodo.13643609">
+                            <hi style="font-size:10pt">https://doi.org/10.5281/zenodo.13643609</hi>
+                        </ref>
+                        <hi style="font-size:10pt">.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

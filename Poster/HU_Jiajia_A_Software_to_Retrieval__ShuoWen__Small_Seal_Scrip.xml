@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="HU_Jiajia_A_Software_to_Retrieval__ShuoWen__Small_Seal_Scrip">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>A Software to Retrieval “ShuoWen” Small Seal Script Character by IDS and Stroke Sequence</title>
+                <author>
+                    <persName>
+                        <surname>HU</surname>
+                        <forename>Jiajia</forename>
+                    </persName>
+                    <affiliation>Beijing Normal University, China, People's Republic of</affiliation>
+                    <email>hjj81@126.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Peng</surname>
+                        <forename>Weiming</forename>
+                    </persName>
+                    <affiliation>University of Pennsylvania, USA</affiliation>
+                    <email>weimingp@ldc.upenn.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>small seal script</term>
+                    <term>IDS</term>
+                    <term>stroke sequence</term>
+                    <term>Shuowen Jiezi</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>Asian studies</term>
+                    <term>Philology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">Small Seal script is a type of old Chinese script. Few modern people can recognize small seal script, unless they have studied on it. 
+                <hi rend="italic" xml:space="preserve">Shuowen Jiezi </hi>is the most important book for learning small seal script.
+            </p>
+            <p style="text-align: left; ">Although there are already some excellent digital resources of 
+                <hi rend="italic">Shuowen Jiezi</hi>, such as https://szsw.bnu.edu.cn, there are still deficiencies in quickly retrieving small seal script characters. In those digital resources, users need to input regular script characters to find the corresponding small seal script characters. If encountering unknown small seal script characters, it is impossible for users to directly retrieve them by use of their form.
+            </p>
+            <p style="text-align: left; ">To solve this problem, a software is developed to help users retrieval a small seal script characters in 
+                <hi rend="italic" xml:space="preserve">Shuowen Jiezi </hi>by IDS and stroke sequence.
+            </p>
+            <p style="text-align: left; ">IDS (Ideographic Description Sequence) usually used by Unicode provides a way to represent a complex Chinese character by IDC (Ideographic Description Character) and its parts which are more simple Chinese characters. There are 16 kinds of IDC to describe the spatial relationships between parts of character, as Figure 1 shows.</p>
+            <figure>
+                <graphic n="1001" width="16.002cm" height="5.2987222222222226cm" url="/tmp/tmpvo5sp5q7/Pictures/0a70582d9beb936a876074aa43664f75.jpg" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure {1} Examples of 16 kind IDC in IDS of small seal script.</p>
+            <p style="text-align: left; ">Stroke is defined as the smallest unit in writing regular script Chinese characters. Wang (2016: 78) defined 9 kind strokes of small seal script. It should be noted that the stroke here is just a concept for static description other than the real writing unit. This work borrowed the concept and defined a stroke in small seal script character as a continuous line with no repeated points. And 9 kinds of small seal script stroke are revised according to the shapes of the lines, See Figure 2. </p>
+            <figure>
+                <graphic n="1002" width="16.002cm" height="4.083402777777778cm" url="/tmp/tmpvo5sp5q7/Pictures/0a70582d9beb936a876074aa43664f75.jpg" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure {2} 9 Kind Strokes of Small Seal Script (Wang, 2016: 78).</p>
+            <p style="text-align: left; ">As small seal script in 
+                <hi rend="italic">Shuowen Jiezi</hi> is a strict system with about 300 basic elements to form over 10,000 characters (Hu, 2010), it is feasible to use stroke sequences to describe these basic elements and IDS to describe other small seal script characters by combining these basic elements with IDCs.
+            </p>
+            <p style="text-align: left; ">The software offers two retrieval functions. Firstly, it enables users to retrieve the small seal script characters that serve as basic elements through the number of strokes and stroke sequence. Secondly, it allows users to retrieve other small seal script characters composed of basic elements by means of IDS. See Figure 3-5</p>
+            <figure>
+                <graphic n="1003" width="16.002cm" height="8.078611111111112cm" url="/tmp/tmpvo5sp5q7/Pictures/0a70582d9beb936a876074aa43664f75.jpg" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure {3} Software Interface</p>
+            <figure>
+                <graphic n="1004" width="16.002cm" height="8.216194444444444cm" url="/tmp/tmpvo5sp5q7/Pictures/0a70582d9beb936a876074aa43664f75.jpg" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure {4} Input basic elements by using the number of strokes and stroke sequence.</p>
+            <figure>
+                <graphic n="1005" width="16.002cm" height="7.900458333333333cm" url="/tmp/tmpvo5sp5q7/Pictures/0a70582d9beb936a876074aa43664f75.jpg" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure {5} Use IDS to retrieve small seal script character in 
+                <hi rend="italic">Shuowen Jiezi</hi>.
+            </p>
+            <p style="text-align: left; ">What is more, the software allows users to find more characters with less conditions, as Figure 6 shows.</p>
+            <figure>
+                <graphic n="1006" width="16.002cm" height="8.551333333333334cm" url="/tmp/tmpvo5sp5q7/Pictures/0a70582d9beb936a876074aa43664f75.jpg" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure {6} Use less conditions to find more characters.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Hu, Jiajia</hi> (2010): 
+                        <hi rend="italic">The Construction Of The Inner Systems’ Models Of Shuo Wen</hi>. Ph.D.thesis, Beijing Normal University.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Wang, Ning</hi> (2016): 
+                        <hi rend="italic">Introduction to Chinese Character Structure Study</hi>. Beijing: Commercial Press.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

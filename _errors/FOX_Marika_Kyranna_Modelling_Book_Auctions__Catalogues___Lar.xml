@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="FOX_Marika_Kyranna_Modelling_Book_Auctions__Catalogues___Lar">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Modelling Book Auctions: Catalogues &amp; Large Language Models</title>
+                <author>
+                    <persName>
+                        <surname>Fox</surname>
+                        <forename>Marika Kyranna</forename>
+                    </persName>
+                    <affiliation>University of Antwerp, Belgium</affiliation>
+                    <email>marika.fox@uantwerpen.be</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-28T15:55:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>machine learning</term>
+                    <term>large language models</term>
+                    <term>book auctions</term>
+                    <term>data annotation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>artificial intelligence and machine learning</term>
+                    <term>Book and print history</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Auction prices act as a useful proxy for the cultural value of objects that have both intrinsic and socially perceived value, because they represent how much a buyer is willing to pay at a specific point in time. And since auction houses typically estimate the worth of items pre-sale, the final price can be compared with expert predictions that are based on available information about the item but cannot consider external factors such as personal connections to buyers. This sometimes leads to items failing to meet their minimum price and going unsold- or fetching a price far above the high estimate. See Figure 1 for an example of this occurring in the case of a minuscule prayer book. This project seeks to use computational analysis of large sets of auction price data to eventually build a model that can more accurately predict such prices. </p>
+            <figure>
+                <figure>
+                    <graphic n="1001" width="16.51cm" height="6.695722222222222cm" url="/tmp/tmpnn36dvwv/Pictures/495a9f440ef687d3375f6b8b4ba01996.png" rend="inline"/>
+                </figure>
+                <figure>
+                    <graphic n="1002" width="16.51cm" height="2.458861111111111cm" url="/tmp/tmpnn36dvwv/Pictures/495a9f440ef687d3375f6b8b4ba01996.png" rend="inline"/>
+                </figure>
+                <head>
+                    <hi style="font-size:10pt" xml:space="preserve">The catalogue entry (above) for Lot 943 of the Arenberg Auctions December 2021 sale, showing an estimated price of 1000-1500€, compared to the recorded hammer price (below) of 3500€ </hi>
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"nEEvlXgk","properties":{"formattedCitation":"(\\uc0\\u8220{}Arenberg Auctions Auction Results,\\uc0\\u8221{} n.d.)","plainCitation":"(“Arenberg Auctions Auction Results,” n.d.)","noteIndex":0},"citationItems":[{"id":439,"uris":["http://zotero.org/users/12175827/items/T5VGQFVG"],"itemData":{"id":439,"type":"webpage","container-title":"Arenberg Auctions","title":"Arenberg Auctions Auction Results","URL":"https://www.my.arenbergauctions.com/en/archive","accessed":{"date-parts":[["2024",1,29]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>
+                    <hi style="font-size:10pt">(“Arenberg Auctions Auction Results” n.d.)</hi>
+                    <hi style="font-size:10pt" xml:space="preserve">. </hi>
+                </head>
+            </figure>
+            <p>
+                <hi style="font-size:10pt" xml:space="preserve">Previous work on modelling auction price trends has focused largely on the art market </hi>
+                <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"5A8G3GAJ","properties":{"formattedCitation":"(Dimson and Spaenjers 2014; Goetzmann 1993)","plainCitation":"(Dimson and Spaenjers 2014; Goetzmann 1993)","noteIndex":0},"citationItems":[{"id":410,"uris":["http://zotero.org/users/12175827/items/Q963IHIT"],"itemData":{"id":410,"type":"article","abstract":"We review the long-term investment performance of three important categories of emotional assets — stamps, art, and musical instruments. The long-run returns on these collectibles have been superior to the total return from government bonds and Treasury bills (and gold), at least before taking into account differences in transaction costs and other expenses. However, the price volatility of emotional assets is larger than is suggested by the standard deviations of price indexes. The investment risk is further augmented by collectibles’ exposure to fluctuating tastes and fads, and their vulnerability to frauds. Finally, indirect investment in emotional asset markets comes with its own set of problems. The available evidence thus indicates that an investment in collectibles should not be considered lightly. However, even if collectible emotional assets are dominated by financial assets in their risk-return properties, they can still be rational purchases for individuals who derive pleasure from owning them.","event-place":"Rochester, NY","genre":"SSRN Scholarly Paper","language":"en","number":"2387841","publisher-place":"Rochester, NY","source":"Social Science Research Network","title":"Investing in Emotional Assets","URL":"https://deliverypdf.ssrn.com/delivery.php?ID=929104066116011127097098029086028109001015065041048068068113004027091107005022105111036117122122038036035117095077019025093065107006090051027068125074015095068065038028044072113098075004116117017090121029012102019099080080122093089020024107017111069&EXT=pdf&INDEX=TRUE","author":[{"family":"Dimson","given":"Elroy"},{"family":"Spaenjers","given":"Christophe"}],"accessed":{"date-parts":[["2023",9,25]]},"issued":{"date-parts":[["2014",1,29]]}}},{"id":432,"uris":["http://zotero.org/users/12175827/items/NGA935UK"],"itemData":{"id":432,"type":"article-journal","abstract":"In this paper, transaction prices of paintings brought to market at least twice over the period 1715-1986 are used to construct an art return index. The index allows a comparison of painting price movements to\nstock-market fluctuations, and also an evaluation of the risk and return characteristics of art investment. I find evidence of a strong relationship between the demand for art and aggregate financial wealth over the very long term, manifested by the fact that the\nart index and an index of London Stock Exchange shares over the same period are highly correlated. I interpret this as evidence that the demand for art increases with the wealth of art collectors.","container-title":"The American Economic Review","ISSN":"0002-8282","issue":"5","page":"1370-1376","source":"JSTOR","title":"Accounting for Taste: Art and the Financial Markets Over Three Centuries","title-short":"Accounting for Taste","volume":"83","author":[{"family":"Goetzmann","given":"William N."}],"issued":{"date-parts":[["1993"]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>
+                <hi style="font-size:10pt">(Dimson / Spaenjers 2014; Goetzmann 1993)</hi>
+                <hi style="font-size:10pt" xml:space="preserve">. However, very little prior work has been done on book sales; there are some case studies on specific dealers, buyers, and items </hi>
+                <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"4o5lCBKT","properties":{"formattedCitation":"(Botana and Cleaver 2024)","plainCitation":"(Botana and Cleaver 2024)","noteIndex":0},"citationItems":[{"id":441,"uris":["http://zotero.org/users/12175827/items/SUS7X83V"],"itemData":{"id":441,"type":"book","abstract":"The market for rare books has been characterized as unpredictable, and driven by the whims of a small number of rich individuals. Yet behind the headlines announcing new auction records, a range of sources make it possible to analyze the market as a whole. This book introduces the economics of the trade in manuscripts and rare books during the turbulent period ca. 1890–1939. It demonstrates how surviving sources, even when incomplete and inconsistent, can be used to tackle questions about the operation of the rare book trade, including how books were priced, profit margins, accounting practices, and books as investments, from the perspectives of both dealers and collectors.","ISBN":"978-1-80270-187-6","note":"OCLC: 1416677904","number-of-pages":"1","publisher":"Arc Humanities Press 2024","source":"Open WorldCat","title":"The Economics of the Manuscript and Rare Book Trade, ca. 1890–1939","editor":[{"family":"Botana","given":"Federico"},{"family":"Cleaver","given":"Laura"}],"issued":{"date-parts":[["2024"]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>
+                <hi style="font-size:10pt">(Botana / Cleaver 2024)</hi>
+                <hi style="font-size:10pt" xml:space="preserve">, and explanations of shorter-term trends in the book market </hi>
+                <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"913CIOD3","properties":{"formattedCitation":"(Lehmann-Haupt 1961)","plainCitation":"(Lehmann-Haupt 1961)","noteIndex":0},"citationItems":[{"id":442,"uris":["http://zotero.org/users/12175827/items/DI28IJ7G"],"itemData":{"id":442,"type":"article-journal","container-title":"Library Trends","ISSN":"0024-2594","issue":"4","language":"en","license":"Copyright 1961 Board of Trustees University of Illinois.","source":"www.ideals.illinois.edu","title":"Current Trends in Antiquarian Books","URL":"https://hdl.handle.net/2142/5971","volume":"9","author":[{"family":"Lehmann-Haupt","given":"Hellmut"}],"accessed":{"date-parts":[["2024",1,30]]},"issued":{"date-parts":[["1961"]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>
+                <hi style="font-size:10pt">(Lehmann-Haupt 1961)</hi>
+                <hi style="font-size:10pt">, but no existing large-scale datasets or experimental results.</hi>
+            </p>
+            <p>
+                <hi style="font-size:10pt" xml:space="preserve">The first stage of this project, currently in progress, is focused on the challenge of extracting and structuring useful data from free-text descriptions of manuscripts and early books that have appeared in auction catalogues. Large language models such as OpenAI's ChatGPT have proven helpful as data annotators in similar tasks </hi>
+                <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"7rfdQ3ha","properties":{"formattedCitation":"(Karjus 2023)","plainCitation":"(Karjus 2023)","noteIndex":0},"citationItems":[{"id":421,"uris":["http://zotero.org/users/12175827/items/98V8YD2L"],"itemData":{"id":421,"type":"article","abstract":"The increasing capacities of large language models (LLMs) present an unprecedented opportunity to scale up data analytics in the humanities and social sciences, augmenting and automating qualitative analytic tasks previously typically allocated to human labor. This contribution proposes a systematic mixed methods framework to harness qualitative analytic expertise, machine scalability, and rigorous quantification, with attention to transparency and replicability. 16 machine-assisted case studies are showcased as proof of concept. Tasks include linguistic and discourse analysis, lexical semantic change detection, interview analysis, historical event cause inference and text mining, detection of political stance, text and idea reuse, genre composition in literature and film; social network inference, automated lexicography, missing metadata augmentation, and multimodal visual cultural analytics. In contrast to the focus on English in the emerging LLM applicability literature, many examples here deal with scenarios involving smaller languages and historical texts prone to digitization distortions. In all but the most difficult tasks requiring expert knowledge, generative LLMs can demonstrably serve as viable research instruments. LLM (and human) annotations may contain errors and variation, but the agreement rate can and should be accounted for in subsequent statistical modeling; a bootstrapping approach is discussed. The replications among the case studies illustrate how tasks previously requiring potentially months of team effort and complex computational pipelines, can now be accomplished by an LLM-assisted scholar in a fraction of the time. Importantly, this approach is not intended to replace, but to augment researcher knowledge and skills. With these opportunities in sight, qualitative expertise and the ability to pose insightful questions have arguably never been more critical.","note":"arXiv:2309.14379 [cs]","number":"arXiv:2309.14379","publisher":"arXiv","source":"arXiv.org","title":"Machine-assisted mixed methods: augmenting humanities and social sciences with artificial intelligence","title-short":"Machine-assisted mixed methods","URL":"http://arxiv.org/abs/2309.14379","author":[{"family":"Karjus","given":"Andres"}],"accessed":{"date-parts":[["2024",1,26]]},"issued":{"date-parts":[["2023",9,24]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>
+                <hi style="font-size:10pt">(Karjus 2023)</hi>
+                <hi style="font-size:10pt" xml:space="preserve">, and that is the method that is currently explored in this project. 100 lot descriptions copied from the RareBookHub.com database </hi>
+                <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"gaKAzDx6","properties":{"formattedCitation":"(\\uc0\\u8220{}Rare Book Hub,\\uc0\\u8221{} n.d.)","plainCitation":"(“Rare Book Hub,” n.d.)","noteIndex":0},"citationItems":[{"id":401,"uris":["http://zotero.org/users/12175827/items/MGUI3C7R"],"itemData":{"id":401,"type":"webpage","abstract":"Recommended by rarebookbuyer.com","title":"Rare Book Hub","URL":"https://www.rarebookhub.com/"}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>
+                <hi style="font-size:10pt">(“Rare Book Hub" n.d.)</hi>
+                <hi style="font-size:10pt" xml:space="preserve"> are being used for proof of concept.</hi>
+            </p>
+            <p>
+                <hi style="font-size:10pt" xml:space="preserve">Two methods of annotation have been explored so far. The first is the addition to each description of XML tags that identify information about the item's size, material, place of origin, language, date, and title. The data itself was recorded as attributes within each tag. This task was performed by me, one other expert human annotator, and finally OpenAI's GPT4, according to guidelines written by me. See </hi>
+                <hi style="font-size:10pt">Figure 2</hi>
+                <hi style="font-size:10pt" xml:space="preserve"> for an example of an annotated description.</hi>
+            </p>
+            <figure>
+                <graphic n="1003" width="16.51cm" height="5.644444444444445cm" url="/tmp/tmpnn36dvwv/Pictures/495a9f440ef687d3375f6b8b4ba01996.png" rend="inline"/>
+                <head>An example of a single lot description from the Rare Book Hub (above) and the same description in XML format after the relevant information has been tagged (below) </head>
+            </figure>
+            <p>Table 1 shows two measures of inter-annotator agreement between the two human annotators and GPT4 for this task, considering the placement of the tags at a character level. The consistently high values show that overall, the use of my written guidelines and GPT4 to curate a usable dataset is a viable method. </p>
+            <table rend="rules">
+                <head>
+                    <hi style="font-size:10pt" xml:space="preserve">Table </hi>
+                    <hi style="font-size:10pt">1</hi>
+                    <hi style="font-size:10pt">: Character-level inter-annotator agreement for XML tagging of 100 sample auction catalogue entries</hi>
+                </head>
+                <row>
+                    <cell style="text-align: center;">
+                        <hi rend="bold">Annotator Pair</hi>
+                    </cell>
+                    <cell style="text-align: center;">
+                        <hi rend="bold">Overlap</hi>
+                    </cell>
+                    <cell style="text-align: center;">
+                        <hi rend="bold">Cohen's Kappa</hi>
+                    </cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold">Annotator 1 &amp; Annotator 2</hi>
+                    </cell>
+                    <cell style="text-align: center;">0.952</cell>
+                    <cell style="text-align: center;">0.797</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold">Annotator 1 &amp; GPT4</hi>
+                    </cell>
+                    <cell style="text-align: center;">0.929</cell>
+                    <cell style="text-align: center;">0.726</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold">Annotator 2 &amp; GPT4</hi>
+                    </cell>
+                    <cell style="text-align: center;">0.924</cell>
+                    <cell style="text-align: center;">0.715</cell>
+                </row>
+            </table>
+            <p>
+                <hi style="font-size:10pt" xml:space="preserve">The process of adding tags to the description text indicates that GPT4 is not only able to extract the data that I need, but is also able to identify exactly where its data is coming from. However, this method does have certain downsides. The first is that the model's output was inconsistent: sometimes it would alter the original description text, and sometimes it would tag categories other than the requested ones (see  </hi>
+                <hi style="font-size:10pt">Figure 3</hi>
+                <hi style="font-size:10pt" xml:space="preserve"> ).  The other is that the need to place the tags limited the amount of data that could be recorded. For example, many fragments are heavily implied to consist of a single leaf, but there is no explicit statement to that end that could be tagged.</hi>
+            </p>
+            <figure>
+                <graphic n="1004" width="16.51cm" height="7.657041666666666cm" url="/tmp/tmpnn36dvwv/Pictures/495a9f440ef687d3375f6b8b4ba01996.png" rend="inline"/>
+                <head>Counts of characters contained within each category of tag in my annotations (left) and GPT4's annotations (right). Note that GPT4 included categories for editors and authors, despite the prompt requesting that it use only the same categories as I did</head>
+            </figure>
+            <p>
+                <hi style="font-size:10pt" xml:space="preserve">To solve these issues, the next method tested was requesting that GPT4, for each description, return only the data in the form of a JSON schema, which restricted it into only considering the desired categories and allowed it to infer some information such as the extent of single-leaf fragments. I then formatted my collected data as a csv table for comparison. Unfortunately, the overlap between my results and the model's' with this method was at first worse than the overlap between mine and the model's data as recorded earlier in the form of XML attributes (see </hi>
+                <hi style="font-size:10pt">Figure 5</hi>
+                <hi style="font-size:10pt" xml:space="preserve">). Closer inspection showed that the model was erring on the side of making too many inferences, such as recording that certain books were written on paper rather than parchment even if there was no mention of either in the catalogue description. Prompt engineering thus far has focused on changes to the guidelines for each individual data category, with the hope of better aligning mine and GPT4's underlying assumptions about what to record (see </hi>
+                <hi style="font-size:10pt">Figure 4</hi>
+                <hi style="font-size:10pt" xml:space="preserve"> for an example of this). </hi>
+            </p>
+            <figure>
+                <graphic n="1005" width="16.51cm" height="3.129138888888889cm" url="/tmp/tmpnn36dvwv/Pictures/495a9f440ef687d3375f6b8b4ba01996.png" rend="inline"/>
+                <head>
+                    <hi style="font-size:10pt">An extract from the annotation guidelines for the leaf_material category, before (above) and after (below) prompt engineering. The addition of the last sentence helped to discourage GPT4 from defaulting to recording "paper" if the description did not specify</hi>
+                </head>
+            </figure>
+            <p>
+                <hi style="font-size:10pt">Figure 5</hi>
+                <hi style="font-size:10pt" xml:space="preserve"> provides an overview of the comparison between my and GPT4's annotations for the XML format, the initial run of the JSON format, and the most recent run of the JSON format after some prompt engineering. There is still clearly room for improvement, but GPT4 is proving to be an effective annotation assistant that will be invaluable as I start working with much larger amounts of data.</hi>
+            </p>
+            <figure>
+                <graphic n="1006" width="16.51cm" height="11.325930555555555cm" url="/tmp/tmpnn36dvwv/Pictures/495a9f440ef687d3375f6b8b4ba01996.png" rend="inline"/>
+                <head>The number of entries out of the collection of 100 samples for which I and GPT4 recorded the exact same information for the given category</head>
+            </figure>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <?biblio ADDIN ZOTERO_BIBL {"uncited":[],"omitted":[],"custom":[[["http://zotero.org/users/12175827/items/Q963IHIT"],"Dimson, Elroy, and Christophe Spaenjers. 2014. \\uc0\\u8220{}Investing in Emotional Assets.\\uc0\\u8221{} SSRN Scholarly Paper. Rochester, NY."]]} CSL_BIBLIOGRAPHY?>
+                        <hi style="font-size:10pt">“Arenberg Auctions Auction Results” (n.d.): Arenberg Auctions &lt;https://www.my.arenbergauctions.com/en/archive&gt; [29.01.2024].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Botana, Federico / Cleaver, Laura, eds.</hi>
+                        <hi style="font-size:10pt">(2024):</hi>
+                        <hi rend="italic" style="font-size:10pt">The Economics of the Manuscript and Rare Book Trade, ca. 1890–1939</hi>
+                        <hi style="font-size:10pt">. Leeds: Arc Humanities Press.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Dimson, Elroy / Spaenjers, Cristophe</hi>
+                        <hi style="font-size:10pt">(2014): “Investing in Emotional Assets”. SSRN Scholarly Paper. Rochester, NY.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Goetzmann, William N.</hi>
+                        <hi style="font-size:10pt">(1993): “Accounting for Taste: Art and the Financial Markets Over Three Centuries”, in:</hi>
+                        <hi rend="italic" style="font-size:10pt">The American Economic Review</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 83, 5: 1370–76.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Karjus, Andres</hi>
+                        <hi style="font-size:10pt">(2023): “Machine-Assisted Mixed Methods: Augmenting Humanities and Social Sciences with Artificial Intelligence”. arXiv &lt;http://arxiv.org/abs/2309.14379&gt; [29.04.2025].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Lehmann-Haupt, Hellmut</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (1961): “Current Trends in Antiquarian Books”, in:</hi>
+                        <hi rend="italic" style="font-size:10pt">Library Trends</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 9, 4 &lt;https://hdl.handle.net/2142/5971&gt; [29.04.2025].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt">“Rare Book Hub” (n.d.): &lt;https://www.rarebookhub.com/&gt; [29.04.2025].</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

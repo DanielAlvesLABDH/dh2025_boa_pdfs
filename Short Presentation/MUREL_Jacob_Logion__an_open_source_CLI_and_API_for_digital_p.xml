@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MUREL_Jacob_Logion__an_open_source_CLI_and_API_for_digital_p">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Logion: an open-source CLI and API for digital philology with language models</title>
+                <author>
+                    <persName>
+                        <surname>Murel</surname>
+                        <forename>Jacob</forename>
+                    </persName>
+                    <affiliation>Princeton University, United States of America</affiliation>
+                    <email>jm9095@princeton.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T16:21:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>classics</term>
+                    <term>philology</term>
+                    <term>software</term>
+                    <term>langauge models</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>open access methods</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>Philology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p> This short paper presentation covers current work-in-progress for development of the first-ever application that leverages language models to assist in philological research tasks for pre-modern texts. Specifically, this presentation focuses on how this software makes language models more accessible to classics scholars for real-world research tasks.</p>
+            <p>Past research has examined language model performance on traditional NLP tasks for pre-modern languages (Riemenschneider 2023, Sing 2021, Krahn 2023). Additionally, a number of software packages are specifically designed for conducting NLP with premodern Greek and other ancient languages (Johnson 2021, Myerston 2023, Center 2023). Unfortunately, all of these require familiarity with the command line, as well as programming languages like Bash or Python, which many philologists understandably lack. Beyond technical barriers of access, a core issue plaguing machine learning for classical languages is its ostensible lack of relevance to research tasks actually conducted by classical philologists.</p>
+            <p>The Ithaka model—developed through collaboration between academic researchers and Google DeepMind—has attempted to address this problem by producing a model aimed at assisting epigraphers in Greek inscription restoration (Assael 2022). This project provides a Colab notebook and a demo interface for completing gap-fill tasks for Greek inscriptions. Unfortunately, the interface comes with several restrictions, such as text length, only working with inscriptions (given the Ithaka model data), and offering little information on the model’s workings to aid users unfamiliar with AI. While Ithaka marks a notable step forward, these limitations inhibit its adoption by a wide range of classicists. The Logion project argues that classics-focused digital humanities projects need to consider both accessibility and relevance to real-world use cases in classics scholarship.</p>
+            <p>In response to the latter problem (i.e. professional relevance), the Logion team has developed computational methods that leverage language models for assistance in error detection/correction, a common task in classical philology—note that philological error detection is distinct from HTR error detection (Pavlopoulos 2024). The 
+                <ref target="https://www.logionproject.princeton.edu/">Logion project</ref> has built on this work by developing several transformer-based 
+                <ref target="https://huggingface.co/princeton-logion">language models</ref> trained on the largest dataset of pre-modern Greek released to date. Our team has leveraged these models to produce an original algorithm for detecting erroneously transmitted words in digitized texts (Cowen-Breen 2023). We have shown success in using this algorithm to help philologists locate scribal transmission errors in Byzantine manuscripts (Graziosi 2023). As a result, our team is now partnering with philologists outside the project to deploy Logion in philological research of Aristotle, Herodian, and Plato. Having shown success in error detection and correction with pre-modern Greek prose, the Logion research team is now developing metrically-based models to help in philological research of fragmentary pre-modern Greek verse, notably Hesiod’s 
+                <hi rend="italic">Catalogue of Women</hi>. Through this work, our team has aimed to make developments in language modeling tangibly pertinent to the work of classics scholars.
+            </p>
+            <p>While addressing machine learning’s relevance to classics, the problem of inaccessibility persists. It is common in such humanities-focused computational projects to provide Jupyter or Colab notebook tutorials intended to guide technically-inexperienced scholars through the muddle of machine learning. Even these products, however, can be obfuscating and intimidating as they still require a basic familiarity with code and fundamentals of machine learning. Using these machine learning tools for one’s own research thus places additional demands on already over-worked faculty, who (at least in classics) often find model results unhelpful. The Logion project charts new area in developing no-code software that empowers classics researchers with limited coding experience and access to high performance computing (HPC) resources to explore language models for their own research. In doing so, the Logion project aims to make language model training and inference for downstream philological tasks more accessible to classics scholars.</p>
+            <p>Accessibility to classics faculty goes beyond a user-friendly, no-code interface. For instance, many classics faculty are employed at institutions without access to HPC resources. Even those classics faculty affiliated with such institutions often do not have ready access to HPC clusters. One guiding question of Logion’s software development has thus been: How might Logion make accessible a variety of typically GPU-intensive language-modeling tasks to philologists (who likely lack access to HPC resources)? Moreover, no-code user interfaces, while laudable for democratizing machine learning, risk promoting a black-box understanding of language models. In response, we ask: How does one develop a simultaneously no-code yet transparent approach to machine learning? What constitutes a user-friendly, no-code machine learning software that promotes critical engagement with and evaluation of language models?</p>
+            <p>In response to these questions, the Logion research team is currently developing two distinct but connected software packages. The first is an API-based user interface intended for conducting no-code local model inference with Logion’s models without HPC access. This software allows researchers to point-and-click their way through mask language modeling inference by providing input text with lacuna and receiving lists of candidate words for text restoration. This application will also allow users to explore error detection and correction as presented in the team’s past publications.</p>
+            <p>Our second software package is a command-line interface (CLI) designed to be run on remote HPC clusters without knowledge of Python, C++, or other languages typically required for such research. This package is designed for a small group of classics researchers for whom HPC resources are more accessible and who may have rudimentary familiarity with the command line. Because of its designed use on HPC clusters, the CLI offers a more robust set of options for language modeling, principally allowing users to fine-tune Logion’s models (or other language models) on local or open-access datasets. </p>
+            <p>This presentation briefly demonstrates the beta-versions of both software packages developed to date by the project’s Research Software Engineer. Through this demonstration, the presentation discusses key technical and methodological issues addressed during development. Moreover, the presentation covers the role of open-access resources in the project’s language model and software development, and how the project intends for its software to aid in producing a more comprehensive and philologically accurate open-access collection of classical texts than currently available. </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Riemenschneider, Frederick / Frank, Anette (2023): “Exploring Large Language Models for Classical Philology,” in 
+                        <hi rend="italic">Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics Volume 1: Long Papers</hi>, 15181–15199
+                    </bibl>
+                    <bibl style="text-align: left; ">Singh, Pranaydeep / Rutten, Gorik / Lefever, Els, (2021): “A Pilot Study for BERT Language Modelling and Morphological Analysis for Ancient and Medieval Greek
+                        <hi rend="italic" xml:space="preserve">,” </hi>in 
+                        <hi rend="italic">Proceedings of LaTeCH-CLfL</hi>, 128–137
+                    </bibl>
+                    <bibl style="text-align: left; ">Krahn, Kevin / Tate, Derrick / Lamicela, Andrew C. (2023): “Sentence Embedding Models for Ancient Greek Using Multilingual Knowledge Distillation,” in 
+                        <hi rend="italic">Proceedings of the 1st Ancient Language Processing Workshop</hi>, 13–22.
+                    </bibl>
+                    <bibl style="text-align: left; ">Assael, Yannis/ Sommerschield, Thea / Shillingford, Brendan / Bordbar, Mahyar / Pavlopoulos, John / Chatzipanagiotou, Marita / Androutsopoulos, Ion / Prag, Jonathan / de Freitas, Nando (2022): “Restoring and attributing ancient texts using deep neural networks,” 
+                        <hi rend="italic">Nature</hi> 603, 280–283.
+                    </bibl>
+                    <bibl style="text-align: left; ">Johnson, Kyle / Burns, Patrick / Stewart, John / Cook, Todd / Besnier, Clément / Mattingly, William (2021): "The Classical Language Toolkit: An NLP Framework for Pre-Modern Languages," in 
+                        <hi rend="italic">Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing: System Demonstrations</hi>, 0-29.
+                    </bibl>
+                    <bibl style="text-align: left; ">Center for Humanities Computing Aarhus (2023): “odyCy,” 
+                        <ref target="https://github.com/centre-for-humanities-computing/odyCy">https://github.com/centre-for-humanities-computing/odyCy</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Myerston, Jacobo (2023): “greCy,” 
+                        <ref target="https://github.com/jmyerston/greCy">https://github.com/jmyerston/greCy</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Pavlopoulos, John / Kougia, Vasiliki / Arias, Esteban Garces / Platanou, Paraskevi / Shabalin, Stepan / Liagkou, Konstantina / Papadatos, Emmanouil / Essler, Holger / Camps, Jean-Baptiste / Fischer, Franz (2024): “Challenging Error Correction in Recognised Byzantine Greek,” in 
+                        <hi rend="italic">Proceedings of the 1st Workshop on Machine Learning for Ancient Languages</hi>, 1-12.
+                    </bibl>
+                    <bibl style="text-align: left; ">Cowen-Breen, Charlie / Brooks, Creston / Graziosi, Barbara / Haubold, Johannes (2023): “Logion: Machine-Learning Based Detection and Correction of Textual Errors in Greek Philology,” in 
+                        <hi rend="italic">Proceedings of the First Ancient Language Processing Workshop</hi>, 170–178.
+                    </bibl>
+                    <bibl style="text-align: left; ">Graziosi, Barbara / Haubold, Johannes / Cowen-Breen, Charlie / Brooks, Creston (2023): “Machine Learning and the Future of Philology: A Case Study,” 
+                        <hi rend="italic">TAPA</hi> 153.1, 253-284.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

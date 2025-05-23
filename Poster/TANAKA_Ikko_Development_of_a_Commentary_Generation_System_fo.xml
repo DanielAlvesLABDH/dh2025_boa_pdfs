@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="TANAKA_Ikko_Development_of_a_Commentary_Generation_System_fo">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Development of a Commentary Generation System for Western Classical Texts</title>
+                <author>
+                    <persName>
+                        <surname>Tanaka</surname>
+                        <forename>Ikko</forename>
+                    </persName>
+                    <affiliation>J.F. Oberlin University</affiliation>
+                    <email>ikkotana@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ogawa</surname>
+                        <forename>Jun</forename>
+                    </persName>
+                    <affiliation>National Institute of Informatics</affiliation>
+                    <email>htjk6513khbk@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Iwata</surname>
+                        <forename>Naoya</forename>
+                    </persName>
+                    <affiliation>Nagoya University</affiliation>
+                    <email>n.iwata@nagoya-u.jp</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-28T02:35:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Classical Studies</term>
+                    <term>Large Language Models (LLMs)</term>
+                    <term>Retrieval-Augmented Generation (RAG)</term>
+                    <term>Textual Commentary</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>Philology</term>
+                    <term>Philosophy</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Background</head>
+                <p style="text-align: left; ">The digitization of Western classical texts, exemplified by the Perseus Digital Library , has greatly expanded accessibility and opened new avenues for research. At the same time, recent efforts within the humanities have begun employing generative AI—particularly large language models (LLMs)—to produce interpretations of specific texts (Schwitzgebel et al. 2023, Truelove 2023). </p>
+                <p style="text-align: left; ">We have developed Humanitext Antiqua (
+                    <ref target="https://humanitext.ai/">https://humanitext.ai/</ref>), which employs Retrieval-Augmented Generation (RAG), leveraging advanced LLMs (e.g., OpenAI’s GPT) to produce reliable, context-based scholarly responses grounded in ancient Greek and Latin texts (Iwata et al. 2024a, 2024b).
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Research Aim</head>
+                <p style="text-align: left; ">Commentary, the interpretation of primary texts, lies at the core of classical scholarship. Humanitext Antiqua integrates primary texts, commentaries, and secondary literature into a framework, enabling broader contextual interpretations. To achieve this objective, we propose a “Commentary Generation System.”</p>
+                <p style="text-align: left; "> This study presents an implementation of the system using Plato’s Republic as a case study. A central challenge in linking primary and secondary text databases is achieving correspondence between reference points. Classical works are typically arranged by volumes, chapters, sections, and lines—structures forming the basis for scholarly discourse. Strict adherence to such divisions can yield chunks too small or large, limiting context retrieval and the effective use of LLMs. Conversely, mechanically dividing texts into uniform chunks can complicate traditional referencing. Reconciling efficient chunking with established referencing practices is therefore a key focus of this research.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methodology and Implementation</head>
+                <list type="ordered">
+                    <item>Creation of Authority Data
+                        <list type="unordered">
+                            <item>Authority data was developed to link the primary text of Plato’s 
+                                <hi rend="italic">Republic</hi> with secondary literature, enriched with URIs. The advantages of using authority data include the ability to record additional information not found in the texts themselves and to maintain the independence of the data resource, ensuring consistency even when primary or secondary text databases are updated. The authority data includes metadata such as author, title, volume, chapter, page, and line numbers to facilitate traditional referencing. In the case of Plato, this follows the Stephanus pagination, for example, "Plato, Republic, 1, 327a."
+                            </item>
+                        </list>
+                    </item>
+                    <item>Vectorization of Primary Texts and Secondary Literature with Metadata Linking
+                        <list type="unordered">
+                            <item>Using primary texts from the Perseus Digital Library, we vectorized the texts and annotated each chunk with metadata, such as text identifiers (e.g., "Plato, Republic, 1, 327a–328d"). These identifiers were linked to the corresponding authority data. Similarly, during the vectorization of secondary literature, metadata indicating references to specific passages in the primary text were extracted and linked to the authority data. This approach facilitates the integration of primary text contexts with extensive secondary literature data via authority data (Figure 1).</item>
+                        </list>
+                    </item>
+                </list>
+                <figure>
+                    <graphic n="1001" width="15.044208333333334cm" height="6.545791666666666cm" url="/tmp/tmpusewdu2a/Pictures/88fc18c7ccf881271103c867c9b444f9.jpeg" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">(Figure 1: Linking authority data with primary texts and secondary literature)</p>
+                <p style="text-align: left; ">When users input queries into the system, it retrieves relevant chunks of the primary text and generates responses based on them. Simultaneously, the system utilizes authority data to retrieve related secondary literature, providing users with nuanced interpretations and contextual information. This workflow enables users to gain insights not only from the primary texts but also from the scholarly traditions and historical contexts embedded in the secondary literature. Additionally, all primary and secondary sources used in generating responses are cited and explicitly displayed, allowing users to verify the reliability of the outputs while deepening their understanding.</p>
+                <p style="text-align: left; ">Currently, the system incorporates a limited selection of secondary literature that is open-source or free of copyright restrictions. Expanding the database will enable the comprehensive management of interpretative traditions spanning antiquity to the present. Additionally, the system’s multilingual design will support the integration of regional research outcomes, helping overcome linguistic barriers to achieve a more inclusive understanding of classical studies. Moving forward, preliminary usability tests and expert feedback will guide refinements in user interaction and ensure the system’s practical benefits are effectively realized.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Iwata, Naoya / Tanaka, Ikko / Ogawa, Jun</hi> (2024a): “Improving semantic search accuracy of classical texts through context-oriented translation”, in: Information Processing Society of Japan (ed.): Proceedings of Jinmoncon 2024 (Vol. 2024).
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Iwata, Naoya / Tanaka, Ikko / Ogawa, Jun</hi> (2024b): “Utilizing large language models for research and education in Western classics”, in: Japanese Society for Artificial Intelligence (ed.): Proceedings of the 38th Annual Conference of the Japanese Society for Artificial Intelligence (Paper No. 1N4-OS-18-05).
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Schwitzgebel, Eric / Schwitzgebel, Daniel / Strasser, Andrew</hi> (2023): “Creating a Large Language Model of a Philosopher”. arXiv 2302.01339 [cs.CL]. DOI: 10.48550/arXiv.2302.01339.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Truelove, K. </hi>(2023): “On the Nature of Artificial Things”. TrueSciPhi.AI, 5 December 2023. https://www.truesciphi.ai/p/on-the-nature-of-artificial-things [28.04.2025].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

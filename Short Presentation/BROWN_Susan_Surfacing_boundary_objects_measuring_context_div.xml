@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BROWN_Susan_Surfacing_boundary_objects_measuring_context_div">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Surfacing boundary objects:measuring context diversity in feminist literary history</title>
+                <author>
+                    <persName>
+                        <surname>Brown</surname>
+                        <forename>Susan</forename>
+                    </persName>
+                    <affiliation>University of Guelph, Canada</affiliation>
+                    <email>sbrown@uoguelph.ca</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Brosz</surname>
+                        <forename>John</forename>
+                    </persName>
+                    <affiliation>University of Calgary, Canada</affiliation>
+                    <email>jdlbrosz@ucalgary.ca</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Flynn</surname>
+                        <forename>Amelia</forename>
+                    </persName>
+                    <affiliation>University of Guelph, Canada</affiliation>
+                    <email>aflynn04@uoguelph.ca</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Mo</surname>
+                        <forename>Alliyya</forename>
+                    </persName>
+                    <affiliation>University of Guelph, Canada</affiliation>
+                    <email>alliyya@uoguelph.ca</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Obbard</surname>
+                        <forename>Kiera</forename>
+                    </persName>
+                    <affiliation>University of Guelph, Canada</affiliation>
+                    <email>kobbard@uoguelph.ca</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Stacey</surname>
+                        <forename>Deb</forename>
+                    </persName>
+                    <affiliation>University of Guelph, Canada</affiliation>
+                    <email>dastacey@uoguelph.ca</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-04T04:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>literary history</term>
+                    <term>diversity indices</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>information retrieval and querying algorithms and methods</term>
+                    <term>network analysis and graphs theory and application</term>
+                    <term>semantic analysis</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">The situatedness of knowledge (Haraway 1988) is a challenge for digital literary history: taking into account different perspectives and different modes of collecting and representing knowledge relevant to the cultural past necessarily complexifies the approach. Important computational studies have analyzed large bodies of data for evidence of change, for instance in the representation of gender, and have linked those changes to broader historical shifts (e.g. Bode 2009; Underwood 2019). Can we bring this kind of context right into our data rather than invoking it generally? Can connections that work across domains provide clues to turning points, trends, or patterns that we don't already suspect, or uncover features of the literary historical landscape that might surprise us or trouble our models and narratives of how the literary and the contextual interact? Advances in literary history, particularly recuperative or revisionary histories, often emerge from combining evidence from multiple contexts that taken together indicate the importance of an author, text, publisher, or other phenomenon. Within a situated model of literary history, the appearance of an entity in a variety of contexts may therefore help identify change or significance. Among the most stimulating concepts to emerge from considerations of how entities signify in multiple contexts is that of boundary objects (Star / Griesemer 1989; Star 2016). This paper looks at how Susan Leigh Star’s theory of boundary objects can inform methods of pursuing computational literary history.</p>
+            <p style="text-align: left; ">Boundary objects span multiple perspectives, contexts, and communities of practice. They have strong temporal qualities, are both concrete or specific and abstracted, and have much to do with power relations and the conceptual systems that organize worlds materially and culturally. They are often heterogeneous internally, like the bodies of information and the datasets that are typical of much literary historical inquiry and indeed much inquiry in the humanities. </p>
+            <p style="text-align: left; ">Our questions are: can the concept of boundary objects, grounded in an understanding of knowledge as situated, usefully inform the digital pursuit of literary history? In particular, can it advance a literary history that recognizes what Ta Nehisi Coates calls “the political power of culture” - that is, not only formal innovation but also the shaping of lives and of historical outcomes? How might a historical approach incorporate an understanding of knowledge as situated and mobilize the concept of boundary objects computationally? Approaching literary historical inquiry through boundary objects, we posit, can provide a means of identifying significant entities or trends of which we are unaware and provide perspectives on the literary past that shift received views.</p>
+            <p style="text-align: left; ">This short paper reports on our efforts to locate boundary objects within a feminist literary historical dataset derived from the ongoing 
+                <hi rend="italic">Orlando: A History of Women's Writing in the British Isles from the Beginnings to the Present</hi> (2006-) (Brown / Clements / Grundy 2024). 
+                <hi rend="italic">Orlando</hi>’s extensive semantic dataset has been authored over the course of three decades by more than 100 people. It represents the lived experiences, publication histories, and reception of 1466 authors, along with their social, cultural, and political contexts, drawing from numerous sources and covering a wide temporal range. Although structured by a set of extensive bespoke XML markup schemas (Brown et al. 2025a; Brown et al. 2025b; Brown / Clements / Grundy 2024; 2006) and guided by editorial processes, the Orlando dataset has some of the qualities of heterogeneity and unevenness that characterize datasets drawn from disparate sources: its diverse materials are authored by many hands with somewhat diverse priorities and perspectives in a blend of structured and semi-structured formats. The range of tags in the schemas—from family to politics, advertising, versification, and relationships with publishers—indicates the breadth of the content.
+            </p>
+            <p style="text-align: left; ">In this analysis, we generated tabular data using Python extraction scripts that inferred connections between entities based on the nested hierarchies of the XML markup in which they occurred. The resulting network’s tabular data provides an extensive overview of women’s writing in Britain, with 251,834 connections between 81,639 entities (people, places, organizations, and texts). <ref n="1" target="ftn1"/>
+            </p>
+            <p style="text-align: left; ">Our initial work with the 
+                <hi rend="italic">Orlando</hi> data included investigating the features of mainstream boundary objects and prominent examples from feminist literary history, and considering how these can serve as guides to identifying interesting entities. Graph visualization offers great potential for interactive exploration, but the disparity in the amount of information available for different authors, along with the impact of previous judgements, creates a form of popularity bias that is difficult to disentangle from markers of significance. 
+            </p>
+            <p style="text-align: left; ">However, semantic queries have the potential to prune graphs to better surface entities associated with a multiplicity of contexts. We decided to investigate whether a broader range of context types would indicate a potential boundary object or entity of interest. Studies of linked information have found that diversity can be measured in terms of how many entity types exist, the degree to which types can be differentiated, and the distribution of types (Morales et al. 2021; Stirling 2007). Our context diversity measure brings such considerations together by factoring in the breadth of context surrounding entities, for instance through looking at ways of differentiating and analyzing the distribution of edge types, and also invokes diversity in the cultural sense of valuing difference. Although women writers from the British Isles are not a hugely underrepresented group, identifying context diversity within this group has the potential to help address popularity biases within the data and to detect writers within the cohort whose importance might have been overlooked.</p>
+            <p style="text-align: left; ">Our initial experiments found that standard centrality measures such as betweenness centrality or degree centrality, both of which analyze the number of in-degree links to a node where nodes with higher counts are seen as more central (Caballera 2024), reinforce popularity bias in the data and do not assist in identifying multivalent entities. We leveraged the semantics of the markup to assign one or more contexts to each connection based on the XML tags surrounding the entities in the text from which the connections were derived. Leveraging the schemas, we selected 19 high-level contexts (working from tags in the dataset such as birth, health, politics, location, occupation, production, and reception) as the basis for a Context Diversity score which counts how many different Contexts for connections are associated with each entity within the graph. The contexts were not weighted counts–each was counted only once to calculate the spread of context types associated with an entity. The Context Diversity measure thus indicates the number of different edge types associated with each node in the network.</p>
+            <p style="text-align: left; ">Calculating a context diversity score for each node, we compared the results with degree centrality scores. Whereas degree centrality largely reinforces received views of relative importance, reflecting the literary canon, context diversity scores revealed several boundary objects within the dataset. For example, the context diversity score identified writers whose importance was not conventionally ‘literary’, such as Queen Victoria, feminist activist Bessie Rayner Parkes, and writers who changed the literary or social scene without necessarily distinguishing themselves for their originality as authors, such as Sylvia Beach and Emily Faithfull. We get quite different perspectives on the relative importance of various entities, particularly people and texts, based on visualizations of the graph that emphasize entities that cut across multiple contexts as compared to ones based on standard centrality measures.</p>
+            <figure>
+                <graphic n="1001" width="16.002cm" height="15.964958333333334cm" url="/tmp/tmpczj22ny9/Pictures/2370e3f5a9693ac2a8af74ed077a40a9.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 1. Graph of all entities with the 12 nodes with the highest degree centrality labelled. Node size reflects centrality. Node colour reflects betweenness. </p>
+            <figure>
+                <graphic n="1002" width="16.002cm" height="15.933208333333333cm" url="/tmp/tmpczj22ny9/Pictures/2370e3f5a9693ac2a8af74ed077a40a9.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 2. Graph of all entities with 12 labelled nodes from the highest 2 levels of Context Diversity. Node size reflects centrality. Depth of node colour reflects Context Diversity. </p>
+            <p style="text-align: left; ">Work towards identifying boundary objects in this large knowledge graph seemed to support the hypothesis that attending to context diversity can afford a different perspective on significance, within a literary historical graph, than centrality measure. Our results also align with attempts to get at underrecognized authors in the 
+                <hi rend="italic">Orlando</hi> dataset by other means (Baird 2014). 
+            </p>
+            <figure>
+                <graphic n="1003" width="16.002cm" height="7.415388888888889cm" url="/tmp/tmpczj22ny9/Pictures/2370e3f5a9693ac2a8af74ed077a40a9.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 3. Subgraph of the Orlando graph shown coloured by three different network measures: degree, betweenness centrality, and context diversity.  All measures are calculated from the entire Orlando graph rather than this subset showing relationships between people involved in the two most prominent women’s suffrage societies in the UK. Histograms showing the distribution of measure values are shown below.  Compared to the other two measures where Virginia Woolf is isolated as the largest value, context diversity indicates a wider array of nodes (Mary Gawthorpe, Margaret Haig, Elizabeth Robins, and Kate Perry Frye) that may be of interest. </p>
+            <p style="text-align: left; ">Promising as these results are, further work is required, particularly given the complex challenges related to bias and unevenness in this kind of data. We are reworking the context diversity score to weight the context types in the dataset differently and experimenting with further refinements. We will report on a second iteration of the Context Diversity measure that provides more nuanced scores than a simple count of context types, to better distinguish nodes whose edges are very concentrated in a few types from those whose edges are spread more broadly, and to try to counter the extent to which centrality and context diversity partially correlate to entry length, canonicity, and temporal period. We will share results from experimenting with the other existing algorithms that have the potential to get at diversity in networks, including Kendall’s Rank Correlation Coefficient and the Shannon Diversity model (Nikolov et al. 2015). We will also explore algorithms associated with social network analysis and scale-free networks–or graphs that have a degree distribution that follows a power law and demonstrates a robustly connected network where hubs can be identified–including looking at preferential attachment to possibly explain some of the bias (Barabási / Albert 1999; Ciampaglia / Flammini / Menczer 2015; Salganik / Diaz / Farnadi 2024; Wood 2024). </p>
+            <p style="text-align: left; ">Employing context diversity measures helps to surface boundary objects in a knowledge graph in ways that standard social network analysis measures with their emphasis on centrality do not. This approach could advance literary historical inquiry that combines data from a wide range of sources, although it would require adaptation, since such measures must be refined based on deep knowledge of both the data models and the content. They emerge from a hermeneutical and iterative process that will not produce “universal” measures, and will be most useful when employed with “thick” data that reflects a wide range of contexts. This kind of data is still quite rare, because meaningfully relating disparate types of connections involves significant data modeling, aligning, and linking, as well as contending with unevenness and bias. However, literary history has always spanned multiple domains. These results suggest the potential of bringing together data produced by approaches as diverse as bibliography, stylistics, and prosopography. Doing so may lead us to boundary objects that help revise and nuance dominant historical narratives, providing fresh perspectives on the cultural past as we continue to explore ways to investigate history at scale.</p>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                     The data analyzed here was produced from the source XML. However, the size, complexity of markup, and disparate data models make harmonizing and working with this data as XML challenging. For those wishing to work with the data in graph form, the XML has been transformed into linked open data using the Canada Writing Research Collaboratory ontology 
+                        <ref target="https://www.zotero.org/google-docs/?6FzsYB">(Brown, Cummings, et al.; Brown, Faulkner, et al.)</ref>. SPARQL queries of this dataset can extract connections between people, places, organizations, and texts (
+                        <ref target="https://cwrc.ca/">https://cwrc.ca/</ref>
+                        <ref target="https://sparql.cwrc.ca/">https://sparql.cwrc.ca/</ref>).
+                    
+                </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Baird, Ileana Popa</hi> (ed.) (2014): 
+                        <hi rend="italic">Social Networks in the Long Eighteenth Century: Clubs, Literary Salons, Textual Coteries</hi>. Newcastle upon Tyne: Cambridge Scholars Publishing. [30.05.2025]
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Barabási, Albert-László / Albert, Réka</hi> (1999): “Emergence of Scaling in Random Networks
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt">”, in:</hi>
+                        </hi>
+                        <hi rend="italic">Science</hi> 286, 5439: 509–12. DOI: 10.1126/science.286.5439.509.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bode, Katherine</hi> (2009): “Along Gender Lines: Reassessing Relationships between Australian Novels, Gender and Genre from 1930 to 2006
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt">”, in:</hi>
+                        </hi>
+                        <hi rend="italic">Australian Literary Studies</hi> 24, 3/4: 79–95. DOI: 10.20314/als.22404e64d9.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Brown, Susan / Clements, Patricia / Grundy, Isobel</hi> (2006): “Sorting Things In: Feminist Knowledge Representation and Changing Modes of Scholarly Production
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt" xml:space="preserve">”, in: </hi>
+                        </hi>
+                        <hi rend="italic">Women’s Studies International Forum</hi>, 29:317–25. DOI: 10.1016/j.wsif.2006.04.010.
+                    </bibl>
+                    <bibl style="text-align: left; ">———, (eds.) (2024): “Introduction: Markup
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt" xml:space="preserve">”, in: </hi>
+                        </hi>
+                        <hi rend="italic">Orlando: Women’s Writing in the British Isles from the Beginnings to the Present</hi>. Cambridge University Press. https://orlando.cambridge.org/about/introduction#toc-markup.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Brown, Susan / Cummings, Joel / Drudge-Willson, Jasmine / Faulkner, Colin / Lemak, Abigel / Martin, Kim / Mo, Alliyya / et al.</hi> (2019): “The Orlando British Women’s Writing Dataset Release 1: Biography and Bibliography.” Borealis. DOI: 10.5683/SP2/EOB9S6.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Brown, Susan / Faulkner, Colin / Lemak, Abigel / Martin, Kim / Warren, Robert</hi> (2017): “Cultural (Re-)formations: Structuring a Linked Data Ontology for Intersectional Identities
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt">”, in:</hi>
+                        </hi>
+                        <hi rend="italic" xml:space="preserve">Digital Humanities 2017 Conference Abstracts. </hi>https://dh2017.adho.org/abstracts/580/580.pdf.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Caballera, Christian</hi> (2024): “Concepts and Measurements in Social Network Analysis.” 
+                        <hi rend="italic">UC Berkeley D-Lab</hi>. 
+                        <ref target="https://dlab.berkeley.edu/news/concepts-and-measurements-social-network-analysis">https://dlab.berkeley.edu/news/concepts-and-measurements-social-network-analysis</ref> [27.05.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">Brown, Susan et al (2025a). “The Orlando Project Events Schema.” Zenodo. 
+                        <ref target="https://zenodo.org/records/15286865">https://zenodo.org/records/15286865</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">Brown, Susan et al (2025b). “The Orlando Project Profile Schema.” Zenodo. 
+                        <ref target="https://zenodo.org/records/15286592">https://zenodo.org/records/15286592</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Ciampaglia, Giovanni Luca / Flammini, Alessandro / Menczer, Filippo</hi> (2015): “The Production of Information in the Attention Economy
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt">”, in:</hi>
+                        </hi>
+                        <hi rend="italic">Scientific Reports</hi> 5, 1: 1–6.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Haraway, Donna</hi> (1988): “Situated Knowledges: The Science Question in Feminism and the Privilege of Partial Perspective
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt">”, in:</hi>
+                        </hi>
+                        <hi rend="italic">Feminist Studies</hi> 14, 3: 575–99. DOI: 10.2307/3178066.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Morales, Pedro Ramaciotti / Lamarche-Perrin, Robin / Fournier-S’niehotta, Raphaël / Poulain, Rémy / Tabourier, Lionel / Tarissan, Fabian</hi> (2021): “Measuring Diversity in Heterogeneous Information Networks
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt">”, in:</hi>
+                        </hi>
+                        <hi rend="italic">Theoretical Computer Science</hi> 859:80–115.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Nikolov, Dimitar / Oliveira, Diego F. M. / Flammini, Alessandro / Menczer, Filippo</hi> (2015): “Measuring Online Social Bubbles
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt">”, in:</hi>
+                        </hi>
+                        <hi rend="italic">PeerJ Computer Science</hi> 1: e38. DOI: 10.7717/peerj-cs.38.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Salganik, Rebecca / Diaz, Fernando / Farnadi, Golnoosh</hi> (2024): “Fairness through Domain Awareness: Mitigating Popularity Dias for Music Discovery
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt" xml:space="preserve">”, in: </hi>
+                        </hi>Goharian, Nazli / Tonellotto, Nicola / He, Yulan / Lipani, Aldo / McDonald, Graham / Macdonald, Craig / Ounis, Iadh (eds.): 
+                        <hi rend="italic">Advances in Information Retrieval</hi>. 351–68. Cham: Springer Nature Switzerland. DOI: 10.1007/978-3-031-56066-8_27.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Star, Susan Leigh</hi> (2016): “Misplaced Concretism and Concrete Situations
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt">”, in</hi>
+                            <hi rend="normalweight" style="font-size:10pt">:</hi>
+                        </hi> Bowker, Geoffrey C. / Timmermans, Stefan / Clarke, Adele E. / Balka, Ellen 
+                        <hi style="font-size:10pt">(eds.):</hi>
+                        <hi rend="bold" xml:space="preserve"> </hi>
+                        <hi rend="italic">Boundary Objects and Beyond</hi>, Cambridge, MA: MIT Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Star, Susan Leigh, / Griesemer, James R</hi> (1989): “Institutional Ecology, ‘Translations’ and Boundary Objects: Amateurs and Professionals in Berkeley’s Museum of Vertebrate Zoology, 1907-39
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt">”, in:</hi>
+                        </hi>
+                        <hi rend="italic">Social Studies of Science</hi> 19, 3: 387–420.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Stirling, Andy</hi> (2007): “A General Framework for Analysing Diversity in Science, Technology and Society
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt" xml:space="preserve">”, in: </hi>
+                        </hi>
+                        <hi rend="italic">J. R. Soc. Interface</hi> 4, 15: 707–19.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Underwood, Ted</hi> (2019): 
+                        <hi rend="italic">Distant Horizons: Digital Evidence and Literary Change</hi>. Chicago: University of Chicago Press. DOI: .7208/chicago/9780226612973.001.0001.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Wood, Michael Lee</hi> (2024): “Measuring Cultural Diversity in Text with Word Counts
+                        <hi rend="bold">
+                            <hi rend="normalweight" style="font-size:10pt">”, in:</hi>
+                        </hi>
+                        <hi rend="italic">Social Psychology Quarterly</hi> 87, 3: 205–26. DOI: 10.1177/01902725231194356.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

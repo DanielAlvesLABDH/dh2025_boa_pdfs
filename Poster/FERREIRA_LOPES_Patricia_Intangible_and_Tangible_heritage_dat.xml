@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="FERREIRA_LOPES_Patricia_Intangible_and_Tangible_heritage_dat">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Intangible and Tangible heritage data integration. Models for management, visualization and knowledge. [INTHEDATA]</title>
+                <author>
+                    <persName>
+                        <surname>Ferreira-Lopes</surname>
+                        <forename>Patricia</forename>
+                    </persName>
+                    <affiliation>Departamento de Expresión Gráfica Arquitectónica, Universidad de Sevilla, Spain</affiliation>
+                    <email>pwanderley@us.es</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Pinto-Puerto</surname>
+                        <forename>Francisco</forename>
+                    </persName>
+                    <affiliation>Departamento de Expresión Gráfica Arquitectónica, Universidad de Sevilla, Spain</affiliation>
+                    <email>fspp@us.es</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>González-Gracia</surname>
+                        <forename>Elena</forename>
+                    </persName>
+                    <affiliation>Departamento de Expresión Gráfica Arquitectónica, Universidad de Sevilla, Spain</affiliation>
+                    <email>egonzalez30@us.es</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>cultural heritage</term>
+                    <term>CIDOC-CRM</term>
+                    <term>semantic knowledge model</term>
+                    <term>intangible and tangible heritage</term>
+                    <term>interoperability</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>data modeling</term>
+                    <term>data</term>
+                    <term>object</term>
+                    <term>and artefact preservation</term>
+                    <term>Art history</term>
+                    <term>Cultural studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">
+                <hi rend="bold" style="font-size:10pt">Brief Abstract:</hi>
+                <hi rend="eop">In this poster we will present the INTHEDATA project, in particular, the current state of knowledge and best practice in the area of cultural heritage and semantic knowledge model, the objectives of the project, its methodology by implementing the CIDOC-CRM standard and the first results.</hi>
+            </p>
+            <p style="text-align: left; ">
+                <hi rend="bold" style="font-size:10pt">Keywords:</hi> cultural heritage, CIDOC-CRM, semantic model, intangible and tangible heritage, knowledge model, cultural heritage documentation.
+            </p>
+            <p style="text-align: left; ">Abstract:</p>
+            <p style="text-align: left; ">
+                <hi rend="eop">According to UNESCO's 2003 Convention for the Safeguarding of the Intangible Cultural Heritage, “the intangible heritage consists of the practices, representations, expressions, knowledge, skills - together with the instruments, objects, artifacts and cultural spaces associated with them” (Unesco 2003).</hi>
+            </p>
+            <p style="text-align: left; ">
+                <hi rend="eop" xml:space="preserve">Despite significant advances in heritage data science, among the most prominent projects we could cite ARIADNEplus, the British Museum Research Space (Oldman and Tanase 2018), CrossCult (Padfield et al. 2019), Arches, the CLAROS project and Mingei project. In terms of the integration of intangible and tangible heritage data, we still observe certain research gaps:  </hi>
+            </p>
+            <p style="text-align: left; ">
+                <hi rend="eop" xml:space="preserve">1) the absence of standardized semantic models dealing with intangible heritage elements. If we analyze the publications that deal with the application of CIDOC-CRM, so far, only very few have contemplated its application to intangible heritage. Thus, it is important to encourage contextualization - connecting data from different categories (intangible and tangible) - to consider the surrounding context;  </hi>
+            </p>
+            <p style="text-align: left; ">
+                <hi rend="eop" xml:space="preserve">2) the disconnection between the registers of intangible heritage and tangible heritage. If we look at national cultural heritage registration platforms, such as the Digital Guide of Andalusia, the platform of the Community of Aragon, or the Basque Country, among others, the records are “boxed” by category - Intangible, Movable, Immovable - and there is no (inter)relationship between them from the internal structure of the information system. On the other hand, no autonomous community follows common standards, which hinders the work of research, management and reuse of the data;  </hi>
+            </p>
+            <p style="text-align: left; ">3) the absence of analysis and visualization of heritage data that treats and highlights the relationships between intangible and tangible heritage, which hinders a comprehensive understanding of cultural heritage and its social dimension. If some of the platforms contemplate visualization through maps, these generally correspond to preconceived models (Google maps, openstreet map, ArcGISonline, etc.) and only “locate” the material records, and do not provide an inquiry to know the mental, material and immaterial construction of heritage in the territory. </p>
+            <p style="text-align: left; ">
+                <hi rend="eop">The complexity of information is an inherent characteristic of cultural heritage. Creating new insights or discovering something new does not result from a simple glance; this process of revelation often needs and requires a thorough investigation of the context and its relationships. To this end, the project will develop semantic knowledge models based on the CIDOC-CRM standard. In this poster we will present the INTHEDATA project, in particular, the current state of knowledge and best practice in the area of cultural heritage and semantic knowledge model, the objectives of the project, its methodology by implementing the CIDOC-CRM standard and the first results. Therefore, the objective of the INTHEDATA project is to develop a methodology for the integration of intangible and tangible heritage data at the information system level, for the management of heritage records. A clear example of this need is when we work with the documentation of a cultural landscape. In this case, the complexity lies in the integration not only of data on natural, physical, historical processes and human activities, but also data on social perceptions and data collected in public participation activities during the process of documenting the cultural landscape. The project will have two case studies that were selected because of the team's previous experiences and their complementarity, as they cover different typologies and nature of data. Given that INTHEDATA is a two-year project, the case studies contemplate a data collection work previously carried out, providing the initial support for the development of the project. Both cases cover a territorial scale: 1) The heritage of the canning industry in the Eurocity of Guadiana (Ferreira-Lopes 2024; Ferreira-Lopes and Pires Rosa 2023); 2) The production of the Late Gothic heritage in the Iberian Peninsula (XVI-XVII Century) (Ferreira-Lopes, 2018).</hi>
+            </p>
+            <p style="text-align: left; ">
+                <hi rend="eop" xml:space="preserve"> </hi>
+                <graphic n="1001" width="15.5575cm" height="9.016cm" url="/tmp/tmpiotplp3e/Pictures/d5b0cda4fdef9c398713970409c39ef4.jpeg" rend="inline"/>
+            </p>
+            <p style="text-align: left; ">
+                <hi rend="bold">Figure 1.</hi> Schematic diagram explaining the complexity of the data in the documentation phase of a heritage object and how semantic models can provide another level of knowledge and interpretation of that object. Source: Ferreira Lopes, P.
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="normaltextrun">Arches Project. (2021): Arches. </hi>Retrieved from
+                        <hi rend="normaltextrun"> </hi>
+                        <ref target="https://www.archesproject.org/">https://www.archesproject.org/</ref>
+                        <hi rend="normaltextrun" xml:space="preserve"> </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">ARIADNEplus Project. Retrieved from 
+                        <ref target="http://www.ariadne-infrastructure.eu">http://www.ariadne-infrastructure.eu</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="normaltextrun" xml:space="preserve">CIDOC CRM Conceptual Reference Model. </hi>Retrieved from 
+                        <ref target="http://www.cidoc-crm.org">http://www.cidoc-crm.org</ref>
+                        <hi rend="normaltextrun">/  </hi>
+                        <hi rend="eop"> </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="normaltextrun">Dominic Oldman and Diana Tanase. (2018): 
+                            <hi rend="italic">Reshaping the knowledge graph by connecting researchers, data and practices in ResearchSpace</hi>, in: Lecture Notes in Computer Science, Vol. 11137: 325–340. Springer, Cham. 
+                        </hi>
+                        <ref target="https://doi.org/10.1007/978-3-030-00668-6_20">https://doi.org/10.1007/978-3-030-00668-6_20</ref>
+                        <hi rend="normaltextrun" xml:space="preserve">   </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">Ferreira Lopes, P. (2018): 
+                        <hi rend="italic">Modelos digitales de información-sig y grafos- aplicados en el patrimonio: la fábrica edilicia en el antiguo reino de Sevilla en el tránsito a la edad moderna</hi>.. Ph.D. thesis. Universidad de Sevilla. 
+                        <ref target="https://hdl.handle.net/11441/81525">https://hdl.handle.net/11441/81525</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">Ferreira-Lopes, P. 2024: 
+                        <hi rend="italic">Flujos de trabajo digitales en la documentación del patrimonio industrial inmueble. La cadena de datos del proyecto PITGUADIANA</hi>, in Santander. Estudios de Patrimonio, 7: 149-170. 
+                        <ref target="https://doi.org/10.22429/Euc2024.sep.07.04">https://doi.org/10.22429/Euc2024.sep.07.04</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">Ferreira-Lopes, P. and Pires Rosa, M. 2023: 
+                        <hi rend="italic">Metodología de captura y análisis de datos del patrimonio inmueble industrial de la Eurociudad del Guadiana</hi>, in Ge-Conservacion, 24, 1: 56-68. 
+                        <ref target="https://doi.org/10.37558/gec.v24i1.1205">https://doi.org/10.37558/gec.v24i1.1205</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="normaltextrun">Joseph Padfield, Kalliopi Kontiza, Antonis Bikakis,and Andreas Vlachidis. (2019): 
+                            <hi rend="italic">Semantic representation and location provenance of cultural heritage information: The National Gallery collection in London</hi>, in Heritage, 2, 1: 648-665. 
+                        </hi>
+                        <ref target="https://doi.org/10.3390/heritage2010042">https://doi.org/10.3390/heritage2010042</ref>
+                        <hi rend="normaltextrun" xml:space="preserve"> </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">Mingei project. Representation and Preservation of Heritage Crafts. Retrieved from 
+                        <ref target="https://www.mingei-project.eu/">https://www.mingei-project.eu/</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="normaltextrun">The Wordl of Art on Semanthic Web (CLAROS). </hi>Retrieved from 
+                        <ref target="https://digital.humanities.ox.ac.uk/project/world-art-semantic-web-claros">https://digital.humanities.ox.ac.uk/project/world-art-semantic-web-claros</ref>
+                        <hi rend="normaltextrun" xml:space="preserve">   </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">UNESCO. (2003): The Convention for the Safeguarding of the Intangible Cultural Heritage. 
+                        <ref target="http://www.unesco.org/culture/ich/doc/src/00009-TR-PDF.pdf">www.unesco.org/culture/ich/doc/src/00009-TR-PDF.pdf</ref>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="STEINER_Elisabeth_Early_Manila_Hokkien__digitizing_and_analy">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Early Manila Hokkien: digitizing and analyzing a 17th-century Chinese-Spanish dictionary</title>
+                <author>
+                    <persName>
+                        <surname>Scholger</surname>
+                        <forename>Martina</forename>
+                    </persName>
+                    <affiliation>University of Graz, Austria</affiliation>
+                    <email>martina.scholger@uni-graz.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Steiner</surname>
+                        <forename>Elisabeth</forename>
+                    </persName>
+                    <affiliation>University of Graz, Austria</affiliation>
+                    <email>elisabeth.steiner@uni-graz.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Strutz</surname>
+                        <forename>Sabrina</forename>
+                    </persName>
+                    <affiliation>University of Graz, Austria</affiliation>
+                    <email>sabrina.strutz@uni-graz.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Frauendorfer</surname>
+                        <forename>Melanie</forename>
+                    </persName>
+                    <affiliation>University of Graz, Austria</affiliation>
+                    <email>melanie.frauendorfer@uni-graz.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Döhla</surname>
+                        <forename>Hans-Jörg</forename>
+                    </persName>
+                    <affiliation>University of Tübingen, Germany</affiliation>
+                    <email>hans-joerg.doehla@romanistik.uni-tuebingen.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Klöter</surname>
+                        <forename>Henning</forename>
+                    </persName>
+                    <affiliation>Humboldt-Universität zu Berlin, Germany</affiliation>
+                    <email>henning.kloeter@hu-berlin.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-24T10:07:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>digital scholarly edition</term>
+                    <term>linguistic analysis</term>
+                    <term>data modelling</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data modeling</term>
+                    <term>manuscripts description</term>
+                    <term>representation</term>
+                    <term>and analysis</term>
+                    <term>scholarly editing and editions development</term>
+                    <term>analysis</term>
+                    <term>and methods</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>Asian studies</term>
+                    <term>Linguistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Starting Point</head>
+                <p style="text-align: left; ">The Early Manila Hokkien (EMHo) project focuses on digitizing and analyzing a 17th-century Chinese-Spanish dictionary, the “Bocabulario de lengua sangleya por las letraz de el A.B.C.” (henceforth 
+                    <hi rend="italic">Bocabulario</hi>, British Library Add ms. 25.317, see Figure 1). This collaborative project is funded by DFG and FWF as part of a WEAVE initiative and brings together experts from different domains to carry out multidisciplinary research on the manuscript (Döhla et al. 2022; Döhla et al. 2024). This includes 
+                    <hi rend="italic">Linguistics</hi> with respect to Romance and Chinese languages and history, missionary linguistics, language contact and migration, and 
+                    <hi rend="italic">Digital Humanities</hi> in relation to complex text annotation and digital scholarly edition (DSE).
+                </p>
+                <p style="text-align: left; ">The project entails understanding the status of Early Manila Hokkien, the linguistic methods used by missionaries, and the socio-historical context of early Chinese migration and Spanish colonialism in Manila (Klöter / Döhla 2022; Döhla 2025). The transmission history of the manuscript is not entirely clear; it is assumed that the pocket dictionary was used as a practical digest and was copied from a larger text by non-Spanish “copyists who do not seem to have grown up with the European tradition of scripturality” (Döhla 2025). The project emphasizes careful transcription and annotation, particularly of linguistic and tonal features both following and expanding the Text Encoding Initiative (TEI) standard. Related work for the application of TEI to multilingual, multiscript, and non-European language documentation includes among others Bowers (2020), Czaykowska-Higgins et al. (2014), Ngué Um (2017), and VedaWeb (2024). The establishment of various working and interest groups on multilingual issues highlights the importance of this topic (cf. 
+                    <ref target="https://dig-hum.de/ag-multilingual-dh">https://dig-hum.de/ag-multilingual-dh</ref>, 
+                    <ref target="https://adho.org/sigs/#multilingual-DH">https://adho.org/sigs/#multilingual-DH</ref>, 
+                    <ref target="https://multilingual.hypotheses.org/">https://multilingual.hypotheses.org/</ref>, 
+                    <ref target="https://tei-c.org/activities/sig/eastasian/">https://tei-c.org/activities/sig/eastasian/</ref>).
+                </p>
+                <figure>
+                    <graphic n="1001" width="16.002cm" height="2.0997333333333335cm" url="/tmp/tmp7175lnjs/Pictures/a96d2f0842898b8fd66b2e4e7d694f65.png" rend="inline"/>
+                    <head>Add ms. 25.317, fol. 125v. Facsimile reused with kind permission © British Library Board, all rights reserved.</head>
+                </figure>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Objectives and DSE</head>
+                <p style="text-align: left; ">The dictionary offers valuable insights into the Southern Min language, also known as Hokkien, as spoken by Chinese immigrants in early Manila. The primary objective is to create a DSE of this historical document on multiple levels (see Figure 2). It comprises digital facsimiles of the original folios, a diplomatic transcription, a critical edition, as well as an English translation. Additionally, the edition will include linguistic annotations, such as morpho-syntactic analysis, tone (Maddieson 2013; Yip 2002), and Chinese characters, to benefit a broader linguistic audience. The DSE will offer clear distinctions between the complex annotation levels of the manuscript and provide multiple tailor-made synoptic views of the resource. Building on the work of Bowers (2020), the project seeks to provide a recommendation to the TEI Guidelines for the annotation of tone, which would be a valuable service to the community and could help diversify the use of the guidelines.</p>
+                <figure>
+                    <graphic n="1002" width="15.991416666666666cm" height="14.532680555555556cm" url="/tmp/tmp7175lnjs/Pictures/a96d2f0842898b8fd66b2e4e7d694f65.png" rend="inline"/>
+                    <head>Multiple levels of the DSE.</head>
+                </figure>
+                <p style="text-align: left; ">The larger aim of the project is to contribute to the digital documentation and open-access publication of non-European language resources, offering fresh perspectives on Chinese-Spanish lexicography and the history of the Chinese language, with a specific focus on marginalized groups.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Preliminary Results</head>
+                <p style="text-align: left; ">The workflow of data capture from transcription to annotation is of central concern in this first project phase, which explores suitable (semi-)automatic assistance and quality control mechanisms to ensure smooth cooperation between partners with different research questions and domain backgrounds as well as physical locations. Strategies for tackling challenges like coordinating simultaneous work on different edition levels or languages and scripts of the manuscript and keeping track of versions and changes are thus needed as well. A preliminary modeling approach to one dictionary entry is discussed below (shortened and simplified).</p>
+                <figure>
+                    <graphic n="1003" width="16.002cm" height="18.86126388888889cm" url="/tmp/tmp7175lnjs/Pictures/a96d2f0842898b8fd66b2e4e7d694f65.png" rend="inline"/>
+                    <head>Diplomatic transcription, critical edition, and English translation of one dictionary entry.</head>
+                </figure>
+                <p style="text-align: left; ">The TEI XML heavily relies on the TEI Lex-0 recommendations for encoding dictionaries (Tasovac et al. 2018, TEI Consortium 2024) combined with editorial and other alterations to the text. In Code Example 1 the 
+                    <hi rend="color(000080)" style="font-family:Consolas">&lt;entryFree&gt;</hi> element preserves each dictionary entry in its original form, representing the diplomatic and critical edition. The corresponding
+                    <hi rend="color(000080)" style="font-family:Consolas" xml:space="preserve"> &lt;entry&gt;</hi> element supplements this with translations into English and modern transliteration (e.g. Tâi-lô). The constant change between languages and scripts is encoded by the 
+                    <hi rend="color(008080)" style="font-family:Consolas">@xml:lang</hi> attribute.
+                </p>
+                <p style="text-align: left; ">The implementation of the linguistic analysis level is yet to be modeled but will require structuring examples into smaller units and integrating interlinear glossing information following the Leipzig Glossing Rules (EVA MPG 2015) and the inclusion of tonal categorization, which could be encoded into feature structure elements (
+                    <hi rend="color(000080)" style="font-family:Consolas">&lt;fs&gt;</hi>) (Steiner et al. 2022).
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p style="text-align: left; ">By making a significant historical document accessible, the EMHo project contributes to linguistics and digital humanities by creating a multi-layered DSE that documents Early Manila Hokkien’s linguistic features, examines Spanish missionary approaches to Chinese language documentation and offers considerations on text encoding for representing historical and under-resources languages. </p>
+                <p style="text-align: left; ">The contribution will present preliminary results from the first project year. This includes the conceptual definition of the digital edition’s various levels as well as the corresponding approaches to text and data modeling, keeping in mind the respective target group and striving for maximum data interoperability. Both aspects are key to enabling the reuse of this unique source by different domains and scholarly communities.</p>
+                <p style="text-align: left; ">Offering sources like the 
+                    <hi rend="italic" xml:space="preserve">Bocabulario </hi>as open research data highlights that the usage of multiple languages and scripts is and was not a marginal case but rather the norm. Leveraging the potential of such sources can empower respective communities (cf. Carroll et al. 2020) and offer new perspectives on past and present language contact scenarios. 
+                </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bowers, Jack 
+                            <hi rend="normalweight">(2020):</hi>
+                            <hi rend="normalweight" xml:space="preserve"> “</hi>
+                        </hi>
+                        <hi rend="italic">Language documentation and standards in Digital Humanities: TEI and the documentation of Mixtepec-Mixtec”</hi>, in: 
+                        <hi rend="italic">Computation and Language [cs.CL]</hi>. École Pratique des Hautes Études &lt;https://tel.archives-ouvertes.fr/tel-03131936&gt; [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Carroll, S. / Garba, I. / Figueroa-Rodríguez, O. L. / Holbrook, J. / Lovett, R. / Materechera, S. / Parsons, M. / Rodriguez-Lonebear, D. / Rowe, Z. / Rainie, S. C. 
+                            <hi rend="normalweight">(2020):</hi>
+                        </hi> “The CARE Principles for Indigenous Data Governance”, in: 
+                        <hi rend="italic">Data Science Journal</hi> 19, 1 : 42, 1–12. DOI: 10.5334/dsj-2020-042 [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Czaykowska-Higgins, Ewa / Holmes, Martin D. / Kell, Sarah M. 
+                            <hi rend="normalweight">(2014):</hi>
+                        </hi> “Using TEI for an Endangered Language Lexical Resource: The Nxaʔamxcín Database-Dictionary Project”, in: 
+                        <hi rend="italic">Language Documentation &amp; Conservation</hi> 8: 1–37.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Döhla, Hans-Jörg
+                            <hi rend="normalweight" xml:space="preserve"> (2025):</hi>
+                        </hi> “The 
+                        <hi rend="italic">Bocabulario de la Lengua Sangleya por las Letras de el A.B.C.</hi> (Manila, ca. 1617): structure, contents, perspectives”, in: 
+                        <hi rend="italic">Historiographia Linguistica</hi> DOI : 10.1075/hl.00170.doh [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Döhla, Hans-Jörg / Klöter, Henning / Scholger, Martina / Steiner, Elisabeth</hi> (2022): “Annotating a historical manuscript as a linguistic resource”, in: Cummings, James (ed.): 
+                        <hi rend="italic">TEI2022 Conference Book</hi> 1.1. TEI2022 – “Text as Data”. Newcastle, UK, 2022. Zenodo: 129. DOI: 10.5281/zenodo.7120027 [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Döhla, Hans-Jörg / Klöter, Henning / Scholger, Martina</hi> (eds.) (2024): 
+                        <hi rend="italic">Early Manila Hokkien. Digital Edition of the Bocabulario de lengua sangleya</hi>. GAMS &lt;https://gams.uni-graz.at/emho&gt; [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">EVA MPG (= Max Planck Institute for Evolutionary Anthropology, Department of Linguistics)
+                            <hi rend="normalweight" xml:space="preserve"> (2015):</hi>
+                        </hi>
+                        <hi rend="italic">The Leipzig Glossing Rules: Conventions for interlinear morpheme-by-morpheme glosses</hi> &lt;https://www.eva.mpg.de/lingua/pdf/Glossing-Rules.pdf&gt; [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Klöter, Henning / Döhla, Hans-Jörg
+                            <hi rend="normalweight" xml:space="preserve"> (2022):</hi>
+                        </hi> “Early Spanish-Chinese encounters in the Philippines and the birth of Spanish-Chinese lexicography”, in: Bussotti, Michela / Lachaud, François (eds.): 
+                        <hi rend="italic">Interpreting empires, mastering languages, taming the world: Dictionaries and multilingual lexicons in East Asia</hi>. Paris: EFEO 149–173.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Maddieson, Ian
+                            <hi rend="normalweight" xml:space="preserve"> (2013):</hi>
+                        </hi> “Tone”, in: Dryer, Matthew S. / Haspelmath, Martin (eds.): 
+                        <hi rend="italic">The World Atlas of Language Structures Online</hi>. Leipzig: Max Planck Institute for Evolutionary Anthropology &lt;http://wals.info/chapter/13&gt; [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Ngué Um, Emanuel
+                            <hi rend="normalweight" xml:space="preserve"> (2017):</hi>
+                        </hi> “Issues in digital text representation, online dissemination, sharing and reuse for African tone languages”, in: 
+                        <hi rend="italic">Proceedings of the 2nd Workshop on the Use of Computational Methods in the Study of Endangered Languages</hi> 24–32 &lt;https://aclanthology.org/W17-0104.pdf&gt; [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Steiner, Elisabeth / Scholger, Martina / Döhla, Hans-Jörg / Klöter, Henning
+                            <hi rend="normalweight" xml:space="preserve"> (2022):</hi>
+                        </hi> “Annotating a historical manuscript as a linguistic resource”, in: 
+                        <hi rend="italic">TEI2022 Conference: Text as Data</hi>, Newcastle University. Zenodo. DOI: 10.5281/zenodo.7096503 [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Tasovac, Toma / Romary, Laurent / Banski, Piotr / Bowser, Jack / de Does, Jesse / Depuydt, Katrien / Erjavec, Tomaž / Geyken, Alexander / Herold, Axel / Hildenbrandt, Vera / Khemakhem, Mohamed / Lehečka, Boris / Petrović, Snežana / Salgado, Ana / Witt, Andreas
+                            <hi rend="normalweight" xml:space="preserve"> (2018):</hi>
+                        </hi>
+                        <hi rend="italic">TEI Lex-0: A baseline encoding for lexicographic data</hi>. Version 0.9.3. DARIAH Working Group on Lexical Resources &lt;https://dariah-eric.github.io/lexicalresources/pages/TEILex0/TEILex0.html&gt; [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">TEI Consortium
+                            <hi rend="normalweight" xml:space="preserve"> (eds.)</hi>
+                            <hi rend="normalweight" xml:space="preserve"> (</hi>
+                            <hi rend="normalweight">2025</hi>
+                            <hi rend="normalweight">)</hi>
+                            <hi rend="normalweight">:</hi>
+                        </hi> “10 Dictionaries”, in: 
+                        <hi rend="italic">TEI P5: Guidelines for Electronic Text Encoding and Interchange</hi> 4.8.1. TEI Consortium &lt;http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DI.html&gt; [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Thompson, Walker
+                            <hi rend="normalweight" xml:space="preserve"> (2023):</hi>
+                        </hi>
+                        <hi rend="italic">Epifanii Slavinetskii’s Greek–Slavonic–Latin Lexicon Between East and West</hi>. Ph.D. thesis, Heidelberg.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">VedaWeb
+                            <hi rend="normalweight" xml:space="preserve"> (2024):</hi>
+                        </hi>
+                        <hi rend="italic">Online Research Platform for Old Indic Texts</hi> &lt;https://vedaweb.uni-koeln.de&gt; [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Yip, Moira
+                            <hi rend="normalweight" xml:space="preserve"> (2002):</hi>
+                        </hi>
+                        <hi rend="italic" xml:space="preserve"> Tone</hi>. Cambridge: Cambridge University Press (= 
+                        <hi rend="italic">Cambridge Textbooks in Linguistics</hi>). DOI: 10.1017/CBO9781139164559 [05.12.2024].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

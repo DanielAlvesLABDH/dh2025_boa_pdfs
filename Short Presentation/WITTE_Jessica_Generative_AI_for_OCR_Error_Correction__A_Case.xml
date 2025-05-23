@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="WITTE_Jessica_Generative_AI_for_OCR_Error_Correction__A_Case">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Generative AI for OCR Error Correction: A Case Study of Historical Newspaper Archives </title>
+                <author>
+                    <persName>
+                        <surname>Witte</surname>
+                        <forename>Jessica</forename>
+                    </persName>
+                    <affiliation>University of Edinburgh, United Kingdom</affiliation>
+                    <email>jcwitte1@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-22T09:41:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>generative artificial intelligence</term>
+                    <term>OCR</term>
+                    <term>large language models</term>
+                    <term>digital archives</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>digital archiving</term>
+                    <term>optical character recognition and handwriting recognition</term>
+                    <term>text mining and analysis</term>
+                    <term>Computer science</term>
+                    <term>Humanities computing</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <hi style="font-size:11pt">The digitisation of historical texts through optical character recognition (OCR) has made archives more accessible, enabling computational analysis, improving discoverability, and supporting accessibility tools like text-to-speech software. However, OCR</hi>
+                <hi rend="normaltextrun"> technologies often embed errors in digital editions during the scanning process. These so-called OCR errors, which</hi>
+                <hi style="font-size:11pt" xml:space="preserve"> often arise from character misrecognition to missed boundaries and formatting issues, can compromise the usability and accuracy of digitised texts. These errors are especially prevalent in historical archives, where the degradation of physical texts and nuances in language can produce digital editions with many OCR errors.</hi>
+            </p>
+            <p>
+                <hi rend="normaltextrun">In some digital archives, OCR errors can affect entire archives and even present challenges for an archive’s information retrieval infrastructure. A character error rate (CER), or the percentage of characters with OCR errors in an individual text, above 10% has been shown to affect the accuracy of computational analysis (Huynh et al., 2020) while a CER of just 5% affects search results in library catalogues (de Olivera et al., 2023). In historical archives, where the age of the physical texts increases the likelihood of text degradation due to physical wear and damage, OCR errors can be particularly pervasive with a CER of 50% or above (Bazzo et al., 2020). Therefore, OCR present a major challenge for digital humanists working with digitised texts (Hu et al., 2020).</hi>
+            </p>
+            <p>
+                <hi style="font-size:11pt">While existing method for correcting OCR errors, such as lexicon-based corrections and machine learning models, attempt to address these errors, they often fall short in correcting non-patterned errors arising from misaligned columns or formatting errors</hi>
+                <hi rend="normaltextrun"> (Khan et al., 2024). </hi>
+                <hi style="font-size:11pt" xml:space="preserve"> Additionally, computational methods require significant technical expertise, presenting a practical skills barrier for researchers from non-technical backgrounds.</hi>
+                <hi rend="normaltextrun">Another method for post-OCR error correction involves using regular expressions to create code-based ‘patches’ that correct patterned inconsistencies, such as modernising the ‘long S’ in eighteenth-century English. Although patch-based methods are effective for character misrecognition and can improve an archive’s CER, they fall short in addressing non-patterned or formatting errors. </hi>
+            </p>
+            <p>
+                <hi style="font-size:11pt" xml:space="preserve">This paper presents a novel approach to post-OCR error correction that uses fine-tuned open access large language models (LLMs). The case study focuses on a corpus of nineteenth-century editions of </hi>
+                <hi rend="italic">The Scotsman</hi>
+                <hi style="font-size:11pt" xml:space="preserve"> newspaper, which was scanned using OCR but contains numerous errors due to low-resolution digitisation and the age and condition of the physical texts. Although this initial exploration focuses on correcting non-patterned OCR errors in a specific archive, the results point to the potential for LLMs for these purposes in other digitised collections. </hi>
+            </p>
+            <p>
+                <hi style="font-size:11pt" xml:space="preserve">I first extracted OCR texts from XML files holding metadata on the </hi>
+                <hi rend="italic">Scotsman</hi>
+                <hi style="font-size:11pt" xml:space="preserve"> archive and converted the data into a .csv file for processing. A subset of this messy text – including errors resulting from formatting inconsistencies, misrecognised characters, and missing column boundaries –was then manually corrected and used as training data. After fine-tuning the model to recognise and correct these OCR errors, I applied the trained model to the full </hi>
+                <hi rend="italic" style="font-size:11pt" xml:space="preserve">Scotsman </hi>
+                <hi style="font-size:11pt">dataset, generating cleaned versions of the texts. The model not only corrected common OCR errors, but was also able to improve the alignment of text, headers, and footnotes. A marked reduction in the character error rate (CER) was achieved, demonstrating LLM’s potential for improving OCR quality in historical archives. To make this method accessible to a broader audience—particularly to scholars who do not have extensive programming experience—I developed a straightforward processing pipeline that automates the OCR correction workflow. This pipeline allows researchers to input raw OCR text and receive cleaned outputs with minimal setup, lowering the technical barrier to entry for post-OCR error correction.</hi>
+            </p>
+            <p>
+                <hi style="font-size:11pt">The pilot study demonstrates not only the viability of this approach for a single corpus, but also the implications for other archives and libraries are equally significant. For instance, this OCR corrective method could be scaled and adapted for use with other historical collections. As more historical archives undergo digitisation, the need for effective and accessible OCR error correction will only grow. This pipeline can therefore play a critical role in preserving and enhancing the value of digitised collections, ensuring their continued usefulness for research and discovery.</hi>
+            </p>
+        </body>
+    </text>
+</TEI>

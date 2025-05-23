@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="OIVA_Mila_Audiovisual_Hack_a_thon__Exploring_Methods_and_Dat">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Audiovisual Hack-a-thon: Exploring Methods and Data through Inclusive Collaboration</title>
+                <author>
+                    <persName>
+                        <surname>Oiva</surname>
+                        <forename>Mila</forename>
+                    </persName>
+                    <affiliation>University of Turku, Finland</affiliation>
+                    <email>milaoiv@utu.fi</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>van Noord</surname>
+                        <forename>Nanne</forename>
+                    </persName>
+                    <affiliation>University of Amsterdam, Netherlands</affiliation>
+                    <email>n.j.e.vannoord@uva.nl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Chávez Heras</surname>
+                        <forename>Daniel</forename>
+                    </persName>
+                    <affiliation>King's College London, UK</affiliation>
+                    <email>daniel.chavez@kcl.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Broadwell</surname>
+                        <forename>Peter</forename>
+                    </persName>
+                    <affiliation>Stanford University, USA</affiliation>
+                    <email>broadwell@stanford.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Olesen</surname>
+                        <forename>Christian</forename>
+                    </persName>
+                    <affiliation>University of Amsterdam, Netherlands</affiliation>
+                    <email>C.G.Olesen@uva.nl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Malmstedt</surname>
+                        <forename>Johan</forename>
+                    </persName>
+                    <affiliation>Umeå University, Sweden</affiliation>
+                    <email>johan.malmstedt@umu.se</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-15T16:07:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Mini-conference</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>cultural analytics</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>image processing and analysis</term>
+                    <term>Computer science</term>
+                    <term>Cultural studies</term>
+                    <term>Film and cinema arts studies</term>
+                    <term>Performance Studies: Dance</term>
+                    <term>Theatre</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Audiovisual media plays a central role in shaping social and cultural perceptions, attitudes, and behaviors. The sheer volume of audiovisual materials produced globally every second is staggering, and the number of digitized heritage materials is also rapidly increasing. Several initiatives to study moving images computationally have emerged in recent years (Chávez Heras et al. 2023; Arnold &amp; Tilton 2023; Chávez Heras 2024; Oiva et al. 2024; Carrive et al. 2021; Masson et al. 2020). Despite these developments, deeper integration of knowledge across disciplines, methods, tools, and infrastructures remains a significant challenge. Computational research on audiovisual materials is largely scattered across different institutions and scholars working on different corners of the disciplinary continuum. In comparison to DH research in textual materials, research on audiovisual data lags behind due to the challenges of developing and learning computational methods for analyzing multiple non-linguistic modalities, as well as difficulties accessing data sources, managing file formats and sizes, and navigating copyright restrictions. Due to these problems, starting computational research of audiovisual data is perhaps more difficult than with other types of materials.</p>
+            <p>To support a deeper integration and promote the development of computational research of audiovisual materials, we propose to organize a ‘humanities hack-a-thon’ format mini-conference at the DH2025 conference. The main idea of the 
+                <hi rend="italic">Audiovisual Hack-a-thon: Exploring Methods and Data through Inclusive Collaboration</hi> is to bring together scholars working with audiovisual materials in different disciplinary domains to share their knowledge and to learn from each other. We aim to unite researchers who possess data, have method expertise, and those new to the field. This composition allows the workshop to bring together scholars who have data but less experience with the latest computational methods and experts developing methods who want to test their cutting-edge techniques. Including in the group people interested in working with audiovisual data, but who do not yet have data or methods, opens the door for beginners to get more hands-on experience. Working together is also a good way for networking among people interested in audiovisual materials and fostering further collaborations.
+            </p>
+            <p>Participants can either bring data and research questions or come with a method they would like to apply. We also invite participants who do not have data or a specific method in mind, but who want to gain hands-on experience to appreciate what computational analysis of audiovisual materials could be. We will, for example, apply the BVQA (Batch Visual Question Answering) tool developed at the King’s College DH lab to a collection of Soviet era newsreel data (1944-1992). Another candidate activity is to provide interested participants with a corpus of metadata and pose estimation, 3D location and action recognition data derived from more than 50 full-length recordings of theatrical performances from Stanford University’s MIME (Machine Intelligence for Motion Exegesis) project, data which has fewer copyright encumbrances than the source recordings. Providing some packaged software tools and data corpora enables participants who wish to do so to move past many of the time-consuming and technically arduous steps of configuring software, wrangingling corpora and extracting data, ensuring that groups can start working on research questions quickly. To this end, participants bringing their own data will be encouraged to supply data that does not require cleaning during the workshop, and the organizers will create in advance Jupyter notebooks that include the data that we propose to work on.</p>
+            <p>
+                <hi rend="bold">Objectives and Goals</hi>
+            </p>
+            <p>The primary objective of this hack-a-thon is to foster interdisciplinary collaboration and innovation in the computational analysis of audiovisual materials. By bringing together a diverse group of participants, we aim to:</p>
+            <p>1. Facilitate Knowledge Exchange: Enable participants to share their expertise and learn from each other, bridging gaps between different disciplinary approaches.</p>
+            <p>2. Promote Methodological Innovation: Encourage the development and application of new computational methods tailored to audiovisual data.</p>
+            <p>3. Enhance Accessibility: Provide opportunities for beginners to gain hands-on experience and for experts to test and refine their methods.</p>
+            <p>4. Foster Networking and Collaboration: Create a platform for participants to form new professional connections and explore potential collaborative projects.</p>
+            <p>
+                <hi rend="bold">Structure and Format</hi>
+            </p>
+            <p>The hack-a-thon will be structured to maximize collaborative learning and productivity. The event will be divided into several key phases:</p>
+            <p>1. Introduction and Orientation: A brief session to introduce participants, outline the goals of the hack-a-thon, and provide an overview of the available data and tools.</p>
+            <p>2. Group Formation: Participants will be divided into groups based on their interests and expertise. Each group will include a mix of experienced researchers, method developers, and beginners.</p>
+            <p>3. Hands-on Sessions: Groups will work on their chosen projects, with access to pre-prepared Jupyter notebooks and datasets. Facilitators will be available to provide guidance and support.</p>
+            <p>4. Progress Check-ins: Regular check-ins will be scheduled to allow groups to share their progress, discuss challenges, and receive feedback from peers and facilitators.</p>
+            <p>5. Final Presentations: Each group will present their findings and insights, highlighting the methods used, challenges encountered, and potential future directions.</p>
+            <p>Schedule</p>
+            <p>13:30-13:40 Welcoming words</p>
+            <p>13:40-13:50 Presenting data &amp; research questions</p>
+            <p>13:50-14:00 Division into working groups</p>
+            <p>14:00-15:30 Work in groups</p>
+            <p>15:30-16:00 Coffee Break</p>
+            <p>16:00-16:30 Work in groups</p>
+            <p>16:30-17:30 Group presentations</p>
+            <p>[20:30-24:00 Super hardcore extended session (optional but great) - venue TBD]</p>
+            <p>
+                <hi rend="bold">Expected Outcomes</hi>
+            </p>
+            <p>By the end of the hack-a-thon, we expect participants to have:</p>
+            <p>1. Developed new skills and knowledge in computational analysis of audiovisual materials.</p>
+            <p>2. Established new professional connections and potential collaborative partnerships.</p>
+            <p>3. Produced preliminary results or prototypes that can be further developed and refined.</p>
+            <p>4. Contributed to the broader DH community by sharing their experiences and insights.</p>
+            <p>5. We expect that as a long-term outcome of the event, new professional connections will feed into more sustained research and teaching collaboration. The organizers of the mini-conference are in the process of establishing a network of computational analysis of audiovisual materials (ARCAM-net), and this event feeds into this goal. The participants of the mini-conference are invited to join the network to jointly organize next events and brainstorm ways of broader knowledge dissemination.</p>
+            <p>Call for Participation</p>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <hi rend="normalweight" style="font-size:11pt">We will publish a call for participants in March 2025, inviting scholars from various disciplines to join the hack-a-thon. We strive to ensure the diversity of participants by sending the call to a variety of different lists, and by targeted invitation of scholars of different backgrounds and skills. Applicants will be asked to indicate whether they wish to bring data and research questions, test specific methods, or offer general assistance. We will select participants based on their expertise, interests, and potential to contribute to the collaborative goals of the event. The expected number of participants is 20, with 3-4 groups. The maximum number of participants is 50, with 4-6 groups. If the demand exceeds the limit of 50 participants, we will try to adjust the schedule and expand the pool of organizers so that the demand could be met.</hi>
+                </head>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Arnold, Taylor, and Lauren Tilton</hi> (2023): Distant Viewing: Computational Exploration of Digital Images. The MIT Press. https://doi.org/10.7551/mitpress/14046.001.0001.
+                </p>
+                <p>
+                    <hi rend="bold">Carrive, Jean, Abdelkrim Beloued, Pascale Goetschel, Serge Heiden, Antoine Laurent, Pasquale Lisena, Franck Mazuet, et al.</hi> (2021): ”Transdisciplinary Analysis of a Corpus of French Newsreels: The ANTRACT Project”. Digital Humanities Quarterly 15, no 1. 
+                    <ref target="http://digitalhumanities.org/dhq/vol/15/1/000523/000523.html">
+                        <hi rend="underline color(1155CC)">http://digitalhumanities.org/dhq/vol/15/1/000523/000523.html</hi>
+                    </ref>. 
+                </p>
+                <p>
+                    <hi rend="bold">Chávez Heras, Daniel</hi> (2024): Cinema and Machine Vision: Artificial Intelligence, Aesthetics and Spectatorship. Edinburgh University Press.
+                </p>
+                <p>
+                    <hi rend="bold">Chávez Heras, Daniel, Nanne Van Noord, Mila Oiva, Carlo Bretti, Isadora Campregher Paiva, Ksenia Mukhina, and Tillmann Ohm</hi> (2023): ”Between history and poetics: Identifying temporal dynamics in large audiovisual collections”. Cultural Data Analytics Conference 2023, Tallinn.
+                </p>
+                <p>
+                    <hi rend="bold">Masson, Eef, Christian Gosvig Olesen, Nanne van Noord, and Giovanna Fossati</hi> (2020): ”Exploring Digitised Moving Image Collections: The SEMIA Project, Visual Analysis and the Turn to Abstraction”. Digital Humanities Quarterly 014, no 4 (December 20).
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Oiva, Mila, Ksenia Mukhina, Vejune Zemaityte, Andres Karjus, Mikhail Tamm, Tillmann Ohm, Mark Mets, et al.</hi> (2024): ”A Framework for the Analysis of Historical Newsreels”. Humanities and Social Sciences Communications 11, no 1 (April 25): 1–15. 
+                    <ref target="https://doi.org/10.1057/s41599-024-02886-w">
+                        <hi rend="underline color(1155CC)">https://doi.org/10.1057/s41599-024-02886-w</hi>
+                    </ref>.
+                </p>
+            </div>
+        </body>
+    </text>
+</TEI>

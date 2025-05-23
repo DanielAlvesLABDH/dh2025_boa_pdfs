@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="HART_Jacob_A_Decade_of_IIIF__Advancing_Open_Science_and_Acce">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">A Decade of IIIF: Advancing Open Science and Accessibility through Interoperable Digital Heritage</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Bardiot</surname>
+                        <forename>Clarisse</forename>
+                    </persName>
+                    <affiliation>Université Rennes 2</affiliation>
+                    <email>clarisse.bardiot@univ-rennes2.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Hart</surname>
+                        <forename>Jacob</forename>
+                    </persName>
+                    <affiliation>Université Rennes 2</affiliation>
+                    <email>jacob.hart@univ-rennes2.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Kalfatovic</surname>
+                        <forename>Martin</forename>
+                    </persName>
+                    <affiliation>International Image Interoperability Framework Consortium</affiliation>
+                    <email>Martin.Kalfatovic@iiif.io</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Robineau</surname>
+                        <forename>Régis</forename>
+                    </persName>
+                    <affiliation>ÉquipEx Biblissima+, Campus Condorcet</affiliation>
+                    <email>regis.robineau@biblissima-condorcet.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Faure</surname>
+                        <forename>Margaux</forename>
+                    </persName>
+                    <affiliation>Institut national d’histoire de l’art (INHA)</affiliation>
+                    <email>margaux.faure@inha.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Hueber</surname>
+                        <forename>Juliette</forename>
+                    </persName>
+                    <affiliation>Laboratoire InVisu (CNRS-INHA)</affiliation>
+                    <email>juliette.hueber@inha.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Stutzmann</surname>
+                        <forename>Dominique</forename>
+                    </persName>
+                    <affiliation>CNRS (Institut de Recherche et d’Histoire des Textes), Humboldt-Universität zu Berlin</affiliation>
+                    <email>dominique.stutzmann@irht.cnrs.fr</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-05T11:35:19.483147192</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Panel</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>linked open data</term>
+                    <term>annotation</term>
+                    <term>metadata</term>
+                    <term>iiif</term>
+                    <term>workflows</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>digital access</term>
+                    <term>privacy</term>
+                    <term>and ethics analysis</term>
+                    <term>meta-criticism (reflections on digital humanities and humanities computing)</term>
+                    <term>open access methods</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <hi rend="color(#000000)">Over the past decade, the International Image Interoperability Framework</hi>
+                <hi rend="color(#000000)"> </hi>
+                <hi rend="color(#000000)">(IIIF)</hi>
+                <hi rend="color(#000000)"> (</hi>
+                <anchor xml:id="id_docs-internal-guid-fb798639-7fff-0da4-f554-dff7967d72b8"/>
+                <ptr target="https://iiif.io/"/>
+                <hi rend="color(#000000)">)</hi>
+                <hi rend="color(#000000)"> has implanted itself as a global standard for the management, sharing, and analysis of digital cultural heritage. Supported by an extensive consortium of libraries, galleries, archives, museums and universities, as well as a dynamic community of developers and researchers, IIIF provides a robust technical framework aligned with open science and FAIR principles. Through its modular, open-source APIs</hi>
+                <hi rend="color(#000000)"> </hi>
+                <hi rend="color(#000000)">(</hi>
+                <anchor xml:id="id_docs-internal-guid-f014cb40-7fff-a862-77c5-e7c5cb555aa5"/>
+                <ptr target="https://iiif.io/api/"/>
+                <hi rend="color(#000000)">) </hi>
+                <hi rend="color(#000000)">and viewers </hi>
+                <hi rend="color(#000000)">(</hi>
+                <anchor xml:id="id_docs-internal-guid-7edff695-7fff-56de-45a2-8b0757084401"/>
+                <ptr target="https://iiif.io/get-started/iiif-viewers/"/>
+                <hi rend="color(#000000)">)</hi>
+                <hi rend="color(#000000)">, IIIF facilitates seamless interoperability across institutions, transforming workflows for the management of digitized and born-digital heritage. Now, over a decade since its conception, it is essential to evaluate its current implementations, particularly in Digital Humanities research.</hi>
+            </p>
+            <p>
+                <hi rend="color(#000000)">Designed from inception as a tool for interoperability, and in response to the silos created during early digitization initiatives, IIIF is a pivotal tool for advancing open science and accessibility. Over its history, IIIF has been used in numerous research projects to provide the technical infrastructure for crowdsourcing initiatives </hi>
+                <hi rend="color(#000000)">(</hi>
+                <anchor xml:id="id_docs-internal-guid-af60bb95-7fff-a055-ef4e-540a76c18681"/>
+                <hi rend="color(#000000)">For example: </hi>
+                <ptr target="https://digirati.com/research-and-crowdsourcing/the-national-library-of-wales/"/>
+                <hi rend="color(#000000)">)</hi>
+                <hi rend="color(#000000)">, open and protected cultural preservation </hi>
+                <hi rend="color(#000000)">(</hi>
+                <anchor xml:id="id_docs-internal-guid-b80c309d-7fff-130c-f00b-cab1cc78b4b1"/>
+                <hi rend="color(#000000)">See: </hi>
+                <ptr target="https://projet.biblissima.fr/"/>
+                <hi rend="color(#000000)">)</hi>
+                <hi rend="color(#000000)">, and to support citizen science projects </hi>
+                <hi rend="color(#000000)">(</hi>
+                <anchor xml:id="id_docs-internal-guid-5b135d89-7fff-7f40-2ac1-9bcf6e394835"/>
+                <hi rend="color(#000000)">See: </hi>
+                <ptr target="https://data.snf.ch/grants/grant/193788"/>
+                <hi rend="color(#000000)">)</hi>
+                <hi rend="color(#000000)">. Subdivided into a series of different interest groups, the IIIF community strives to develop the standard in a number of different domains which cut across FAIR principles and methods employed in the digital humanities: the expression and communication of metadata and ontologies; multilingual and multimodal content and annotations; sustainability through its lightweight, referential technical implementation; interoperability and symbiosis with other commonly used frameworks like the W3C Annotation data model </hi>
+                <hi rend="color(#000000)">(</hi>
+                <anchor xml:id="id_docs-internal-guid-0b6a4376-7fff-4034-c452-72226a83077f"/>
+                <ptr target="https://www.w3.org/TR/annotation-model/"/>
+                <hi rend="color(#000000)">)</hi>
+                <hi rend="color(#000000)"> </hi>
+                <hi rend="color(#000000)">and Linked Open data. Today, IIIF serves as the backbone of a complete digital humanities </hi>
+                <hi rend="color(#000000)">research process, from access to digital documents, to manual and computational processing and annotation, to publication, to pedagogy.</hi>
+            </p>
+            <p>This panel gathers a diverse group of IIIF contributors and DH practitioners to critically examine the framework's role in contemporary scholarship. It begins by exploring the community-driven nature of IIIF and the development cycles of its evolving APIs. Discussions will focus on how IIIF enables interoperability, enhances accessibility, and integrates with FAIR principles in diverse research contexts. After presenting a state-of-the-art overview of IIIF in DH – traditionally focused on image manipulation – the discussion will move to recent technical advancements that broaden its capabilities. These developments position IIIF as a multimodal standard, supporting a variety of digital objects such as maps, audiovisual media, and 3D models. Practical examples will showcase how these innovations can be applied in research. Finally, the panel addresses strategies for integrating IIIF into workflows, overcoming technical and conceptual barriers, and leveraging the tools available within the DH ecosystem.</p>
+            <div type="div1" rend="DH-Heading1">
+                <head>Technology, Community, and Consortium: The International Image Interoperability Framework (IIIF) - Martin R. Kalfatovic, International Image Interoperability Framework Consortium (USA)</head>
+                <p>
+                    <hi rend="color(#000000)">This presentation will examine the formation of the International Image Interoperability Framework Consortium </hi>
+                    <hi rend="color(#000000)">(</hi>
+                    <anchor xml:id="id_docs-internal-guid-7756941f-7fff-ddbe-5a92-f10070cdedfd"/>
+                    <ptr target="https://iiif.io/community/consortium/"/>
+                    <hi rend="color(#000000)">)</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">(IIIF-C) in 2015 to support the development and implementation of the standards (the Image API </hi>
+                    <hi rend="color(#000000)">(</hi>
+                    <anchor xml:id="id_docs-internal-guid-4bf2deac-7fff-fc4e-b8a6-c1f20d7cb4fd"/>
+                    <ptr target="https://iiif.io/api/image/3.0/"/>
+                    <hi rend="color(#000000)">)</hi>
+                    <hi rend="color(#000000)">, proposed in 2011 and published as Version 1.0 </hi>
+                    <hi rend="color(#000000)">(</hi>
+                    <anchor xml:id="id_docs-internal-guid-8ab2ef92-7fff-340d-eeae-4224618813b2"/>
+                    <ptr target="https://iiif.io/api/image/1.1/"/>
+                    <hi rend="color(#000000)">)</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">in 2012) that comprise the International Image Operability Framework (IIIF).</hi>
+                    <hi rend="color(#000000)"> The session will look forward to new developments in both the IIIF-C community and the IIIF standards themselves. The tenth anniversary of the IIIF-C in 2025 will see the organization grow to 70+ partners from the 11 that gathered at the Bodleian Library (Oxford University). Moving forward, the IIIF-C will build on the recently developed strategic framework to support the development, adoption, and implementation of the IIIF APIs to increasingly support a range of digital objects (images, audio/visual, 3D) and services around those objects. As the IIIF-C looks beyond 2025, new models of collaboration to strengthen the global IIIF community will be developed.</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Disseminating and implementing IIIF over the long term: the case of Biblissima - Régis Robineau, ÉquipEx Biblissima+, Campus Condorcet (France)</head>
+                <p>
+                    <hi rend="color(#000000)">This presentation will focus on the overall situation of IIIF in France, and more specifically on its uses for medieval studies through the example of Biblissima </hi>
+                    <hi rend="color(#000000)">(</hi>
+                    <anchor xml:id="id_docs-internal-guid-419eb7b1-7fff-7e77-81ad-6a9bf0d0ed80"/>
+                    <ptr target="https://portail.biblissima.fr/"/>
+                    <hi rend="color(#000000)">)</hi>
+                    <hi rend="color(#000000)">, </hi>
+                    <hi rend="color(#000000)">an </hi>
+                    <hi rend="color(#000000)">“</hi>
+                    <hi rend="color(#000000)italic">Observatory of Written Cultures, from Clay to Print”</hi>
+                    <hi rend="color(#000000)">, based in Paris.</hi>
+                    <hi rend="color(#000000)"> This large-scale national project is indeed at the forefront of the promotion and dissemination of IIIF standards in France since its inception in 2012. In this talk, we shall outline Biblissima's achievements and initiatives on that front through training or consulting activities among French research teams and cultural heritage institutions (especially libraries and archives). In addition, IIIF standards play a central role in its digital data infrastructure and are one of the cornerstones of its interoperability. Thus, we shall describe how IIIF APIs are currently being used and implemented in the context of Biblissima as a whole and how they meet the needs of historians of texts.</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>IIIF and scholarly publications in visual studies : the PerVisum Project - Margaux Faure, Institut national d’histoire de l’art (INHA, France) and Juliette Hueber, Laboratoire InVisu (CNRS-INHA, France)</head>
+                <p>Images in scholarly publications have not fully benefited from the evolution of the Web, particularly advancements enabled by IIIF standards. Their role remains predominantly rooted in an approach similar to that of print. What could an article look like, leveraging the opportunities offered by these technologies? Could these technologies ensure that images are no longer merely accessories, but instead contribute fully to the scholarly discourse, incorporating functionalities such as annotation, in-depth exploration of images, and persistent links to sources?</p>
+                <p>Although IIIF is a useful technology, its potential remains largely underutilized, particularly for disseminating research findings. If we limit ourselves to simply providing access to images, we miss the opportunity for true integration into the research workflow. This is why we launched the PerVisum project (
+                    <anchor xml:id="id_docs-internal-guid-fbf01c29-7fff-297b-ffa0-f0563a65b125"/>
+                    <ptr target="https://invisu.cnrs.fr/project/pervisum-iiif-pour-ledition-scientifique-multisupport/"/>
+                    <hi rend="color(#000000)">)</hi>, to explore how IIIF can be used at the heart of scholars' writing and publishing processes.
+                </p>
+                <p>The PerVisum project explores editorial formats that place images at the center of scientific demonstration by leveraging IIIF's capabilities. Our team is part of an institution that, as a data producer, has been working for several years to strengthen its infrastructure to disseminate visual content using IIIF. The goal of this next phase is to propose a new editorial solution that is tailored to French academic publishing workflows, but also reusable by all actors in scholarly publishing. In this presentation, we will share the project's ongoing results, demonstrate the tool, and discuss the possibilities generated by integrating IIIF in common usage.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>IIIF and Multimodal Digital Heritage - Jacob Hart, Université Rennes 2 (France) and Clarisse Bardiot, Université Rennes 2 (France)</head>
+                <p>
+                    <hi rend="color(#000000)">If historically text and image have been the primary sources for work in the digital humanities, recent research has looked to expand analysis corpora to other digital artifacts and formats, such as audio, video, and 3D objects. This comes at a time where the technologies that researchers have at their disposal can now allow for the application of computational methods on audiovisual corpora at scale, and in the wake of a </hi>
+                    <hi rend="color(#000000)italic">multimodal turn</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">as demonstrated by (Smits and Wevers, 2023). </hi>
+                    <hi rend="color(#000000)">Since 2020, the third version of IIIF’s Presentation API </hi>
+                    <hi rend="color(#000000)">(</hi>
+                    <anchor xml:id="id_docs-internal-guid-bb70a4cb-7fff-8908-262f-0631606c414d"/>
+                    <ptr target="https://iiif.io/api/presentation/3.0/"/>
+                    <hi rend="color(#000000)">)</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">has extended the standard to allow for the inclusion of audiovisual media, and work is currently underway for the inclusion of 3D objects.</hi>
+                </p>
+                <p>
+                    <hi rend="color(#000000)">In this presentation, we shall examine the ways in which IIIF has been used to support multimodal research in the digital humanities. </hi>
+                    <hi rend="color(#000000)">After presenting a number of research projects from the DH community and actors from the IIIF A/V Community Group that rely on IIIF to examine audiovisual and multimodal corpora; we shall then take a closer look at our tool Arvest </hi>
+                    <hi rend="color(#000000)">(</hi>
+                    <anchor xml:id="id_docs-internal-guid-e429646e-7fff-c647-0932-dda2ff37c7c8"/>
+                    <ptr target="https://www.arvest.app/en"/>
+                    <hi rend="color(#000000)">)</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">that, built entirely around IIIF, is specifically designed to offer a workspace for multimodal research.</hi>
+                    <hi rend="color(#000000)"> We shall discuss how a multimodal, IIIF-driven environment can offer new avenues for research that allow for fluid shifts between close and distant viewing perspectives, that can support complex machine learning-driven methods without losing touch with the source, and which can allow for development of true multimodal research where digital traces of any format can coexist with a same conceptual space.</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>IIIF APIs for image processing based humanities - Dominique Stutzmann, CNRS (Institut de Recherche et d’Histoire des Textes), Humboldt-Universität zu Berlin (Germany)</head>
+                <p>This contribution examines the use of IIIF-compliant resources in computer vision and image analysis projects for the production of historical knowledge, highlighting the challenges posed by the division of responsibilities between cultural heritage institutions (responsible for providing permanent and long-term access to resources), researchers and computer science experts (focused on analysis). Notable challenges include protocol transitions (e.g., from IIIF v2 to v3), errors or deletions in manifests, unsupported image resolutions, and URL changes for images. Additionally, variability in implementation practices, often undocumented, leads to inconsistent experiences across resources. A key vulnerability inherent in an open structure for the unrestricted reuse of content is the limited capacity of cultural institutions to effectively communicate updates or issues to users, despite IIIF’s Change Discovery specification (
+                    <anchor xml:id="id_docs-internal-guid-b1336fd0-7fff-0fa4-c799-1f7a4d5fa532"/>
+                    <ptr target="https://iiif.io/api/discovery/0.3/"/>
+                    <hi rend="color(#1155cc)underline">)</hi>. 
+                </p>
+                <p>Some of the issues stem from the direct use of the image resource (material file) by computer vision researchers instead of the full canvas-based model. The paper also addresses difficulties in ensuring stable, long-term access to annotation servers and creating reproducible outputs. One solution has been to document resources instead of these institutions and publish the resulting metadata. Occasionally, for training datasets, it becomes necessary to republish images to ensure reproducibility or enable comparison. Beyond this, and looking to the future, the input images are not preserved, only the output data is documented and preserved: despite the risks, we still consider that it is not the responsibility of research institutions to take charge of long term preservation of images and hope to encourage the implementation of best practices by avoiding reduplications.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <anchor xml:id="id_docs-internal-guid-9644a87a-7fff-b9a7-e861-8259b0b88a21"/>
+                        <hi rend="bold">Albritton, Benjamin L</hi>. (2024): “Thoughts on a Decade of Fragments, Reconstructions, and IIIF”, in: 
+                        <hi rend="italic">Digital Philology: A Journal of Medieval Cultures </hi>13 (1): 69–86.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Astell, Róisín</hi> (2021): “Biblissima (Review)”, in: 
+                        <hi rend="italic">Digital Philology: A Journal of Medieval Cultures </hi>10 (2): 331–34.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Auer, Sören / Bryl, Volha / Tramp, Sebastian</hi> (2014): 
+                        <hi rend="italic">Linked Open Data - Creating Knowledge Out of Interlinked Data: Results of the LOD2 Project</hi>. Springer.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Bardiot, Clarisse</hi> (2021): 
+                        <hi rend="italic">Performing Arts and Digital Humanities: From Traces to Data</hi>. London: Wiley / ISTE.
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Bardiot, Clarisse / Hart, Jacob / Rouquet, David</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2024</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “In Search of an Interpretative Environment for Digital Traces: The Building of Arvest”, </hi>
+                        <hi rend="color(#000000)">in:</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)italic">Journal of Digital History </hi>
+                        <hi rend="color(#000000)">(3).</hi>
+                        <ref target="https://journalofdigitalhistory.org/en/article/8X2RX68Qavxr">
+                            <hi rend="color(#1155cc)underline"> </hi>
+                            <hi rend="color(#1155cc)underline">https://journalofdigitalhistory.org/en/article/8X2RX68Qavxr</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Christlein, Vincent / Nicolaou, Anguelos / Seuret, Mathias / Stutzmann, Dominique / Maier, Andreas</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2019</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “ICDAR 2019 Competition on Image Retrieval for Historical Handwritten Documents”, </hi>
+                        <hi rend="color(#000000)">in: </hi>
+                        <hi rend="color(#000000)italic">2019 International Conference on Document Analysis and Recognition (ICDAR)</hi>
+                        <hi rend="color(#000000)">, 1505–9.</hi>
+                        <ref target="https://doi.org/10.1109/ICDAR.2019.00242">
+                            <hi rend="color(#1155cc)underline"> </hi>
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.1109/ICDAR.2019.00242</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Padfield, Joe / Bolland, Charlotte / Fitzgerald, Neil / McLaughlin, Anne / Robson, Glen / Terras, Melissa</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2022</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)italic">Practical Applications of IIIF as a Building Block Towards a Digital National Collection</hi>
+                        <hi rend="color(#000000)">. </hi>
+                        <ref target="https://doi.org/10.5281/zenodo.6884884">
+                            <hi rend="color(#1155cc)underline"> </hi>
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.5281/zenodo.6884884</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Raemy, Julien Antoine</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2024</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)italic">Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability</hi>
+                        <hi rend="color(#000000)">. Doctoral dissertation, </hi>
+                        <hi rend="color(#000000)">University of Basel. </hi>
+                        <ptr target="https://edoc.unibas.ch/entities/publication/26381d2a-a9aa-4816-a92b-c9e12c117022"/>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Robson, Glen</hi> (2016): “Implementing the International Image Interoperability Framework at the National Library of Wales”, in: 
+                        <hi rend="italic">Journal of Digital Media Management </hi>4 (4): 353–59.
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Sanderson, Robert / Ciccarese, Paolo / Sompel, Herbert Van de</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2013</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “Designing the W3C Open Annotation Data Model”, </hi>
+                        <hi rend="color(#000000)">i</hi>
+                        <hi rend="color(#000000)">n: </hi>
+                        <hi rend="color(#000000)italic">Proceedings of the 5th Annual ACM Web Science Conference</hi>
+                        <hi rend="color(#000000)">, 366–75. WebSci ’13. New York, NY, USA: Association for Computing Machinery.</hi>
+                        <ref target="https://doi.org/10.1145/2464464.2464474">
+                            <hi rend="color(#1155cc)underline"> </hi>
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.1145/2464464.2464474</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Smits, Thomas / Wevers, Melvin</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2023</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “A Multimodal Turn in Digital Humanities. Using Contrastive Machine Learning Models to Explore, Enrich, and Analyze Digital Visual Historical Collections”, </hi>
+                        <hi rend="color(#000000)">in:</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)italic">Digital Scholarship in the Humanities</hi>
+                        <hi rend="color(#000000)"> 38:1267–80.</hi>
+                        <ref target="https://doi.org/10.1093/llc/fqad008">
+                            <hi rend="color(#1155cc)underline"> </hi>
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.1093/llc/fqad008</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Snydman, Stuart / Sanderson, Robert / Cramer, Tom</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2015</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “The International Image Interoperability Framework (IIIF): A Community &amp; Technology Approach for Web-Based Images”, </hi>
+                        <hi rend="color(#000000)">in:</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)italic">Archiving Conference </hi>
+                        <hi rend="color(#000000)">12:16–21. </hi>
+                        <ptr target="https://doi.org/10.2352/issn.2168-3204.2015.12.1.art00005"/>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Stutzmann, Dominique</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2016</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “Clustering of Medieval Scripts through Computer Image Analysis: Towards an Evaluation Protocol”, </hi>
+                        <hi rend="color(#000000)">in:</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)italic">Digital Medievalist </hi>
+                        <hi rend="color(#000000)">10 (0).</hi>
+                        <ref target="https://doi.org/10.16995/dm.61">
+                            <hi rend="color(#1155cc)underline"> </hi>
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.16995/dm.61</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

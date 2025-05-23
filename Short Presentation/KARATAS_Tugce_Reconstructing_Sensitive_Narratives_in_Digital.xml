@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KARATAS_Tugce_Reconstructing_Sensitive_Narratives_in_Digital">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Reconstructing Sensitive Narratives in Digital History: Wikibase as a Tool for Enhancing Accessibility and Fostering Citizen Participation</title>
+                <author>
+                    <persName>
+                        <surname>Karatas</surname>
+                        <forename>Tugce</forename>
+                    </persName>
+                    <affiliation>University of Luxembourg</affiliation>
+                    <email>tugce.karatas@uni.lu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ahouari</surname>
+                        <forename>Ismail</forename>
+                    </persName>
+                    <affiliation>University of Milano- BICOCCA</affiliation>
+                    <email>ismail.ahouari@ext.uni.lu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Guido</surname>
+                        <forename>Daniele</forename>
+                    </persName>
+                    <affiliation>University of Luxembourg</affiliation>
+                    <email>daniele.guido@uni.lu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Buccalon</surname>
+                        <forename>Bruno</forename>
+                    </persName>
+                    <affiliation>Getty Research Institute</affiliation>
+                    <email>bruno.buccalon@ext.uni.lu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T13:50:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Linked open data</term>
+                    <term>Knowledge Graphs</term>
+                    <term>Wikibase</term>
+                    <term>Open Science</term>
+                    <term>Digital Archives</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>crowdsourcing</term>
+                    <term>data modeling</term>
+                    <term>digital biography</term>
+                    <term>personography</term>
+                    <term>and prosopography</term>
+                    <term>linked (open) data</term>
+                    <term>History</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <hi rend="bold" xml:space="preserve">Keywords: </hi>Linked open data, Knowledge Graphs, Wikibase, Open Science, Digital Archives 
+            </p>
+            <p>
+                <hi rend="bold" xml:space="preserve">Abstract: </hi>This paper examines domain-specific knowledge graphs as transformative tools for Digital History, highlighting their ability to model complex relationships, support multilingual datasets from diverse research projects, and integrate linked data essential for reconstructing fragmented narratives of sensitive events. It particularly explores the potential role of Wikibase in advancing historical research, cultural preservation, citizen participation, and open science, while also enabling the reuse of findings in other research contexts.
+            </p>
+            <p>
+                <hi rend="bold">Reconstructing Sensitive Narratives in Digital History: Wikibase as a Tool for Enhancing Accessibility and Fostering Citizen Participation</hi>
+            </p>
+            <p>In the digital age, domain-specific knowledge graphs are becoming crucial tools for historical research, cultural preservation and public engagement. This methodology builds on existing efforts and established practices in the digital humanities, particularly initiatives such as Enslaved.org<ref n="1" target="ftn1"/>, which employs Linked Open Data (LOD) principles to reconstruct historical identities, and Wikibase4Research<ref n="2" target="ftn2"/>, which supports ontology-driven scholarly data curation. Their ability to integrate and represent diverse datasets is essential for reconstructing fragmented narratives, particularly those tied to sensitive historical events (Zhou et.al, 2020). This paper explores the use of Wikibase<ref n="3" target="ftn3"/>, an open-source software infrastructure initially developed for Wikidata. As a flexible, user-friendly platform that allows for the creation of relational knowledge graphs that can handle the complex and interconnected data (Diefenbach et al., 2021), Wikibase is a potential solution to share the findings of the Memorial Shoah<ref n="4" target="ftn4"/> project in Luxembourg while preserving privacy and avoiding the exposure of sensitive information.
+            </p>
+            <p>The knowledge graph is based on the individual personal data collected during the project and integrates metadata from various archival materials, including census data, deportation lists, personal documents, and survivor testimonies. The relational model and the modular ontology of Wikibase allows for the mapping of complex social networks, family ties, migration patterns, and persecution events, placing individual narratives within the broader historical context of Nazi persecution. The open-source nature of Wikibase further supports the project's commitment to openness, collaboration, transparency, and potential re-use of the finding with other research projects. Taking the outcomes of the digital Memorial Shoah project, as a case study, the aim is to make these historically sensitive narratives accessible to different audiences’ profiles: researchers, descendants, educators.</p>
+            <p>The first objective of this paper is to evaluate Wikibase as a viable alternative to traditional, more technical methods for constructing RDF-based knowledge graphs. We aim to demonstrate its effectiveness as a user-friendly tool, even for non-technical users—such as the authors of the biographies behind the Memorial de la Shoah project in Luxembourg. The second objective is to explore how researchers working on different use cases involving the same individuals can benefit from shared metadata. We examine how Wikibase’s multilingual and reference-based structure supports collaboration, allowing researchers to reuse curated data and contribute their findings without duplicating effort. The third objective is to investigate how Wikibase can be shaped into an open-access entry point for non-academic users: descendants of victims, educators, and people interested in understanding the history of Nazi persecution. This raises important questions around data privacy and ethical access, which we also address in the discussion.</p>
+            <p>This paper also addresses the technical aspects of using Wikibase for historical research, exploring the components that form the infrastructure of the platform. Wikibase relies on a set of integrated tools, including MediaWiki, ElasticSearch, MariaDB, and the Wikidata Query Service (WDQS), packaged in a Docker container to facilitate deployment. While this containerized approach streamlines the setup process, it introduces several technical challenges, particularly in configuring the system for large, complex datasets. Ensuring the integrity and security of sensitive historical data is another critical challenge, as the data must be securely managed in a local instance of Wikibase, rather than relying on cloud-based systems. These technical considerations must be balanced with the project’s ethical responsibilities to handle sensitive content carefully, making it accessible while respecting privacy and historical accuracy.</p>
+            <p>This paper presents preliminary results from the project, highlighting Wikibase’s potential to support historical research and raising questions about how to sustain public-facing digital humanities initiatives. Early testing of a local Wikibase instance has demonstrated the platform’s accessibility and usability, enabling researchers to easily engage with the data. These promising results point to its potential as a flexible environment for collaboration and public engagement. By demonstrating the potential of Wikibase to manage and present complex historical data, this paper argues that open-source knowledge graphs can help democratize access to the past while making it more accessible, participatory, and enduring. The project offers a model for future initiatives seeking to involve the public in preserving historical memory, providing a scalable and user-friendly approach to historical research. It also invites broader reflection on the role of technology in memory work, the ethical challenges of public history, and the promise of open platforms in disseminating and sharing cultural heritage data.</p>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                     http://Enslaved.org
+                </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                    
+                        <ref target="https://gitlab.com/nfdi4culture/wikibase4research/wikibase4research">
+                            <hi style="font-size:10pt">https://gitlab.com/nfdi4culture/wikibase4research/wikibase4research</hi>
+                        </ref>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                    
+                        <hi rend="apple-converted-space"> </hi>
+                        <ref target="https://wikiba.se/">
+                            <hi rend="normaltextrun">
+                                <hi rend="underline color(1155CC)" style="font-size:10pt">https://wikiba.se/</hi>
+                            </hi>
+                        </ref>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn4" n="4">
+                     The Memorial Shoah project ((
+                        <ref target="https://memorialshoah.lu/en">https://memorialshoah.lu/en</ref>
+                        <hi rend="underline color(1155CC)" xml:space="preserve">) </hi>is a collaboration between the Fondation Luxembourgeoise pour la Mémoire de la Shoah (FLMS) and the Luxembourg Centre for Contemporary and Digital History (C²DH) at the University of Luxembourg. It focuses on compiling and analysing the stories of communities, mostly families, touched by the Holocaust in Luxembourg. 
+                    
+                </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Diefenbach, Dennis &amp; Wilde, Max &amp; Alipio, Samantha. (2021). Wikibase as an Infrastructure for Knowledge Graphs: The EU Knowledge Graph. 10.1007/978-3-030-88361-4_37. </bibl>
+                    <bibl>Dobriy, Daniil &amp; Polleres, Axel. (2023). O2WB: A tool enabling ontology reuse in Wikibase. 101-104. 10.1145/3587259.3627568. </bibl>
+                    <bibl>Shigapov, Renat &amp; Mechnich, Joerg &amp; Schumm, Irene. (2021). RaiseWikibase: Fast Inserts into the BERD Instance. 10.1007/978-3-030-80418-3_11. </bibl>
+                    <bibl>Uematsu, Hiroki &amp; Nguyen, Phuc &amp; Takeda, Hideaki. (2022). Design for Data Structures: Data Unification and Federation with Wikibase. 6169-6178. 10.1109/BigData55660.2022.10020686. </bibl>
+                    <bibl>Vrandečić, Denny &amp; Krötzsch, Markus. (2014). Wikidata: A Free Collaborative Knowledgebase. Communications of the ACM. 57. 78-85. 10.1145/2629489. </bibl>
+                    <bibl>
+                        <hi rend="fontnormal">Zhao, Fudie. (2023). A Systematic Review of Wikidata in Digital Humanities Projects. Digital Scholarship in the Humanities 38, Nr. 2 852–74.</hi>
+                    </bibl>
+                    <bibl>Zhou Lu, Cogan Shimizu, Pascal Hitzler, Alicia M. Sheill, Seila Gonzalez Estrecha, Catherine Foley, Duncan Tarr, and Dean Rehberger. (2020). The Enslaved Dataset: A Real-world Complex Ontology Alignment Benchmark using Wikibase. In Proceedings of the 29th ACM International Conference on Information &amp; Knowledge Management (CIKM '20). Association for Computing Machinery, New York, NY, USA, 3197–3204. </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

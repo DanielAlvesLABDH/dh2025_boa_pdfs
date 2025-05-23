@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="B_KOWSKI_Jacek_The_power_of_context__Random_Forest_classific">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">The power of context: Random Forest classification of (near) synonyms. A case study in Modern Hindi</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Bąkowski</surname>
+                        <forename>Jacek</forename>
+                    </persName>
+                    <affiliation>Institute of Polish Language, Polish Academy of Sciences, Poland</affiliation>
+                    <email>jacek.bakowski@ijp.pan.pl</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-12T16:06:27.303456448</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>General linguistics</term>
+                    <term>distributional semantics</term>
+                    <term>random forest classification</term>
+                    <term>Oriental Studies</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>cultural analytics</term>
+                    <term>natural language processing</term>
+                    <term>semantic analysis</term>
+                    <term>Computer science</term>
+                    <term>Humanities computing</term>
+                    <term>Linguistics</term>
+                    <term>South Asian studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading">
+                <head>Introduction </head>
+                <p>The rapid growth of machine learning methods and modern natural language processing make it possible to test theories formulated decades ago by other linguistic schools. In particular, distributional semantics and word embeddings have become the main approaches to meaning representation and semantic analysis in computational linguistics and cognitive science over the last years (Lenci, Sahlgren 2023). </p>
+                <p>One potentially interesting problem is the study of synonymy: something that is commonly occurring and widespread, while at the same time seemingly contradicting basic laws in linguistics. Indeed, apart from stylistic considerations, from a functional and semiotic point of view there is no need for a language to have synonyms. Moreover, the economy of language suggests that no language permits a perfect fit between two words in all respects. According to this theory, if a new loanword is adopted with exactly the same meaning as an existing word (thus creating a true synonym), the two words will quickly diverge—not necessarily in meaning itself, but in usage, connotation, register, or all of these, thus producing a difference in their semiotic function. </p>
+                <p>Modern Hindi borrows vocabulary from several other languages, mostly from Sanskrit and —via Urdu—from Persian, Arabic and Turkish. Often, words borrowed from both Urdu and Sanskrit are used concurrently as synonyms; however, the choice of a particular word depends on the context, register, and communication frame. Sometimes, the word borrowed from Urdu is preferred over its unnatural-sounding Sanskrit synonym, whereas in other contexts it is the Urduism that sounds odd. </p>
+                <p>Thus, the question arises whether, several centuries after these borrowings appeared in the subcontinent, it is still possible to discern in today’s language their etymology and differentiate use patterns based only on their context, and regardless of their near identical meaning?</p>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>Corpora</head>
+                <p>For the purpose of this study two different corpora were used namely:</p>
+                <p>
+                    <lb/>• The Hindi Monolingual Corpus provided by the Indian Institute of Technology Bombay: a non-lemmatized corpus made up of roughly 768 million tokens (Kunchukuttan et al. 2018).
+                </p>
+                <p>• As a control corpus, the hiTenTen13 corpus provided by SketchEngine, a partially lemmatized web corpus made up of texts from various newspapers and websites for a total length of 350 million words. </p>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>The dataset</head>
+                <p>For the purpose of this paper about 150 pairs of synonyms Sanskrit/Perso-Arabic were selected, yielding roughly 300 words. Unfortunately, there is no uniform methodology for selecting such pairs, nor there is a neat way of characterizing synonyms (Cruse 1986: 266). There is also no systemic means to describe the subtle nuances of meaning among them (Geeraerts 2010: 85) and thus we must partially depend on our intuition in the selection of word pairs for the study. The task is complicated by the fact that, although there are many synonymous pairs in Hindi, dictionaries sometimes show large discrepancies in their definitions. </p>
+                <p>The synonyms used for analysis were selected to avoid significant differences in the definition itself; to avoid homonyms; to cover a semantic field as wide and varied as possible; to include several different parts of the speech; and to fulfill the definition of cognitive synonymy as defined by Cruse (1986). </p>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>Methods: Word Embeddings</head>
+                <p>Word2Vec was chosen for this investigation due its simplicity and explainability. While, newer word vector tools might achieve better prediction accuracy, their results are less interpretable. In this case, we are not concerned with accuracy of prediction, but rather with analyzing the contextual semantic properties of words, for which Word2Vec seemed to be a robust and proven tool. For the two corpora mentioned, two models were trained with a vector length of 200, which is a widely accepted standard.</p>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>Methods: Random Forest synonym classification on Word Embeddings</head>
+                <p>Classification trees and random forests have proven successful in the analysis and classification of multivariate data in corpus linguistics in such varied fields as: language variation (Tagliamonte, Sali 2012); phonetic reduction (Dilts 2013); predicting construction choices in spoken language (Klavan et al. 2025); modeling syntactic variation (Szmrecsanyi et al. 2016); clause positioning (Rezaee, Golparvar 2017); segment duration (Tomaschek et al. 2018) and predicting grammatical constructions (Hundt 2018). There is also existing work on the risks and potential advantages in using random forests on corpus data (Gries 2020). However, it seems that this method has not yet been used for the study of synonymy in language.</p>
+                <p>In this case a Random Forest model was trained on embeddings of synonym pairs in Hindi of both Sanskrit and Perso-Arabic origin, with the target value being the origin of the word. </p>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>Results: Random Forest classification</head>
+                <p>The model proved to be quite successful, reaching an average accuracy between 79% and 95% (depending on training data splits). The model was then trained and evaluated 10,000 times—each time on a random 80:20 train/test set, reaching an average accuracy of about 88%. For each word, the cumulative sum of misclassifications was calculated, and the words were ranked according to the number of errors across all 10,000 iterations. In that cumulative run most words were well classified, but about 20% were often prone to misclassification (Fig. 1). </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpnsqjiugy/Pictures/51f09421be9a5725ceeef005006fedd5.png"/>
+                        <head>
+                            <hi rend="background-color(#ffffff)">Cumulative errors after 10,000 classifier runs. Word origin is indicated by color, order is by total number of errors.</hi>
+                            <hi rend="background-color(#ffffff)"> </hi>
+                        </head>
+                    </figure>
+                </p>
+                <p>The analysis of SHAP (SHapley Additive exPlanations) coefficients showed that no predictor (i.e. no vector dimension) stands out with a particularly high impact on the model output (Fig. 2). Even the most important predictor has limited importance in the range [-0.08, +0.08]. This appears to indicate that the predictive power is distributed fairly evenly across the embedding space, rather than being concentrated in a few vector ‘directions’. However, the SHAP analysis shows clearly that some vectors in the latent space have strong bidirectional association with word origin, confirming that the embedding is capturing this information from context. Moreover, the same classifier trained on a dataset without these words prone to misclassification achieved an average accuracy of about 97%.</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpnsqjiugy/Pictures/51f09421be9a5725ceeef005006fedd5.png"/>
+                        <head>SHAP coefficients showing predictors’ impact on the model output.</head>
+                    </figure>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>Results: Analysis of the words most prone to misclassification</head>
+                <p>An analysis of the most often misclassified words was then conducted, with a focus on the origin and number of errors generated. It was discovered that misclassification errors were not uniformly distributed, with a small set of words being responsible for most of the errors (Fig. 1). Moreover, Sanskrit words slightly dominated among the 20 words most prone to misclassification, and were responsible for about 63% of the total number of errors. </p>
+                <p>It is natural to wonder whether these results might be specific to the particular corpus used in the study. In other words, do these results describe a general structure of the language, or only the specifics of a particular dataset?</p>
+                <p>To resolve this, all experiments were repeated with the same settings on the hiTenTen13 corpus, which served as a control dataset. The words most frequently misclassified in both corpora were then compared. In the final analysis, the words most prone to misclassification were mostly the same in both corpora. </p>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>Results: The curse of Dimensionality</head>
+                <p>Analyzing data in high-dimensional spaces is always a challenge. Quite unexpectedly, it turned out that the model was able to correctly classify synonyms even when trained with limited access to all vector dimensions. </p>
+                <p>A test was performed in which the model was trained each time on the first n first dimensions of the word vectors as predictors. The test was run in a loop in which the parameter n was increased from 1 to 200 (i.e., the full vector length). </p>
+                <p>It is puzzling that despite the low accuracy at very low values of n, the model started to perform well trained on only the first 50 dimensions of the vectors, with an accuracy slightly above 80%. After this point the accuracy curve flattens out and grows slowly as the number of predictors, that is, the number of vector dimensions, increases (Fig. 3).</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpnsqjiugy/Pictures/51f09421be9a5725ceeef005006fedd5.png"/>
+                        <head>Model accuracy when trained on subsets of the full embedding space.</head>
+                    </figure>
+                </p>
+                <p>A similar trend appeared in the second experiment, in which the number of dimensions were increased in the same way, but the specific dimensions of the vectors were selected randomly (
+                    <hi rend="italic">n</hi> random dimensions instead of first-
+                    <hi rend="italic">n</hi>). Once again, the model seems to stabilize after about 50 or so dimensions. This demonstrates that a lot of information of different types is condensed in the different dimensions of the vectors; this, in a sense, shows some redundancy, but also the stability of the model under ablation (Fig. 4).
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpnsqjiugy/Pictures/51f09421be9a5725ceeef005006fedd5.png"/>
+                        <head>Model accuracy when trained on random subsets of the full embedding space.</head>
+                    </figure>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>Conclusions: The Power of Context </head>
+                <p>The above results show that, even several centuries after these borrowings appeared in the subcontinent, two lexical strata are still discernible in Modern Hindi. Indeed, a classifier based only on word embeddings, is still able to correctly classify synonyms according to their origin, reinforcing theories of inevitable semantic differentiation in borrowed lexemes. Since these embeddings retain a condensed representation of the word’s contextual use, it can be inferred that context—in other words, usage patterns—is sufficient to identify cultural origins that may not even be known to language users. At least it can be an indicator of sociolinguistic phenomena like social-class distinction, of which cultural origin is a proxy. Moreover, the model was able to do this reliably even trained on substantially reduced number of dimensions, showing thus, the persistence of these etymologically-determined contextual patterns.</p>
+                <p>This, therefore, constitutes an argument that there are, in fact, discernible and recognizable features in synonym usage patterns and, thus, that in a cognitive approach, each word in a synonymous pair presents a „different perspective on a situation” (Divjak 2010: 1), but also shows the power of context, through which such classification turns out to be possible. </p>
+                <p>Moreover, these results may call for a re-examination of the semantic properties of natural language that are actually captured by word embeddings. As evidenced in this study, the data they contain allows to make predictions far beyond the basic lexical meaning. In other words, what other information is hidden in linguistic context and, thus, in word embeddings?</p>
+                <p>Although the language used for this analysis is Modern Hindi—significantly underrepresented in contemporary language research—the methodology presented in this paper is language-agnostic and therefore, it would be valuable to extend this research to other languages. </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Baroni, Marco / Lenci, Alessandro</hi> (2010): “Distributional memory: A general framework for corpus- based semantics”, in: 
+                        <hi rend="italic">Computational Linguistics 36.4 (2010)</hi>, 673–721.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Cruse, David A.</hi> (1986): 
+                        <hi rend="italic">Lexical Semantics</hi>. Cambridge: Cambridge University Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Dilts, Philip</hi> (2013): 
+                        <hi rend="italic">Modelling phonetic reduction in a corpus of spoken English using random forests and mixed-effects regression</hi>. Edmonton: University of Alberta.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Divjak, Dagmar</hi> (2010): “Structuring the lexicon: A clustered model for near-synonymy”, in: 
+                        <hi rend="italic">Cognitive Linguistic Research </hi>
+                        <hi rend="italic">Vol. 43</hi>. Walter de Gruyter.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Geeraerts, Dirk</hi> (2010): 
+                        <hi rend="italic">Theories of Lexical Semantics</hi>. Oxford: Oxford University Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Gries, Stefan Th.</hi> (2020): “On classification trees and random forests in corpus linguistics: Some words of caution and suggestions for improvement”, in: 
+                        <hi rend="italic">Corpus Linguistics and Linguistic Theory 16.3 (2020)</hi>, 617–647.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hundt, </hi>
+                        <hi rend="bold">Marianne </hi>(2018): “It is time that this (should) be studied across a broader range of Englishes”. In: 
+                        <hi rend="italic">Modeling World Englishes: Assessing the interplay of emancipation and globalization of ESL varieties (2018)</hi>, 217–244.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Kunchukuttan Anoop / Mehta, Pratik / Bhattacharyya, Pushpak</hi> (2018): “The IIT Bombay English-Hindi parallel corpus”, in: 
+                        <hi rend="italic">Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018</hi>), Miyazaki, Japan.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Klavan, Jane / Pilvik, Maarja-Lisa / Uiboaed, Kristel</hi> (2015): “The Use of Multivariate Statistical Classification Models for Predicting Constructional Choice in Spoken, Non-Standard Varieties of Estonian”, in: 
+                        <hi rend="italic">SKY Journal of Linguistics 28</hi>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Lenci, Alesandro / Sahlgren, Magnus</hi> (2023): 
+                        <hi rend="italic">Distributional semantics</hi>. Cambridge: Cambridge University Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Rezaee, </hi>
+                        <hi rend="bold">Abaas</hi>
+                        <hi rend="bold"> A. / Golparvar, </hi>
+                        <hi rend="bold">Seyyed</hi>
+                        <hi rend="bold"> E.</hi> (2017): “Conditional Inference Tree Modelling of Competing Motivators of the Positioning of Concessive Clauses: The Case of a Non-native Corpus”, in: 
+                        <hi rend="italic">Journal of Quantitative Linguistics, 24(2–3)</hi>, 89–106.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Szmrecsanyi, </hi>
+                        <hi rend="bold">Benedikt</hi>
+                        <hi rend="bold"> /</hi>
+                        <hi rend="bold"> Grafmiller, </hi>
+                        <hi rend="bold">Jason</hi>
+                        <hi rend="bold"> /</hi>
+                        <hi rend="bold"> Heller, </hi>
+                        <hi rend="bold">Benedikt</hi>
+                        <hi rend="bold"> /</hi>
+                        <hi rend="bold"> Röthlisberger, </hi>
+                        <hi rend="bold">Melanie</hi> (2016): “Around the world in three alternations: Modeling syntactic variation in varieties of English”, in: 
+                        <hi rend="italic">English World-Wide. A Journal of Varieties of English 37.2 (2016)</hi>, 109–137.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Tagliamonte, </hi>
+                        <hi rend="bold">Sali</hi>
+                        <hi rend="bold"> / </hi>
+                        <hi rend="bold">Baayen, </hi>
+                        <hi rend="bold">Harald</hi> (2012): “Models, forests, and trees of York English: Was/ were variation as a case study for statistical practice”, in: 
+                        <hi rend="italic">Language variation and change 24.2 (2012)</hi>, 135–178.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Tomaschek, </hi>
+                        <hi rend="bold">Fabian </hi>
+                        <hi rend="bold">/</hi>
+                        <hi rend="bold"> Hendrix, </hi>
+                        <hi rend="bold">Peter</hi>
+                        <hi rend="bold"> / </hi>
+                        <hi rend="bold">Baayen Harald</hi> (2018): “Strategies for addressing collinearity in multivariate linguistic data”, in: 
+                        <hi rend="italic">Journal of Phonetics 71 (2018)</hi>, 249–267.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="FREDNER_Erik_The_Literary_Canon_on__em_Jeopardy___em___1984_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">The Literary Canon on &lt;em&gt;Jeopardy!&lt;/em&gt;, 1984-2024</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Fredner</surname>
+                        <forename>Erik</forename>
+                    </persName>
+                    <affiliation>University of Richmond, United States of America</affiliation>
+                    <email>erik@fredner.org</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-21T11:56:16.548821000</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>literature</term>
+                    <term>canon</term>
+                    <term>Jeopardy!</term>
+                    <term>large language model</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>cultural analytics</term>
+                    <term>text mining and analysis</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head/>
+                <p>Literary references on the quiz show 
+                    <hi rend="italic">Jeopardy!</hi> offer a valuable proxy for measuring literary canonicity in the United States over the preceding forty years. I identify which ~70,000 of the ~524,000 questions asked on 
+                    <hi rend="italic">Jeopardy!</hi> between 1984 and 2024 reference literature. Then, I identify specific authors and texts referenced in those questions. Finally, I use question round and dollar values to weight references to a given author or work. I assume that question values represent the writers’ subjective probabilities that a given question will be answered correctly by a contestant. Low value first round questions signal commoner knowledge than later round higher value questions. Ultimately, I show how the literary canon on 
+                    <hi rend="italic">Jeopardy!</hi> differs from the academic literary canon, which prior work has focused on measuring.
+                </p>
+                <p>Literary canons both have and solve problems. For example, the literary canon is exclusionary. Canons must, by definition, exclude most works. Further, the western literary canon infamously overrepresents dead white men. Despite these issues, literary canons of some kind are indispensable. Canons are necessary because life is short and literature is long. There must exist some principle of reselection for people to share reading experiences in and across time. However, scholars of the literary canon have long argued that the works and authors comprising the canon change across cultures and times.
+                    <note xml:id="ftn1" place="end" n="i">Barbara M. Benedict, “Choice Reading: Anthologies, Reading Practices and the Canon, 1680–1800,” 
+                        <hi rend="italic">The Yearbook of English Studies</hi> 45 (2015): 35–55, https://doi.org/10.5699/yearenglstud.45.2015.0035; Joe Lockard and Jillian Sandell, “National Narratives and the Politics of Inclusion: Historicizing American Literature Anthologies,” 
+                        <hi rend="italic">Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture</hi> 8, no. 2 (2008): 227–54, https://doi.org/10.1215/15314200-2007-039; Erik Fredner and Mark Algee-Hewitt, “
+                        <hi rend="italic">The MLA International Bibliography</hi>’s History of English-Language Literary Studies, 1982-2023” (DH2024, Arlington, VA, 2024).
+                    </note> As a result, “the canon” cannot ever be comprehensively listed because it is always in flux.
+                    <note xml:id="ftn2" place="end" n="ii">John Guillory, 
+                        <hi rend="italic">Cultural Capital: The Problem of Literary Canon Formation</hi>, First edition, enlarged (Chicago: The University of Chicago Press, 2023).
+                    </note>
+                </p>
+                <p>Yet, if any list of canonical authors and works is always already incomplete, there nevertheless exist influential proxies for canonicity that do list many authors and works in the canon.
+                    <note xml:id="ftn3" place="end" n="iii"> For an infamous example, seeHarold Bloom, 
+                        <hi rend="italic">The Western Canon: The Books and School of the Ages</hi>, 1st ed (New York: Harcourt Brace, 1994).
+                    </note> The contents of literature anthologies that lay claim to national, formal, or cultural representativeness, such as W.W. Norton &amp; Company’s successful anthologies, are one example. Items cited in scholarly indexes like 
+                    <hi rend="italic">The Modern Language Association International Bibliography</hi> (
+                    <hi rend="italic">MLAIB</hi>) are another. Previous digital humanities research has used such proxies to measure the strength of an author or work’s claim to canonicity.
+                    <note xml:id="ftn4" place="end" n="iv">Erik Fredner and J. D. Porter, “Counting on 
+                        <hi rend="italic">The Norton Anthology of American Literature</hi>,” 
+                        <hi rend="italic">PMLA</hi> 139, no. 1 (January 2024): 50–65, https://doi.org/10.1632/S0030812923001189.
+                    </note>
+                </p>
+                <p>Pierre Bourdieu identified multiple axes of canonicity, roughly corresponding to the extent of a work or author’s consecration by the market on one axis, and its consecration by sociocultural elites on the other.
+                    <note xml:id="ftn5" place="end" n="v">Pierre Bourdieu, 
+                        <hi rend="italic">The Field of Cultural Production: Essays on Art and Literature</hi>, trans. Randal Johnson (New York: Columbia University Press, 1993), 49.
+                    </note> Unlike proxies that previous DH projects on literary canonicity have used, 
+                    <hi rend="italic">Jeopardy!</hi> provides evidence for canonicity on both of Bourdieu's axes: On the one hand, it is a popular gameshow for a large (and surprisingly diverse) Anglophone television audience, which corresponds with the market. On the other, metadata for specific questions—the round in which a question was asked, its dollar value, whether it is a Double Jeopardy question, etc.—correspond to question writers’ subjective probabilities that gameshow contestants, who are experts in trivia but not necessarily experts in literature, would know the answer to a given question. Put another way, these price signals estimate how well-known or obscure a particular referent is, a clear signal of consecration.
+                </p>
+                <p>By working with the editor of the 
+                    <hi rend="italic">Jeopardy!</hi> fan website 
+                    <hi rend="italic">J! Archive</hi>, which compiles data about questions that have appeared on the show, I have been able to study a copy of the 
+                    <hi rend="italic">J! Archive</hi> database directly, which prior researchers who have scraped the site (violating its terms of use) have not had access to.
+                    <note xml:id="ftn6" place="end" n="vi">“The Fan-Created Archive of 
+                        <hi rend="italic">Jeopardy!</hi> Games and Players,” J! Archive, accessed December 6, 2024, https://j-archive.com/.
+                    </note> I then use a two-step large language model (LLM) pipeline with ChatGPT 4o. The first step classifies all questions in 
+                    <hi rend="italic">J! Archive</hi> to determine whether the question contains at least one literary reference. Classification success in this step achieved an F-score of approximately 96%. Then, the second step identifies allusions and partial references in 
+                    <hi rend="italic">Jeopardy!</hi> questions to literary authors and works, and normalizes their referents to match those contained in the 
+                    <hi rend="italic">MLAIB</hi>. For example, “Who is Hemingway?” is a valid answer to a 
+                    <hi rend="italic">Jeopardy!</hi> question, but is not sufficient for my purposes. I align “Hemingway” and all other references (e.g., “the author of 
+                    <anchor type="bookmark-start" xml:id="id__Hlk184396498"/>
+                    <hi rend="italic">For Whom the Bell Tolls</hi>”) with their normalized 
+                    <hi rend="italic">MLAIB</hi> representations (“Ernest Hemingway (1899-1961),” “
+                    <hi rend="italic">For Whom the Bell Tolls</hi> (1940)”). Finally, I use the distribution of references to specific authors and works in combination with metadata about their associated questions to model the question writers’ subjective probabilities with respect to each reference, on the assumption that frequency of reference and relatively lower prices are associated with more canonical (i.e., more readily recalled) literary authors and works. I show that the canon of authors and works on 
+                    <hi rend="italic">Jeopardy!</hi> is quite different from the academic canon, with a higher representation of literary works that also had film and television adaptations.
+                </p>
+                <p>Code and aggregated data for the project will be made available on a GitHub repository prior to the conference. However, the terms of use I negotiated with the 
+                    <hi rend="italic">J! Archive</hi> editors preclude sharing the underlying database.
+                </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Benedict, Barbara M. “Choice Reading: Anthologies, Reading Practices and the Canon, 1680–1800.” 
+                        <hi rend="italic">The Yearbook of English Studies</hi> 45 (2015): 35–55. https://doi.org/10.5699/yearenglstud.45.2015.0035.
+                    </bibl>
+                    <bibl>Bloom, Harold. 
+                        <hi rend="italic">The Western Canon: The Books and School of the Ages</hi>. 1st ed. New York: Harcourt Brace, 1994.
+                    </bibl>
+                    <bibl>Bourdieu, Pierre. 
+                        <hi rend="italic">The Field of Cultural Production: Essays on Art and Literature</hi>. Translated by Randal Johnson. New York: Columbia University Press, 1993.
+                    </bibl>
+                    <bibl>Fredner, Erik, and Mark Algee-Hewitt. “
+                        <hi rend="italic">The MLA International Bibliography</hi>’s History of English-Language Literary Studies, 1982-2023.” Arlington, VA, 2024.
+                    </bibl>
+                    <bibl>Fredner, Erik, and J. D. Porter. “Counting on 
+                        <hi rend="italic">The Norton Anthology of American Literature</hi>.” 
+                        <hi rend="italic">PMLA</hi> 139, no. 1 (January 2024): 50–65. https://doi.org/10.1632/S0030812923001189.
+                    </bibl>
+                    <bibl>Guillory, John. 
+                        <hi rend="italic">Cultural Capital: The Problem of Literary Canon Formation</hi>. First edition, Enlarged. Chicago: The University of Chicago Press, 2023.
+                    </bibl>
+                    <bibl>J! Archive. “The Fan-Created Archive of 
+                        <hi rend="italic">Jeopardy!</hi> Games and Players.” Accessed December 6, 2024. https://j-archive.com/.
+                    </bibl>
+                    <bibl>Lockard, Joe, and Jillian Sandell. “National Narratives and the Politics of Inclusion: Historicizing American Literature Anthologies.” 
+                        <hi rend="italic">Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture</hi> 8, no. 2 (2008): 227–54. https://doi.org/10.1215/15314200-2007-039.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

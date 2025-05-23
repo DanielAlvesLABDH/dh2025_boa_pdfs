@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BESHERO_BONDAR_Elisa_Eileen_DigitAI_for_Localized_TEI___XML_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>DigitAI for Localized TEI / XML Assistance: An experiment with Small-Scale XAI </title>
+                <author>
+                    <persName>
+                        <surname>Fisher</surname>
+                        <forename>Alexander C.</forename>
+                    </persName>
+                    <affiliation>Penn State Erie, The Behrend College, United States of America</affiliation>
+                    <email>azf189@psu.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Bills</surname>
+                        <forename>Hadleigh Jae</forename>
+                    </persName>
+                    <affiliation>Penn State Erie, The Behrend College, United States of America</affiliation>
+                    <email>hjb5471@psu.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Beshero-Bondar</surname>
+                        <forename>Elisa Eileen</forename>
+                    </persName>
+                    <affiliation>Penn State Erie, The Behrend College, United States of America</affiliation>
+                    <email>eeb4@psu.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-28T17:24:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>ai</term>
+                    <term>xai</term>
+                    <term>rag</term>
+                    <term>tei</term>
+                    <term>xml</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>information retrieval and querying algorithms and methods</term>
+                    <term>sustainable procedures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>Education/ pedagogy</term>
+                    <term>Humanities computing</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>While TEI and the XML stack are powerful resources for modeling data in documents of all kinds, these markup-based technologies are notoriously difficult to learn. Markup languages serve as a foundation for the authors’ undergraduate curriculum and projects, and we seek to optimize how our student community can access and explore our guidelines and available tutorials. We are launching a project to see whether we can refine and customize a "DigitAI" (named for our "Digit" program at Penn State Behrend). The length and complexity of the TEI Guidelines make it a compendium on scholarly editing that can be daunting for new learners, especially undergraduates. We want our DigitAI to serve as a guide to TEI as well as the XML stack technologies used in our program and projects. If the experiment is successful, we hope it is minimal in size and adaptable to other "DH lab" communities. </p>
+            <p>Most importantly, we hope to learn from this experiment even if it is not successful. We seek to design an XAI, that is, an "explainable AI" system that gives humanities students and scholars 
+                <hi rend="italic">agency</hi> in the training, evaluation, and application of the AI system, heeding the important call for explainable modeling work in the January 2023 special issue of
+                <hi rend="italic" xml:space="preserve"> IJDH</hi> (Ries). 
+            </p>
+            <p>Large language models and generative AI constructed by tech giants (Google, Meta, OpenAI) are beyond our scope of comprehensive understanding. We can evaluate how useful a generative AI can be to accomplish localized tasks, while noting the fundamental problem of variable output since we cannot rely on reproducible results. Nevertheless, the friction we experience between generative AI and markup epistemologies could be a site of creative intervention and an opportunity to bring the error-prone AI giant into the local space of schema-controlled, customizable humanities project design. </p>
+            <p>We seek to create from the TEI Guidelines a localized "DigitAI" assistant that can assist as a guide for decision-making in humanities text encoding. We want our AI to:</p>
+            <list type="unordered">
+                <item>Respond helpfully to questions that describe a particular challenge;</item>
+                <item>Highlight a range of resources to assist with a prompted challenge, instead of selecting just one; </item>
+                <item>Ideally, help us to improve our TEI resources: flag discrepancies in the Guidelines due to datedness, inconsistency, or error.</item>
+            </list>
+            <p>We want our AI to be more reliable than previous experiences with LLMs in coding assistance, because (if we are successful) it will deploy XPath and XML-processing technologies. The challenge of our project is to introduce the meaningful hierarchy of XML and TEI to an AI language model trained on sequenced tokens and word vector embeddings.</p>
+            <p>In this project, we seek to introduce the TEI Guidelines as a basis for expanding the data available to a pre-trained LLM. In attempting this, we are learning from two previous efforts shared at the TEI 2024 conference. Martina Scholger and Mohamed Khemakhem each presented papers about creating an AI assistant for encoding documents in TEI, and each made use of Retrieval Augmented Generation or RAG to construct a local knowledge base for accessible to a large language model. Scholger spoke of applying specialized resources from a scholarly edition project to enhance the knowledge base as well as prompt engineering strategies to improve results. Khemakhem supplied the TEI Guidelines as a document to augment a language model’s training, but he found significant problems in the model’s responses due to the manner in which the Guidelines are delivered to the model via "chunking" their text based on character count. Often the chunks divided the Guidelines in the middle of a section or example, which generates an obstacle for the AI to synthesize information appropriately. </p>
+            <p>To address the problem that Khemakhem discussed at TEI 2024, we will investigate the application of XML as a resource for RAG, in the context of Meta's Llama (LLaMa) AI models. Thanks to Jang and Lee's successful efforts in an architectural studies context, where generative AI models were able to work with XML input of BIM (building information modeling) data, we are optimistic that we can introduce the XML of the TEI Guidelines to a generative AI model, or at least to control the chunking of the input data by following element structures. We expect to be deploying XSLT in our pipeline to output digestible and coherent units of information to be introduced as a RAG resource. We may also experiment with generating RDF knowledge graphs as a basis for RAG. </p>
+            <p>We have chosen LLaMa, introduced by Meta in 2023, as a customizable small language model because its models are cross-platform compatible (Macs, PCs, Linux), provided that machines have sufficient GPU and 16 GB of RAM. We are experimenting with putting lxml etree and possibly SaxonC libraries into the Python script that we are developing to customize our model. We may be deploying XSLT in our pipeline to output digestible and coherent units of information to be introduced as a RAG resource. By the time of DH2025, we look forward to reporting on our progress in training a highly customized, minimal AI assistant on TEI and markup technologies. We will provide a detailed explanation of problems and next steps. We are eager to consult with other members of the DH community attempting related experiments. </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; text-align: center;">Enter your references here:</bibl>
+                    <bibl>
+                        <hi rend="bold">El-Hajj, Hassan / Eberle, Oliver et. al</hi>. (2023): “Explainability and transparency in the realm of digital humanities: toward a historian XAI”, in: 
+                        <hi rend="italic">International Journal of Digital Humanities (IJDH)</hi> 5:299-331 &lt;
+                        <ref target="https://link.springer.com/article/10.1007/s42803-023-00070-1">https://link.springer.com/article/10.1007/s42803-023-00070-1</ref>&gt; [2025.04.28].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Khemakhem, Mohamed</hi> et. al. (2024): "Enhancing Technical Knowledge Acquisition with RAG Systems: The TEI Use Case," TEI 2024 Conference presentation at Buenos Aires, October 9, 2024. &lt;
+                        <ref target="https://zenodo.org/records/13988319">https://zenodo.org/records/13988319</ref>&gt; [2024.04.28].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Jang, Suhyung / Lee, Ghang</hi> (2023): “Interactive Design by Integrating a Large Pre-Trained Language Model and Building Information Modeling”, in: 
+                        <hi rend="italic">Computer Science &gt; Artificial Intelligence</hi>. 
+                        <hi rend="italic">arXiv</hi> &lt;
+                        <ref target="https://arxiv.org/abs/2306.14165">https://arxiv.org/abs/2306.14165</ref>&gt;. [2024.04.28].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Llama Hub</hi> (2025). “Llama Hub resources for building RAG applications” &lt;
+                        <ref target="https://llamahub.ai/">https://llamahub.ai/</ref>&gt; [2024.04.28].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Ries, Thorsten / Dalen-Oskam, Karina van / Offert, Fabian</hi> (2024): “Reproducibility and explainability in digital humanities”, in:
+                        <hi rend="italic" xml:space="preserve"> International Journal of Digital Humanities (IJDH).</hi> 6: 1-7 &lt;
+                        <ref target="https://doi.org/10.1007/s42803-023-00083-w">https://doi.org/10.1007/s42803-023-00083-w</ref>&gt; [2024.04.28].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Scholger, Martina et. al.</hi> (2024): “Empowering Text Encoding with Large Language Models: Benefits and Challenges” TEI 2024 Conference presentation at Buenos Aires, October 9, 2024 &lt;
+                        <ref target="https://zenodo.org/records/13969082">https://zenodo.org/records/13969082</ref>&gt; [2024.04.28].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">TEI Consortium, eds.</hi> (2024): 
+                        <hi rend="italic" xml:space="preserve">Guidelines for Electronic Text Encoding and Interchange. </hi>TEI P5 Version 4.8.1, Last modified 1 November 2024. &lt;
+                        <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html">https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html</ref>&gt;.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

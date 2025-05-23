@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MPOULI_Suzanne_The_Romance_Genre_from_1910_to_1949_and_the_P">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Romance Genre from 1910 to 1949 and the Place of Women Screenwriters: A Quantitative Analysis</title>
+                <author>
+                    <persName>
+                        <surname>Mpouli</surname>
+                        <forename>Suzanne</forename>
+                    </persName>
+                    <affiliation>Université Paris Cité, France</affiliation>
+                    <email>suzanne.mpouli@u-paris.fr</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Hollywood</term>
+                    <term>Romance</term>
+                    <term>Women Screenwriters</term>
+                    <term>1910-1949</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>linked (open) data</term>
+                    <term>Cultural studies</term>
+                    <term>Film and cinema arts studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">As an integral part of our cultural landscape, movies have a profound influence on our understanding of the world. In particular, romantic movies, a genre traditionally associated with the female audience, have shaped for decades ideals about love and relationships (Dowd / Pallotta 2000). If nowadays, screenwriting as a profession is dominated by men (Bielby 2013; Smith / Pieper / Khan 2022), studies on the early years of American cinema (1900-1930) argue that it has not always been the case, with between 20 to 50% of movies attributed to women screenwriters (Slide 2012). However, to capitalise on the popularity of romance novels, these scenarists, as they were called, were mostly asked to write about matters of the heart (Casella 2006), which raises questions about the gender stereotypes romantic movies have been said to perpetuate (Dowd / Crabtree / Cannon 2023). </p>
+                <p style="text-align: left; ">To the best of our knowledge, no previous work has specifically focused on the popularity of romantic movies in the first half of the 20
+                    <hi rend="superscript">th</hi> century as well as its relationship with other film genres or tried to measure to what extent women screenwriters were involved in the development of the romance genre. Taking American cinema as a study case, this presentation seeks to fill this gap as a preliminary step to better understand the construction and evolution of the representation of love in movies.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Data Creation</head>
+                <p style="text-align: left; ">The work mostly relies on IMDB datasets, <ref n="1" target="ftn1"/> freely downloadable text files containing information about movies’ titles, genres, crew and duration in a machine-readable format. Since these datasets do not specify the movies’ country of origin, a list of all feature-length movies released between 1910 and 1949 was first extracted from the American Film Institute Catalog of Feature films, <ref n="2" target="ftn2"/> a comprehensive database which documents all theatrical releases produced or co-produced by an American company from 1893 to 1993.
+                </p>
+                <p style="text-align: left; ">Figure 1 summarises the whole data creation process. The movie genre’s labels were automatically added during the matching process. When the gender could not be attributed using the mention “actor/actress” in IMDB or information from Wikidata, a simple heuristic was applied: a majority vote still based on the “actor/actress” mentions in IMDB.<ref n="3" target="ftn3"/> Finally, data curation involved merging the tags “Music” and “Musical” into one single tag, “Music”, and homogenising the writing credits.
+                </p>
+                <figure>
+                    <graphic n="1001" width="14.99211388888889cm" height="7.260166666666667cm" url="/tmp/tmpmxvtqm6s/Pictures/fd764476a55156c7c83f6037c46e6cb5.png" rend="inline"/>
+                </figure>
+                <p style="text-align: center;">Figure 1. Data creation workflow</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Characterising the Romance Genre</head>
+                <p style="text-align: left; ">It is worth noting that, in the generated dataset, the “Romance” tag almost always comes with either a broad genre such as “Comedy” or “Drama” or another popular genre. Overall, during the four decades, putting aside “Drama”, “Romance” is the most popular genre, even surpassing “Comedy” in the 1930s and almost on par with the “Western” at its peak in the 1940s (see Figure 2). </p>
+                <figure>
+                    <graphic n="1002" width="15.255858333333334cm" height="7.115255555555556cm" url="/tmp/tmpmxvtqm6s/Pictures/fd764476a55156c7c83f6037c46e6cb5.png" rend="inline"/>
+                </figure>
+                <p style="text-align: center;">Figure 2. Distribution of the top 10 movie genres</p>
+                <p style="text-align: left; ">Based exclusively on the tags associated with “Romance”, the romance genre does not seem to be particularly associated with a specific genre until the introduction of sound in the late 1920s led to the birth of musicals (Figure 3A). While taking into account the amount of romantic movies in the other genres confirms this observation (Figure 3B), it also uncovers strong connections with less predominant genres such as sports or war movies (Figure 3C).</p>
+                <figure>
+                    <graphic n="1003" width="15.229483333333333cm" height="11.535833333333333cm" url="/tmp/tmpmxvtqm6s/Pictures/fd764476a55156c7c83f6037c46e6cb5.png" rend="inline"/>
+                </figure>
+                <p style="text-align: center;">
+                    <hi rend="italic" style="font-size:10pt" xml:space="preserve">Figure 3. Mapping the evolution of the relationships between romance and other genres: A. Top six genres frequently associated with the romance genre; B. Proportion of romantic movies in five popular genres; C. Proportion of romantic movies in four less prevalent movie genres. </hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Women Screenwriters and the Romance Genre</head>
+                <p style="text-align: left; ">Following Slide’s methodology (201), only were taken into account credits for a screenplay, a scenario, an adaptation, titles or unspecified roles. Screenwriters were then counted as an individual or a team if at least two people shared the same credit. The four main genres examined (“Romance”, “Western”, “Music”, and “Crime”) confirm the masculinization of the screenwriting profession from the 1930s onwards (Bielby / Bielby 1996), with a steady decline of female-authored screenplays and an increase in their collaboration with men (Figure 4). Generally speaking, the initial findings suggest a significant presence of female screenwriters in the romantic genre during the whole period, except in the 1940s where they seem to have massively turned to the Western genre.</p>
+                <figure>
+                    <graphic n="1004" width="14.7955cm" height="10.16cm" url="/tmp/tmpmxvtqm6s/Pictures/fd764476a55156c7c83f6037c46e6cb5.png" rend="inline"/>
+                </figure>
+                <p rend="List Paragraph">Figure 4. Women screenwriters and their contribution to four main genres (the bars represent the percentage of credits attributed to one or more women, while the lines represent their collaborations with male screenwriters). </p>
+                <p style="text-align: left; ">The careers of women screenwriters were also compared to those of their male counterparts on three aspects: the number of movies per decade, the total number of movies they took part in, and the number of years during which they were active<ref n="4" target="ftn4"/> (Figure 5). Since men wrote more romantic movies and had longer careers, it can be concluded that they mainly shaped the genre. However, the influence of women’s screenwriters cannot be undermined, since of the four movie genres considered, it is the only genre in which they remained active the longest, even in some instances surpassing men. 
+                </p>
+                <figure>
+                    <graphic n="1005" width="13.800694444444444cm" height="10.47328888888889cm" url="/tmp/tmpmxvtqm6s/Pictures/fd764476a55156c7c83f6037c46e6cb5.png" rend="inline"/>
+                </figure>
+                <p style="text-align: center;">Figure 5. Comparison between the career of male and female screenwriters for the romance genre.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Limitations</head>
+                <p style="text-align: left; ">Apart from the fact that movies from the silent era are generally not well-documented, the use of IMDB datasets raises some issues such as missing information causing some movies to be ignored, errors in the tags, and the ambiguous credit “story”. Besides, if the predominance of the romance genres in the 1930s corroborate previous works (Dowd / Pallotta, 2000), the number of movies labelled as “Romance” in the IMDB datasets is by far greater, which points to differences in the understanding of the genre itself.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                        
+                            <ref target="https://developer.imdb.com/non-commercial-datasets/">
+                                <hi style="font-size:10pt">https://developer.imdb.com/non-commercial-datasets/</hi>
+                            </ref>
+                            <hi style="font-size:10pt">. The dataset used for this study was downloaded on October 17th, 2024.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                        
+                            <ref target="https://aficatalog.afi.com/">
+                                <hi style="font-size:10pt">https://aficatalog.afi.com/</hi>
+                            </ref>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                        
+                            <hi style="font-size:10pt">Evaluated on the names disambiguated with Wikidata, this heuristics has a 97% accuracy. Men were predominantly misgendered (68%) with gender-neutral names such as Aubrey, Jo, Leslie, Lynn and Sydney being repeatedly misclassified whereas most errors as far as women are concerned come from lack of data or the use of male pseudonyms.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn4" n="4">
+                        
+                            <hi style="font-size:10pt">Calculated by using the release year date of the first and the last movie they contributed to.</hi>
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bielby, Denise D.</hi> (2013): “Gender Inequality in Culture Industries”, in: Carter, Cynthia / Steiner, Linda / McLaughlin, Lisa (eds.): 
+                        <hi rend="italic">The Routledge Companion to Media &amp; Gender</hi>. Oxon &amp; New York: Routledge 137-146.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bielby, Denise D. / Bielby, William T.</hi> (1996): “Women and Men in Film: Gender Inequality among Writers in a Culture Industry”, in: 
+                        <hi rend="italic">Gender &amp; Society</hi> 10, 3: 248-270. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Casella, Donna R.</hi> (2006): “Feminism and the Female Author: The Not So Silent Career of the Woman Scenarist in Hollywood—1896-1930”, in: 
+                        <hi rend="italic">Quarterly Review of Film and Video</hi> 23: 217-35.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Dowd, James J. / Pallotta Nicole. R.</hi> (2000): “The End of Romance: The Demystification of Love in the Postmodern Age”, in: 
+                        <hi rend="italic">Sociological Perspectives</hi> 43, 4: 549-580.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Dowd, James /Crabtree, Arialle K. / Cannon, Bryan C.</hi> (2023): “Movies, Gender, and Social Change: The Hollywood Romance Film”, in: 
+                        <hi rend="italic">Journal of Gender Studies</hi> 32, 22: 201-214. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Slide, Anthony</hi> (2012): “Early Women Filmmakers: The Real Numbers”, in: 
+                        <hi rend="italic">Film History</hi> 24, 1: 114-121.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Smith, Stacy. L. / Pieper, Katherine / Khan, Al-Baab</hi> (2022): “Inclusion in the Director’s Chair: Analysis of Director Gender &amp; Race/Ethnicity across 1,500 Top Films from 2007 to 2021” &lt;https://assets.uscannenberg.org/docs/aii-inclusion-directors-chair-2022.pdf&gt; [22.04.2025].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

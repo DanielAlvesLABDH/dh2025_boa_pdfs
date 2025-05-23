@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BOOT_Peter_Narrative_volatility_in_Dutch_novels">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Narrative volatility in Dutch novels</title>
+                <author>
+                    <persName>
+                        <surname>Boot</surname>
+                        <forename>Peter</forename>
+                    </persName>
+                    <affiliation>Huygens Institute for the History and Culture of the Netherlands, The Netherlands</affiliation>
+                    <email>peter.boot@huygens.knaw.nl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Daza</surname>
+                        <forename>Angel</forename>
+                    </persName>
+                    <affiliation>Netherlands eScience Center, The Netherlands</affiliation>
+                    <email>j.daza@esciencecenter.nl</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-24T13:26:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>sentiment analysis</term>
+                    <term>computational literary studies</term>
+                    <term>volatility</term>
+                    <term>ratings</term>
+                    <term>fiction</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>natural language processing</term>
+                    <term>text mining and analysis</term>
+                    <term>Literary studies</term>
+                    <term>Statistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Narrative volatility and success</head>
+                <p style="text-align: left; ">Nabi and Green (2015) argue that emotion in the reader increases the possibilities for transportation into a narrative world and that shifts in emotion are important to maintaining this transportation. In the realm of film, Berger et al (2021) show that movies with a high volatility (that is, chunk to chunk variability in valence in the dialogue) are more successful at the box office. They also show that online articles with a high volatility are more likely to be read to the end. This leads us to hypothesize the same relation for narrative prose (fiction). We expect that fiction is more likely to be appreciated when it is volatile and therefore expect higher ratings on book review sites. Additionally, we expect that reviews of high-volatility books will show high narrative impact (Boot / Koolen 2020) but that stylistic impact is independent from volatility. </p>
+                <p style="text-align: left; ">In the Impact and Fiction project, we have access to the full texts of 13,210 mostly recent Dutch novels (original as well as translated) and other narrative texts, and 130,800 online reviews of these texts, downloaded from online book sellers’ sites as well as from Hebban, Goodreads and other book review sites. </p>
+                <p style="text-align: left; ">In this short paper we report on the computation of valence and volatility for these texts, and discuss a number of problems that we encounter. We expect that by the time of the conference we will also have results for the hypotheses motivating this research effort. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Computing valence and its volatility</head>
+                <p style="text-align: left; ">To compute volatility we first need to decide how we compute chunk valence and what chunk size we will use. As to computing valence, we showed in Boot et al. (2024) that available tools agree only moderately when applied to fragments of Dutch narrative. We stick to word-based sentiment models because other available tools have been trained on completely different texts. For this investigation we decided to use the SentiArt approach (Jacobs 2019) where valence is computed based on cosine similarity to seed words in a word embedding. We use a word2vec word embedding based on our 13,210 novels that contains all words which occur in the corpus more than 5 times. We select the seed words from the word list of Moors et al. (2013), based on their position at the extreme of the valence distribution and high agreement among the annotators. This approach balances the advantages of using the Moors dictionary (validated word valences) with those of the SentiArt approach (a large dictionary). </p>
+                <p style="text-align: left; ">With respect to chunk size, we need to reconcile two contradictory requirements. Large chunk sizes remove much of the volatility, but we know that lexicon-based sentiment analysis tools generally work better on longer texts (Teodorescu and Mohammad 2023). We compromise on a chunk size of 600 words. Chunk sentiment is computed as the average word sentiment. We now follow Berger in computing the volatility as the standard deviation of the differences in valence between adjoining chunks. </p>
+                <p style="text-align: left; ">To avoid misunderstandings, the concept of volatility, as we use it, is a single number summarizing the sentiment shifts in an entire novel. We make no attempt to compute sentiment arcs (Elkins 2022).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Preliminary results</head>
+                <p style="text-align: left; ">The resulting volatility has the properties given in table 1. It is hard to evaluate the result. It seems the most extreme values occur for very short books, e.g. a single story. Figure 1 shows the average volatility and standard deviations by genre. As we see.the differences are very small and there is considerable variation in volatility within the genres. Intuitively it seems to make sense that children’s books score low on volatility, that suspense scores high and that literary books score somewhere in between. Given the within-genre variation, we shouldn’t make too much of this. </p>
+                <p style="text-align: left; ">For some genres we looked at the least and the most volatile books in the genre. In the genre of literary fiction, the picaresque adventure novels of Dutch author Jan Cremer score very high on volatility, the chronicles of office life by J.J. Voskuil score low, which seems reasonable. In the suspense genre, it might make sense that the plot-driven novels by John Grisham score high, while the detailed settings and slower development of Stephen King’s novels score low. Chris Carter’s fast-paced narrative scores high. Similar comparisons can be made for some other genres.</p>
+                <figure>
+                    <graphic n="1001" width="10.16cm" height="10.16cm" url="/tmp/tmpsc70z715/Pictures/4b436d40893408fd5febf8bc0bc99c9e.png" rend="inline"/>
+                    <head>Figure 1 Average volatility and standard deviations by genre</head>
+                </figure>
+                <table rend="rules">
+                    <head>Table 1. Volatility on 13,210 books of Dutch narrative</head>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Mean</cell>
+                        <cell style="text-align: right;" rend="DH-Default">.011</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Standard deviation</cell>
+                        <cell style="text-align: right;" rend="DH-Default">.002</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Minimum</cell>
+                        <cell style="text-align: right;" rend="DH-Default">.000</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Maximum</cell>
+                        <cell style="text-align: right;" rend="DH-Default">.054</cell>
+                    </row>
+                </table>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Berger, Jonah / Kim, Yoon Duk / Meyer, Robert</hi> (2021): "What makes content engaging? How emotional dynamics shape success", in 
+                        <hi rend="italic">Journal of Consumer Research</hi> 48 (2): 235-250.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Boot, Peter / Daza, Angel / Schnober, Carsten  / Van Hage, Willem</hi> (2024): "In the Context of Narrative, we Never Properly Defined the Concept of Valence." In: 
+                        <hi rend="italic">CHR 2024: Computational Humanities Research Conference</hi>, Aarhus, Denmark, December 4–6, 2024.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Boot, Peter / Koolen, Marijn</hi> (2020): "Captivating, splendid or instructive? Assessing the impact of reading in online book reviews", in: 
+                        <hi rend="italic">Scientific Study of Literature</hi> 10 (1): 66-93.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">De Vries, Wietse / Van Cranenburgh, Andreas / Bisazza, et al.</hi> (2019): "Bertje: A dutch bert model." arXiv preprint arXiv:1912.09582.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Elkins, Katherine</hi> (2022): 
+                        <hi rend="italic">The shapes of stories: sentiment analysis for narrative</hi>. Cambridge University Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Jacobs, Arthur M.</hi> (2019): "Sentiment analysis for words and fiction characters from the perspective of computational (Neuro-) poetics", in: 
+                        <hi rend="italic">Frontiers in Robotics and AI</hi> 6: 53.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Nabi, Robin L, / Green, Melanie C.</hi> (2015): "The role of a narrative's emotional flow in promoting persuasive outcomes", in: 
+                        <hi rend="italic">Media Psychology</hi> 18 (2): 137-162.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Moors, Agnes / De Houwer, Jan / Hermans, Dirk et al.</hi> ( 2013): "Norms of valence, arousal, dominance, and age of acquisition for 4,300 Dutch words", in: 
+                        <hi rend="italic">Behavior research methods</hi> 45 (1): 169-177.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <lb/>
+                        <hi rend="bold">Teodorescu, Daniela / Mohammad, Saif M</hi>. (2023): "Evaluating Emotion Arcs Across Languages: Bridging the Global Divide in Sentiment Analysis", in: 
+                        <hi rend="italic">EMNLP 2023</hi>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

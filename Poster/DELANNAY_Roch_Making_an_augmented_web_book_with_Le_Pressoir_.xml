@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="DELANNAY_Roch_Making_an_augmented_web_book_with_Le_Pressoir_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Making an augmented web book with Le Pressoir (The Pressoir)</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Delannay</surname>
+                        <forename>Roch</forename>
+                    </persName>
+                    <affiliation>Université de Montréal, Canada</affiliation>
+                    <email>roch.delannay@umontreal.ca</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ferretti</surname>
+                        <forename>Giulia</forename>
+                    </persName>
+                    <affiliation>Université de Montréal, Canada</affiliation>
+                    <email>giulia.ferretti@umontreal.ca</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Fauchié</surname>
+                        <forename>Antoine</forename>
+                    </persName>
+                    <affiliation>Université de Montréal, Canada</affiliation>
+                    <email>antoine.fauchie@umontreal.ca</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Beauchef</surname>
+                        <forename>Hélène</forename>
+                    </persName>
+                    <affiliation>Université de Montréal, Canada</affiliation>
+                    <email>lnbeauchef@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Larlet</surname>
+                        <forename>David</forename>
+                    </persName>
+                    <affiliation>Université de Montréal, Canada</affiliation>
+                    <email>david@larlet.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Vitali-Rosati</surname>
+                        <forename>Marcello</forename>
+                    </persName>
+                    <affiliation>Université de Montréal, Canada</affiliation>
+                    <email>marcello.vitali.rosati@umontreal.ca</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-11T09:47:05.015658956</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>scholarly editing</term>
+                    <term>digital publishing</term>
+                    <term>editorialization</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digital publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>scholarly editing and editions development</term>
+                    <term>analysis</term>
+                    <term>and methods</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>Literacy</term>
+                    <term>composition</term>
+                    <term>and creative writing</term>
+                    <term>Media studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <hi rend="italic">Le Pressoir</hi> is an open source static website generator designed to produce augmented scholarly books, primarily for publishing houses or university publishing projects. It is developed by the Canada Research Chair on Digital Textualities, in partnership with Université Paris 8 in France and the CRIHN (
+                <hi rend="italic">Centre de recherche interuniversitaire sur les humanités numériques</hi>) in Quebec, with Hélène Beauchef as editor and David Larlet as developer. The main objective is to produce various publishable artefacts adapted to the needs of scholarly writing from a single source, with enhanced web books as the primary target. Our proposal is in line with the DH2025 conference themes ‘Innovations in Free/Libre and Open-Source Software or Hardware adapted to DH projects’ and ‘Critical digital literacy’: in this poster, we show how 
+                <hi rend="italic">Le Pressoir</hi> addresses the challenge of a multimodal editorial chain in the field of digital publishing technologies (Blanc and Haute 2018).
+            </p>
+            <p>In 2014, the inaugural volume of a new series from the Presses de l'Université de Montréal (PUM) was published: 
+                <hi rend="italic">Pratiques de l'édition numérique</hi>, edited by Michael Sinatra and Marcello Vitali-Rosati (Vitali-Rosati and Sinatra 2014). The book addresses the field of digital humanities and the editorial challenges inherent to the production of digital content, and it was made available in a traditional printed format, in a pocket edition, and in a number of digital formats, including EPUB and PDF, as well as in a web and enhanced version. The editors of the collection sought to identify an effective means of disseminating the enhanced content. Consequently, the collection has been made available through a hybrid open access model, which allows the web version (and its enhanced content) to be accessed online free of charge, the PDF and EPUB files to be downloaded for free, and the printed version to be purchased. The book represented an opportunity to develop a novel digital publishing process, addressing the challenge of establishing an editorial framework for a hybrid collection comprising multiple output formats. This approach aimed to adhere to the principle of single source publishing, which prevents the excessive multiplication of editorial workflows for producing different artefacts, and organizes the diversity and interoperability of these processes within a single coherent system (Fauchié and Audin 2023).
+            </p>
+            <p>In the early 2010s, other research teams became interested in augmented books. Several initiatives have seen the light of day, such as Scalar<ref n="1" target="ftn0"/>, a project developed since 2013 by ANVC (
+                <hi rend="italic">Alliance for Networking Visual Culture</hi>) in collaboration with Vectors and IML, or Manifold, another project developed since 2012 by partners CUNY Graduate Center's Digital Scholarship Lab, the University of Minnesota Press, and 
+                <hi rend="italic">Cast Iron Coding</hi>
+                <hi rend="italic"><ref n="2" target="ftn1"/>
+                </hi>.
+            </p>
+            <p>Despite the deployment of various solutions, including SPIP, Manifold, Scalar, and numerous other tools for generating augmented books, a fundamental issue remained unresolved: the existing editorial chains did not have the capacity to produce a plurality of objects from a single source, and were even less capable of adapting the content to different types of media (print, web, etc.). A further significant drawback of the mentioned platforms is that the text model is highly inflexible, due to its implementation in a relational database managed by a content management system (CMS), which make it challenging to adapt the model for customisation purposes. In light of these considerations, we sought alternative, more streamlined solutions, with a particular interest in plain text and lightweight markup languages. This marked the inception of the 
+                <hi rend="italic">Pressoir</hi> project (Fauchié et al. 2023).
+            </p>
+            <p>The 
+                <hi rend="italic">Pressoir</hi> project was initiated in 2018 as a Bash script and subsequently developed into a Python program, becoming available in 2024 as a Python package accessible from the `pip` repository<ref n="3" target="ftn2"/>. The distinctive feature of our project lies in its use of a more adaptable textual model, which can be modified or tailored in real-time to meet specific editorial needs. This is made possible by the fact that its editorial chain is based on three lightweight mark-up formats: Markdown, YAML and BibTeX. Furthermore, it is based on the Pandoc converter, which is used to transform sources into publishable artefacts, such as augmented web books (HTML), ePUB (HTML), PDF and print formats. At the present time, the production of PDF and ePUB files is carried out using scripts that are not yet in production. Nevertheless, by employing these technological building blocks, 
+                <hi rend="italic">Le Pressoir</hi> is able to produce books in a variety of formats and meet the requirements of a multimodal publishing chain.
+            </p>
+            <p>In light of the aforementioned considerations, this poster proposes the presentation of a multimodal editorial chain. This will be achieved by exploring the functionalities of 
+                <hi rend="italic">Le Pressoir</hi> and presenting proofs of concept involving works that have already been produced or are in the process of being designed.
+            </p>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn0" rend="footnote text" n="1">See the project's GitHub directory &lt;
+                    &gt;.
+                </note>
+<note xml:id="ftn1" rend="footnote text" n="2">See the project's website: &lt;
+                        &gt;.
+                    </note>
+<note xml:id="ftn2" rend="footnote text" n="3">Further details may be found on the repository website: &lt;
+                    &gt;.
+                </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Blanc, Julie / Haute,</hi>
+                        <hi rend="bold">Lucile</hi> (2018): “Technologies de l’édition numérique”, in 
+                        <hi rend="italic">Sciences du Design</hi> 8 (2): 11–17. DOI: 10.3917/sdd.008.0011.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Fauchié, Antoine / Audin, </hi>
+                        <hi rend="bold">Yann</hi> (2023): “The Importance of Single Source Publishing in Scientific Publishing”, in 
+                        <hi rend="italic">Digital Studies / Le Champ Numérique</hi>, no. Special DSCN Collection #9 (October). DOI: 10.16995/dscn.9655.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Fauchié, Antoine / Delannay, </hi>
+                        <hi rend="bold">Roch /</hi>
+                        <hi rend="bold"> Sinatra, Michael E. / Vitali-Rosati, Marcello</hi> (2023): “Exploring New (Digital) Publishing Practices with 
+                        <hi rend="italic">Le Pressoir</hi>”, in 
+                        <hi rend="italic">Pop! Public. Open. Participatory</hi>, no. 5 (September).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Vitali-Rosati, Marcello / Sinatra, Michael E.</hi> (2014): 
+                        <hi rend="italic">Pratiques de l’édition numérique. Pratiques de l’édition numérique.</hi> Montréal: Presses de l’Université de Montréal.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

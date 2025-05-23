@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="FARWELL_Aritz_CLARIAH_EUS_gArA__Constructing_a_Trustworthy_C">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>CLARIAH-EUS-gArA: Constructing a Trustworthy Conversational Assistant for Basque News and Research in the Digital Humanities</title>
+                <author>
+                    <persName>
+                        <surname>Arregi</surname>
+                        <forename>Xabier</forename>
+                    </persName>
+                    <affiliation>University of the Basque Country, Spain</affiliation>
+                    <email>xabier.arregi@ehu.eus</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Briones</surname>
+                        <forename>Telmo</forename>
+                    </persName>
+                    <affiliation>University of the Basque Country, Spain</affiliation>
+                    <email>telmo.briones@ehu.eus</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Estarrona</surname>
+                        <forename>Ainara</forename>
+                    </persName>
+                    <affiliation>University of the Basque Country, Spain</affiliation>
+                    <email>ainara.estarrona@ehu.eus</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Farwell</surname>
+                        <forename>Aritz</forename>
+                    </persName>
+                    <affiliation>University of the Basque Country, Spain</affiliation>
+                    <email>aritz.farwell@ehu.eus</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Fernandez de Landa</surname>
+                        <forename>Joseba</forename>
+                    </persName>
+                    <affiliation>University of the Basque Country, Spain</affiliation>
+                    <email>joseba.fernandez@ehu.eus</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>García</surname>
+                        <forename>Iker</forename>
+                    </persName>
+                    <affiliation>University of the Basque Country, Spain</affiliation>
+                    <email>iker.garcia@ehu.eus</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Perez</surname>
+                        <forename>Naiara</forename>
+                    </persName>
+                    <affiliation>University of the Basque Country, Spain</affiliation>
+                    <email>naiara.perez@ehu.eus</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Rigau</surname>
+                        <forename>German</forename>
+                    </persName>
+                    <affiliation>University of the Basque Country, Spain</affiliation>
+                    <email>german.rigau@ehu.eus</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Sainz</surname>
+                        <forename>Oscar</forename>
+                    </persName>
+                    <affiliation>University of the Basque Country, Spain</affiliation>
+                    <email>oscar.sainz@ehu.eus</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-15T15:00:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Basque</term>
+                    <term>LLM</term>
+                    <term>digital humanities</term>
+                    <term>RAG</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>natural language processing</term>
+                    <term>Computer science</term>
+                    <term>Humanities computing</term>
+                    <term>Sociology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <hi style="font-size:10pt" xml:space="preserve">The diverse sources that inform digital humanities research are repositories of knowledge from which insights into the human condition are derived. Over the past two decades, the digital sources, tools, and lenses available to social science and humanities researchers have grown exponentially, giving scholars new means to find and interact with information. This shift in paradigm has brought with it novel digital techniques and exciting possibilities with respect to future research within the field. Yet, DH research still requires innovative technological capacities for more effective computational processing of textual, visual, audio, and numerical data. Fortunately, state-of-the-art AI models allow multiple modalities to be processed and demonstrate excellent scalability in sizable datasets (Khan et al. 2022). </hi>
+            </p>
+            <p>
+                <hi style="font-size:10pt">By the same token, AI researchers have developed and refined LLMs that exhibit remarkable learning and reasoning capabilities across a variety of domains and tasks (Bommasani et al. 2022). These machine learning models, pretrained on vast amounts of data, are increasingly capable of simulating human-like responses (Bubeck et al. 2023), offering opportunities to test hypotheses about past and present human behavior at great scale and speed. Indeed, LLM families such as ChatGPT, Claude, Gemini, LlaMA (Touvron et al. 2023), and the Basque LLM Latxa (Etxaniz et al. 2024) may be employed as conversational assistants, recommender systems, fact-checkers, and personal helpers for investigative tasks, problem solving, and analyses in the digital humanities. Recently, advances in this area have been achieved in two respects: 1) adapting LLMs to specific or general tasks, including conversations, and 2) enabling models to interact with other tools and applications, such as search engines and third-party APIs. These advances hold out the prospect that conversational AI could be a game-changer in many research fields, including SSH.</hi>
+            </p>
+            <p>
+                <hi style="font-size:10pt">However, despite immense potential, existing LLMs still have limitations and there is an ongoing lack of comprehensive understanding about key challenges and opportunities. These include the constraints caused by AI models that are predominantly concentrated on English-language data, an inability to respond to up-to-date information, as well as frequent failures in providing accurate results. Furthermore, the utilization of this new technology within SSH must be tailored to interact with extremely heterogeneous content and highly specific conditions in order to build valid solutions. For these reasons alone, the application of conversational assistants in DH scenarios can be demanding.</hi>
+            </p>
+            <p>
+                <hi style="font-size:10pt">The desire to mitigate obstacles akin to these is part of the motivation behind CLARIAH-EUS, the Basque node within CLARIAH-ES, Spain’s distributed infrastructure for CLARIN and DARIAH, Europe’s principal digital research infrastructures for SSH. Its mission is to sustain research related to Basque or Basque culture by providing scholars with digital tools and resources. As a case in point, CLARIAH-EUS’s newly launched CLARIAH-EUS-gArA project, led by HiTZ (the Basque Center for Language Technology at the University of the Basque Country), seeks to build bridges between AI, language technology, and the social sciences and humanities by investigating the development and application of conversational assistants for DH. More specifically, CLARIAH-EUS-gArA explores how Latxa,</hi><ref n="1" target="ftn1"/>
+                <hi style="font-size:10pt" xml:space="preserve"> currently the largest and best performing LLM family for Basque, may be utilized in concert with retrieval-augmented generation (RAG) techniques to help guarantee the fidelity of responses to queries concerning news in Basque. RAG is a method that goes beyond the pretrained knowledge of LLMs and is an important component of today's generative AI, especially in domains where knowledge is constantly updated or requires verification. We hope to demonstrate that RAG may be applied to the digital humanities, where it is important to ensure the veracity of sources and avoid false or misinformation. </hi>
+            </p>
+            <p>
+                <hi style="font-size:10pt">Moreover, while the increasingly abundant presence of fake news represents one roadblock CLARIAH-EUS-gArA hopes to help overcome, the currently intrinsic tendency of LLMs to invent responses, often out of whole cloth, is an equally stubborn obstacle that will also be addressed. In fact, ensuring that information provided by CLARIAH-EUS-gArA’s dialogue system is reliable is central to the project’s objectives. Accordingly, generated responses extracted from in-depth interactions with repositories of knowledge will include detailed annotations on the provenance of data so that researchers may fact-check, verify information, and assess reliability through accurate citations that provide direct access to original sources. This ability to validate source material is not only a critical factor in restoring confidence in online content, but also a fundamental aspect of SSH research. To reach these objectives, CLARIAH-EUS-gArA will establish a means to permanently crawl news</hi><ref n="2" target="ftn2"/>
+                <hi style="font-size:10pt" xml:space="preserve"> as it is released and collect past news articles, offer synchronic and diachronic perspectives on events and opinions, and allow for multilingual comparison of Basque news with reporting in other languages.</hi>
+            </p>
+            <p>As noted, Latxa, a Basque LLM developed by HiTZ, is the language model we will utilize. More precisely, it is a family of publicly available language models that is based on Meta's LLaMA models and which includes three versions that differ according to the number of parameters used (between 7 and 70 billion). The new version of Latxa was trained on the largest public corpus in Basque and contains more than 4 million documents with 1.2 billion words. In the future, and in line with the tasks and objectives of CLARIAH-EUS-gArA, we intend to expand the dataset for training, collecting quality content from various Basque sources, such as publishers and other media.</p>
+            <p>
+                <hi style="font-size:10pt">Part of the impetus to create Latxa lay in a desire to promote research and innovation in Basque by reducing the technological gap between resource-rich and resource-poor languages. Expanding on this initiative, we hope that CLARIAH-EUS-gArA will be the foundation for a broader long-term community effort. Our code is developed in a transparent manner and, in accordance with the European Open Science Cloud, CLARIAH-EUS-gArA is fully committed to Open Science, Open Access, and FAIR principles, all of which make data, code, and experimental results available to the entire research community. The technology developed for the project will be a step forward in this regard and for Basque DH because it will 1) develop computational tools for Basque; 2) offer new means to browse news in Basque; 3) advance how Basque-language data is processed; and 4) support DH researchers in verifying sources and citations when searching for answers to complex research questions.</hi><ref n="3" target="ftn3"/>
+            </p>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                    
+                        <ref target="https://huggingface.co/HiTZ/latxa-70b-v1.1">
+                            <hi style="font-size:10pt">https://huggingface.co/HiTZ/latxa-70b-v1.1</hi>
+                        </ref>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                    
+                        <hi style="font-size:10pt" xml:space="preserve">News sources include: </hi>
+                        <ref target="https://www.berria.eus/">
+                            <hi rend="underline color(1155CC)" style="font-size:10pt">Berria</hi>
+                        </ref>
+                        <hi style="font-size:10pt" xml:space="preserve">, </hi>
+                        <ref target="https://www.argia.eus/">
+                            <hi rend="underline color(1155CC)" style="font-size:10pt">Argia</hi>
+                        </ref>
+                        <hi style="font-size:10pt" xml:space="preserve">, and </hi>
+                        <ref target="https://tokikom.eus/">
+                            <hi rend="underline color(1155CC)" style="font-size:10pt">TOKIKOM</hi>
+                        </ref>
+                        <hi style="font-size:10pt">.</hi>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                    
+                        <hi rend="color(222222) background(white)" style="font-size:10pt">CLARIAH-EUS and CLARIAH-EUS-gArA are funded by the Basque Government and its Department of Culture and Linguistic Policy, the Provincial Council of Gipuzkoa (2024-CIE2-000003-01), the Vice-Rectorate of Basque, Culture and Internationalization at the University of the Basque Country (UPV/EHU), the Spanish Ministry of Science, Innovation and Universities (RED2022-134527-E), and the HiTZ Center.</hi>
+                    
+                </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi style="font-size:10pt">Bommasani, Rishi / Hudson, Drew A. / Adeli, Ehsan / Altman, Russ / Arora, Simran / Arx, Sydney von / Bernstein, Michael S. / Bohg, Jeannette / Bosselut, Antoine / Brunskill, Emma / Brynjolfsson, Erik / Buch, Shyamal / Card, Dallas / Castellon, Rodrigo / Chatterji, Niladri S. / Chen, Annie S. / Creel, Kathleen A. / Davis, Jared / Demszky, Dora / Donahue, Chris / Doumbouya, Moussa / Durmus, Esin / Ermon, Stefano / Etchemendy, John / Ethayarajh, Kawin / Fei-Fei, Li / Finn, Chelsea / Gale, Trevor / Gillespie, Lauren / Goel, Karan / Goodman, Noah D. / Grossman, Shelby / Guha, Neel / Hashimoto, Tatsunori / Henderson, Peter / Hewitt, John / Ho, Daniel E. / Hong, Jenny / Hsu, Kyle / Huang, Jing / Icard, Thomas F. / Jain, Saahil / Jurafsky, Dan / Kalluri, Pratyusha / Karamcheti, Siddharth / Keeling, Geoff / Khani, Fereshte / Khattab, Omar / Koh, Pang Wei / Krass, Mark S. / Krishna, Ranjay / Kuditipudi, Rohith / Kumar, Ananya / Ladhak, Faisal / Lee, Mina / Lee, Tony / Leskovec, Jure / Levent, Isabelle / Li, Xiang Lisa / Li, Xuechen / Ma, Tengyu / Malik, Ali / Manning, Christopher D. / Mirchandani, Suvir / Mitchell, Eric / Munyikwa, Zanele / Nair, Suraj / Narayan, Avanika / Narayanan, Deepak / Newman, Benjamin / Nie, Allen / Niebles, Juan Carlos / Nilforoshan, Hamed / Nyarko, Julian F. / Ogut, Giray / Orr, Laurel J. / Papadimitriou, Isabel / Park, Joon Sung / Piech, Chris / Portelance, Eva / Potts, Christopher / Raghunathan, Aditi / Reich, Robert / Ren, Hongyu / Rong, Frieda / Roohani, Yusuf H. / Ruiz, Camilo / Ryan, Jack / R'e, Christopher / Sadigh, Dorsa / Sagawa, Shiori / Santhanam, Keshav / Shih, Andy / Srinivasan, Krishna Parasuram / Tamkin, Alex / Taori, Rohan / Thomas, Armin W. / Tramèr, Florian / Wang, Rose E. / Wang, William / Wu, Bohan / Wu, Jiajun / Wu, Yuhuai / Xie, Sang Michael / Yasunaga, Michihiro / You, Jiaxuan / Zaharia, Matei A. / Zhang, Michael / Zhang, Tianyi / Zhang, Xikun / Zhang, Yuhui / Zheng, Lucia / Zhou, Kaitlyn / Liang, Percy (2021): “On the Opportunities and Risks of Foundation Models”, in </hi>
+                        <hi rend="italic" style="font-size:10pt">ArXiv</hi>
+                        <hi style="font-size:10pt"> abs. DOI: 10.48550/arXiv.2108.07258.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi style="font-size:10pt" xml:space="preserve">Bubeck, Sébastien / Chandrasekaran, Varun / Eldan, Ronen / Gehrke, John A. / Horvitz, Eric / Kamar, Ece / Lee, Peter / Lee, Yin Tat / Li, Yuan-Fang / Lundberg, Scott M. / Nori, Harsha / Palangi, Hamid / Ribeiro, Marco Túlio / Zhang, Yi (2023): “Sparks of Artificial General Intelligence: Early experiments with GPT-4”, in </hi>
+                        <hi rend="italic" style="font-size:10pt">ArXiv</hi>
+                        <hi style="font-size:10pt"> abs. DOI: 10.48550/arXiv.2303.12712.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi style="font-size:10pt">Etxaniz, Julen / Sainz, Oscar / Perez, Naiara / Aldabe, Itziar / Rigau, German / Agirre, Eneko / Ormazabal, Aitor / Artetxe, Mikel / Soroa, Aitor (2024): "Latxa: An open language model and evaluation suite for Basque", in </hi>
+                        <hi rend="italic" style="font-size:10pt">Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)</hi>
+                        <hi style="font-size:10pt">: 14952-14972. DOI: 10.18653/v1/2024.acl-long.799.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi style="font-size:10pt">Khan, Salman / Naseer, Muzammal / Hayat, Munawar / Zamir, Sayed Waqas / Khan, Fahad Shahbaz / Shah, Mubarak (2022): ”Transformers in Vision: A Survey”, in</hi>
+                        <hi rend="italic" style="font-size:10pt">ACM Computing Surveys</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 54, 10s: 1-41. DOI: 10.1145/3505244.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi style="font-size:10pt">Touvron, Hugo / Martin, Louis / Stone, Kevin R. / Albert, Peter / Almahairi, Amjad / Babaei, Yasmine / Bashlykov, Nikolay / Batra, Soumya / Bhargava, Prajjwal / Bhosale, Shruti / Bikel, Daniel M. / Blecher, Lukas / Cantón Ferrer, Cristian / Chen, Moya / Cucurull, Guillem / Esiobu, David / Fernandes, Jude / Fu, Jeremy / Fu, Wenyin / Fuller, Brian / Gao, Cynthia / Goswami, Vedanuj / Goyal, Naman / Hartshorn, Anthony S. / Hosseini, Saghar / Hou, Rui / Inan, Hakan / Kardas, Marcin / Kerkez, Viktor / Khabsa, Madian / Kloumann, Isabel M. / Korenev, A. V. / Koura, Punit Singh / Lachaux, Marie-Anne / Lavril, Thibaut / Lee, Jenya / Liskovich, Diana / Lu, Yinghai / Mao, Yuning / Martinet, Xavier / Mihaylov, Todor / Mishra, Pushkar / Molybog, Igor / Nie, Yixin / Poulton, Andrew / Reizenstein, Jeremy / Rungta, Rashi / Saladi, Kalyan / Schelten, Alan / Silva, Ruan / Smith, Eric Michael / Subramanian, Ranjan / Tan, Xia / Tang, Binh / Taylor, Ross / Williams, Adina / Xiang Kuan, Jian / Xu, Puxin / Yan, Zhengxu / Zarov, Iliyan / Zhang, Yuchen / Fan, Angela / Hall, Melissa / Kambadur, Melanie / Narang, Sharan / Rodriguez, Aurélien / Stojnic, Robert / Edunov, Sergey / Scialom, Thomas (2023): “Llama 2: Open Foundation and Fine-Tuned Chat Models”, in </hi>
+                        <hi rend="italic" style="font-size:10pt">ArXiv</hi>
+                        <hi style="font-size:10pt"> abs. DOI: 10.48550/arXiv.2307.09288.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

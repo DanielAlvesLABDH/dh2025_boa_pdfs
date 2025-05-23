@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ALGEE_HEWITT_Mark_Andrew_Disciplining_Subjects__A_Computatio">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Disciplining Subjects: A Computational Approach to the Eighteenth-Century Order of Knowledge</title>
+                <author>
+                    <persName>
+                        <surname>Algee-Hewitt</surname>
+                        <forename>Mark Andrew</forename>
+                    </persName>
+                    <affiliation>Stanford University, United States of America</affiliation>
+                    <email>malgeehe@stanford.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Rudy</surname>
+                        <forename>Seth</forename>
+                    </persName>
+                    <affiliation>Rhodes College, United States of America</affiliation>
+                    <email>rudys@rhodes.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-09T21:10:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>history of ideas</term>
+                    <term>epistemology</term>
+                    <term>historical corpus analysis</term>
+                    <term>contextual embedding</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>semantic analysis</term>
+                    <term>text mining and analysis</term>
+                    <term>Book and print history</term>
+                    <term>Cultural studies</term>
+                    <term>History</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>Our project applies a contextual embedding model to the 
+                    <hi rend="italic">Eighteenth Century Collections Online</hi> corpus in order to uncover traces of proto-disciplinary language that exist prior to the formalization of disciplines within the late eighteenth-century European, predominately Anglophone, knowledge economy. We draw from the central insight of Foucauldian epistemology (Foucault 2005), that the modern structure of knowledge as evidenced by, for example, university departments, is a product of institutional change at the end of the eighteenth century. While the standard story of disciplinary emergence connects these changes to specific thinkers (usually white, male and European), or the institutions that they create (for example the encyclopedia Britannica, or the public university), our project uses computational methods to deepen and complicate our understanding of how these knowledge formations emerged (for traditional approaches see Yeo 2001; Kafker 1994; Darnton 1979). Drawing on recent work that uses computational textual analysis to uncover previously hidden knowledge structures that underly the knowledge compendia that scholars have previously held accountable for these transformations (Rudy 2023; Algee-Hewitt 2019; Heuser, Algee-Hewitt and Bender 2015, Blanchard and Olsen 2002), our project finds clusters of language whose proximity in the model anticipates the later formations at the center of modern disciplinarity. Our work reveals that the central evolution in language that laid the groundwork for modern disciplinarity emerged much earlier and in much different ways than previously recognized. 
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Materials and Methods</head>
+                <p>Our central corpus for this project is the combined 
+                    <hi rend="italic" xml:space="preserve">ECCO I </hi> and 
+                    <hi rend="italic">ECCO II</hi> collections, published by Gale Cengage. Although not truly representative of the British eighteenth century as a whole (let alone the global imperial networks of the Enlightenment world), 
+                    <hi rend="italic">ECCO</hi>, we argue, is uniquely positioned to give insight into the transformations that we explore in this project (Gale 2003; for on overview of problems with the corpus, see Tolonen et al 2021). At close to 211,000 volumes, the corpus contains a broad array of scientific, geographical, medical, historical, and philosophic writing, along with both literature and, importantly for our project, a variety of other knowledge compendia. For our model, we make use of a version of the combined 
+                    <hi rend="italic" xml:space="preserve">ECCO </hi>corpus that has been cleaned for OCR errors and whose metadata has been partially corrected. 
+                </p>
+                <p>A contextual embedding model (in which each token in the corpus is uniquely situated within its own contextual surrounds) can reveal the subtle changes in language over time that, in aggregate, point to the large-scale transformations that we map. Rather than create individual embedding models for each historical period, we choose to create one, large, contextual embedding model using the conText package in R (Rodriguez et al, 2023). Unlike linked individual models over time, this single model approach allows us to directly compare the relationships of individual tokens across different historical points. And, unlike contemporary AI approaches, our model was trained exclusively on texts from the eighteenth century.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Analysis</head>
+                <p>Focusing in this presentation on the discourse of “Natural History,” our model first uncovers the associated terminology connected to the key subjects of the field as defined by scholars at the time: meteorology, hydrology, mineralogy, phytology, and zoology (for a breakdown of these subject areas see, for example, Chambers’ 1728 encyclopedia). Once we have isolated this discourse, we build on our embedding model to recreate the linguistic connections among these fields and develop a dynamic network model to trace the linkages and severances that characterize the evolution of each subject. Such a model not only allows us to visualize the evolution of proto-disciplinary subject language across the century but will also allow us to map the resulting formations onto the discourses of the various disciplines that emerge in the nineteenth century. For example, in figure 1 below, we extract terms close to “animal” from three different periods in our corpus represented in the same contextual embedding model. As we trace the network of these terms over time (here simplified into just the vertices), we can see how the emphasis on “food’ (circled on the graph) moves from a description of livestock, husbandry, and hunting practices (focusing on the animals that humans eat) to an emphasis on descriptors such as “carnivorous”, “omnivorous”, and “viviparous” (focusing on what animals themselves eat). In other words, our project allows us to trace the emergence of a biological discourse that transforms the subject of zoology from one composed of solely use-based language to one of scientific description that prefigures the emergence of the discipline of biology. </p>
+                <figure>
+                    <graphic n="1001" width="16.002cm" height="7.696688888888889cm" url="/tmp/tmp3jmh6ssf/Pictures/b7639f07a939da78d62ced0f11d8e46e.png" rend="inline"/>
+                    <head>Figure 1 Three different details of terms associated with different years in our model. Layouts show the relationship between words at different points in our model: distance is a function of similarity of context at each of the historical points. </head>
+                </figure>
+                <p>Building on this example insight, our project takes a broad view of the emergence of disciplinary language. Tracing each part of natural history through the dissolution of the pre-eighteenth-century structure of knowledge, we can identify what precipitates out of the general field in order to recombine into chemistry, biology, and physics. Through our method, we can bear witness to how the conceptual disaggregation of the holistic “Natural History” takes place in the language of the texts themselves as different aspects become appreciatively discrete and self-referential. We can see with greater precision the ways in which distinctions between, for example, the living and nonliving begin to emerge as specific sub-disciplinary discourses. The project explores the extent to which similar processes obtain in other fields and at other moments in the history of knowledge production.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Algee-Hewitt, Mark</hi>. (2019): “The Principles of Meaning: Networks of Knowledge in Johnson’s Dictionary.” 
+                        <hi rend="italic">Networks of European Enlightenment</hi> ed. Dan Edelstein and Chloe Edmonson. Oxford: Oxford UP.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Blanchard, Gilles / Olsen. Mark</hi>. (2002): ‘Le système de renvois dans l’Encyclopédie: Une cartographie des structures de connaissances au XVIIIe siècle,
+                        <hi rend="italic">’ Recherches sur Diderot et sur l'Encyclopédie</hi> 31-32 (April): 47.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Darnton, Robert</hi>. (1979): 
+                        <hi rend="italic">The Business of Enlightenment: a Publishing History of the Encyclopédie</hi>. Cambridge: Belknap Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="italic">Eighteenth Century Collections Online</hi>. (2003): Farmington Hills, MI: Gale Cengage Learning. 
+                        <ref target="https://www.gale.com/primary-sources/eighteenth-century-collections-online">https://www.gale.com/primary-sources/eighteenth-century-collections-online</ref>. May 9, 2025.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Foucault, Michel</hi>. (2005):
+                        <hi rend="italic"> The Order of Things</hi>. New York: Routledge.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Heuser, Ryan / Algee-Hewitt, Mark / Bender, John</hi>. (2015) “Knowledge Networks, Juxtaposed: Disciplinarily in the Encyclopédie and Wikipedia” presented at the 
+                        <hi rend="italic">2015 ADHO Digital Humanities conference</hi>, Sydney, Australia.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Kafker, Frank</hi>. (1994): “Smellie’s Edition of the 
+                        <hi rend="italic">Encyclopedia Britannica</hi>.” In 
+                        <hi rend="italic">Notable Encyclopedias of the Late 18</hi>
+                        <hi rend="italic superscript">th</hi>
+                        <hi rend="italic" xml:space="preserve"> Century: Eleven Successors of the Encyclpédie</hi> ed. Frank Kafker. Oxford: Voltaire Foundation.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Rodriguez, PL / Spirling, A /Stewart, BM</hi>. (2023): “Embedding Regression: Models for Context-Specific Description and Inference” in 
+                        <hi rend="italic">American Political Science Review</hi>. 117(4):1255-1274.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Rudy, Seth</hi>. (2023): “The Whole Set to View: Orders of Knowledge in Chambers’ Cyclopædia,” in 
+                        <hi rend="italic">Ordering Knowledge</hi>, eds. Richard Somerset, Sorana Corneanu, and Jean-Jacques Chardin. Strasbourg: Presses Universitaires de Strasbourg, 2023. 91-125.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Tolonen, M. / Mäkelä, E / Ijaz, A. /Lahti, L.</hi> (2021): “Corpus Linguistics and Eighteenth Century Collections Online (ECCO).” in 
+                        <hi rend="italic">Research in Corpus Linguistics</hi> 9(1): 19-34.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Yeo, Richard</hi>. (2001): 
+                        <hi rend="italic">Encyclopaedic Visions</hi>. Cambridge: Cambridge University Press. 
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SILVA_Andie_Enhancing_Visual_Storytelling_for_Accessibility_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Enhancing Visual Storytelling for Accessibility: Preparing a Digital Edition of John Derricke’s The Image of Irelande, with a Discoverie of Woodkarne (1581)</title>
+                <author>
+                    <persName>
+                        <surname>Silva</surname>
+                        <forename>Andie</forename>
+                    </persName>
+                    <affiliation>York College/Graduate Center, CUNY, United States of America</affiliation>
+                    <email>asilva@york.cuny.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Iammarino</surname>
+                        <forename>Denna</forename>
+                    </persName>
+                    <affiliation>Case Western Reserve University, United States of America</affiliation>
+                    <email>dji6@case.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-09T17:21:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>digital editing</term>
+                    <term>markup</term>
+                    <term>accessibility</term>
+                    <term>book history</term>
+                    <term>early modern literature</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>digital publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>project design</term>
+                    <term>organization</term>
+                    <term>management</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>Book and print history</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>In their collection on 
+                <hi rend="italic">Digital Scholarly Editing</hi> (2016), James Driscoll and Elena Pierazzo ask: is digital editing putting “old wine in new bottles” or is it offering something new? They suggest that in order to truly innovate, digital scholarship “requires a fair bit of theoretical re-thinking and reflection on the significance of what we are doing and its impact on the discipline and on our notions of textuality” (9). 
+            </p>
+            <p>This poster explores how digital editions can offer opportunities to enhance textuality and storytelling through access and accessibility. Our poster will showcase our work-in-progress digital edition of John Derricke’s 
+                <hi rend="italic">The Image of Irelande</hi> (1581), focusing specifically on our engagement with its visual elements. Published during the 16th-century British occupation of Ireland, 
+                <hi rend="italic">The Image of Irelande</hi> is composed of a long-form poem (divided into three parts) and twelve woodcut illustrations. This project (henceforth Digital Derricke) juggles a multiplicity of notes from the work’s previous scholarly editions (published in 1809, 1886, and 1985) as well as robust marginalia from the original work. The Image’s twelve woodcut “plate” illustrations constitute one of the earliest and most detailed visual accounts of Irish customs and culture. These images are an impressive achievement in visual design and textual navigation. Part diagram, part graphic comics, almost half of the illustrations feature small letter keys (e.g. A, B, C, D) that connect the actions depicted to poetic captions under each image and sometimes even refer back to earlier pages in the long-form poem. The author’s self-referential style, which regularly gestures to the illustrated images in the poems and tags his own illustrations with narrative captions, seems to anticipate hypertext. The material text and its direct interplay with the plate illustrations is relevant to issues of early modern reading practices, authorship, and print culture. 
+            </p>
+            <p>This proposed digital edition will be the first to reunite the original text with the images that originally accompanied it, bolstered by new textual apparatus. For a work titled 
+                <hi rend="italic">The Image of Irelande</hi>, the images are notably absent from most extant copies. Eight copies of the 
+                <hi rend="italic">Image</hi>’s original edition survive today; of these, only one survives with the complete set of plate illustrations (held at Edinburgh University Library) and one other survives with a partial set (at the National Library of Scotland). Although the EUL offers access to its complete copy with all twelve plates, the plate facsimiles are available on a separate online space, disconnected from the full text, and only displayed as lower-quality image files and without machine-readable transcriptions. The markup done for Digital Derricke will be the first time these plates in 
+                <hi rend="italic">The Image of Irelande</hi> have been treated as more than digital scans, inviting discussions on the benefits of TEI markup for visual narratives. Our poster aims to share the approaches we’ve been considering to improve access, accessibility, and situated engagement with text and its twelve woodcut plates. No work is devoid of context, and this digital edition will allow users to see this work across multiple layers: historical, social, cultural and contemporary. What does it mean to read this work now and rediscover it in light of new perspectives on book history and multimodality? How might we place it in conversation with postcolonial studies and English constructions of race? Particularly because the plates are so significant to this work, we must also grapple with issues of accessibility: TEI allows us to represent the visual aspects of Derricke’s narrative to a wider variety of users than previously possible. 
+            </p>
+            <p>Our digital edition will combine transcriptions of Sir Walter Scott’s critical descriptions of the scenes depicted in each image; detailed alt text; and image-anchored TEI markup, modeled after Comic Book Markup Language (Walsh 2012), to invite multiple entry points into examining the plates and their complex relationship with the poetic narrative. Digital Derricke will invite new and existing readers of 
+                <hi rend="italic">The Image of Irelande</hi> to rediscover this important text through an enhanced, comprehensive, and accessible hub, which we hope will open up conversations about early modern iconography, multimodality, non-linear reading, and visual storytelling.
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Derricke, John</hi>. (1581): 
+                        <hi rend="italic">The Image of Irelande with a Discovery of Woodkern</hi>. London: by John Day.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Driscoll, Matthew James, and Elena Pierazzo</hi>, eds. (2016): 
+                        <hi rend="italic">Digital Scholarly Editing: Theories and Practices</hi>. Digital Humanities Series vol. 4. Open Book Publishers. 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Walsh, John A.</hi> (2012): “Comic Book Markup Language: An Introduction and Rationale,” in: 
+                        <hi rend="italic">DHQ</hi> 6.1. &lt;http://www.digitalhumanities.org/dhq/vol/6/1/000117/000117.html&gt;.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

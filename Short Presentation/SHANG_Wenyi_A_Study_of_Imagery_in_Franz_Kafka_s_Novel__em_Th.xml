@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SHANG_Wenyi_A_Study_of_Imagery_in_Franz_Kafka_s_Novel__em_Th">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>A Study of Imagery in Franz Kafka’s Novel &lt;em&gt;The Trial&lt;/em&gt; Through&lt;em&gt; &lt;/em&gt;Illustrated Editions</title>
+                <author>
+                    <persName>
+                        <surname>Strathausen</surname>
+                        <forename>Carsten</forename>
+                    </persName>
+                    <affiliation>University of Missouri, United States of America</affiliation>
+                    <email>strathausenc@missouri.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Shang</surname>
+                        <forename>Wenyi</forename>
+                    </persName>
+                    <affiliation>University of Missouri, United States of America</affiliation>
+                    <email>wenyishang@missouri.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>visual studies</term>
+                    <term>adaptation studies</term>
+                    <term>modernism</term>
+                    <term>word-image relationship</term>
+                    <term>Kafka</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>image processing and analysis</term>
+                    <term>Literary studies</term>
+                    <term>Media studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">The strong visual nature of Franz Kafka’s prose has been noted by critics ever since his first stories were published in 1908 (Gross 2018), and the recent publication of Kafka’s own drawings prompted calls to recognize an “expand poetics” at work in Kafka’s writing, a poetics “that includes the primary and elementary dimension of the image” (Kilcher 2022: 214). But scholarly studies of visuality in Kafka’s prose continue to operate solely at the semantic level, meaning they examine the imagery of Kafka’s writings solely through close readings of ekphrases, metaphors, symbols, and other rhetorical figures in his texts.</p>
+            <p style="text-align: left; ">We are taking a very different approach. Since Kafka’s writings were inspired by art and visual media at the time, we decided to study the artistic illustrations that were inspired by his writings in return. We identified three illustrated editions of Kafka’s novel 
+                <hi rend="italic">The Trial</hi>, each featuring the work of a single artist: Bergner (1990), Eidus (2003), and Fosshag (Kafka 2005). These artists added captions to their illustrations, quoting Kafka’s text verbatim and thereby establishing a direct link between word and image. The dataset consists of all 85 images from the three editions that have corresponding text: 21 from Fosshag, and 32 each from Bergner and Eidus.
+            </p>
+            <figure>
+                <graphic n="1001" width="16.002cm" height="9.496777777777778cm" url="/tmp/tmpjw58e72g/Pictures/b78c5fe5567cd305f598e45a06f909e2.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">
+                <hi rend="bold">Figure 1.</hi> Distribution of images across chapters in the three illustrated editions of 
+                <hi rend="italic">The Trial</hi>
+            </p>
+            <p style="text-align: left; ">As is shown in Figure 1, Chapter 7 is the most illustrated chapter of 
+                <hi rend="italic">The Trial</hi> across the three illustrated editions. The most obvious interpretation of this result is text length. Chapter 7, in the Critical Edition (Kafka 1990), is the longest chapter and presumably offers more scenes and events for artists to illustrate. Yet the length of a chapter says little about its significance for the novel as a whole. In terms of plot development, chapter 7 is the least relevant overall, because it consists largely of characters’ reflections and dialogues about the impenetrable nature of the law. Therefore, it appears that artists select the passages they illustrate regardless of their hermeneutic or narrative significance for the larger whole. What matters to illustrators takes place at the sentence level of Kafka’s text rather than the work level.
+            </p>
+            <p style="text-align: left; ">Our next experiment confirmed this hypothesis. We trained two machine learning classifiers to independently classify the chapter for each image using low- and high-level features, respectively. The low-level features—brightness, contrast, sharpness, and edge density—were extracted through grayscale image processing techniques with OpenCV (Bradski 2000). High-level features, capturing abstract patterns in 2,048-dimensional vectors, were extracted using a ResNet50 model pre-trained on ImageNet (He et al. 2016). We classified 81 images into 8 chapters (excluding Chapters 2 and 5, which had only 1 and 3 instances, respectively) using 5-fold cross-validation with a logistic regression model implemented in scikit-learn (Pedregosa et al. 2011).</p>
+            <figure>
+                <graphic n="1002" width="16.002cm" height="6.757458333333333cm" url="/tmp/tmpjw58e72g/Pictures/b78c5fe5567cd305f598e45a06f909e2.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">
+                <hi rend="bold">Figure 2.</hi> Heatmaps of chapter classification for low-level and high-level feature classifiers
+            </p>
+            <p style="text-align: left; ">The classifier based on low-level features achieves an accuracy of 0.3 and a macro F1 score of 0.28, indicating minimal visual coherence among the illustrations of a given chapter in terms of low-level features. Counterintuitively, the classifier based on high-level features performs even worse, achieving the same accuracy of 0.3 and a lower macro F1 score of 0.17. A closer examination of the heatmaps reveals that, unlike the low-level feature classifier, the high-level feature classifier simply assigned nearly all images to Chapter 7, the largest class, underscoring its poor performance.</p>
+            <p style="text-align: left; ">In summary, the results of the classification experiments align with the observations from Figure 1, reinforcing the hypothesis that illustrations in 
+                <hi rend="italic">The Trial</hi> are not guided by the broader structural units of the text, such as chapters. Notably, the unexpectedly poor performance of the high-level feature classifier highlights a significant mismatch between the pre-trained model, designed for general-purpose object classification, and the specific artistic nuances of the images in 
+                <hi rend="italic">The Trial</hi>. By contrast, low-level features capture intrinsic image properties that correspond more closely to artistic themes, resulting in slightly better classifier performance.
+            </p>
+            <p style="text-align: left; ">Finally, we calculated sentiment scores for the captions included by artists as part of their illustrations of 
+                <hi rend="italic">The Trial</hi>. Using the SentiWS dataset (Remus et al. 2010), a lexicon of German words with associated sentiment scores, we computed the average sentiment score for each caption. We then analyzed the relationship between these sentiment scores, as well as their absolute values, and the visual features of the corresponding images, namely brightness, contrast, sharpness, and edge density.
+            </p>
+            <figure>
+                <graphic n="1003" width="16.002cm" height="6.910916666666667cm" url="/tmp/tmpjw58e72g/Pictures/b78c5fe5567cd305f598e45a06f909e2.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">
+                <hi rend="bold">Figure 3.</hi> Relationships between visual features of images and sentiment scores and their absolute values of corresponding texts
+            </p>
+            <p style="text-align: left; ">The first row of Figure 3 indicates no statistically significant correlation between sentiment score and any visual feature, as shown by the Pearson correlation coefficients (Pearson 1901) and their corresponding p-values (
+                <hi rend="italic">p</hi>&gt;0.05). However, the second row reveals that the absolute value of sentiment score is negatively correlated with brightness (
+                <hi rend="italic">p</hi>=0.019) and positively correlated with contrast (
+                <hi rend="italic">p</hi>=0.003). Moreover, when these correlations are computed separately for each of the three artists, the Pearson coefficients with brightness remain negative for all artists, and those with contrast remain positive. While it is expected that emotionally charged sentences would prompt illustrations with strong contrast to visually express this charge, the correlation between high-sentiment texts and less bright illustrations warrants further explanation. This pattern might reflect Kafka’s reputation as a “dark” modernist writer. Empirical studies have shown that readers worldwide associate Kafka with terms such as “paradox,” “difficult,” and “cruel” (https://www.kafka-atlas.org/survey-public), potentially influencing artists to depict even positive sentiments with darkness rather than brightness.
+            </p>
+            <p style="text-align: left; ">To conclude, our empirical findings demonstrate that the images in the illustrated editions of 
+                <hi rend="italic">The Trial</hi> are more closely associated with smaller structural units, such as sentences, rather than larger ones, such as chapters. Moreover, both the images and their corresponding texts in 
+                <hi rend="italic">The Trial</hi> exhibit artistic and hermeneutic nuances that highlight the need for fine-tuning classification models and exploring more tailored approaches to understanding the relationship between visual features and text sentiment, which we plan to address in future work.
+            </p>
+            <p style="text-align: left; ">The primary limitation of our study is that our small corpus comprises works by only three artists, whose individual styles influence their illustrations regardless of the text. However, our initial findings indicate that an artist's style alone does not fully determine their adaptation of a literary source. Instead, the text–image relationship is shaped by multiple factors, including artistic medium, cultural context, and, above all, the source text. In the next phase of this project, we will expand our corpus to over 300 illustrations of 
+                <hi rend="italic" xml:space="preserve">The Trial </hi>by 20 different artists, thereby improving the generalizability of our results and uncovering additional nuances.
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bergner, Yosl</hi> (1990): 
+                        <hi rend="italic">Paintings to Franz Kafka</hi>. Tel Aviv: Shva Publishers Ltd.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bradski, Gary</hi> (2000): “The OpenCV Library”, in: 
+                        <hi rend="italic">Dr. Dobb's Journal: Software Tools for the Professional Programmer</hi> 25, 11: 120–123.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Eidus, Lydia</hi> (2003): 
+                        <hi rend="italic">Illustrationen zu Kafkas Erzählungen und Romanen “Der Process” und “Das Schloss”</hi>. Jerusalem: Shva Publishers Ltd.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">He, Kaiming / Zhang, Xiangyu / Ren, Shaoqing / Sun, Jian</hi> (2016): “Deep Residual Learning for Image Recognition”, in: 
+                        <hi rend="italic">Proceedings of the 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</hi>, Las Vegas, NV, June–July 2016: 770–778.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Gross, Ruth V.</hi> (2018): “Early Critical Reception”, in: Duttlinger, Carolin (ed.): 
+                        <hi rend="italic">Franz Kafka in Context</hi>. Cambridge: Cambridge University Press 259–266.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kafka, Franz</hi> (1990): 
+                        <hi rend="italic">Der Process: Roman. Kritische Ausgabe</hi>. Edited by Malcolm Pasley. Frankfurt: S. Fischer.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kafka, Franz</hi> (2005): 
+                        <hi rend="italic">Der Prozess. Roman. Mit 24 Illustrationen von Bengt Fosshag</hi>. Frankfurt: Büchergilde Gutenberg.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kilcher, Andreas</hi> (2022): “Kafka’s Drawing and Writing”, in: Kilcher, Andreas (ed.): 
+                        <hi rend="italic">Franz Kafka. The Drawings</hi>. Translated by Kurt Beals. New Haven: Yale University Press 211–276.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Pearson, Karl</hi> (1901): “LIII. On Lines and Planes of Closest Fit to Systems of Points in Space”, in 
+                        <hi rend="italic">The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science</hi> 2, 11: 559–572. DOI: 10.1080/14786440109462720.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Pedregosa, Fabian / Varoquaux, Gaël / Gramfort, Alexandre / Michel, Vincent / Thirion, Bertrand / Grisel, Olivier / Blondel, Mathieu / Prettenhofer, Peter / Weiss, Ron / Dubourg, Vincent / Vanderplas, Jake / Passos, Alexandre / Cournapeau, David / Brucher, Matthieu / Perrot, Matthieu / Duchesnay, Édouard</hi> (2011): “Scikit-Learn: Machine Learning in Python”, 
+                        <hi rend="italic">Journal of Machine Learning Research</hi> 12, 85: 2825–2830.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Remus, Robert / Quasthoff, Uwe / Heyer, Gerhard</hi> (2010): “SentiWS – A Publicly Available German-language Resource for Sentiment Analysis”, in: Calzolari, Nicoletta / Choukri, Khalid / Maegaard, Bente / Mariani, Joseph / Odijk, Jan / Piperidis, Stelios / Rosner, Mike / Tapias, Daniel (eds.): 
+                        <hi rend="italic">Proceedings of the Seventh International Conference on Language Resources and Evaluation (LREC'10)</hi>, Valletta, Malta, May 2010: 1168–1171.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

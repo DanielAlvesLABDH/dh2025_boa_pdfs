@@ -1,0 +1,1528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MOINS_Th_o_One_tree_to_Yule_them_all__Reflexions_on_intertex">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">One tree to Yule them all? Reflexions on intertextuality and text transmission</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Camps</surname>
+                        <forename>Jean-Baptiste</forename>
+                    </persName>
+                    <affiliation>École nationale des chartes, Université PSL, France</affiliation>
+                    <email>jean-baptiste.camps@chartes.psl.eu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Christensen</surname>
+                        <forename>Kelly</forename>
+                    </persName>
+                    <affiliation>École nationale des chartes, Université PSL, France</affiliation>
+                    <email>kelly.christensen@chartes.psl.eu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Godreau</surname>
+                        <forename>Ulysse</forename>
+                    </persName>
+                    <affiliation>École nationale des chartes, Université PSL, France</affiliation>
+                    <email>ulysse.godreau@chartes.psl.eu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Moins</surname>
+                        <forename>Théo</forename>
+                    </persName>
+                    <affiliation>École nationale des chartes, Université PSL, France</affiliation>
+                    <email>theo.moins@chartes.psl.eu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-06T17:12:34.391978960</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>text transmission</term>
+                    <term>medieval manuscript</term>
+                    <term>stochastic processes</term>
+                    <term>complexity science</term>
+                    <term>cultural evolution</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>cultural analytics</term>
+                    <term>data modeling</term>
+                    <term>manuscripts description</term>
+                    <term>representation</term>
+                    <term>and analysis</term>
+                    <term>Literary studies</term>
+                    <term>Mathematics</term>
+                    <term>Philology</term>
+                    <term>Statistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor type="bookmark-start" xml:id="id_introduction"/>Introduction
+                    <ptr type="bookmark-end" target="#id_introduction"/>
+                </head>
+                <p>Text transmission is the process through which a text is disseminated and preserved dynamically through successive reproductions in one or several media (oral or written; manuscript, print or digital). It typically involves modifications, especially when the chain of transmission of a text moves substantially across time, space and cultural contexts, switches between media of transmission or types of reproduction (from paraphrase or citation to copy in full).</p>
+                <p>A typical case of text transmission is the dissemination of literary works in Antiquity and the Middle Ages. In this process, scribes generally use an existing material copy of a text to produce a new one, inducing innovations that can be intentional (e.g. translation, prosification, rewriting) or not (e.g. copy errors). Philologists use a genealogical tree (
+                    <hi rend="italic">stemma codicum</hi>) to represent the relations between the surviving copies, and their shared ancestries based on shared innovations.
+                </p>
+                <p>The relation between a model (exemplar) and its copy can be construed as a specific subtype of intertextuality, i.e. the interrelation between texts in general. Yet, the genealogies seldom represent the relations between all versions of a work, including translations and rewriting, or similar types of derivation, and they even more rarely include other types of intextextual relations (such as inspiration, paraphrase,…), even if there are counter-examples to be found (Aubreton 1968; Bédier 1902; Treutler 1880). Consequently, stemmata represent texts as independent entities, each having its own single root (the authorial manuscript or the latest common ancestor of the surviving copies). This is a strong difference with phylogenetics, in which all species are ultimately united in a single tree of life, going back to the last universal common ancestor of all life on earth (
+                    <hi rend="smallcaps">luca</hi>).
+                </p>
+                <p>The underlying assumption of independence – a conscious simplification made mostly for practical reasons – is not without creating taxonomic difficulties. There is no universally accepted definition in philology as to when two versions, linked by intertextual relations, constitute only two redactions of the same text or two distinct texts. For instance, should the assonanced version of the Song of Roland (Segre 1971) be considered a different text than the rhymed version? Should the Middle Welsh translation (or even its descendants) be considered a witness to the French?</p>
+                <p>Theoretic as this question may seem, it has very concrete implications, for instance in terms of counting surviving (and estimating lost) copies of historical texts. Recent research has attempted to create a dynamic model of text transmission, using a stochastic birth and death model, and has shown results that aligned with existing data in terms of tree topology and of median age and surviving number of documents, allowing inferences on the number of lost works and documents, on a case study of medieval French chivalric narratives (Camps and Randon-Furling 2022). Created using established philological concepts, this model considered all root nodes (of texts) to be independent.</p>
+                <p>Even though correspondence between the model and historical data was shown to be close, we have noticed discrepancies regarding the distribution of witnesses (i.e. surviving copies) per text. Could a model that additionally includes the notion of ‘speciation’ yield results that give a better representation of historical data, confirming the importance of intertextual relations beyond typical copy? In this context, speciation may be understood as representing the creation of a new text, through derivation from an existing witness of the parent text, and could stand for cases such as translation, rewriting, prosification, or even the writing of prequels or sequels.</p>
+                <p>For the present study, we build upon the following definitions (Christensen and Camps 2025):</p>
+                <list type="unordered">
+                    <item>
+                        <hi rend="bold">work</hi> a story, e.g. Perceval and the Grail
+                    </item>
+                    <item>
+                        <hi rend="bold">text</hi> an expression of the story, in a given language and form, for instance Chrétien de Troyes’ 
+                        <hi rend="italic">Conte du graal</hi>; Wolfram von Eschenbach’s 
+                        <hi rend="italic">Parzival</hi>; or the anonymous 
+                        <hi rend="italic">Perceval en prose</hi>
+                    </item>
+                    <item>
+                        <hi rend="bold">witness</hi> a manifestation of the text, through a given copy, for instance, Guyot of Provins’ copy of Chrétien’s 
+                        <hi rend="italic">Conte du graal</hi>, preserved in a physical document.
+                    </item>
+                </list>
+                <p>Yet, even with these specific definitions, used in our research, the level of generality of the model we are going to use make it fit to describe various types of derivation and applicable to other taxonomies.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor type="bookmark-start" xml:id="id_materials-and-methods"/>Materials and methods
+                    <ptr type="bookmark-end" target="#id_materials-and-methods"/>
+                </head>
+                <div type="div2" rend="DH-Heading2">
+                    <head>
+                        <anchor type="bookmark-start" xml:id="id_datasets"/>Datasets
+                        <ptr type="bookmark-end" target="#id_datasets"/>
+                    </head>
+                    <p>We compiled sets of texts and their witnesses from data published in the Forgotten Books research project (Kestemont et al. 2022) as well as the Jonas (Section romane 2024) and Handschriftencensus (Busch and Wolf 2024) databases. It is to be noted that, since those datasets preexisted, we do not control the criteria used to define and distinguish texts. Instead, each database rest upon cumulative philological scholarship in their respective domains.</p>
+                    <p>Table 1. Number of texts and witnesses for the three data sources.</p>
+                    <table rend="frame" xml:id="Table1">
+                        <row role="label">
+                            <cell rend="bold">Source</cell>
+                            <cell>Texts</cell>
+                            <cell>Witnesses</cell>
+                        </row>
+                        <row>
+                            <cell rend="bold">Forgotten Books</cell>
+                            <cell>776</cell>
+                            <cell>3,587</cell>
+                        </row>
+                        <row>
+                            <cell rend="bold">Jonas</cell>
+                            <cell>24,514</cell>
+                            <cell>73,150</cell>
+                        </row>
+                        <row>
+                            <cell rend="bold">Handschriftencensus</cell>
+                            <cell>6,201</cell>
+                            <cell>36,893</cell>
+                        </row>
+                    </table>
+                    <p>Despite their dramatically disparate sizes, the different datasets demonstrate a similar imbalance in the number of surviving witnesses per text: most texts have less than five witnesses, a small minority have dozens of extant copies. At the same time, the probability of having a hundred witnesses is not negligible, see Figure 1. This suggest a heavy-tailed, Pareto-like behaviour for the distribution of witnesses per text, which is a pervasive property in cultural diffusion phenomena (Bentley, Hahn, and Shennan 2004; Newman 2005; Pinto, Lopes, and Machado 2012).</p>
+                    <p>
+                        <figure>
+                            <graphic url="/tmp/tmpvwq5to5f/Pictures/c9f83eda09055185761acd4858007b1c.jpg"/>
+                        </figure>
+                    </p>
+                    <p>Figure 1. Distribution of witnesses per text for the three data sources (in log scale). The linear tendancy of the curves suggests a heavy-tail behavior, rather than an exponential one as the simple birth-death model produces. The artificial dataset (in yellow), generated with known parameters, is one of those used for validation (see Figure 3).</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>
+                        <anchor type="bookmark-start" xml:id="id_from-birth-and-death-processes-to-yules-model"/>From birth-and-death processes to Yule’s model
+                        <ptr type="bookmark-end" target="#id_from-birth-and-death-processes-to-yules-model"/>
+                    </head>
+                    <p>Several attempts have been made at modelling manuscript traditions by stochastic processes since the seminal work of Weitzman in the 1980s (Weitzman 1987; Cisne 2005; Camps and Randon-Furling 2022). These approaches, up to differences in corpora of interest and implementation, including time variations of the parameters of the dynamics, essentially consist in describing text transmission by a birth-and-death process accounting for the continuous creation of new manuscripts, modelled as independent agents, copied from their predecessors with probability 
+                        <figure>
+                            <formula>
+                                <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mi>λ</mi>
+                                </math>
+                            </formula>
+                        </figure> per individual manuscript and unit time, along with their destruction and loss happening with rate 
+                        <figure>
+                            <formula>
+                                <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mi>μ</mi>
+                                </math>
+                            </formula>
+                        </figure>.
+                    </p>
+                    <p>Although these models have been quite successful at reproducing several features of known textual traditions, they predict an exponentially decreasing distribution of the number of extant witnesses per text, incompatible with empirical data (see Figure 1).</p>
+                    <p>Interestingly, the first historical attempt at modelling evolutionary dynamics in biology through stochastic processes (Yule 1925) also aimed at understanding the power law distribution of species per genus. In addition to the simple birth-and-death dynamics, Yule process introduces a 
+                        <hi rend="italic">speciation event</hi> with rate 
+                        <figure>
+                            <formula>
+                                <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mi>γ</mi>
+                                </math>
+                            </formula>
+                        </figure> by which a new agent –representing a species– is created, belonging to a new class –representing a genus. The large time distribution of surviving individuals per class is then known to follow the 
+                        <hi rend="italic">Yule-Simon</hi> distribution, with asymptotic power-law behaviour.
+                    </p>
+                    <p>In our approach we model simultaneously the creation of independent traditions, appearing with rate 
+                        <figure>
+                            <formula>
+                                <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mi>Λ</mi>
+                                </math>
+                            </formula>
+                        </figure> as a single living agent, and the internal process of speciation within traditions with rate 
+                        <figure>
+                            <formula>
+                                <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mi>γ</mi>
+                                </math>
+                            </formula>
+                        </figure>. This implies adding two additional parameters to the birth-and-death model, resulting in the parameter set 
+                        <figure>
+                            <formula>
+                                <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mstyle mathvariant="bold">
+                                            <mi>𝛉</mi>
+                                        </mstyle>
+                                        <mo>=</mo>
+                                        <mo stretchy="false" form="prefix">(</mo>
+                                        <mi>Λ</mi>
+                                        <mo>,</mo>
+                                        <mi>λ</mi>
+                                        <mo>,</mo>
+                                        <mi>μ</mi>
+                                        <mo>,</mo>
+                                        <mi>γ</mi>
+                                        <mo stretchy="false" form="postfix">)</mo>
+                                    </mrow>
+                                </math>
+                            </formula>
+                        </figure>.
+                    </p>
+                    <p>Table 2. Main hyperparameters and parameters of the model. The values for (
+                        <figure>
+                            <formula>
+                                <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <msub>
+                                        <mi>T</mi>
+                                        <mtext mathvariant="normal">act</mtext>
+                                    </msub>
+                                </math>
+                            </formula>
+                        </figure>, 
+                        <figure>
+                            <formula>
+                                <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <msub>
+                                        <mi>T</mi>
+                                        <mtext mathvariant="normal">inact</mtext>
+                                    </msub>
+                                </math>
+                            </formula>
+                        </figure>, 
+                        <figure>
+                            <formula>
+                                <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mi>K</mi>
+                                </math>
+                            </formula>
+                        </figure>, 
+                        <figure>
+                            <formula>
+                                <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <msub>
+                                        <mi>N</mi>
+                                        <mn>0</mn>
+                                    </msub>
+                                </math>
+                            </formula>
+                        </figure>) are the one used for estimations. The intervals for 
+                        <figure>
+                            <formula>
+                                <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mo stretchy="false" form="prefix">(</mo>
+                                        <mi>Λ</mi>
+                                        <mo>,</mo>
+                                        <mi>λ</mi>
+                                        <mo>,</mo>
+                                        <mi>μ</mi>
+                                        <mo>,</mo>
+                                        <mi>γ</mi>
+                                        <mo stretchy="false" form="postfix">)</mo>
+                                    </mrow>
+                                </math>
+                            </formula>
+                        </figure> define the initial search space for each parameter in our inference procedure.
+                    </p>
+                    <table rend="frame" xml:id="Table2">
+                        <row role="label">
+                            <cell/>
+                            <cell rend="bold">Definition</cell>
+                            <cell rend="end bold">Values</cell>
+                        </row>
+                        <row>
+                            <cell>
+                                <figure>
+                                    <formula>
+                                        <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                            <msub>
+                                                <mi>T</mi>
+                                                <mtext mathvariant="normal">act</mtext>
+                                            </msub>
+                                        </math>
+                                    </formula>
+                                </figure>
+                            </cell>
+                            <cell>Duration of the active phase (n. time steps)</cell>
+                            <cell rend="end">
+                                <figure>
+                                    <formula>
+                                        <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                            <mn>1000</mn>
+                                        </math>
+                                    </formula>
+                                </figure>
+                            </cell>
+                        </row>
+                        <row>
+                            <cell>
+                                <figure>
+                                    <formula>
+                                        <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                            <msub>
+                                                <mi>T</mi>
+                                                <mtext mathvariant="normal">inact</mtext>
+                                            </msub>
+                                        </math>
+                                    </formula>
+                                </figure>
+                            </cell>
+                            <cell>Duration of the inactive phase (n. time steps)</cell>
+                            <cell rend="end">
+                                <figure>
+                                    <formula>
+                                        <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                            <mn>1000</mn>
+                                        </math>
+                                    </formula>
+                                </figure>
+                            </cell>
+                        </row>
+                        <row>
+                            <cell>
+                                <figure>
+                                    <formula>
+                                        <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                            <mi>K</mi>
+                                        </math>
+                                    </formula>
+                                </figure>
+                            </cell>
+                            <cell>Tradition’s maximum population size</cell>
+                            <cell rend="end">
+                                <figure>
+                                    <formula>
+                                        <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                            <mn>500000</mn>
+                                        </math>
+                                    </formula>
+                                </figure>
+                            </cell>
+                        </row>
+                        <row>
+                            <cell>
+                                <figure>
+                                    <formula>
+                                        <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                            <msub>
+                                                <mi>N</mi>
+                                                <mn>0</mn>
+                                            </msub>
+                                        </math>
+                                    </formula>
+                                </figure>
+                            </cell>
+                            <cell>Initial number of traditions</cell>
+                            <cell rend="end">
+                                <figure>
+                                    <formula>
+                                        <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                            <mn>1</mn>
+                                        </math>
+                                    </formula>
+                                </figure>
+                            </cell>
+                        </row>
+                        <row>
+                            <cell>
+                                <figure>
+                                    <formula>
+                                        <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                            <mi>Λ</mi>
+                                        </math>
+                                    </formula>
+                                </figure>
+                            </cell>
+                            <cell>Average number of new traditions per time step (root birth rate)</cell>
+                            <cell rend="end">
+                                <figure>
+                                    <formula>
+                                        <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                            <mrow>
+                                                <mo stretchy="false" form="prefix">[</mo>
+                                                <mn>0</mn>
+                                                <mo>,</mo>
+                                                <mn>1</mn>
+                                                <mo stretchy="false" form="postfix">]</mo>
+                                            </mrow>
+                                        </math>
+                                    </formula>
+                                </figure>
+                            </cell>
+                        </row>
+                        <row>
+                            <cell>
+                                <figure>
+                                    <formula>
+                                        <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                            <mi>λ</mi>
+                                        </math>
+                                    </formula>
+                                </figure>
+                            </cell>
+                            <cell>Probability of a witness being copied (node birth rate)</cell>
+                            <cell rend="end">
+                                <figure>
+                                    <formula>
+                                        <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                            <mrow>
+                                                <mo stretchy="false" form="prefix">[</mo>
+                                                <mn>0</mn>
+                                                <mo>,</mo>
+                                                <mn>0.05</mn>
+                                                <mo stretchy="false" form="postfix">]</mo>
+                                            </mrow>
+                                        </math>
+                                    </formula>
+                                </figure>
+                            </cell>
+                        </row>
+                        <row>
+                            <cell>
+                                <figure>
+                                    <formula>
+                                        <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                            <mi>μ</mi>
+                                        </math>
+                                    </formula>
+                                </figure>
+                            </cell>
+                            <cell>Probability of a witness being destroyed (node death rate)</cell>
+                            <cell rend="end">
+                                <figure>
+                                    <formula>
+                                        <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                            <mrow>
+                                                <mo stretchy="false" form="prefix">[</mo>
+                                                <mn>0</mn>
+                                                <mo>,</mo>
+                                                <mn>0.01</mn>
+                                                <mo stretchy="false" form="postfix">]</mo>
+                                            </mrow>
+                                        </math>
+                                    </formula>
+                                </figure>
+                            </cell>
+                        </row>
+                        <row>
+                            <cell>
+                                <figure>
+                                    <formula>
+                                        <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                            <mi>γ</mi>
+                                        </math>
+                                    </formula>
+                                </figure>
+                            </cell>
+                            <cell>Probability of a new witness to manifest a new derived text (speciation rate)</cell>
+                            <cell rend="end">
+                                <figure>
+                                    <formula>
+                                        <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                            <mrow>
+                                                <mo stretchy="false" form="prefix">[</mo>
+                                                <mn>0</mn>
+                                                <mo>,</mo>
+                                                <mn>0.01</mn>
+                                                <mo stretchy="false" form="postfix">]</mo>
+                                            </mrow>
+                                        </math>
+                                    </formula>
+                                </figure>
+                            </cell>
+                        </row>
+                    </table>
+                    <p>
+                        <figure>
+                            <graphic url="/tmp/tmpvwq5to5f/Pictures/c9f83eda09055185761acd4858007b1c.jpg"/>
+                        </figure>
+                    </p>
+                    <p>Figure 2. Example of a tree generated by the model. The tree stands for a single 
+                        <hi rend="italic">work</hi>, but the nodes are distributed in different 
+                        <hi rend="italic">text versions</hi> that arise through speciation events, and are shown here in different colours
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>
+                        <anchor type="bookmark-start" xml:id="id_likelihood-free-inference-for-yules-parameter"/>Likelihood-free inference for Yule’s parameter
+                        <ptr type="bookmark-end" target="#id_likelihood-free-inference-for-yules-parameter"/>
+                    </head>
+                    <p>The obtained process introduces significant complexity to the inference problem: in addition to the four parameter to infer, several additional hyperparameters must be provided for the simulation (see ): a number of active (and inactive, when there is only deaths) time steps which defines the time scale in which we operate, and a theoretical maximum population 
+                        <figure>
+                            <formula>
+                                <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mi>K</mi>
+                                </math>
+                            </formula>
+                        </figure> and an initial number of traditions 
+                        <figure>
+                            <formula>
+                                <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <msub>
+                                        <mi>N</mi>
+                                        <mn>0</mn>
+                                    </msub>
+                                </math>
+                            </formula>
+                        </figure> to control the generation of new individuals. The interaction between these parameters and hyperparameters produces complex tree structures through time, making the likelihood function analytically intractable.
+                    </p>
+                    <p>Several frameworks exist for inference in that case. Among them, Approximate Bayesian Computation (ABC, Sisson, Fan, and Beaumont 2018) allows us to perform a complete Bayesian analysis without explicitly evaluating the likelihood. Recently, Simulation-Based Inference (SBI, Cranmer, Brehmer, and Louppe 2020) methods have emerged as powerful alternatives to traditional ABC approaches. These techniques leverage neural networks to automatically learn the relationship between simulation outputs and model parameters, effectively constructing an approximation of the posterior distribution of the parameters 
+                        <figure>
+                            <formula>
+                                <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mo stretchy="false" form="prefix">(</mo>
+                                        <mi>Λ</mi>
+                                        <mo>,</mo>
+                                        <mi>λ</mi>
+                                        <mo>,</mo>
+                                        <mi>μ</mi>
+                                        <mo>,</mo>
+                                        <mi>γ</mi>
+                                        <mo stretchy="false" form="postfix">)</mo>
+                                    </mrow>
+                                </math>
+                            </formula>
+                        </figure>. Here, we use a multi-round version of one methode called Neural Posterior Estimation (NPE). The aim of running several rounds is to iteratively focus simulations on promising regions of the parameter space, refining the posterior approximation by concentrating computational resources where they matter most specifically for each dataset. Some results obtained after 5 rounds of NPE are presented in Figure 
+                        <ref target="#fig:pairplot">3</ref> on an artificial dataset with known parameters, and in Table 
+                        <ref target="#tab:post_summary">3</ref> and Figure 
+                        <ref target="#fig:pairplot2">4</ref> for our three corpora. While the estimation of the root birth rate 
+                        <figure>
+                            <formula>
+                                <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mi>Λ</mi>
+                                </math>
+                            </formula>
+                        </figure> requires further refinement, we recovers the key correlations between 
+                        <figure>
+                            <formula>
+                                <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mi>λ</mi>
+                                </math>
+                            </formula>
+                        </figure> and 
+                        <figure>
+                            <formula>
+                                <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mi>μ</mi>
+                                </math>
+                            </formula>
+                        </figure> identified in previously in (Camps and Randon-Furling 2022), while additionally highlighting distinct regions of interest in the full parameter space 
+                        <figure>
+                            <formula>
+                                <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mo stretchy="false" form="prefix">(</mo>
+                                        <mi>Λ</mi>
+                                        <mo>,</mo>
+                                        <mi>λ</mi>
+                                        <mo>,</mo>
+                                        <mi>γ</mi>
+                                        <mo>,</mo>
+                                        <mi>μ</mi>
+                                        <mo stretchy="false" form="postfix">)</mo>
+                                    </mrow>
+                                </math>
+                            </formula>
+                        </figure> that characterise the different manuscript traditions.
+                    </p>
+                    <p>
+                        <figure>
+                            <graphic url="/tmp/tmpvwq5to5f/Pictures/c9f83eda09055185761acd4858007b1c.jpg"/>
+                        </figure>
+                    </p>
+                    <p>Figure 3. Parameter estimates for our Yule model (
+                        <figure>
+                            <formula>
+                                <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mi>Λ</mi>
+                                </math>
+                            </formula>
+                        </figure>: new tradition rate, 
+                        <figure>
+                            <formula>
+                                <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mi>λ</mi>
+                                </math>
+                            </formula>
+                        </figure>: copy rate, 
+                        <figure>
+                            <formula>
+                                <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mi>γ</mi>
+                                </math>
+                            </formula>
+                        </figure>: speciation rate, 
+                        <figure>
+                            <formula>
+                                <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mi>μ</mi>
+                                </math>
+                            </formula>
+                        </figure>: death rate) using artificial data. Diagonal panels show marginal posterior distributions for each parameter, while off-diagonal panels show joint distributions between parameter pairs. Black star markers indicate the true parameter values used to generate the synthetic dataset, and happens to be inside the inferred zone.
+                    </p>
+                    <p>
+                        <figure>
+                            <graphic url="/tmp/tmpvwq5to5f/Pictures/c9f83eda09055185761acd4858007b1c.jpg"/>
+                        </figure>
+                    </p>
+                    <p>Figure 4. Parameters estimates for our Yule model across the three datasets (Handschriftencensus, Jonas, Forgotten Books). Diagonal panels show marginal posterior distributions for each parameter, while off-diagonal panels show joint distributions between parameter pairs. Point markers indicate the point estimation in Table 
+                        <ref target="#tab:post_summary">3</ref>, which is the median estimates for each dataset. The pairwise relationships between 
+                        <figure>
+                            <formula>
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <semantics>
+                                        <mi>λ</mi>
+                                        <annotation encoding="StarMath 5.0">λ</annotation>
+                                    </semantics>
+                                </math>
+                            </formula>
+                        </figure>, 
+                        <figure>
+                            <formula>
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <semantics>
+                                        <mi>γ</mi>
+                                        <annotation encoding="StarMath 5.0">γ</annotation>
+                                    </semantics>
+                                </math>
+                            </formula>
+                        </figure> and 
+                        <figure>
+                            <formula>
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <semantics>
+                                        <mi>μ</mi>
+                                        <annotation encoding="StarMath 5.0">μ</annotation>
+                                    </semantics>
+                                </math>
+                            </formula>
+                        </figure> reveal strong parameter dependencies, highlighting distinct regions of interest that characterize each corpus’s unique transmission dynamics.
+                    </p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor type="bookmark-start" xml:id="id_discussion"/>Discussion
+                    <ptr type="bookmark-end" target="#id_discussion"/>
+                </head>
+                <p>Table 3. Estimations of the four parameters of the Yule model along with their credible intervals at 95%. The values presented here can be visualized along the diagonal of Figure 
+                    <ref target="#fig:pairplot2">4</ref>.
+                </p>
+                <table rend="frame" xml:id="Table3">
+                    <row role="label">
+                        <cell/>
+                        <cell rend="bold">Forgotten Books</cell>
+                        <cell rend="bold">Handschriftencensus</cell>
+                        <cell rend="bold">Jonas</cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mi>Λ</mi>
+                                    </math>
+                                </formula>
+                            </figure>
+                        </cell>
+                        <cell>
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>7</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>3.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>1</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure>∈ [
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>1</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>8.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>1</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure>, 
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>9</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>7.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>1</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure>]
+                        </cell>
+                        <cell>
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>5</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>5.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>1</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure>∈ [
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>5</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>8.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>2</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure>, 
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>9</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>5.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>1</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure>]
+                        </cell>
+                        <cell>
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>4</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>7.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>1</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure> ∈ [
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>5</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>9.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>2</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure>, 
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>9</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>7.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>1</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure>]
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mi>λ</mi>
+                                    </math>
+                                </formula>
+                            </figure>
+                        </cell>
+                        <cell>
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>3</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>7.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>3</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure> ∈ [
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>2</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>8.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>3</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure>, 
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>4</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>2.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>3</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure>]
+                        </cell>
+                        <cell>
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>8</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>0.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>3</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure> ∈[
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>5</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>3.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>3</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure>, 
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>1</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>2.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>2</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure>]
+                        </cell>
+                        <cell>
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>6</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>6.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>3</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure> ∈ [
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>5</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>7.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>3</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure>, 
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>8</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>2.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>3</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure>]
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mi>μ</mi>
+                                    </math>
+                                </formula>
+                            </figure>
+                        </cell>
+                        <cell>
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>1</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>6.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>4</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure> ∈ [
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>1</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>5.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>5</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure>, 
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>8</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>7.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>4</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure>]
+                        </cell>
+                        <cell>
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>1</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>6.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>3</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure> ∈ [
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>1</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>7.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>4</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure>, 
+                            <figure>
+                                <formula>
+                                    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mrow>
+                                            <mn>4</mn>
+                                            <mo>,</mo>
+                                            <msup>
+                                                <mn>1.10</mn>
+                                                <mrow>
+                                                    <mo>−</mo>
+                                                    <mn>3</mn>
+                                                </mrow>
+                                            </msup>
+                                        </mrow>
+                                    </math>
+                                </formula>
+                            </figure>]
+                        </cell>
+                        <cell>
+                            <figure>
+                                <formula>
+                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <semantics>
+                                            <mrow>
+                                                <mn>5</mn>
+                                                <mi>,</mi>
+                                                <msup>
+                                                    <mn>6.10</mn>
+                                                    <mrow>
+                                                        <mo stretchy="false">−</mo>
+                                                        <mn>4</mn>
+                                                    </mrow>
+                                                </msup>
+                                            </mrow>
+                                            <annotation encoding="StarMath 5.0">{ 5 , 6.10 ^ { - 4 } }</annotation>
+                                        </semantics>
+                                    </math>
+                                </formula>
+                            </figure> ∈ [
+                            <figure>
+                                <formula>
+                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <semantics>
+                                            <mrow>
+                                                <mn>1</mn>
+                                                <mi>,</mi>
+                                                <msup>
+                                                    <mn>1.10</mn>
+                                                    <mrow>
+                                                        <mo stretchy="false">−</mo>
+                                                        <mn>4</mn>
+                                                    </mrow>
+                                                </msup>
+                                            </mrow>
+                                            <annotation encoding="StarMath 5.0">{ 1 , 1.10 ^ { - 4 } }</annotation>
+                                        </semantics>
+                                    </math>
+                                </formula>
+                            </figure>, 
+                            <figure>
+                                <formula>
+                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <semantics>
+                                            <mrow>
+                                                <mn>1</mn>
+                                                <mi>,</mi>
+                                                <msup>
+                                                    <mn>3.10</mn>
+                                                    <mrow>
+                                                        <mo stretchy="false">−</mo>
+                                                        <mn>3</mn>
+                                                    </mrow>
+                                                </msup>
+                                            </mrow>
+                                            <annotation encoding="StarMath 5.0">{ 1 , 3.10 ^ { - 3 } }</annotation>
+                                        </semantics>
+                                    </math>
+                                </formula>
+                            </figure>]
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <figure>
+                                <formula>
+                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <semantics>
+                                            <mi>γ</mi>
+                                            <annotation encoding="StarMath 5.0">γ</annotation>
+                                        </semantics>
+                                    </math>
+                                </formula>
+                            </figure>
+                        </cell>
+                        <cell>
+                            <figure>
+                                <formula>
+                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <semantics>
+                                            <mrow>
+                                                <mn>5</mn>
+                                                <mi>,</mi>
+                                                <msup>
+                                                    <mn>1.10</mn>
+                                                    <mrow>
+                                                        <mo stretchy="false">−</mo>
+                                                        <mn>4</mn>
+                                                    </mrow>
+                                                </msup>
+                                            </mrow>
+                                            <annotation encoding="StarMath 5.0">{ 5 , 1.10 ^ { - 4 } }</annotation>
+                                        </semantics>
+                                    </math>
+                                </formula>
+                            </figure> ∈ [
+                            <figure>
+                                <formula>
+                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <semantics>
+                                            <mrow>
+                                                <mn>3</mn>
+                                                <mi>,</mi>
+                                                <msup>
+                                                    <mn>5.10</mn>
+                                                    <mrow>
+                                                        <mo stretchy="false">−</mo>
+                                                        <mn>4</mn>
+                                                    </mrow>
+                                                </msup>
+                                            </mrow>
+                                            <annotation encoding="StarMath 5.0">{ 3 , 5.10 ^ { - 4 } }</annotation>
+                                        </semantics>
+                                    </math>
+                                </formula>
+                            </figure>, 
+                            <figure>
+                                <formula>
+                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <semantics>
+                                            <mrow>
+                                                <mn>8</mn>
+                                                <mi>,</mi>
+                                                <msup>
+                                                    <mn>2.10</mn>
+                                                    <mrow>
+                                                        <mo stretchy="false">−</mo>
+                                                        <mn>4</mn>
+                                                    </mrow>
+                                                </msup>
+                                            </mrow>
+                                            <annotation encoding="StarMath 5.0">{ 8 , 2.10 ^ { - 4 } }</annotation>
+                                        </semantics>
+                                    </math>
+                                </formula>
+                            </figure>]
+                        </cell>
+                        <cell>
+                            <figure>
+                                <formula>
+                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <semantics>
+                                            <mrow>
+                                                <mn>6</mn>
+                                                <mi>,</mi>
+                                                <msup>
+                                                    <mn>1.10</mn>
+                                                    <mrow>
+                                                        <mo stretchy="false">−</mo>
+                                                        <mn>4</mn>
+                                                    </mrow>
+                                                </msup>
+                                            </mrow>
+                                            <annotation encoding="StarMath 5.0">{ 6 , 1.10 ^ { - 4 } }</annotation>
+                                        </semantics>
+                                    </math>
+                                </formula>
+                            </figure> ∈ [
+                            <figure>
+                                <formula>
+                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <semantics>
+                                            <mrow>
+                                                <mn>4</mn>
+                                                <mi>,</mi>
+                                                <msup>
+                                                    <mn>2.10</mn>
+                                                    <mrow>
+                                                        <mo stretchy="false">−</mo>
+                                                        <mn>4</mn>
+                                                    </mrow>
+                                                </msup>
+                                            </mrow>
+                                            <annotation encoding="StarMath 5.0">{ 4 , 2.10 ^ { - 4 } }</annotation>
+                                        </semantics>
+                                    </math>
+                                </formula>
+                            </figure>, 
+                            <figure>
+                                <formula>
+                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <semantics>
+                                            <mrow>
+                                                <mn>9</mn>
+                                                <mi>,</mi>
+                                                <msup>
+                                                    <mn>6.10</mn>
+                                                    <mrow>
+                                                        <mo stretchy="false">−</mo>
+                                                        <mn>4</mn>
+                                                    </mrow>
+                                                </msup>
+                                            </mrow>
+                                            <annotation encoding="StarMath 5.0">{ 9 , 6.10 ^ { - 4 } }</annotation>
+                                        </semantics>
+                                    </math>
+                                </formula>
+                            </figure>]
+                        </cell>
+                        <cell>
+                            <figure>
+                                <formula>
+                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <semantics>
+                                            <mrow>
+                                                <mn>2</mn>
+                                                <mi>,</mi>
+                                                <msup>
+                                                    <mn>1.10</mn>
+                                                    <mrow>
+                                                        <mo stretchy="false">−</mo>
+                                                        <mn>3</mn>
+                                                    </mrow>
+                                                </msup>
+                                            </mrow>
+                                            <annotation encoding="StarMath 5.0">{ 2 , 1.10 ^ { - 3 } }</annotation>
+                                        </semantics>
+                                    </math>
+                                </formula>
+                            </figure>∈ [
+                            <figure>
+                                <formula>
+                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <semantics>
+                                            <mrow>
+                                                <mn>1</mn>
+                                                <mi>,</mi>
+                                                <msup>
+                                                    <mn>8.10</mn>
+                                                    <mrow>
+                                                        <mo stretchy="false">−</mo>
+                                                        <mn>3</mn>
+                                                    </mrow>
+                                                </msup>
+                                            </mrow>
+                                            <annotation encoding="StarMath 5.0">{ 1 , 8.10 ^ { - 3 } }</annotation>
+                                        </semantics>
+                                    </math>
+                                </formula>
+                            </figure>, 
+                            <figure>
+                                <formula>
+                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <semantics>
+                                            <mrow>
+                                                <mn>2</mn>
+                                                <mi>,</mi>
+                                                <msup>
+                                                    <mn>8.10</mn>
+                                                    <mrow>
+                                                        <mo stretchy="false">−</mo>
+                                                        <mn>3</mn>
+                                                    </mrow>
+                                                </msup>
+                                            </mrow>
+                                            <annotation encoding="StarMath 5.0">{ 2 , 8.10 ^ { - 3 } }</annotation>
+                                        </semantics>
+                                    </math>
+                                </formula>
+                            </figure>]
+                        </cell>
+                    </row>
+                </table>
+                <p>To fully validate the significance of intertextual relationships in manuscript transmission, our investigation must proceed along three complementary axes. First, we need to apply our inference framework across different textual corpora (see Table 1). Second, we must compare the performance of our Yule-based model against other candidates, particularly the simpler birth-death process, using formal model selection techniques. Finally, different algorithm choices should be tested to ensure the robustness of our conclusions. We plan to further investigate in these directions to better represent text transmission. If our current insights are confirmed, the use of Yule’s model may constitute an advancement in the modelling of text transmission, beyond the simple birth-and-death processes already suggested, as a case of cultural drift. From this basis, it will be possible to see if further refinements are necessary, such as the introduction of a process of selection (modelling cultural preferences), or more generally, the use of the very large array of phylogenetic methods currently available for modelling species diversification (Morlon et al. 2024).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor type="bookmark-start" xml:id="id_supplementary-material"/>Supplementary material
+                    <ptr type="bookmark-end" target="#id_supplementary-material"/>
+                </head>
+                <p>Code for the model and for the ABC method will be available at the Github repository of the LostMa project, 
+                    <ptr target="https://github.com/LostMa-ERC/BayesYule"/>, and archived on Zenodo, 
+                    <ptr target="https://doi.org/10.5281/zenodo.15350478"/>.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor type="bookmark-start" xml:id="id_acknowledgements"/>Acknowledgements
+                    <ptr type="bookmark-end" target="#id_acknowledgements"/>
+                </head>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpvwq5to5f/Pictures/c9f83eda09055185761acd4858007b1c.jpg"/>
+                    </figure> Funded by the European Union (ERC, LostMA, 101117408). Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Council. Neither the European Union nor the granting authority can be held responsible for them.
+                </p>
+                <p>The authors would like to thank the two reviewers, Wouter Haverals and Stefanie Schneider, for their insightful suggestions. Errors remain our own.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Aubreton, Robert</hi>. 1968. “La Tradition Manuscrite Des épigrammes de L’Anthologie Palatine.” 
+                        <hi rend="italic">Revue Des études Anciennes</hi> 70 (1): 32–82.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Bédier, Joseph</hi>, ed. 1902. 
+                        <hi rend="italic">Thomas d’Angleterre: Le Roman de Tristan, Poème Du XIIe Siècle</hi>. Paris, France: Librairie de Firmin Didot et Cie.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Bentley, R Alexander, Matthew W Hahn, and Stephen J Shennan</hi>. 2004. “Random Drift and Culture Change.” 
+                        <hi rend="italic">Proceedings of the Royal Society of London. Series B: Biological Sciences</hi> 271 (1547): 1443–50.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Busch, Nathanael, and Jürgen Wolf</hi>, eds. 2024. 
+                        <hi rend="italic">Handschriftencensus</hi>. Database. Akademie der Wissenschaften und der Literatur Mainz. 
+                        <ref target="https://handschriftencensus.de/">https://handschriftencensus.de</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Camps, Jean-Baptiste, and Julien Randon-Furling</hi>. 2022. “Lost Manuscripts and Extinct Texts: A Dynamic Model of Cultural Transmission.” In 
+                        <hi rend="italic">Proceedings of the Computational Humanities Research Conference 2022 Antwerp, Belgium, December 12-14, 2022</hi>, 198–214. CEUR Workshop Proceedings. 
+                        <ptr target="https://ceur-ws.org/Vol-3290/long_paper3261.pdf"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Christensen, Kelly, and Jean-Baptiste Camps</hi>. 2025. “Greening Your Database of Literary Works: How to Avoid Reinventing Vocabularies, in Favor of Sustainable, Reusable Models.” In 
+                        <hi rend="italic">Digital Humanities 2025: Book of Abstracts</hi>. Lisbon.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Cisne, John L.</hi> 2005. “How Science Survived: Medieval Manuscripts’ "Demography" and Classic Texts’ Extinction.” 
+                        <hi rend="italic">Science</hi> 307 (5713): 1305–7. 
+                        <ptr target="https://doi.org/10.1126/science.1104718"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Cranmer, Kyle, Johann Brehmer, and Gilles Louppe</hi>. 2020. “The Frontier of Simulation-Based Inference.” 
+                        <hi rend="italic">Proceedings of the National Academy of Sciences</hi> 117 (48): 30055–62.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Kestemont, Mike, Folgert Karsdorp, Elisabeth de Bruijn, Matthew Driscoll, Katarzyna A. Kapitan, Pádraig Ó Macháin, Daniel Sawyer, Remco Sleiderink, and Anne Chao</hi>. 2022. 
+                        <hi rend="italic">Forgotten books: supplementary materials (data and code)</hi> (version v0.3.1-cr). Zenodo. 
+                        <ptr target="https://doi.org/10.5281/zenodo.5947206"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Morlon, Hélène, Jérémy Andréoletti, Joëlle Barido-Sottani, Sophia Lambert, Benoît Perez-Lamarque, Ignacio Quintero, Viktor Senderov, and Pierre Veron</hi>. 2024. “Phylogenetic Insights into Diversification.” 
+                        <hi rend="italic">Annual Review of Ecology, Evolution, and Systematics</hi> 55 (Volume 55, 2024): 1–21. 
+                        <ptr target="https://doi.org/https://doi.org/10.1146/annurev-ecolsys-102722-020508"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Newman, Mark EJ.</hi> 2005. “Power laws, Pareto distributions and Zipf’s law.” 
+                        <hi rend="italic">Contemporary Physics</hi> 46 (5): 323–51.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Pinto, Carla MA, A Mendes Lopes, and JA Tenreiro Machado.</hi> 2012. “A Review of Power Laws in Real Life Phenomena.” 
+                        <hi rend="italic">Communications in Nonlinear Science and Numerical Simulation</hi> 17 (9): 3558–78.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Section romane</hi>. 2024. 
+                        <hi rend="italic">Jonas</hi>. Database. Edited by Marie-Larue Savoye. Institut de recherche et d’histoire des textes (IRHT)/CNRS. 
+                        <ref target="https://jonas.irht.cnrs.fr/">https://jonas.irht.cnrs.fr</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Segre, Cesare</hi>, ed. 1971. 
+                        <hi rend="italic">La Chanson de Roland</hi>. Documenti Di Filologia 16. Milano; Napoli: R. Ricciardi.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Sisson, Scott A, Yanan Fan, and Mark Beaumont</hi>. 2018. 
+                        <hi rend="italic">Handbook of Approximate Bayesian Computation</hi>. CRC press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Treutler, H.</hi> 1880. “Die Otinelsage Im Mittelalter.” 
+                        <hi rend="italic">Englische Studien</hi> 5: 97–149. 
+                        <ptr target="http://archive.org/stream/englischestudien05leipuoft#page/96/mode/2up"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Weitzman, Michael P.</hi> 1987. “The Evolution of Manuscript Traditions.” 
+                        <hi rend="italic">Journal of the Royal Statistical Society. Series A (General)</hi> 150 (4): 287–308.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Yule, George Udny.</hi> 1925. “A mathematical theory of evolution, based on the conclusions of Dr. J. C. Willis.” 
+                        <hi rend="italic">Phil. Trans. R. Soc. Lond. B</hi> 213: 402–10. 
+                        <ptr target="https://doi.org/https://doi.org/10.1098/rstb.1925.0002"/>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

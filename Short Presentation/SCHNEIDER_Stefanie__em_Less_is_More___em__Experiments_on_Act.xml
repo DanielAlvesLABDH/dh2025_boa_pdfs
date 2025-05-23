@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SCHNEIDER_Stefanie__em_Less_is_More___em__Experiments_on_Act">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>&lt;em&gt;Less is More?&lt;/em&gt; Experiments on Active Learning in Vision Models</title>
+                <author>
+                    <persName>
+                        <surname>Schneider</surname>
+                        <forename>Stefanie</forename>
+                    </persName>
+                    <affiliation>LMU Munich, Germany</affiliation>
+                    <email>stefanie.schneider@itg.uni-muenchen.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-14T16:23:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Active Learning</term>
+                    <term>Vision Models</term>
+                    <term>Art History</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>image processing and analysis</term>
+                    <term>systems and information architecture and usability</term>
+                    <term>Art history</term>
+                    <term>Computer science</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">
+                    <hi rend="italic">Deep Learning</hi> (DL) models require large datasets to extract features relevant to a given task, raising critical questions about the selection and volume of training data. That is, to put it bluntly: which data to train on, and how much? 
+                    <hi rend="italic">Active Learning</hi> (AL) seeks to address these questions by identifying subsets of a large, unlabeled data pool, whose annotation would most improve model performance. However, despite its obvious relevance—manual labeling is, after all, resource-intense—the approach has so far been largely neglected in the 
+                    <hi rend="italic">Digital Humanities</hi> (DH), with only a few selected experiments conducted in text-based disciplines (e.g., Erdmann et al. 2019).<ref n="1" target="ftn1"/> In response, this paper focuses on AL in vision models. More precisely, it examines AL by presenting a case study on person detection in art-historical images, chosen for its evaluative simplicity, adequate complexity, and relevance to art-historical research, as shown by Zinnen et al. (2023) and Schneider / Vollmer (2024). Despite its specific focus, the study provides insights that are broadly applicable to various disciplines within image science, all of which similarly grapple with the challenge of small, but highly complex datasets.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methodology</head>
+                <p style="text-align: left; ">AL operates with a large unlabeled and a small labelled dataset. Guided by a so-called 
+                    <hi rend="italic">annotation budget</hi>—the total number of images to be annotated—the AL cycle alternates between two steps: (i) training a detection model on the labelled dataset, and (ii) using this model to identify and manually label the most ‘informative’ samples from the unlabeled dataset. These samples are then added to the labeled dataset, after which the model is retrained. The selection mechanism utilizes two primary approaches, as classified by previous research: uncertainty-based methods, which prioritize images that maximize uncertainty measures such as entropy (e.g., Joshi et al. 2010), and distribution-based methods, which enhance the diversity of the training dataset by assessing the unlabeled images’ distribution, often through clustering (e.g., Nguyen / Smeulders 2004).
+                </p>
+                <p style="text-align: left; ">We build on the 
+                    <hi rend="italic">Plug and Play Active Learning</hi> (PPAL) framework by Yang et al. (2024) to integrate AL into detection models without modifying their architecture or training procedures. Our approach involves a two-stage sampling process, which initially selects a candidate pool of unlabeled images with high uncertainty scores; from this pool, we then identify a diverse subset for annotation. As uncertainty metrics, we include 
+                    <hi rend="italic">confidence</hi>, which evaluates the accuracy of bounding box detections, and 
+                    <hi rend="italic">entropy</hi>, which measures their variance, following Yuan et al. (2021). To address diversity, we employ 
+                    <hi rend="italic">Category Conditioned Matching Similarity</hi> (CCMS). The metric determines the similarity between multi-instance images using their instance similarities, refined by k-means++ to obtain the final AL samples (Yang et al. 2024).
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Data Sets</head>
+                <p style="text-align: left; ">As training datasets, the Human-Art (Ju et al. 2023), People-Art (Westlake et al. 2016), and PoPArt (Schneider / Vollmer 2024) datasets are utilized, all of which label human figures with bounding boxes. From Human-Art, we select only the paintings subset to equalize the number of images across the datasets: Human-Art with 1,750 images, People-Art with 1,623 images, and PoPArt with 1,472 images (Table 1). As detailed in Schneider / Vollmer (2024), PoPArt contains nearly three times as many positive samples in the training dataset with figure annotations as People-Art. It has a higher percentage of images with at least six figures—8.52 % more than People-Art and 9.40 % more than Human-Art. Human-Art features a greater number of large-area instances (of more than 962 pixels)<ref n="2" target="ftn2"/> at 90.67 %, versus 72.99 % in PoPArt—in addition to an average image size of 1802 × 1934 pixels, nearly double that of PoPArt.
+                </p>
+                <p style="text-align: left; ">Table 1: Statistics of the Human-Art (Ju et al. 2023), People-Art (Westlake et al. 2016), and PoPArt (Schneider / Vollmer 2024) training datasets.</p>
+                <figure>
+                    <graphic n="1001" width="8.228541666666667cm" height="1.8527833333333332cm" url="/tmp/tmpndaj5ieb/Pictures/b9de97ee913f3b8a494e6cfc88be1637.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">For testing purposes, we employ only the PoPArt test set, with 491 images, as it is the only dataset of the three that fully annotates human figures and clearly outlines its annotation guidelines (Schneider / Vollmer 2024). Thus, when comparing different training datasets, it allows for more accurate identification of potential discrepancies in results.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results and Discussion</head>
+                <p style="text-align: left; ">All datasets undergo an initial pre-training using a RetinaNet model (Lin et al. 2017) on the Microsoft COCO 2017 dataset<ref n="3" target="ftn3"/> for 12 epochs, followed by fine-tuning on the respective dataset for another 12 epochs. The learning rate is initially set to 1e − 4, decreasing at the 8th and 11th epochs. Our experimental setup involves 10 rounds of AL, where each round involves querying 100 additional images. As a baseline, images are randomly selected. To ensure the robustness of our results, we repeat each experiment five times and report the mean 
+                    <hi rend="italic">Average Precision</hi> (AP).
+                </p>
+                <p style="text-align: left; ">Table 2: Person detection results on 1,000 images from the Human-Art (Ju et al. 2023), People-Art (Westlake et al. 2016), and PoPArt (Schneider / Vollmer 2024) training datasets, evaluated on the PoPArt test dataset using the RetinaNet model (Lin et al. 2017) and the respective AL strategy.</p>
+                <figure>
+                    <graphic n="1002" width="15.980833333333333cm" height="3.9158333333333335cm" url="/tmp/tmpndaj5ieb/Pictures/b9de97ee913f3b8a494e6cfc88be1637.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">As shown in Table 2, models trained and tested on PoPArt generally exhibit higher AP, largely due to the uniformity of annotation strategies across the training and testing phases. The relative increase in AP from the first to the last round of AL, denoted as ∆GAP, is most pronounced for entropy-based selection; yet, it is smallest for People-Art when combined with CCMS, indicating that effective samples are identified early, reducing the necessity for extensive annotation to reach comparable AP levels. However, the utility of CCMS tends to be dataset-specific, often providing marginal benefits without guaranteeing consistent improvements. Entropy-based selection generally surpasses both random and confidence-based methods, especially when the training datasets are poorly aligned with the target domain. Significant mismatches between the source and target datasets, such as with Human-Art due to the larger scale of human figures, significantly reduce the likelihood of substantial improvements from AL—which may seem trivial, but is not always readily discernible in practice. This suggests that perhaps it may be necessary to first identify which datasets are suitable for conducting ablation studies, rather than focusing solely on which AL methods would be most effective. Our analysis suggests that all examined datasets are not only small, but at least to some extent curated, which inherently limits the variability of the datasets and reduces the potential impact of AL strategies. Merging these datasets to create a larger, more heterogeneous data pool could therefore potentially enhance the selection of optimal AL strategies.</p>
+            </div>
+        </body>
+    </text>
+</TEI>

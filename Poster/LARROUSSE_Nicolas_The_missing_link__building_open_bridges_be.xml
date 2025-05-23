@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LARROUSSE_Nicolas_The_missing_link__building_open_bridges_be">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The missing link: building open bridges between infrastructures to liaise data and publications</title>
+                <author>
+                    <persName>
+                        <surname>Larrousse</surname>
+                        <forename>Nicolas</forename>
+                    </persName>
+                    <affiliation>Huma-Num, CNRS, France</affiliation>
+                    <email>nicolas.larrousse@huma-num.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Guigonis</surname>
+                        <forename>Sandra</forename>
+                    </persName>
+                    <affiliation>OpenEdition, CNRS, France</affiliation>
+                    <email>sandra.guigonis@openedition.org</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Bourdot</surname>
+                        <forename>Charles</forename>
+                    </persName>
+                    <affiliation>METOPES, CNRS &amp; Université de Caen, France</affiliation>
+                    <email>charles.bourdot@unicaen.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Jouguet</surname>
+                        <forename>Hélène</forename>
+                    </persName>
+                    <affiliation>Huma-Num, CNRS, France</affiliation>
+                    <email>helene.jouguet@huma-num.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Roux</surname>
+                        <forename>Dominique</forename>
+                    </persName>
+                    <affiliation>METOPES, CNRS &amp; Université de Caen, France</affiliation>
+                    <email>dominique.roux@unicaen.fr</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T08:48:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Link Data Publications</term>
+                    <term>Infrastructures</term>
+                    <term>Decouvrability</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>digital publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>electronic literature production and analysis</term>
+                    <term>Computer science</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">In Social Science and Humanities (SSH) publications, one finds diverse approaches to data citation. Although recommendations for citing data are available (e.g. from the SSHOC project[1]), data citations in publications are often limited to a simple textual reference, a Persistent IDentifier or a combination of both, which can sometimes be difficult to identify and interpret.</p>
+            <p style="text-align: left; ">This is one of the key challenges the COMMONS project aims to address: in other words, building reliable and documented links between data and publications to improve their accessibility and thus lay the foundations for developing new types of integrated publications. This project involves three complementary French national infrastructures, Huma-Num[2] (for Data), OpenEdition[3] (for Publications) and Metopes[4] (for the Publishing Process). The project has received 30 M€ funding spread over 8 years.</p>
+            <p style="text-align: left; ">Beyond the simple citation of a dataset in a publication - which ensures better attribution and potential reuse - other emerging needs include the ability to preview the dataset in the publication itself, in particular images and tabular data or more complex data such as 3D objects which are becoming increasingly common in SSH research. Another identified need within the communities is the creation of data papers, which will obviously benefit from the work of the COMMONS project.</p>
+            <p style="text-align: left; ">From a different perspective, it is also essential to measure the reuse of a dataset, or at least its citations, to give proper credit to its creators and allow for its assessment. This point is in line with the concerns of infrastructures, which must be able to prove their usefulness to their funders by providing adequate metrics and thus measuring their impact.</p>
+            <p style="text-align: left; ">To address these needs, the COMMONS project develops a step-by-step approach which extends from the infrastructure level to the creation of enhanced publications. </p>
+            <p style="text-align: left; ">The first step is to build reliable links between data and publications by creating metadata stored by infrastructures associated respectively with publications and datasets adhering to existing standards. Once this has been done, it remains to implement that link in the infrastructures by specifying the requirements to develop specific components, in particular to enable communication between services distributed over infrastructures.</p>
+            <p style="text-align: left; ">One of the main challenges is to make these gateways user-friendly for both producers (researchers, engineers, editors) and end-users (researchers, students, companies, public authorities, media, and society at large).</p>
+            <p style="text-align: left; ">With reliable linking information and a synchronized update procedure across different services, both data and publications can then be published using appropriate standards, such as SCHOLIX[5]. A key aspect is to make this information "machine actionable", so that it can potentially be exploited by tools such as ScholeXplorer[6] that use these standards</p>
+            <p style="text-align: left; ">At this stage, the focus shifts to potential use cases and end products based on the links between data and publications. This phase aligns with evolving community needs and requires coordination within the COMMONS project or other projects led by external partners. For instance, if there is a need to view a dataset directly within a publication, standardized information about the data type is necessary, for instance by using the PRONOM[7] registry which provides more accurate information on how to deal with data. Finally, the whole system is constantly adapted to users’ needs, using feedback from the training courses done and from their day-to-day use of the tools.</p>
+            <p style="text-align: left; ">The project is now in its 3rd year, and significant advances have been made, from the technical implementation of the link between data and publications using standards, to the assessment of practices and needs related to these connections. For example, to structure publications and embed metadata, COMMONS developed a specific schema of the XML-TEI standard, TEI-Commons-publishing[8]. Via Circé[9], an open source application, files structured with this schema can be converted into other XML schemas commonly used for scholarly publications: TEI XML and JATS XML.</p>
+            <p style="text-align: left; ">This poster will outline these points and provide an update on the progress made so far in the project, the lessons learned, and the actions still to be taken. We now have a solid understanding of what is needed to effectively link data and publications, as well as the challenges that remain. The next step will be to develop effective use cases and train users on how to engage with these new scientific objects.</p>
+            <p style="text-align: left; ">[1] 
+                <ref target="https://zenodo.org/records/5361718">https://zenodo.org/records/5361718</ref> 
+            </p>
+            <p style="text-align: left; ">[2] 
+                <ref target="https://huma-num.fr">https://huma-num.fr</ref> &amp; 
+                <ref target="https://documentation.huma-num.fr/humanum-en/">https://documentation.huma-num.fr/humanum-en/</ref> 
+            </p>
+            <p style="text-align: left; ">[3] 
+                <ref target="https://www.openedition.org">https://www.openedition.org</ref> 
+            </p>
+            <p style="text-align: left; ">[4] 
+                <ref target="https://www.metopes.fr">https://www.metopes.fr</ref> 
+            </p>
+            <p style="text-align: left; ">[5] 
+                <ref target="http://www.scholix.org">http://www.scholix.org</ref>
+            </p>
+            <p style="text-align: left; ">[6] 
+                <ref target="https://scholexplorer.openaire.eu">https://scholexplorer.openaire.eu</ref> 
+            </p>
+            <p style="text-align: left; ">[7] 
+                <ref target="https://www.nationalarchives.gov.uk/pronom/fmt/478">https://www.nationalarchives.gov.uk/pronom/fmt/478</ref>
+            </p>
+            <p style="text-align: left; ">[8] 
+                <ref target="https://git.unicaen.fr/fnso/i-fair-ir/tei-commons-publishing">https://git.unicaen.fr/fnso/i-fair-ir/tei-commons-publishing</ref>
+                <lb/>[9] 
+                <ref target="https://metopes.unicaen.fr/circeui/">https://metopes.unicaen.fr/circeui/</ref> 
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">McGillivray B, Marongiu P, Pedrazzini N, Ribary M, Wigdorowitz M, Zordan</hi>. (2022). E. Deep Impact: A Study on the Impact of Data Papers and Datasets in the Humanities and Social Sciences. Publications. 10(4):39. 
+                        <ref target="https://doi.org/10.3390/publications10040039">https://doi.org/10.3390/publications10040039</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Burton, Adrian, &amp; Koers, Hylke.</hi> (2016). ICSU-WDS &amp; RDA Publishing Data Services WG Interoperability Framework Recommendations (1.0). 
+                        <ref target="https://doi.org/10.15497/RDA00002">https://doi.org/10.15497/RDA00002</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">  </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Edmond, J. (Ed.).</hi> (2020). Digital Technology and the Practices of Humanities Research. Open Book Publishers. 
+                        <ref target="https://doi.org/10.11647/obp.0192">https://doi.org/10.11647/obp.0192</ref>  
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Gassama, M., Szabo, D., Tang, C., &amp; Bravo, S.</hi> (2024). Analyse de l’enquête sur les pratiques des scientifiques en matière de publication de data paper [Report, INRAE]. 
+                        <ref target="https://doi.org/10.17180/vrh7-r606">https://doi.org/10.17180/vrh7-r606</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Harper, L. M.</hi> (2023). Data reuse among digital humanities scholars : A qualitative study of practices, challenges and opportunities [Université d’Ottawa / University of Ottawa]. 
+                        <ref target="http://hdl.handle.net/10393/45445">http://hdl.handle.net/10393/45445</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Arnold, T., Scagliola, S., Tilton, L., &amp; Gorp, J. V.</hi> (2021). Introduction : Special issue on audiovisual data in dh. Digital Humanities Quarterly, 15(1). 
+                        <ref target="https://www.digitalhumanities.org/dhq/vol/15/1/000541/000541.html">https://www.digitalhumanities.org/dhq/vol/15/1/000541/000541.html</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Balck, S., Frank, I., Beyer-Thoma, H., &amp; Ananieva, A.</hi> (2023). Interlinking text and data with semantic annotation and ontology design patterns to analyse historical travelogues. Digital Humanities Quarterly, 17(3). 
+                        <ref target="https://www.digitalhumanities.org/dhq/vol/17/3/000726/000726.html">https://www.digitalhumanities.org/dhq/vol/17/3/000726/000726.html</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kinnaman, A., &amp; Guimont, C.</hi> (2023). Dh as data : Establishing greater access through sustainability. Digital Humanities Quarterly, 17(3). 
+                        <ref target="https://www.digitalhumanities.org/dhq/vol/17/3/000715/000715.html">https://www.digitalhumanities.org/dhq/vol/17/3/000715/000715.html</ref>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

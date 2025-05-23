@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KRISTEN_Maximilian_Como___A_Crowdsourcing_Platform_for_Digit">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Como - A Crowdsourcing Platform for Digital Humanities</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Kristen</surname>
+                        <forename>Maximilian</forename>
+                    </persName>
+                    <affiliation>LMU Munich, Germany</affiliation>
+                    <email>max@kristenonline.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-09T14:34:39.230302226</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Crowdsourcing</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>crowdsourcing</term>
+                    <term>linked (open) data</term>
+                    <term>Art history</term>
+                    <term>Computer science</term>
+                    <term>Informatics</term>
+                    <term>I plan to attend the conference online</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Abstract</head>
+                <p>
+                    <emph>Como</emph> is an open-source platform designed to engage users through 
+                    <emph>Games with a Purpose</emph> (GWAPs)—interactive, problem-solving quizzes that contribute to scholarly and societal challenges. With its modular, user-friendly system, 
+                    <emph>Como</emph> lowers barriers to entry for both creators and participants, encouraging active involvement in research and data collection, with a special focus on native mobile apps.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <lb/>Introduction
+                </head>
+                <p>With the rise of generative AI tools, the production of structured data derived from different sources has grown exponentially. However, much of this output requires human verification to ensure quality and trustworthiness, particularly in areas like the digital humanities. Here, extraction and inference tools often generate data at a scale beyond one person’s capacity to review, creating a pressing need for efficient, scalable systems to validate AI-generated suggestions.</p>
+                <p>
+                    <lb/>The 
+                    <ref target="https://www.digitalesbild.gwi.uni-muenchen.de/en/reflection-based-artificial-intelligence-in-art-history-explainable-hybrid-models-for-image-search-and-analysis/">ReflectAI</ref> project highlights this issue, focusing on improving the extraction of semantic triplets from art historical texts (Stalter et al. 2024). While AI tools can extract triplets from texts efficiently, the process frequently requires human oversight to identify errors and inconsistencies. These oversight tasks vary depending on the step in the pipeline—ranging from text parsing, to triplet verification, to entity matching—necessitating a flexible, scalable platform to facilitate human-in-the-loop workflows.
+                </p>
+                <p>
+                    <lb/>
+                    <ref target="https://meta.wikimedia.org/wiki/Como">Como</ref> is an initiative to facilitate these tasks. Building on the success of similar initiatives, such as 
+                    <ref target="https://www.artigo.org/en">
+                        <emph>Artigo</emph>
+                    </ref> for image tagging (Wieser et al. 2013) or 
+                    <ref target="https://wikidata-game.toolforge.org/distributed/">similar games</ref> for Wikidata (Vrandečić et al. 2023), Como incorporates gamification to engage users in scientific and humanities-based tasks, with small rewards and challenges. Como adopts key principles from Luis von Ahn’s original concept of Games with a Purpose (GWAP) (von Ahn 2006), but adapts them by decoupling the validation step: the user responses can be verified either through a dedicated follow-up game or via a double-confirmation mechanism over time.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Key Features of Como</head>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Modular Architecture</head>
+                    <p>
+                        <emph>Como</emph> uses an open source technology stack: The front-end is built using 
+                        <ref target="https://flutter.dev/">
+                            <emph>Flutter</emph>
+                        </ref>, enabling one codebase across web, Android, and iOS platforms. The back-end uses 
+                        <emph>Django</emph> with 
+                        <ref target="https://www.django-rest-framework.org/">
+                            <emph>Django Rest Framework</emph>
+                        </ref> (DRF), ensuring robust and scalable API support. An 
+                        <ref target="https://swagger.io/specification/">
+                            <emph>OpenAPI</emph>
+                        </ref> page provides detailed API documentation for developers, to promote possible integration and customization into other apps. It is hosted on 
+                        <ref target="https://wikitech.wikimedia.org/wiki/Portal:Toolforge">
+                            <emph>Toolforge</emph>
+                        </ref>, a 
+                        <emph>Wikimedia</emph> platform for bots, tools and applications.
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Support for Text and Media Questions</head>
+                    <p>
+                        <emph>Como</emph> supports text-based and image-based questions (see 
+                        <emph>Fig. 1</emph>). Media files can be hosted on various sources, favoring 
+                        <emph>Wikimedia Commons, </emph>
+                        <emph>but allowing</emph> external servers, or cloud storage solutions. Additionally, 
+                        <emph>Como</emph> uses caching when presenting media files to users, to better support swift playing. Audio file integration is a goal for future development.
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>API Integration and Customization</head>
+                    <p>
+                        <emph>Como</emph> integrates with the 
+                        <emph>Wikimedia</emph> APIs as the default platform, enabling easy interactions with 
+                        <emph>Wikipedia</emph>, 
+                        <emph>Wikidata</emph>, and 
+                        <emph>Wikimedia Commons </emph>
+                        <emph>using individual user accounts</emph>. Additionally, the platform supports integration with any API-enabled platform with provided tokens as a singular bot user. This flexibility allows creators to connect 
+                        <emph>Como</emph> with a variety of data repositories or content sources, including externally hosted 
+                        <emph>Wikibases</emph>, etc.
+                        <lb/>Additionally there is no API requirement, results can be downloaded as simple CSV files for further processing, thereby reducing the need for game creators to handle APIs at all.
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Code-Free Game Creation</head>
+                    <p>Game creation in 
+                        <emph>Como</emph> is accessible to non-technical users. Games can be designed using simple CSV files, where each row represents a task or question. This approach lowers the barrier for entry, allowing a broader audience to contribute to content creation. The created games can be fitted with freeform descriptions and helpful hints about the reasoning behind their creation (see 
+                        <emph>Fig. 2</emph>). The modular creation approach allows for various amounts of text or image elements to compare for users, or to simply add context to various disambiguation tasks.
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Review and Approval Workflows</head>
+                    <p>To ensure data quality, all games undergo a manual review process before being unlocked for general participation. This workflow includes internal testing and approval, ensuring that only vetted games reach the public, and to protect against abusing the powerful API integrations.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Inclusive and Multilingual Design</head>
+                    <p>
+                        <emph>Como</emph> supports multiple languages and allows the creation of games in all 
+                        <emph>Unicode</emph> characters. The interface consists only of simple button setups with accessibility guidelines in mind, while also providing a dark mode for convenience(see 
+                        <emph>Fig. 2</emph>). 
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Participation Options</head>
+                    <p>
+                        <emph>Como</emph> accommodates diverse participation preferences. Games can be made open to the public without requiring account creation for simple onboarding, although Wikimedia accounts are required for any game that interacts with APIs. Alternatively, games can be shared privately for specific audiences, such as a group of students or targeted communities using a special link.
+                    </p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <lb/>Use Cases in Digital Humanities
+                </head>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Crowdsourcing Data</head>
+                    <p>
+                        <emph>Como</emph> can be used to engage large groups of participants in tasks like transcribing historical manuscripts, tagging cultural heritage items, or creating metadata for collections. For example, participants might tag features appearing in photographs of historical sites to enrich existing datasets.
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Translation Checking</head>
+                    <p>Multilingual games designed on 
+                        <emph>Como</emph> can help translating or checking (automatic) translations from one language to another. These tasks work best if the texts to translate are one or two sentence long at maximum, as all of the games should come with enough context to be solved on one small screen.
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Citizen Science</head>
+                    <p>
+                        <emph>Como</emph> invites non-specialists to contribute to research in areas like image classification, item disambiguation in datasets, or crowdsourced annotations of cultural assets.
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Verification of AI Outputs</head>
+                    <p>In projects like 
+                        <emph>ReflectAI</emph>, 
+                        <emph>Como</emph>’s gamified interface enables participants to validate AI-generated semantic triplets. Processing the results with this interface reduces the cognitive load on individual researchers and allows for the integration of a wider community of participants.
+                    </p>
+                    <p>
+                        <lb/>
+                        <figure>
+                            <graphic url="/tmp/tmpr8l14bmg/Pictures/ce91cfeb57fc4705c77f1e074be3bef6.png"/>
+                        </figure>
+                        <figure>
+                            <graphic url="/tmp/tmpr8l14bmg/Pictures/ce91cfeb57fc4705c77f1e074be3bef6.png"/>
+                        </figure>
+                    </p>
+                    <p>
+                        <emph>Figure 1 and 2: Screenshots from the Android Version of Como</emph>
+                    </p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p>
+                    <lb/>This presentation will showcase practical examples of 
+                    <emph>Como</emph>’s application in digital humanities, and the general game creation process, to encourage more participants to test the platform by providing and playing new games and improving it with feedback.
+                </p>
+            </div>
+        </body>
+    </text>
+</TEI>

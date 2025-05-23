@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="CHARLESWORTH_Ellen_Embracing_absence_in_the_digital_humaniti">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Embracing absence in the digital humanities</title>
+                <author>
+                    <persName>
+                        <surname>Charlesworth</surname>
+                        <forename>Ellen</forename>
+                    </persName>
+                    <affiliation>Durham University, United Kingdom</affiliation>
+                    <email>ellen.m.charlesworth@durham.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Warwick</surname>
+                        <forename>Claire</forename>
+                    </persName>
+                    <affiliation>Durham University, United Kingdom</affiliation>
+                    <email>c.l.h.warwick@durham.ac.uk</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>bias</term>
+                    <term>dataset critique</term>
+                    <term>museum studies</term>
+                    <term>digital anthropology</term>
+                    <term>absence</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>digital access</term>
+                    <term>privacy</term>
+                    <term>and ethics analysis</term>
+                    <term>information retrieval and querying algorithms and methods</term>
+                    <term>meta-criticism (reflections on digital humanities and humanities computing)</term>
+                    <term>Communication studies</term>
+                    <term>Computer science</term>
+                    <term>Cultural studies</term>
+                    <term>Galleries and museum studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">This paper poses a simple question: how can we improve and nuance quantitative analysis by treating absence not as a lack of information, but as a different type of data? </p>
+            <p style="text-align: left; ">At this moment in time, it still the minority of records that are digitised, and – whether it is due to poor OCR, incomplete metadata, or simply a lack of digitised material – the datasets we used are often incomplete (Bishop 2018). Quality is therefore a key concern, and the adage “garbage in, garbage out” is an often-heard refrain at DH conferences. The phrase succinctly conveys that if a model is trained on datasets that are unrepresentative – whether that is in terms of gender, time period, race, language, or geographical origin – the analysis and output will reflect this bias (Bode 2018). As such, there is a significant body of research exploring just how representative commonly used corpora, such as Wikidata and Google Arts and Culture, actually are (Zhang / Terveen 2021; Kizhner et al. 2021). </p>
+            <p style="text-align: left; ">The biases in these large datasets have begun to be addressed through initiatives such as WikiProject Women, while the innovative work by researchers such as Kestemont et al. and Ted Underwood, have attempted to model around incompleteness (White 2018; Underwood 2019; Kestemont et al. 2022). A renewed interest in the merits of smaller – and more representative – datasets catered towards answering a single aspect of inquiry has also emerged, inspite (or perhaps because of) the fervour surrounding foundation models (Piper 2017; Bender et al. 2021). But just how complete can a dataset be? As Katherine Bode notes, “there is no direct or absolute way to determine how much, or what parts, of the past we construct for analysis”, and in defining the bounds of a project, researchers introduce absences in the form of necessary omissions (Bode 2020: 103). Borrowing from the growing school of thought that conceptualises biases not as a fault but as a feature of datasets, we explore how absence can be used to understand the priorities and biases of our contemporary practices (Underwood 2019; Impett / Offert 2024). </p>
+            <p style="text-align: left; ">This paper will use a seemingly complete dataset as a case study to investigate the complexity of absence and resulting biases. Drawing on the work in postcolonial theory, intangible cultural heritage, and anthropology, we will discuss the phenomenology of absence – treating it not as a lack of information, but as a series of relations that reflect multiple intersecting processes (Fowles 2010; Mataga 2014; Edwards / Mead 2015). By adopting this interdisciplinary approach, we outline a reflective methodology that address the gap identified by Panagiotidou et al. (2022) for digital humanities research that tackles uncertainty, especially that which arises from conflicting data and the impact of human decision making. </p>
+            <p style="text-align: left; ">The dataset we use, compiled between 2022 and 2024, builds on the Mapping Museum Project to create a list of over 4,000 active UK museum websites (Candlin et al. 2019). Combining the use of computer vision on digital collection screenshots with an analysis of the HTML code, we have investigated the hosting solutions, languages, and collections information available across the sites (Schmidt et al. 2020). By comparing this digital repository to current records of museum collections, we have identified which types of collections are absent from our digital landscape, and which have been rendered nearly unfindable by poor digital infrastructure (Ballatore / Candlin 2023). In this way, the dataset is able to show how material and cultural biases are compounded by digital technologies and research practices. </p>
+            <p style="text-align: left; ">In crude terms, even the entirety of the surviving historic record is a poor dataset for understanding the past. Culture, in its broadest sense, is only partially and incompletely represented by material objects, the majority of which do not survive to the present day. Of those, only a small fraction make it into the collections of museums and fewer still are digitised or made available (Jaillant 2022). Yet, the search and recommendation algorithms that mediate our online experiences exacerbate these absences further and shape our perception of the resources available. </p>
+            <p style="text-align: left; ">This paper unpicks these complex intersections to highlight the limitations of cultural collections data, while exploring the potential of these datasets to help understand the biases introduced by the priorities of today’s practices. Within the context of continued digitisation and growing linked open data initiatives, we argue transparency around data quality and especially researchers’ decision-making processes will become increasingly important our analysis and interpretation.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Ballatore, Andrea / Candlin, Fiona</hi> (2023): “A Geography of UK Museums”, in: Transactions of the Institute of British Geographers 48, 1: 213–229. DOI: 10.1111/tran.12578.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bender, Emily M. / Gebru, Timnit / McMillan-Major, Angelina / Shmitchell, Shmargaret</hi> (2021): “On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 
+                        <hi style="font-family:Apple Color Emoji">🦜</hi>”, in: Association for Computing (ed.): 
+                        <hi rend="italic">2021 ACM Conference on Fairness, Accountability, and Transparency</hi>, Online, Canada, March 2021: 610–623. DOI: 10.1145/3442188.3445922.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bishop, Claire</hi> (2018): “Against Digital Art History”, in: 
+                        <hi rend="italic">International Journal for Digital Art History</hi> 3: 123–131. DOI: 10.11588/DAH.2018.3.49915.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bode, Katherine</hi> (2018): 
+                        <hi rend="italic">A World of Fiction: Digital Collections and the Future of Literary History</hi>. Minneapolis: University of Michigan Press. DOI: 10.1353/book.59018.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bode, Katherine</hi> (2020): “Why You Can’t Model Away Bias”, in: 
+                        <hi rend="italic">Modern Language Quarterly</hi> 81, 1: 95–124. DOI: 10.1215/00267929-7933102.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Candlin, Fiona / Larkin, Jamie / Ballatore, Andrea / Poulovassilis, Alexandra</hi> (2019): “The Missing Museums: Accreditation, Surveys, and an Alternative Account of the UK Museum Sector”, in: 
+                        <hi rend="italic">Cultural Trends</hi> 29, 1: 50–67. DOI: 10.1080/09548963.2019.1690392.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Edwards, Elizabeth / Mead, Matt</hi> (2015): “Absent Histories and Absent Images: Photographs, Museums and the Colonial Past”, in: 
+                        <hi rend="italic">Museum &amp; Society</hi> 11, 1: 19–38. DOI: 10.29311/mas.v11i1.220.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Fowles, Severin</hi> (2010): “People Without Things”, in: Bille, Mikkel / Hastrup, Frida / Sørensen, Tim F. (eds.): 
+                        <hi rend="italic">An Anthropology of Absence</hi>. New York, NY: Springer New York: 23–41. DOI: 10.1007/978-1-4419-5529-6.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Impett, Leonardo / Offert, Fabian</hi> (2024): “There Is a Digital Art History”, in: 
+                        <hi rend="italic">Visual Resources</hi> 38, 2: 186–209. DOI: 10.17863/CAM.109760.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Jaillant, Lise</hi> (2022): “How Can We Make Born-Digital and Digitised Archives More Accessible? Identifying Obstacles and Solutions”, in: 
+                        <hi rend="italic">Archival Science</hi> 22, 3: 417–436. DOI: 10.1007/s10502-022-09390-7.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kestemont, Mike / Karsdorp, Folgert / De Bruijn, Elisabeth / Driscoll, Matthew/ Kapitan Katarzyna A. / Ó Macháin, Pádraig / Sawyer, Daniel / Sleiderink, Remco / Chao, Anne</hi> (2022): “Forgotten Books: The Application of Unseen Species Models to the Survival of Culture”, in: 
+                        <hi rend="italic">Science</hi> 375, 6582: 765–769. DOI: 10.1126/science.abl7655.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kizhner, Inna / Terras, Melissa / Rumyantsev, Maxim / Khokhlova, Valentina / Demeshkova, Elisaveta / Rudov, Ivan / Afanasieva, Julia</hi> (2021): “Digital Cultural Colonialism: Measuring Bias in Aggregated Digitized Content Held in Google Arts and Culture”, in: 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi> 36, 3: 607–640. DOI: 10.1093/llc/fqaa055.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Mataga, Jesmael</hi> (2014): 
+                        <hi rend="italic">Practices of Pastness, Postwares of the Dead, and the Power of Heritage: Museums, Monuments, and Sites in Colonial and Post-Colonial Zimbabwe, 1890-2010</hi>. Ph.D. thesis, University of Cape Town.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Panagiotidou, Georgia / Lamqaddam, Houda / Poblome, Jeroen / Brosens, Koenraad / Verbert, Katrien / Moere, Andrew V.</hi> (2022): “Communicating Uncertainty in Digital Humanities Visualization Research”, in: 
+                        <hi rend="italic">IEEE Transactions on Visualization and Computer Graphics</hi> 29, 1: 635–645. DOI: 10.1109/TVCG.2022.3209436.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Piper, Andrew</hi> (2017): “Data, Data, Data. Why Katherine Bode’s New Piece is so Important and Why it Gets so Much Wrong about the Field”, in: 
+                        <hi rend="italic">txtlab</hi> &lt;https://web.archive.org/web/20190202071322/https://txtlab.org/2017/06/data-data-data-why-catherine-bodes-new-piece-is-so-important-and-why-it-gets-so-much-wrong-about-the-field/&gt; [26.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Schmidt, Thomas / Mosiienko, Anastasiia / Faber, Raffaela / Herzog, Juliane / Wolff, Christian</hi> (2020): “Utilizing HTML
+                        <hi style="font-family:Cambria Math">‐</hi>analysis and Computer Vision on a Corpus of Website Screenshots to Investigate Design Developments on the Web”, in: 
+                        <hi rend="italic" xml:space="preserve">Proceedings of the Association for Information Science and Technology </hi>57, 1: e392. DOI: 10.1002/pra2.392.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Underwood, Ted</hi> (2019): 
+                        <hi rend="italic">Distant Horizons: Digital Evidence and Literary Change</hi>. Chicago: The University of Chicago Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">White, Alice</hi> (2018): “The History of Women in Engineering on Wikipedia”, in: 
+                        <hi rend="italic">Science Museum Group Journal</hi> Autumn, 2018: online. DOI: 10.15180/181008.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Zhang, Charles. C. / Terveen, Loren</hi> (2021): “Quantifying the Gap: A Case Study of Wikidata Gender Disparities”, in: Open Symposium (ed.): 
+                        <hi rend="italic">17th International Symposium on Open Collaboration</hi>, Online, Spain, September 2021: 1–12. DOI: 10.1145/3479986.3479992.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

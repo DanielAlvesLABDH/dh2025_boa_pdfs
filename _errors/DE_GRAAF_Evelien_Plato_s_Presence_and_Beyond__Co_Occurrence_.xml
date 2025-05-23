@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="DE_GRAAF_Evelien_Plato_s_Presence_and_Beyond__Co_Occurrence_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Plato’s Presence and Beyond: Co-Occurrence Networks in Ancient Greek and Latin Literature</title>
+                <author>
+                    <persName>
+                        <surname>de Graaf</surname>
+                        <forename>Evelien</forename>
+                    </persName>
+                    <affiliation>KU Leuven, Belgium</affiliation>
+                    <email>evelien.degraaf@kuleuven.be</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-24T08:32:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Social Network Analysis; Co-occurrence network; Ancient Greek; Ancient Latin; Plato</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>network analysis and graphs theory and application</term>
+                    <term>History</term>
+                    <term>Literary studies</term>
+                    <term>Philosophy</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>The study of (Social) Networks has steadily gained traction in the study of Graeco-Roman antiquity. For instance, the spread of religions throughout antiquity has been studied with approaches from network theory based on epigraphic attestations in certain places of certain deities of these religions (Collar 2013; 2022). Other studies in the field of prosopography, employ quantitative network approaches reconstructing Athenian kinship networks based on naming traditions (Karila-Cohen 2018), to facilitate the identification of individuals in cases of homonymy or to trace the spread of certain personal names in Graeco-Roman Egypt (Broux / Depauw 2015; Broux 2019). In the study of literary texts, the focus is on manually creating networks of people by reconstructing real-life interactions or relations with traditional close reading methods (Broekaert et al. 2020; Cline 2019; Guérin 2024; McClure 2020; Rollinger 2014). However, studies of automatically constructed networks are also emerging, exploring other types of connections in these literary texts (Beine 2024; Dörpinghaus 2022). Another closely related area of network research is the construction and analysis of Character Networks based on literary narratives, such as, for example, on Shakespeare (Ladegaard / Kristensen-McLachlan 2025) or contemporary Dutch literary fiction (Smeets 2021). </p>
+                <p>In this study, I model a co-occurrence network of individuals in Ancient Greek and Latin literature, similar to Dörpinghaus’ (2022) approach for biblical narratives. This functions as a case study within the 
+                    <ref target="https://research.kuleuven.be/portal/en/project/3H230130">NIKAW</ref> (Networks of Ideas and Knowledge in the Ancient World) project that aims to study the flow of knowledge in Ancient Greek and Latin literature using Natural Language Processing (NLP) and Social Network Analysis (SNA). This case study serves as proof of concept for applicability of the co-occurrence network model, addressing concerns about the interpretability and meaningfulness of networks with edges based on textual proximity (Dörpinghaus 2022: 8; Guérin 2024: 8; Labatut / Bost 2019: 14). Plato, a prolific author with well-documented impact, serves as a model test case for assessing the usefulness of co-occurrence networks in understanding the reception of pivotal individuals over time. Additionally, his influence on both Christian and non-Christian authors allows for a comparative analysis of co-occurrences within these two distinct intellectual traditions. With this we build on previous research that focused on text reuse detection to understand connections between famous ancient authors (for Plato specifically, see the 
+                    <ref target="https://digital-plato.org/">Digital Plato Project</ref>, Schubert et al. 2019). Our approach expands this by including all named individuals in texts, not just well-known authors, to address biases and map a broader network of influences.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Data</head>
+                <p>The corpus, detailed in Table 1, was constructed to meet several criteria: texts must contain the lemma ‘Πλάτων’/ ‘Platon’ more than five times, span a wide diachronic range, vary in text type (limited to prose) and authored by both Christians and non-Christians. Individuals in these texts are manually annotated and disambiguated. At the time of the presentation, the majority of the annotation will be finished.</p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: left;">Author</cell>
+                        <cell style="text-align: left;">Work</cell>
+                        <cell style="text-align: left;">Period</cell>
+                        <cell style="text-align: left;">Christian work</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: center;" cols="4">Greek [
+                            <ref target="https://glaux.be/index.php">GLAUx corpus</ref>]
+                        </cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">[Plato]</cell>
+                        <cell style="text-align: left;">Epistulae</cell>
+                        <cell style="text-align: left;">BCE</cell>
+                        <cell style="text-align: left;">FALSE</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">Aristoteles</cell>
+                        <cell style="text-align: left;">Metaphysica</cell>
+                        <cell style="text-align: left;">BCE</cell>
+                        <cell style="text-align: left;">FALSE</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">Strabo</cell>
+                        <cell style="text-align: left;">Geographica</cell>
+                        <cell style="text-align: left;">BCE</cell>
+                        <cell style="text-align: left;">FALSE</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">Dionysius Halicarnassensis</cell>
+                        <cell style="text-align: left;">De Demosthenis dictione</cell>
+                        <cell style="text-align: left;">BCE</cell>
+                        <cell style="text-align: left;">FALSE</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">Plutarchus</cell>
+                        <cell style="text-align: left;">Quaestiones convivales</cell>
+                        <cell style="text-align: left;">CE</cell>
+                        <cell style="text-align: left;">FALSE</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">Claudius Aelianus</cell>
+                        <cell style="text-align: left;">Varia historia</cell>
+                        <cell style="text-align: left;">CE</cell>
+                        <cell style="text-align: left;">FALSE</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">Clemens Alexandrinus</cell>
+                        <cell style="text-align: left;">Stromata</cell>
+                        <cell style="text-align: left;">CE</cell>
+                        <cell style="text-align: left;">TRUE</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">Origenes</cell>
+                        <cell style="text-align: left;">Contra Celsum</cell>
+                        <cell style="text-align: left;">CE</cell>
+                        <cell style="text-align: left;">TRUE</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">Diogenes Laertius</cell>
+                        <cell style="text-align: left;">Vitae philosophorum</cell>
+                        <cell style="text-align: left;">CE</cell>
+                        <cell style="text-align: left;">FALSE</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">Galenus</cell>
+                        <cell style="text-align: left;">De placitis Hippocratis et Platonis</cell>
+                        <cell style="text-align: left;">CE</cell>
+                        <cell style="text-align: left;">FALSE</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: center;" cols="4">Latin [
+                            <ref target="https://www.lasla.uliege.be/cms/c_11821932/fr/lasla-lasla-dataverse">LASLA</ref> / 
+                            <ref target="https://github.com/lascivaroma/latin-lemmatized-texts">Clérice</ref>]
+                        </cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">Cicero</cell>
+                        <cell style="text-align: left;">Tusculanae Disputationes</cell>
+                        <cell style="text-align: left;">BCE</cell>
+                        <cell style="text-align: left;">FALSE</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">Tertullian</cell>
+                        <cell style="text-align: left;">De Anima</cell>
+                        <cell style="text-align: left;">CE</cell>
+                        <cell style="text-align: left;">TRUE</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">Seneca</cell>
+                        <cell style="text-align: left;">Ad Lucilium Epistulae Morales</cell>
+                        <cell style="text-align: left;">CE</cell>
+                        <cell style="text-align: left;">FALSE</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">Lactantius</cell>
+                        <cell style="text-align: left;">Divinarum Institutionum</cell>
+                        <cell style="text-align: left;">CE</cell>
+                        <cell style="text-align: left;">TRUE</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">Apuleius</cell>
+                        <cell style="text-align: left;">Pro Se De Magia Liber</cell>
+                        <cell style="text-align: left;">CE</cell>
+                        <cell style="text-align: left;">FALSE</cell>
+                    </row>
+                </table>
+                <p>Table 1: Corpus for co-occurrence analysis.</p>
+                <p>This annotation facilitates the construction of a multi-modal graph as represented in the schema displayed in Figure 1. The nodes in this graph, represented by the circles, are Persons, Works, and Mentions and listed together with associated attributes. The edges in the original multi-modal graph encode the following relationships:</p>
+                <list type="unordered">
+                    <item>A work contains a mention of a personal name: (:Work) – [:CONTAINS] -&gt; (:Mention)</item>
+                    <item>The mention refers to an individual: (:Mention) – [:REFERS_TO] -&gt; (:Person)</item>
+                    <item>A person wrote a work: (:Person) – [:WROTE] -&gt; (:Work)</item>
+                </list>
+                <figure>
+                    <graphic n="1001" width="16.002cm" height="10.745611111111112cm" url="/tmp/tmp9t1oavq9/Pictures/1563685b861e509bad58a931aa99628f.png" rend="inline"/>
+                </figure>
+                <p>Figure 1: Schema of the multi-modal graph for mentions of people.</p>
+                <p>From this multi-modal graph we can project co-occurrence networks of persons at various levels of textual proximity, such as a range of words, sentences, paragraphs, etc. This projection would contain only Person nodes with a CO_OCCURS_WITH relation between two distinct individuals if they co-occur within a specific section of a text. This short paper will focus specifically on a preliminary description and analysis of this Person-Person co-occurrence projection. Edges are based on co-occurrence between individuals in sections of the text that mention Plato explicitly, thus limiting the network to individuals that occur in similar contexts as Plato. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Analysis</head>
+                <p>This analysis of co-occurrences aims to investigate the similarities and differences in co-occurrences within texts from pre-Christianity and the early Christian period to determine whether Plato was associated with different individuals in these distinct intellectual traditions. First, I will compare node rankings based on centrality measures in the pre-Christian and Early Christian networks, split into Christian and non-Christian works. In addition, community detection algorithms will be employed to identify clusters of co-occurring individuals to highlight differences between groups of mentions. Last, comparing additional network metrics such as diameter, density, and transitivity will further understanding of the differences between the networks. Excluding Plato from the networks will allow for the analysis to extend beyond Plato, demonstrating whether the observed similarities and differences apply to other individuals as well. The findings of this network analysis on co-occurrences of explicit mentions will be compared to general insights from the study of the reception of Plato in antiquity to determine the extent to which co-occurrence networks reflect established scholarly understandings of influence (e.g. Tarrant et al. 2018; Schubert et al. 2019).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p>This case study will provide a new perspective on the use of explicit mentions of individuals in ancient literary texts. Comparing these findings with traditional reception studies on Plato aims to validate this approach and reveal where a new network approach can provide new insights. Methodologically, this study will outline the strengths and weaknesses of this approach, offering valuable insights for future uses of co-occurrence networks in historical texts.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Beine, Julia Jennifer (2024): “The Schemer Unmasked. Sketching a Digital Profile of the Scheming Slave in Roman Comedy”, in: 
+                        <hi rend="italic">Journal of Computational Literary Studies</hi> 3, 1: 1-29. DOI: 10.48694/jcls.3670.
+                    </bibl>
+                    <bibl style="text-align: left; ">Broekaert, Wim / Köstner, Elena / Rollinger, Christian (2020): “The Ties That Bind. Ancient Politics and Network Research”, Special issue, 
+                        <hi rend="italic">Journal of Historical Network Research</hi> 4. DOI: 10.25517/JHNR.V4I0.
+                    </bibl>
+                    <bibl style="text-align: left; ">Broux, Yanne (2019): “Things Can Only Get Better for Socrates and His Crocodile: How Onomastics Can Benefit from Digital Humanities”, in: 
+                        <hi rend="italic">The Classical Quarterly</hi> 69, 2: 825–845. DOI: 10.1017/S0009838820000026.
+                    </bibl>
+                    <bibl style="text-align: left; ">Broux, Yanne / Depauw, Mark (2015): “Developing Onomastic Gazetteers and Prosopographies for the Ancient World Through Named Entity Recognition and Graph Visualization: Some Examples from Trismegistos People”, in: Aiello, Luca Maria / McFarland, Daniel (eds.): 
+                        <hi rend="italic">Social Informatics</hi>. Cham: Springer International Publishing 304–13. DOI: 10.1007/978-3-319-15168-7_38.
+                    </bibl>
+                    <bibl style="text-align: left; ">Cline, Diane (2019): “The Social Network of Socrates”, in: 
+                        <hi rend="italic">CHS Research Bulletin</hi> 7. &lt;http://nrs.harvard.edu/urn-3:hlnc.essay:ClineD.The_Social_Network_of_Socrates.2019&gt; [25.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">Collar, Anna (2013): 
+                        <hi rend="italic">Religious Networks in the Roman Empire: The Spread of New Ideas</hi>. Cambridge: Cambridge University Press. DOI: 10.1017/CBO9781107338364.
+                    </bibl>
+                    <bibl style="text-align: left; ">Collar, Anna (2022): 
+                        <hi rend="italic">Networks and the Spread of Ideas in the Past: Strong Ties, Innovation and Knowledge Exchange</hi>. London: Routledge. DOI: 10.4324/9780429429217.
+                    </bibl>
+                    <bibl style="text-align: left; ">Dörpinghaus, Jens (2022): “Social Network Analysis and Co-Occurrence: Identifying the Gaps”, in: Melzer, Sylvia / Thiemann, Stefan / Peukert, Hagen (eds.): 
+                        <hi rend="italic">Proceedings of the Workshop on Humanities-Centred Artificial Intelligence</hi>, 20–28. &lt;https://ceur-ws.org/Vol-3301/paper3.pdf&gt; [25.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">Guérin, Charles (2024): “Mapping Roman Declamation: Towards a Network Analysis of Seneca the Elder’s Anthology”, in: 
+                        <hi rend="italic">Journal of Historical Network Research</hi> 10, 1: 1–53. DOI: 10.25517/jhnr.v10i1.79.
+                    </bibl>
+                    <bibl style="text-align: left; ">Karila-Cohen, Karine (2018) : “Le graphe, la trace et les fragments: L’apport des méthodes quantitatives et des outils numériques à l’étude des élites Civiques Athéniennes”, in : 
+                        <hi rend="italic">Annales. Histoire, Sciences Sociales</hi> 73, 4: 785–815. DOI: 10.1017/ahss.2019.91.
+                    </bibl>
+                    <bibl style="text-align: left; ">Labatut, Vincent / Bost, Xavier (2019): “Extraction and Analysis of Fictional Character Networks: A Survey”, in: 
+                        <hi rend="italic">ACM Comput. Surv.</hi> 52, 5): 89:1-89:40. DOI: 10.1145/3344548.
+                    </bibl>
+                    <bibl style="text-align: left; ">Ladegaard, Jakob / Kristensen-McLachlan, Ross Deans (2025): 
+                        <hi rend="italic">The Arden Encyclopedia of Shakespeare’s Language, Vol.4: Character Networks</hi>. London: Bloomsbury Publishing.
+                    </bibl>
+                    <bibl style="text-align: left; ">McClure, Jennifer M. (2020): “Jesus’s Social Network and the Four Gospels: Exploring the Relational Dynamics of the Gospels Using Social Network Analysis”, in: 
+                        <hi rend="italic">Biblical Theology Bulletin</hi> 50, 1: 35–53. DOI: 10.1177/0146107919892841.
+                    </bibl>
+                    <bibl style="text-align: left; ">Rollinger, Christian (2014): 
+                        <hi rend="italic">Amicitia sanctissime colenda. Freundschaft und soziale Netzwerke in der Späten Republik</hi>. Heidelberg: Verlag Antike.
+                    </bibl>
+                    <bibl style="text-align: left; ">Schubert, Charlotte / Molitor, Paul / Ritter, Jörg / Scharloth, Joachim / Sier, Kurt (2019): 
+                        <hi rend="italic">Platon Digital: Tradition und Rezeption</hi>. Heidelberg: Propylaeum. DOI: 10.11588/propylaeum.451.
+                    </bibl>
+                    <bibl style="text-align: left; ">Smeets, Roel (2021): 
+                        <hi rend="italic">Character Constellations: Representations of Social Groups in Present-Day Dutch Literary Fiction</hi>. Leuven: Leuven University Press. &lt;https://muse.jhu.edu/pub/258/oa_monograph/book/98048&gt; [25.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">Tarrant, Harold / Renaud, François / Baltzly, Dirk / Layne, Danielle A. (2018): 
+                        <hi rend="italic">Brill’s Companion to the Reception of Plato in Antiquity</hi>. Leiden and Boston: Brill. &lt;https://brill.com/edcollbook/title/25321&gt; [25.04.2025].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

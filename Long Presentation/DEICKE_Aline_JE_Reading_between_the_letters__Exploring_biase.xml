@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="DEICKE_Aline_JE_Reading_between_the_letters__Exploring_biase">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Reading between the letters. Exploring biases, gaps, and context in historical correspondence data</title>
+                <author>
+                    <persName>
+                        <surname>Deicke</surname>
+                        <forename>Aline JE</forename>
+                    </persName>
+                    <affiliation>Academy of Sciences and Literature | Mainz; Philipps-University Marburg, Germany</affiliation>
+                    <email>Aline.Deicke@adwmainz.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Suárez Cronauer</surname>
+                        <forename>Elena</forename>
+                    </persName>
+                    <affiliation>Academy of Sciences and Literature | Mainz</affiliation>
+                    <email>Elena.SuarezCronauer@adwmainz.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T14:03:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>historical network research</term>
+                    <term>graph technologies</term>
+                    <term>data criticism</term>
+                    <term>data visualization</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data modeling</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>linked (open) data</term>
+                    <term>network analysis and graphs theory and application</term>
+                    <term>Feminist studies</term>
+                    <term>History</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; "> Working with historical data in combination with digital methods is a messy and often unsatisfactory matter: Historical sources are incomplete, ambiguous, and biased, and so is the data extracted from these sources. Moreover, specific forms of historical sources come with additional challenges: Data based on historical letters bear an even bigger risk regarding gaps and biases due to the letter's event-based character 
+                    <hi style="font-family:Helvetica Neue">(Fischer 2023)</hi>. Historical letters, as part of a correspondence, were distributed over several locations and, as a piece of literature, often forwarded and passed around between various historical agents. Therefore, the estates of letters are the result of an awareness of the importance of their collection, be it of the correspondents themselves or their descendants. This has several consequences: Letters were often destroyed when considered too personal, lost due to historical circumstances, or collection efforts focused on specific individuals, mirroring the 
+                    <hi rend="italic">zeitgeist</hi> of the respective era. On top of these challenges, efforts of (retro-)digitization have been selective as well, in many instances reproducing and reinforcing past practices of knowledge production and being heavily skewed towards certain social groups and geographic regions 
+                    <hi style="font-family:Helvetica Neue">(Zaagsma 2022)</hi>.
+                </p>
+                <p style="text-align: left; ">On the other hand, the data and metadata of letters contains a multitude of implicit knowledge and relations. When working with quantitative methods, letter corpora are a great example for how a change in perspective enables us to find previously unconsidered patterns. Letters have therefore been the focus of numerous studies in digital humanities, especially in the field of historical network research, due to their suitability for exploring questions of communication structures and practices 
+                    <hi style="font-family:Helvetica Neue">(Ahnert / Ahnert 2015; Ahnert / Ahnert 2019; Błoch et al. 2020; McShane 2018)</hi> , or in tracking the emergence of fields of research 
+                    <hi style="font-family:Helvetica Neue">(Rossini 2024)</hi>. 
+                </p>
+                <p style="text-align: left; ">Against this background, the following question arises: How can we balance new insights on historical subject matters with a critical reflection of the historicity of the sources, their gaps and biases, and ultimately prevent circular reasoning fallacies? And how can we go further, using data-driven methods, such as Semantic Web technologies, to create more complex, diverse perspectives based on our existing data? </p>
+                <p style="text-align: left; ">This submission aims to explore these questions on multiple levels. Using a dataset of correspondences of actors from the period of Early Romanticism, a European literary period, we aim to uncover gaps and biases in the data, investigate their impact, and employ a dual strategy of mitigating these gaps through LOD-approaches and incorporating their effects into our analyses. For this purpose, we are developing a mixed methods-approach including the use of knowledge graphs, data visualisation, and historical network research. </p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Use Case</head>
+                    <p style="text-align: left; ">Our corpus is based on correspondences of the “Romantic group” and their correspondents from 1790 to 1802. The Romantics were a group of young German authors and scholars, mainly based in Jena (and Berlin), who revolutionized the literary scene at the time through their collaborative working methods, their new perspective on novels, and their numerous translations, journal articles and reviews. Letters played an important part for the Romantics, as they had a group-forming, stabilizing and identity-forming function 
+                        <hi style="font-family:Helvetica Neue">(Bamberg 2020)</hi>. The corpus represents part of the 
+                        <hi rend="italic">Bildungsbürgertum</hi> or intelligentsia of the turn between the 18th and 19th century, including female and male authors, scholars and publisher of different ages, educational levels, and religious groups.
+                    </p>
+                    <p style="text-align: left; ">Our research is part of the ongoing DFG-Project “Correspondence of early Romanticism. Edition – Annotation – Network Research” which aims to collect and publish around 7,000 of these letters to gain insights into processes of epistolary communication and knowledge transfer. The corpus is based on both manuscripts and printed editions. It also includes inferred letters, i.e. letters which no longer exist as a physical source, but for which we have evidence in existing letters. In the process, we collect metadata, and full texts of the letters and annotate mentions of persons, institutions, works, periodicals, bibliographic references, and places as well as semantic statements in form of SPO-Triples (Subject – Predicate – Object) concerning knowledge exchange and communication processes. These data are transformed into a knowledge graph (Neo4J) which is based on a project-specific ontology 
+                        <hi style="font-family:Helvetica Neue">(Deicke et al. 2024)</hi>. From this graph, we abstract datasets of nodes and edges to analyse within a framework of historical network research and to represent in network visualizations.
+                    </p>
+                    <p style="text-align: left; ">In theory, the metadata in combination with the content of epistolary communications opens up a wide field of information. Yet in practice, the data is highly biased and provides a limited perspective. These challenges are intensified through the collection of letters from printed editions: Past editorial decisions are mirrored in the data, e.g. modern deletions in historical letter texts 
+                        <hi style="font-family:Helvetica Neue">(Wernli 2022)</hi>
+                        <hi rend="Hyperlink">.</hi> Letters of women as a “minoritized” group, as persons who are in opposition to a more powerful social group 
+                        <hi style="font-family:Helvetica Neue">(D’Ignazio / Klein 2020)</hi> , were often only regarded relevant when exchanged with men 
+                        <hi style="font-family:Helvetica Neue">(Becker-Cantarino 2000)</hi>. Additionally, numerous letters are missing from the sequence of correspondences and hence, in the network. On a more basic level, editions of letters are generally centred on the correspondence activity of one specific person, focusing only on the letters written and received by this author or scholar. Consequently, their influence on the data potentially eclipses other perspectives, and their weight in the network skews most quantitative measures.
+                    </p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methods</head>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Enriching data</head>
+                    <p style="text-align: left; ">One way to balance this missing contextual knowledge is to add information from other data sources to the knowledge graph. In doing so, we also address the situated knowledge reflected in the sources (and the data), acknowledging that knowledge is produced by specific people in specific circumstances 
+                        <hi style="font-family:Helvetica Neue">(Haraway 1988)</hi>. In our case, this affects a) the historicity of the source, b) the 
+                        <hi rend="italic">zeitgeist</hi> of the reused editions, and c) our own editorial and conceptual decisions. 
+                    </p>
+                    <p style="text-align: left; ">We add data from the German National Library’s Integrated Authority File (GND) and Wikidata. In preparation, we select which available information is relevant for our research questions and critically reflect on the quality and biases of this data. As a result, we can supplement our database with information about the gender and familiar relationships of individuals, facilitating a more comprehensive picture of our knowledge domain and expanding the potential for analysis. </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Reasoning</head>
+                    <p style="text-align: left; ">
+                        <hi style="font-family:Helvetica Neue">Based on the developed ontology, we are further able to make implicit information within the letters explicit and machine-readable. This concerns basic graph completion but also advanced inferences. For example, through inferring co-location, we focus on channels of communication beyond the written word, i.e., personal encounters in salons, universities, and private gatherings. When persons who know each other (proven through exchanged letters) are at the same time in the same place, we can assume with a certain probability that they encountered one another. Reasoning routines in the knowledge graph make these and other implicit knowledge accessible for computational analysis, enhancing our understanding of the communication network.  </hi>
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Visualization</head>
+                    <p style="text-align: left; ">However, despite the measures described above, some biases and gaps remain in the data. Therefore, we add another layer of visual exploration to the methods with which we address the limitations of our data. Following Hengesbach et al. (2020), we ask how we can “see what is not shown” in order to make the specific perspective of our dataset visible 
+                        <hi style="font-family:Helvetica Neue">(Ahnert et al. 2020)</hi>. In particular, this concerns the fundamental difference between members of the “Romantic group” and those persons who are only included in the network because of their correspondence with one of these members. This difference has far-reaching consequences for analysis and interpretation, yet it routinely disappears in visualisations that treat each node equally. In doing so, we ground our work in the positionings of authors such as Jessop 
+                        <hi style="font-family:Helvetica Neue">(2008)</hi>, Drucker (2011) and Kleymann and Stange 
+                        <hi style="font-family:Helvetica Neue">(2021)</hi>, and employ methods of data visualisation as a hermeneutic tool to contextualize our analyses and interpretations.
+                    </p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p style="text-align: left; ">Through a mixed-methods approach of combining information from different databases, semantic reasoning, and visualization, we are creating a diversified and multilayered knowledge base and providing a critical lens for exploring and analysing historical correspondence data. </p>
+                <p style="text-align: left; ">However, a critical validation of these methods is crucial to ensure data quality and reproducibility of results. As Johanna Drucker puts it: “Computers do not interpret; they simply find patterns.” 
+                    <hi style="font-family:Helvetica Neue">(Drucker 2017)</hi> Modelling means defining the ways for finding these patterns, yet incorporating data from multiple sources also means incorporating multiple models. Hence, the conceptual choices behind these models are reflected in the data as well (e.g., the choice to model gender as a binary concept). Additionally, enrichment of a knowledge base via norm data may even amplify biases because minoritized groups often lack representation in authority records. 
+                </p>
+                <p style="text-align: left; ">To not add a layer of “retro-humanism” to our data 
+                    <hi style="font-family:Helvetica Neue">(Risam 2015)</hi>, these decisions must be well-considered, documented and contextualized. In our data-critical approaches, we must avoid binary categories – certain or uncertain, true or false – and instead remember that “history is about the production of evidence-based arguments, not about telling the truth.” 
+                    <hi style="font-family:Helvetica Neue">(Fickers 2021)</hi> So instead of trying to fit historical sources to a binary system, we focus on finding best practices to produce “evidence-based arguments” to interpret the results we gain from these always incomplete, ambiguous and ambivalent historical records. 
+                </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Ahnert, Ruth / Ahnert, Sebastian E. (2015): „Protestant Letter Networks in the Reign of Mary I: A Quantitative Approach”, in: 
+                        <hi rend="italic">English Literary History</hi> 82, 1: 1–33. DOI: 
+                        <ref target="https://doi.org/10.1353/elh.2015.0000">
+                            <hi style="font-family:Helvetica Neue">10.1353/elh.2015.0000</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Ahnert, Ruth, &amp; Ahnert, Sebastian E. (2019): “Networking the Republic of Letters”, in: Hotson, Howard / Wallnig, Thomas (eds.): 
+                        <hi rend="italic">Reassembling the Republic of Letters in the Digital Age. Standards, Systems, Scholarship</hi>. Göttingen: Universitätsverlag Göttingen 399–416. &lt;
+                        <ref target="http://www.univerlag.uni-goettingen.de/handle/3/isbn-978-3-86395-403-1">
+                            <hi style="font-family:Helvetica Neue">http://www.univerlag.uni-goettingen.de/handle/3/isbn-978-3-86395-403-1</hi>
+                        </ref>&gt; [30.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">Ahnert, Ruth, Ahnert, Sebastian E., Coleman, Catherine N., &amp; Weingart, Scott B. (2020): 
+                        <hi rend="italic">The Network Turn: Changing Perspectives in the Humanities</hi>. Cambridge: Cambridge University Press. DOI: 
+                        <ref target="https://doi.org/10.1017/9781108866804">
+                            <hi style="font-family:Helvetica Neue">10.1017/9781108866804</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Bamberg, Claudia (2020): „Das Briefnetzwerk der Jenaer Frühromantik“, in: Matthews-Schlinzig, Marie Isabel / Schuster, Jörg / Steinbrink, Gesa / Strobel, Jochen (eds.): 
+                        <hi rend="italic">Handbuch Brief</hi>. Berlin/Boston: De Gruyter 1032–1042. DOI: 
+                        <ref target="https://doi.org/10.1515/9783110376531-082">
+                            <hi style="font-family:Helvetica Neue">10.1515/9783110376531-082</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Becker-Cantarino, Barbara (2000): 
+                        <hi rend="italic">Schriftstellerinnen der Romantik: Epoche, Werke, Wirkung</hi>. München: C.H. Beck.
+                    </bibl>
+                    <bibl style="text-align: left; ">Błoch, Agata / Vasques Filho, Demival / Bojanowski, Michał (2020): “Networks from archives: Reconstructing networks of official correspondence in the early modern Portuguese empire”, in: 
+                        <hi rend="italic">Social Networks</hi> 69. DOI: 
+                        <ref target="https://doi.org/10.1016/j.socnet.2020.08.008">
+                            <hi style="font-family:Helvetica Neue">10.1016/j.socnet.2020.08.008</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Deicke, Aline / Suárez Cronauer, Elena / Seibold, Clara (2024): 
+                        <hi rend="italic">Correspondence and Epistolary Research Ontology</hi> (Version 1.0.0) [OWL-Ontology]. lod.academy. &lt;
+                        <ref target="https://lod.academy/cer/vocab/ontology/">
+                            <hi style="font-family:Helvetica Neue">https://lod.academy/cer/vocab/ontology/</hi>
+                        </ref>&gt; [30.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">D’Ignazio, Catherine / Klein, Lauren F. (2020): 
+                        <hi rend="italic">Data feminism</hi>. Cambridge: The MIT Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">Drucker, Johanna (2011): “Humanities Approaches to Graphical Display”, in: 
+                        <hi rend="italic">Digital Humanities Quarterly</hi> 5, 1. &lt;
+                        <ref target="https://www.digitalhumanities.org/dhq/vol/5/1/000091/000091.html">
+                            <hi style="font-family:Helvetica Neue">https://www.digitalhumanities.org/dhq/vol/5/1/000091/000091.html</hi>
+                        </ref>&gt; [30.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">Drucker, Johanna (2017): “Why Distant Reading Isn’t”, in: 
+                        <hi rend="italic">PMLA</hi> 132, 3: 628–635. DOI: 
+                        <ref target="https://doi.org/10.1632/pmla.2017.132.3.628">
+                            <hi style="font-family:Helvetica Neue">10.1632/pmla.2017.132.3.628</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Fickers, Andreas (2021): “Authenticity: Historical Data Integrity and the Layered Materiality of Digital Objects”, in: Balbi, Gabriele / Ribeiro, Nelson / Schafer, Valérie / Schwarzenegger, Christian (eds.), 
+                        <hi rend="italic">Digital Roots</hi>. Berlin/Boston: De Gruyter 299–312. DOI: 
+                        <ref target="https://doi.org/10.1515/9783110740202-017">
+                            <hi style="font-family:Helvetica Neue">10.1515/9783110740202-017</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Fischer, Rotraut (2023): „...bin ich Euch wieder recht nahe gekommen: Der wiedergelesene Brief als ‘Ereignis’ zwischen Kunst und Leben“, in: Bartsch, Sabine / Borek, Luise / Hegel, Philipp (eds.), 
+                        <hi rend="italic">Computer im Musenhain. Von träumenden Büchern und der Aura des Digitalen</hi>. Darmstadt: TUPrints 89–97. DOI: 
+                        <ref target="https://doi.org/10.26083/TUPRINTS-00027910">
+                            <hi style="font-family:Helvetica Neue">10.26083/TUPRINTS-00027910</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Haraway, Donna (1988): “Situated Knowledges: The Science Question in Feminism and the Privilege of Partial Perspective”, in: 
+                        <hi rend="italic">Feminist Studies</hi> 14, 3: 575–599. DOI: 
+                        <ref target="https://doi.org/10.2307/3178066">
+                            <hi style="font-family:Helvetica Neue">10.2307/3178066</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Hengesbach, Nicole / McInerny, Greg J. / Porto de Albuquerque, João (2022): “Seeing what is not shown: Combining visualization critique and design to surface the limitations in data”, in: 
+                        <hi rend="italic">Information Design Journal</hi> 27, 1: 64–75. DOI: 
+                        <ref target="https://doi.org/10.1075/idj.22006.hen">
+                            <hi style="font-family:Helvetica Neue">10.1075/idj.22006.hen</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Jessop, Martyn (2008): “Digital visualization as a scholarly activity”, in: 
+                        <hi rend="italic">Literary and Linguistic Computing</hi> 23, 3: 281–293. DOI: 
+                        <ref target="https://doi.org/10.1093/llc/fqn016">
+                            <hi style="font-family:Helvetica Neue">10.1093/llc/fqn016</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Kleymann, Rabea / Stange, Jan-Erik (2021): “Towards Hermeneutic Visualization in Digital Literary Studies”, in: 
+                        <hi rend="italic">Digital Humanities Quarterly</hi> 015, 2. &lt;
+                        <ref target="http://www.digitalhumanities.org/dhq/vol/15/2/000547/000547.html">
+                            <hi style="font-family:Helvetica Neue">http://www.digitalhumanities.org/dhq/vol/15/2/000547/000547.html</hi>
+                        </ref>&gt; [30.04.2025]. 
+                    </bibl>
+                    <bibl style="text-align: left; ">McShane, Bronagh A. (2018): “Visualising the Reception and Circulation of Early Modern Nuns’ Letters”, in: 
+                        <hi rend="italic">Journal of Historical Network Research</hi> 2: 1–25. DOI: 
+                        <ref target="https://doi.org/10.25517/jhnr.v2i1.32">
+                            <hi style="font-family:Helvetica Neue">10.25517/jhnr.v2i1.32</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Risam, Roopika (2015): “Beyond the Margins: Intersectionality and the Digital Humanities”, in: 
+                        <hi rend="italic">Digital Humanities Quarterly</hi> 9, 2. &lt;
+                        <ref target="https://www.digitalhumanities.org/dhq/vol/9/2/000208/000208.html">
+                            <hi style="font-family:Helvetica Neue">https://www.digitalhumanities.org/dhq/vol/9/2/000208/000208.html</hi>
+                        </ref>&gt; [30.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">Rossini, Paolo (2024): “Networks as interpretative frameworks: Using co-citation analysis to explore large corpora of early modern letters”, in: 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi>, 39, 1: 321–334. DOI: 
+                        <ref target="https://doi.org/10.1093/llc/fqad086">
+                            <hi style="font-family:Helvetica Neue">10.1093/llc/fqad086</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Wernli, Martina (ed.) (2022): 
+                        <hi rend="italic">„jetzt kommen andre Zeiten angerückt“: Schriftstellerinnen der Romantik</hi>. 
+                        <hi rend="c-bibliographic-information__value">Berlin, Heidelberg:</hi> J.B. Metzler.
+                    </bibl>
+                    <bibl style="text-align: left; ">Zaagsma, Gerben (2022): “Digital History and the Politics of Digitization”, in: 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi> fqac050. DOI: 
+                        <ref target="https://doi.org/10.1093/llc/fqac050">
+                            <hi style="font-family:Helvetica Neue">10.1093/llc/fqac050</hi>
+                        </ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

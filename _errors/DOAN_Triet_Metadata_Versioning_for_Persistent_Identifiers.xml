@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="DOAN_Triet_Metadata_Versioning_for_Persistent_Identifiers">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Metadata Versioning for Persistent Identifiers</title>
+                <author>
+                    <persName>
+                        <surname>Doan</surname>
+                        <forename>Triet</forename>
+                    </persName>
+                    <affiliation>Gesellschaft für wissenschaftliche Datenverarbeitung mbH Göttingen, Germany</affiliation>
+                    <email>triet.doan@gwdg.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Böhm</surname>
+                        <forename>Jana</forename>
+                    </persName>
+                    <affiliation>Gesellschaft für wissenschaftliche Datenverarbeitung mbH Göttingen, Germany</affiliation>
+                    <email>jana.boehm@gwdg.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Bingert</surname>
+                        <forename>Sven</forename>
+                    </persName>
+                    <affiliation>Gesellschaft für wissenschaftliche Datenverarbeitung mbH Göttingen, Germany</affiliation>
+                    <email>sven.bingert@gwdg.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>metadata</term>
+                    <term>versioning</term>
+                    <term>track changes</term>
+                    <term>persistent identifier</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>metadata standards</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>Computer science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">FAIR principles have become a best practice in research data management. It stands for Findable, Accessible, Interoperable, and Reusable (Wilkinson, et al., 2016). Whenever researchers publish their data, e.g. papers, data sets, or any kind of Digital Objects (DOs), it is strongly recommended that the published data should follow the FAIR principles. According to the FAIR Guiding Principles, a DO is findable when a) it is assigned to a globally unique Persistent Identifier (PID), and b) it is described with rich metadata. Suppose that a DO is already findable, which means it has a PID together with its metadata, our work focuses on condition R1.2. in the reusability guideline of FAIR, which says: “(meta)data are associated with detailed provenance”. Provenance of a DO is information related to its creation or modification (e.g. creation time, modification time, by whom) (W3C, 2010). This information is crucial to determine if a DO is, e.g., trustworthy or not, thus enables reusability. To satisfy the requirement above, not only the DO itself, but also its metadata should be associated with detailed provenance. Therefore, it is necessary to track the changes of a DO’s metadata.</p>
+                <p style="text-align: left; ">In this paper, we propose two approaches to track the history of metadata in a PID, namely using Git and using only the PID system. The first approach exploits Git for metadata versioning, while the second one only relies on already available features of a PID system for the same purpose. For the proof-of-concept, we focus on the Handle System (Handle, n.d.), on which the Digital Object Identifier (DOI) system or Persistent Identifier for eResearch (ePIC)<ref n="1" target="ftn1"/> PIDs are based. However, the presented concept should be applicable for other PID systems as well. Unlike the solutions from other systems, the proposed approach uses only available features from a PID system without relying on another third-party service or the need to build another history tracking system.
+                </p>
+                <p style="text-align: left; ">This paper is structured as follows: Section 1 presents the motivation and the necessity of the work. Related work is discussed in Section 2. Since our work focuses on the Handle System, a brief introduction about handles is presented in Section 3, which serves as a base for the further understanding of this paper. In Section 4, we describe our approaches in detail, together with their pros and cons. Section 5 shows a step-by-step instruction about retrieving a version for systems that implement one of our approaches. Finally, the conclusion is presented in Section 6.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Related Work</head>
+                <p style="text-align: left; ">There is not much previous work about tracking provenance of metadata in PIDs. One example that we could find is the Provenance Service from DataCite (DataCite, n.d.). This service is responsible for tracking all activities that were performed on the metadata of their PIDs. This feature is available for all DOIs registered at DataCite since March 10, 2019. Figure 1 shows the data model of the Provenance Service from DataCite. This model follows the Prov Data Model (PROV-DM). PROV-DM is a conceptual data model created by W3C. It is a foundation for specifications about W3C provenance (Belhajjame, et al., 2013). As we can see from Figure 1, 
+                    <hi rend="italic">entity</hi> is a PID, whose metadata are changed. The changes are done by an 
+                    <hi rend="italic">agent</hi>, and described in an 
+                    <hi rend="italic">activity</hi>. This Provenance Service is available via the REST API of DataCite, specifically at the 
+                    <hi rend="italic">/activities</hi> endpoint (DataCite, 2024).
+                </p>
+                <figure>
+                    <graphic n="1001" width="9.489722222222222cm" height="5.731247222222223cm" url="/tmp/tmp48v33e9u/Pictures/13bffca1010ca52fda2cf71c6e792d29.png" rend="inline"/>
+                    <head>
+                        <hi style="font-size:10pt">Data model used by DataCite for their Provenance Service (FREYA, n.d.).</hi>
+                    </head>
+                </figure>
+                <p style="text-align: left; ">Since this is part of DataCite, the Provenance Service is only available for customers of DataCite. If researchers use other PID providers, it is not possible for them to have those features on their PIDs. Furthermore, this Provenance Service is a completely independent service, which offers more features on top of their PID service. Researchers or institutions, who do not use DataCite, might not have enough resources to build such a service for their need. Therefore, a more lightweight solution, which can be directly integrated into a running PID service, would be beneficial.</p>
+                <p style="text-align: left; ">Another work that goes in the same direction is the DOI versioning feature of Zenodo (Nowak, et al., 2018). In Zenodo, each DO has a 
+                    <hi rend="italic">Concept DOI</hi>, which is the “master” DOI that represents all versions of this DO. Whenever a new version of the DO is uploaded, a new DOI is assigned to it and linked to the Concept DOI, as illustrated in Figure 2. With this model, researchers can cite a specific version of the DO, or they can cite all versions of the DO by simply citing the Concept DOI.
+                </p>
+                <figure>
+                    <graphic n="1002" width="16.002cm" height="6.5140416666666665cm" url="/tmp/tmp48v33e9u/Pictures/13bffca1010ca52fda2cf71c6e792d29.png" rend="inline"/>
+                    <head>
+                        <hi style="font-size:10pt">In Zenodo, each version of the DO has its own DOI. These DOIs are linked together via a Concept DOI. One can cite a specific version, or cite the Concept DOI, which represents all versions of the DO (Nowak, et al., 2018).</hi>
+                    </head>
+                </figure>
+                <p style="text-align: left; ">The approach from Zenodo is appropriate for versioning the DO, but not its metadata. Suppose that we apply this method to the metadata. Whenever there are changes in the metadata, a new version is created and, therefore, a new DOI for that version is generated. This leads to two problems. The first one is the explosion of the number of DOIs if metadata change frequently. The second problem comes from the conceptual viewpoint. Each DOI is an identifier of a DO. Whenever the DO changes, it becomes a new DO, thus gets a new identifier, DOI specifically. However, when only its metadata change, it does not make sense to assign a new identifier to the DO, since it is still the same object. For those reasons, we cannot adapt this approach to track the changes of metadata.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Handle System</head>
+                <p style="text-align: left; ">Since the proof-of-concept is based on the Handle System, this section gives a brief overview about handles and how (meta)data are structured inside a handle. The Handle Software, which is an implementation of PIDs, is developed by the Corporation for National Research Initiatives (CNRI) (Handle, n.d.). It is used to manage handles and handle values. Every handle consists of two parts: its naming authority, otherwise known as its prefix, and a unique local name under the naming authority, otherwise known as its suffix. An example of a handle with prefix 
+                    <hi rend="italic">21.11101</hi> and suffix 
+                    <hi rend="italic">0000-0007-C2EB-5</hi> is shown in Figure 3. Thanks to the combination of prefix and suffix, any handle is globally unique within the context of the Handle System (Lannom, et al., 2003).
+                </p>
+                <figure>
+                    <graphic n="1003" width="16.002cm" height="3.5189583333333334cm" url="/tmp/tmp48v33e9u/Pictures/13bffca1010ca52fda2cf71c6e792d29.png" rend="inline"/>
+                    <head>
+                        <hi style="font-size:10pt" xml:space="preserve">Example structure of a handle with the prefix </hi>
+                        <hi rend="italic" style="font-size:10pt">21.11101</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> and suffix </hi>
+                        <hi rend="italic" style="font-size:10pt">0000-0007-C2EB-5</hi>
+                        <hi style="font-size:10pt">. The prefix and suffix are separated by the ASCII character “/”. A handle can contain any printable characters from the Universal Character Set of ISO/IEC 10646 (CNRI, 2018).</hi>
+                    </head>
+                </figure>
+                <p style="text-align: left; ">Inside a handle, users can create a collection of associated type-value pairs to store metadata of the related DO. Each pair has its own index, which is a unique key in this handle. Suppose we have a handle called 
+                    <hi rend="italic">21.1234/MY-PAPER</hi> for a published paper. An example of types and values for this handle is presented in Table 1. The first index stores the URL pointing to the location where the DO is located. The indices 2 to 4 contain some associated metadata, which is the author, the publication date as well as the institution.
+                </p>
+                <table rend="rules">
+                    <head>
+                        <anchor xml:id="Ref195011161"/>
+                        <hi style="font-size:10pt" xml:space="preserve">Table </hi>
+                        <hi style="font-size:10pt">1</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">: Example handle, </hi>
+                        <hi rend="italic" style="font-size:10pt">21.1234/MY-PAPER</hi>
+                        <hi style="font-size:10pt">, which contains metadata about the published paper. The metadata are type-value pairs, where values are simple atomic strings.</hi>
+                    </head>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Index</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Type</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Value</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">1</cell>
+                        <cell style="text-align: left;" rend="DH-Default">URL</cell>
+                        <cell style="text-align: left;" rend="DH-Default">https://www.gwdg.de/paper.pdf</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">2</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Author</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Triet Doan</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">3</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Publication Date</cell>
+                        <cell style="text-align: left;" rend="DH-Default">20.10.2023</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">4</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Institution</cell>
+                        <cell style="text-align: left;" rend="DH-Default">GWDG</cell>
+                    </row>
+                </table>
+                <p style="text-align: left; ">Note that in a handle, the same types can appear multiple times, as long as they are on different indices. Using terminologies from database design, in a table with three columns, 
+                    <hi rend="italic">index</hi>, 
+                    <hi rend="italic">type</hi>, and 
+                    <hi rend="italic">value</hi>, 
+                    <hi rend="italic">index</hi> is the primary key of the table. For example, handle 
+                    <hi rend="italic">21.1234/ANOTHER-PAPER</hi> (see Table 2) has another 
+                    <hi rend="italic">Author</hi> type at index 5 for the second author of the paper. When a handle is resolved, users are usually redirected to the specified URL. However, there is also an option to get back a list of type-value pairs as a result of the resolving process.
+                </p>
+                <table rend="rules">
+                    <head>
+                        <anchor xml:id="Ref195011679"/>
+                        <hi style="font-size:10pt" xml:space="preserve">Table </hi>
+                        <hi style="font-size:10pt">2</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">: This table presents handle </hi>
+                        <hi rend="italic" style="font-size:10pt">21.1234/ANOTHER-PAPER</hi>
+                        <hi style="font-size:10pt">, which contains metadata about the published paper. The metadata of this paper show that it has two authors, which are stored at index 2 and 5, respectively.</hi>
+                    </head>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Index</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Type</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Value</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">1</cell>
+                        <cell style="text-align: left;" rend="DH-Default">URL</cell>
+                        <cell style="text-align: left;" rend="DH-Default">https://www.gwdg.de/paper.pdf</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default background-color(EEECE1)">2</cell>
+                        <cell style="text-align: left;" rend="DH-Default background-color(EEECE1)">Author</cell>
+                        <cell style="text-align: left;" rend="DH-Default background-color(EEECE1)">Triet Doan</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">3</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Publication Date</cell>
+                        <cell style="text-align: left;" rend="DH-Default">20.10.2023</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">4</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Institution</cell>
+                        <cell style="text-align: left;" rend="DH-Default">GWDG</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default background-color(EEECE1)">5</cell>
+                        <cell style="text-align: left;" rend="DH-Default background-color(EEECE1)">Author</cell>
+                        <cell style="text-align: left;" rend="DH-Default background-color(EEECE1)">Jana Böhm</cell>
+                    </row>
+                </table>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Proposed Approaches</head>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Using Git</head>
+                    <p style="text-align: left; ">When talking about versioning, one usually thinks about Git, a well-known version control system. The idea of this approach is to store metadata of a PID in Git to fully utilize its feature for tracking changes. To do so, instead of putting metadata of a DO in a PID, as shown in Table 3, we can store them in a text file and push this file to a Git repository.</p>
+                    <table rend="rules">
+                        <head>
+                            <anchor xml:id="Ref195012571"/>Table 3: Structure of the PID 
+                            <hi rend="italic">21.1234/MY-PAPER</hi> when its metadata is stored in GitHub. Instead of putting all metadata in the PID as was done in 
+                            <hi style="font-size:10pt">Table 1</hi>, this PID has another type called 
+                            <hi rend="italic">METADATA</hi>, whose value is a URL pointing to a file in GitHub. That file contains all metadata of this PID.
+                        </head>
+                        <row>
+                            <cell style="text-align: left;" rend="DH-Default">Index</cell>
+                            <cell style="text-align: left;" rend="DH-Default">Type</cell>
+                            <cell style="text-align: left;" rend="DH-Default">Value</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;" rend="DH-Default">1</cell>
+                            <cell style="text-align: left;" rend="DH-Default">URL</cell>
+                            <cell style="text-align: left;" rend="DH-Default">https://www.gwdg.de/paper.pdf</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;" rend="DH-Default">2</cell>
+                            <cell style="text-align: left;" rend="DH-Default">METADATA</cell>
+                            <cell style="text-align: left;" rend="DH-Default">https://github.com/my-project/main/metadata.json</cell>
+                        </row>
+                    </table>
+                    <p style="text-align: left; ">Suppose that we use GitHub as a repository for metadata, Table 3 shows how the PID 
+                        <hi rend="italic">21.1234/MY-PAPER</hi> is structured. In this structure, the PID record contains only two entries. The first entry is the URL pointing to the location of the DO. The second one is the URL pointing to the location of the metadata text file. This text file consists of all relevant metadata fields for the PID. To ensure machine-readability, this file should be in plaintext format with structure (e.g. JSON), as shown in Figure 4. This file is put under a version control system (Git) and pushed to a Git repository. Consequently, all changes to this file will be recorded by Git and one can use all features of Git to navigate through the metadata history.
+                    </p>
+                    <figure>
+                        <anchor xml:id="Ref195013085"/>
+                        <graphic n="1004" width="16.002cm" height="5.080633333333333cm" url="/tmp/tmp48v33e9u/Pictures/13bffca1010ca52fda2cf71c6e792d29.png" rend="inline"/>
+                        <head>
+                            <hi style="font-size:10pt" xml:space="preserve">This is the content of the </hi>
+                            <hi rend="italic" style="font-size:10pt">metadata.json</hi>
+                            <hi style="font-size:10pt" xml:space="preserve"> file. This file contains all metadata of the DO, whose PID is 21.1234/MY-PAPER.</hi>
+                        </head>
+                    </figure>
+                    <p style="text-align: left; ">A clear advantage of this approach is the usage of Git for metadata provenance. Since Git is a well-known and feature-rich version control system, one can expect to be able to perform various operations on data history, such as viewing a list of changes, checking the differences between versions, checking out another version, etc. Besides its obvious advantage, using Git also brings some drawbacks. If a PID provider wants to offer a possibility for users to see the history of their metadata on their websites, it might be challenging to implement since one needs to parse the Git history. Another disadvantage is how to organize data in a Git repository properly. Assume that GitHub is used. In a simple use case, we can have one repository per PID. However, this will make the number of repositories explode, since a PID provider can allocate millions of PIDs, which means millions of repositories need to be created. To circumvent this, one might try to put metadata files of different PIDs in one repository. Due to the fact that each repository has one history, this solution will mix the metadata history of many PIDs together. This leads to confusion and further techniques need to be applied (e.g. tagging) to distinguish the history of different PIDs. Last but not least, putting metadata in a JSON format eliminates the possibility to have duplicated types in a handle. Since all field names on the same level of a JSON must be unique, the JSON in Figure 4 cannot have two Author fields. To overcome this issue, one could combine index and type to form a JSON field name, or convert duplicated types into arrays.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Using only the PID system</head>
+                    <div type="div3" rend="DH-Heading3">
+                        <head>For simple type-value pairs</head>
+                        <p style="text-align: left; ">Suppose we want to track the changes of metadata of the PID 21.1234/MY-PAPER shown in Table 1. The first step is to create another PID to store the history. We call it a changelog PID. This changelog PID is only created at the first moment when the metadata of the original PID are modified. Continuing with the example, this changelog PID is named 
+                            <hi rend="italic">21.1234/MY-PAPER-METADATA-CHANGELOG</hi>. Keep in mind that the suffix does not need to have a semantic meaning. Only for illustration, we used this example. Further work will evaluate if a naming convention for changelog PID should be developed. To know that our PID 
+                            <hi rend="italic">21.1234/MY-PAPER</hi> has a metadata changelog, another type can be added to this PID. For example, type 
+                            <hi rend="italic">Metadata_history</hi> will be added at index 100 with the value 
+                            <hi rend="italic">21.1234/MY-PAPER-METADATA-CHANGELOG</hi>. This type should be standardized to simplify future use and machine actionability. Possible solutions are adding it to the Handle Namespace (Lannom, et al., 2003) or using a type registry, which is currently developed in the EU funded project FAIRCORE4EOSC (FAIRCORE4EOSC, n.d.). Following the ideas of writing a changelog (Lacan, n.d.), a changelog PID stores all changes, which are actions performed on the metadata. By applying these changes in a correct order, one can reconstruct the metadata of a PID to an exact state in the past. We define three kinds of actions: 
+                            <hi rend="italic">add</hi>, 
+                            <hi rend="italic">update</hi>, and 
+                            <hi rend="italic">delete</hi>.
+                        </p>
+                        <p style="text-align: left; ">Table 4 shows the content of the PID 
+                            <hi rend="italic">21.1234/MY-PAPER-METADATA-CHANGELOG</hi>, which has 4 entries, starting from index 1 to index 4. The PID which owns the corresponding changelog is always stored at index 1, while changes are recorded starting from index 2. The index number acts as the order of changes. It means the change at index 3 happened after the change at index 2. Note that the value at index 2 is the initial state of the metadata. It assumes that one starts with an empty PID, then metadata are added in as a step in the PID generation process.
+                        </p>
+                        <table rend="rules">
+                            <head>
+                                <anchor xml:id="Ref195019378"/>Table 4: This is the content of the PID 
+                                <hi rend="italic">21.1234/MY-PAPER-METADATA-CHANGELOG</hi>. This PID is a changelog of the PID 
+                                <hi rend="italic">21.1234/MY-PAPER</hi>. It stores changes which were applied to the metadata of the PID 
+                                <hi rend="italic">21.1234/MY-PAPER</hi>. The owner of this changelog PID is specified at index 1. Changes are described from index 2 on. Each 
+                                <hi rend="italic">value</hi> is a JSON object, whose schema can be found at 
+                                <ref target="https://doi.org/10.25625/XWKW1R">https://doi.org/10.25625/XWKW1R</ref>.
+                            </head>
+                            <row>
+                                <cell style="text-align: left;" rend="DH-Default">Index</cell>
+                                <cell style="text-align: left;" rend="DH-Default">Type</cell>
+                                <cell style="text-align: left;" rend="DH-Default">Value</cell>
+                            </row>
+                            <row>
+                                <cell style="text-align: left;" rend="DH-Default">1</cell>
+                                <cell style="text-align: left;" rend="DH-Default">Owner</cell>
+                                <cell style="text-align: left;" rend="DH-Default">21.1234/MY-PAPER</cell>
+                            </row>
+                            <row>
+                                <cell style="text-align: left;" rend="DH-Default">2</cell>
+                                <cell style="text-align: left;" rend="DH-Default">Changelog</cell>
+                                <cell style="text-align: left;" rend="DH-Default">
+                                    <figure>
+                                        <graphic n="1005" width="11.4cm" height="4.97cm" url="/tmp/tmp48v33e9u/Pictures/13bffca1010ca52fda2cf71c6e792d29.png" rend="inline"/>
+                                    </figure>
+                                </cell>
+                            </row>
+                            <row>
+                                <cell style="text-align: left;" rend="DH-Default">3</cell>
+                                <cell style="text-align: left;" rend="DH-Default">Changelog</cell>
+                                <cell style="text-align: left;" rend="DH-Default">
+                                    <figure>
+                                        <graphic n="1006" width="6.67cm" height="5.69cm" url="/tmp/tmp48v33e9u/Pictures/13bffca1010ca52fda2cf71c6e792d29.png" rend="inline"/>
+                                    </figure>
+                                </cell>
+                            </row>
+                            <row>
+                                <cell style="text-align: left;" rend="DH-Default">4</cell>
+                                <cell style="text-align: left;" rend="DH-Default">Changelog</cell>
+                                <cell style="text-align: left;" rend="DH-Default">
+                                    <figure>
+                                        <graphic n="1007" width="6.54cm" height="3.84cm" url="/tmp/tmp48v33e9u/Pictures/13bffca1010ca52fda2cf71c6e792d29.png" rend="inline"/>
+                                    </figure>
+                                </cell>
+                            </row>
+                        </table>
+                        <p style="text-align: left; ">To make it machine-readable, each value in the changelog PID is a JSON object (except the value at index 1). This JSON has four keys: 
+                            <hi rend="italic">version</hi>, 
+                            <hi rend="italic">timestamp</hi>, 
+                            <hi rend="italic">author</hi>, and 
+                            <hi rend="italic">changelog</hi>. As the names suggest, 
+                            <hi rend="italic">version</hi> is the new version number, 
+                            <hi rend="italic">timestamp</hi> is the time when the changes were made, and 
+                            <hi rend="italic">author</hi> is the one who did it. Meanwhile, 
+                            <hi rend="italic">changelog</hi> contains a list of changes that were applied. Each change starts with an 
+                            <hi rend="italic">action</hi>, which is one of the three actions defined above. For example, in Table 4, we can see that at the beginning (index 2), four metadata entries were added by 
+                            <hi rend="italic">tdoan</hi> at the specified timestamp, which form the initial state of the PID 21.1234/MY-PAPER.
+                        </p>
+                        <p style="text-align: left; ">Depending on the action, one needs to provide information to the changelog accordingly. An 
+                            <hi rend="italic">add</hi> or 
+                            <hi rend="italic">delete</hi> action requires all three 
+                            <hi rend="italic">index</hi>, 
+                            <hi rend="italic">type</hi>, and 
+                            <hi rend="italic">value</hi> to be provided for each change in the changelog. However, for an 
+                            <hi rend="italic">update</hi> action, 
+                            <hi rend="italic">type</hi> is not necessary, but 
+                            <hi rend="italic">index</hi>, 
+                            <hi rend="italic">value</hi>, and 
+                            <hi rend="italic">old_value</hi> are required. By storing not only new values but also the old ones, the history can be traversed in both directions. To reach a specified version, one can either start from the beginning and continue applying changes, or start from the latest version and then rollback.
+                        </p>
+                        <p style="text-align: left; ">In a changelog PID, version numbers in 
+                            <hi rend="italic">version</hi> fields follow the Semantic Versioning specification (Preston-Werner, n.d.). In this syntax, a version number has the format 
+                            <hi rend="italic">MAJOR.MINOR.PATCH</hi>. The specification has already explained when to increase which number. To apply it to our approach, an 
+                            <hi rend="italic">update</hi> action is a patch, an 
+                            <hi rend="italic">add</hi> action is a minor change, and 
+                            <hi rend="italic">delete</hi> is a major change. In software release management, whenever a feature is removed, the software is not backward compatible anymore. Therefore, after a delete action, the new version must be a major release.
+                        </p>
+                    </div>
+                    <div type="div3" rend="DH-Heading3">
+                        <head>For JSON values</head>
+                        <p style="text-align: left; ">The presented approach is for PIDs which organize their metadata as type-value pairs, where values are atomic strings. In practice, there are cases where a value of a metadata field is in JSON format. The PID shown in Table 5 is an example for this use case. It shows a PID, 
+                            <hi rend="italic">21.1234/JSON-METADATA</hi>, which was assigned to a person. As we can see, the metadata of this person are all stored in index 1 as a string in JSON format.
+                        </p>
+                        <table rend="rules">
+                            <head>
+                                <anchor xml:id="Ref195022859"/>
+                                <hi style="font-size:10pt" xml:space="preserve">Table </hi>
+                                <hi style="font-size:10pt">5</hi>
+                                <hi style="font-size:10pt" xml:space="preserve">: This example PID, </hi>
+                                <hi rend="italic" style="font-size:10pt">21.1234/JSON-METADATA</hi>
+                                <hi style="font-size:10pt">, has JSON as a value of its metadata field.</hi>
+                            </head>
+                            <row>
+                                <cell style="text-align: left;" rend="DH-Default">Index</cell>
+                                <cell style="text-align: left;" rend="DH-Default">Type</cell>
+                                <cell style="text-align: left;" rend="DH-Default">Value</cell>
+                            </row>
+                            <row>
+                                <cell style="text-align: left;" rend="DH-Default">1</cell>
+                                <cell style="text-align: left;" rend="DH-Default">Person</cell>
+                                <cell style="text-align: left;" rend="DH-Default">
+                                    <figure>
+                                        <graphic n="1008" width="6.34cm" height="9.08cm" url="/tmp/tmp48v33e9u/Pictures/13bffca1010ca52fda2cf71c6e792d29.png" rend="inline"/>
+                                    </figure>
+                                </cell>
+                            </row>
+                        </table>
+                        <p style="text-align: left; ">Suppose that after some time, that person has moved to another city, and starts playing guitar as a new hobby. So, the metadata in that PID must be updated. The approach is almost the same as what was described for atomic strings. It means that a changelog PID must be created with proper 
+                            <hi rend="italic">Owner</hi> type and version syntax, and changes need to be described in the JSON format. However, in this case, since metadata are stored in a JSON object, the structure of each element in the 
+                            <hi rend="italic">changelog</hi> must be adjusted properly. Table 6 shows how the changelog is initiated and how changes on 
+                            <hi rend="italic">city</hi> and 
+                            <hi rend="italic">hobbies</hi> are documented. To identify the changed fields in a 
+                            <hi rend="italic">JSON</hi> object, 
+                            <hi rend="italic">JSONPath</hi> is used as the value for the 
+                            <hi rend="italic">path</hi> field. JSONPath is like XPath, but for JSON (Gössner, 2007). It is a standardized way to describe how to access to a field in a JSON object. By using JSONPath to identify the updated field, we can fully ensure machine-readability of the changelog PID. Same as the other case, when an update action is performed, 
+                            <hi rend="italic">old_value</hi> field is required.
+                        </p>
+                        <table rend="rules">
+                            <head>
+                                <anchor xml:id="Ref195023605"/>Table 6: This changelog PID shows two changes to the PID 
+                                <hi rend="italic">21.1234/JSON-METADATA</hi> described in 
+                                <hi style="font-size:10pt">Table 5</hi>. The author has changed the 
+                                <hi rend="italic">city</hi> and added a new 
+                                <hi rend="italic">sport</hi>. JSONPath is used to identify the changed fields in a JSON object.
+                            </head>
+                            <row>
+                                <cell style="text-align: left;" rend="DH-Default">Index</cell>
+                                <cell style="text-align: left;" rend="DH-Default">Type</cell>
+                                <cell style="text-align: left;" rend="DH-Default">Value</cell>
+                            </row>
+                            <row>
+                                <cell style="text-align: left;" rend="DH-Default">1</cell>
+                                <cell style="text-align: left;" rend="DH-Default">Owner</cell>
+                                <cell style="text-align: left;" rend="DH-Default">21.1234/JSON-METADATA</cell>
+                            </row>
+                            <row>
+                                <cell style="text-align: left;" rend="DH-Default">2</cell>
+                                <cell style="text-align: left;" rend="DH-Default">Changelog</cell>
+                                <cell style="text-align: left;" rend="DH-Default">
+                                    <figure>
+                                        <graphic n="1009" width="11.48cm" height="11.82cm" url="/tmp/tmp48v33e9u/Pictures/13bffca1010ca52fda2cf71c6e792d29.png" rend="inline"/>
+                                    </figure>
+                                </cell>
+                            </row>
+                            <row>
+                                <cell style="text-align: left;" rend="DH-Default">3</cell>
+                                <cell style="text-align: left;" rend="DH-Default">Changelog</cell>
+                                <cell style="text-align: left;" rend="DH-Default">
+                                    <figure>
+                                        <graphic n="10010" width="11.47cm" height="11.81cm" url="/tmp/tmp48v33e9u/Pictures/13bffca1010ca52fda2cf71c6e792d29.png" rend="inline"/>
+                                    </figure>
+                                </cell>
+                            </row>
+                        </table>
+                        <p style="text-align: left; ">The schema for the 
+                            <hi rend="italic">changelog</hi> type can be found at 
+                            <ref target="https://doi.org/10.25625/XWKW1R">https://doi.org/10.25625/XWKW1R</ref>. This schema includes both cases which were discussed above. By using this schema, PID providers have a possibility to validate the changelog PID to make sure that everything is correct before allowing the modification to take place.
+                        </p>
+                        <p style="text-align: left; ">The clear benefit of this approach is its simplicity. There is no need to build another service or use any third-party program to track the provenance of the DO's metadata. In addition, changes are described in a machine-readable way. This allows the data to be processed by any systems, independent of the programming languages they use. Furthermore, by storing only the changes instead of the whole new state, redundancy is avoided, thus greatly reduces the size of a changelog PIDs. Last but not least, both new values and old values are stored in the changelog. This allows the history to be traversed in both directions: either from the beginning to the specified version, or from the latest version back to another version in the past.</p>
+                        <p style="text-align: left; ">Besides its advantages, this approach has a limitation which need to be taken into consideration at the implementation phase. It is considerable that the size of the changelog PID only grows and will never become smaller. Therefore, if there is a limit in PID size, the system needs to paginate the changelog. This can be easily achieved by creating a new PID for the new page, then linking these PIDs properly with the 
+                            <hi rend="italic">next</hi> and 
+                            <hi rend="italic">previous</hi> references.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Retrieve a version</head>
+                <p style="text-align: left; ">When users resolve a PID to see its metadata, the latest version is always returned by default. However, there are cases where previous versions are needed. To support that feature, there must be a systematic way to retrieve a specific version by reading the changelog.</p>
+                <p style="text-align: left; ">Suppose that a PID provider applies the approach described in Section 4.2 to track changes of metadata of their PIDs. To retrieve an older version, the system starts with an empty record, then goes through all changes up to the desired version and modifies the record accordingly. The detailed steps about how to read a changelog are illustrated as an activity diagram in Figure 4.</p>
+                <p style="text-align: left; ">When reading a changelog, the system must first validate it. If the JSON does not conform to the schema, the system must immediately abort and return with an error. This validation step is vital, since it ensures that every valid change has all required fields, and the combination of fields makes sense. For each change, as presented in Figure 4, if the 
+                    <hi rend="italic">path</hi> field exists, the system assumes that metadata is stored as a JSON object, similar to the one shown in Table 5. Therefore, the specified action will be performed on the JSON object at the specified index. On the other hand, without the 
+                    <hi rend="italic">path</hi> field, the action will be done on the whole entry level. With this algorithm, although the system receives the same action, e.g. 
+                    <hi rend="italic">add</hi>, it can distinguish if a new field should be added to the JSON object, or a new entry should be added to the record. For the rollback, the same workflow is used with small adjustments. For every 
+                    <hi rend="italic">add</hi> action, 
+                    <hi rend="italic">delete</hi> is done instead, and vice versa. For 
+                    <hi rend="italic">update</hi>, 
+                    <hi rend="italic">old_value</hi> is used to replace 
+                    <hi rend="italic">value</hi>.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p style="text-align: left; ">Research data management should follow the FAIR principles. To ensure reusability, not only the DO, but also its metadata should be “associated with detailed provenance”. Also, the FAIR Digital Object (FDO) framework (FDO, n.d.), which is currently under debate, might have the requirement to maintain the provenance of specific information stored in a PID. In this work, two approaches for tracking changes of metadata are presented, namely using Git and using only the PID system. Each approach has its advantages and disadvantages. Although the Git-approach offers a variety of features, it is not scalable. Therefore, it is only appropriate for individual users, who do not own too many PIDs. The second approach, which only utilizes features of a PID system, is more flexible. It requires some implementation and does not offer many features like Git. However, it is scalable with respect to the number of PIDs. For that reason, we recommend PID providers to use this approach when they want to offer the metadata versioning feature.</p>
+                <figure>
+                    <graphic n="10011" width="16.002cm" height="20.297069444444446cm" url="/tmp/tmp48v33e9u/Pictures/13bffca1010ca52fda2cf71c6e792d29.png" rend="inline"/>
+                    <head>This activity diagram shows how the system reads a changelog. It starts with the validation, then it parses each change and performs the described action on a record to restore the desired version.</head>
+                </figure>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                         ePIC is a European consortium that provides Handle based PID services for the European Research Community. For more information, please visit 
+                            <ref target="https://www.pidconsortium.net/">https://www.pidconsortium.net/</ref>
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Belhajjame, K. et al., 2013. PROV-DM: The PROV Data Model. W3C Recommendation, Volume 14, pp. 15-16.</bibl>
+                    <bibl style="text-align: left; ">CNRI, 2018. Handle.net Technical Manual. [Online] Available at: https://hdl.handle.net/20.1000/113 [Accessed 8 April 2025].</bibl>
+                    <bibl style="text-align: left; ">DataCite, 2024. Get a JSON API result of activities. [Online] Available at: https://support.datacite.org/reference/get_activities [Accessed 17 January 2024].</bibl>
+                    <bibl style="text-align: left; ">DataCite, n.d. Tracking metadata provenance. [Online] Available at: https://support.datacite.org/docs/tracking-provenance [Accessed 16 January 2024].</bibl>
+                    <bibl style="text-align: left; ">FAIRCORE4EOSC, n.d. EOSC Data Type Registry (DTR). [Online] Available at: https://faircore4eosc.eu/eosc-core-components/eosc-data-type-registry-dtr [Accessed 8 April 2025].</bibl>
+                    <bibl style="text-align: left; ">FDO, n.d. FAIR Digital Objects Forum. [Online] Available at: https://fairdo.org/ [Accessed 30 January 2024].</bibl>
+                    <bibl style="text-align: left; ">FREYA, n.d. Provenance Services. [Online] Available at: https://project-freya.eu/provenance.html [Accessed 08 April 2025].</bibl>
+                    <bibl style="text-align: left; ">Gössner, S., 2007. JSONPath - XPath for JSON. [Online] Available at: https://goessner.net/articles/JsonPath/ [Accessed 12 January 2024].</bibl>
+                    <bibl style="text-align: left; ">Handle, n.d. Handle.Net Registry. [Online] Available at: https://www.handle.net [Accessed 15 January 2024].</bibl>
+                    <bibl style="text-align: left; ">Lacan, O., n.d. keep a changelog. [Online] Available at: https://keepachangelog.com/en/1.1.0/ [Accessed 9 January 2024].</bibl>
+                    <bibl style="text-align: left; ">Lannom, L., Boesch, L. C. B. P. &amp; Sun, S., 2003. Handle System Overview. [Online] Available at: https://www.rfc-editor.org/info/rfc3650 [Accessed 8 April 2025].</bibl>
+                    <bibl style="text-align: left; ">Lannom, L., Reilly, S. &amp; Sun, S., 2003. Handle System Namespace and Service Definition. [Online] Available at: https://www.rfc-editor.org/info/rfc3651 [Accessed 8 April 2025].</bibl>
+                    <bibl style="text-align: left; ">Nowak, K., Ioannidis, A., Bigarella, C. &amp; Nielsen, L. H., 2018. Zenodo. [Online] Available at: https://doi.org/10.5281/zenodo.1256592 [Accessed 8 April 2025].</bibl>
+                    <bibl style="text-align: left; ">Preston-Werner, T., n.d. Semantic Versioning 2.0.0. [Online] Available at: https://semver.org/ [Accessed 10 January 2024].</bibl>
+                    <bibl style="text-align: left; ">W3C, 2010. What is Provenance. [Online] Available at: https://www.w3.org/2005/Incubator/prov/wiki/What_Is_Provenance [Accessed 3 January 2024].</bibl>
+                    <bibl style="text-align: left; ">Wilkinson, M. D. et al., 2016. The FAIR Guiding Principles for scientific data management and stewardship. Scientific data, 3(1), pp. 1-9.</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

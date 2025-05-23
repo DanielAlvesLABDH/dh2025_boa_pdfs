@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="STOECKLE_Marc_Harmonizing_Memories__A_Transcultural_Explorat">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Harmonizing Memories: A Transcultural Exploration of a Music App, Detecting &amp; Retrieving Music Preferences in Dementia Patients via Automated Facial Expression Analysis </title>
+                <author>
+                    <persName>
+                        <surname>Stoeckle</surname>
+                        <forename>Marc</forename>
+                    </persName>
+                    <affiliation>University of Calgary, Canada</affiliation>
+                    <email>marcstoeckle@mail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-24T16:41:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Alzheimer’s</term>
+                    <term>AI technology</term>
+                    <term>personalized music</term>
+                    <term>accessibility</term>
+                    <term>social impact</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>information retrieval and querying algorithms and methods</term>
+                    <term>mobile applications development and analysis</term>
+                    <term>music and sound digitization</term>
+                    <term>encoding</term>
+                    <term>and analysis</term>
+                    <term>Cognitive sciences and psychology</term>
+                    <term>Computer science</term>
+                    <term>Informatics</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Introduction</p>
+            <p>With nearly 50 million people globally affected by dementia, Alzheimer’s Disease International projects that number will exceed 152 million by 2050. Music therapy has been found to reduce agitation, depression, and stress, and improve memory recall in dementia patients (Álvarez 2022; Cuddy et al. 2012). However, identifying personalized music for patients remains a challenge, particularly as many patients are unable to express their preferences. Traditional methods—interviews or questionnaires—often do not capture individual nuances. This paper proposes using a minimal user-interface music player prototype that utilizes facial expression recognition to automatically detect and retrieve preferred music for dementia patients.</p>
+            <p>Background</p>
+            <p>Existing literature shows that familiar music can reduce symptoms of dementia, such as agitation and apathy, while improving emotional well-being and memory recall (Álvarez 2022; Haj et al. 2015). Previous studies suggest that personalized music retrieval, however, remains a challenge due to communication barriers. The most common approaches require manual input from patients or caregivers, which is impractical for those with dementia. The few studies that explore non-traditional inputs focus mainly on basic systems (Lancioni et al. 2014). Facial expression recognition is an innovative method for non-invasive music retrieval, making it possible for patients to engage with music therapy independently. This study builds upon proof-of-concept research (Stoeckle &amp; Freud 2016) that demonstrated the potential of facial recognition technology for music preference detection.</p>
+            <p>Method</p>
+            <p>Twenty participants from Germany (5 females, 5 males) and South Korea (8 females, 2 males), aged 65 to 81, were recruited for the study. Participants were selected for their age-related memory loss, not diagnosed dementia. They were asked to listen to a playlist of 10 songs (5 popular, 3 classical, 2 folk), selected based on their childhood and adolescent years. The music was played via a MacBook Pro (2022) with the built-in camera and microphone capturing facial expressions and vocalizations. After the session, participants were asked to recall a favorite song of their lifetime not included in the playlist. Data were recorded using QuickTime and analyzed with MorphCast (MorphCast, 2024), a facial emotion recognition software that assesses emotions based on the Ekman (1999) discrete model and Russell’s (1980) dimensional model.</p>
+            <p>Results</p>
+            <p>Facial expressions were categorized into six emotions: anger, disgust, fear, happiness, sadness, and surprise. Participants showed varied emotional responses during the music sessions, with some maintaining a consistent emotional expression (e.g., happy), while others fluctuated between emotions. The analysis of arousal and valence showed that some participants responded with more positive and calm reactions, while others exhibited frustration or sadness. A higher level of attention was observed when participants listened to music that aligned with their preferences, compared to songs they found less engaging. Interestingly, participants from South Korea had consistently lower positivity ratings (0%-10%) than their German counterparts, though other emotional responses remained similar.</p>
+            <p>Discussion</p>
+            <p>The results suggest that automated facial expression recognition could be a viable method for detecting music preferences in individuals with dementia. Traditional emotional categories (e.g., happy, sad) were not entirely applicable to older adults, especially those with memory loss. Instead, the responses appeared to reflect individual music listening characteristics—some participants were more engaged, while others responded passively. Establishing a baseline for each participant’s emotional profile allows for more accurate tracking of emotional shifts and music preferences. Differences in cultural responses to music were noted, with South Korean participants showing less engagement, which could be attributed to cultural variations in emotional expression or issues with facial recognition software. Further investigation is needed to understand these discrepancies fully.</p>
+            <p>Conclusion</p>
+            <p>Automated facial expression recognition can detect individual music preferences, offering a promising method for personalized music retrieval in dementia patients. This approach eliminates the need for traditional input methods, such as questionnaires and interviews, which are often difficult for patients to engage with. The next steps will involve testing this technology on individuals with diagnosed dementia and refining the system for practical use in therapeutic settings. With further research and refinement, this technology could significantly enhance music therapy for Alzheimer’s patients, offering a more accessible and personalized experience.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Álvarez, Leticia Prieto (2022). Neurologic music therapy with a habilitative approach for older adults with dementia: A feasibility study. 
+                        <hi rend="italic">Music Therapy Perspectives, 40</hi>. 76–83.
+                    </bibl>
+                    <bibl>Cuddy, Lola. L./ Duffin, Jacalyn/ Gill, Sudeep S. / Brown, Cassandra / Sikka, Ritu / Vanstone, Ashley. D. (2012). Memory for melodies and lyrics in Alzheimer’s disease. 
+                        <hi rend="italic">Music Perception, 29</hi>, 5. 479–491.
+                    </bibl>
+                    <bibl>Haj, Mohamed El / Antoine, Pascal / Nandrino, Jean Louis / Gély-Nargeot, Marie-Christine / Raffard, Stéphane (2015). Self-defining memories during exposure to music in Alzheimer’s disease. 
+                        <hi rend="italic">Psychogeriatrics, 27</hi>, 10. 1719–1730.
+                    </bibl>
+                    <bibl>Lancioni, Giulio E / Singh, Nirbhay N / O’Reilly, Mark F / Sigafoos, Jeff / Ferlisi, Gabriele / Zullo, Valeria / Schirone, Simona / Prisco, Raffaella / Denitto, Floriana (2014). A computer-aided program for helping patients with moderate Alzheimer’s disease engage in verbal reminiscence. 
+                        <hi rend="italic">Research in Developmental Disabilities, 35</hi>, 12. 3026–3033.
+                    </bibl>
+                    <bibl>MorphCast. (2024). Emotion AI video frame analyzer. Retrieved from https://app.morphcast.com/emotion-ai-video-frames-analyzer</bibl>
+                    <bibl>Russell, James (1980). A circumplex model of affect. 
+                        <hi rend="italic">Journal of Personality and Social Psychology, 39</hi>, 6. 1161-1178.
+                    </bibl>
+                    <bibl>Stoeckle, Marc / Freud, Luanne (2016). A proof of concept personalized music player for persons with Alzheimer’s disease. 
+                        <hi rend="italic">Proceedings of the Association for Information Science and Technology, 53</hi>. 1–7.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

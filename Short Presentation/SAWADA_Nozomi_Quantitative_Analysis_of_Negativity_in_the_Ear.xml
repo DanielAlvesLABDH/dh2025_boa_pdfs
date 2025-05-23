@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SAWADA_Nozomi_Quantitative_Analysis_of_Negativity_in_the_Ear">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Quantitative Analysis of Negativity in the Early Colonial Nigerian Newspapers: A Comparative Study of a Lexicon-based Method and LLM</title>
+                <author>
+                    <persName>
+                        <surname>Sawada</surname>
+                        <forename>Nozomi</forename>
+                    </persName>
+                    <affiliation>Komazawa University, Japan</affiliation>
+                    <email>nsawada@komazawa-u.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Sasaki</surname>
+                        <forename>Kyohei</forename>
+                    </persName>
+                    <affiliation>Independent Researcher</affiliation>
+                    <email>s-kyohei@yc5.so-net.ne.jp</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>sentiment analysis</term>
+                    <term>emotion detection</term>
+                    <term>LLM</term>
+                    <term>history</term>
+                    <term>Africa</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>text mining and analysis</term>
+                    <term>African and African American Studies</term>
+                    <term>History</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction </head>
+                <p style="text-align: left; text-align: justify;">Historical research has illuminated how emotions under colonial rule were situated within power dynamics and intertwined with political resistance and adaptation processes (Reid 2017, Archer/Matheson 2023). However, measuring emotions in historical contexts presents methodological challenges due to researcher subjectivity and difficulties in analyzing extensive corpora. Recent scholarship highlights how digital humanities techniques can offer fresh perspectives on historical emotions (Turunen/Taskinen 2024), enabling systematic identification of emotional patterns across extensive sources and revealing trends that would remain hidden using conventional approaches (Sprugnoli et al. 2016, Leemans et al. 2017, Schmidt et al. 2021, Bozia et al. 2024).</p>
+                <p style="text-align: left; text-align: justify;">This paper examines the emotional tone of early colonial Nigerian newspapers produced by educated African elites, previously characterized as predominantly negative amid rising nationalism (Coleman 1958, Omu 1978, Enemugwem 2009). By employing digital humanities methodologies, this study investigates: [1] Which computational approach—lexicon-based or LLMs—yield more reliable results when analyzing historical Nigerian press? [2] Does computational analysis confirm these newspapers’ predominantly negative characterization? [3] Which specific emotions within Plutchik’s framework (joy, trust, fear, surprise, sadness, disgust, anger, and anticipation) constitute this negativity (Plutchik 1980, 2001)?</p>
+                <p style="text-align: left; text-align: justify;">The corpus examined comprises editorials from the 
+                    <hi rend="italic">Lagos Observer</hi> (1882-1888) and the 
+                    <hi rend="italic">Lagos Weekly Record</hi> (1891-1921), two influential publications that articulated indigenous perspectives during the formative colonial period. Methodologically, the study employs a comparative approach between dictionary-based sentiment analysis (utilizing predefined emotion lexicons) and large language models (LLMs), which leverage billions of parameters for advanced contextual understanding of language. This study seeks to uncover methodologies that reveal the layered complexities of negativity embedded in colonial discourse.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methodology</head>
+                <p style="text-align: left; text-align: justify;">This study employs a comparative methodological framework to evaluate lexicon-based analysis, large language models with reasoning capabilities, and human classification in their respective approaches to historical sentiment analysis in colonial newspaper editorials.</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Dataset</head>
+                    <p style="text-align: left; text-align: justify;">The analysis focuses on a total of 1,478 editorials from the
+                        <hi rend="italic" xml:space="preserve"> Lagos Observer</hi> (1882-1888, 150 editorials, average 988 words) and the 
+                        <hi rend="italic">Lagos Weekly Record</hi> (1891-1921, 1,328 editorials, average 1,001 words) that reflect the colonial power dynamics and indigenous perspectives (Sawada 2012, Newell 2013, Nwafor 2023). OCR quality challenges were addressed through manual correction.
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Emotion Classification Framework</head>
+                    <p style="text-align: left; text-align: justify;">We adopt Robert Plutchik’s eight basic emotions model (joy, trust, fear, surprise, sadness, disgust, anger, and anticipation), offering a psychologically grounded framework for capturing emotional spectrum.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Integrated Analysis Approach</head>
+                    <div type="div3" rend="DH-Heading3">
+                        <head>Lexicon-based Analysis</head>
+                        <p style="text-align: left; text-align: justify;">We applied the NRC Emotion Intensity Lexicon (NRC-EIL) version 1 to all 1,478 editorials, which provides intensity scores (0-1) for a list of approximately 10,000 English words for Plutchik’s eight basic emotions (Mohammad 2018, 2022).</p>
+                    </div>
+                    <div type="div3" rend="DH-Heading3">
+                        <head>Human Evaluation</head>
+                        <p style="text-align: left; text-align: justify;">For the first 50 editorials from the 
+                            <hi rend="italic">Lagos Observer</hi>, the author specialized in African history evaluated emotions using a 3-point scale: 1 (applicable), 0.5 (somewhat applicable), and 0 (not applicable). This human evaluation serves as a benchmark for interpreting emotions with consideration of the cultural and historical context of the colonial era.
+                        </p>
+                    </div>
+                    <div type="div3" rend="DH-Heading3">
+                        <head>Analysis by Large Language Models (LLMs)</head>
+                        <p style="text-align: left; text-align: justify;">We utilized GPT o3-mini model with multiple seed values (100 iterations for the
+                            <hi rend="italic" xml:space="preserve"> Lagos Observer</hi>, 10 for 
+                            <hi rend="italic">Lagos Weekly Record</hi>) to ensure high reproducibility given the nature of probabilistic models, using a prompt with emotion definitions and the same 3-point scale (Figure 1). The reduced number for the
+                            <hi rend="italic" xml:space="preserve"> Lagos Weekly Record</hi> was due to technical constraints with some content being flagged as sensitive and resource allocation considerations.
+                        </p>
+                        <p style="text-align: left; text-align: justify;">For agreement analysis with human evaluations, we used the modes (most frequent values) from these multiple iterations to calculate Cohen’s weighted kappa coefficients. For the temporal analysis (Figure 8), we utilized the average scores across all iterations for each year to better represent the general emotional trends over time.</p>
+                        <figure>
+                            <graphic n="1001" width="16.002cm" height="9.170458333333332cm" url="/tmp/tmpwgymou_d/Pictures/e9dacc1bc39d3f60f2203ca84d85cad8.png" rend="inline"/>
+                        </figure>
+                        <p style="text-align: left; text-align: justify;">Figure 1. LLM emotion detection prompt with Plutchik’s eight emotions and 3-point scale definition.</p>
+                    </div>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Analysis Framework</head>
+                    <p style="text-align: left; text-align: justify;">To compare the results of the lexicon-based method, human evaluation, and LLM, we first calculated correlation coefficients between human evaluations and both computational approaches to determine which method better aligned with human historical interpretation. For the better-performing method (LLM), we conducted a detailed agreement analysis using Cohen’s weighted kappa coefficient for each emotion category. The calculation employed quadratic weighting to appropriately assess the significance of different evaluation discrepancies. Finally, we conducted temporal analysis of detected emotions to compare with assertions in previous historical scholarship.</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results</head>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Methodological Comparison</head>
+                    <p style="text-align: left; text-align: justify;">Our correlation analysis revealed that the LLM approach demonstrated higher alignment with human evaluation compared to the lexicon-based method (Figure 2). The lexicon-based analysis showed several limitations, particularly in detecting temporal emotional trends and distinguishing between different emotion types (Figure 3).<ref n="1" target="ftn1"/> Notably, the NRC-EIL results contradicted previous historical scholarship that identified gradually increasing negative emotions in these newspapers over time, instead showing relatively consistent emotional patterns throughout the period studied.
+                    </p>
+                    <figure>
+                        <graphic n="1002" width="15.79358888888889cm" height="8.786402777777777cm" url="/tmp/tmpwgymou_d/Pictures/e9dacc1bc39d3f60f2203ca84d85cad8.png" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; text-align: justify;">Figure 2. Correlation of LLM and NRC-EIL with human evaluation</p>
+                    <figure>
+                        <graphic n="1003" width="15.852069444444444cm" height="7.88235cm" url="/tmp/tmpwgymou_d/Pictures/e9dacc1bc39d3f60f2203ca84d85cad8.png" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; text-align: justify;">Figure 3. Average negative emotion intensity trends analyzed by NRC-EIL</p>
+                    <p style="text-align: left; text-align: justify;">We computed Cohen’s weighted kappa coefficients from the modes of LLM outputs and human classifications. Our analysis revealed marked differences across emotion categories: disgust (κ=0.843) and anger (κ=0.819) exhibited high agreement, while fear (κ=0.300) and sadness (κ=0.321) showed substantially lower agreement. These differences in agreement levels can be visually grasped by the degree of overlap in the Emotion Detection graphs (Figures 4-7). These results suggest that outward-directed emotions (anger, disgust) are more directly expressed and more reliably detected by both humans and computational tools, while inward-directed emotions (fear, sadness) present greater interpretive challenges, often expressed through euphemistic or indirect language requiring deeper cultural-historical context understanding.</p>
+                    <figure>
+                        <graphic n="1004" width="15.962925cm" height="16.84623611111111cm" url="/tmp/tmpwgymou_d/Pictures/e9dacc1bc39d3f60f2203ca84d85cad8.png" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; ">Figure 4 (Left). Emotion detection of fear by LLM and human evaluation</p>
+                    <p style="text-align: left; ">Figure 5 (Right). Emotion detection of sadness by LLM and human evaluation</p>
+                    <figure>
+                        <graphic n="1005" width="15.847647222222223cm" height="16.735058333333335cm" url="/tmp/tmpwgymou_d/Pictures/e9dacc1bc39d3f60f2203ca84d85cad8.png" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; ">Figure 6 (Left). Emotion detection of anger by LLM and human evaluation</p>
+                    <p style="text-align: left; ">Figure 7 (Right). Emotion detection of disgust by LLM and human evaluation</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Temporal Analysis</head>
+                    <p style="text-align: left; text-align: justify;">Our temporal analysis using the LLM approach revealed distinctive emotional patterns across both publications (Figure 8). The
+                        <hi rend="italic" xml:space="preserve"> Lagos Observer</hi> exhibited notably higher negativity intensities than previously documented in historical scholarships, with average anger and disgust scores peaking in 1888. The
+                        <hi rend="italic" xml:space="preserve"> Lagos Weekly Record</hi> demonstrated a gradual intensification of negative emotions over three decades, particularly evident in expressions of anger and disgust, with pronounced peaks during 1912-1919.<ref n="2" target="ftn2"/>
+                    </p>
+                    <p style="text-align: left; text-align: justify;">Although not displayed in Figure 8, our analysis detected consistently high levels of anticipation (scores 0.74-0.95) throughout the entire period in both publications, remaining elevated even when negative emotions reached their peaks. This persistent co-occurrence of anticipation alongside anger and disgust suggests a more complex emotional landscape than previously conceptualized in qualitative historical analyses.</p>
+                    <figure>
+                        <graphic n="1006" width="16.002cm" height="7.854597222222222cm" url="/tmp/tmpwgymou_d/Pictures/e9dacc1bc39d3f60f2203ca84d85cad8.png" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; ">Figure 8. Average negative emotion score trends detected by LLM</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p style="text-align: left; text-align: justify;">This comparative study reveals that the negativity in colonial Nigerian newspapers is characterized by pronounced expressions of anger and disgust, frequently alongside high levels of anticipation—demonstrating a more complex emotional landscape than previously recognized.</p>
+                <p style="text-align: left; text-align: justify;">Varying human-LLM agreement across emotion categories suggests the need for emotion-specific approaches to historical text analysis. Interpretation challenges with colonial-era euphemisms and formal language highlight the importance of culturally contextualized computational methods.</p>
+                <p style="text-align: left; text-align: justify;">
+                    <hi style="font-size:10pt">Future research should develop specialized historical lexicons, refine LLM prompts for cultural specificity, and implement multi-annotator approaches with inter-rater reliability measures. These improvements would address subjectivity in emotion interpretation for historically distant texts while advancing both digital humanities methodology and our understanding of colonial emotional dynamics.</hi>
+                </p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                             The challenges of emotion classification in lexicon-based methods were particularly evident in context-independent word-level analysis. Terms used in various contexts within colonial discourse presented special difficulties. For instance, “government” was categorized solely under fear in the NRC-EIL despite its contextually variable meanings in political editorials. Similarly, “interior” was simultaneously classified under the contradictory emotion categories of trust and disgust, while “court” appeared under both anger and fear. These classification ambiguities become especially problematic in colonial-era texts, where seemingly neutral institutional terms were frequently employed with layered critical intent that word-level sentiment analysis cannot capture. Additionally, linguistic changes between late 19th/early 20th century English and contemporary English create further constraints when applying modern emotion lexicons to historical texts.
+                        </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                             This general upward trend aligns with historiographical narratives of increasing anti-colonial sentiment, though with significant fluctuations—most notably the pronounced decrease in 1920, possibly reflecting post-World War I colonial recalibrations. These temporal patterns suggest a more nuanced emotional landscape than previously conceptualized in qualitative historical analyses.
+                        </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi rend="bold" style="font-size:10pt">Archer, Alfred / Matheson, Benjamin</hi> (2023): 
+                        <hi style="font-size:10pt">“Emotional imperialism”, in:</hi>
+                        <hi rend="italic" style="font-size:10pt" xml:space="preserve"> Philosophical Topics </hi>
+                        <hi style="font-size:10pt">51, 1: 7-25.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi rend="bold" style="font-size:10pt">Bozia, Eleni / Henderson, Matthew / Galal, Victoria / Beers, Luke</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024): “Performing sentiment analysis to trace the history of identity and belonging in ancient Greek literature”, in:</hi>
+                        <hi rend="italic" style="font-size:10pt" xml:space="preserve"> Digital Scholarship in the Humanities</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 39, 4: 1019-1025.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi rend="bold" style="font-size:10pt">Coleman, James S.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (1958): </hi>
+                        <hi rend="italic" style="font-size:10pt">Nigeria: Background to Nationalism</hi>
+                        <hi style="font-size:10pt">. Berkeley: University of California Press.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi rend="bold" style="font-size:10pt">Enemugwem, John H.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2009): “The impact of the Lagos press in Nigeria, 1861-1922”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt">Journal of Contemporary Research</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 6, 1: 7-25.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Leemans, Inger / van der Zwaan, Janneke / Maks, Isa / Kuijpers, Erika / Steenbergh, Kristine </hi>
+                        <hi style="font-size:10pt" xml:space="preserve">(2017): “Mining embodied emotions: a comparative analysis of sentiment and emotion in Dutch texts, 1600-1800”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt">Digital Humanities Quarterly</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 11, 4.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi rend="bold" style="font-size:10pt">Mohammad, Saif M.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2018): “Word affect intensities”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt">Proceedings of the 11th Edition of the Language Resources and Evaluation Conference (LREC-2018)</hi>
+                        <hi style="font-size:10pt">, Miyazaki, Japan, May 2018.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi rend="bold" style="font-size:10pt">Mohammad, Saif M.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2022). NRC Affect Intensity Lexicon. Retrieved from &lt;https://www.saifmohammad.com/WebPages/AffectIntensity.htm&gt; [Last updated: August 2022]</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Newell, Stephanie </hi>
+                        <hi style="font-size:10pt">(2013):</hi>
+                        <hi rend="italic" style="font-size:10pt" xml:space="preserve"> The Power to Name: A History of Anonymity in Colonial West Africa</hi>
+                        <hi style="font-size:10pt">. Athens: Ohio University Press.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi rend="bold" style="font-size:10pt">Nwafor, Okechukwu</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2023): “A class of their own: newspaper obituaries and the colonial public sphere in Lagos, 1880–1920”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt">History in Africa</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 50: 99-125. DOI: 10.1017/hia.2023.14.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Omu, Fred I. A. </hi>
+                        <hi style="font-size:10pt" xml:space="preserve">(1978): </hi>
+                        <hi rend="italic" style="font-size:10pt">Press and Politics in Nigeria, 1880–1937</hi>
+                        <hi style="font-size:10pt">. New York: Longman.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi rend="bold" style="font-size:10pt">Plutchik, Robert</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (1980): “A general psychoevolutionary theory of emotion”, in: Plutchik, Robert / Kellerman, Henry (eds.): </hi>
+                        <hi rend="italic" style="font-size:10pt">Emotion: Theory, research, and experience</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">: Vol. 1. </hi>
+                        <hi rend="italic" style="font-size:10pt">Theories of emotion</hi>
+                        <hi style="font-size:10pt">. Academic Press, 3-33.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi rend="bold" style="font-size:10pt">Plutchik, Robert</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2001): “The nature of emotions: human emotions have deep evolutionary roots, a fact that may explain their complexity and provide tools for clinical practice”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt">American Scientist</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 89, 4: 344-350.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi rend="bold" style="font-size:10pt">Reid, Richard</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2017): “Mourning and glory: toward affective histories of violence in Africa over la longue durée”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt">Emotions: History, Culture, Society</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 1, 1: 91-111.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi rend="bold" style="font-size:10pt">Sawada, Nozomi</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2012): </hi>
+                        <hi rend="italic" style="font-size:10pt">The Educated Elite and Associational Life in Early Lagos Newspapers: In Search of Unity for the Progress of Society</hi>
+                        <hi style="font-size:10pt">. Ph.D. thesis, University of Birmingham.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi rend="bold" style="font-size:10pt">Schmidt, Thomas / Burghardt, Manuel / Dennerlein, Katrin</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2021): “Emotion classification in German plays with transformer-based language models pretrained on historical and contemporary language”, in:</hi>
+                        <hi rend="italic" style="font-size:10pt" xml:space="preserve"> Proceedings of the 5th Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature</hi>
+                        <hi style="font-size:10pt">: 67-79.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi rend="bold" style="font-size:10pt">Sprugnoli, Rachele / Tonelli, Sara / Marchetti, Alessandro / Moretti, Giovanni</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2016): “Towards sentiment analysis for historical texts”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt">Digital Scholarship in the Humanities</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 31, 4: 762-772. DOI: 10.1093/llc/fqv027.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi rend="bold" style="font-size:10pt">Turunen, Risto / Taskinen, Ilari / Kivimäki, Ville / Uusitalo, Laura</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024): “Mining historical emotions”, in:</hi>
+                        <hi rend="italic" style="font-size:10pt" xml:space="preserve"> Digital Handbook of the History of Experience</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> &lt;https://doi.org/10.58077/55bz-wj46&gt; [07.10.202</hi>4].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SIDDIQUI_Nabeel_The_Cartography_of_Crisis__A_Digital_Humanit">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The Cartography of Crisis: A Digital Humanities Approach to Visualizing Patterns of Police Violence</title>
+                <author>
+                    <persName>
+                        <surname>Siddiqui</surname>
+                        <forename>Nabeel</forename>
+                    </persName>
+                    <affiliation>Susquehanna University, United States of America</affiliation>
+                    <email>siddiqui@susqu.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Police Violence</term>
+                    <term>Spatial Analysis</term>
+                    <term>Race and Geography</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digital activism and advocacy</term>
+                    <term>spatial &amp; spatio-temporal analysis</term>
+                    <term>modeling and visualization</term>
+                    <term>African and African American Studies</term>
+                    <term>Geography and geo-humanities</term>
+                    <term>Statistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">On February 26th, 2012, George Zimmerman, a neighborhood watch volunteer, fatally shot Trayvon Martin, a 17-year-old African American boy in Sanford, Florida. Martin’s death and Zimmerman’s subsequent acquittal sparked national outrage, leading to the emergence of the Black Lives Matter movement (Hillstrom 2018). As similar tragedies continued to unfold—Michael Brown in Ferguson, George Floyd in Minneapolis, Breonna Taylor in Louisville—a key question emerged: Were these incidents isolated tragedies or part of broader geographic patterns of systemic police violence?</p>
+            <p style="text-align: left; ">Statistics reveal a stark crisis: African Americans, 13% of the U.S. population, account for 25.4% of police violence incidents (Siegel et al. 2019; U.S. Census Bureau n.d.). Data further suggests that racial disparities are not solely a function of individual behavior. Analysis of victim demographics provides one example: white victims were more likely than Black victims to show signs of mental illness or documented substance use at the time of death, while over half of Black victims showed no such signs (Mapping Police Violence n.d.). These findings point towards disparities embedded in social structures. However, understanding these structures is hampered by the lack of comprehensive, publicly accessible data. Although the Federal Bureau of Investigations maintains the National Use of Force Data Collection program, participation remains voluntary, with many agencies refusing to submit data (Federal Bureau of Investigations n.d.).</p>
+            <p style="text-align: left; ">In response to institutional opacity and data gaps, the Mapping Police Violence (MPV) Project emerged as a community-driven citizen-science initiative to provide an open, standardized database of police killings. Analyzing 13,698 police violence incidents (2015-2024), this paper adopts a critical digital humanities approach, employing quantitative spatial methods not just for pattern identification but as tools for counter-mapping (Peluso 1995) and critical visualization. It draws inspiration from Kim Gallon’s Black DH principles by centering marginalized experiences and challenging official narratives (Gallon 2016).</p>
+            <p style="text-align: left; ">This paper’s core methodological innovation is the use of Hierarchical Hexagonal Spatial Indexing (H3), an open system developed by Uber (Uber 2018). H3 was explicitly chosen over traditional spatial units to mitigate known analytical problems in studying police violence’s spatial patterns. Administrative boundaries (e.g., counties, census tracts) can be problematic because analytical results can change arbitrarily based simply on how boundaries are drawn, and these boundaries often reflect historical power structures rather than relevant social geographies (Tuson et al. 2019). This boundary-agnostic approach is particularly important for studying social phenomena like policing, where patterns of behavior or influence may manifest across jurisdictional lines (e.g., between officers in adjacent districts). Although H3 has been used in logistics, its application in critical DH for social justice analysis at this scale is novel. Its hierarchical nature allows multi-scalar analysis.</p>
+            <p style="text-align: left; ">Local Moran’s I spatial statistics were applied to identify statistically significant spatial clusters (Anselin 1995). This method assesses whether the rate of police violence in a given hexagon is more similar to (cluster) or different from (outlier) the rates in its neighboring hexagons than would be expected by chance. Calculating these rates first required integrating demographic context. To establish the appropriate analytical scale using H3’s multi-scalar capability, resolutions 4 through 6 were tested; resolution 5 (1,253 cells across the US, ~253 km² each) was selected as providing the optimal balance between spatial granularity and statistical power for this national study. Data from the ACS 2019 five-year estimates (U.S. Census Bureau 2020) were then integrated into these hexagons, employing areal interpolation to estimate population counts (overall and by race) by proportionally allocating data from standard census units (tracts/block groups) based on geographic overlap. This enabled the calculation of population-adjusted rates (incidents per capita within each hexagon), representing the relative risk for the population within each hexagonal area, which served as the input for the Local Moran’s I analysis. High-High clusters (areas with high rates surrounded by neighbors with high rates) and Low-Low clusters (low rates surrounded by low rates) were identified, using a standard significance threshold (p &lt; 0.05) determined through Monte Carlo simulation (999 permutations). The permutations generate a baseline distribution assuming spatial randomness, allowing the assessment of the statistical likelihood of observed patterns.</p>
+            <p style="text-align: left; ">The results reveal that police violence against African Americans is largely a diffuse national phenomenon, not geographically concentrated in specific hotspots as county-level maps might suggest. Most H3 regions (987 of 1,253) showed no significant clustering (p &lt; 0.05) of population-adjusted rates. This challenges assumptions of violence as primarily urban/regional, suggesting instead a “nationalization of racial violence” (Muhammad 2010) visible when arbitrary administrative boundaries are bypassed. Furthermore, the H3 analysis distinctly identifies 28 significant transition zones—areas where high-incident hexagons border low-incident hexagons, primarily concentrated in the Philadelphia-New Jersey-Delaware corridor, the Wichita-Oklahoma region, and the El Paso border area. These zones, less apparent in analyses using administrative boundaries, represent critical areas where differing jurisdictional approaches likely yield divergent outcomes within geographically proximate and demographically similar contexts, offering valuable natural experiments for evaluating policy efficacy.</p>
+            <p style="text-align: left; ">The paper concludes by reflecting on the ethics of using police violence data, stressing the need to center victim/survivor experiences and avoid re-traumatization through visualization choices. Several concrete policy interventions are suggested based on the H3-specific findings. First, the diffuse nature of police violence indicates that addressing this issue often requires national-level interventions (e.g., standardized use-of-force policies, mandatory reporting, consistent accountability) rather than solely geographically targeted approaches. Second, the identified transition zones offer natural experimental conditions for measuring the efficacy of various reform interventions. Third, the characteristics of Low-Low cluster regions suggest the presence of protective factors (e.g., specific training protocols, community oversight, departmental policies) that could be replicated in other jurisdictions. These implications demonstrate the practical value of this DH approach.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Anselin, Luc (1995): “Local Indicators of Spatial Association—LISA”, in: Geographical Analysis 27, 2: 93–115. DOI: 10.1111/j.1538-4632.1995.tb00338.x.</bibl>
+                    <bibl style="text-align: left; ">Gallon, Kim (2016): “Making a Case for the Black Digital Humanities”, in: Gold, Matthew K. / Klein, Lauren F. (eds.): Debates in the Digital Humanities 2016. Minneapolis, MN: University of Minnesota Press. DOI: 10.5749/j.ctt1cn6thb.</bibl>
+                    <bibl style="text-align: left; ">Hillstrom, Laurie Collier (2018): Black Lives Matter: From a Moment to a Movement. Santa Barbara, California: Greenwood, an imprint of ABC-CLIO, LLC.</bibl>
+                    <bibl style="text-align: left; ">Mapping Police Violence (n.d.): Mapping Police Violence. 
+                        <ref target="https://mappingpoliceviolence.org/">https://mappingpoliceviolence.org/</ref> [24.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">Muhammad, Khalil Gibran (2010): The Condemnation of Blackness: Race, Crime, and the Making of Modern Urban America. Cambridge, Massachusetts: Harvard University Press.</bibl>
+                    <bibl style="text-align: left; ">Federal Bureau of Investigations (n.d.): National Use-of-Force Data Collection. 
+                        <ref target="https://www.fbi.gov/how-we-can-help-you/more-fbi-services-and-information/ucr/use-of-force">https://www.fbi.gov/how-we-can-help-you/more-fbi-services-and-information/ucr/use-of-force</ref> [24.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">Peluso, Nancy Lee (1995): “Whose Woods Are These? Counter-Mapping Forest Territories in Kalimantan, Indonesia”, in: Antipode 27, 4: 383–406. DOI: 10.1111/j.1467-8330.1995.tb00286.x.</bibl>
+                    <bibl style="text-align: left; ">Siegel, Michael / Sherman, Rebecca / Li, Cindy / Knopov, Anita (2019): “The Relationship Between Racial Residential Segregation and Black-White Disparities in Fatal Police Shootings at the City Level, 2013–2017”, in: Journal of the National Medical Association 111, 6: 580–87. DOI: 10.1016/j.jnma.2019.06.003.</bibl>
+                    <bibl style="text-align: left; ">Tuson, M. / Yap, M. / Kok, M. R. / Murray, K. / Turlach, B. / Whyatt, D. (2019): “Incorporating geography into a new generalized theoretical and statistical framework addressing the modifiable areal unit problem”, in: International Journal of Health Geographics 18, 1: 6. DOI: 10.1186/s12942-019-0170-3.</bibl>
+                    <bibl style="text-align: left; ">Uber (2018): H3: Uber’s Hexagonal Hierarchical Spatial Index. 
+                        <ref target="https://www.uber.com/blog/h3/">https://www.uber.com/blog/h3/</ref> [24.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">U.S. Census Bureau (2020): 2019 American Community Survey Single-Year Estimates. 
+                        <ref target="https://www.census.gov/newsroom/press-kits/2020/acs-1year.html">https://www.census.gov/newsroom/press-kits/2020/acs-1year.html</ref> [24.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">U.S. Census Bureau (n.d.): U.S. Census Bureau QuickFacts: United States. 
+                        <ref target="https://www.census.gov/quickfacts/fact/table/US/RHI225223">https://www.census.gov/quickfacts/fact/table/US/RHI225223</ref>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

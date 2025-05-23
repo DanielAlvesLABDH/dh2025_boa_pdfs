@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="TSUKAGOSHI_Yuzuki_Vedic_Sanskrit_OCR_as_a_Bridge_between_Tex">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Vedic Sanskrit OCR as a Bridge between Text and Image Platforms</title>
+                <author>
+                    <persName>
+                        <surname>Tsukagoshi</surname>
+                        <forename>Yuzuki</forename>
+                    </persName>
+                    <affiliation>The University of Tokyo, Japan</affiliation>
+                    <email>yuzuki@l.u-tokyo.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ohmukai</surname>
+                        <forename>Ikki</forename>
+                    </persName>
+                    <affiliation>The University of Tokyo, Japan</affiliation>
+                    <email>i2k@l.u-tokyo.ac.jp</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Vedic Sanskrit</term>
+                    <term>Optical Character Recognition</term>
+                    <term>Text-image alignment</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>optical character recognition and handwriting recognition</term>
+                    <term>Communication studies</term>
+                    <term>Philology</term>
+                    <term>South Asian studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">Digitized Sanskrit texts are essential for preserving cultural heritage and enabling scholarly research. However, a disconnect exists: the digitized texts are often shared on certain platforms (Martínez García / Gippert 1995, GRETIL 2000, Hellwig 2021), while the corresponding scans of printed books or manuscripts are stored separately on digital collections (Heidelberg University Library 2025, Munich DigitiZation Center 2025). This gap hinders integrated analysis, particularly for philological studies. Optical Character Recognition (OCR) technology is critical in bridging this gap by converting scanned images into machine-readable text. This study addresses two primary key challenges:</p>
+                <list type="ordered">
+                    <item>Building an OCR model for Vedic Sanskrit, which is unique challenges due to accent markings.</item>
+                    <item>Aligning the texts with their corresponding images for accurate literary representation.</item>
+                </list>
+                <p style="text-align: left; ">Existing OCR systems are fundamentally designed for Classical Sanskrit and are, in principle, incapable of recognizing the Vedic accent marks.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Method</head>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Methodology Overview</head>
+                    <p style="text-align: left; ">To address these challenges, we propose a novel framework combining eScriptorium (Stokes et al. 2021) for layout recognition and manual modification with TrOCR (Li et al. 2023) for character recognition. This hybrid approach exploits the strengths of layout analysis tools and state-of-the-art OCR technologies.</p>
+                    <p style="text-align: left; ">Our process follows (see also Figure 1):</p>
+                    <list type="unordered">
+                        <item>Training data preparation: Creating line-by-line aligned text-image pairs.</item>
+                        <item>Model fine-tuning: Adapting TrOCR to recognize Vedic with limited training data.</item>
+                        <item>New data preparation: Using eScriptorium for identifying text regions in images, and manually modifying OCR outputs to align text with images.</item>
+                        <item>Iterative refinement: Repeating data generation and model training cycles for incremental improvement.</item>
+                    </list>
+                    <figure>
+                        <graphic n="1001" width="16.002cm" height="7.886347222222223cm" url="/tmp/tmplgva9vd7/Pictures/18d1757a424d3a0bee5dbb4ea411b136.png" rend="inline"/>
+                        <head>Iterative training and alignment between text and images for OCR improvement.</head>
+                    </figure>
+                    <p style="text-align: left; ">The resulting aligned outputs were first converted into ALTO format, and then more simple two-column format for fine-tuning.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Dataset</head>
+                    <p style="text-align: left; ">Our dataset comprises scans and aligned texts from Maitrāyaṇī Saṁhitā (MS). Transcriptions with page and line annotations by Makoto Fushimi sourced from TITUS (Martínez García / Gippert 1995) consist of approximately 1,000 pages and 10,000 lines. The images were from scans of the Schroeder edition (Schroeder1881). </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Model</head>
+                    <p style="text-align: left; ">We utilized TrOCR, a Transformer-based architecture, known for its superior performance on character recognition tasks. The large variant of TrOCR for printed books, microsoft/trocr-large-printed was chosen to maximize baseline performance.</p>
+                    <p style="text-align: left; ">In preliminary experiments, we confirmed that Kraken, the OCR engine used in eScriptorium, produced unsatisfactory accuracy on our data even after fine-tuned by our small Vedic dataset. Our observation aligns with a recent discussion (Ströbel 2023), in which various OCR engines are evaluated on historical texts, and TrOCR outperforms Kraken and other models, demonstrating its adaptability and rapid improvement with limited data.</p>
+                    <p style="text-align: left; ">The model was fine-tuned to recognize printed Vedic in Devanagari as input and output romanized text, aligning with the formatting of widely-used text repositories. Beyond transcription, the model supported the alignment process by generating a new training dataset.</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Result</head>
+                <p style="text-align: left; ">Our model demonstrated promising accuray in recognizeing printed Vedic, despite the small dataset. The common errors observed in the model's output include misreading of accent marks and confusion between visually similar characters, like 
+                    <hi style="font-family:Mangal">घ</hi> (
+                    <hi rend="italic">gh</hi>) and 
+                    <hi style="font-family:Mangal">ध</hi> (
+                    <hi rend="italic">dh</hi>). These errors are likely due to the rare accent marks in the training dataset, as well as the visual similarity of characters in fonts. Figure 2 is an example of our OCR model's output on a scanned line-by-line image of Vedic Sanskrit text.
+                </p>
+                <figure>
+                    <graphic n="1002" width="16.002cm" height="5.824361111111111cm" url="/tmp/tmplgva9vd7/Pictures/18d1757a424d3a0bee5dbb4ea411b136.png" rend="inline"/>
+                    <head>Example of OCR output on a scanned line-by-line image of Vedic Sanskrit text.</head>
+                </figure>
+                <p style="text-align: left; ">The evaluation metrics are presented in Table 1. Character error rate (CER) and word error rate (WER) are widely used metrics for evaluating OCR performance, meaning that the lower is better. Character 
+                    <hi rend="italic">n</hi>-gram F1 score (CHRF1) is a metric combined with 
+                    <hi rend="italic">n</hi>-gram precision and recall, which is also used for OCR evaluation, meaning the higher the score, the better. These results highlight the potential of the model to handle printed Vedic texts, although there is still room for improvement to achieve higher accuracy.although there is still room for improvement to achieve higher accuracy.
+                </p>
+                <figure>
+                    <table rend="rules">
+                        <row>
+                            <cell style="text-align: left;" rend="DH-Default">Metric</cell>
+                            <cell style="text-align: right;" rend="DH-Default">Before FT</cell>
+                            <cell style="text-align: right;" rend="DH-Default">After FT</cell>
+                            <cell style="text-align: right;" rend="DH-Default">Kraken after FT</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;" rend="DH-Default">Character Error Rate</cell>
+                            <cell style="text-align: right;" rend="DH-Default">1.000</cell>
+                            <cell style="text-align: right;" rend="DH-Default">0.104</cell>
+                            <cell style="text-align: right;" rend="DH-Default">0.787</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;" rend="DH-Default">Word Error Rate</cell>
+                            <cell style="text-align: right;" rend="DH-Default">1.000</cell>
+                            <cell style="text-align: right;" rend="DH-Default">0.409</cell>
+                            <cell style="text-align: right;" rend="DH-Default">0.983</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;" rend="DH-Default">CHRF1 Score</cell>
+                            <cell style="text-align: right;" rend="DH-Default">0.018</cell>
+                            <cell style="text-align: right;" rend="DH-Default">79.7</cell>
+                            <cell style="text-align: right;" rend="DH-Default">-</cell>
+                        </row>
+                    </table>
+                    <head>Table 1 Comparison of model performance metrics before and after fine-tuning (FT)</head>
+                </figure>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Discussion</head>
+                <p style="text-align: left; ">This study demonstrates the feasibility of building an OCR model for Vedic Sanskrit using a pipeline that combines eScriptorium and TrOCR. The integration of manually corrected layouts and the state-of-the-art character recognition enables effective model training, even with limited data.</p>
+                <p style="text-align: left; ">Despite initial success, there is significant room for improvement.</p>
+                <p style="text-align: left; ">Challenges such as text layout complexity, low-quality scans, and script-specific intricacies remain to be addressed.</p>
+                <p style="text-align: left; ">Future work will focus on expanding training data and improving alignment automation. Furthermore, to enhance data accessibility and interoperability, we plan to adopt a platform such as 
+                    <hi rend="italic">Tekst</hi> (Fischer 2023) and integrate IIIF-compatible image references directly into TEI/XML, allowing unified access to both text and image data.
+                </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Fischer, Anna / Kiss, Börge / Casaretto, Antje / Kölligan, Daniel / Korobzow, Natalie / Neuefeind, Claes / Reinöhl, Uta / Sahle, Patrick </hi>(2023): "Creating a Collaborative Research Platform for Vedic Sanskrit Texts", in: Digital Humanities 2023: Book of Abstracts, Digital Humanities 2023. Collaboration as Opportunity (DH2023), Graz, Austria. DOI: 10.5281/zenodo.8210808.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">GRETIL</hi> (2020): “Göttingen Register of Electronic Texts in Indian Languages (GRETIL)”, Göttingen State and University Library. &lt;https://gretil.sub.uni-goettingen.de/gretil.html&gt; [28.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Heidelberg University Library</hi> (2025): "Heidelberg Historic Literature – Digitized", Heidelberg University. &lt;
+                        <ref target="https://www.ub.uni-heidelberg.de/Englisch/helios/digi/digilit.html">https://www.ub.uni-heidelberg.de/Englisch/helios/digi/digilit.html</ref>&gt; [28.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Hellwig, Oliver</hi> (2010–2021): "DCS – The Digital Corpus of Sanskrit", University of Heidelberg. &lt;http://www.sanskrit-linguistics.org/dcs/index.php&gt; [28.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Li, Minghao / Lv, Tengchao / Chen, Jingye / Cui, Lei / Lu, Yijuan / Florencio, Dinei / Zhang, Cha / Li, Zhoujun / Wei, Furu</hi> (2023): "TrOCR: Transformer-Based Optical Character Recognition with Pre-trained Models", in: Proceedings of the AAAI Conference on Artificial Intelligence 37, 11: 13094–13102. DOI: 10.1609/aaai.v37i11.26538. &lt;https://ojs.aaai.org/index.php/AAAI/article/view/26538&gt; [16.04.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Martínez García, Francisco Javier / Gippert, Jost </hi>(1995): "Thesaurus Indogermanischer Text- und Sprachmaterialien", University of Frankfurt. &lt;http://titus.fkidg1.uni-frankfurt.de&gt; [28.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Munich DigitiZation Center (MDZ)</hi> (2025): "The Munich DigitiZation Center (MDZ)", Bavarian State Library (BSB). &lt;
+                        <ref target="https://www.digitale-sammlungen.de/en/">https://www.digitale-sammlungen.de/en/</ref>&gt; [28.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Schroeder, Leopold von</hi> (1881): "Maitrāyaṇī Saṃhitā. Die Saṃhitā der Maitrāyaṇīya-Śākhā", Leipzig: Verlag der Deutschen Morgenländischen Gesellschaft.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Stokes, Peter A. / Kiessling, Benjamin / Stökl Ben Ezra, Daniel / Tissot, Robin / Gargem, El Hassane</hi> (2021): "The eScriptorium VRE for Manuscript Cultures", in: Clivaz, Claire / Allen, Garrick V. (eds.): Classics@ Journal, Ancient Manuscripts and Virtual Research Environments 18.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Ströbel, Phillip</hi> (2023): “Flexible Techniques for Automatic Text Recognition of Historical Documents, Doctoral dissertation”, University of Zurich.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

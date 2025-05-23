@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SCHUMACHER_Anna_Lena_Utilizing_Ontologies_in_Comparative_Urb">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Utilizing Ontologies in Comparative Urban History Research: A Geospatial Analysis</title>
+                <author>
+                    <persName>
+                        <surname>Schumacher</surname>
+                        <forename>Anna-Lena</forename>
+                    </persName>
+                    <affiliation>Institute for Comparative Urban History, University of Muenster, Germany</affiliation>
+                    <email>a.schumacher@uni-muenster.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-09T15:49:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>ontologies</term>
+                    <term>data modeling</term>
+                    <term>geoinformationsystems</term>
+                    <term>urban history</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data modeling</term>
+                    <term>linked (open) data</term>
+                    <term>spatial &amp; spatio-temporal analysis</term>
+                    <term>modeling and visualization</term>
+                    <term>Geography and geo-humanities</term>
+                    <term>History</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>The processing of geodata and historical location data in the field of digital history has, thus far, been predominantly conducted with the assistance of geographic information systems (GIS), primarily for the purpose of data visualisation (Bol, 2011). As part of the HisMaComp project (Historical Survey Maps and the Comparative Study of the Functionality and Morphology of Urban Space), a data-driven approach to analyse the historical and spatial-topographical development of towns in a comparative manner is employed.</p>
+                <p>The research question is: How can the topography, functionality and morphology of historical urban spaces be recorded and analysed comparatively over time? GIS are insufficient for analysing all these aspects together. However, by combining GIS and semantic web technologies, the complexity of the information to be processed can be increased, thereby enabling in-depth and multidimensional comparative analyses.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Context of the project</head>
+                <p>The German-Polish collaborative research project HiSMaComp is carried out by two research teams at the Institute for Comparative Urban History (IStG) in Münster and the Uniwersytet Mikołaja Kopernika in Toruń. It is funded by the BEETHOVEN 4 programme of the DFG and NCN. Six towns in Poland and Germany serve as case studies based on three town types: Warsaw and Magdeburg as 'pre-modern metropolises', Olsztyn/Allenstein and Ochsenfurt as 'medieval collegiate towns', and Inowrocław/Hohensalza and Bad Pyrmont as 'modern spa towns' (Szende and Szilágyi, 2019).</p>
+                <p>The core of the comparative analysis of the case studies is the research data collected by historians, based on written and cartographic sources and enriched with authority data. However, the potential of GIS cannot easily be used to evaluate this source base, as geodata can only be used to analyse topography and morphology, but not the functionality and temporal development of historical urban spaces (Kuhn et al., 2014; Purves et al., 2019). To achieve this, an ontology is needed to semanticise and contextualise the data. This geosemantic contextualisation allows geodata on the one hand and complex historical context information (semanticised historical location data) on the other hand to be queried and analysed together. To this end, the project develops an ontology that is partly based on the Historical Ontology of Urban Space (HOUSe), but fundamentally restructures and extends it. For this purpose, we use a modular ontology modelling approach (Shimizu et al., 2020; Hitzler/Krisnadhi, 2018). </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Requirements analysis</head>
+                <p>The concepts of the HiSMaComp ontology are based on several pillars. In addition to the HOUSe ontology, there are numerous other glossaries and vocabularies - both digital and analogue - that are used as a basis for the ontology. To ensure good reusability and connectivity, the project's ontology is also linked to the top-level ontology CIDOC CRM and its extension CRMGeo.</p>
+                <p>In order to make concrete modelling decisions, the project carried out a comprehensive requirements analysis. This elementary component of modular ontology modelling is based on user stories and the formulation of competency questions.</p>
+                <p>However, the requirements analysis is not only aimed at the new development of the project's ontology, but also at the critical evaluation of existing ontologies in order to assess what can be reused and what adaptations and extensions are necessary. </p>
+                <p>In this way, we ensure that the project's ontology is optimally adapted to our requirements - the comparative analysis of urban space over time.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Structure of the ontology and data modelling</head>
+                <p>In light of these considerations, decisions pertaining to the modelling process are made, and the individual modules of the ontology are developed in an iterative manner.</p>
+                <p>The ontology is centred on the concept of events. With regard to the individual topographic objects (topoobjects) present within urban environments, a number of topographic events (topoevents) are recorded. These events represent the lifespan of the object in question. The contents of the cadastral survey are recorded as a topoobject. It is also possible to make extrapolations and rewrites from this point in time. The constituent elements of the topoevents include the topographic type (topotype), the functions (e.g. administration, healthcare) and the geometry (in the form of a polygon). In order to facilitate the aforementioned geosemantic contextualisation, the entities that have been modelled in this way are integrated with the relevant geometries within the GIS, thus enabling their analysis as a unified entity.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methodological criticism</head>
+                <p>The integration of GIS and ontologies presents a duality of opportunities and challenges, which, as with other digital methodologies, necessitate a critical and reflective approach (Dobson, 2019; Hiltmann et al., 2021). It is essential to acknowledge the epistemological constraints associated with our research data. Historical data, whether textual or cartographic, does not represent reality; rather, it is a construct that can be distorted by the subjective perspectives of those who created it and by the methods used (Drucker, 2011). However, our two approaches – GIS and ontologies – are based on different assumptions. For instance, uncertainty must be modelled in an entirely distinct manner in both approaches. Concurrently, both approaches provide disparate, in fact separate, perspectives for analysis. All of these aspects must be taken into account when formulating user stories and competency questions. Our objective is to achieve a balance between the expansion of our methodological spectrum and the management of the resulting complexity.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Outlook</head>
+                <p>The planned poster will provide an overview of the methodological model of the HiSMaComp project, subsequently focusing on one of its components, namely the linking of ontology and GIS. It will present the project ontology. Furthermore, the poster will address the requisite requirements analysis, method criticism and potential application scenarios, with illustrative examples. This section will elucidate the workflow of the HiSMaComp project, beginning with the research question and progressing to the utilisation of user stories and competency questions, the classes of the ontology, and an excerpt from the project's knowledge graphs.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Agarwal, Pragya</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2005): „Ontological Considerations in GIScience“. In International Journal of Geographical Information Science 19.5, 501–536.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Bodenhamer, David J., John Corrigan, and Trevor M. Harris</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2010): The Spatial Humanities: GIS and the Future of Humanities Scholarship. Indiana University Press, 2010.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Bol, Peter K.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2010): „What do humanists want? What do humanists need? What might humanists get?“ In GeoHumanities: Art, History, Text at the Edge of Place. London and New York: Routledge, 2011.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Dobson, James E.</hi>
+                        <hi style="font-size:10pt">(2019): Critical Digital Humanities: The Search for a Methodology. 1. Aufl. Topics in the Digital Humanities Illinois Scholarship Online. Urbana: University of Illinois Press, 2019.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Drucker, Johanna</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2011): „Humanities Approaches to Graphical Display“. Digital Humanities Quarterly5, Nr. 1 (2011). [http://www.digitalhumanities.org/dhq/vol/5/1/000091/000091.html]</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Ducatteeuw, Vincent</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2021): “Developing an Urban Gazetteer.”</hi>
+                        <hi rend="apple-converted-space"> </hi>
+                        <hi style="font-size:10pt">Proceedings of the 5th ACM SIGSPATIAL International Workshop on Geospatial Humanities, November 2, 2021. [https://doi.org/10.1145/3486187.3490204]</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Hiebel, Gerald , Martin Doerr and Øyvind Eide</hi>
+                        <hi style="font-size:10pt">(2016): Crmgeo: A Spatiotemporal Extension Of CIDOC-CRM. International Journal On Digital Libraries 18, 4 (2017): 271-279. [https://doi.org/10.1007/s00799-016-0192-4]</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Hiltmann, Torsten</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2022): “Vom Medienwandel Zum Methodenwandel.” In Digital History: Konzepte, Methoden Und Kritiken Digitaler Geschichtswissenschaft, ed. by Karoline Döring et al., 13–44, 2022. [https://doi.org/10.1515/9783110757101-002]</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Kuhn, Werner, Tomi Kauppinen, und Krzysztof Janowicz</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2014): „Linked Data – A Paradigm Shift for Geographic Information Science“. In Geographic Information Science ed. by Matt Duckham, Edzer Pebesma, Kathleen Stewart, and Andrew U. Frank, 173–86. Lecture Notes in Computer Science. Cham: Springer International Publishing, 2014. [https://doi.org/10.1007/978-3-319-11593-1_12]</hi>
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi rend="bold" style="font-size:10pt">Noizet, Hélène, Boris Bove, and Laurent Costa</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2013):</hi>
+                        <hi rend="apple-converted-space"> </hi>
+                        <hi style="font-size:10pt">Paris, De Parcelles en pixels: Analyse géomatique de l’espace parisien médiéval et moderne. Saint-Denis, Paris: Presses universitaires de Vincennes ; Comité d’histoire de la ville de Paris, 2013.</hi>
+                        <hi rend="apple-converted-space"> </hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Purves, Ross S., Stephan Winter, und Werner Kuhn</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2019): „Places in Information Science“. Journal of the Association for Information Science and Technology 70 (11): 1173–82. [https://doi.org/10.1002/asi.24194] </hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Schneider, Philipp, Jim Jones, Torsten Hiltmann and Tomi Kauppinen</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2021): Challenge-Derived Design Practices For A Semantic Gazetteer For Medieval And Early Modern Places. Semantic Web 12, 3 (2021): 493-515. [</hi>
+                        <ref target="https://doi.org/10.3233/SW-200394">
+                            <hi style="font-size:10pt">https://doi.org/10.3233/SW-200394</hi>
+                        </ref>
+                        <hi rend="Hyperlink">]</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Schumacher, Anna-Lena, Michał Słomski, and Daniel Stracke</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024): „Uncertain information and spatial objects: Examples from works on the HOUSe project and the European Historic Towns Atlas series“. In Modelling the City. Formal Ontology and Spatial Humanities, ed. by Wiesława Duży, 100–129. Routledge Spatial Humanities Series. New York: Routledge, 2024. [</hi>
+                        <ref target="https://doi.org/10.4324/9781032695891">
+                            <hi style="font-size:10pt">https://doi.org/10.4324/9781032695891</hi>
+                        </ref>
+                        <hi style="font-size:10pt">]</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Shimizu, Cogan, Karl Hammar, Pascal Hitzler</hi>
+                        <hi style="font-size:10pt">(2023): “Modular Ontology Modelling”. Semantic Web, vol. 14, no. 3: 459-489.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Southall, Humphrey, Ruth Mostern and Merrick Berman</hi>
+                        <hi style="font-size:10pt">(2011): On Historical Gazetteers. International Journal Of Humanities And Arts Computing 5, 2 (2011), 127-145. [https://doi.org/10.3366/ijhac.2011.0028]</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Szende, Katalin, Magdolna Szilágyi</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2019): “Town Typology in the Context of Historic Towns Atlases: a Target or a Tool?”. In Political functions of urban spaces and town types through the ages, ed. by Roman Czaja, Scheutz, Martin, Opll, Ferdinand, Noga, Zdzislaw, 267-302. Wien: Böhlau.</hi>
+                    </bibl>
+                    <bibl style="text-align: left;">
+                        <hi rend="bold" style="font-size:10pt">Terpstra, N., &amp; Rose, C.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2019). Mapping space, sense, and movement in Florence: Historical GIS and the early modern city. Routledge.</hi>
+                    </bibl>
+                    <bibl style="text-align: left;">
+                        <hi rend="bold" style="font-size:10pt">Tuan, Yi-fu</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2018): Space and place: The perspective of experience. Minneapolis, Minn: University of Minnesota Press, 2018.</hi>
+                    </bibl>
+                    <bibl style="text-align: left;">
+                        <hi rend="bold" style="font-size:10pt">van Kooten, Rogier, Léa Hermenault</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2022): “‘The proof of the pudding is in the eating’. Een pleidooi voor HGIS als digitale werkplaats voor integraal en comparatief historisch onderzoek“, In Stadsgeschiedenis 17,2 (2022).</hi>
+                    </bibl>
+                    <bibl style="text-align: left;">
+                        <hi rend="bold" style="font-size:10pt">Vis, B. N.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2014): Mapping Socio-spatial relations in the urban built environment through time: Describing the Socio-spatial significance of inhabiting urban form. In Lecture Notes in Geoinformation and Cartography (S. 45–93). Springer International Publishing.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

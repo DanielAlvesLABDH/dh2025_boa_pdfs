@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KAWASE_Akihiro_Exploring_Regional_Variations_in_Melody_Types">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Exploring Regional Variations in Melody Types of Japanese Children’s Songs:A Quantitative Approach</title>
+                <author>
+                    <persName>
+                        <surname>Kawase</surname>
+                        <forename>Akihiro</forename>
+                    </persName>
+                    <affiliation>Doshisha University, Japan</affiliation>
+                    <email>kawase@dh.doshisha.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Kojima</surname>
+                        <forename>Ayaka</forename>
+                    </persName>
+                    <affiliation>Doshisha University, Japan</affiliation>
+                    <email>kojima.ayaka@dh.doshisha.ac.jp</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Traditional children's songs</term>
+                    <term>Melody classification</term>
+                    <term>Regional differences</term>
+                    <term>Machine learning</term>
+                    <term>Cultural analytics</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>cultural analytics</term>
+                    <term>network analysis and graphs theory and application</term>
+                    <term>spatial &amp; spatio-temporal analysis</term>
+                    <term>modeling and visualization</term>
+                    <term>Cultural studies</term>
+                    <term>Ethnography and folklore</term>
+                    <term>Geography and geo-humanities</term>
+                    <term>Musicology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>Traditional Japanese children’s songs, or 
+                    <hi rend="italic">warabe uta</hi>, are fundamental to Japan’s musical heritage, reflecting its linguistic and musical characteristics. These songs are often created and adapted by children during play (Kojima, 1986). Their melodies are closely tied to the accents and phonetics of the Japanese language (Koizumi, 1958). However, recent studies indicate a decline in regional uniqueness due to shifts in transmission methods. Sakai (2022) observed the "standardization" of melodies in Osaka, as children’s songs transitioned from spontaneous, child-led creation to fixed forms taught by adults. Similarly, Shimada (2004) noted that 
+                    <hi rend="italic">warabe uta</hi> has been increasingly treated as static educational material, eroding its regional characteristics.
+                </p>
+                <p>Research in ethnomusicology has explored the transmission and transformation of traditional melodies, identifying systematic patterns and regional variations. Koizumi (1969) categorized 
+                    <hi rend="italic">warabe uta</hi> melodies into two types: "word-based melodies," rooted in spoken language patterns, and "melodic-driven melodies," characterized by fluid, independent movements. He hypothesized that Kyoto’s songs are more "melodic" compared to Tokyo’s. Subsequent studies (Ohata, 2002; Murao et al., 2012) further suggested that 
+                    <hi rend="italic">warabe uta</hi> reflects linguistic and melodic diversity. Despite these insights, limitations remain. Previous studies lack clear criteria for melody classification and provide insufficient evidence of regional differences. While quantitative analyses exist for broader aspects of Japanese folk music (e.g., pitch patterns, Kawase, 2014; tetrachord structures, Kawase and Yanagisawa, 2017), few have quantitatively examined regional variations in 
+                    <hi rend="italic">warabe uta</hi>.
+                </p>
+                <p>This study addresses these gaps by classifying 
+                    <hi rend="italic">warabe uta</hi> into "word-based" and "melodic" types and analyzing their regional distributions using machine learning, chi-squared tests, and Geographic Information System (GIS) tools. By integrating quantitative methods, this study aims to clarify the sociocultural dynamics underpinning these melodies.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Materials and Methods</head>
+                <p>This study analyzed songs from 
+                    <hi rend="italic">The Complete Collection of Japanese Warabe Uta</hi> (Yanagihara Shoten, 1972–1992), a 27-volume anthology featuring songs primarily from the Meiji to Showa periods. Songs from Hokkaido and Okinawa were excluded due to distinct linguistic and cultural contexts. From the anthology’s seven child-play categories (e.g., "hand-clapping songs," "outdoor game songs"), 3,639 songs were selected for analysis based on Koizumi’s (1969) classification criteria. 
+                </p>
+                <p>The analysis included the following steps:</p>
+                <list type="ordered">
+                    <item>
+                        <hi rend="bold">Digitalization</hi>: Musical scores were digitized, adjusted using MuseScore3, and converted to MusicXML format.
+                    </item>
+                    <item>
+                        <hi rend="bold">Pitch Data Extraction</hi>: Using Python’s xml.etree.ElementTree, pitch data were extracted as time-series vectors 
+                        <hi rend="italic">X</hi> and transformed into interval vectors 
+                        <hi rend="italic">T</hi>.
+                    </item>
+                    <item>
+                        <hi rend="bold">Network Construction</hi>: Each song was modeled as a pitch network 
+                        <hi rend="italic">G</hi>=(
+                        <hi rend="italic">V</hi>, 
+                        <hi rend="italic">A</hi>), with centrality measures (degree, betweenness, closeness, and PageRank) computed for each pitch.
+                    </item>
+                    <item>
+                        <hi rend="bold">Feature Extraction</hi>: Four features were derived:
+                    </item>
+                    <item>Pitch interval proportions (−12 to +12 semitones),</item>
+                    <item>Pitch range,</item>
+                    <item>Presence of tetrachords (Minyo, Miyakobushi, Ritsu, Ryukyu; see Appendix),</item>
+                    <item>Key pitch (most central pitch by aggregated metrics).</item>
+                    <item>
+                        <hi rend="bold">Classification</hi>: A random forest model was trained on 10 labeled songs to classify melodies. Feature combinations were tested, with performance evaluated using LOOCV.
+                    </item>
+                    <item>
+                        <hi rend="bold">Regional Analysis</hi>: Melody types were assigned to all songs, followed by chi-squared tests and residual analysis by prefecture.
+                    </item>
+                    <item>
+                        <hi rend="bold">Geospatial Visualization</hi>: Locations were geocoded, and GIS heatmaps illustrated melody distributions.
+                    </item>
+                </list>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Geographic Context</head>
+                <p>Japan comprises 47 prefectures grouped into 8 regions: Hokkaido, Tohoku, Kanto, Chubu, Kansai, Chugoku, Shikoku, and Kyushu-Okinawa. These regions represent diverse cultural and linguistic backgrounds, making them an ideal context for analyzing regional variations in melodies.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results</head>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Melody Classification</head>
+                    <p>The melody classification experiment utilized a random forest model to distinguish "word-based" and "melodic" types. Four features — pitch interval ratios, pitch range, tetrachord presence, and key pitch — were tested as explanatory variables. Table 1 lists the classification accuracy and 
+                        <hi rend="italic">F</hi>-scores for various feature combinations. Models incorporating pitch range, tetrachord presence, and key pitch achieved perfect accuracy (
+                        <hi rend="italic">F</hi> = 1.000), successfully classifying all 10 songs in the training dataset. Conversely, models relying solely on pitch interval ratios exhibited poor performance (
+                        <hi rend="italic">F</hi>=0.000). Figure 1 illustrates the variable importance (measured by Gini index reduction) in the classification process. Pitch range and key pitch emerged as the most significant predictors, followed by the presence of folk and Ritsu tetrachords.
+                    </p>
+                    <p style="text-align: center;">Table 1: Melody Type Classification Results</p>
+                    <figure>
+                        <graphic n="1001" width="10.653888888888888cm" height="7.9587055555555555cm" url="/tmp/tmprcp_0vs_/Pictures/033735e5541099cc3c4792ebdbc42d69.png" rend="inline"/>
+                    </figure>
+                    <figure>
+                        <graphic n="1002" width="10.655608333333333cm" height="5.437508333333334cm" url="/tmp/tmprcp_0vs_/Pictures/033735e5541099cc3c4792ebdbc42d69.png" rend="inline"/>
+                    </figure>
+                    <p style="text-align: center;">Figure 1: Gini Index Reduction for Explanatory Variables</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Prefecture-Based Classification Results</head>
+                    <p>Using the developed classification model, all songs in the dataset were assigned a melody type. Of the analyzed songs, 55.89% were classified as "word-based," while 44.11% were "melodic." Chi-squared tests revealed significant associations between prefectures and melody types (
+                        <hi rend="italic">χ</hi>
+                        <hi rend="superscript">2</hi>(44)=151.220, 
+                        <hi rend="italic">p</hi>&lt;0.001, Cramér’s 
+                        <hi rend="italic">V</hi>=0.204). Adjusted residuals indicated significant differences in melody type proportions for 12 prefectures. Figure 2 visualizes adjusted residuals for "word-based" songs across prefectures. Prefectures with positive residuals (indicating more "word-based" songs than expected) were concentrated in the Tohoku and Chugoku regions, while negative residuals (fewer "word-based" songs) were observed in Kanto and Kyushu.
+                    </p>
+                    <figure>
+                        <graphic n="1003" width="9.726341666666666cm" height="8.430694444444445cm" url="/tmp/tmprcp_0vs_/Pictures/033735e5541099cc3c4792ebdbc42d69.png" rend="inline"/>
+                    </figure>
+                    <p style="text-align: center;">Figure 2: Results of Residual Analysis by Prefecture</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Heatmap Visualization</head>
+                    <p>To further elucidate regional differences, we created heatmaps for 3,583 songs with location data (Figure 3). Density values ranged from 0 to 20, divided into five color-coded levels. For "melodic" songs, high-density regions (&gt; 8.000) were sparse, appearing in only nine prefectures, including Tokyo and Kyoto. In contrast, "word-based" songs exhibited broader high-density coverage, with 21 out of 25 high-density regions aligning with urban areas.</p>
+                    <figure>
+                        <graphic n="1004" width="14.988416666666666cm" height="6.845052777777778cm" url="/tmp/tmprcp_0vs_/Pictures/033735e5541099cc3c4792ebdbc42d69.png" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; text-align: center;">Figure 3: Heatmap of Melody Types</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Discussion</head>
+                <p>The results of the random forest classification experiment revealed that among the four features analyzed — pitch interval ratios, tetrachord presence, pitch range, and key pitch — tetrachord presence, pitch range, and key pitch were the most effective for distinguishing between "word-based" and "melodic" melody types. Conversely, pitch interval ratios proved to be unsuitable as an explanatory variable for melody classification. These findings align with previous studies. Koizumi (1969) noted that "word-based" melodies predominantly center around the folk tetrachord, while "melodic" melodies tend to deviate from it. Similarly, the importance of pitch range and key pitch in distinguishing melody types has been emphasized in earlier research (Koizumi, 1969; Ohata, 2002). These results suggest that:</p>
+                <list type="unordered">
+                    <item>Tetrachord presence indicates "word-based" melodies when the folk tetrachord is included, whereas the presence of Ritsu, Miyakobushi, or Ryukyu tetrachords signifies "melodic" melodies.</item>
+                    <item>Larger pitch ranges are associated with "melodic" melodies, while smaller ranges indicate "word-based" melodies.</item>
+                    <item>Key pitch analysis shows that "word-based" melodies emphasize lower pitches, whereas "melodic" melodies emphasize higher pitches.</item>
+                </list>
+                <p>Chi-squared tests and Cramér’s 
+                    <hi rend="italic">V</hi> revealed weak associations between prefectures and melody types. Adjusted residuals highlighted a trend where Tokyo’s melodies were more "word-based," while Kyoto’s melodies were more "melodic," consistent with Koizumi’s (1969) hypothesis. However, no clear differences were observed between other regions, contradicting previous suggestions of distinctions between Kanto and Kansai melody types (Murao et al., 2012). The heatmap analysis revealed an intriguing tendency for "word-based" melodies to cluster in urban areas. Kojima (1986) suggested that 
+                    <hi rend="italic">warabe uta</hi> are inherently dynamic, evolving through children’s creative adaptations. Urban areas, with their higher population densities and greater opportunities for collaborative play, may foster simpler, more easily shared melodies. This finding suggests that melody type differences may not solely reflect regional cultural characteristics but also demographic and environmental factors.
+                </p>
+                <p>This study identified key features for distinguishing melody types, including tetrachord presence, pitch range, and key pitch, supporting prior hypotheses (Koizumi, 1969; Ohata, 2002). Regional analyses confirmed Kyoto’s melodies as more "melodic" compared to Tokyo’s but found no consistent differences between other regions. Finally, the heatmap visualization highlighted significant tendencies for "word-based" melodies to concentrate in urban areas, suggesting that melody type distributions may also reflect demographic influences.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Appendix: Koizumi’s Tetrachord Theory</head>
+                <p>Ethnomusicologist Fumio Koizumi (1958) proposed the tetrachord theory as a framework to explain the structure of Japanese music. A tetrachord consists of three pitches: two "nuclear tones" forming a perfect fourth interval (±5) and one intermediate pitch. The placement of the intermediate pitch within the perfect fourth interval results in four possible configurations, each assigned a specific name (see Table A).</p>
+                <p style="text-align: center;">Table A: Type of Tetrachords Based on Intermediate Pitch Intervals</p>
+                <figure>
+                    <graphic n="1005" width="9.84685cm" height="2.99465cm" url="/tmp/tmprcp_0vs_/Pictures/033735e5541099cc3c4792ebdbc42d69.png" rend="inline"/>
+                </figure>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Kawase, A.</hi> (2014): Extraction of melodic structures using a large-scale corpus of Japanese folk songs. 
+                        <hi rend="italic">Journal of the National Institute for Japanese Language and Linguistics</hi>, 7, 121–150. 
+                        <hi style="font-size:10.5pt">(In Japanese)</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Kawase, A., and Yanagisawa, M.</hi> (2017): Towards regional comparative studies of Japanese folk songs: Regional characteristics of Saikaido, Sanindo, and Sanyodo. 
+                        <hi rend="italic">CIRAS Discussion Paper</hi>, 72, 1–64. 
+                        <hi style="font-size:10.5pt">(In Japanese)</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Koizumi, F.</hi> (1958): 
+                        <hi rend="italic">Studies on Japanese Traditional Music, Vol. 1</hi>. Ongaku no Tomo Sha. 
+                        <hi style="font-size:10.5pt">(In Japanese)</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Koizumi, F.</hi> (Ed.). (1969): 
+                        <hi rend="italic">Studies on Warabe Uta</hi> (Research Edition). Warabe Uta Research Association. 
+                        <hi style="font-size:10.5pt">(In Japanese)</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Kojima, M.</hi> (1986): Rethinking Japanese folk music. 
+                        <hi rend="italic">Bulletin of the National Museum of Japanese History</hi>, 11, 247–266. 
+                        <hi style="font-size:10.5pt">(In Japanese)</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Murao, T., Imagawa, K., and Shimada, Y.</hi> (2012): Play and songs of "Janken Hoihoi": Propagation and transformation by children. 
+                        <hi rend="italic">Journal of Music Education Research</hi>, 42(2), 97–101. 
+                        <hi style="font-size:10.5pt">(In Japanese)</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Ohata, K.</hi> (2002): A study on the tonal structure of warabe uta. 
+                        <hi rend="italic">Fujijoshi University Bulletin</hi>, 40(2), 21–29. 
+                        <hi style="font-size:10.5pt">(In Japanese)</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Sakai, Y.</hi> (2022): 
+                        <hi rend="italic">A Study on the Relationship Between Children's Language and Songs</hi>. Kazama Shobo. 
+                        <hi style="font-size:10.5pt">(In Japanese)</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Shimada, Y.</hi> (2004). Transformation of "Kagome Kagome" as an elementary school music material. 
+                        <hi rend="italic">Bulletin of the Faculty of Education, Wakayama University (Humanities)</hi>, 54, 23–29. 
+                        <hi style="font-size:10.5pt">(In Japanese)</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="POHLMANN_Jens_A_mixed_methods_approach_to_study_discourses_o">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>A mixed-methods approach to study discourses on Twitter about the German anti-hate speech law NetzDG</title>
+                <author>
+                    <persName>
+                        <surname>Pohlmann</surname>
+                        <forename>Jens</forename>
+                    </persName>
+                    <affiliation>UC Davis, United States of America</affiliation>
+                    <email>jpohlmann@ucdavis.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Mello</surname>
+                        <forename>Caio</forename>
+                    </persName>
+                    <affiliation>Luxembourg Centre for Contemporary and Digital History (C2DH), Luxembourg</affiliation>
+                    <email>caiomellodh@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>León Henneberg</surname>
+                        <forename>Karin</forename>
+                    </persName>
+                    <affiliation>University of Bremen, Germany</affiliation>
+                    <email>ka_le@uni-bremen.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-26T19:06:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Social Network Analysis</term>
+                    <term>Twitter/X</term>
+                    <term>Platform Regulation</term>
+                    <term>Free Speech</term>
+                    <term>NetzDG</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>natural language processing</term>
+                    <term>network analysis and graphs theory and application</term>
+                    <term>social media analysis and methods</term>
+                    <term>Communication studies</term>
+                    <term>Law and legal studies</term>
+                    <term>Media studies</term>
+                    <term>Political science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>This paper reports on the preliminary findings of ongoing research. It looks at debates on a German anti-hate speech law called Netzwerkdurchsetzungsgesetz (NetzDG) on Twitter/X. It investigates content published by the most retweeted accounts mentioning the law, considering their potential high influence in shaping the discussion on the platform. The dataset was collected in November 2022. </p>
+            <p>
+                <hi style="font-size:10pt" xml:space="preserve">As a first step, network graphs were produced on retweet data, and accounts were sorted by clusters using modularity calculation in Gephi. We identified the most retweeted accounts in each cluster and categorised them according to type: politicians, citizens, media, etc. Besides, we filtered the most shared links (URLs) in tweets, identifying the most tweeted websites by each cluster. Analysis conducted in previous stages has revealed the existence of two clusters with strong political identities: one, connected to the right-wing party AfD (Alternative für Deutschland), and another, to the liberal FDP (Freie Demokratische Partei). A third cluster is formed by media and technology stakeholders, in conjunction with legal experts. The high relevance of alternative online media and specialised IT blogs and websites in some clusters as well as the central positions of legal experts in all clusters are the main insights from this preliminary analysis. It has served as a means to filter the most relevant accounts in the dataset, to identify how they interact, and to categorise them. </hi>
+            </p>
+            <p>
+                <hi style="font-size:10pt" xml:space="preserve">To understand in which terms those accounts have discussed NetzDG on the platform, further steps were necessary. We designed a data pipeline (Image 1) consisting of the following steps: (1) data collection; (2) data processing; (3) network analysis; (4) NLP and Discourse analysis. This pipeline aims at integrating both quantitative and qualitative approaches, the first serving as exploratory tools to guide the framing of the objects of study and the latter to help us understand the nature of those debates. Therefore, having collected, processed and filtered the data (steps 1, 2 and 3), we made use of natural language processing techniques to explore the content tweeted by the relevant accounts. Here, we were not only interested in how different clusters approach the topic NetzDG, but also how different account categories (legal experts, politicians, citizens, etc.) build their discourses. </hi>
+            </p>
+            <p>
+                <hi style="font-size:10pt" xml:space="preserve">Image 1 – Research pipeline describing steps undertaken for data collection, processing and analysis. </hi>
+                <graphic n="1001" width="17.00036111111111cm" height="4.833055555555555cm" url="/tmp/tmpodcdd_x6/Pictures/b9f9ae284d7242fee4f66dd6c26f3c59.png" rend="block"/>
+            </p>
+            <p>
+                <lb/>N-grams (identification of the most mentioned words in the dataset) were used to identify the most relevant topics discussed by these accounts. To complement this approach, we also made use of topic modeling, which helped us confirm some of the topics we had already identified and to expand on others that came up at this stage. Sentiment analysis was used to understand how positive and negative but also how emotionally charged the discussion was. Particular attention was given to the debates on central themes such as hate speech, freedom of expression and censorship. 
+            </p>
+            <p>
+                <hi style="font-size:10pt">In our presentation, we will share some preliminary findings of this analysis. The inspection of n-grams has suggested that one of the main differences between the big purple (right-wing AfD cluster) and blue clusters (technology, media, and legal experts) is to be found in their unequal reference to terms regarding hate and hate speech. While accounts in the blue cluster address the topic of hate speech by mentioning “hate,” “hate speech,” “Hass,” “Hassrede” fairly often, we hardly find any references to hate speech in the purple cluster at all. A more in-depth analysis by close reading reveals that many prominent accounts within the blue cluster acknowledge the problem of hate speech online and consider it to be an issue that needs to be addressed, even though several of these accounts are critical of NetzDG and do not consider this law to be the right approach for dealing with hate speech online. The majority of accounts in the purple cluster do not address the issue of hate speech online at all but solely focus on the restriction of freedom of speech that may come with NetzDG. In doing so, they frame the issue at hand very differently and present themselves and AfD sympathizers in general as the victims of government overreach, while the victims of hate speech online are blended out.</hi>
+            </p>
+            <p>
+                <hi style="font-size:10pt">Mentions of words that refer to censorship and the restriction of free speech, such as “Zensur” (censorship), are fairly frequent in both of the biggest clusters. The positive term “Meinungsfreiheit” (freedom of speech) is the second most mentioned term in the purple cluster, and fifth, by blue. However, a closer look at the individual tweets reveals that the use of and discussion about censorship differs significantly in both clusters. While prominent accounts in blue engage in deliberative discussions of the issue, partly renouncing the term ‘Zensur’ for a description of the NetzDG law, influential accounts in purple not only interpret the law as a vehicle to censor right-wing voices but also criticize it as authoritarian. The most outspoken accounts compare the German politicians who introduced NetzDG to former Nazi personnel. They claim that the forced infusion of diversity and immigrants into the country by the political elite is unwanted and resisted by the German people and that dictatorial restrictions of free speech such as NetzDG are the only way for the government to keep the situation under control.</hi>
+            </p>
+            <p>
+                <hi style="font-size:10pt">These populist narratives – as well as other lines of argument – become accessible for close reading analysis through the initial filtering performed by network analysis and NLP methods and thereby lead to deeper insights into the discourse in question. Eventually, we can discern the communicative strategies of different stakeholders involved in the discourse about platform regulation and free speech on Twitter/X and use these results to inform policy discussions and discourse analysis at large. In the next stage of this project, we will analyse the results of sentiment analysis and expand the interpretation of these quantitative approaches undertaken by accessing inter-discourses circulating in the media on the NetzDG.</hi>
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi style="font-size:10pt">Ausserhofer, Julian / Maireder, Axel (2013). NATIONAL POLITICS ON TWITTER: Structures and topics of a networked public sphere. Information, Communication &amp; Society, 16(3), 291–314.</hi>
+                        <ref target="https://doi.org/10.1080/1369118X.2012.756050">
+                            <hi rend="underline color(1155CC)" style="font-size:10pt" xml:space="preserve"> https://doi.org/10.1080/1369118X.2012.756050</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>Griffin, Rachel (2022). New school speech regulation as a regulatory strategy against hate speech on social media: The case of Germany’s NetzDG. Telecommunications Policy, 46(9), 102411.
+                        <ref target="https://doi.org/10.1016/j.telpol.2022.102411">
+                            <hi rend="underline color(1155CC)" style="font-size:10pt" xml:space="preserve"> https://doi.org/10.1016/j.telpol.2022.102411</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt">Jänicke, Stefan, et al. (2015). On Close and Distant Reading in Digital Humanities: A Survey and Future Challenges. EuroVis (STARs), 2015, 83-103.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt">Lipizzi, Carlo, et. al. (2016). Towards computational discourse analysis: A methodology for mining Twitter backchanneling conversations. Computers in Human Behavior, 64, 782-792.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

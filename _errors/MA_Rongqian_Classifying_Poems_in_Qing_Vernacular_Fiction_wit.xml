@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MA_Rongqian_Classifying_Poems_in_Qing_Vernacular_Fiction_wit">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Classifying Poems in Qing Vernacular Fiction with ChatGPT</title>
+                <author>
+                    <persName>
+                        <surname>Ma</surname>
+                        <forename>Rongqian</forename>
+                    </persName>
+                    <affiliation>Indiana University Bloomington, United States of America</affiliation>
+                    <email>rm56@iu.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Du</surname>
+                        <forename>Keli</forename>
+                    </persName>
+                    <affiliation>Trier Center for Digital Humanities, Germany</affiliation>
+                    <email>duk@uni-trier.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Zheng</surname>
+                        <forename>Yiwen</forename>
+                    </persName>
+                    <affiliation>Indiana University Bloomington, United States of America</affiliation>
+                    <email>zhengyiw@iu.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Zhuang</surname>
+                        <forename>Zhibo</forename>
+                    </persName>
+                    <affiliation>Indiana University Bloomington, United States of America</affiliation>
+                    <email>zhizhuan@iu.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-21T21:01:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>poetry</term>
+                    <term>ChatGPT</term>
+                    <term>Chinese vernacular fiction</term>
+                    <term>narrative function</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>cultural analytics</term>
+                    <term>text mining and analysis</term>
+                    <term>Asian studies</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>In Qing Dynasty (1644-1911) vernacular fiction, embedded poems serve as a powerful narrative device. However, the functions of such poems remain unclear in literary scholarship. While some scholars describe these poems as “parasitic” (Zhao, 2013),others argue that they serve purposes far beyond mere embellishment, including introducing themes, shaping characters, and commenting on the unfolding plot (Hegel,1987; Mei, 2009). Our work explores this debate by employing cutting-edge computational methods, such as large language models (LLMs), to investigate the variety of narrative functions of embedded poems.</p>
+                <p>In a previous study, we applied computational methods to examine the roles of these poems in Qing Dynasty vernacular fiction (Ma &amp; Du, 2024). By manually annotating 360 poems extracted from 18 Qing fiction titles, we identified five narrative functions and tested the performance of machine learning models, including XLM-Roberta and ChatGPT, in automatically classifying these functions.</p>
+                <p>Our results highlighted the potential of using computational methods for narrative function classification and the limitations arising from poetry’s linguistic nuances and subjective nature. In this study, we refined our approach by revising the annotation framework and the classification methods. Our new experiments and findings are presented below.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Revised Annotation Framework</head>
+                <p>In the revised framework, we annotated each poem in three aspects—position, perspective, and content—to capture the complexity of its narrative functions. The “position” aspect indicates whether a poem appears in the opening section of a chapter, within the middle of the narrative, or towards the end of a chapter. “Perspective” denotes whether a poem is written from a character’s first-person or a narrator’s third-person viewpoints. Finally, the “content” aspect categorizes each poem into one of four types: “character portraiture,” “scene,” “commentary,” and “plot.” Definitions for each category are included in Table 1.</p>
+                <p>Table 1: Definitions of each category for the content aspect.</p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: left;">Character portraiture</cell>
+                        <cell style="text-align: left;">Describe a character, e.g., their appearance, inner feelings, emotions, and personality.</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">Scene</cell>
+                        <cell style="text-align: left;">Describe natural scenery, objects, and nature.</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">Commentary</cell>
+                        <cell style="text-align: left;">Offers comments and critiques of events, society, morality, characters, etc.</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">Plot</cell>
+                        <cell style="text-align: left;">Conveys, narrates, and sometimes summarizes a sequence of events.</cell>
+                    </row>
+                </table>
+                <p>Using the same dataset as in the previous study<ref n="1" target="ftn1"/>, three authors independently annotated each poem from the three aspects, assigning one label for each aspect. The inter annotator agreement (Fleiss' kappa) results for position, perspective, and content are 0.87,0.89, and 0.66, respectively. The three annotators also met to resolve the annotation differences, leading to a ground-truth dataset for classification experiments. As shown in Figure 1, poems are evenly split between the narrator’s and the character’s perspectives. The majority of poems are labelled as “middle” for position. Regarding content, only one poem is resolved as “plot” and 36 poems are labelled as “character portraiture”. The remaining two content categories are evenly distributed across the dataset.
+                </p>
+                <figure>
+                    <graphic n="1001" width="16.002cm" height="14.899569444444445cm" url="/tmp/tmp4r64190a/Pictures/da632203448848c2ff99e8bd8d54f749.png" rend="inline"/>
+                </figure>
+                <p>Figure 1. Annotation results for the poems</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Classifying poems with ChatGPT</head>
+                <p>In our earlier study, poems were classified without their surrounding prose to test whether their narrative function could be determined solely from content. The results rejected this assumption. This time, we included two sentences before and after each poem for classification. As RoBERTa fine-tuned on Chinese texts did not outperform ChatGPT in previous work, we only used ChatGPT (GPT-4) in this test and conducted two experiments. In the first experiment, we focused on classifying poem content using three different prompts<ref n="2" target="ftn2"/>. The first was a short prompt asking ChatGPT to select an option. The second was a longer prompt that explained each option’s meaning before asking for a choice. The third also explained the options but instructed ChatGPT to use a binary classification approach. As shown in Table 2, providing explanations improved classification results, but the binary approach did not lead to improvements. Figure 2 displays the confusion matrix of our best classification. ChatGPT correctly identified 81% of “character portraiture” poems and 57% of “commentary” poems. However, 54% of “scene” poems were misclassified into other categories, highlighting areas for further improvement.
+                </p>
+                <p>Table 2. Classification results of poems on the content level.</p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: left;"/>
+                        <cell style="text-align: center;">Short prompt</cell>
+                        <cell style="text-align: center;">Long prompt</cell>
+                        <cell style="text-align: center;">Long prompt binary</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: center;">Accuracy / F1-score</cell>
+                        <cell style="text-align: center;">0.41/ 0.33</cell>
+                        <cell style="text-align: center;">0.55 / 0.43</cell>
+                        <cell style="text-align: center;">0.53 / 0.39</cell>
+                    </row>
+                </table>
+                <figure>
+                    <graphic n="1002" width="16.002cm" height="14.238111111111111cm" url="/tmp/tmp4r64190a/Pictures/da632203448848c2ff99e8bd8d54f749.png" rend="inline"/>
+                </figure>
+                <p>Figure 2. Confusion matrix of our best classification results for the content aspect.</p>
+                <p>In the second experiment, ChatGPT assigned labels to three aspects: position, content, and perspective. The results, presented in Table 3, show significant improvements compared to the last year.</p>
+                <p>Table 3. Comparison of classification results between our old and new studies.</p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: center;"/>
+                        <cell style="text-align: center;">Previous Study</cell>
+                        <cell style="text-align: center;" cols="3">This study (best results using the long prompt)</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: center;">Accuracy / F1-score</cell>
+                        <cell style="text-align: center;">0.38 / 0.20</cell>
+                        <cell style="text-align: center;">Content</cell>
+                        <cell style="text-align: center;">Position</cell>
+                        <cell style="text-align: center;">Perspective</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: center;"/>
+                        <cell style="text-align: center;"/>
+                        <cell style="text-align: center;">0.55 / 0.43</cell>
+                        <cell style="text-align: center;">0.84 / 0.34</cell>
+                        <cell style="text-align: center;">0.63 / 0.60</cell>
+                    </row>
+                </table>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Sample Analysis of Classification Results</head>
+                <p>We reviewed classification results and analysed two misclassified examples for the content aspect (see Table 4 in Appendix). In the first case, three annotators categorized the poem as “scene” while ChatGPT classified it as “character portraiture.” This misclassification likely stems from ChatGPT’s limited knowledge of Chinese literary traditions, where poetic exchanges are typical occasions for literati writers to showcase creativity. To enhance the appeal of their poems and win the competition, writers would incorporate emotional elements in their poems that are crafted for artistic effect rather than as genuine self-expression. Therefore, annotators familiar with this tradition recognized the poem’s function as depicting a poetic exchange scene rather than a portrayal of characters’ emotions.</p>
+                <p>In the second case, the poem offers a sarcastic critique of the idle and opportunistic nature of a character named Zhou De. The annotators treated it as a comment on the character’s personality, which falls under the “commentary” category. ChatGPT, however, labelled it as “character portraiture,” seemingly integrating all character-related content into this label.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p>Preliminary analysis suggests that misclassification may be due to a variety of reasons. For example, it can be attributed to ChatGPT’s lack of nuanced knowledge of Chinese literary traditions. Incorporating such background knowledge in future prompts may help address this issue. Additionally, the second example indicates ChatGPT’s limited ability to capturet he differences between a “critique of a character” and a “description of a character.” We also noticed that among the misclassified cases, most “scene” (43%) and “commentary” (25%) poems are misclassified as “character portraiture” by ChatGPT (Figure 2). This suggests a misalignment between ChatGPT's understanding of “character portraiture” and our own. Providing more detailed definitions of “character portraiture,” along with examples (few shot learning) may improve ChatGPT's performance. For future work, we will review all the misclassified cases to refine our prompts, conduct further experiments with ChatGPT using revised prompts, and explore revisions to the annotation framework to improve classification results.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Appendix</head>
+                <div type="div2" rend="DH-Heading2">
+                    <head>ChatGPT Prompts</head>
+                    <div type="div3" rend="DH-Heading3">
+                        <head>The short prompt:</head>
+                        <p>The following Chinese text contains a poem. The beginning and end of the poem are marked with “p_s” and “p_e” respectively. Which of the categories “commentary”, “character portraiture”, “scene” and “plot” does it belong to?</p>
+                    </div>
+                    <div type="div3" rend="DH-Heading3">
+                        <head>The long prompt:</head>
+                        <p>The following Chinese text contains a poem. The beginning and end of the poem are marked with 'p_s' and 'p_e' respectively. </p>
+                        <p>You have three task.</p>
+                        <p>First task, determine the narrative function of the poem. There are four options:</p>
+                        <list type="ordered">
+                            <item>'commentary', which offers comments and critiques of events, society, morality, characters, etc.</item>
+                            <item>'character portraiture', which describes a character, e.g., their appearance, inner feelings, emotions, and personality.</item>
+                            <item>'scene', which describes natural scenery, objects, and nature.</item>
+                            <item>'plot', which conveys, narrates, and sometimes summarizes a sequence of events.</item>
+                        </list>
+                        <p>Second task, determine the position of a poem in a novel. The position indicates the structural role that the poem plays in the narrative of the fiction. There are three options:</p>
+                        <list type="ordered">
+                            <item>'beginning', means that the poem is an opening poem for a chapter.</item>
+                            <item>'middle', means that the poem is in the middle of a plot.</item>
+                            <item>'end', means the poem comes at the end of the chapter and concludes the storyline.</item>
+                        </list>
+                        <p>Third task, determine whether the poem is composed or recounted from the first-person perspective of a character in the story or a third-person perspective of the author or a storyteller. If the former, please answer with 'character', if the latter, please answer with 'narrator'.</p>
+                        <p>For each task, you must choose one and only one option as your answer. You don't have to explain your answer, just output your answer in this format {answer to the first task}, {answer to the second task}, {answer to the third task} using the given option labels. Here is the text with the poem:"</p>
+                    </div>
+                    <div type="div3" rend="DH-Heading3">
+                        <head>The long prompt (binary approach):</head>
+                        <p>The following Chinese text contains a poem. The beginning and end of the poem are marked with 'p_s' and 'p_e' respectively. Your task is to determine the narrative function of the poem, considering both the content and the context of the poem. First, determine if the poem offers comments and critiques of events, society, morality, characters, etc. If yes, answer ‘commentary’. If no, determine if the poem describes natural scenery, objects, and nature. If yes, answer ‘scene’. If no, determine if the poem describes characters, e.g., their appearance, inner feelings, emotions, and personality. If yes, answer ‘character portraiture’. If no, determine if the poem conveys, narrates, and sometimes summarizes a sequence of events. If yes, answer ‘plot’. If still no, read the text again and choose one from the above mentioned three options (‘commentary’, ‘character portraiture’, ‘scene’). You must choose one and only one option as your answer. You don't have to explain your answer, just output your answer using the given option labels. Here is the text with the poem.</p>
+                    </div>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Table 4. Two misclassified examples</head>
+                    <table rend="rules">
+                        <row>
+                            <cell style="text-align: left;">Poem (with prose context)</cell>
+                            <cell style="text-align: left;">Human annotation</cell>
+                            <cell style="text-align: left;">Label assigned by ChatGPT</cell>
+                            <cell style="text-align: left;">Explanation of choice made by ChatGPT</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;">
+                                <p>
+                                    <hi style="font-family:Microsoft YaHei"><hi rend="Chinese">彼时，众人都挪到当中桌子旁边来，等可人月旦。独炉湘妃折下一枝菊花，插在瓶中，放在面前，写</hi></hi>“
+                                    <hi style="font-family:Microsoft YaHei"><hi rend="Chinese">供菊</hi></hi>”
+                                    <hi style="font-family:Microsoft YaHei"><hi rend="Chinese">一题，见了他二人眼睛，看着福寿笑了一笑。只见可人前，摆着红笔朱砚，先看璞玉的诗：怀菊润翰公子</hi></hi>p_s 
+                                    <hi style="font-family:Microsoft YaHei"><hi rend="Chinese">独倚东篱思故友，哀吟凄凉增新愁。此心郁郁无人问，斜生弯枝知也无？凉秋已临我何急，盛时既去汝太羞。艳色秀容今何在？曼立香迹犹楚楚。</hi></hi>p_e
+                                    <hi style="font-family:Microsoft YaHei"><hi rend="Chinese">可人看罢，笑道：</hi></hi>“
+                                    <hi style="font-family:Microsoft YaHei"><hi rend="Chinese">璞公此诗，可谓怀之入骨髓矣，真古今之绝唱也。</hi></hi>”
+                                </p>
+                                <p>
+                                    <hi rend="bold">[Translation]:</hi> At that moment, everyone moved to the table in the center, waiting for Ke Ren’s monthly commentary. Lu Xiangfei alone broke off a chrysanthemum branch, placed it in a vase in front of her, and wrote the title "Offering Chrysanthemums”. Glancing at the two people, she smiled at Fu Shou. In front of Ke Ren was placed a red brush and a vermillion inkstone. First, she read Pu Yu's poem:
+                                </p>
+                                <p> "Cherishing Chrysanthemums" Gentleman moistens his brush Standing alone by the eastern fence, thinking of an old friend, Sorrowful chants add to new grief. This heart, melancholic, remains unasked, Do the slanted, bending branches know or not? The cool autumn has arrived—why must I hurry? The peak of your time has passed—how could you feel shame? Where now is your bright, elegant beauty? Still upright, your fragrant traces are clear and pure.</p>
+                                <p>After reading, Ke Ren smiled and said: "Mr. Pu’s poem can truly be said to express longing down to the marrow. It is indeed an unparalleled masterpiece of ancient and modern times.</p>
+                            </cell>
+                            <cell style="text-align: left;">Scene</cell>
+                            <cell style="text-align: left;">Character portraiture</cell>
+                            <cell style="text-align: left;">The poem in the text is performing 'character portraiture'. The poem describes the protagonist's emotional response to an object (a chrysanthemum), expressing his/her melancholy and longing for a missing friend. Moreover, it reflects the deep emotions and inner feelings of the character, which further establishes the temperament and state of mind of the character. The character's dwell on past glory, sadness about change and the unknown future as well as the feeling of being alone and neglected are all vividly described and conveyed through this poem. Thus, it describes the inner feelings and personality of the character, hence, it is 'character portraiture'.</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;">
+                                <p>
+                                    <hi style="font-family:Microsoft YaHei"><hi rend="Chinese">莫说丁协公是个富贵公子，他日日要见教的；就是徐鹏子一个穷公孙，他看他考得利肚里又通，也时常虚卖弄，三两日来鬼混一场去。总不如那丁公子与他贴心贴意，分外相投，一刻也离他不得的。这正是：</hi></hi>p_s 
+                                    <hi style="font-family:Microsoft YaHei"><hi rend="Chinese">嫖赌场中篾片，文章社内法喜。虽然牌挂假斯文，不如尊绰白日鬼。</hi></hi>p_e
+                                    <hi style="font-family:Microsoft YaHei"><hi rend="Chinese">却说丁协公看了那条字儿，委决不下，踌躇了一夜，次日侵早，着人去请了白日鬼来。周白日道：</hi></hi>“
+                                    <hi style="font-family:Microsoft YaHei"><hi rend="Chinese">昨日有些小事，不曾会你，场期已迫，看你的气色好的紧，今科定要高发的。请问呼唤何事见教？</hi></hi>”
+                                </p>
+                                <p>
+                                    <hi rend="bold">[Translation]:</hi> Not to mention Lord Ding Xie, a wealthy nobleman he [Zhou De] feels obligated to visit often—even Xu Pengzi, a poor descendant of a noble family, who Zhou De finds capable in exams and well-read, is someone he frequently interacts with and flatters. Zhou often engages in lighthearted mischief with Xu every two or three days. However, none of this compares to Lord Ding Xie’s deep and heartfelt connection with Zhou. The two are exceptionally close, so much so that Ding cannot bear to part from him for even a moment. This is precisely:
+                                </p>
+                                <p>"A sidekick in gambling dens, a literary entertainer in scholarly circles. Though wrapped in pretended refinement, They pale in comparison to the so-called 'daytime ghost.”</p>
+                                <p>Now, regarding Lord Ding Xie, he was deeply conflicted after reading the message and deliberated over it for an entire night. Early the next morning, he sent someone to invite the "Daylight Ghost" over. “Zhou Daylight” said, "Yesterday, I had some small matters to attend to, so I couldn’t meet with you. With the exam approaching and your energy looking excellent, I’m certain this will be a successful year for you. May I ask, what is the purpose of summoning me today?</p>
+                            </cell>
+                            <cell style="text-align: left;">Commentary</cell>
+                            <cell style="text-align: left;">Character portraiture</cell>
+                            <cell style="text-align: left;">
+                                <p>The poem describes the relationship between two characters, showing the preference of one character towards another. It highlights a bond and understanding between the two, giving us insight into their personalities and conduct, especially in the lines</p>
+                                <p>"
+                                    <hi style="font-family:Microsoft YaHei"><hi rend="Chinese">嫖赌场中篾片，文章社内法喜。虽然牌挂假斯文，不如尊绰白日鬼</hi></hi>".
+                                </p>
+                                <p>It doesn’t comment on society or events, nor does it describe a scene or narrate any sequence of events. Instead, it illustrates the characters and their interpersonal dynamics, thereby fitting into the category of 'character portraiture'.</p>
+                            </cell>
+                        </row>
+                    </table>
+                </div>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                         In the new round of research, we eliminated, for example, couplets or repeated poems from the original dataset. As a result, the data size has been reduced from 360 to 339 poems.
+                    </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                         Please see Appendix for the details of the three prompts.
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Chun, M. (2009). Garlic and vinegar: The narrative significance of verse in “The pearl shirtreencountered.” 
+                        <hi rend="italic">Chinese Literature: Essays, Articles, Reviews (CLEAR), 31</hi>, 23–43.
+                    </bibl>
+                    <bibl style="text-align: left; ">Hegel, R. (1981). 
+                        <hi rend="italic">The novel in seventeenth-century China.</hi> New York, NY: ColumbiaUniversity Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">Ma, R., &amp; Du, K. (2024). A computational exploration of the narrative functions of poetry inChinese Qing vernacular fiction (1644–1911). In 
+                        <hi rend="italic">DH 2024 Book of Abstracts.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">Zhao, Y. (2013). 
+                        <hi rend="italic">Ming dai xiao shuo ji sheng ci qu yan jiu (The parasite poems and songs inMing fiction)</hi>. Beijing, China: Shangwu Yinshuguan.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

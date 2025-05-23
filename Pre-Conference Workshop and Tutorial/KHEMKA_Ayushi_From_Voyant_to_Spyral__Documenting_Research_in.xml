@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KHEMKA_Ayushi_From_Voyant_to_Spyral__Documenting_Research_in">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>From Voyant to Spyral: Documenting Research in Notebooks (Workshop)</title>
+                <author>
+                    <persName>
+                        <surname>Khemka</surname>
+                        <forename>Ayushi</forename>
+                    </persName>
+                    <affiliation>University of Alberta, Canada</affiliation>
+                    <email>khemkaayushi@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Bradley</surname>
+                        <forename>John</forename>
+                    </persName>
+                    <affiliation>King's College London</affiliation>
+                    <email>john.bradley@kcl.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Rockwell</surname>
+                        <forename>Geoffrey</forename>
+                    </persName>
+                    <affiliation>University of Alberta, Canada</affiliation>
+                    <email>grockwel@ualberta.ca</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T00:17:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Pre-Conference Workshop and Tutorial</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Spyral Notebooks</term>
+                    <term>Voyant Tools</term>
+                    <term>Data Visualization</term>
+                    <term>Notebooks</term>
+                    <term>Text Analysis</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>systems and information architecture and usability</term>
+                    <term>text mining and analysis</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">Spyral is a notebook programming extension to the popular Voyant tools (voyant-tools.org). How can Spyral be used in research and teaching? In this three-and-a-half-hour-long workshop, we will introduce people already familiar with Voyant to how they can use Spyral to document research projects or to encourage students to document their text analysis projects.</p>
+            <div type="div1" rend="DH-Heading1">
+                <head>What is Spyral?</head>
+                <p style="text-align: left; ">Spyral is a dynamic document environment that has been inspired by notebook environments such as Mathematica, Jupyter Notebooks and Google Colab. Notebook environments, in turn, have been influenced by Donald Knuth's (1984) “literate programming” paradigm. Knuth discusses the importance of using commentary in computer coding to explain to human beings what a computer should do with a program (1984). Like other notebook environments, Spyral contains text and code cells. Through intermingled text cells one can justify coding decisions, explain one’s research agenda, and interpret results. In Spyral, discussion and code are intertwined with an added ingredient, live Voyant panels. In fact, one can export any Voyant panel to Spyral. If you see results you want to keep you can export a notebook with the code to generate the panel again, with the same corpus and parameters. Of course, you can then edit it, add text cells to the notebook, and save it to the Voyant server if you have an account. Spyral notebooks can thus act in service of the teaching of the reading, analyzing, visualizing and interpreting electronic texts.</p>
+                <p style="text-align: left; ">Spyral Notebooks are online, open and free. Like Voyant, Spyral is accessed through your browser. There is essentially no set-up or configuration needed to play with Spyral Notebooks. They run on our server, not the user’s machine. All users need to get started is an internet connection and a GitHub account for authentication. This simplicity is critical for users who are new to coding and computing, providing a pathway from the ease of use of Voyant to the power of programming. In this way, our workshop directly addresses one of the conference topics of ‘Open, Public, Participatory Humanities’.</p>
+                <p style="text-align: left; ">In the first part of the workshop, we will start with a review of Voyant for those not familiar with it and then focus on using Spyral with minimal programming. While our primary audience is people who use and/or teach with Voyant, the workshop will still be accessible to someone interested in learning about both. In the second part, we will show more advanced uses of Spyral to control word lists and categories, for example.</p>
+                <p style="text-align: left; ">After a brief introduction to Voyant, we will walk the participants through the fundamental features of a Spyral Notebook. This will be a hands-on workshop aimed at a group of participants with a diverse range of research interests, programming experience and career goals who will want time to try things for themselves. Through a show-and-try format, we will show how using Spyral Notebooks allows one to collect Voyant visualizations, control them, and document what a user thinks they show. This can all be achieved with absolutely minimal JavaScript code. </p>
+                <p style="text-align: left; ">We demonstrate that notebook environments like Spyral Notebook are a great place to practice literate programming. We use the word 
+                    <hi rend="italic">practice</hi> here both in the sense of the well-versed practitioner practicing the art of literate programming and novices practicing their skills to learn more about coding. Users familiar with JavaScript can get started right away, but if a user is new, they can use this environment as a place to learn JavaScript by working through tutorial notebooks and making use of helpful pop-up hints in the code blocks. This gives Spyral Notebooks an edge since it can be thought of both as a pedagogical tool, along with a platform which fosters collaborative work with little to no roadblocks.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Agenda for the Workshop</head>
+                <p style="text-align: left; ">Our agenda for the workshop is to help the participants understand that:</p>
+                <list type="ordered">
+                    <item>In Spyral, you can keep track of the exact settings that gave you interesting results. For that matter, you can save the same panel with different settings to contrast results.</item>
+                    <item>More generally you can document your projects. In Spyral, you can describe where you got your data, what criteria you used, and what your results were.</item>
+                    <item>You can create a set of useful notebooks organized like a dashboard for analyzing texts the way you want to.</item>
+                    <item>You can use Spyral to gather texts from URLs and to clean the data for study.</item>
+                    <item>You can process data and/or visualize it in different ways than Voyant allows for.</item>
+                    <item>Above all, you can edit the code to precisely control a Voyant tool.</item>
+                    <item>Finally, we will demonstrate how Spyral can support work in a broader range of digital humanities and interdisciplinary projects outside of the Voyant context.</item>
+                </list>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Structure of the Workshop</head>
+                <list type="ordered">
+                    <item>Introducing the plan for the workshop </item>
+                    <item>Quick intro to Voyant</item>
+                    <item>Introduction to Spyral’s concepts and components
+                        <list type="ordered">
+                            <item>Demonstration of an existing notebook with Code and Text Cells</item>
+                            <item>How to create a notebook from Voyant</item>
+                            <item>Adding another code cell from Voyant</item>
+                            <item>Writing your own code cell
+                                <list type="ordered">
+                                    <item>Enhancing a notebook via Voyant tool parameters and style data </item>
+                                    <item>Adding new tools</item>
+                                </list>
+                            </item>
+                            <item>Using help to get info on tools</item>
+                        </list>
+                    </item>
+                    <item>Save the notebook to HTML</item>
+                    <item>Break</item>
+                    <item>Creating, Opening, Saving, sharing, and publishing a notebook 
+                        <list type="ordered">
+                            <item>Using the Catalogue</item>
+                        </list>
+                    </item>
+                    <item>Alternative ways of loading a corpus using Spyral</item>
+                    <item>Managing lists in Spyral: How to use Stopwords</item>
+                    <item>Strategies for creating Spyral notebooks for teaching and research</item>
+                    <item>What’s next?</item>
+                </list>
+                <p style="text-align: left; ">Prerequisites for the Workshop</p>
+                <list type="ordered">
+                    <item>Our workshop requires minimal setup and we expect the participants to show up with 
+                        <hi rend="italic" xml:space="preserve">only </hi>a laptop that can connect to the Internet. 
+                    </item>
+                    <item>We also require the participants to create their own GitHub account which can be used to save the notebooks they would create during the workshop.</item>
+                </list>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Knuth, D. E.</hi> (1984). "Literate Programming", in 
+                        <hi rend="italic">The Computer Journal</hi> 27(2): 97-111.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

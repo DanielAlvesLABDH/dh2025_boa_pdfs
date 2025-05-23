@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="GANAPATHY_Saroja_An_AI_companion_for_learning_Carnatic_music">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>An AI companion for learning Carnatic music: A Design exploration</title>
+                <author>
+                    <persName>
+                        <surname>Premkumar</surname>
+                        <forename>Pranav</forename>
+                    </persName>
+                    <affiliation>Srishti Manipal Institute of Art, Design and Technology, Manipal Academy of Higher Education, India</affiliation>
+                    <email>pranavpk2013@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ganapathy</surname>
+                        <forename>Saroja</forename>
+                    </persName>
+                    <affiliation>Srishti Manipal Institute of Art, Design and Technology, Manipal Academy of Higher Education, India</affiliation>
+                    <email>saroja.ganapathy@manipal.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-09T04:37:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Carnatic music</term>
+                    <term>user experience design</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>user experience design and analysis</term>
+                    <term>Design studies</term>
+                    <term>Musicology</term>
+                    <term>South Asian studies</term>
+                    <term>I plan to attend the conference online</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">This paper presents efforts and experiments in creating an AI-driven conversational companion tailored for learners of Carnatic music, a classical art form originating from South India. New generation learners of Carnatic music face challenges such as limited access to expert guidance and lack of practice motivation, because of changing lifestyles, increased uncertainties and frequent displacement (Serenade Team 2023). While some of these challenges have been met in increased adoption of video conferencing and recording tools by teachers and learners (Srivaralaxmi and Maheswari 2024), there is a loss of frequent personal connect. Even as this project recognises the irreplaceability of human interaction and mentorship, it explores what features may be assumed by a personalised AI companion which might, in the process, also mitigate some of the exclusions that linger in traditional pedagogical practices in Carnatic music (Mythri 2015: 22–24).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methodology &amp; Design</head>
+                <p style="text-align: left; ">Based on participatory and immersive principles in human-centred design, the project focuses on the experiences and struggles of Carnatic music learners at various levels of competence. At the same time, it delves into the features of real-time feedback and other possibilities in AI-based technologies that can be carefully leveraged to create new human-AI partnerships in the field. Grounded in primary research and iterative design, the project thus aligns with the ADHO 2025 themes of participatory humanities, accessibility, and equity in education.</p>
+                <p style="text-align: left; ">The initial research encompassed primary studies and a comprehensive analysis of existing internet and app-based interventions supporting Carnatic music learners.</p>
+                <p style="text-align: left; ">Primary research included an online survey of 50 Carnatic music students as well as in-depth interviews with 30 stakeholders (students, gurus and technologists). 52% of the respondents to the survey confirmed that they felt very overwhelmed in their music education journeys. Lack of real-time feedback, lack of access to a community of peers, limited time for practice and insufficient one-to-one time with their gurus were cited as the key reasons.</p>
+                <p style="text-align: left; ">Secondary research involved evaluating digital interventions such as internet archives, teaching videos, and apps designed to support Carnatic music learners. Their affordances and underlying assumptions were analysed to identify both the gaps they address and the unmet needs they leave behind.</p>
+                <p style="text-align: left; ">A working prototype named ‘Ragamuthu’ was built in the construct of an AI companion (Giles 2024) that understands and anticipates the bespoke needs of every student of Carnatic music. The prototype's core functionality is driven by a 
+                    <hi rend="bold">Large Language Model (LLM)</hi> for intelligent conversations and 
+                    <hi rend="bold">relevant speech APIs</hi> for natural voice interactions and adaptive feedback. Both the research and the prototype are now being revisited to understand the inadvertent assumptions and biases that may have been built into the design.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Key Features of the Prototype</head>
+                <list type="ordered">
+                    <item>
+                        <hi rend="bold">Adaptive &amp; Personalised Onboarding:</hi> Ragamuthu assesses learners’ proficiency through interactive tasks and assigns appropriate learning paths.
+                    </item>
+                    <item>
+                        <hi rend="bold">Real-Time Feedback:</hi> The AI evaluates practice sessions, offering corrective insights on rhythm, pitch, and phrasing (Barua, Chauhan, and Malhotra 2021). 
+                    </item>
+                    <item>
+                        <hi rend="bold">Cultural Engagement:</hi> Through interactive dialogues, Ragamuthu shares anecdotes, historical insights, and motivational tips.
+                    </item>
+                    <item>
+                        <hi rend="bold">Gamification:</hi> Reward points, leaderboards, and virtual achievements keep learners engaged and motivated (Gomes, Figueiredo, and Bidarra 2014). 
+                    </item>
+                    <item>
+                        <hi rend="bold">Community Features:</hi> The platform connects learners with peers for collaborative practice (Joseph et al. 2024) and knowledge exchange.
+                    </item>
+                </list>
+                <figure>
+                    <graphic n="1001" width="14.232363888888889cm" height="20cm" url="/tmp/tmpmdqxe83y/Pictures/db6cabdd47ee70579b9945b1b6f7725c.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; text-align: center;">
+                    <hi rend="bold">Figure 1:</hi> Overview of Ragamuthu’s functions. The first prototype highlights the Talk feature, designed to facilitate interactive dialogue and support for Carnatic music learners.
+                </p>
+                <figure>
+                    <graphic n="1002" width="14.126441666666667cm" height="20cm" url="/tmp/tmpmdqxe83y/Pictures/db6cabdd47ee70579b9945b1b6f7725c.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; text-align: center;">
+                    <hi rend="bold">Figure 2:</hi> Technical overview of the Talk feature.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Unresolved Ethical &amp; Technical Considerations</head>
+                <p style="text-align: left; ">While promising, the introduction of AI in a culturally sensitive domain like Carnatic music necessitates careful consideration of ethical and technical challenges:</p>
+                <list type="unordered">
+                    <item>
+                        <hi rend="bold">Data Bias:</hi> Training AI on limited or non-representative datasets may misrepresent key cultural nuances. Ragamuthu’s development prioritises diverse and verified training data curated by domain experts.
+                    </item>
+                    <item>
+                        <hi rend="bold">Oversimplification of Complex Concepts:</hi> Certain elements like 
+                        <hi rend="italic">manodharma</hi> (improvisation) and 
+                        <hi rend="italic">gamakas</hi> require nuanced understanding that AI alone cannot provide. Understanding how the AI tool can function as a companion for advanced learners therefore requires nuanced development as well as extensive user studies on the application of the tool.
+                    </item>
+                    <item>
+                        <hi rend="bold">Privacy Concerns:</hi> User data collection for personalisation introduces risks of data breaches (Office of the Victorian Information Commissioner 2024). At the same time, a truly personalised and dynamic responsive tool requires extensive real-time recording of user data. While this poses challenges for the success of the prototype, it opens up opportunities to study privacy issues in a niche domain.
+                    </item>
+                    <item>
+                        <hi rend="bold">Speculative Design:</hi> To address the challenges identified above, the designer must delve into speculative design without abandoning the rigour of rootedness in both the possibilities currently perceivable in AI technology and the complex contextual elements that the tool intends to resolve.
+                    </item>
+                </list>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Potential Impact &amp; Future Directions</head>
+                <p style="text-align: left; ">Continuing iterations of Ragamuthu explore advanced conversational capabilities, integration with multimedia resources (e.g., audio and video lessons), and enhanced support for improvisational exercises. Additionally, collaborative efforts with music academies and gurus can further align the platform with traditional pedagogical practices.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p style="text-align: left; ">The ‘Ragamuthu’ project exemplifies the transformative potential of AI in the humanities, bridging the gap between tradition and innovation. By making Carnatic music education more inclusive, participatory, and engaging, the project invites further dialogue on how technology can sustain and evolve cultural heritage in the digital age.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Keywords</head>
+                <p style="text-align: left; ">Carnatic music, AI companion, cultural preservation, digital humanities, participatory education.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Barua, Aditi / Chauhan, Aditya / Malhotra, Nishtha</hi> (2021): “Automated Raga Recognition in Indian Classical Music Using Machine Learning Techniques”, in: 
+                        <hi rend="italic">Journal of Integrated Science and Technology</hi> 9, 1: 25–31.
+                        <lb/>
+                        <ref target="https://pubs.thesciencein.org/journal/index.php/jist/article/view/a1011/652">https://pubs.thesciencein.org/journal/index.php/jist/article/view/a1011/652</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Giles, Richard</hi> (2024): “AI Companions on Mobile: Revolutionising Personalised Digital Experiences”, in: 
+                        <hi rend="italic">Adapptor Blog</hi>.
+                        <lb/>
+                        <ref target="https://www.adapptor.com.au/blog/ai-companions-on-mobile-revolutionisingpersonalised-digital-experiences">https://www.adapptor.com.au/blog/ai-companions-on-mobile-revolutionisingpersonalised-digital-experiences</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Gomes, Cristina / Figueiredo, Mauro / Bidarra, José</hi> (2014): “Gamification in Teaching Music: Case Study”, in: 
+                        <hi rend="italic">Conference Paper</hi>.
+                        <lb/>
+                        <ref target="https://www.researchgate.net/publication/262376655_Gamification_in_teaching_music_Case_study">https://www.researchgate.net/publication/262376655_Gamification_in_teaching_music_Case_study</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Joseph, Genimon Vadakkemulanjanal / Athira, P / Thomas, Anit M / Jose, Dawn / Roy, Therese V / Prasad, Malavika</hi> (2024): “Impact of Digital Literacy, Use of AI Tools and Peer Collaboration on AI-Assisted Learning: Perceptions of the University Students”, in: 
+                        <hi rend="italic">Digital Education Review</hi> 45: 43–49.
+                        <lb/>DOI: 10.1344/der.2024.45.43-49.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Mythri, P U</hi> (2015): “‘Purified’ Carnatic Music and Impure People”, in: 
+                        <hi rend="italic">Economic and Political Weekly</hi> 50, 26–27: 22–24.
+                        <lb/>
+                        <ref target="https://www.epw.in/journal/2015/26-27/commentary/purified-carnatic-music-and-impure-people.html">https://www.epw.in/journal/2015/26-27/commentary/purified-carnatic-music-and-impure-people.html</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Office of the Victorian Information Commissioner</hi> (2024): “Artificial Intelligence and Privacy: Issues and Challenges”.
+                        <lb/>
+                        <ref target="https://ovic.vic.gov.au/privacy/resources-for-organisations/artificial-intelligence-and-privacy-issues-and-challenges/">https://ovic.vic.gov.au/privacy/resources-for-organisations/artificial-intelligence-and-privacy-issues-and-challenges/</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Serenade Team</hi> (2023): “Passing the Torch of Tradition: The Eternal Bond of Guru-Shishya Parampara”, in: 
+                        <hi rend="italic">Serenade Magazine</hi>.
+                        <lb/>
+                        <ref target="https://serenademagazine.com/passing-the-torch-of-tradition-the-eternal-bond-of-guru-shishya-parampara/">https://serenademagazine.com/passing-the-torch-of-tradition-the-eternal-bond-of-guru-shishya-parampara/</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Srivaralaxmi, V / Maheswari, P. Uma</hi> (2024): “A Study on the Changing Trends in Classical Carnatic Music Teaching and Learning Practices in the Digital Age”, in: 
+                        <hi rend="italic">Sangeet Galaxy</hi>.
+                        <lb/>
+                        <ref target="https://sangeetgalaxy.co.in/paper/a-study-on-the-changing-trends-in-classical-carnatic-music-teaching-and-learning-practices-in-the-digital-age/">https://sangeetgalaxy.co.in/paper/a-study-on-the-changing-trends-in-classical-carnatic-music-teaching-and-learning-practices-in-the-digital-age/</ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

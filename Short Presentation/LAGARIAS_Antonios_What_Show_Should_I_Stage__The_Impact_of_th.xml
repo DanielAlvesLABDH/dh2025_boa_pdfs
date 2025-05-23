@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LAGARIAS_Antonios_What_Show_Should_I_Stage__The_Impact_of_th">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>What Show Should I Stage? The Impact of the Festival Off Avignon on Parisian Theater Programming </title>
+                <author>
+                    <persName>
+                        <surname>Lagarias</surname>
+                        <forename>Antonios</forename>
+                    </persName>
+                    <affiliation>Rennes 2 University, France</affiliation>
+                    <email>antonios.lagarias@univ-rennes2.fr</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-05T13:45:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>festival studies</term>
+                    <term>Avignon</term>
+                    <term>performing arts</term>
+                    <term>theater programming</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>text mining and analysis</term>
+                    <term>Art history</term>
+                    <term>Statistics</term>
+                    <term>Performance Studies: Dance</term>
+                    <term>Theatre</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Every summer, the French town of Avignon becomes the setting for two parallel cultural events that shape the country’s theater scene. The official Avignon theater festival, known as the “In”, was established in 1947 by Jean Vilar to become a laboratory for public cultural policies and promote high-quality performances (Loyer 
+                <hi style="font-size:10pt" xml:space="preserve">/ </hi>Baecque 2016). The “Off” festival, on the other hand, gained visibility after 1968 as an independent festival with a horizontal structure, where partner theaters curate their own program. Unlike the selective In, the Off welcomes any artistic company eager to present their work in Avignon (Rumello 2016). 
+            </p>
+            <p>The year 2013 marked a major turning point for the Off, as the festival was declared the world’s largest theater market (Germain 2013). With over 3,500 programmers, producers, and journalists attending each year, it is today considered a top destination for emerging theater companies looking to showcase their artistic work and attract buyers. Over the course of a month, more than 1,000 shows are staged in approximately 250 theaters across the city. However, securing a slot in one of the venues demands a substantial financial investment from companies. According to press reports, the average slot costs 25,000 euros, while expected ticket revenues typically fall short, rarely exceeding 15,000 euros (Robert 2023). This means that the success of a specific show at the Off should be measured in terms of visibility rather than direct financial gains. Companies participate in the festival to capture the attention of programmers in hope of securing reprogramming opportunities for the following theater seasons.</p>
+            <p>In cultural economics and art studies, festivals are considered key spaces for negotiating public policies, nurturing artistic innovation and shaping audience taste (Salvador 
+                <hi style="font-size:10pt" xml:space="preserve">/ </hi>Pedersen 2023, Knowles 2020). Recent studies in sociology provide further evidence on the central position of Avignon for the programming choices of theaters in Francophone countries. Theater programmers from small and large publicly-funded art venues closely monitor the Off’s program (Dutheil-Pessin 
+                <hi style="font-size:10pt" xml:space="preserve">/ </hi>Ribac 2017), and regional authorities across France dedicate significant effort and resources to promoting local artists during the festival’s official events and informal gatherings (Ribac 2022). By all accounts, presenting a show at the Off is a gateway to being seen and recognized by the theater industry. This unmatched promise of future success extends to both public and private theater, positioning the Festival Off Avignon as a vibrant hub for artists and professionals not only in France but also internationally. However, to our knowledge, the actual likelihood of success for the festival shows has yet to be systematically measured.
+            </p>
+            <p>In literary studies, recent computational approaches propose methods for measuring the impact of certain features of a literary work, such as its genre and level of complexity, on its reception (Bizzoni et al. 2024). In theater studies, however, similar research is still in its early stages, partly due to the more complex nature of theatrical live “events” compared to literary “objects” (Bardiot 2021). In this study, we examine the features that may influence the likelihood of success for a show participating in the Festival Off Avignon. We use the 2013 festival edition as a case study, during which approximately 1,250 shows were presented and measure the percentage of these shows reprogrammed within the French theater network, with a particular focus on Parisian theaters. With over 130 public and private venues, including emblematic artistic institutions and national centers for performing arts, dance, and theater, Paris holds a central position in this network, in terms of both size and prestige.</p>
+            <p>To calculate the percentage of shows reprogrammed, we compare the festival program with the shows staged in Paris during the previous and following theater seasons, in autumn 2011, 2012, 2013, 2014, and 2015. First, we use text mining methods to transcribe the information published in the festival leaflet into a dataset. For each of the 1,250 shows, we identify a) its name, producing company and genre according to festival categories such as “theater”, “dance”, “circus”, or “mime”, etc. b) the institutions that funded its production, and c) the festival theater that hosted it. We also use the BERTopic model (Grootendorst 2022), known to perform well for short texts in topic modeling exercises (Egger 
+                <hi style="font-size:10pt" xml:space="preserve">/ </hi>Yu 2022), to classify each show into thematic categories based on their synopsis. We use this classification to identify which themes or key-terms appeal most to theater programmers.
+            </p>
+            <p>To build a dataset of shows staged in Paris, we use various web-scraping tools to retrieve the program of Parisian theaters published on two major information sites, 
+                <hi rend="italic">L’Officiel des Spectacles</hi> and 
+                <hi rend="italic" xml:space="preserve">Les Archives du Spectacle, </hi>which aggregate data on theater venues and provide weekly schedules. We use the features described above, e.g. genre, topic, funding institutions and hosting theater, to identify patterns in the programmers’ decisions when considering the festival shows for Paris-based art venues.
+            </p>
+            <p>As the world’s “largest theater market”, the Festival Off Avignon serves as an ideal case for studying theater festivals through a data-driven angle and provides methods and insights that can inform the analysis of similar cultural events on a broader scale. Drawing on previous research on theater institutions and computational humanities, such as Derek Miller’s 
+                <hi rend="italic" xml:space="preserve">Visualizing Broadway </hi>(2023), Lev Manovich’s 
+                <hi rend="italic" xml:space="preserve">Cultural Analytics </hi>(2020) and Clarisse Bardiot’s 
+                <hi rend="italic" xml:space="preserve">Theatre Analytics </hi>(2021), this study contributes to existing literature in three ways. First, it provides a quantitative method to measure the impact of the festival Off Avignon on the Parisian theater programming choices. Second, it explores the influence of a show’s genre and theme on its chances of being reprogrammed. Third, it examines which festival theaters and funding institutions are consistently linked to successful shows.
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Avignon Festival &amp; Compagnies</hi>, ed. (2013): 
+                        <hi rend="italic">Le programme du OFF 2013</hi>. Mauguio: Chirripo.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Bardiot, Clarisse</hi> (2021): 
+                        <hi rend="italic">Performing Arts and Digital Humanities: From Traces to Data</hi>. Hoboken: ISTE / Wiley.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Bizzoni, Yuri / Feldkamp, Pascale / Nielbo, Kristoffer</hi> (2024): “Global Coherence, Local Uncertainty: Towards a Theoretical Framework for Assessing Literary Quality”. In: 
+                        <hi rend="italic">Proceedings of the Computational Humanities Research Conference 2024</hi>, Aarhus.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Dutheil-Pessin, Catherine / Ribac, François</hi> (2017): 
+                        <hi rend="italic">La fabrique de la programmation culturelle</hi>. Paris: la Dispute.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Egger, Raphaël / Yu, Jingyuan</hi> (2022): “A Topic Modeling Comparison Between LDA, NMF, Top2Vec, and BERTopic to Demystify Twitter Posts”. 
+                        <hi rend="italic">Frontiers in Sociology</hi> 7:886498. DOI:
+                        <ref target="https://doi.org/10.3389/fsoc.2022.886498" xml:space="preserve"> </ref>
+                        <ref target="https://doi.org/10.3389/fsoc.2022.886498">10.3389/fsoc.2022.886498</ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Grootendorst, Maarten</hi> (2022): “BERTopic: Neural topic modeling with a class-based TF-IDF procedure”. 
+                        <hi rend="italic">arXiv</hi>. 
+                        <ref target="https://arxiv.org/abs/2203.05794">https://arxiv.org/abs/2203.05794</ref> [06.05.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Knowles, Ric</hi> (2020): 
+                        <hi rend="italic">The Cambridge Companion to International Theatre Festivals</hi>. Cambridge: Cambridge University Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Li, Wei / McCallum, Andrew</hi> (2006): “Pachinko Allocation: DAG-Structured Mixture Models of Topic Correlations”. In: 
+                        <hi rend="italic">Proceedings of the 23rd International Conference on Machine Learning</hi>: 577–584.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Liu, Sissi / Miller, Derek / Mee, Erin B. / Elswit, Kate / Bay-Cheng, Sarah</hi> (2024): “Digital Scholarship Roundtable: The State of the Field”. 
+                        <hi rend="italic">Theatre Journal</hi> 76, 2: E-17–E-30.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Loyer, Emmanuel / de Baecque, Antoine</hi> (2016): 
+                        <hi rend="italic">Histoire du festival d’Avignon</hi>. Paris: Gallimard.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Manovich, Lev</hi> (2020): 
+                        <hi rend="italic">Cultural Analytics</hi>. Cambridge, MA: MIT Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Miller, Derek</hi> (2023): 
+                        <hi rend="italic">Five, Six, Seven, Eight: Broadway by the Numbers</hi>. Draft publication. 
+                        <ref target="https://visualizingbroadway.com/broadway/miller_broadway-by-the-numbers_draft-2023-01-23.pdf">https://visualizingbroadway.com/broadway/miller_broadway-by-the-numbers_draft-2023-01-23.pdf</ref> [02.06.2024].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Ribac, François</hi> (2022): “Spectacles publics versus spectacles privés ? L’exemple (instructif) du festival d’Avignon”. 
+                        <hi rend="italic">Revue d’Histoire du Théâtre</hi> N°292, T1.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Robert, Martine</hi> (2023): “Le pari risqué du festival Off d’Avignon pour les théâtres”. 
+                        <hi rend="italic">Les Echos</hi>. 
+                        <ref target="https://www.lesechos.fr/industrie-services/services-conseils/le-pari-risque-du-festival-off-davignon-pour-les-theatres-1960150">https://www.lesechos.fr/industrie-services/services-conseils/le-pari-risque-du-festival-off-davignon-pour-les-theatres-1960150</ref> [28.11.2024].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Rumello, Joël</hi> (2016): 
+                        <hi rend="italic">Réinventer une utopie, le Off d’Avignon</hi>. Paris: Ateliers Henry Dougier.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Salvador, Elisa / Pedersen, Jesper Strandgaard</hi>, eds. (2023): 
+                        <hi rend="italic">Managing Cultural Festivals: Tradition and Innovation in Europe</hi>. London: Routledge.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

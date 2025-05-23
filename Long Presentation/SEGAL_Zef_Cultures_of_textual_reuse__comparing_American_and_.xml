@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SEGAL_Zef_Cultures_of_textual_reuse__comparing_American_and_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Cultures of textual reuse: comparing American and Hebrew journalistic networks in the nineteenth century</title>
+                <author>
+                    <persName>
+                        <surname>Segal</surname>
+                        <forename>Zef</forename>
+                    </persName>
+                    <affiliation>College of Management Academic Studies, Israel</affiliation>
+                    <email>zefsegal@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T15:42:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>journalism; textual reuse; nineteenth century; social network analysis</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>network analysis and graphs theory and application</term>
+                    <term>spatial &amp; spatio-temporal analysis</term>
+                    <term>modeling and visualization</term>
+                    <term>text mining and analysis</term>
+                    <term>Book and print history</term>
+                    <term>Communication studies</term>
+                    <term>History</term>
+                    <term>Media studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">Developments in the field of plagiarism detection (Brin et al. 1995; Lovepreet &amp; Kumar 2020), as well as tailor-made computer codes for specific digital humanities projects (Lee 2007; Smith et al. 2013; Ganascia et al. 2014), have made large-scale textual reuse analysis feasible. Text reuse has attracted considerable attention within historical and comparative linguistics and literature (Olsen et al. 2011; Ganascia et al. 2014; Kokkinakis &amp; Malm 2015) as well as the study of news dissemination in the pre-twentieth-century press (Smith et al. 2013; Colavizza et al. 2014; Vesanto et al. 2017; Sola Corbacho 2019). Historical research demonstrates that the development of newspapers closely paralleled the practice of reprinting, initially sourcing material from other newspapers and later incorporating content from official dispatches, correspondents, and reporters. As such, the frequency, style, and content of reprinted materials serve as significant indicators of cultural cohesion during the formative stages of journalism.</p>
+            <p style="text-align: left; ">In this study, we employ the commercial software Originality to analyze two extensive corpora: 110,000 issues of American dailies published across the United States, sourced from the Chronicling America database (1840–1890), and 130,000 articles from 13 Hebrew newspapers published in Eastern Europe and the Middle East, digitized through the JPress initiative (1856–1897).</p>
+            <p style="text-align: left; ">Originality is a commercial software widely used by Israeli universities to assess the originality of academic work. The tool analyzes documents against a reference corpus, identifying copied passages and sentences while quantifying their degree of originality. By leveraging Originality in tandem with network visualization tools, this research bridges the gap between large-scale data analysis and nuanced historical inquiry.</p>
+            <p style="text-align: left; ">The juxtaposition of American and Hebrew journalistic networks reveals the intricate interplay between media practices and societal structures. In many ways, 19th-century America and the Jewish diaspora shared similarities as societies composed of “island communities” engaged in a collective “search for order” (Wiebe 1967). Newspapers served as a unifying force in both contexts; however, textual reuse analysis highlights key differences between them. American newspapers played a central role in shaping a cohesive national identity through a top-down editorial system that prioritized widespread dissemination of information, and its consequent uniformity. In contrast, Hebrew journals operated as bottom-up networks, fostering cultural dialogue and community-building among dispersed readers. Network analysis of the computational data uncovers stark contrasts in the style and context of textual reuse within these two systems, reflecting their distinct societal functions.</p>
+            <p style="text-align: left; ">The extensive practice of textual reproduction in 19th-century America was fundamental to newspaper production, creating a dynamic environment in which news and ideas were widely shared across the country. Newspapers were the primary medium for circulating public information, with much of their content sourced from other newspapers (Blondheim 2000; Cordell 2015). Since colonial times, postal policies had allowed editors to exchange their publications free of charge, enabling them to receive materials from other regions by mail. Editors would then cut and paste selected items into their own sheets, supplementing this with original content (Kielbowicz 1989; John 1995; Henkin 2006). The advent of telegraphic broadcasting in the mid-19th century further accelerated the dissemination of news, making instantaneous communication possible. Reflecting on this trend in 1846, the editor of the New York Express predicted that “we shall become more and more one people, thinking more alike, acting more alike,” and that “the Union will be solidified.”</p>
+            <p style="text-align: left; ">Our analysis underscores the scale of textual reproduction in this era: 89% of all newspaper issues analyzed contained some form of textual reuse, including reuse of content from earlier issues of the same newspaper, while 66% reused text from other newspapers (see figures 1 and 3). However, this phenomenon was far from uniform. Reproduction networks were often fragmented along geographical and ideological lines, challenging the notion of a cohesive national discourse. Additionally, our findings reveal that extended copied texts were much less frequent than anticipated, highlighting a nuanced editorial strategy in content reuse.</p>
+            <p style="text-align: left; ">The Hebrew press emerged in the second half of the 19th century with the establishment of numerous periodicals in Eastern Europe and the Middle East, playing a pivotal role in constituting a modern Hebrew “Republic of Letters” (Bartal 1994; Segal 2021). In the multilingual context of Jewish communities, Hebrew was not an obvious choice for journalism (Soffer 2009). However, its adoption offered a critical advantage: it bridged geographical and cultural divides, enabling communication and cohesion among dispersed Jewish communities. For these diasporic communities, the Hebrew press functioned as a printed-word public sphere (Penslar 2000), fostering intellectual exchange and collective identity. Drawing on Benedict Anderson’s framework, these journals reimagined religious Jewish communities as a modern nation.</p>
+            <p style="text-align: left; ">Unlike the American journalistic network, which operated as a top-down system, the Hebrew network functioned more like a town square, where writers and readers were active participants in an imagined literary community. Most of the newspapers had no reporters and relied on reader’s letters for localized news reports. Many of these writers/readers wrote to several Hebrew newspapers simultaneously. However, textual reuse analysis reveals a relatively low incidence of reuse (23% of articles), reflecting an aversion to plagiarism within this network (see figures 2 and 4). This was partly due to the readership’s tendency to engage with multiple newspapers, allowing them to recognize and discourage blatant copying (Segal 2023). Writers, in turn, respected this informed audience by quoting rather than plagiarizing articles, sometimes even referencing works years after their original publication. Reused texts were rarely news reports, and more often commentaries, mutual advertisements, and public announcements.</p>
+            <p style="text-align: left; ">Unlike the American network, in which central hubs of the reproduction network were central commercial cities, such as New York, centrality in the Hebrew network was not a result of central locations but rather of social and cultural roles within the diasporic community. SNA centrality measures and vector analysis of the findings unveil distinct network roles, with Palestine-based papers serving as central purveyors of "news from the homeland," while certain polemic daily papers act as sources for the dispute between Orthodoxy and Jewish Enlightenment. </p>
+            <p style="text-align: left; ">This study offers a nuanced exploration of textual reuse practices in 19th-century American and Hebrew journalistic networks, revealing how media systems both shaped and were shaped by their cultural and societal contexts. By integrating computational tools, network analysis, and qualitative readings, the research not only uncovers patterns of textual reuse but also sheds light on the broader dynamics of identity formation, cultural cohesion, and intellectual exchange in fragmented societies. The comparative framework highlights the diverse ways in which newspapers operated—as instruments of national consolidation in the United States and as platforms for cultural dialogue in the Jewish diaspora—while emphasizing the importance of historical context in understanding media practices. This work underscores the potential of digital humanities methodologies to advance our understanding of historical media ecosystems and lays a foundation for future research into the interplay between media, culture, and society across different contexts, periods and languages.</p>
+            <figure>
+                <graphic n="1001" width="9.79486111111111cm" height="10cm" url="/tmp/tmpmf1c0jim/Pictures/0c31d7ca7263c03dee7cb491e8cb4161.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 1: The network of interjournal textual reuse in the American press, 1841-1884 (at least ten similar sentences).</p>
+            <figure>
+                <graphic n="1002" width="10.26941388888889cm" height="10cm" url="/tmp/tmpmf1c0jim/Pictures/0c31d7ca7263c03dee7cb491e8cb4161.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 2: The network of textual reuse in the Hebrew press, 1856-1897 (at least ten similar sentences).</p>
+            <figure>
+                <graphic n="1003" width="16.002cm" height="8.593666666666667cm" url="/tmp/tmpmf1c0jim/Pictures/0c31d7ca7263c03dee7cb491e8cb4161.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 3: This diagram portrays the frequency of textual matchings between different American journals per journal, categorized by year.</p>
+            <figure>
+                <graphic n="1004" width="16.002cm" height="9.629069444444445cm" url="/tmp/tmpmf1c0jim/Pictures/0c31d7ca7263c03dee7cb491e8cb4161.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 4: Percentage of Hebrew articles that have textual matchings with a different journal per year.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Bartal, Israel (1994): “’Herald and Informer to a Jewish Man’, Jewish Journalism as a Channel to Innovation”, in: Katedra 71: 154-164 (Hebrew).</bibl>
+                    <bibl style="text-align: left; ">Blondheim, Menachem (2000): “The Click: Telegraphic Technology, the Press, and the Transformations of the Associated Press”, in: American Journalism 17: 27-52. 
+                        <ref target="https://doi.org/10.1080/08821127.2000.10739268">https://doi.org/10.1080/08821127.2000.10739268</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Colavizza, Giovanni / Infelise, Mario / Kaplan, Frederic (2015): “Mapping the Early Modern News Flow: An Enquiry by Robust Text Reuse Detection”, in: Aiello, Luca M. / Mcfarland, Daniel (eds.): Social Informatics 6th International Conference, Socinfo 2014, Barcelona, Spain November 11-13, 2014 Proceedings. Cham: Springer: 244-253. </bibl>
+                    <bibl style="text-align: left; ">Cordell, Ryan (2015): “Reprinting, Circulation, and the Network Author in Antebellum Newspapers”, in: American Literary History 27(3): 417-445.</bibl>
+                    <bibl style="text-align: left; ">Ganascia, Jean-Gabriel / Glaudes, Peirre / Del Lungo, Andrea (2014): “Automatic Detection of Reuses and Citations in Literary Texts”, in: Literary and Linguistic Computing 29(3): 412-421. 
+                        <ref target="https://doi.org/10.1093/llc/fqu020">https://doi.org/10.1093/llc/fqu020</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Henkin, David M. (2006): The Postal Age: The Emergence of Modern Communications in Nineteenth-Century America. Chicago: University of Chicago Press.</bibl>
+                    <bibl style="text-align: left; ">John, Richard R. (1995): Spreading the News: The American Postal System from Franklin to Morse. Cambridge, MA: Harvard University Press.</bibl>
+                    <bibl style="text-align: left; ">Kielbowicz, Richard B. (1989): News in the Mail: The Press, Post Office, and Public Information, 1700–1800s. New York: Greenwood.</bibl>
+                    <bibl style="text-align: left; ">Kokkinakis, Dimitrios / Malm, Mats (2015): “Detecting Reuse of Biblical Quotes in Swedish 19th Century Fiction Using Sequence Alignment”, in: Mambrini, Francesco / Passarotti, Marco / Sporleder, Caroline (eds.): Proceedings of the Workshop on Corpus-Based Research in the Humanities. Warsaw: Polish Academy of Sciences: 79-86.</bibl>
+                    <bibl style="text-align: left; ">Lee, John (2007): “A Computational Model of Text Reuse in Ancient Literary Texts”, in: Zaenen, Annie / van den Bosch, Antal (eds.): Proceedings of the 45th Annual Meeting of the Association of Computational Linguistics. Prague: Association for Computational Linguistics: 472-479.</bibl>
+                    <bibl style="text-align: left; ">Lovepreet, Singh / Gupta, Vishal Kumar / Kumar, Rohit (2020): “Survey on Plagiarism Detection Systems and Their Comparison”, in: Behera, Himansu Sekhar / Nayak, Janmenjoy / Naik, Bighnaraj / Pelusi, Danilo (eds.): Computational Intelligence in Data Mining: Advances in Intelligent Systems and Computing. Singapore: Springer: 27-39.</bibl>
+                    <bibl style="text-align: left; ">Olsen, Mark / Horton, Russell / Roe, Glenn (2010): “Something Borrowed: Sequence Alignment and the Identification of Similar Passages in Large Text Collections”, in: Digital Studies / Le champ numérique 2(1). 
+                        <ref target="http://doi.org/10.16995/dscn.258">http://doi.org/10.16995/dscn.258</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Penslar, Derek (2000): “Introduction: The Press and the Jewish Public Sphere”, in: Jewish History 14: 3-7.</bibl>
+                    <bibl style="text-align: left; ">Segal, Zef (2021): “From a Local Periodical to a Global Enterprise: Ha-Me’asef, 1896- 1914”, in: Journal of Historical Network Research 6(1): 191-219. DOI: 10.25517/jhnr.v6i1.89.</bibl>
+                    <bibl style="text-align: left; ">Segal, Zef (2023): “Fake News in the Early Hebrew Newspaper: Sensationalist Journalism within an Objective Journal, HaTzfira 1874”, in: Journalism History 49: 300-315. 
+                        <ref target="https://doi.org/10.1080/00947679.2023.2266175">https://doi.org/10.1080/00947679.2023.2266175</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Smith, David A. / Cordell, Ryan / Dillon, Elizabeth M. (2013): “Infectious Texts: Modeling Text Reuse in Nineteenth-Century Newspapers”, in: 2013 IEEE International Conference on Big Data: 86-94. 10.1109/BigData.2013.6691675.</bibl>
+                    <bibl style="text-align: left; ">Soffer, Oren (2009): “Why Hebrew? A Comparative Analysis of Language Choice in the Early Hebrew Press”, in: Media History 15(3): 253-269. 
+                        <ref target="https://doi.org/10.1080/13688800902966162">https://doi.org/10.1080/13688800902966162</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Sola Corbacho, Juan C. (2019): “The European News Network in 1784”, in: Media History 26(4): 1-14.</bibl>
+                    <bibl style="text-align: left; ">Vesanto, Aleksi / Nivala, Asko / Rantala, Heli / Salakoski, Tapio / Salmi, Hannu / Ginter, Filip (2017): “Applying BLAST to Text Reuse Detection in Finnish Newspapers and Journals, 1771-1910”, in: Gerlof Bouma / Adesam, Yvonne (eds.): Proceedings of the NoDaLiDa 2017 Workshop on Processing Historical Language. Gothenburg: Linköping University Electronic Press: 54-58.</bibl>
+                    <bibl style="text-align: left; ">Wiebe, Robert H. (1967): The Search for Order, 1877–1920. New York: Hill and Wang.</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

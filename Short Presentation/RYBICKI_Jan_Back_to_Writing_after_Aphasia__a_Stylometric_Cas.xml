@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="RYBICKI_Jan_Back_to_Writing_after_Aphasia__a_Stylometric_Cas">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Back to Writing after Aphasia: a Stylometric Case Study</title>
+                <author>
+                    <persName>
+                        <surname>Rybicki</surname>
+                        <forename>Jan</forename>
+                    </persName>
+                    <affiliation>Uniwersytet Jagielloński, Poland</affiliation>
+                    <email>jan.rybicki@uj.edu.pl</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-01T06:52:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>aphasia</term>
+                    <term>stylometry</term>
+                    <term>Burrows's Delta</term>
+                    <term>Flesch-Kincaid Grade Level</term>
+                    <term>Standardized Type-Token Ratio</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>attribution studies and stylometric analysis</term>
+                    <term>Disability and differently-abled studies</term>
+                    <term>Literary studies</term>
+                    <term>Central/Eastern European Studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <div>
+                    <head>Introduction </head>
+                    <p style="text-align: left; ">Aphasia, one of the common effects of brain stroke, is “generally considered an impairment of language caused by brain damage” (Benson and Ardila, 1996). Therapy often consists in relearning to speak, read, and write. This may suggest the appearance of two versions of the patient’s language, ante- and post-aphasia, opening the door to stylometric authorship attribution methods to confirm or reject this hypothesis. This paper is a preliminary case study for a much broader grant project, “Writing Broken Brains” (Arts and Humanities Research Council 2024), which analyses the impact of aphasia episodes on writers who then continue to write. </p>
+                    <p style="text-align: left; ">The approach is novel in that medical literature on the subject – which understandably sees its priority in treatment – has more immediate and patient-behaviour-based tests for aphasia. Stylometry has not been used to assess psychological/linguistic changes after brain stroke, except for another preliminary pilot study for the same above-mentioned project; that paper suggested that this may be a valid approach by examining the case of Dutch writer Pam Emmerik (Bekius, 2024). Quantitative analysis of linguistic features was used in other brain- and language-related diseases, most notably in the study of dementia/Alzheimer’s in Agatha Christie (Lancashire and Hirst, 2009).</p>
+                    <p rend="DH-Heading2">Material</p>
+                    <p style="text-align: left; ">Sławomir Mrożek (1913-2013) was an eminent Polish playwright and novelist with a penchant in both genres for the satirical and the absurd. He produced much of his work while in exile in Italy, Germany, the US and Mexico before eventually returning to Poland in 1996. In 2002, he suffered cerebral haemorrhage with severe aphasia, agraphia, memory loss and locomotive impairment. He later compiled a “balance sheet of his disaster”:</p>
+                    <quote>I returned from the hospital and realized I cannot speak in any of the four foreign languages I used to know. I couldn’t produce a single meaningful sentence in my native Polish. I could read, but couldn’t understand what I was reading. I could no longer use my typewriter, my computer, my credit card. I couldn’t count or use a calendar (Mrożek, 2005, translation mine).</quote>
+                    <p style="text-align: left; ">Therapy was slow and painful. What he wanted most of all was to write. His logopaedist Beata Mikołajko devised an unconventional programme based on repetition, synonym usage and sentence building, but above all on writing an autobiography (Mikołajko, 2024). It was completed and published in 2005; it was dedicated to the logopaedist. The question about the difference, or the lack of it, between and after the stroke is made more relevant by the fact that there were observable personality changes in Mrożek: for instance, the originally taciturn and withdrawn author became much more open to contact with readers, journalists and people in the street (Kubisiowska, 2017).</p>
+                    <p style="text-align: left; ">This study analyses Mrożek’s pre-stroke prose: novels 
+                        <hi rend="italic">Maleńkie lato</hi> (1956) and 
+                        <hi rend="italic">Ucieczka na południe</hi> (1961), short story collections 
+                        <hi rend="italic">Wesele w Atomicach</hi> (1959), 
+                        <hi rend="italic">Deszcz</hi> (1962), 
+                        <hi rend="italic">Słoń</hi> (1962), 
+                        <hi rend="italic">Opowiadania</hi> (1992), and the post-stroke autobiography, 
+                        <hi rend="italic">Baltazar</hi> (2005). Mrożek’s much larger dramatic 
+                        <hi rend="italic">oeuvre</hi> has not been included for reasons of genre difference. 
+                    </p>
+                    <p rend="DH-Heading2">Method</p>
+                    <p style="text-align: left; ">Stylometric authorship attribution methods rely on comparing frequencies of easily-countable linguistic features such as very frequent words or certain classes of words. In this case, most-frequent word (MFW) usage was compared using the well-established Delta distance method (Burrows, 2002) in its Cosine variety (Evert et al., 2017) as implemented in 
+                        <hi rend="italic">stylo</hi> for R (Eder et al., 2016) and visualized with network analysis (Eder, 2017). The same approach was also used to compare the same texts for usage of indefinite pronouns, which were an important part of Lancashire and Hirst, and which are also used in neurolinguistic approaches to aphasia (Arslan et al., 2021). As Mrożek’s particular symptoms were associated with lower vocabulary richness, this was measured with Standardized Type-Token Ratio (STTR), which averages TTR over equal-sized samples of each text to overcome difference in length of texts. As Mikołajko reported problems with long and complex sentences (2024), mean sentence length and Flesch-Kincaid Grade Level were also examined.
+                    </p>
+                    <p rend="DH-Heading2">Results</p>
+                    <p style="text-align: left; ">Mean sentence length per work is presented in Fig. 1; Mrożek’s post-aphasia numbers do not diverge in any way from those for his ante-aphasia sentence length. The Grade Level for 
+                        <hi rend="italic">Baltazar</hi> is only slightly higher than in his earlier work (Fig. 2). Vocabulary richness of the autobiography is also within the range of the pre-stroke texts (Fig. 3).
+                    </p>
+                    <figure>
+                        <graphic n="1001" width="15.16cm" height="15.13cm" url="/tmp/tmpdp6tz3gk/Pictures/0fde316ef26615311d0854e7cef56e30.png" rend="inline"/>
+                        <head>Figure 1. Mean sentence length in prose works by Mrożek.</head>
+                        <head/>
+                    </figure>
+                    <figure>
+                        <head>Figure 1. Mean sentence length in prose works by Mrożek.</head>
+                        <p/>
+                        <graphic n="1002" width="15.16cm" height="15.13cm" url="/tmp/tmpdp6tz3gk/Pictures/0fde316ef26615311d0854e7cef56e30.png" rend="inline"/>
+                        <head>Figure 2. Flesch-Kincaid Grade Level index in prose works by Mrożek.</head>
+                    </figure>
+                    <figure>
+                        <graphic n="1003" width="15.16cm" height="15.13cm" url="/tmp/tmpdp6tz3gk/Pictures/0fde316ef26615311d0854e7cef56e30.png" rend="inline"/>
+                        <head>Figure 3. Standardized Type-Token Ratio in prose works by Mrożek.</head>
+                    </figure>
+                    <p style="text-align: left; ">Mrożek’s prose was then compared with that by two other major Polish writers of similar genre and tendencies, Witkacy (1885-1939) and Gombrowicz (1904-1969) on most frequent words (Fig. 1) and indefinite pronouns (Fig. 2). In the former, the stylometry of Mrożek’s language after aphasia seems to have returned to the earlier state. In the latter, the post-stroke work moves away from the earlier works, suggesting changes in this linguistic feature.</p>
+                    <figure>
+                        <graphic n="1004" width="11.997972222222222cm" height="12.885208333333333cm" url="/tmp/tmpdp6tz3gk/Pictures/0fde316ef26615311d0854e7cef56e30.png" rend="inline"/>
+                        <head>Figure 4. Network analysis of similarities between prose works by Witkacy and Gombrowicz based on MFW usage.</head>
+                    </figure>
+                    <figure>
+                        <head>Figure 4. Network analysis of similarities between prose works by Witkacy and Gombrowicz based on MFW usage.</head>
+                        <graphic n="1005" width="11.995519444444444cm" height="12.22375cm" url="/tmp/tmpdp6tz3gk/Pictures/0fde316ef26615311d0854e7cef56e30.png" rend="inline"/>
+                        <head>Figure 5. Network analysis of similarities between prose works by Witkacy and Gombrowicz based on indefinite pronoun usage.</head>
+                    </figure>
+                    <p rend="DH-Heading2">Discussion</p>
+                    <p style="text-align: left; ">With a single exception, the results presented above seem to show, optimistically, that Mrożek’s linguistic re-education was complete – or, pessimistically, that this sort of approach is not usable in this context. The first three “simple” indices fail to show any dramatic change that would be on a scale reported before the onset of therapy (Mikołajko, 2024). The same is true of Cosine Delta results on most-frequent words. This standard and reliable method of authorship attribution sees no difference between 
+                        <hi rend="italic">Baltazar</hi> and the earlier work of its author (Fig. 4).
+                    </p>
+                    <p style="text-align: left; ">One possible residual sign of the author’s traumatic experience may be visible in indefinite pronouns, albeit the difference is quite subtle. Rather than a surge in their relative numbers in 
+                        <hi rend="italic">Baltazar</hi>, what happens is a different pattern of their overall usage. The network analysis in Fig. 5 does not necessarily show that, post-aphasia, Mrożek became more similar to his two predecessors Witkacy and Gombrowicz; what it only shows is that it is a text that, in this respect, becomes less similar to his earlier work. Seen in this light, the results presented here are less promising than those obtained by Bekius (2024). On the other hand, the aphasia cases of the two writers may simply be different in severity and extent of stroke lesions. Whether stylometric visibility of aphasia is a stable phenomenon in writers who have returned to writing after the stroke will be shown hopefully by the much broader range of case studies in the above-mentioned project.
+                    </p>
+                </div>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Arslan, Seçkin / Devers, Cecilia / Martínez Ferreiro, Silvia</hi> (2021). “Pronoun processing in post-stroke aphasia: A meta-analytic review of individual data.” 
+                        <hi rend="italic">Journal of Neurolinguistics</hi> 59, 
+                        <ref target="https://doi.org/10.1016/j.jneuroling.2021.101005">
+                            <hi style="font-size:12pt">https://doi.org/10.1016/j.jneuroling.2021.101005</hi>
+                        </ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bekius, Lamyk</hi> (2024). “Disrupted Authorship/Disrupted Text. A Computational Analysis of Pam Emmeriks 
+                        <hi rend="italic">Wie het paradijs verdragen kan</hi>.” CLS Training School, University of Wolverhampton.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Benson, D. Frank / Ardila, Alfredo</hi> (1996). 
+                        <hi rend="italic">Aphasia: A clinical perspective</hi>. Oxford: Oxford University Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Burrows, John F.</hi> (2002). “‘Delta’: a measure of stylistic difference and a guide to likely authorship.” 
+                        <hi rend="italic">Literary and Linguistic Computing</hi> 17(3): 267-87.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Eder, Maciej</hi> (2017). “Visualization in stylometry: cluster analysis using networks.” 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi> 32, 1: 50-64.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Eder, Maciej / Rybicki, Jan / Kestemont, Mike</hi> (2016). “Stylometry with R: a package for computational text analysis.” 
+                        <hi rend="italic">The R Journal</hi>, 8(1): 107–21.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Evert, Stefan / Proisl, Thomas / Jannidis, Fotis / Reger, Isabella / Schoech, Christof / Pielström, Steffen / Vitt, Thorsten</hi> (2017). “Understanding and explaining Delta measures for authorship attribution.” 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi> 32 suppl. 2: ii4-ii16.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kubisiowska, Katarzyna</hi> (2017). “Afazja, czyli odrodzenie.” 
+                        <hi rend="italic">Medycyna praktyczna</hi>, 24. Nov. 2017.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Lancashire, Ian / Hirst, Graeme</hi> (2009). “Vocabulary Changes in Agatha Christie’s Mysteries as an Indication of Dementia: A Case Study.” 
+                        <hi rend="italic">19th Annual Rotman Research Institute Conference, Cognitive Aging: Research and Practice</hi>, 8-10.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Mikołajko, Beata</hi> (2024). Personal communication.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Mrożek, Sławomir</hi>
+                        <hi rend="italic">Baltazar</hi>. (2005). Warszawa: Oficyna Literacka Noir sur Blanc.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

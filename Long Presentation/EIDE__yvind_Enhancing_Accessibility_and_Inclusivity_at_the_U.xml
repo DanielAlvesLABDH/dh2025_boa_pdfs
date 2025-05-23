@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="EIDE__yvind_Enhancing_Accessibility_and_Inclusivity_at_the_U">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Enhancing Accessibility and Inclusivity at the University: Case Studies from the Virtual Campus and ARTEST Projects</title>
+                <author>
+                    <persName>
+                        <surname>Sotomayor Chicote</surname>
+                        <forename>Maria</forename>
+                    </persName>
+                    <affiliation>Department of Digital Humanities, University of Cologne, Germany</affiliation>
+                    <email>msotoma1@uni-koeln.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Reuhl</surname>
+                        <forename>Elisabeth</forename>
+                    </persName>
+                    <affiliation>Department of Digital Humanities, University of Cologne, Germany</affiliation>
+                    <email>ereuhl2@uni-koeln.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Eide</surname>
+                        <forename>Øyvind</forename>
+                    </persName>
+                    <affiliation>Department of Digital Humanities, University of Cologne, Germany; Center for Data and Simulation Science, University of Cologne, Germany</affiliation>
+                    <email>oeide@uni-koeln.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Architecture</term>
+                    <term>Brutalism</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digitization (2D &amp; 3D)</term>
+                    <term>embodied</term>
+                    <term>wearable &amp; haptic technologies development and analysis</term>
+                    <term>mobile applications development and analysis</term>
+                    <term>virtual and augmented reality creation</term>
+                    <term>systems</term>
+                    <term>and analysis</term>
+                    <term>Art history</term>
+                    <term>Education/ pedagogy</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction<ref n="1" target="ftn1"/>
+                </head>
+                <p style="text-align: left; ">In recent years, the demand for tools and initiatives to enhance student life at universities has grown significantly. The availability of technologies such as augmented reality (AR) and virtual reality (VR) has opened new avenues for fostering accessibility and inclusivity in educational settings. For instance, AR has demonstrated potential to improve accessibility in universities (Andri et al. 2018).</p>
+                <p style="text-align: left; ">Beyond their institutional roles, universities often serve as repositories of tangible and intangible heritage, encompassing architectural features, collections, traditions, and significant personalities. However, the richness of the narratives embedded in the repositories frequently remains inaccessible or invisible to everyday users. This challenge is particularly evident in the humanities and, more specifically, within the domain of digital humanities, where access to cultural and historical data is a recurring discussion.</p>
+                <p style="text-align: left; ">The growing influence of fields like digital humanities and the imperative to integrate STEM methods have revealed disparities in the global adoption of these practices. There is a need for initiatives that promote cross-cultural exchange and knowledge sharing between STEM and the humanities, ensuring broader access to these methodologies.</p>
+                <p style="text-align: left; ">The paper will present preliminary results from the work at the Department for Digital Humanities at the University of Cologne through the Virtual Campus and ARTEST projects. We will highlight challenges encountered in the development of these projects as well as lessons learned from the exchange between the projects.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>The Virtual Campus Project: Accessible Navigation of the University Campus and its Cultural Heritage</head>
+                <p style="text-align: left; ">The University of Cologne, one of Germany’s largest universities with an extensive campus of approximately 280 buildings, serves as an ideal example for exploring new functionalities to aid students and visitors. The Virtual Campus project,<ref n="2" target="ftn2"/> situated at the intersection of geoinformatics and digital humanities, explores how AR and VR technologies can be used to enhance both teaching and campus life (Willmes et al. 2024). One of the project’s aims is the development of an AR application focusing on accessibility and inclusivity through the integration of features such as barrier-free navigation and specialized services tailored to first semester and international students alike, as they often face challenges in navigating the campus. In the CampusGIS2 project,<ref n="3" target="ftn3"/> accurate geoinformation has already been gathered from detailed mapping of the campus outdoor areas as well as the insides of buildings. This is complemented by 3D building models created by Virtual Campus. On this basis, the accessibility of paths, doors, etc. can be taken into account in routing, be it for finding the way to a course room or to the next AR tour stop. The display of AR visual markers within the camera feed provides users with a new type of navigation aid in addition to map and text based modes, so that users can choose the mode that works best for their needs.
+                </p>
+                <p style="text-align: left; ">On a technical level, the Virtual Campus project’s AR app employs indoor navigation based on Simultaneous Localization and Mapping (SLAM) and outdoor navigation through GPS, with a technical stack consisting of Flutter and Unity with the AR Foundation package. Accurate indoor localization is one of the challenges of the project. This is achieved by matching the geometry of 3D building models with the camera image in order to determine a user’s location. Initiated in 2023 and set to conclude in 2026, the project is currently in the development phase with prototypical results to discuss at this point.</p>
+                <p style="text-align: left; ">AR historical tours are part of the Virtual Campus app and provide users with an immersive way to explore the cultural and historical dimensions of the university. The first university in Cologne dates back to the 14th century, but was closed in 1798. In 1919 a new University was established in Cologne. Subsequent historical events, including the impacts of war and the Nazi regime, are still reflected in the campus architecture (Knoch, Jessen, and Ullmann 2019).</p>
+                <p style="text-align: left; ">Architectural styles across the campus reflect this rich history. Notable are the brutalist structures, conceptualized as a campus where energy flows through mosaics and interconnected spaces. However, inadequate preservation and limited promotion of these narratives have led to the marginalization of this heritage (Schulze 2021). The Virtual Campus project seeks to make this information both accessible and engaging by implementing historical AR tours, integrating tangible as well as intangible cultural heritage.</p>
+                <p style="text-align: left; ">The historical data, consisting of textual information as well as other media such as images or 3D reconstructions, is connected and represented through the CIDOC Conceptual Reference Model (Bekiari et al. 2024) ontology with extensions. The possibility of modelling both tangible and intangible cultural heritage and connecting it with temporal and geospatial information through the extension CRMgeo (Hiebel et al. 2015), together with the fact that this system can be further expanded and connected to other collections through linked data, makes this ontology a suitable option for the modelling of cultural heritage data within the context of AR apps (Vlachos et al. 2024). Furthermore, through the extension CRMact (Velios 2022), the historical tours are integrated into the model as planned activities (fig. 1 and 2).</p>
+                <figure>
+                    <graphic n="1001" width="16.773769444444444cm" height="7.893538888888889cm" url="/tmp/tmpivqoglit/Pictures/66f5cb4a0d6286027c655b29f1858dbf.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 1: Conceptual representation of the connection between historical information, AR historical tours and geospatial data through CIDOC-CRM and the CRMgeo and CRMact extensions.</p>
+                <figure>
+                    <graphic n="1002" width="11.419091666666667cm" height="9.984152777777778cm" url="/tmp/tmpivqoglit/Pictures/66f5cb4a0d6286027c655b29f1858dbf.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 2: Example of part of a historical AR tour on the University of Cologne campus, represented through CIDOC-CRM and the CRMact and CRMgeo extensions.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>ARTEST: Cross-Cultural Exchange, Digital Humanities Education, and International Access to Cultural Heritage</head>
+                <p style="text-align: left; ">Another project with a strong focus on 3D and cultural heritage is the ARTEST project, funded by the EU Erasmus+ Capacity Building in Higher Education scheme.<ref n="4" target="ftn4"/> The goal of the project is also to enhance the quality of education, but in this case the main goal is the development of MA study programmes in Mongolia, with supportive measures such as the establishment of computing labs and an online Digital Lab. In this paper we will focus on the latter, in the context of a series of student exchange visits which included mini projects in the Digital Lab. The project also facilitated DH research in Mongolia and the first international DH conference in Mongolia was organised by the project partners in 2024.<ref n="5" target="ftn5"/>
+                </p>
+                <p style="text-align: left; ">The development of MA programmes integrating international exchange opportunities fosters meaningful cross-cultural dialogue and collaboration. This initiative not only supports the adoption of innovative educational methodologies by Mongolian universities, but also offers European and Mongolian students the possibility to actively contribute to the preservation and promotion of cultural heritage through the mini projects. </p>
+                <p style="text-align: left; ">The Digital Lab is a multimodal storytelling system connected to the Kompakkt 3D annotation tool<ref n="6" target="ftn6"/> which is also used in the Virtual Campus project. Through the implementation of the mini-projects facilitated by the Erasmus+ exchange program between European and Mongolian universities, students collaborate to share cultural and historical narratives from different regions. These narratives are made accessible to a broader audience through the 3D reconstruction of cultural heritage and the integration of annotations presented inside Kompakkt. In this sense, the ARTEST project enables the creation of inclusive, accessible and enriched learning environments, contributing to the accessibility to cultural heritage worldwide.
+                </p>
+                <figure>
+                    <graphic n="1003" width="16.002cm" height="9.419166666666667cm" url="/tmp/tmpivqoglit/Pictures/66f5cb4a0d6286027c655b29f1858dbf.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 3: Screen captures of a mini-project uploaded in the Digital Lab in which the Kompakkt annotation tool is embedded.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Accessibility and Inclusion at the University – Local and International</head>
+                <p style="text-align: left; ">This abstract outlines two quite different approaches to accessibility and inclusion, with one project connecting the EU to Mongolia, and the other one an internally funded university project. The two projects are nevertheless connected. Both have served as platforms for fostering international collaboration. For instance, during the academic exchange in the framework of the ARTEST project, Mongolian students at the University of Cologne engaged with the Virtual Campus project and learned about its applications. These exchanges have the potential to inspire similar initiatives in Mongolian universities, promoting cross-cultural learning and the dissemination of accessibility and inclusivity practices globally. Through cooperation within the university networks EUniWell<ref n="7" target="ftn7"/> and The Coimbra Group,<ref n="8" target="ftn8"/> the Virtual Campus project is actively integrated into structures at the European level.
+                </p>
+                <p style="text-align: left; ">As case studies, both digital humanities projects have a focus on accessibility and inclusion, albeit in different ways. In the Virtual Campus case, the project aims to enable access to the university campus for different groups of students and visitors, both in the sense of physically navigating a place and in the sense of accessing cultural heritage. In the case of ARTEST, on the other hand, the project views accessibility on a global scale as the ability to access knowledge through technology. Both approaches to accessibility and inclusion are complementary and are needed for a just inclusion of multiple voices at all levels, at the University of Cologne specifically and at universities more generally. Comparing these different perspectives on the topics of accessibility and inclusion can be helpful for each project in order to broaden the field of vision and look for ways to collaborate between initiatives on local, national, and international scales. This work is well suited to be carried out by digital humanities scholars due to the interdisciplinary basis of their field of study as well as the strong global networking in the area.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                         This research was partly supported by the Erasmus+ Capacity Building in Higher Education programme through the ARTEST project (project number: 618802-EPP-1-2020-1-DE-EPPKA2-CBHE-JP, funding period 2021–2025).
+                    </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                        
+                            <hi style="font-size:10pt">​​</hi>
+                            <ref target="https://virtueller-campus.uni-koeln.de/">
+                                <hi rend="color(1155CC)" style="font-size:10pt">https://virtueller-campus.uni-koeln.de/</hi>
+                            </ref>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                        
+                            <ref target="https://campusgis2.uni-koeln.de/">
+                                <hi rend="color(1155CC)" style="font-size:10pt">https://campusgis2.uni-koeln.de/</hi>
+                            </ref>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn4" n="4">
+                        
+                            <ref target="https://www.artest-project.eu/">
+                                <hi style="font-size:10pt">https://www.artest-project.eu/</hi>
+                            </ref> The project is coordinated by the University of Cologne and with a consortium of ten EU and Mongolian partners.
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn5" n="5">
+                        
+                            <ref target="https://artest-project.eu/digital-humanities/">
+                                <hi rend="color(1155CC)" style="font-size:10pt">https://artest-project.eu/digital-humanities/</hi>
+                            </ref> The conference was financially supported by the International Institute for Digital Humanities in Tokyo.
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn6" n="6">
+                        
+                            <ref target="https://kompakkt.de/">
+                                <hi rend="color(1155CC)" style="font-size:10pt">https://kompakkt.de/</hi>
+                            </ref>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn7" n="7">
+                        
+                            <ref target="https://www.euniwell.eu/">
+                                <hi rend="color(1155CC)" style="font-size:10pt">https://www.euniwell.eu/</hi>
+                            </ref>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn8" n="8">
+                        
+                            <ref target="https://www.coimbra-group.eu/">
+                                <hi rend="color(1155CC)" style="font-size:10pt">https://www.coimbra-group.eu/</hi>
+                            </ref>
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Andri, Chairil / Hazim Alkawaz, Mohammed / Bibo Sallow, Amira</hi> (2018): “Adoption of Mobile Augmented Reality as a Campus Tour Application,” in: 
+                        <hi rend="italic">International Journal of Engineering and Technology</hi> 7, 4: 64–69. DOI: 10.14419/ijet.v7i4.11.20689.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bekiari, Chryssoula / Bruseker, George / Canning, Erin / Doerr, Martin / Michon, Philippe / Ore, Christian-Emil / Stead, Stephen / Velios, Athanasios</hi> (2024): “Definition of the CIDOC Conceptual Reference Model.” Version 7.3, March 2024. &lt;https://cidoc-crm.org/Version/version-7.3&gt; [08.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Hiebel, Gerald / Doerr, Martin / Eide, Øyvind / Theodoridou, Maria</hi> (2015): “CRMgeo: A Spatiotemporal Model,” Version 1.2, September 2015. &lt;https://cidoc-crm.org/crmgeo&gt; [08.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Knoch, Habbo / Jessen, Ralph / Ullmann, Hans-Peter</hi> (eds.) (2019): 
+                        <hi rend="italic">Die Neue Universität zu Köln: Ihre Geschichte seit 1919</hi>. Cologne: Böhlau.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Schulze, Cordula</hi> (2021): "Gutbrod will Weile haben," in: 
+                        <hi rend="italic">koelnarchitektur.de</hi>. &lt;https://www.koelnarchitektur.de/pages/de/news-archive/32887.htm&gt;, archived 25.06.2024 at the Wayback Machine. &lt;https://web.archive.org/web/20240625001417/https://www.koelnarchitektur.de/pages/de/news-archive/32887.htm&gt; [08.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Velios, Athanasios</hi> (2022): "Definition of CRMact. An extension of CIDOC-CRM to support activity plans. Proposal for approval by the CIDOC CRM-SIG.” Version 0.2, March 2022. &lt;https://cidoc-crm.org/sites/default/files/crmact-0.2-20220131-low%20%281%29_0.docx&gt; [08.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Vlachos, Apostolos / Perifanou, Maria / Economides, Anastasios A.</hi> (2024): “A Review of Ontologies for Augmented Reality Cultural Heritage Applications,” in: 
+                        <hi rend="italic">Journal of Cultural Heritage Management and Sustainable Development</hi> 14, 2: 160–74. DOI: 10.1108/JCHMSD-06-2021-0110.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Willmes, Christian / Canals, Lorenzo / Ganser, Christopher / Mennecke, Dirk / Phillipps, Finn Luis / Pietsch, Anne-Kathrin / Reichenau, Tim / Reuhl, Elisabeth / Schildkamp, Philip / Stempel, Maximilian / Wickeroth, Daniel / Wieners, Jan / Eide, Øyvind</hi> (2024): “The Technology Stack and System Architecture of the University of Cologne Virtual Campus,” in: 
+                        <hi rend="italic">International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences - ISPRS Archives</hi> 48, 4: 153–60. DOI: 10.5194/isprs-archives-XLVIII-4-W11-2024-153-2024.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

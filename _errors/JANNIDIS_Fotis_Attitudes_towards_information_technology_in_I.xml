@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="JANNIDIS_Fotis_Attitudes_towards_information_technology_in_I">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Attitudes towards information technology in Indian English and German novels since 2000</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>T</surname>
+                        <forename>Shanmugapriya</forename>
+                    </persName>
+                    <affiliation>Indian Institute of Technology (ISM) Dhanbad</affiliation>
+                    <email>shanmugapriya@iitism.ac.in</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Jannidis</surname>
+                        <forename>Fotis</forename>
+                    </persName>
+                    <affiliation>Julius-Maximilians-Universität Würzburg, Germany</affiliation>
+                    <email>fotis.jannidis@uni-wuerzburg.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T08:29:05.792970304</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Cultural Analytics</term>
+                    <term>Computational Literary Studies</term>
+                    <term>Computational Comparative Literature</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>natural language processing</term>
+                    <term>semantic analysis</term>
+                    <term>text mining and analysis</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1">
+                <head>
+                    <anchor xml:id="id__qriknfkjpq2r"/>Introduction
+                </head>
+                <p>In 2020, the median age in India was 27, while in the same year the median age in Germany was 44.9.
+                    <hi rend="sup"><ref n="1" target="ftn1"/>
+                    </hi> It is reasonable to assume that this difference affects other aspects. Surveys on German attitudes towards information technology, for example, show a lot of skepticism and fears (Künsting 2018, Eco 2023), while the attitudes observed in India present a stark contrast. Research indicates a notably positive orientation toward technological adoption in the Indian context (Roy 2024). Our paper is a first step in exploring how these differences affect attitudes, opinions and beliefs and how these in turn, shape cultural artefacts such as literary novels.
+                </p>
+                <p>To explore this further, we look at technology, particularly information technology (IT) including modern communication technology, in novels. The impact of technology varies considerably depending on geographical, economic and demographic factors, especially when comparing developed and developing countries and populations with different age distributions. In this case, our study conducts a comparative analysis of representations of IT in a corpus of Indian and German novels published between 2000 and 2024. In our study, we refer to IT as the use of technological and electronic devices to collect, store and disseminate information, which includes both hardware and software and other relevant components and functions. Thus, our primary research is: How do Indian English and German literary novels differ in their depiction of IT-related technologies? To operationalize this we measure the frequency of mentions of IT-related terms in German and Indian English novels.</p>
+                <p>Modelling which factors influence the variable of interest, the frequency of mentions of IT-related objects and practices, is complicated. There are probably two factors that directly influence our variable of interest: attitudes towards technology and literary conventions about the inclusion of technology (and other mundane objects) in literary texts. The difference in age is one of the variables influencing the attitude towards technology, other variables are traditions of public criticism of technology, ideals of the perfect life, etc., and all these variables interact (see Fig. 1).</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpfq5j5oip/Pictures/750887476042b7444298a09e7a7c9b0e.png"/>
+                    </figure>
+                </p>
+                <p>Figure 1: a simplified model of the factors determining the frequency of references to IT in novels.</p>
+            </div>
+            <div type="div1">
+                <head>
+                    <anchor xml:id="id__kucbxnbxp6mq"/>Related work
+                </head>
+                <p>Computational literary studies (CLS) have seen significant development in recent years. For German literature, computational methods have been extensively employed to analyze themes, characters, and settings (Hettinger et al., 2015; Erlin, 2017; Zehe et al., 2017; Radak et al., 2024). In contrast, while digital humanities have emerged as a growing field in India, marked by the establishment of programs, events, and academic courses, computational literary studies focusing on Indian English literature remain underexplored, with only a few notable contributions (Shanmugapriya, Menon, and Sutton, 2022; Rizi, 2023). Comparative studies of literature using CLS are even more scarce. Although some recent works (e.g., Fabo, Boisnard, and Schneider, 2024) highlight emerging trends in cross-literary computational analyses, no studies have yet been undertaken for German novels and Indian English novels. This research seeks to address this gap by providing insights into how these two literary traditions depict technology, reflecting their respective cultural, demographic, and societal contexts.</p>
+            </div>
+            <div type="div1">
+                <head>
+                    <anchor xml:id="id__6xfh2ha9ya6i"/>Methods
+                </head>
+                <p>We created a corpus of forty Indian English and German novels.
+                    <hi rend="sup"><ref n="2" target="ftn2"/>
+                    </hi> We randomly selected 40 names of novels published between 2000 and 2024 by renowned authors. The Indian English novels were selected for both canonical and non-canonical novels by authors, including those that won or were nominated for literary awards (Appendix 1). The German novels were selected from a larger list of novels by authors who have won or been nominated for literary awards (Appendix 2).
+                </p>
+                <p>For the analysis, we chose two approaches: a wordlist-based approach and an approach using a large language model.</p>
+                <list type="unordered">
+                    <item>For the word-list approach, we had to curate the terms relevant to IT. Handcrafted lists are usually too small and idiosyncratic, so we applied a widely used approach: starting with one word or a short list of manually selected seed words and expanding this list by adding similar words. To do this, we used fastText word embeddings in English and German to collect the list of terms in each language. Starting with the term 'computer', we selected the nearest neighbours and used them (after removing orthographic variants) as new seed words. We manually cleaned and pruned words unrelated to IT. To make sure that the wordlists weren’t already biased in some way, we decided to use one list for both corpora. To create this common list, we automatically translated each list into the respective other language and merged them. As a result we had the same list in German and English. Then we extracted all sentences in each of the corpora containing IT-related references based on the word lists.</item>
+                    <item>For the LLM-based approach we segmented the novel in chunks of 300 tokens
+                        <hi rend="sup"><ref n="3" target="ftn3"/>
+                        </hi> and prompted ChatGPT to extract the IT-related sentences.
+                        <hi rend="sup"><ref n="4" target="ftn4"/>
+                        </hi>
+                    </item>
+                </list>
+                <p>In both cases we tokenized the texts (tokens and sentences) with Spacy (Honnibal, Montani 2017).
+                    <hi rend="sup"><ref n="5" target="ftn5"/>
+                    </hi>
+                </p>
+                <p>Evaluating a method that extracts very rare features is challenging. We focused on precision and manually checked the results on one novel, Aravind Adiga's Last Man in Tower. The wordlist approach counted 193 out of 10322 sentences as hits, but only 33 of these were true positives (precision: 0.24), 160 were false positives. The LLM counted 139 sentences and 107 of them were true positives (precision: 0.77), almost all the hits of the wordlist approach were part of the hits of the LLM approach.</p>
+            </div>
+            <div type="div1">
+                <head>
+                    <anchor xml:id="id__z68zfd9pfjm9"/>Results
+                </head>
+                <p>The wordlist-based approach shows a clear and significant difference between the frequencies of IT related mentions in German and Indian English literature:</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpfq5j5oip/Pictures/750887476042b7444298a09e7a7c9b0e.png"/>
+                    </figure>
+                </p>
+                <p>Figure 2: Comparison between the relative frequency of sentences containing IT related references in 40 German and Indian English novels based on a wordlist sentence extraction. </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpfq5j5oip/Pictures/750887476042b7444298a09e7a7c9b0e.png"/>
+                    </figure>
+                </p>
+                <p>Fig. 3: Comparison between the relative frequency of sentences containing IT related references in 40 German and Indian English novels based on a modern large language model..</p>
+            </div>
+            <div type="div1">
+                <head>
+                    <anchor xml:id="id__r3boeyci8yk8"/>Discussion
+                </head>
+                <p>Our results show that there is no difference in the frequency of IT-related references between the Indian English and German novels, which is not consistent with our initial hypothesis that a different age population and different attitudes towards technology are reflected in literary texts. The wordlist based method, which showed more promising results, is severely hampered by the fact that many terms have multiple meanings in different contexts, e.g. 'notebook', 'drive', 'chips', 'click' etc.</p>
+                <p>Our results must be seen as very preliminary, as even this first small step of a comparative cross-cultural corpus analysis was complicated by numerous problems that arose in the process. The comparability of the corpora is problematic due to the different literary traditions and conventions. Cross-linguistic comparative analysis is complicated by the very different linguistic conditions. For example, many IT terms in German are English loanwords. </p>
+            </div>
+            <div type="div1">
+                <head/>
+                <p>Appendix 1: The corpus of Indian English novels</p>
+                <table rend="frame" xml:id="Tabelle1">
+                    <row>
+                        <cell rend="start">Alka Joshi</cell>
+                        <cell rend="start">The Henna Artist</cell>
+                        <cell rend="start">2020</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Anita Desai</cell>
+                        <cell rend="start">The Artist of Disappearance</cell>
+                        <cell rend="start">2011</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Anjum Hasan</cell>
+                        <cell rend="start">History's Angel</cell>
+                        <cell rend="start">2023</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Aravind Adiga</cell>
+                        <cell rend="start">Last Man in Tower</cell>
+                        <cell rend="start">2011</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Aravind Jayan</cell>
+                        <cell rend="start">Teen Couple Have Fun Outdoors</cell>
+                        <cell rend="start">2022</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Aravind Adiga</cell>
+                        <cell rend="start">The White Tiger</cell>
+                        <cell rend="start">2008</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Avni Doshi</cell>
+                        <cell rend="start">Girl in White Cotton</cell>
+                        <cell rend="start">2019</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Shauna Singh Baldwin</cell>
+                        <cell rend="start">The Selector of Souls</cell>
+                        <cell rend="start">2012</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Deepti Kapoor</cell>
+                        <cell rend="start">Age of Vice</cell>
+                        <cell rend="start">2023</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Hamid. Mohsin</cell>
+                        <cell rend="start">The Reluctant Fundamentalist</cell>
+                        <cell rend="start">2007</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Jeet Thayil</cell>
+                        <cell rend="start">Narcopolis</cell>
+                        <cell rend="start">2012</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Manu Joseph</cell>
+                        <cell rend="start">Serious Men</cell>
+                        <cell rend="start">2010</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Manu Joseph</cell>
+                        <cell rend="start">The Illicit Happiness of Other People</cell>
+                        <cell rend="start">2012</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Harini Nagendra</cell>
+                        <cell rend="start">The Bangalore Detectives Club</cell>
+                        <cell rend="start">2022</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Kiran Desai</cell>
+                        <cell rend="start">The Inheritance of Loss</cell>
+                        <cell rend="start">2006</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Krupa Ge</cell>
+                        <cell rend="start">What We Know about Her</cell>
+                        <cell rend="start">2021</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">V Sanjay Kumar</cell>
+                        <cell rend="start">The Third Squad: A Noir Novel</cell>
+                        <cell rend="start">2017</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Karan Mahajan</cell>
+                        <cell rend="start">The Association of Small Bombs</cell>
+                        <cell rend="start">2016</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Amrita Mahale</cell>
+                        <cell rend="start">Milk Teeth</cell>
+                        <cell rend="start">2018</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Saikat Majumdar</cell>
+                        <cell rend="start">The Scent of God</cell>
+                        <cell rend="start">2019</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Megha Majumdar</cell>
+                        <cell rend="start">A Burning</cell>
+                        <cell rend="start">2020</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Roliinton Mistry'</cell>
+                        <cell rend="start">Family Matters</cell>
+                        <cell rend="start">2001</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Kiran Nagarkar</cell>
+                        <cell rend="start">Jasoda: A Novel</cell>
+                        <cell rend="start">2017</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Anita Nair</cell>
+                        <cell rend="start">Mistress</cell>
+                        <cell rend="start">2005</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Prajwal Parajuly</cell>
+                        <cell rend="start">Land Where I Flee</cell>
+                        <cell rend="start">2013</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Jerry Pinto</cell>
+                        <cell rend="start">Em and the Big Hoom</cell>
+                        <cell rend="start">2012</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Rajasree Variyar</cell>
+                        <cell rend="start">The Daughters of Madurai: A Novel</cell>
+                        <cell rend="start">2023</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Arundhati Roy</cell>
+                        <cell rend="start">The Ministry' of Utmost Happiness</cell>
+                        <cell rend="start">2017</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Arundhati Roy</cell>
+                        <cell rend="start">Sleeping On Jupiter</cell>
+                        <cell rend="start">2015</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Bina Shah </cell>
+                        <cell rend="start">Before She Sleeps</cell>
+                        <cell rend="start">2018</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Hansda Sowvendra Shekhar</cell>
+                        <cell rend="start">The Adivasi Will Not Dance: Stories</cell>
+                        <cell rend="start">2015</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Preeti Shenoy</cell>
+                        <cell rend="start">A Hundred Little Flames</cell>
+                        <cell rend="start">2017</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Tanuj Solanki</cell>
+                        <cell rend="start">Neon Noon</cell>
+                        <cell rend="start">2016</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Amitav Ghosh</cell>
+                        <cell rend="start">Hungry Tiger</cell>
+                        <cell rend="start">2004</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Shubhangi Swarup</cell>
+                        <cell rend="start">Latitudes of Longing</cell>
+                        <cell rend="start">2018</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Tishani Doshi</cell>
+                        <cell rend="start">The Pleasure Seekers</cell>
+                        <cell rend="start">2010</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Upamanyu Chatterjee</cell>
+                        <cell rend="start">The Mammaries of the Welfare State</cell>
+                        <cell rend="start">2000</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Varun Thomas Mathew</cell>
+                        <cell rend="start">The Black Dwarves of the Good Little Bay</cell>
+                        <cell rend="start">2019</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Padma Venkatraman</cell>
+                        <cell rend="start">The Bridge Home</cell>
+                        <cell rend="start">2019</cell>
+                    </row>
+                    <row>
+                        <cell rend="start">Madhuri Vijay</cell>
+                        <cell rend="start">The Far Field: A Novel</cell>
+                        <cell rend="start">2019</cell>
+                    </row>
+                </table>
+                <p>Appendix 2: The corpus of German novels</p>
+                <table rend="frame" xml:id="Tabelle2">
+                    <row>
+                        <cell>oschmann, Marion</cell>
+                        <cell>Schwarzweißroman</cell>
+                        <cell>2005</cell>
+                    </row>
+                    <row>
+                        <cell>Steinfest, Heinrich</cell>
+                        <cell>Ein dickes Fell: Chengs dritter Fall</cell>
+                        <cell>2006</cell>
+                    </row>
+                    <row>
+                        <cell>Zaimoglu, Feridun</cell>
+                        <cell>Leyla</cell>
+                        <cell>2006</cell>
+                    </row>
+                    <row>
+                        <cell>Hacker, Katharina</cell>
+                        <cell>Die Habenichtse</cell>
+                        <cell>2006</cell>
+                    </row>
+                    <row>
+                        <cell>Gruber, Sabine</cell>
+                        <cell>Über Nacht</cell>
+                        <cell>2007</cell>
+                    </row>
+                    <row>
+                        <cell>Steinaecker, Thomas von</cell>
+                        <cell>Wallner beginnt zu fliegen</cell>
+                        <cell>2007</cell>
+                    </row>
+                    <row>
+                        <cell>Timm, Uwe</cell>
+                        <cell>Halbschatten</cell>
+                        <cell>2008</cell>
+                    </row>
+                    <row>
+                        <cell>Bärfuss, Lukas</cell>
+                        <cell>Hundert Tage</cell>
+                        <cell>2008</cell>
+                    </row>
+                    <row>
+                        <cell>Setz, Clemens J.</cell>
+                        <cell>Die Frequenzen</cell>
+                        <cell>2009</cell>
+                    </row>
+                    <row>
+                        <cell>Merkel, Rainer</cell>
+                        <cell>Lichtjahre entfernt</cell>
+                        <cell>2009</cell>
+                    </row>
+                    <row>
+                        <cell>Köhlmeier, Michael</cell>
+                        <cell>Idylle mit ertrinkendem Hund</cell>
+                        <cell>2010</cell>
+                    </row>
+                    <row>
+                        <cell>Abonji, Melinda Nadj</cell>
+                        <cell>Tauben fliegen auf</cell>
+                        <cell>2010</cell>
+                    </row>
+                    <row>
+                        <cell>Rabinovici, Doron</cell>
+                        <cell>Andernorts</cell>
+                        <cell>2010</cell>
+                    </row>
+                    <row>
+                        <cell>Streeruwitz, Marlene</cell>
+                        <cell>Die Schmerzmacherin</cell>
+                        <cell>2011</cell>
+                    </row>
+                    <row>
+                        <cell>Genazino, Wilhelm</cell>
+                        <cell>Wenn wir Tiere wären</cell>
+                        <cell>2011</cell>
+                    </row>
+                    <row>
+                        <cell>Bronsky, Alina</cell>
+                        <cell>Die schärfsten Gerichte der tatarischen Küche</cell>
+                        <cell>2012</cell>
+                    </row>
+                    <row>
+                        <cell>Thome, Stephan</cell>
+                        <cell>Fliehkräfte</cell>
+                        <cell>2012</cell>
+                    </row>
+                    <row>
+                        <cell>Setz, Clemens J.</cell>
+                        <cell>Indigo</cell>
+                        <cell>2012</cell>
+                    </row>
+                    <row>
+                        <cell>Schulz, Frank</cell>
+                        <cell>Onno Viets und der Irre vom Kiez</cell>
+                        <cell>2012</cell>
+                    </row>
+                    <row>
+                        <cell>Zeiner, Monika</cell>
+                        <cell>Die Ordnung der Sterne über Como</cell>
+                        <cell>2013</cell>
+                    </row>
+                    <row>
+                        <cell>Meyer, Clemens</cell>
+                        <cell>Im Stein</cell>
+                        <cell>2013</cell>
+                    </row>
+                    <row>
+                        <cell>Leutenegger, Gertrud</cell>
+                        <cell>Panischer Frühling</cell>
+                        <cell>2014</cell>
+                    </row>
+                    <row>
+                        <cell>Nawrat, Matthias</cell>
+                        <cell>Unternehmer</cell>
+                        <cell>2014</cell>
+                    </row>
+                    <row>
+                        <cell>Köhlmeier, Michael</cell>
+                        <cell>Zwei Herren am Strand</cell>
+                        <cell>2014</cell>
+                    </row>
+                    <row>
+                        <cell>Helle, Heinz</cell>
+                        <cell>Eigentlich müssten wir tanzen</cell>
+                        <cell>2015</cell>
+                    </row>
+                    <row>
+                        <cell>Kehlmann, Daniel</cell>
+                        <cell>F</cell>
+                        <cell>2013</cell>
+                    </row>
+                    <row>
+                        <cell>Richter, Peter</cell>
+                        <cell>89/90</cell>
+                        <cell>2015</cell>
+                    </row>
+                    <row>
+                        <cell>Müller, Herta</cell>
+                        <cell>Atemschaukel</cell>
+                        <cell>2009</cell>
+                    </row>
+                    <row>
+                        <cell>Veremej, Nellja</cell>
+                        <cell>Berlin liegt im Osten</cell>
+                        <cell>2013</cell>
+                    </row>
+                    <row>
+                        <cell>Peltzer, Ulrich</cell>
+                        <cell>Das bessere Leben</cell>
+                        <cell>2015</cell>
+                    </row>
+                    <row>
+                        <cell>Fatah, Sherko</cell>
+                        <cell>Das dunkle Schiff</cell>
+                        <cell>2008</cell>
+                    </row>
+                    <row>
+                        <cell>Steinfest, Heinrich</cell>
+                        <cell>Der Allesforscher</cell>
+                        <cell>2014</cell>
+                    </row>
+                    <row>
+                        <cell>Ziegelwagner, Michael</cell>
+                        <cell>Der aufblasbare Kaiser</cell>
+                        <cell>2014</cell>
+                    </row>
+                    <row>
+                        <cell>Stanišić, Saša </cell>
+                        <cell>Herkunft</cell>
+                        <cell>2019</cell>
+                    </row>
+                    <row>
+                        <cell>Randt, Leif</cell>
+                        <cell>Allegro Pastell</cell>
+                        <cell>2020</cell>
+                    </row>
+                    <row>
+                        <cell>Elmiger, Dorothee</cell>
+                        <cell>Aus der Zuckerfabrik</cell>
+                        <cell>2020</cell>
+                    </row>
+                    <row>
+                        <cell>Ravik, Antje</cell>
+                        <cell>Blaue Frau</cell>
+                        <cell>2021</cell>
+                    </row>
+                    <row>
+                        <cell>Schubert, Helga</cell>
+                        <cell>Vom Aufstehen</cell>
+                        <cell>2021</cell>
+                    </row>
+                    <row>
+                        <cell>Aydemir, Fatma</cell>
+                        <cell>Dschinns</cell>
+                        <cell>2022</cell>
+                    </row>
+                    <row>
+                        <cell>Edelbauer, Raphaela</cell>
+                        <cell>Die Inkommensurablen</cell>
+                        <cell>2023</cell>
+                    </row>
+                </table>
+                <p>Appendix 3: LLM Prompt</p>
+                <p>You are a very careful reader and annotator of text.</p>
+                <p>Extract from the following text all sentences which contain direct or indirect references to modern IT like computers, smartphones, video games, the internet etc.</p>
+                <p>Return the sentences with IT references, each one starting with 
+                    <hi rend="bold">*</hi>. If there are no such sentences in the text, just replay with 'NONE'.
+                </p>
+                <p>Only extract sentences where you are certain that they contain IT references. Don't add any other text.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn1" rend="footnote text" n="1">United Nations. "Germany: Average age of the population from 1950 to 2100* (median age in years)." Chart. October 17, 2024. Statista. Accessed December 08, 2024. 
+                            
+                            <lb/>United Nations. "India: Average age of the population from 1950 to 2100 (median age in years)." Chart. October 2, 2024. Statista. Accessed December 08, 2024.
+                            
+                        </note>
+<note xml:id="ftn2" rend="footnote text" n="2"> For copyright reasons we cannot publish the novels we analysed.</note>
+<note xml:id="ftn3" rend="footnote text" n="3">Preliminary tests showed that larger chunks resulted in less good results. On a side note, contrary to the assumption that recent models are less brittle and less irritable by small changes in the prompt, we noticed that the best results were achieved with prompts with only a very few line breaks. </note>
+<note xml:id="ftn4" rend="footnote text" n="4">Model: gpt-4o-mini-2024-07-18, prompt see appendix 3.</note>
+<note xml:id="ftn5" rend="footnote text" n="5">Our scripts and additional resources can be found here: https://github.com/fotisj/ind_ger.</note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Business Standard. 2024. Indians most confident in adapting to technology related changes: Report. 
+                        <ptr target="https://www.business-standard.com/industry/news/indians-most-confident-in-adapting-to-technology-related-changes-report-124042301048_1.html"/>
+                    </bibl>
+                    <bibl>Eco - Association of the Internet Industry. 2023. 42 Per Cent of Germans Still Sceptical Regarding the Benefits of Artificial Intelligence. 23.11.2023. https://international.eco.de/presse/42-per-cent-of-germans-still-sceptical-regarding-the-benefits-of-artificial-intelligence/</bibl>
+                    <bibl>Erlin, M. 2017. “Topic Modeling, Epistemology, and the English and German Novel.” Journal of Cultural Analytics 2 (2).DOI: 10.22148/16.014</bibl>
+                    <bibl>Fabo, R., Boisnard, F. and Schneider, A.. 2024. “Comparative metadata for popular theater in Alsatian,German and French.” In Digital Humanities 2024: Book of Abstracts edited by Karajgikar, Jajwalya, Andrew Janco, Jessica Otis VA 2024. DOI: 10.5281/zenodo.13761079</bibl>
+                    <bibl>Grave, E., Bojanowski, P., Gupta, P., Joulin, A., and Mikolov, T. 2018. “Learning Word Vectors for 157 Languages” In 
+                        <hi rend="italic">Proceedings of the International Conference on Language Resources and Evaluation</hi>, LREC 2018.
+                    </bibl>
+                    <bibl>Hatzel, H., Stiemer, H., Biemann, C. and Gius, E. (2023). Machine learning in computational literary studies. it - Information Technology, 65(4-5), 200-217. DOI:10.1515/itit-2023-0041.</bibl>
+                    <bibl>Hettinger, L., Becker, M.,Reger, I., J., Fotis &amp; Hotho, A. 2015. “Genre Classification on German Novels”. 249-253. DOI: 10.1109/DEXA.2015.62. </bibl>
+                    <bibl>Künsting, M. 2018. New study reveals what Germans think about technology. 
+                        <ptr target="https://en.acatech.de/allgemein/new-study-reveals-what-germans-think-about-technology/"/>
+                    </bibl>
+                    <bibl>Honnibal, M. &amp; Montani, I., 2017. spaCy 2: Natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing. 
+                        <ptr target="https://spacy.io/"/>
+                    </bibl>
+                    <bibl>Radak T., Burnard L., Francois P. 2024. “Towards a computational history of modernism in European literary history: Mapping the Inner Lives of Characters in the European Novel (1840–1920) 
+                        <hi rend="italic">Open Res Europe 2024</hi>, 3(128). DOI: 10.12688/openreseurope.16290.2.
+                    </bibl>
+                    <bibl>Rizvi, Z.,Chauha, R. Sean, A. P., and Zaidi, N. 2022. “Minimal Computing for Exploring Indian Poetics.” Digital Humanities Quarterly, 16(2).</bibl>
+                    <bibl>
+                        <ptr target="https://www.digitalhumanities.org/dhq/vol/16/2/000589/000589.html"/>
+                    </bibl>
+                    <bibl>Roy, A. 2024. “How India is using the Internet.” 
+                        <ptr target="https://economictimes.indiatimes.com/tech/technology/how-india-is-using-the-internet/articleshow/108354854.cms?utm_source=contentofinterest&amp;utm_medium=text&amp;utm_campaign=cppst"/>.
+                    </bibl>
+                    <bibl>Schöch, C., Dudar, J. and Fileva, E. eds. 2023. Survey of Methods in Computational Literary Studies. CLS INFRA. DOI:10.5281/zenodo.7892112 .</bibl>
+                    <bibl>T., Shanmugapriya, Menon, N. and Sutton, D.. 2022. “Quantitative Stepwise Analysis of Indian English Novels 1947-2017.” In Literary Cultures and Digital Humanities in India edited by Nishat Zaidi and A Sean Pue. Routledge.</bibl>
+                    <bibl>Zehe, A., Becker, M., J, Fotis and Hotho, A. (2017). Towards Sentiment Analysis on German Literature. 387-394. DOI: 10.1007/978-3-319-67190-1_36. </bibl>
+                    <bibl>42 Percent of Germans Still Sceptical Regarding the Benefits of Artificial Intelligence. https://international.eco.de/presse/42-per-cent-of-germans-still-sceptical-regarding-the-benefits-of-artificial-intelligence/</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

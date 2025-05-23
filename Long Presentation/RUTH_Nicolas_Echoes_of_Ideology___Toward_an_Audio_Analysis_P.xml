@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="RUTH_Nicolas_Echoes_of_Ideology___Toward_an_Audio_Analysis_P">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Echoes of Ideology – Toward an Audio Analysis Pipeline to Unveil Character Traits in Historical Nazi Propaganda Films</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Ruth</surname>
+                        <forename>Nicolas</forename>
+                    </persName>
+                    <affiliation>Computational Humanities Group, Leipzig University, Germany</affiliation>
+                    <email>nicolas.ruth@informatik.uni-leipzig.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Burghardt</surname>
+                        <forename>Manuel</forename>
+                    </persName>
+                    <affiliation>Computational Humanities Group, Leipzig University, Germany</affiliation>
+                    <email>burghardt@informatik.uni-leipzig.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T13:56:20.033491000</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Digital film studies</term>
+                    <term>character analysis</term>
+                    <term>digital history</term>
+                    <term>computational audio analysis</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>cultural analytics</term>
+                    <term>natural language processing</term>
+                    <term>speech processing analysis and methods</term>
+                    <term>Computer science</term>
+                    <term>Cultural studies</term>
+                    <term>Film and cinema arts studies</term>
+                    <term>History</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>
+                    <hi rend="color(#000000)">The Nazi regime's exploitation of film as a propaganda tool underscores its belief in cinema's unparalleled power to shape minds and spread ideology. Implementing Joseph Goebbels' concept of a "revolution of the mind" (Leiser 1968, as cited in Hardinghaus 2008), the Nazis subjected all art and culture to their worldview, establishing a centralized and tightly controlled film industry to produce ideologically driven cinema, even advocating for a new film style (Giesen / Hobsch 2005: 1, 11). Today, a total of 44 films remain officially classified as </hi>
+                    <hi rend="color(#000000)italic">Vorbehaltsfilme</hi>
+                    <hi rend="color(#000000)">(restricted films) because of their particularly strong ideological and historical significance. Preserved by the Friedrich-Wilhelm-Murnau Foundation, these films are accessible only under strict academic research agreements. Interestingly, many other films from the same period, like the German classic "Die Feuerzangenbowle" (English: </hi>
+                    <hi rend="color(#000000)">The Fire-Tongs Bowl) </hi>
+                    <hi rend="color(#000000)">which still airs every Christmas, remain widely available. There is no clear definition that can be used to decide which Nazi films should be classified as unproblematic and which should not. On the contrary, the entire history of film censorship in post-war Germany has been heavily shaped by societal changes and varying influences, such as those stemming from different occupation zones (Hoppe, 2021). There is still an ongoing debate over the distinction between propaganda and non-propaganda films. The field of history has also recently renewed its engagement with the legacy of Nazi-era cinema. In early 2025, one of Germany’s leading historical research institutes launched a new project entitled </hi>
+                    <hi rend="color(#000000)">"Screens,"</hi>
+                    <hi rend="color(#000000)"> which will examine various elements of these films and their ideological foundations.</hi>
+                    <hi rend="color(#000000)"><ref n="1" target="ftn1"/>
+                    </hi>
+                    <hi rend="color(#000000)">In this study, we aim to analyze a selection of the restricted </hi>
+                    <hi rend="color(#000000)italic">Vorbehaltsfilme</hi>
+                    <hi rend="color(#000000)">to understand how they construct their ideological narratives. These include </hi>
+                    <hi rend="color(#000000)italic">Jud Süß</hi>
+                    <hi rend="color(#000000)">(1940) (English: </hi>
+                    <hi rend="color(#000000)">Süss, the Jew),</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)italic">Hitlerjunge Quex </hi>
+                    <hi rend="color(#000000)">(1933) (English: </hi>
+                    <hi rend="color(#000000)">Hitler Youth Quex) </hi>
+                    <hi rend="color(#000000)">and </hi>
+                    <hi rend="color(#000000)italic">Kopf hoch, Johannes!</hi>
+                    <hi rend="color(#000000)">(1941) (English: </hi>
+                    <hi rend="color(#000000)">Chin up, Johannes!).</hi>
+                    <hi rend="color(#000000)">By employing a computational analysis approach, we aim to uncover ideological patterns within these films and eventually extend this method to the hundreds of publicly available Nazi-era films to reveal how much "hidden" ideology they may actually contain.</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methodological Considerations</head>
+                <p>In film studies, it is widely recognized that film is a multimodal (Bateman / Schmidt 2013) and highly complex phenomenon that embodies a visual as well as an audio layer, with the latter further divided into spoken language, music, and sound effects. We argue that the visual layer has been widely studied in digital film studies, leading to concepts such as “distant viewing” (Arnold / Tilton 2019) and “deep watching” (Bermeitinger et al. 2019), which use modern deep learning technologies and contribute to what has been called the "digital visual turn" (Wevers / Smits 2020). However, we believe that a significant methodological gap remains in the computational analysis of audio, especially in historical films. This is why we propose and evaluate a three-step analytical workflow specifically for the audio analysis of historical Nazi films. For now, our focus is on character dialogs, as we believe ideological patterns are primarily conveyed through film characters and their spoken interactions.</p>
+                <p>The analysis of the conceptualization of film characters in Nazi-era cinema presents a range of research opportunities. Two key areas include: the analysis of cultural promotion of ethnically defined in- and out-groups, where (e.g. antisemitic) portrayals assigned discriminatory traits (Schwarz-Friesel / Reinharz 2013: 15, 116), and the depiction of femininity, which was viewed as a reflection of cultural identity in Nazi-Germany (Frietsch 2015: 213). Insights may be gained by automatically comparing character portrayals to manually selected references, and by applying voice gender detection within the audio analysis pipeline.</p>
+                <p>
+                    <hi rend="color(#000000)">Our computational analysis of character traits is methodologically related to the field of “psycholinguistics”. Herderich et al. (2024) describe the emerging use of computer-based NLP methods to quantitatively assess psychologically-grounded character traits, bridging the gap between qualitative and quantitative research. These methods include techniques like topic </hi>
+                    <hi rend="color(#000000)">modeling,</hi>
+                    <hi rend="color(#000000)">which are applied to traditional psychological interviews, </hi>
+                    <hi rend="color(#000000)">or</hi>
+                    <hi rend="color(#000000)">dictionary-based approaches such as LIWC (Boyd et al. 2022) and Empath (Fast et al. 2016), which infer traits from linguistic elements. Some researchers </hi>
+                    <hi rend="color(#000000)">even </hi>
+                    <hi rend="color(#000000)">argue that language may be a stronger indicator of personality than traditional psychological self-reports (Boyd / Pennebaker 2017; Boyd et al. 2020). </hi>
+                    <hi rend="color(#000000)">For the computational analysis of large language corpora, recent advances in transformer-based language models show that these consistently outperform traditional dictionary-based approaches, for example for tasks such as sentiment analysis (Borst et al., 2023).</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">Building on this work, we employ an LLM-based approach for analysis of character traits of the film characters. Although fictional characters use scripted language, this is precisely of interest here, as we are concerned with how character portrayal was shaped by National Socialism.</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Audio Analysis Workflow</head>
+                <p>We suggest a three-step process (see Fig. 1) for automatically transforming spoken film dialog into a character analysis and evaluate state-of-the-art deep learning models for each step.</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmptgew950w/Pictures/ed9fb96f111afb3f80671c7778429c76.png"/>
+                        <head>Overview of the three-step analysis workflow.</head>
+                    </figure>
+                    <hi rend="color(#000000)">First, the audio layer is extracted from the film and passed to a step dedicated to </hi>
+                    <hi rend="color(#000000)bold">(1) speaker diarization</hi>
+                    <hi rend="color(#000000)">, which means the identification of different speakers. This process involves voice activity detection (VAD), computing speaker embeddings, and clustering speech segments by speaker identity. This task is particularly challenging, as we are dealing with historical film audio from 1933 to 1945. For our analysis, we evaluated two popular open-source tools: Pyannote's</hi>
+                    <hi rend="color(#000000)"><ref n="2" target="ftn2"/>
+                    </hi>
+                    <hi rend="color(#000000)">speaker diarization and Nvidia Nemo</hi>
+                    <hi rend="color(#000000)"><ref n="3" target="ftn3"/>
+                    </hi>
+                    <hi rend="color(#000000)">(Fischbach 2024). The next step in our pipeline is </hi>
+                    <hi rend="color(#000000)bold">(2) audio transcription</hi>
+                    <hi rend="color(#000000)">, which uses automatic speech recognition (ASR) to convert the audio into text associated with the identified speaker. We evaluated OpenAI’s Whisper (Radford et al. 2023) in four versions: Whisper-medium, Whisper large-v2, and German fine-tuned versions</hi>
+                    <hi rend="color(#000000)"><ref n="4" target="ftn4"/>
+                    </hi>
+                    <hi rend="color(#000000)">by Bofeng Huang. Whisper is considered state-of-the-art, noted for its robustness to background noise (Kuhn et al. 2023). Finally, the collected speeches for each speaker undergoes a </hi>
+                    <hi rend="color(#000000)bold">(3) “psycholinguistic” analysis of character traits</hi>
+                    <hi rend="color(#000000)">using a GPT-based approach. This process aggregates the speech segments for each (main-) speaker and submits them as a list to gpt- 3.5-turbo-0125 via the API with the following prompt (translated to English from the original German prompt):</hi>
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmptgew950w/Pictures/ed9fb96f111afb3f80671c7778429c76.png"/>
+                        <head>System prompt and input of the GPT-based character analysis.</head>
+                    </figure>The smaller-model (gpt-3.5-turbo-0125) was chosen because of the cost considerations of the API. Main speakers are selected by creating a speech frequency histogram (for speeches &gt;2s) and choosing those with frequencies above the upper fence, ensuring adaptability to the film’s speech patterns and sufficient material for psycholinguistic analysis.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Evaluation of methods</head>
+                <div type="div2" rend="DH-Heading2">
+                    <head>
+                        <anchor xml:id="id_docs-internal-guid-18804193-7fff-ebc9-8c"/>Step 1: Speaker diarization
+                    </head>
+                    <p>
+                        <hi rend="color(#000000)">While typically speaker recognition systems are designed for rather controlled settings, this study faces added complexities: historical German audio, movie audio with background noise, uncertain speaker numbers, and overly long audio signals. Additionally, the complex framework's models and their individually configurable steps introduce further methodological difficulties and potential errors. The audio-based speaker recognition system was tested through various configurations of Pyannote, including its standard version, two voice isolation techniques</hi>
+                        <hi rend="color(#000000)"><ref n="5" target="ftn5"/>
+                        </hi>
+                        <hi rend="color(#000000)">, a German segmentation model</hi>
+                        <hi rend="color(#000000)"><ref n="6" target="ftn6"/>
+                        </hi>
+                        <hi rend="color(#000000)">, a segmentation model fine-tuned on “Jud Süß” and a custom method correcting speaker confusion via face embedding clusters. Additionally, the Nemo (general config, static 30 speakers) model was evaluated and outperformed all Pyannote configurations with an average diarization error rate (DER) of 58.84. DER measures speaker diarization performance as the percentage of incorrectly attributed speech time, including false detections, missed speech, or incorrect clustering, and can exceed 100% due to overlapping speech (Fiscus et al. 2006). This step towards full automation presents the biggest challenge to be solved in the future, which is why the subsequent steps in our workflow rely on manually created ground truth for speaker recognition. For this task, there are various approaches for complex video material, including cross-modal models that need to be tested with the data. (Sharma et al. 2023 &amp; Cheng et al. 2024)</hi>
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Step 2: Transcription</head>
+                    <p>
+                        <anchor xml:id="id_docs-internal-guid-152e0d30-7fff-1899-7e"/>Regarding the automatic speech recognition the models show a high robustness for background noises and a strong capability to capture the correct punctuation marks, therefore providing insight into the meaning of a sentence. The main failures are caused by older German vocabulary (for instance, 
+                        <hi rend="italic">Durchlaucht</hi>, 
+                        <hi rend="italic">Staatsstreich, Rabbuni</hi>), proper names, dialects/languages (for instance, Yiddish, Berlin dialect) and very quiet speech that provokes ASR-hallucinations. The German fine-tuned models perform slightly better with specific German words like 
+                        <hi rend="italic">Jude</hi>, 
+                        <hi rend="italic">Jid</hi>, and 
+                        <hi rend="italic">Jiden</hi>. However, both large variants are generally effective and can be used effectively. 
+                    </p>
+                    <p>The following evaluation of the GPT-based analysis indicates that the transcription results – despite minor errors – are sufficient for the intended procedure. Studies, such as (Wang et al. 2024), have shown that ASR-errors and typographical errors can decrease the performance of LLMs. However, our application appears to be resilient to such issues as the ASR-error rate is low enough.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Step 3: ChatGPT-Analysis</head>
+                    <p>
+                        <anchor xml:id="id_docs-internal-guid-bbbb2f5b-7fff-7092-1c"/>
+                        <hi rend="color(#000000)">The first insight into the GPT-based analysis is that the model does not recognize the films based on the provided character speech, as tested in question 6 of the prompt (see Fig. 2). The only exceptions are when a rather famous main character is directly named in the speech, which is not necessarily the named character themself. This happens in the case of Heini Völker from “Hitlerjunge Quex” or Joseph Süß Oppenheimer in “Jud Süß”. Apart from these cases the model hallucinates random movie names indicating the analysis results are not based on prior knowledge about the films. </hi>
+                    </p>
+                    <p>
+                        <figure>
+                            <graphic url="/tmp/tmptgew950w/Pictures/ed9fb96f111afb3f80671c7778429c76.png"/>
+                            <head>Output of GPT-based character analysis for the characters “Joseph Süß Oppenheimer” and the Duke, later translated to english for the paper.</head>
+                        </figure>
+                    </p>
+                    <p>Figure 3 illustrates the direct analysis results for two characters from the anti-Semitic propaganda film Jud Süß. The approach proves to be accurate for analyzing characters, providing deep insights into their personalities based solely on speech passages. The analysis of Joseph Süß Oppenheimer describes him as a cunning, strategic, charismatic, and powerful character who manipulates, charms, and authoritatively interacts with others to gain power, wealth, and influence. These analysis results align with the scholarly literature on the film, which identifies Süß Oppenheimer's portrayal as a caricatured antisemitic personality (Niven 2022: 17). The depiction of the Duke as proud, authoritarian, and egocentric, acting dominantly, patronizingly, and manipulatively to secure his power and personal welfare, can be considered accurate as well.</p>
+                    <p>
+                        <hi rend="color(#000000)">An impressive example from a different film is the character triangle of Julieta Merck, Johannes von Redel, and Johannes's father in the Nazi youth film “Kopf hoch, Johannes!”. The literature describes the major character dynamic as follows: Johannes von Redel, who returns to Germany after his mother's death, struggles to adjust and is distant from his rough, emotionally detached father. His aunt, Julieta Merck, attempts to bridge the rift between them (Giesen / Hobsch 2005: 338, 342). The character triangle from the literature has been manually visualized in Figure 4, enhanced with the translated results on personality traits, goals, and interactions from the automated analysis, demonstrating the approach's ability to capture complex character traits.</hi>
+                    </p>
+                    <p>
+                        <figure>
+                            <graphic url="/tmp/tmptgew950w/Pictures/ed9fb96f111afb3f80671c7778429c76.png"/>
+                            <head>Character triangle of Julieta Merck, Johannes von Redel, and Johannes's father in the Nazi youth film “Kopf hoch, Johannes!”.</head>
+                        </figure>
+                    </p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p>
+                    <anchor xml:id="id_docs-internal-guid-6471e511-7fff-1a59-e5"/>
+                    <hi rend="color(#000000)">It shows that the proposed workflow for the audio analysis of historical German film material requires further development in the area of speaker diarization, but already works very well for the tasks of audio transcription and character analysis. Future perspectives for speaker recognition include, in addition to the multimodal approaches already mentioned, a more in-depth focus on the audio data, involving specific fine-tuning and targeted model development based on historical audio samples. Current advancements in audio-based deep learning </hi>
+                    <hi rend="color(#000000)">models present promising opportunities, especially if the strengths of models like Whisper, as a dominant ASR model, could be applied to other audio tasks. The audio transcription works robustly and sufficiently accurate. The identification of key character traits in the films, which in our tests was largely consistent with existing analyses in the respective literature, provides an opportunity for a quantitative analysis of character development in Nazi-era films, offering insights into Nazi ideology that can be scaled up to a larger corpus of films from that era, where we assume more hidden ideologies. For large-scale analyses of character traits, a closed vocabulary for GPT or word embedding systems will be pursued. Ultimately, we aim for a more holistic view on ideologies in Nazi films and plan to also adopt SOTA methods for a distant viewing of the visual layer, as is showcased in current tools such as </hi>
+                    <hi rend="color(#000000)italic">Vian</hi>
+                    <hi rend="color(#000000)">(Halter et al. 2019), </hi>
+                    <hi rend="color(#000000)italic">Tibava</hi>
+                    <hi rend="color(#000000)">(Springstein et al. 2023) or </hi>
+                    <hi rend="color(#000000)italic">Zoetrope</hi>
+                    <hi rend="color(#000000)">(Liebl / Burghardt 2023).</hi>
+                </p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn1" rend="footnote text" n="1">https://www.ifz-muenchen.de/aktuelles/artikel/screens-spielfilme-als-zeithistorische-quelle</note>
+<note xml:id="ftn2" rend="footnote text" n="2">
+                            <hi rend="color(#000000)"> https://github.com/pyannote/pyannote-audio</hi>
+                        </note>
+<note xml:id="ftn3" rend="footnote text" n="3">
+                            <hi rend="color(#000000)"> https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/asr/speaker\_diarization/intro.html</hi>
+                        </note>
+<note xml:id="ftn4" rend="footnote text" n="4">
+                            <hi rend="color(#000000)"> https://huggingface.co/bofenghuang/whisper-medium-cv11-german &amp; https://huggingface.co/bofenghuang/whisper-large-v2-cv11-german</hi>
+                        </note>
+<note xml:id="ftn5" rend="footnote text" n="5">
+                                <anchor xml:id="id_docs-internal-guid-a4ee682f-7fff-f395-e6"/>
+                                <hi rend="color(#000000)"> https://pypi.org/project/noisereduce/ &amp;</hi>
+                                <anchor xml:id="id_docs-internal-guid-2acd3b02-7fff-1211-0e"/>
+                                <hi rend="color(#000000)">https://huggingface.co/speechbrain/sepformer-dns4-16k-enhancement</hi>
+                            </note>
+<note xml:id="ftn6" rend="footnote text" n="6">
+                                <anchor xml:id="id_docs-internal-guid-e370a8fe-7fff-85d3-a1"/>
+                                <hi rend="color(#000000)"> https://huggingface.co/diarizers-community/speaker-segmentation-fine-tuned-callhome-deu</hi>
+                            </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="color(#000000)">Arnold, Taylor / Tilton, Lauren (2019): “Distant viewing: analyzing large visual corpora”, in: </hi>
+                        <hi rend="color(#000000)">Digital Scholarship in the Humanities</hi>
+                        <hi rend="color(#000000)"> 34, Supplement_1: i3–i16.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Bateman, John / Schmidt, Karl-Heinrich (2013): </hi>
+                        <hi rend="color(#000000)">Multimodal Film Analysis: How Films Mea</hi>
+                        <hi rend="color(#000000)">n.</hi>
+                        <hi rend="color(#000000)">London: Routledge.</hi>
+                    </bibl>
+                    <bibl>Borst, Janos / Klähn, Jannis / Burghardt, Manuel: Death of the Dictionary? – The Rise of Zero-Shot Sentiment Classification, in: Proceedings of the Computational Humanities Research Conference 2023, CEUR Workshop Proceedings, 3558 
+                        <lb/>303-319
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Boyd, Ryan L. / Ashokkumar, Ashwini / Seraj, Sarah / Pennebaker, James W. (2022): The development and psychometric properties of LIWC-22. University of Texas at Austin. https://www.liwc.app</hi>
+                    </bibl>
+                    <bibl>Boyd, Ryan. L. / Pasca, Paola / Lanning, Kevin (2020): The personality panorama: Conceptualizing personality through big behavioural data, in: European Journal of Personality, 34(5), 599–612. https://doi.org/10.1002/per.2254</bibl>
+                    <bibl>Boyd, Ryan. L. / Pennebaker, James W. (2017): Language-based personality: A new approach to personality in a digital world, in: Current Opinion in Behavioral Sciences, 18, 63–68. https://doi.org/10.1016/j.cobeha.2017.07.017</bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Cheng, Luyao / Wang, Hui / Zheng, Siqi / Chen, Yafeng / Huang, Rongjie / Zhang Quinglin / Chen, Qian / Xihao, Li (2024): “Integrating Audio, Visual, and Semantic Information for Enhanced Multimodal Speaker Diarization”, in: </hi>
+                        <hi rend="color(#000000)">arXiv </hi>
+                        <hi rend="color(#000000)">https://arxiv.org/abs/2408.12102 [23.04.2025].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Fast, Ethan / Chen, Binbin / Bernstein, Michael S. (2016): Empath: Understanding Topic Signals in Large-Scale Text, in: </hi>
+                        <hi rend="color(#000000)italic">Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems</hi>
+                        <hi rend="color(#000000)">, 4647–4657. https://doi.org/10.1145/2858036.2858535</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Fischbach, Lea (2024): “</hi>
+                        <anchor xml:id="id_citeBibtexContent"/>
+                        <hi rend="color(#212529)">A Comparative Analysis of Speaker Diarization Models: Creating a Dataset for German Dialectal Speech</hi>
+                        <hi rend="color(#000000)">”, in: </hi>
+                        <hi rend="color(#000000)">Proceedings of the 3rd Workshop on NLP Applications to Field Linguistics (Field Matters 2024)</hi>
+                        <hi rend="color(#000000)">: 43–51. Association for Computational Linguistics.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Fiscus, Jonathan G. / Ajot, Jerome / Michel, Martial / Garofolo, John S. (2006): “The Rich Transcription 2006 Spring Meeting Recognition Evaluation”, in: </hi>
+                        <hi rend="color(#000000)">Machine Learning for Multimodal Interaction: Third International Workshop, MLMI 2006, Bethesda, MD, USA, May 1–4, 2006, Revised Selected Papers</hi>
+                        <hi rend="color(#000000)"> 3: 309–322. Berlin: Springer.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Frietsch, Elke (2015): Mediale Inszenierungen von »Volk und Führer«: Akustik – Bild – Skulptur, in: E. Frietsch / C. Herkommer </hi>
+                        <hi rend="color(#000000)">(Eds.):</hi>
+                        <hi rend="color(#222222)"> </hi>
+                        <hi rend="color(#000000)">Nationalsozialismus und Geschlecht: 199–222. transcript Verlag.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Giesen, Rolf / Hobsch, Manfred (2005): </hi>
+                        <hi rend="color(#000000)">Hitlerjunge Quex, Jud Süß und Kolberg. Die Propagandafilme des Dritten Reiches. Dokumente und Materialien zum NS-Film</hi>
+                        <hi rend="color(#000000)">. Berlin: Schwarzkopf &amp; Schwarzkopf Verlag.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Halter, Gaudenz / Ballester-Ripoll, Rafael / Flueckiger, Barbara / Pajarola, Renato (2019): “</hi>
+                        <hi rend="color(#1c1d1e)">VIAN: A Visual Annotation Tool for Film Analysis</hi>
+                        <hi rend="color(#000000)">”, in: </hi>
+                        <hi rend="color(#000000)">Computer Graphics Forum</hi>
+                        <hi rend="color(#000000)"> 38, 3: 119–129.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Hardinghaus, Christian (2008): </hi>
+                        <hi rend="color(#000000)">Filmpropaganda für den Holocaust?: Eine Studie anhand der Hetzfilme "Der ewige Jude" und "Jud Süß"</hi>
+                        <hi rend="color(#000000)">. Marburg: Tectum-Verl.</hi>
+                    </bibl>
+                    <bibl>Herderich, Alina / Freudenthaler, Heribert H. / Garcia, David (2024): A computational method to reveal psychological constructs from text data, in: 
+                        <hi rend="italic">Psychological Methods</hi>. https://doi.org/10.1037/met0000700
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Hoppe, Johanna (2021): Von Kanonen und Spatzen. Die Diskursgeschichte der nach 1945 verbotenen NS-Filme. Schüren Verlag.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Howanitz, Gernot / Bermeitinger, Bernhard / Radisch, Eric / Gassner, Sebastian / Rehbein, Malte / Handschuh, Siegfried. (2019): “Deep Watching - Towards New Methods of Analyzing Visual Media in Cultural Studies”, in: </hi>
+                        <hi rend="color(#000000)">Book of Abstracts, ADHO DH Conference 2019</hi>
+                        <hi rend="color(#000000)">, Utrecht.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Kuhn, Korbinian / Kersken, Verena / Reuter, Benedikt / Egger, Niklas / Zimmermann, Gottfried (2023): “Measuring the Accuracy of Automatic Speech Recognition Solutions”, in: </hi>
+                        <hi rend="color(#000000)">ACM Transactions on Accessible Computing</hi>
+                        <hi rend="color(#000000)"> 16, 4: 1–23. DOI: 10.1145/3636513.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Leiser, Erwin (1968): </hi>
+                        <hi rend="color(#000000)">"Deutschland erwache!". </hi>
+                        <hi rend="color(#000000)">Propaganda im Film des Dritten Reichs</hi>
+                        <hi rend="color(#000000)">.</hi>
+                        <hi rend="color(#000000)">Reinbek bei Hamburg: Rowohlt Verlag.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Liebl, Bernhardt / Burghardt, Manuel (2023): “Zoetrope – Interactive Feature Exploration in News Videos”, in: </hi>
+                        <hi rend="color(#000000)">Book of Abstracts of the ADHO DH Conference 2023</hi>
+                        <hi rend="color(#000000)">, Graz.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Niven, Bill (2022): </hi>
+                        <hi rend="color(#000000)">Jud Süß. Das lange Leben eines Propagandafilms</hi>
+                        <hi rend="color(#000000)">. Halle (Saale): Mitteldeutscher Verlag.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Radford, Alec / Kim, Jong Wook / Xu, Tao / Brockman, Greg / McLeavey, Christine / Sutskever, Ilya (2023): “Robust Speech Recognition via Large-Scale Weak Supervision”, in: </hi>
+                        <hi rend="color(#000000)">Proceedings of the 40th International Conference on Machine Learning (ICML'23)</hi>
+                        <hi rend="color(#000000)"> 202, Article 1182: 28492–28518. JMLR.org.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Schwarz-Friesel, Monika / Reinharz, Jehuda (2013): </hi>
+                        <hi rend="color(#000000)italic">Die Sprache der Judenfeindschaft im 21. Jahrhundert.</hi>
+                        <hi rend="color(#000000)">Berlin: DE GRUYTER.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Sharma, Rahul / Somandepalli, Krishna / Narayanan, Shrikanth (2023): “Cross Modal Video Representations for Weakly Supervised Active Speaker Localization”, in: </hi>
+                        <hi rend="color(#000000)">IEEE Transactions on Multimedia</hi>
+                        <hi rend="color(#000000)"> 25: 7825–7836. DOI: 10.1109/tmm.2022.3229975.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Springstein, Matthias / Stamatakis, Markos / Plank, Margret / Sittel, Julian / Mauer, Roman / Bulgakowa, Oksana / Ewerth, Ralph / Müller-Budack, Eric (2023): “TIB AV-Analytics: A Web-based Platform for Scholarly Video Analysis and Film Studies”, in: </hi>
+                        <hi rend="color(#000000)">Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval</hi>
+                        <hi rend="color(#000000)">: 3195–3199.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Wang, Bin / Wei, Chengwei / Liu, Zhengyuan / Lin, Geyu / Chen, Nancy F. (2024): “Resilience of Large Language Models for Noisy Instructions”, in: </hi>
+                        <hi rend="color(#222222)">Al-Onaizan, Yaser / Bansal, Mohit / Chen, Yun-Nung (Eds.)</hi>
+                        <hi rend="color(#000000)">: </hi>
+                        <hi rend="color(#000000)">Findings of the Association for Computational Linguistics: EMNLP 2024</hi>
+                        <hi rend="color(#000000)">: 11939–11950. Association for Computational Linguistics. </hi>
+                        <anchor xml:id="id_docs-internal-guid-f5aa0035-7fff-b588-81"/>
+                        <hi rend="color(#222222)">https://aclanthology.org/2024.findings-emnlp.697</hi>
+                        <hi rend="color(#000000)"> [23.04.2025].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Wevers, Melvin / Smits, Thomas (2020): “The visual digital turn: Using neural networks to study historical images”, in: </hi>
+                        <hi rend="color(#000000)">Digital Scholarship in the Humanities</hi>
+                        <hi rend="color(#000000)"> 35, 1: 194–207.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

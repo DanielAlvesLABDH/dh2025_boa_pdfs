@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="CAMPS_Jean_Baptiste_Greening_your_database_of_literary_works">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Greening your database of literary works: How to avoid reinventing vocabularies, in favor of sustainable, reusable models</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Christensen</surname>
+                        <forename>Kelly</forename>
+                    </persName>
+                    <affiliation>École nationale des chartes | Université PSL, France</affiliation>
+                    <email>kelly.christensen@chartes.psl.eu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Camps</surname>
+                        <forename>Jean-Baptiste</forename>
+                    </persName>
+                    <affiliation>École nationale des chartes | Université PSL, France</affiliation>
+                    <email>jean-baptiste.camps@chartes.psl.eu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-06T17:41:06.933077049</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>database</term>
+                    <term>FRBR</term>
+                    <term>text transmission</term>
+                    <term>medieval literature</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data modeling</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor type="bookmark-start" xml:id="id_problem"/>Problem
+                    <ptr type="bookmark-end" target="#id_problem"/>
+                </head>
+                <p>When scholars set out to build a database of textual traditions, they inevitably face two ontological questions: What is a text? When do two texts constitute versions of the same story or ‘work’? Where we place the threshold between abstract narrative content and its expression in human language impacts everything further downstream in the data model, from a story’s manner of being spelled out to the extant physical document.</p>
+                <p>In the case of Medieval studies, most literary databases, such as Jonas and Handschriftencensus, overcome the previous questions by making a story version the most abstract concept in their model (Institut de recherche et d’histoire des textes 2024; Akademie der Wissenschaften und der Literatur Mainz 2024). Such a model is useful for studying the transmission of a single work, as in the case of 
+                    <hi rend="italic">The Seven Sages of Rome</hi> project (Eming and Bildhauer 2023). However, in multi-work databases, to discover all versions of a story, the user needs to find each one individually, benefiting either from domain knowledge of the story’s transmission or luck that a lexical or semantic search on the title yields the relevant iterations.
+                </p>
+                <p>As a story evolves, manifesting in different languages and literary forms, discoverability becomes more challenging. The database needs to adopt higher-level ontologies, namely what Patrick Sahle calls 
+                    <hi rend="italic">Inhalt</hi> or “text-as-content,” meaning a story’s content prior to its articulation in any human language (Sahle 2013; Schmidt and Sahle 2023). This concept maps most closely to what the 
+                    <hi rend="smallcaps">ifla</hi> calls the “work” in their most recent data model, the 
+                    <hi rend="smallcaps">lrm</hi>
+                    <hi rend="sub">oo</hi>. The work is a highly abstract, “propositional” object, as seen in Table 1.
+                </p>
+                <p>Literary projects have historically drawn on the 
+                    <hi rend="smallcaps">ifla</hi>’s frameworks to structure their data, but many tend to concentrate on the bottom three-quarters of the 
+                    <hi rend="smallcaps">lrm</hi>
+                    <hi rend="sub">oo</hi> hierarchy, namely expressions, manifestations, and items (Chamnongsri et al. 2006). Comparatively, there exist few examples of how to take advantage of the 
+                    <hi rend="smallcaps">lrm</hi>
+                    <hi rend="sub">oo</hi> to solve for the problem of story versions and story discoverability, which requires engaging with its higher-level concept of work. Furthermore, perhaps due to a dearth of examples and best practices, many research teams do not consistently align their data models with the 
+                    <hi rend="smallcaps">lrm</hi>
+                    <hi rend="sub">oo</hi> and risk reinventing ontologies that impede interoperability with other projects. The 
+                    <hi rend="italic">Mapping Manuscript Migrations</hi> project database is a positive exception among more muddied, makeshift models (Burrows et al. 2020).
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp0brb4yin/Pictures/c9f83eda09055185761acd4858007b1c.jpg"/>
+                    </figure>
+                </p>
+                <p>Figure 1: Classes (prefix F) and properties (prefix R) of the 
+                    <hi rend="smallcaps">lrm</hi>
+                    <hi rend="sub">oo</hi>, and the former’s relation to Conceptual Reference Model (
+                    <hi rend="smallcaps">crm</hi>) classes (prefix E).
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor type="bookmark-start" xml:id="id_approach"/>Approach
+                    <ptr type="bookmark-end" target="#id_approach"/>
+                </head>
+                <p>We propose a simple, explicit, and generalizable data model for historical textual traditions that intentionally reuses the ontologies of the 
+                    <hi rend="smallcaps">lrm</hi>
+                    <hi rend="sub">oo</hi> and terms familiar to the domain of literary studies. Currently in use for the thematic corpus of the ERC project LostMa, our model is designed to accommodate corpora from diverse language and reading communities. Our test cases focus on knights’ tales shared in Western Europe before the invention of the printing press. However, we invite new cases that further test the model’s adaptability to studies in comparative literature and philology, with a focus on shared narrative content.
+                </p>
+                <p>As seen in Table 
+                    <ref target="#tab:comparison">1</ref>, our model intentionally overlaps with the new 
+                    <hi rend="smallcaps">lrm</hi>
+                    <hi rend="sub">oo</hi>. We use the work/story concept to group texts that express the same story in different languages and genres, without promoting any one linguistic community or author’s expression above another.
+                </p>
+                <table rend="frame" xml:id="Tableau1">
+                    <row>
+                        <cell rend="center bold">LRM
+                            <hi rend="sub">OO</hi>
+                        </cell>
+                        <cell rend="center bold">Example</cell>
+                        <cell rend="center bold">Proposed (LostMa)</cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <hi rend="bold">Work</hi> (F1)
+                        </cell>
+                        <cell>The story of Perceval’s quest for the Holy Grail.</cell>
+                        <cell rend="end bold">Story</cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <hi rend="bold">Expression</hi> (F2)
+                        </cell>
+                        <cell>Wolfram von Eschenbach’s 
+                            <hi rend="italic">Parzival</hi> in Middle High German.
+                        </cell>
+                        <cell rend="end bold">Text</cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <hi rend="bold">Manifestation</hi> (F3)
+                        </cell>
+                        <cell>The copy that Johannes Stemhein produced in Konstanz, 1467, of Eschenbach’s 
+                            <hi rend="italic">Parzival</hi>.
+                        </cell>
+                        <cell rend="end bold">Witness</cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <hi rend="bold">Item</hi> (F5)
+                        </cell>
+                        <cell>The object in the Burgerbibliothek (Bern, Switzerland) with the shelfmark Cod. AA 91.</cell>
+                        <cell rend="end bold">Document</cell>
+                    </row>
+                </table>
+                <p>
+                    <hi rend="bold">Table 1.</hi> Alignment of terms in 
+                    <hi rend="smallcaps">lrm</hi>
+                    <hi rend="sub">oo</hi> data model and proposed data model (LostMa)
+                    <lb/>
+                </p>
+                <p>For example, though Chrétien de Troyes is credited with inventing the work/story of Perceval, our model does not formally elevate his version in Old French above that of Wolfram von Eschenbach in Middle High German. The latter’s derivative nature is either inferred via the difference in time between their creations (Eschenbach’s version was written after de Troyes’s) or declared explicitly with a relation, such as the 
+                    <hi rend="smallcaps">lrm</hi>
+                    <hi rend="sub">oo</hi>’s Expression-Expression relation “is derivative of” (R76).
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp0brb4yin/Pictures/c9f83eda09055185761acd4858007b1c.jpg"/>
+                    </figure>
+                </p>
+                <p>
+                    <hi rend="bold">Figure 2.</hi> Example of an intertextual relationship.
+                </p>
+                <p>Intertextual relations pose the greatest temptation teams will face to invent new vocabularies that hurt the data model’s interoperability. Specialists in the relevant corpora will want to qualify relations between expressions/texts to various degrees of specificity, including translation, prosification, versification, and abridgement. Our approach both avoids infinitely esoteric vocabularies and accommodates uncertainty by relying on an intentionally ambivalent relation, the 
+                    <hi rend="smallcaps">lrm</hi>
+                    <hi rend="sub">oo</hi>’s R76.
+                </p>
+                <p>Differences amongst linked expressions’/texts’ properties, such as form, length, language, and genre, further qualify the simple relationship and effectively communicate the nature of the derivation. Researchers will define different properties for stories, texts, witnesses, and documents. However, we propose linking them to existing properties in Dublin Core or WikiData.</p>
+                <p>For example, when searching for prose versions of Chrétien de Troyes’s 
+                    <hi rend="italic">Perceval</hi>, which is in verse, users can find texts linked by the “is derivative of” (R76) relationship that also have the form “prose.” Thus, rather than a single-use vocabulary term, such as “is prosification of,” users rely on a combination of the familiar 
+                    <hi rend="smallcaps">lrm</hi>
+                    <hi rend="sub">oo</hi> R76 relation and the relevant property of the text, which is interoperable with the WikiData property “literary form” (Q4263830). The drawback is that it adds some complexity to data retrieval, as seen in Figure 3, but it also optimizes interoperability and simplifies the model overall.
+                </p>
+                <p>//Get the original version of the Perceval story</p>
+                <p>MATCH (:Story {title: ’Perceval’})</p>
+                <p>–[:IS_REALIZED_IN]-&gt;(original:Text)</p>
+                <p>&lt;-[:CREATED]–(:Person {name: ’Chrétien de Troyes’})</p>
+                <p>//Get all texts derived from the original version</p>
+                <p>MATCH (text:Text)–[:IS_DERIVATIVE_OF]–&gt;(original)</p>
+                <p>//Narrow down the selection to prose texts</p>
+                <p>WHERE text.literary_form = ’prose’</p>
+                <p>RETURN text</p>
+                <p>
+                    <hi rend="bold">F</hi>
+                    <hi rend="bold">igure 3</hi>. Query (Cypher) for selecting all prosifications of Chrétien de Troyes’s 
+                    <hi rend="italic">Le conte du gra</hi>
+                    <hi rend="italic">a</hi>
+                    <hi rend="italic">l</hi>, in the example of a graph database model with the IS_DERIVATIVE_OF (R76) Text-Text relation and the Q4263830 WikiData property literary_form.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor type="bookmark-start" xml:id="id_conclusion"/>Conclusion
+                    <ptr type="bookmark-end" target="#id_conclusion"/>
+                </head>
+                <p>We describe the challenge of modeling a collection of stories and their expressions. Our solution to making stories discoverable is leveraging the work concept in the 
+                    <hi rend="smallcaps">lrm</hi>
+                    <hi rend="sub">oo</hi> and placing even the first (authoritative) version of a story in a different ontological category, the text. Our approach also solves for the issue of making intertextual relationships both discoverable and interoperable. The solutions presented here are steps toward collectively establishing, specifically in the context of philological and comparative literary studies, best practices for improving the sustainability of a project’s efforts.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Acronyms</head>
+                <p>
+                    <hi rend="bold">CRM</hi> Conceptual Reference Model
+                </p>
+                <p>
+                    <hi rend="bold">FRBR</hi> Functional Requirements for BibliographicRecords
+                </p>
+                <p>
+                    <hi rend="bold">IFLA</hi> International Federation of Library Associations
+                </p>
+                <p>
+                    <hi rend="bold">LRM</hi> Library Reference Model
+                </p>
+                <p>
+                    <hi rend="bold">LRM</hi>
+                    <hi rend="bold">OO</hi> Library Reference Model Object-Oriented
+                </p>
+                <p>
+                    <hi rend="bold">WEMI</hi> Work-Expression-Manifestation-Item
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor type="bookmark-start" xml:id="id_acknowledgments"/>Acknowledgments
+                    <ptr type="bookmark-end" target="#id_acknowledgments"/>
+                </head>
+                <p>The authors wish to thank contributors to the LostMa project, who stress tested the database and helped refine the model that informed this investigation into interoperability: Elisabeth de Bruijn, Katarzyna Kapitan, Mike Kestemont, Remco Sleiderink, and Cecile Vermaas.</p>
+                <p>They additionally wish to thank Emmanuelle Bermès, as well as the three reviewers, in particular Maria Hinzmann, for their useful recommendations.</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp0brb4yin/Pictures/c9f83eda09055185761acd4858007b1c.jpg"/>
+                    </figure>
+                </p>
+                <p>Funded by the European Union (ERC, LostMA, 101117408). Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Council. Neither the European Union nor the granting authority can be held responsible for them.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Akademie der Wissenschaften und der Literatur Mainz</hi>. 2024. 
+                        <hi rend="italic">Handschriftencensus</hi>. Database. Edited by Nathanael Busch and Jürgen Wolf. Akademie der Wissenschaften und der Literatur Mainz. 
+                        <ref target="https://handschriftencensus.de/">https://handschriftencensus.de</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Burrows, Toby, Doug Emery, Arthur Mitchell Fraas, Eero Hyvönen, Esko Ikkala, Mikko Koho, David Lewis, et al.</hi> 2020. “Mapping Manuscript Migrations Knowledge Graph.” 
+                        <hi rend="italic">Journal of Open Humanities Data</hi> 6 (3): 14. 
+                        <ptr target="https://doi.org/10.5334/johd.14"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Chamnongsri, Nisachol, Lampang Manmart, Vilas Wuwongse, Elin K. Jacob, Jane Hunter, Shigeo Sugimoto, Atsuyuki Morishima, and Andreas Rauber.</hi> 2006. “Applying 
+                        <hi rend="smallcaps">Frbr</hi> Model as a Conceptual Model in Development of Metadata for Digitized Thai Palm Leaf Manuscripts.” In 
+                        <hi rend="italic">Digital Libraries: Achievements, Challenges and Opportunities</hi>, 254–63. Berlin, Heidelberg: Springer Berlin Heidelberg.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Eming, Jutta, and Bettina Bildhauer.</hi> 2023. 
+                        <hi rend="italic">The Seven Sages of Rome</hi>. 
+                        <ptr target="https://www.seven-sages-of-rome.org/"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Institut de recherche et d’histoire des textes. 2024.</hi>
+                        <hi rend="italic">Jonas</hi>. Database. Edited by Marie-Larue Savoye. Institut de recherche et d’histoire des textes (IRHT)/CNRS. 
+                        <ref target="https://jonas.irht.cnrs.fr/">https://jonas.irht.cnrs.fr</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Sahle, Patrick.</hi> 2013. 
+                        <hi rend="italic">Digitale Editionsformen. Zum Umgang Mit Der Überlieferung Unter Den Bedingungen Des Medienwandels. Teil 3: Textbegriffe Und Recodierung. [Finale Print-Fassung]</hi>. Vol. 9. Norderstedt: BoD. 
+                        <ptr target="https://kups.ub.uni-koeln.de/5353/"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Schmidt, Johannes, and Patrick Sahle.</hi> 2023. “Das Werk des Soziologen – Ist da ein Text in diesem Nachlass?” In 
+                        <hi rend="italic">Der Text Und Seine (Re)Produktion</hi>, edited by Niklas Fröhlich, Bastian Politycki, Dirk Schäfer, and Annkathrin Sonder, 55:107–34. De Gruyter. 
+                        <ptr target="https://doi.org/10.1515/9783111006147-008"/>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SIMEONOV_Kristiyan_Sergeev_A_Multimodal_Approach_to_Historic">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>A Multimodal Approach to Historical Sources in the 18th–19th Century Balkans </title>
+                <author>
+                    <persName>
+                        <surname>Simeonov</surname>
+                        <forename>Kristiyan Sergeev</forename>
+                    </persName>
+                    <affiliation>Sofia University "St. Kliment Ohridski", Bulgaria</affiliation>
+                    <email>chrissimeonov20@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Baramova</surname>
+                        <forename>Maria</forename>
+                    </persName>
+                    <affiliation>Sofia University "St. Kliment Ohridski", Bulgaria</affiliation>
+                    <email>baramova@uni-sofia.bg</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-25T12:45:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>NLP</term>
+                    <term>History</term>
+                    <term>HTR</term>
+                    <term>Linguistics</term>
+                    <term>Multiodality</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>natural language processing</term>
+                    <term>optical character recognition and handwriting recognition</term>
+                    <term>text mining and analysis</term>
+                    <term>Archaeology</term>
+                    <term>Book and print history</term>
+                    <term>Linguistics</term>
+                    <term>Central/Eastern European Studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>We are conducting a text mining experiment as a case study to extract geographical information, which can later be integrated into the DigitalSEE platform (DigitalSEE 2024). This platform serves as a hub for digital humanities research focused on Southeastern Europe, aiming to fill the gap in digital representations of this underrepresented region. The collection aims to gather information from travelogues, woodcuts, and other relevant sources that provide insights about the Balkans and Southeastern Europe. These regions have been historically underrepresented in the context of digital humanities, and our project seeks to bring their rich cultural and historical heritage to a wider audience.</p>
+            <p>The information is structured in an XML file format. We have developed a TEI-compatible XML file structure adhering to the EpiDoc standard (Elliott et al. 2006–2022), which is commonly used for encoding inscriptions and ancient texts. Additionally, we are considering developing a CIDOC-CRM standard to enhance interoperability and semantic richness, allowing for more effective data integration and retrieval across different systems.</p>
+            <p>The sources we are working with are in 18th-century Latin, German, and Old French. These languages pose unique challenges due to their historical forms and variations. Our pipeline utilizes a combination of Transkribus (Calutto et al. 2019) and Kraken (Kiessling 2024). models to automatically transcribe the manuscripts with a high degree of automation. Transkribus provides a powerful platform for handwritten text recognition (HTR), while Kraken offers flexibility in training models for specific scripts and languages. </p>
+            <p>After exporting the data as TXT files, we developed an NLP algorithm that allows users to search all forms of a lemma by entering its root form—a feature crucial for inflected languages like the ones we are working with. The algorithm includes a chapter lookup function to identify the context and location of word forms within the text, enhancing the user's ability to navigate the documents efficiently. </p>
+            <p>For Latin manuscripts, we utilized the LatinCy (Burns 2023) natural language processing models in the spaCy NLP library. Similar tools and models were employed for German. We are currently exploring the use of the Classical Language Toolkit (CLTK) (Johnson et al. 2021) to develop a methodology for Old French, which is essential due to the limited modern computational resources available for processing historical languages.</p>
+            <p>To enhance the algorithm, we added a contextualization feature that provides the surrounding words for the searched lemmas, aiding in understanding the context in which a lemma appears. The algorithm was also optimized for multiple-word searches, providing tokenization and contextualization. This improvement allows for more nuanced searches and better comprehension of the text's content.</p>
+            <figure>
+                <graphic n="1001" width="16.1925cm" height="15.504583333333333cm" url="/tmp/tmpced562cr/Pictures/bea30d454092da02e123d1dee12a8fa5.png" rend="inline"/>
+            </figure>
+            <p>Figure 1. A lemma search result for 'belgrade' mentioning the 1739 Treaty of Belgrade in a page of Schad’s 1740 travelogue.</p>
+            <p>Subsequently, the extracted information is entered into the DigitalSEE platform, where researchers can assign appropriate metadata such as manuscript details, library catalogue numbers, relevant images from the manuscript, copyright information, and geographical coordinates linked to GeoNames and OpenStreetMap. If applicable, the Pleiades gazetteer is used for ancient objects, providing truly comprehensive information connected to external sources. This enriches the data and facilitates its use in GIS applications, allowing for spatial analysis and visualization of historical information.</p>
+            <figure>
+                <graphic n="1002" width="16.086666666666666cm" height="20.32cm" url="/tmp/tmpced562cr/Pictures/bea30d454092da02e123d1dee12a8fa5.png" rend="inline"/>
+            </figure>
+            <p>Figure 2. Snippet showing Belgrade geolocated on a map using coordinates extracted via semi-automated data mining.</p>
+            <p>This experiment is conducted by researchers from the DigitalSEE scientific group for digital humanities at Sofia University. The interdisciplinary team combines expertise in linguistics, computer science, and history to tackle the complexities of processing historical texts in multiple languages.</p>
+            <figure>
+                <graphic n="1003" width="17.145cm" height="10.835569444444445cm" url="/tmp/tmpced562cr/Pictures/bea30d454092da02e123d1dee12a8fa5.png" rend="inline"/>
+            </figure>
+            <p>Figure 3. Visualization of the project workflow showing five steps from sourcing travelogues to data integration using a Kamada-Kawai layout.</p>
+            <p>This poster proposes a multimodal approach to historical research, utilizing HTR, NLP pipelines, and GIS in a user-friendly manner. By integrating advanced computational methods with traditional humanities research, we aim to create a model that can be replicated for other underrepresented regions and languages, thereby contributing to the global digital humanities community.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Burns, Patrick J. (2023): “LatinCy: Synthetic Trained Pipelines for Latin NLP”. arXiv preprint arXiv:2305.04365v1. 
+                        <ref target="https://arxiv.org/abs/2305.04365v1">https://arxiv.org/abs/2305.04365v1</ref> [25.04.2025]
+                    </bibl>
+                    <bibl style="text-align: left; ">Colutto, Sabine / Kahle, Paul / Guenter, Helmut / Muehlberger, Georg (2019): “Transkribus. A Platform for Automated Text Recognition and Searching of Historical Documents”, in: 2019 15th International Conference on eScience (eScience), San Diego, CA, USA: 463–466. DOI: 10.1109/eScience.2019.00060</bibl>
+                    <bibl style="text-align: left; ">DigitalSEE. (2024): Digital repository. 
+                        <ref target="https://digitalsee.epistone.net/en/index">https://digitalsee.epistone.net/en/index</ref> [24.04.2025]
+                    </bibl>
+                    <bibl style="text-align: left; ">Elliott, Thomas / Bodard, Gabriel / Cayless, Henry / et al. (2006–2022): EpiDoc: Epigraphic Documents in TEI XML. Online material. 
+                        <ref target="https://epidoc.stoa.org/">https://epidoc.stoa.org/</ref> [25.04.2025]
+                    </bibl>
+                    <bibl style="text-align: left; ">Johnson, Kyle P. / Burns, Patrick J. / Stewart, John / Cook, Todd / Besnier, Clément / Mattingly, William J. B. (2021): “The Classical Language Toolkit: An NLP Framework for Pre-Modern Languages”, in: Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing: System Demonstrations, Online: Association for Computational Linguistics: 20–29. DOI: 10.18653/v1/2021.acl-demo.3. 
+                        <ref target="https://aclanthology.org/2021.acl-demo.3">https://aclanthology.org/2021.acl-demo.3</ref> [25.04.2025]
+                    </bibl>
+                    <bibl style="text-align: left; ">Kiessling, Benjamin (2024): The Kraken OCR system, version 5.2.0. Online material. 
+                        <ref target="https://kraken.re">https://kraken.re</ref> [25.04.2025]
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

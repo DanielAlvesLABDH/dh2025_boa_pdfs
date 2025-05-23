@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="GUHR_Svenja_Simone_Scene_Change_Detection_in_20th_Century_US">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Scene Change Detection in 20th-Century US-American Romance Fiction</title>
+                <author>
+                    <persName>
+                        <surname>Guhr</surname>
+                        <forename>Svenja Simone</forename>
+                    </persName>
+                    <affiliation>Technical University of Darmstadt, Germany; Literary Lab, Stanford University, USA</affiliation>
+                    <email>Guhr@linglit.tu-darmstadt.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Mao</surname>
+                        <forename>Huijun</forename>
+                    </persName>
+                    <affiliation>Literary Lab, Stanford University, USA</affiliation>
+                    <email>huijunm@stanford.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Lin</surname>
+                        <forename>Fengyi</forename>
+                    </persName>
+                    <affiliation>Literary Lab, Stanford University, USA</affiliation>
+                    <email>linfy@stanford.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Sherman</surname>
+                        <forename>Alexander J.</forename>
+                    </persName>
+                    <affiliation>Literary Lab, Stanford University, USA</affiliation>
+                    <email>ajsherm@stanford.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Algee-Hewitt</surname>
+                        <forename>Mark</forename>
+                    </persName>
+                    <affiliation>Literary Lab, Stanford University, USA</affiliation>
+                    <email>malgeehe@stanford.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>scene detection</term>
+                    <term>US-American Romance</term>
+                    <term>20th-century</term>
+                    <term>BERT</term>
+                    <term>text segmentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>artificial intelligence and machine learning</term>
+                    <term>cultural analytics</term>
+                    <term>natural language processing</term>
+                    <term>Cultural studies</term>
+                    <term>Film and cinema arts studies</term>
+                    <term>Linguistics</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">The segmentation of literary prose texts into meaningful units, such as event or scene segments, provides opportunities for comparative approaches to fiction based on smaller units than the entire text, but its automation is an ongoing challenge in computational literary studies (CLS). Although many computational methods require prior segmentation of texts due to a limited maximum size of input data, there is still a lack of standardized methods, and the division of novels into units of equal size or chapter boundaries are often used as heuristics, the latter often reflecting editorial decisions rather than homogeneous narrative segments (cf. Pethe et al. 2020; Bartsch et al. 2023; Stiemer et al. 2025). </p>
+                <p style="text-align: left; ">Scenes have proven to be the segment of choice for literary prose: Known as units from dramatic texts and film studies, they provide consistency about equal time, place, and characters, while “center[ing] around a particular action” (Gius et al. 2019). This relative self-containment enables systematic comparisons both within and across narratives. For instance, scenes set in the same location, such as a kitchen, can be grouped and analyzed in terms of recurring characters, gender stereotypes, spatial symbolism, or plot function. </p>
+                <p style="text-align: left; ">The automation of scene segmentation was first addressed by Gius et al. (2019) and continued in the Shared Task on Scene Segmentation (STSS) (see Zehe et al. 2021b). They provided guidelines for systematic scene annotation (Gius et al. 2021) and manually scene-annotated training data for the development of automated approaches for scene detection in German-language fiction. The best performing approach was a BERT-based model using weighted cross-entropy and the IOB2 scheme, focusing on detecting scene change positions rather than entire segments by Kurfali and Wirén (2021).</p>
+                <p style="text-align: left; ">Building on this work, we adopt the winning team's methodological foundation but update it by applying more recent transformer-based language models to an English-language corpus of genre fiction. Furthermore, we propose a shift in approach: Rather than attempting to identify exact sentence-level boundaries, which recent research has shown to be highly variable even among human annotators, we instead approximate scene change positions by predicting their likelihood within six-sentence segments. This decision is supported by findings from both our own annotation process of English fiction (Guhr et al. 2025) and recent work by Zehe et al. (2025) on German fiction, who introduce a “relaxed F1 score” to account for the fuzzy nature of scene boundaries. Their evaluation metric permits a margin of ±3 sentences between predicted and annotated scene changes, reflecting the observation that transitions typically occur gradually rather than at a single, identifiable point. Our own experience corroborates this view: Annotators often place scene boundaries within a window of several sentences, and disagreements tend to cluster around shifts in character focus or setting. Instead of weakening the strictness of the evaluation, our six-sentence segment approach offers a practical way to model this ambiguity while enabling reliable classification. By reframing the task as a probabilistic approximation of scene change occurrence within a passage, we offer a scalable and theoretically grounded method to narrative segmentation in literary texts.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Method</head>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Manual Annotation</head>
+                    <p style="text-align: left; ">We followed the scene annotation guidelines developed by Gius et al. (2021) to manually annotate ten novels from the 
+                        <hi rend="italic">Men Made in America</hi> series—a cohesive collection of U.S. romance novels by female authors, published by Harlequin between 1982 and 2002, with one novel for each of the 50 United States. This corpus is particularly suitable for scene-based segmentation due to its narrative homogeneity, consistent structure of its block-type and scenic writing style. Prior work has shown that genre fiction presents fewer annotation challenges for human annotators compared to more high-brow literature, which tends to involve subtler transitions and less rigid scene structure (Zehe et al. 2021a). However, the use of cliffhangers in these novels highlights the need for meaningful story segmentation rather than adherence to chapter boundaries (Figure 1). 
+                    </p>
+                    <figure>
+                        <graphic n="1001" width="16.002cm" height="1.8961805555555555cm" url="/tmp/tmplydwnuqi/Pictures/2792691d34b7896635bfe01ead7c61e2.png" rend="inline"/>
+                        <head>Visualization of manually annotated scene change points in the Alaska novel 
+                            <hi rend="italic">Found: His Perfect Wife</hi> by Ferrarella (2000) related to typographic elements in the text, such as chapter boundaries and asterisks. Cliffhangers and continuation points are highlighted where a chapter boundary does not correspond to a scene boundary, but the scene continues beyond the chapter or a new scene starts just before the beginning of a new chapter. The visualization was created using the GitMA package of Vauth et al. 2022 and manually enhanced with the orange stars.
+                        </head>
+                    </figure>
+                    <p style="text-align: left; ">The manual annotation was performed by a group of five expert annotators, with two annotators per novel, to enable comparison of annotations, discussion, calculation of inter-annotator agreement (see Figure 2), and creation of compromise gold annotations (572,907 words; 795 scene changes in the gold annotations). We used the annotation software CATMA 7.1 (Gius et al. 2024), which facilitates collaboration and comparison between the annotators as well as support for the exploration of the annotations with the python package GitMA (Vauth et al. 2022). While our inter-annotator agreement was rather low, differences in preference for segment length led to valuable discussions and compromise gold annotations.</p>
+                    <figure>
+                        <graphic n="1002" width="16.002cm" height="9.075208333333334cm" url="/tmp/tmplydwnuqi/Pictures/2792691d34b7896635bfe01ead7c61e2.png" rend="inline"/>
+                        <head>Calculation of the inter-annotator agreement (Cohen's k) with the mean of the manual annotation agreement, demonstrating the challenge of the task even for human annotators.</head>
+                    </figure>
+                    <p style="text-align: left; ">During the annotation process, we discovered that there are more scenes than non-scenes in a novel and scenes tend to have longer length than non-scenes. However, the distributions and lengths of scenes and non-scenes vary by novel (mean segment length: 869.10 words, standard deviation: ±799.47 words, min. 69.63, max. 1668.57), reflecting differences in narrative style. Non-scenes tend to contain reflective passages and summaries. Furthermore, our analysis of scene segments using BookNLP (Bamman 2021) revealed that scenes typically contain more narrative events than non-scenes, highlighting their inherently scenic nature and underscoring the value of identifying non-scene sections as distinct segments for separate analysis.</p>
+                    <figure>
+                        <graphic n="1003" width="15.92cm" height="8.5725cm" url="/tmp/tmplydwnuqi/Pictures/2792691d34b7896635bfe01ead7c61e2.png" rend="inline"/>
+                        <head>Frequency of events normalized on text-length in manually annotated scene segments classified as “scene” or “non-scene” of the romance novel 
+                            <hi rend="italic">Cowboy Be Mine</hi> by Leonard (2000), demonstrating the low number of events in non-scene segments.
+                        </head>
+                    </figure>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Automation Approaches</head>
+                    <p style="text-align: left; ">Following inter-annotator agreement calculations and annotator discussion, we decided to reduce the complexity of the annotation task for its automation to the pure detection of scene change positions by skipping the classification of a segment into “scene” and “non-scene”, which will follow in a planned subsequent approach to scene segmentation and classification. For the automation, we explored two approaches: (1) prompting a generative model and (2) designing and training a custom model.</p>
+                    <p style="text-align: left; ">1) We supplied various Large Language Models (LLMs)—including ChatGPT-4 and 4-o, Claude 3.5 (Sonnet and Haiku), Gemini Pro, and Llama 3.2—with scene annotation guidelines from Gius et al. (2021) and texts to be segmented. However, none of these models produced satisfactory results. For example, ChatGPT 4-o often mistakenly segmented a single conversation scene into multiple discrete scenes, likely due to shifts in the speaking character. Although our findings remain anecdotal due to the lack of a detailed quantitative evaluation, these initial experiments showed significant issues with accurate scene boundary detection by generative models, leading us to explore alternative approaches. </p>
+                    <p style="text-align: left; ">2) We decided to train a custom model that predicts the probability of a scene change point within a pre-segmented text (rolling window), allowing us to approximate the desired scene segments. For this purpose, we fine-tuned the transformer-based Universal Sentence Encoder (USE by Cer et al. (2018), pre-trained on modern English, model version from 2023 with total parameters: 470,928,387 (1.75 GB) and trainable parameters: 1,538 (6.01 KB)). USE was chosen because it generates sentence-level semantic embeddings, making it well-suited for detecting contextual shifts, such as changes in time, place, or characters, that signal scene transitions. We trained the model on an upsampled dataset of 30 texts, divided into six-sentence passages and annotated with binary labels indicating the presence (1) or absence (0) of a scene change. Random oversampling was applied to balance the dataset, reducing the majority baseline from 0.87 to 0.5 in the internal test set. As mentioned earlier, the choice of passage length was informed by our observation that scene transitions often occur gradually over several sentences, and that human annotators tend to disagree on scene change boundaries by about ±3 sentences. The training set contained ten manually annotated novels from the US romance corpus, supplemented by 20 automatically translated novels (German to English) from the annotated training set of the STSS shared task provided by Zehe et al. (2021b), yielding a total of 1,170,566 words with 2,045 manually annotated scene changes. </p>
+                    <figure>
+                        <table rend="rules">
+                            <row>
+                                <cell style="text-align: left;">Evaluation</cell>
+                                <cell style="text-align: left;">Accuracy</cell>
+                                <cell style="text-align: left;">F1</cell>
+                                <cell style="text-align: left;">Precision</cell>
+                                <cell style="text-align: left;">Recall</cell>
+                            </row>
+                            <row>
+                                <cell style="text-align: left;">
+                                    <p>Internal validation set </p>
+                                </cell>
+                                <cell style="text-align: left;"> 0.81</cell>
+                                <cell style="text-align: left;">0.65</cell>
+                                <cell style="text-align: left;">0.72</cell>
+                                <cell style="text-align: left;">0.61</cell>
+                            </row>
+                            <row>
+                                <cell style="text-align: left;">Independent test set</cell>
+                                <cell style="text-align: left;">0.83</cell>
+                                <cell style="text-align: left;">0.5</cell>
+                                <cell style="text-align: left;">0.59</cell>
+                                <cell style="text-align: left;">0.44</cell>
+                            </row>
+                        </table>
+                        <head>Performance of the best epoch of the USE model fine-tuned on 30 manually annotated training texts on the internal validation set (randomly divided into training and test) and evaluation results on the independent test set containing the last scenes of the manually annotated texts excluded from the training.</head>
+                    </figure>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results </head>
+                <p style="text-align: left; ">For evaluation (see Table in Figure 4), we used the internal validation set (randomly selected using the 
+                    <hi rend="italic">train_test_split</hi> function) and a test set containing the last five annotated scenes from each of the ten manually annotated romance novels that were previously excluded from training to create an independent test set of 50 scenes. These scenes were also segmented into six-sentence units to ensure that the test data reflected the target corpus while still allowing for an assessment of generalization. 
+                </p>
+                <p style="text-align: left; ">The evaluation showed that the model more often missed actual scene changes (false negatives) than incorrectly predicted them (false positives), with errors frequently linked to longer segment lengths, the presence and repetition of character names or pronouns, and ambiguities in the annotations themselves. These findings highlight the challenges of modelling scene transitions in literary texts, especially in cases where even human annotators diverge, reinforcing the need for approximation-based approaches rather than strict boundary prediction.</p>
+                <p style="text-align: left; ">A future approach could be a two-step classification task containing the six-sentence classification extended by a second classification task aiming for the detection of the first sentence of a new scene segment. Latest experiments, however, have not shown promising results yet.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p style="text-align: left; ">Our approach contributes a new method for scene segmentation in CLS by treating the task as a probabilistic classification problem over pre-segmented text windows. In doing so, we sidestep the problematic assumption of a sentence-level ground truth and instead embrace a fuzzy representation of scene boundaries. The six-sentence approximation offers a practical compromise between granularity and accuracy, allowing automated methods to work with the inherent ambiguity of literary narrative structure and providing a new perspective on meaningful literary text segmentation for CLS.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Code Availability</head>
+                <p style="text-align: left; ">Code available at: https://github.com/literarylab/scene_segmentation. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Acknowledgements</head>
+                <p style="text-align: left; ">We thank our annotators and collaborators at the Stanford Literary Lab—Mallen Clifton, Agnes Hilger, Jessica Monaco, and Ellen Yang—for their contributions to manual annotation, discussion, and discovery of unconventional scene structures.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bamman, David</hi> (2021): BookNLP. A Natural Language Processing Pipeline for Books. GitHub Repository. &lt;https://github.com/booknlp/booknlp&gt; [2025-05-06].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bartsch, Sabine, Evelyn Gius, Marcus Müller, Andrea Rapp und Thomas Weitin</hi> (2023): “Sinn und Segment. Wie die digitale Analysepraxis unsere Begriffe schärft.” Zeitschrift für digitale Geisteswissenschaften. DOI: 10.17175/2023_003.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Cer, Daniel, Yinfei Yang, Sheng-yi Kong, Nan Hua, Nicole Limtiaco, Rhomni St. John, Noah Constant, Mario Guajardo-Cespedes, Steve Yuan, Chris Tar, Yun-Hsuan Sung, Brian Strope, and Ray Kurzweil</hi> (2018): Universal Sentence Encoder. DOI: 10.48550/ARXIV.1803.11175.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Gius, Evelyn, Fotis Jannidis, Markus Krug, Albin Zehe, Andreas Hotho, Frank Puppe, Jonathan Krebs, Nils Reiter, Natalie Wiedmer, and Leonard Konle</hi> (2019): “Detection of Scenes in Fiction.” In Book of Abstracts of DH 2019 Utrecht. DOI: 10.34894/OOY9CE.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Gius, Evelyn, Carla Sökefeld, Lea Dümpelmann, Lucas Kaufmann, Annekea Schreiber, Svenja Guhr, Nathalie Wiedmer, and Fotis Jannidis</hi> (2021): “Guidelines for Detection of Scenes.” Zenodo. DOI: 10.5281/zenodo.4457177.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Gius, Evelyn, Jan Christoph Meister, Malte Meister, Marco Petris, Dominik Gerstorfer, and Mari Akazawa</hi> (2024): CATMA (V. 7.1.0). Zenodo. DOI: 10.5281/zenodo.12092195.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Guhr, Svenja, Huijun Mao, Fengyi Lin</hi> (2025): Rethinking Scene Segmentation. Advancing Automated Detection of Scene Changes in Literary Texts. 9th Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature at NAACL 2025. &lt;https://aclanthology.org/2025.latechclfl-1.8/&gt; [2025-05-06].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kurfalı, Murathan, and Mats Wirén</hi> (2021): “Breaking the Narrative: Scene Segmentation through Sequential Sentence Classification.” In Proceedings of the Shared Task on Scene Segmentation, 49–53. &lt;https://ceur-ws.org/Vol-3001/paper6.pdf&gt; [2025-05-06].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Mathet, Yann, Antoine Widlöcher, and Jean-Philippe Métivier</hi> (2015): The Unified and Holistic Method Gamma (γ) for Inter-Annotator Agreement Measure and Alignment. Computational Linguistics, 41(3): 437–479.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Pethe, Charuta, Allen Kim, and Steve Skiena</hi> (2020): “Chapter Captor: Text Segmentation in Novels.” In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP), 8373–83. DOI: 10.18653/v1/2020.emnlp-main.672.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Stiemer, Haimo, Hans Ole Hatzel, Chris Biemann, and Evelyn Gius</hi> (2025): Pause im Text. Zur Exploration semantisch konditionierter Sprechpausen in Hörbüchern. In Book of Abstracts of DHd2025, Bielefeld, 275–278. Zenodo. DOI: 10.5281/zenodo.14943031.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Vauth, Michael, Malte Meister, Hans Ole Hatzel, Dominik Gerstorfer, and Evelyn Gius</hi> (2022): GitMA (1.4.9). Zenodo. DOI: 10.5281/zenodo.5669221. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Zehe, Albin, Leonard Konle, Lea Dümpelmann, Evelyn Gius, Andreas Hotho, Fotis Jannidis, Lucas Kaufmann, Markus Krug, Frank Puppe, Nils Reiter, Annekea Schreiber, and Nathalie Wiedmer</hi> (2021a): “Detecting Scenes in Fiction: A New Segmentation Task.” In Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics: Main Volume, 3167–77. &lt;https://www.aclweb.org/anthology/2021.eacl-main.276&gt; [2025-05-06].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Zehe, Albin, Leonard Konle, Svenja Guhr, Lea Dümpelmann, Evelyn Gius, Andreas Hotho, Fotis Jannidis, Lucas Kaufmann, Markus Krug, Frank Puppe, Nils Reiter, and Annekea Schreiber</hi> (eds.) (2021b): Proceedings of the Shared Task on Scene Segmentation. Vol. 3001. CEUR Workshop Proceedings. Düsseldorf: CEUR, KONVENS 2021. &lt;https://ceur-ws.org/Vol-3001/&gt; [2025-05-06].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Zehe, Albin, Leonard Konle, Svenja Guhr, Lea Dümpelmann, Evelyn Gius, Andreas Hotho, Fotis Jannidis, Lucas Kaufmann, Markus Krug, Frank Puppe, Nils Reiter, and Annekea Schreiber</hi> (eds.) (2021c): “Shared Task on Scene Segmentation @ KONVENS 2021.” In Proceedings of the Shared Task on Scene Segmentation, edited by Albin Zehe, Leonard Konle, Lea Dümpelmann, Evelyn Gius, Svenja Guhr, Andreas Hotho, Fotis Jannidis, et al., 3001:1–21. CEUR Workshop Proceedings. Düsseldorf, Germany: CEUR. &lt;http://ceur-ws.org/Vol-3001/#paper1&gt; [2025-08-06].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Zehe, Albin, Elisabeth Fischer, and Andreas Hotho</hi> (2025): Assessing the State of the Art in Scene Segmentation. In Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers), 9922–9941, Albuquerque, New Mexico. &lt;https://aclanthology.org/2025.naacl-long.500/&gt; [2025-05-06]. 
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

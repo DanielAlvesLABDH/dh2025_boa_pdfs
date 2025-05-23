@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="TOBALINA_PULIDO_Leticia_Discrepancies_in_Annotative_Concorda">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Discrepancies in Annotative Concordance and Expertis: Analysing existing metrics in annotated archaeological fuzzy data</title>
+                <author>
+                    <persName>
+                        <surname>Martín-Rodilla</surname>
+                        <forename>Patricia</forename>
+                    </persName>
+                    <affiliation>Instituto de Estudios Gallegos Padre Sarmiento, CSIC</affiliation>
+                    <email>p.m.rodilla@iegps.csic.es</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Tobalina-Pulido</surname>
+                        <forename>Leticia</forename>
+                    </persName>
+                    <affiliation>Universidad de Cantabria, Spain</affiliation>
+                    <email>leticia.tobalina@unican.es</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T07:14:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>fuzzy logic</term>
+                    <term>archeology</term>
+                    <term>legacy data</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>data modeling</term>
+                    <term>Archaeology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <anchor xml:id="Hlk196896749"/>Introduction
+            </p>
+            <p>Archaeological data are typically collected over long periods by various individuals at different times and locations, often including legacy data throughout the curation process. Archaeological data are also known to have inherent vagueness, such as inaccuracies in dating systems or in categorical variables, such as the interpretation of the functions attributed to a site or phase, as we may not always have enough information to assign a precise value (Taheri et al. 2019). Furthermore, the uncertainty in data is often influenced by the person providing the value ("archaeological annotator").</p>
+            <p>For some years now, research in mathematics, computational sciences, and archaeological theory has addressed the uncertainty in archaeological data and its links to annotator expertise/confidence (Kae et al. 2023; Fusco 2016; Runz, 2008; Martin- Rodilla / González-Pérez 2019; Tobalina-Pulido / González-Pérez 2020; Martín- Rodilla / Tobalina Pulido 2024). This study uses real data and three annotators with varying expertise to evaluate concordance metrics for fuzzy annotations, applying computational linguistics and vector distance methods within fuzzy data models.</p>
+            <p>Inter-annotator agreement metrics</p>
+            <p>In computational linguistics and engineering, inter-annotator agreement metrics ensure the reliability of annotations in tasks like text labeling or image classification. Common measures include Cohen's Kappa, which accounts for chance agreement (-1 to 1, with 1 being perfect), and Fleiss's Kappa, suited for multiple annotators (also ranging from -1 to 1). Krippendorff's Alpha is highly adaptable, accommodating various data types, with values from 1 (unanimous agreement) to negative (systematic disagreement). For fuzzy data ([0,1] interval), these metrics often require data discretization1.</p>
+            <p>Vector distance-based approaches</p>
+            <p>Vector distance metrics offer a mathematical approach to measure the disagreement between annotators by analysing the membership vectors they produce. The main metrics used include:</p>
+            <p>1 Although other metrics like the Intraclass Correlation Coefficient (ICC) are valuable for continuous annotations, their complexity and limited applicability in archaeology suggest they are best reserved for future studies.</p>
+            <table rend="rules">
+                <row>
+                    <cell style="text-align: left;">Metric</cell>
+                    <cell style="text-align: left;">Description</cell>
+                    <cell style="text-align: left;">Range</cell>
+                    <cell style="text-align: left;">
+                        <hi rend="bold" style="font-size:9.5pt">KeyFeature</hi>
+                    </cell>
+                    <cell style="text-align: left;">Reference</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi rend="bold" style="font-size:9.5pt">EuclideanDistance</hi>
+                        </p>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi style="font-size:9.5pt">Measurestheoverallmagnitudeofdisagreementbysumming squareddifferencesacrossall</hi>
+                        </p>
+                        <p>dimensions.</p>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi style="font-size:9.5pt">0(agreement)to∞</hi>
+                        </p>
+                        <p>(disagreement)</p>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <hi style="font-size:9.5pt">Reflectsoverallmagnitudeofdisagreement.</hi>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi style="font-size:9.5pt">Strang,2009</hi>
+                        </p>
+                    </cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi rend="bold" style="font-size:9.5pt">ManhattanDistance</hi>
+                        </p>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi style="font-size:9.5pt">Capturescumulativedisagreementbysummingthe absolutedifferencesbetween</hi>
+                        </p>
+                        <p>annotations.</p>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi style="font-size:9.5pt">0(agreement)to∞</hi>
+                        </p>
+                        <p>(disagreement)</p>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <hi style="font-size:9.5pt">Focusesontotalcumulative disagreement.</hi>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi style="font-size:9.5pt">Krause,1975</hi>
+                        </p>
+                    </cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi rend="bold" style="font-size:9.5pt">CosineDistance</hi>
+                        </p>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi style="font-size:9.5pt">Evaluatessimilarityinvectororientation,focusingonpatternsorproportionswhileignoring</hi>
+                        </p>
+                        <p>magnitude.</p>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi style="font-size:9.5pt">0(disagreement)to1(perfectagreement)</hi>
+                        </p>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi style="font-size:9.5pt">Highlightspatternsovermagnitude.</hi>
+                        </p>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi style="font-size:9.5pt">Singhal,2001</hi>
+                        </p>
+                    </cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <p>Chebyshev</p>
+                        <p>Distance</p>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi style="font-size:9.5pt">Identifiesthelargestsingle</hi>
+                        </p>
+                        <p>
+                            <hi style="font-size:9.5pt">disagreementinanydimension.</hi>
+                        </p>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi style="font-size:9.5pt">0(agreement)to∞</hi>
+                        </p>
+                        <p>(disagreement)</p>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi style="font-size:9.5pt">Emphasizestheworst-</hi>
+                        </p>
+                        <p>casediscrepancy.</p>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>Chebyshev,</p>
+                        <p>1859</p>
+                    </cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold" style="font-size:9.5pt">PearsonCorrelation Coefficient</hi>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <hi style="font-size:9.5pt">Areferencemetricforcalculatingthelinearrelationshipbetweentwodatasets.</hi>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi style="font-size:9.5pt">-1(inverse</hi>
+                        </p>
+                        <p>
+                            <hi style="font-size:9.5pt">correlation)to1(perfectpositivecorrelation)</hi>
+                        </p>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <hi style="font-size:9.5pt">Measuresthelinearrelationshipbetweentwovariables.</hi>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi style="font-size:9.5pt">Pearson,1895</hi>
+                        </p>
+                    </cell>
+                </row>
+            </table>
+            <p>Table 1. Summary of Distance and Correlation Metrics</p>
+            <p>All the described metrics require pairwise comparisons of annotators. While more advanced mathematical approaches exist to address annotator disagreement, their complexity and steep learning curve make them less practical for use by archaeologists and cultural heritage professionals. Therefore, we focus on well-known and straightforward vector distance metrics.</p>
+            <p>Case Study</p>
+            <p>Archaeological fuzzy data case study</p>
+            <p>The Santa María de Hito site, located in Valderredible (Cantabria, Spain), has provided valuable chronological data through both ceramic materials and absolute radiocarbon dating. The Roman levels date the villa's use to the 3rd-4th centuries. Several radiocarbon dates from the necropolis offer high chronological precision2. While the necropolis' function is easier to define with fewer uncertainties, the exact use of the villa remains less clear, though it is well-defined in the literature. The data has been extracted from the article "Dataciones absolutas para la Arqueología de época histórica en Cantabria" (Gutiérrez Cuenca 2002). This site is suitable for uncertainty analysis because of its chronological and functional aspects. The ambiguity surrounding the villa's function— whether residential, agricultural, or both—enables the evaluation of how annotators with varying expertise levels influence data interpretation and the assigned uncertainty. Three annotators with varying levels of expertise in both the periods and the site's usage were selected to assess the variations in annotation. Three annotators with varying expertise in the site's periods and usage were selected to assess annotation variations. They were provided with a template to include their annotations, which included the following fields: annotator's initials, categories of use (e.g., villa, religious, habitat), certainty about the assigned use, expertise in each use, periods assigned to the site, certainty of chronological</p>
+            <p>2 With the following results: CSIC-838 (1430±40), CSIC-840 (1360±40), CSIC-837 (1320±50), and CSIC-</p>
+            <p>839 (980±40), according to E. Gutiérrez Cuenca (2002).</p>
+            <p>attribution, and expertise in each period. The variables were rated on a scale from 0 to 1, with decimal values allowed. The annotators and their characteristics are as follows:</p>
+            <table rend="rules">
+                <row>
+                    <cell style="text-align: left;">Annotator</cell>
+                    <cell style="text-align: left;">
+                        <hi rend="bold" style="font-size:9pt">BackgroundandExpertise</hi>
+                    </cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold" style="font-size:9pt">Annotator1(EAG)</hi>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <hi style="font-size:9pt">Notanarchaeologist,buthasabackgroundinhumanitieswithafocusontheRomanperiod.</hi>
+                    </cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold" style="font-size:9pt">Annotator2(CAB)</hi>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi style="font-size:9pt">Archaeologist,butintheearlystagesoftraining,currentlyinthefirstyearofdoctoralthesis.</hi>
+                        </p>
+                        <p>
+                            <hi style="font-size:9pt">SpecializesintheEarlyMiddleAges.</hi>
+                        </p>
+                    </cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold" style="font-size:9pt">Annotator3(DFA)</hi>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <hi style="font-size:9pt">Companyarchaeologist,inthefinalyearsofdoctoralthesis.SpecializesintheMedievalperiod.</hi>
+                    </cell>
+                </row>
+            </table>
+            <p>Table 2. Characteristics of Annotators</p>
+            <p>Thus, the annotation made is as follows:</p>
+            <table rend="rules">
+                <row>
+                    <cell style="text-align: left;">Annotation</cell>
+                    <cell style="text-align: left;">Use</cell>
+                    <cell style="text-align: left;">
+                        <hi rend="bold">ExpertiseUse</hi>
+                    </cell>
+                    <cell style="text-align: left;">Chronology</cell>
+                    <cell style="text-align: left;">
+                        <hi rend="bold">ExpertiseChronology</hi>
+                    </cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">HITO_Annotation1</cell>
+                    <cell style="text-align: left;">[0,1,0.8,0.5]</cell>
+                    <cell style="text-align: left;">[0,0,0,0]</cell>
+                    <cell style="text-align: left;">[0.9,0.3,1,0.1,0]</cell>
+                    <cell style="text-align: left;">[0.9,0.7,0.1,0,0]</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">HITO_Annotation2</cell>
+                    <cell style="text-align: left;">[1,0,1,0]</cell>
+                    <cell style="text-align: left;">[0.8,0,0.6,0]</cell>
+                    <cell style="text-align: left;">[0,1,0,0.7,0.4]</cell>
+                    <cell style="text-align: left;">[0,0.8,0,0.8,0.6]</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">HITO_Annotation3</cell>
+                    <cell style="text-align: left;">[0,1,1,0.75]</cell>
+                    <cell style="text-align: left;">[0,0.75,0.5,0.5]</cell>
+                    <cell style="text-align: left;">[1,0.5,0.75,1,0]</cell>
+                    <cell style="text-align: left;">[0.7,0.75,0.75,0.75,0]</cell>
+                </row>
+            </table>
+            <p>Table 3. Annotations Made by the Annotators</p>
+            <p>Measurement Analysis</p>
+            <p>The main goal of the analysis is to compare which metrics are applicable to assess the agreement between annotators and reflect the actual distances between the different annotators' positions. Two major types of metrics have been applied: agreement between annotators and distance between vectors.</p>
+            <table rend="rules">
+                <row>
+                    <cell style="text-align: left;">Matches</cell>
+                    <cell style="text-align: left;">
+                        <p>Cohen’s</p>
+                        <p>kappa</p>
+                    </cell>
+                    <cell style="text-align: left;">Fleissconcordanceindex</cell>
+                    <cell style="text-align: left;">
+                        <hi rend="bold" style="font-size:9pt">Krippendorff'sAlpha</hi>
+                    </cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold" style="font-size:8.5pt">USEAnnotator1vs.Annotator2</hi>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <hi style="font-size:9pt">-0.33</hi>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi rend="bold color(FF0000)" style="font-size:9pt">-0.1020</hi>
+                        </p>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi style="font-size:9pt">-2.882</hi>
+                        </p>
+                    </cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold" style="font-size:8.5pt">USEAnnotator1vs.Annotator3</hi>
+                    </cell>
+                    <cell style="text-align: left;">0.33</cell>
+                    <cell style="text-align: left;"/>
+                    <cell style="text-align: left;"/>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold" style="font-size:8.5pt">USEAnnotator2vs.Annotator3</hi>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <hi style="font-size:9pt">-0.199</hi>
+                    </cell>
+                    <cell style="text-align: left;"/>
+                    <cell style="text-align: left;"/>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold" style="font-size:8.5pt">CHRONOLOGYAnnotator1vs.Annotator2</hi>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <hi rend="bold color(FF0000)" style="font-size:9pt">-0.136</hi>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi style="font-size:9pt">-0.095</hi>
+                        </p>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>
+                            <hi rend="bold color(FF0000)" style="font-size:9pt">-3.375</hi>
+                        </p>
+                    </cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold" style="font-size:8.5pt">CHRONOLOGYAnnotator1vs.Annotator3</hi>
+                    </cell>
+                    <cell style="text-align: left;">0.090</cell>
+                    <cell style="text-align: left;"/>
+                    <cell style="text-align: left;"/>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold" style="font-size:8.5pt">CHRONOLOGYAnnotator2vs.Annotator3</hi>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <hi style="font-size:9pt">-0.190</hi>
+                    </cell>
+                    <cell style="text-align: left;"/>
+                    <cell style="text-align: left;"/>
+                </row>
+            </table>
+            <p>Table 4. Results obtained for inter-annotation metrics</p>
+            <p>Cohen's Kappa indicates overall disagreement in use and chronology, with slight agreement between annotators 1 and 3 in chronology. Fleiss concordance index and Krippendorff’s Alpha confirm this lack of agreement through negative values. Table 5 provides additional insights into these discrepancies.</p>
+            <table rend="rules">
+                <row>
+                    <cell style="text-align: left;">Matches</cell>
+                    <cell style="text-align: left;">
+                        <p>Euclidean</p>
+                        <p>distance</p>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>Manhattan</p>
+                        <p>distance</p>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>Cosine</p>
+                        <p>distance</p>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>Chebyshev</p>
+                        <p>distance</p>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <p>Pearsoncorrelation</p>
+                        <p>index</p>
+                    </cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold" style="font-size:7.5pt">USEAnnotator1vs.Annotator2</hi>
+                    </cell>
+                    <cell style="text-align: left;">1.512</cell>
+                    <cell style="text-align: left;">2.7</cell>
+                    <cell style="text-align: left;">0.588</cell>
+                    <cell style="text-align: left;">1</cell>
+                    <cell style="text-align: left;">0.464</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold" style="font-size:7.5pt">USEAnnotator1vs.Annotator3</hi>
+                    </cell>
+                    <cell style="text-align: left;">0.320</cell>
+                    <cell style="text-align: left;">0.44G</cell>
+                    <cell style="text-align: left;">0.011</cell>
+                    <cell style="text-align: left;">0.25</cell>
+                    <cell style="text-align: left;">0.G61</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold" style="font-size:7.5pt">USEAnnotator2vs.Annotator3</hi>
+                    </cell>
+                    <cell style="text-align: left;">1.600</cell>
+                    <cell style="text-align: left;">2.75</cell>
+                    <cell style="text-align: left;">0.558</cell>
+                    <cell style="text-align: left;">1</cell>
+                    <cell style="text-align: left;">
+                        <hi style="font-size:8.5pt">-0.457</hi>
+                    </cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold" style="font-size:7.5pt">CHRONOLOGYAnnotator1vs.Annotator2</hi>
+                    </cell>
+                    <cell style="text-align: left;">1.67G</cell>
+                    <cell style="text-align: left;">3.6</cell>
+                    <cell style="text-align: left;">0.7G1</cell>
+                    <cell style="text-align: left;">1</cell>
+                    <cell style="text-align: left;">
+                        <hi rend="bold color(FF0000)" style="font-size:8.5pt">-0.736</hi>
+                    </cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold" style="font-size:7.5pt">CHRONOLOGYAnnotator1vs.Annotator3</hi>
+                    </cell>
+                    <cell style="text-align: left;">0.G60</cell>
+                    <cell style="text-align: left;">1.450</cell>
+                    <cell style="text-align: left;">0.180</cell>
+                    <cell style="text-align: left;">0.9</cell>
+                    <cell style="text-align: left;">0.524</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold" style="font-size:7.5pt">CHRONOLOGYAnnotator2vs.Annotator3</hi>
+                    </cell>
+                    <cell style="text-align: left;">1.436</cell>
+                    <cell style="text-align: left;">2.949</cell>
+                    <cell style="text-align: left;">0.442</cell>
+                    <cell style="text-align: left;">1</cell>
+                    <cell style="text-align: left;">
+                        <hi style="font-size:8.5pt">-0.225</hi>
+                    </cell>
+                </row>
+            </table>
+            <p>Table 5. Results of obtained for mathematical metrics</p>
+            <p>
+                <hi style="font-size:10.5pt">In both Euclidean and Manhattan distances, higher values reflect greater discrepancies, with annotators 1 and 3 showing closer agreement than with annotator 2. Cosine distance, which measures vector orientation similarity, also identifies annotators 1 and 3 as the most aligned. Chebyshev distance reinforces this, showing the least disagreement (0.9) between annotators 1 and 3, compared to others (1.0). Correlation analysis, such as Pearson’s, highlights a strong positive correlation for annotators 1 and 3 (0.961) and weaker or negative correlations for others (-0.457 for 2 vs. 3). Together, these metrics reveal higher concordance between annotators 1 and 3, with annotator 2 being less aligned.</hi>
+            </p>
+            <p>Conclusions</p>
+            <p>The results highlight a low level of agreement between the annotators (with corresponds to the current works on the importance of this dimension on the study of vagueness in archaeological data). However, there is some moderate agreement between annotator 1 and 3, which could be explored further. Current data show disagreement in use and chronology but do not consider annotator expertise. Future work will incorporate expertise adjustments through direct smoothing (Pavlov / Nott, 2016) and proportional smoothing (Li / Chen, 2006), refining annotations by adjusting for expertise. These methods aim to reduce uncertainty and better integrate annotator expertise into the analysis. Its ability to measure interpretations is key to standardizing methods, improving collaboration, and enhancing objectivity in a field that often reinterprets legacy data</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <anchor xml:id="Hlk196896699"/>
+                        <hi rend="bold">Chebyshev, P. L. (1859)</hi>: “Théorie des mécanismes connus sous le nom de parallélogrammes”, in: 
+                        <hi rend="italic">Mémoires des savants étrangers présentés à l’Académie de Saint-Pétersbourg</hi>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Fusco, Johanna (2016)</hi>: 
+                        <hi rend="italic">Analyse des dynamiques spatio-temporelles des systèmes de peuplement dans un contexte d’incertitude: Application à l’archéologie spatiale (PhD)</hi>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hazewinkel, M. (2001)</hi>: “Chebyshev Distance”, in: 
+                        <hi rend="italic">Encyclopedia of Mathematics</hi>. Springer.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Kae, V. / Sobotková, A. / Heřmánková, P. (2023)</hi>: “Modeling temporal uncertainty in historical datasets”, in: 
+                        <hi rend="italic">Workshop on Computational Humanities Research</hi>. Recuperado de https://api.semanticscholar.org/CorpusID:265429284.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Krause, E. F. (1975)</hi>: 
+                        <hi rend="italic">Taxicab Geometry: An Adventure in Non-Euclidean Geometry</hi>. Addison-Wesley.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Martin-Rodilla, Patricia / Gonzalez-Perez, Cesar (2019)</hi>: “Conceptualization and non-relational implementation of ontological and epistemic vagueness of information in digital humanities”, in: 
+                        <hi rend="italic">Informatics</hi> 6.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Pearson, K. (1895)</hi>: “Note on regression and inheritance in the case of two parents”, in: 
+                        <hi rend="italic">Proceedings of the Royal Society of London</hi> 58: 240–242.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Singhal, A. (2001)</hi>: “Modern information retrieval: A brief overview”, in: 
+                        <hi rend="italic">IEEE Data Engineering Bulletin</hi>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Strang, G. (2009)</hi>: 
+                        <hi rend="italic">Introduction to Linear Algebra</hi>. Wellesley-Cambridge Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Taheri, S. M. / Ghadim, F. I. / Kabirian, M. (2019)</hi>: “Application of fuzzy inference systems in archaeology”, in: 
+                        <hi rend="italic">7th Iranian Joint Congress on Fuzzy and Intelligent Systems (CFIS)</hi>: 1–4. https://doi.org/10.1109/CFIS.2019.8692167.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Tobalina-Pulido, Leticia / Gonzalez-Perez, Cesar (2020)</hi>: “Valoración de la calidad de los datos arqueológicos a través de la gestión de su vaguedad. Aplicación al estudio del poblamiento tardorromano”, in: 
+                        <hi rend="italic">Complutum</hi> 31(2): 343–360. https://doi.org/10.5209/cmpl.72488.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Runz, Cyrile de (2008)</hi>: 
+                        <hi rend="italic">Imperfection, temps et espace : modélisation, analyse et visualisation dans un SIG archéologique (Tesis doctoral)</hi>. Recuperado de https://tel.archives-ouvertes.fr/tel-00560668
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="JOLIVET_Vincent_A__Cathedral_of_Digital_Data___An_Applicatio">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">A "Cathedral of Digital Data". An Application for the Medieval Registers of Notre-Dame</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Jolivet</surname>
+                        <forename>Vincent</forename>
+                    </persName>
+                    <affiliation>École des chartes, France</affiliation>
+                    <email>vincent.jolivet@chartes.psl.eu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Terriel</surname>
+                        <forename>Lucas</forename>
+                    </persName>
+                    <affiliation>École des chartes, France</affiliation>
+                    <email>lucas.terriel@chartes.psl.eu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T17:35:33.928272592</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>FAIR</term>
+                    <term>APIs</term>
+                    <term>Scholarly editions</term>
+                    <term>Worflows</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>data</term>
+                    <term>object</term>
+                    <term>and artefact preservation</term>
+                    <term>digital archiving</term>
+                    <term>open access methods</term>
+                    <term>History</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Following the fire at Notre-Dame de Paris cathedral, several research programs were launched, including the eNDP project<ref n="1" target="ftn1"/>: “Notre Dame de Paris and its cloister: places, people, life, from 1326 to 1504”, funded by the French National Research Agency (ANR). This project focuses on the chapter’s medieval archives, preserved and digitised by the National Archives<ref n="2" target="ftn2"/> (approximately 15,000 handwritten pages, mostly in Latin). Launched in 2020, the project aims to renew our knowledge about Notre-Dame and its cloister in the Middle Ages<ref n="3" target="ftn3"/>. To make this textual corpus usable, we have developed an HTR model and implemented a NLP pipeline. While the methodology for acquiring handwritten texts is now well-established in the field of digital humanities, the valorization of the artifacts generated at each stage of the pipeline (images, transcription models, annotations, transcriptions, indexes) remains a major challenge.
+            </p>
+            <p>We would like to present and discuss the solutions we have designed for the valorization of these heterogeneous and linked data collections. In our view, this development must address two key challenges: research and sustainability. With the eNDP application 
+                <ptr target="https://endp.chartes.psl.eu/"/>, we have attempted to take both of these challenges into account, with the idea that available archiving platforms (Nakala, Zenodo) could serve as a foundation for the application. In concrete terms, we used these repositories as the application's backend and leveraged their APIs to link the editorialized data within a frontend developed using the Vue.js framework. With this presentation of the eNDP application, we aim to propose a reproducible approach for discussion, in response to the call to preserve research data as cultural heritage.
+            </p>
+            <div type="div1" rend="DH-Heading1">
+                <head>Sharing and archiving resources</head>
+                <p>Ensuring long-term access to the resources produced (reading and annotation models, ground truth) is essential in the context of Open Science. The creation of ground truth, requiring expert validation, is costly. Well-documented, it can be used to improve or train new models. The energy cost of computing the models is also non-negligible, and only their sharing, for the benefit of the research community, can justify the investment. We have therefore created a repository for each resource (images, ground truth, reading models, HTR transcription) on Nakala and Zenodo. These repositories are flagged up in HTR-United to improve their visibility and accessibility as much as possible. These platforms ensure compliance with the FAIR principles “by design”: attribution of a DOI for identification and citability purposes, detailed description using widely adopted metadata vocabularies such as Dublin Core, access via APIs in formats such as JSON-LD for interoperability and which enable communication with the eNDP application.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Documenting workflows</head>
+                <p>But more than isolated resources, it is the entire data production process that needs to be documented in order to enable its reproduction. This is a question of "traceability": researchers must be able to understand how the corpus was constructed, to properly assess its biases, and to reproduce it if necessary. To document this entire workflow, the eNDP application provides a visual display (Fig. 1) that allows users to quickly grasp the role of each dataset in the chain, understand how the data was produced, and access the corresponding repository (Zenodo or Nakala), as well as the source code relevant to its production (Github). The relationships between datasets and scripts, scattered across different repositories, are thus clarified, providing a synoptic view of a documentation process that we often find fragmented due to traditional methods and systems of data sharing. The challenge is not insignificant: while methods for documenting data and source code are well tried and tested, we believe there is still a need to reflect on the necessary documentation of workflows.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Ease of reading</head>
+                <p>At each stage of the documented workflow, the data format is technical, designed for processing rather than human reading. To put it simply, a medievalist doesn't get much out of a collection of XML ALTO files. We have designed a tailored interface to enable researchers to take full advantage of the connection between the different representations of the corpus: high-definition images for the documentary browsing, an overlay text layer as a reading aid, and annotated text indexes for targeted searches. For example, the images of the registers and their HTR transcription, archived on Nakala in two separate collections, are linked in the eNDP application’s IIIF viewer using Nakala's APIs (Fig. 2), including the IIIF Image 3.0 API. This linking of text and image in an interactive facsimile (Fig. 3) offers assisted and contextualized reading, with the source images connected to the archival metadata exposed on Nakala as well as in the National Archives inventory.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Digging into the corpus</head>
+                <p>Researchers also need to search this complex and imperfect medieval corpus because of HTR errors. A NLP pipeline (post-correction, lemmatization, NER) has been designed to refine and enrich the transcriptions, in order to offer advanced search functionalities. The eNDP application uses the NoSketch Engine indexing engine via its API. The CQL (Corpus Query Language) query language allows for the exploitation of all linguistic annotations (lemmatization and named entities), as well as structural information (layout analysis).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Recording acquired knowledge</head>
+                <p>These advanced search features promote discoveries, particularly by facilitating the identification of individuals associated with the chapter, with the ability to trace their careers. A prosopographical database (SQLite) and an API (FastAPI) for data exposure have been developed to record and share this knowledge, accumulated collaboratively by researchers. The database currently includes around 1,150 individual records, which are continually enriched through ongoing analysis. These records help reconstruct the society of the Notre-Dame chapter and trace the events in individuals’ lives. The reference to the page of the register detailing an event in a career is always recorded, ensuring the essential link back to the primary source. Finally, these records are linked to external knowledge bases such as Wikidata, data.bnf, and VIAF to promote mutual enrichment between data silos.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p>With the eNDP application, we aim to present and discuss a method for valorizing and editorializing resources scattered across different repositories. Our approach seeks to document not only the datasets but also the entire processing workflow: the goal is to ensure data traceability and make the resources (source code and models) truly reusable. The idea is to use research data sharing platforms, not only to archive and expose raw data, but also to build applications based on the APIs of these platforms to link scattered data and provide users with effective means to appropriate and explore these resources. Thanks to its microservices architecture, the eNDP application will easily accommodate new data (e.g., XML TEI editions) and link existing data to new, more specialized reference frameworks, such as those from the "chantier Notre-Dame"<ref n="4" target="ftn4"/>, to deepen knowledge about the cathedral’s structure. The eNDP application constitutes a genuine "digital archive of the written heritage" of the cathedral, accessible for reading and open to research, contributing to the preservation and enrichment of the memory of this emblematic Parisian site from the Middle Ages.
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpvpwwyd5w/Pictures/a99cc6f25dcf621cd1e930fc4cedeb61.png"/>
+                    </figure>
+                </p>
+                <p>Figure 1: The eNDP application offers a synoptic visualisation of the data workflow.</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpvpwwyd5w/Pictures/a99cc6f25dcf621cd1e930fc4cedeb61.png"/>
+                    </figure>Figure 2: The eNDP microservices architecture.
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpvpwwyd5w/Pictures/a99cc6f25dcf621cd1e930fc4cedeb61.png"/>
+                    </figure>Figure 3: Different ways of using facsimiles (image with text overlay): images and the text layer stored in different Nakala repositories are linked using the APIs of this repository to enhance reading. They are also linked to the archival metadata to ensure identification of the primary source.
+                </p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn1" rend="footnote text" n="1">
+                    
+                </note>
+<note xml:id="ftn2" rend="footnote text" n="2">
+                    
+                </note>
+<note xml:id="ftn3" rend="footnote text" n="3">Claustre, J. and Smith, D. (2022), “e-NDP Notre-Dame de Paris et son cloître (1326-1504)”, 
+                    <hi rend="italic">Revue Mabillon</hi>, 33, t. 94, p. 218-226.
+                </note>
+<note xml:id="ftn4" rend="footnote text" n="4">
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Jolivet, Vincent / Terriel, Lucas</hi> (2004):“Les registres médiévaux de Notre Dame: une archive numérique ouverte de la vie du chapitre”, in 
+                        <hi rend="italic">Journées d'études du groupe de travail “données numériques” du chantier scientifique Notre-Dame de Paris. Une cathédrale de données numériques et connaissances pluridisciplinaires</hi>, CNRS; MAP - UPR CNRS 2002; Ministère de la Culture, June 2024, Marseille, France ⟨
+                        <ptr target="https://hal.science/hal-04638174"/>⟩[29.04.2025].
+                    </bibl>
+                    <bibl>Terriel, Lucas / Jolivet, Vincent (2024):“L’application e-NDP : une archive numérique au service des chercheurs”, in 
+                        <hi rend="italic">Colloque e-NDP. Corpus numériques pour l'histoire de Notre-Dame de Paris. Projet e-NDP Notre-Dame de Paris et son cloître</hi>, Université Paris Cité - ICT; École nationale des chartes; Centre Jean Mabillon; Bibliothèque nationale de France; Bibliothèque Mazarine; Institut de France; Archives nationales; Paris 1 / CNRS - LAMOP, May 2024, Bibliothèque nationale de France, France ⟨
+                        <ptr target="https://hal.science/hal-04589761"/>⟩[29.04.2025].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

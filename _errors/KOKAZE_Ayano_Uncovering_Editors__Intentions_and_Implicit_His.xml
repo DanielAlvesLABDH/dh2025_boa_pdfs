@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KOKAZE_Ayano_Uncovering_Editors__Intentions_and_Implicit_His">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Uncovering Editors' Intentions and Implicit Historical Perspectives through TEI Markup: Case Study on Dai Nihon Shiryo</title>
+                <author>
+                    <persName>
+                        <surname>Kokaze</surname>
+                        <forename>Ayano</forename>
+                    </persName>
+                    <affiliation>Historiographical Institute The University of Tokyo, Japan</affiliation>
+                    <email>a-kokaze@hi.u-tokyo.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Nakamura</surname>
+                        <forename>Satoru</forename>
+                    </persName>
+                    <affiliation>Historiographical Institute The University of Tokyo, Japan</affiliation>
+                    <email>nakamura@hi.u-tokyo.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Yamada</surname>
+                        <forename>Taizo</forename>
+                    </persName>
+                    <affiliation>Historiographical Institute The University of Tokyo, Japan</affiliation>
+                    <email>t_yamada@hi.u-tokyo.ac.jp</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T18:15:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>TEI</term>
+                    <term>historiography</term>
+                    <term>digital scholarly editing</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>scholarly editing and editions development</term>
+                    <term>analysis</term>
+                    <term>and methods</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>History</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>The Historiographical Institute of The University of Tokyo has compiled foundational historical collections for studying Japanese history. Among these collections, Dai Nihon Shiryo, first published in 1901, stands out as one of its most representative works. The Dai Nihon Shiryo series is an ongoing and comprehensive attempt to cover all major events mentioned in the existing records between the years 887 and 1867. This project reevaluates the historiographical practices of Dai Nihon Shiryo, a cornerstone collection of the Historiographical Institute, by addressing the markup of Bouchū (marginal notes) and Warichū (interlinear annotations) through the TEI. The aim is to explore how the editors articulate temporal layers within Dai Nihon Shiryo and uncover the underlying editorial intentions.</p>
+            <p>Vertical writing in East Asian materials presents unique challenges for TEI/XML, many of which fall outside existing guidelines, as seen in studies addressing Ruby annotations (Okada et al. 2023) and non-SI units (Kokaze et al. 2019). As for Warichū, current discussions remain particularly active within Japan, with structural models proposed by TEI-EAJ and Wang (TEI-EAJ 2020; Wang 2022). Traditionally, the treatment of Warichū has been limited to surface-level solutions focused on representing their visual layout, such as column formatting. We propose, however, to examine the functional roles that Bouchū and Warichū play in Dai Nihon Shiryo, particularly their embedded temporal semantics, and explore a more functional approach to their markup.</p>
+            <p>Before addressing specific markup, I first describe the characteristics of Dai Nihon Shiryo. These series are organized chronologically, allowing users to reference historical events. A distinctive feature is that each historical event is summarized in a heading, which also serves as an index, followed by excerpts from primary sources that validate the event. In essence, Dai Nihon Shiryo functions as a curated index for studying Japanese history, meticulously compiled by historians in the field. As such, it is frequently used as a starting point for historical surveys.</p>
+            <p>The first topic concerns the markup of unclear or partially legible characters, often accompanied by Bouchū. While typically marked up using the 
+                <hi rend="color(188038)">&lt;note&gt;</hi> tag, this project integrates Bouchū, focusing specifically on those related to unclear or partially legible characters, into the main text as part of transcription. Missing or unclear characters are categorized into five levels of certainty, ranging from high to unknown (as illustrated in Figure 1). TEI elements such as 
+                <hi rend="color(188038)">&lt;choice&gt;</hi>, 
+                <hi rend="color(188038)">&lt;unclear&gt;</hi>, and 
+                <hi rend="color(188038)">&lt;supplied&gt;</hi> are used to represent these levels, with attributes like 
+                <hi rend="color(188038)">@quantity</hi> and 
+                <hi rend="color(188038)">@cert</hi> indicating character counts and degrees of certainty. This approach avoids reliance on the 
+                <hi rend="color(188038)">&lt;note&gt;</hi> tag and provides a structured method for representing these annotations.
+            </p>
+            <figure>
+                <graphic n="1001" width="7.984861111111111cm" height="4.990538888888889cm" url="/tmp/tmpsiljf5f5/Pictures/06e4f21659f92cc01fc49dcf31a155a9.png" rend="inline"/>
+            </figure>
+            <p>Figure 1 Layer Structure within Dai Nihon Shiryo</p>
+            <p>The next topic focuses on representing temporal layers, primarily in Warichū (see Figure 2). The historical materials quoted in Dai Nihon Shiryo often include annotations written at various points in the past. The editors have carefully distinguished these from the original text, using interlinear annotations, marginal notes, or inserted phrases to create the transcription. Furthermore, annotations added by the editors are further differentiated, often appearing as Warichū accompanied by circles or Bouchū enclosed in parentheses. Pre-historiographical annotations capture fragmented yet layered temporal moments from the text's examination. However, in Dai Nihon Shiryo, the temporal layers can be categorized into three periods: the original text, pre-historiographical annotations, and editor-added notes. </p>
+            <figure>
+                <graphic n="1002" width="10.966980555555555cm" height="7.618455555555555cm" url="/tmp/tmpsiljf5f5/Pictures/06e4f21659f92cc01fc49dcf31a155a9.png" rend="inline"/>
+            </figure>
+            <p>Figure 2 Examples of Bouchū and Warichū</p>
+            <p>Reducing Bouchū and Warichū to mere layout concerns risks erasing these temporal transitions from TEI/XML data. To effectively represent the temporal layers of editorial processes, approaches from digital scholarly editing or manuscript studies prove valuable. Recent efforts have addressed similar challenges: Rehbein proposes a TEI-based approach for reconstructing the textual development of medieval German manuscripts, integrating temporal layers into a coherent digital edition (Rehbein 2009). Moran and Whitman comparatively analyze glossing traditions in Western Europe and East Asia, highlighting how marginalia reflect layered temporalities and require careful encoding strategies (Moran et al. 2022). These studies provide valuable models for considering the functional and temporal aspects of Bouchū and Warichū in the Dai Nihon Shiryo. Driscoll proposed a TEI-based method for representing the creation process of drafts (Driscoll et al. 2016), and Shioi expanded on this by using the 
+                <hi rend="color(188038)">&lt;listChange&gt;</hi> tag to structure the writing process of Japanese novelist Edogawa Rampo's manuscripts (Shioi 2022). Similarly, this project adopts a similar approach by incorporating 
+                <hi rend="color(188038)">&lt;listChange&gt;</hi> within the 
+                <hi rend="color(188038)">&lt;profileDesc&gt;</hi> section of the 
+                <hi rend="color(188038)">&lt;teiHeader&gt;</hi> and distinguishes the three temporal layers through the 
+                <hi rend="color(188038)">@type</hi> attribute.
+            </p>
+            <p>As previously mentioned, strictly speaking, the temporal moments described in 
+                <hi rend="color(188038)">&lt;listChange&gt;</hi> should be countless. Even the "time" during which Dai Nihon Shiryo was compiled is, from our perspective, part of the past. However, the editors of Dai Nihon Shiryo deliberately organize the temporal layers into three distinct periods: the “original,” the “past,” and the "present" of the historiography. Is this tripartite division merely due to the practical limitations of fully reconstructing the textual creation process? A closer examination of the Bouchū reveals annotations such as "different handwriting," indicating an acknowledgment of temporal shifts within the text. In doing so, the editors consciously acknowledge the existence of temporal shifts within these annotations. Yet, to achieve the goal of standardizing the resolution of information for the purposes of historiography, they deliberately consolidate the multiplicity of past moments in the text's creation process into a singular framework governed by specific editorial rules, distinguishing it from the "present" of the historiography. We suggest that this distinction reflects the editors' view of the historiographical process as a present moment consciously separated from the past.
+            </p>
+            <p>In conclusion, this proposal seeks to reevaluate the historiographical practices of Dai Nihon Shiryo by addressing the treatment of Bouchū and Warichū through the TEI, with the aim of uncovering the editors' intentions and implicit historical perspectives. This study not only contributes to the practical encoding of Dai Nihon Shiryo but also offers insights into the broader implications of editorial practices in representing temporal layers, setting a foundation for future research in digital scholarly editing.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Driscoll, Matthew James / Pierazzo, Elena</hi> (2016): 
+                        <hi rend="italic">Digital Scholarly Editing: Theories and Practices</hi>. Open Book Publishers. DOI: 10.11647/OBP.0095.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold background(white)">Kokaze, Naoki / Nagasaki, Kiyonori / Gotō, Makoto / Hashimoto, Yuta / Muller, A. Charles / Shimoda, Masahiro</hi>
+                        <hi rend="background(white)" xml:space="preserve"> (2019): “Toward a Model for Marking up Non-SI Units and Measurements”, in </hi>
+                        <hi rend="italic background(white)">Journal of the Text Encoding Initiative</hi>
+                        <hi rend="background(white)">12</hi> . DOI: 
+                        <hi rend="background(white)">10.4000/jtei.1996.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Moran, Pádraic / John Whitman</hi> (2022): “Glossing and Reading in Western Europe and East Asia: A Comparative Case Study
+                        <hi rend="background(white)">”</hi>, in 
+                        <hi rend="italic">Speculum: A Journal of Medieval Studies</hi> 97, 1:112-139. DOI: 10.1086/717331.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold background(white)">Okada, Kazuhiro / Nakamura, Satoru / Nagasaki, Kiyonori</hi>
+                        <hi rend="background(white)" xml:space="preserve">(2023): “Rubi as a Text: A Note on the Ruby Gloss Encoding”, in </hi>
+                        <hi rend="italic background(white)">Journal of the Text Encoding Initiative</hi>
+                        <hi rend="background(white)" xml:space="preserve"> 14. DOI: 10.4000/jtei.4403.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Rehbein, Malte</hi> (2009): 
+                        <hi rend="background(white)">“</hi>Reconstructing the textual evolution of a medieval manuscript
+                        <hi rend="background(white)">”</hi>, in 
+                        <hi rend="italic">Literary and Linguistic Computing</hi> 24, 3: 319–327. DOI: 10.1093/llc/fqp020.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Shioi, Sachiko / Nagasaki, Kiyonori</hi> (2022): “<hi rend="Japanese">日本近代文学における自筆資料の構造的記述の可能性：江戸川乱歩自筆資料を手がかりとして</hi>(Possibility of Structural Description for hand written materials of modern Japanese literature: Using Rampo Edogawa’s hand written materials)”, in: Information Processing Society of Japan (ed.): 
+                        <hi rend="italic"><hi rend="Japanese">じんもんこん</hi>2022<hi rend="Japanese">論文集 </hi>(Proceedings of Jinmoncom Symposium 2022)</hi>, Online, December 2022: 67–72&lt;
+                        <ref target="https://ipsj.ixsq.nii.ac.jp/records/223273">https://ipsj.ixsq.nii.ac.jp/records/223273</ref>&gt; [30.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold background(white)">TEI-EAJ</hi>
+                        <hi rend="background(white)" xml:space="preserve"> (2020): “<hi rend="Japanese">日本語古典籍</hi>TEI<hi rend="Japanese">本文データ作成要領 </hi>(Guidelines for Creating TEI Text Data for Japanese Classical Texts)” &lt;</hi>
+                        <ref target="https://github.com/TEI-EAJ/jpn_classical/blob/master/jpn_classical_guideline.md">
+                            <hi rend="background(white)">https://github.com/TEI-EAJ/jpn_classical/blob/master/jpn_classical_guideline.md</hi>
+                        </ref>
+                        <hi rend="background(white)">&gt; [30.04.2025].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold background(white)">Wang, Yifan</hi>
+                        <hi rend="background(white)" xml:space="preserve"> (2022): “『<hi rend="Japanese">續一切経音義』を通じた外字と割注の課題 </hi>(Issues of Gaiji (Non-Standard Characters) and Warichū (interlinear annotations) in Zoku Issaikyō Ongī)”, in: </hi>International Institute for DigitalHumanities (dir.): 
+                        <hi rend="italic background(white)"><hi rend="Japanese">人文学のためのテキストデータ構築入門 </hi>(Introduction to Text Data Construction for the Humanities)</hi>
+                        <hi rend="background(white)">, Tokyo: Bungaku-report, 368–378.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

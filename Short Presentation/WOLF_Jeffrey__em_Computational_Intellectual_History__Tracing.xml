@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="WOLF_Jeffrey__em_Computational_Intellectual_History__Tracing">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>&lt;em&gt;Computational Intellectual History? Tracing the Influence of the Ancient Wisdom Tradition on Kepler, Galileo, and Descartes using the Text Matching and Semantic Matching Tools of the VERITRACE project&lt;/em&gt;</title>
+                <author>
+                    <persName>
+                        <surname>Wolf</surname>
+                        <forename>Jeffrey</forename>
+                    </persName>
+                    <affiliation>Vrije Universiteit Brussel</affiliation>
+                    <email>Jeffrey.Charles.Wolf@vub.be</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T18:35:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Ancient Wisdom Tradition</term>
+                    <term>Early Modern Science</term>
+                    <term>Text Reuse Analysis</term>
+                    <term>Multilingual Semantic Matching</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>natural language processing</term>
+                    <term>semantic analysis</term>
+                    <term>text mining and analysis</term>
+                    <term>History</term>
+                    <term>History of science</term>
+                    <term>Humanities computing</term>
+                    <term>Philosophy</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">I will present early work-in-progress for the ERC Starting Grant project ‘VERITRACE’ or “
+                <hi rend="italic">Traces de la verité</hi>: The reappropriation of ancient wisdom in early modern natural philosophy” (2023-2028). Based at Vrije Universiteit Brussel and led by Professor Cornelis J. Schilt, VERITRACE anticipates significant breakthroughs in our understanding of the role of ancient wisdom in the development of early modern natural philosophy by using state-of-the-art digital techniques to analyse a large corpus of early modern texts.
+            </p>
+            <p style="text-align: left; ">During the Italian Renaissance, ancient texts like the 
+                <hi rend="italic">the Corpus Hermeticum</hi> (including 
+                <hi rend="italic">the Asclepius</hi>), the 
+                <hi rend="italic">Chaldean</hi> and 
+                <hi rend="italic">Sibylline Oracles</hi>, and the 
+                <hi rend="italic">Orphic Hymns</hi> were seen as sources of true knowledge, forming a perennial philosophy (
+                <hi rend="italic">prisca sapientia</hi>) that offered insights into God, humanity, and the cosmos (Schmitt, 1966; Walker, 1972; Garin, 1984; Schmidt-Biggemann, 2004; Leinkauf, 2017). Major scientific figures like Copernicus, Kepler, Bacon, and Newton embraced this tradition, though its precise influence has hardly been studied.
+            </p>
+            <p style="text-align: left; ">The VERITRACE project integrates close and distant reading of Renaissance and early modern texts. We do this by creating, and analysing, both a 
+                <hi rend="bold">Close Reading Corpus</hi> (CRC) – which includes all the relevant editions of the four main corpora under scrutiny that were published during the Renaissance and early modern period but also works that drew heavily on these ancient wisdom writings – and a 
+                <hi rend="bold">Distant Reading Corpus</hi> (DRC). The Distant Reading method, closely related to natural language processing, allows for the analysis of large text corpora, identifying patterns and uncovering both prominent and neglected works. The DRC consists of several hundred thousand works from important European digital text databases in Latin, French, German, Dutch, English and Italian.
+            </p>
+            <p style="text-align: left; ">VERITRACE is, from the ground up, a digital, multilingual project, whose source materials (c. 430,000 printed texts in six different languages spanning almost 200 years (1540-1728)), are drawn from different digital archives and collections: Gallica (Bibliothèque nationale de France), the 
+                <hi rend="italic">Digitale Sammlungen</hi> of the Bavarian State Library (Germany), and Early English Books Online (EEBO) (US/UK). Given the size of our distant reading corpus, we are especially interested in uncovering the neglected works contained within, termed 'the great unread' by Margaret Cohen (Cohen, 2009; Reid, 2019). We thereby promote their cultural preservation. And all of VERITRACE’s tools and results are, and will remain, open source and freely available to whomever wishes to use them, ensuring access to cutting-edge humanities research.
+            </p>
+            <p style="text-align: left; ">This 
+                <hi rend="bold" xml:space="preserve">Short Paper </hi>presentation will showcase digital multilingual practices, in the form of a multilingual case study. I will present preliminary results that reveal the influence of the ancient wisdom tradition on three seminal early modern thinkers: Johannes Kepler (1571-1630), Galileo Galilei (1564-1642), and René Descartes (1596-1650). 
+            </p>
+            <p style="text-align: left; ">I will show how our Text Matching tool can be used to identify matching passages and phrases between their published works and our Close Reading Corpus of works from the ancient wisdom tradition. This tool, a kind of early modern plagiarism detector, is an effective, surface-level tool, focused on a text’s most important keywords and vocabulary. This approach is also known as ‘text similarity analysis’ or ‘text reuse analysis’ (see, e.g. the innovative work of the Helsinki Computational History Group at the University of Helsinki, especially Rosson et al, 2023 and Ryan, 2023). There are several ways to approach the issue of test similarity – different algorithms to use depending on one’s use case. I present our own approach, which – unlike many others - must contend with multilingual texts from the start, and why we have chosen it.</p>
+            <p style="text-align: left; ">In the second half of the presentation, I provide a preview of our Semantic Matching Tool (powered by multilingual Large Language Models) which supplements the Text Matching Tool. While the Text Matching Tool is good at picking up lexical, surface-level similarities between textual passages, it is nearly useless across languages. It detects similarities in the actual words used – the vocabulary itself – not its semantic meaning. The Semantic Matching Tool therefore covers this deeper understanding of meaning, by providing a way to identify semantic similarity between textual passages, despite no overlapping lexical similarity. This therefore works between languages. Therefore, we are able to identify passages written in Latin that are semantically similar to passages written in, e.g. Italian or French, bridging the ‘multilingual gap’.</p>
+            <p style="text-align: left; ">The larger purpose of these tools is to provide the scholar – and indeed, the wider reading public - more powerful ways of exploring traces of influence, especially across languages and in the context of very large numbers of texts, beyond the comprehension of any one person. While this case study only focuses on a small – albeit critical – set of texts, it illustrates the potential of the VERITRACE project as it expands to cover our entire Distant Reading Corpus of c. 430,000 printed works throughout the early modern period.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Cohen, M. (2009) “Narratology in the Archive of Literature”, 
+                        <hi rend="italic">Representations</hi>, 108, pp. 51–75.
+                    </bibl>
+                    <bibl style="text-align: left; ">Garin, E. (1984) 
+                        <hi rend="italic">Il ritorno dei filosofi antichi</hi>. Reprint. Napels: Istituto Italiano per gli Studi Filosofici, 1994. Original work published 1984.
+                    </bibl>
+                    <bibl style="text-align: left; ">Leinkauf, T. (2017) '‘Prisca scientia’ versus ‘prisca sapientia’. Zwei Modelle des Umgangs mit der Tradition am Beispiel des Rückgriffs auf die Vorsokratik im Kontext der frühneuzeitlichen Debatte und der Ausbildung des Kontinuitätsmodell der ‘prisca sapientia’ bzw. ‘philosophia perennis’', 
+                        <hi rend="italic">Mediterranea. International Journal on the Transfer of Knowledge</hi>, 2, pp. 121–143.
+                    </bibl>
+                    <bibl style="text-align: left; ">Reid, D. (2019) “Distant Reading, ‘The Great Unread’, and 19th-Century British Conceptualizations of the Civilizing Mission: A Case Study”, 
+                        <hi rend="italic">Journal of Interdisciplinary History of Ideas</hi>, 15. Available at: 
+                        <ref target="http://journals.openedition.org/jihi/435">http://journals.openedition.org/jihi/435</ref> (Accessed: 17 January 2024).
+                    </bibl>
+                    <bibl style="text-align: left; ">Rosson, D. E., Mäkelä, E., Vaara, V., Mahadevan, A., Ryan, Y. C., &amp; Tolonen, M. (2023). “Reception Reader: Exploring Text Reuse in Early Modern British Publications”. 
+                        <hi rend="italic">Journal of open humanities data</hi>, 
+                        <hi rend="italic">9</hi>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <ref target="https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.101">
+                            <hi rend="bold">https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.101</hi>
+                        </ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">Ryan Y., Mahadevan A. and Tolonen M. (2023). “A Comparative text similarity analysis of the works of Bernard Mandeville”. 
+                        <hi rend="italic">Digital Enlightenment Studies</hi>, 1, 28–58. DOI: 
+                        <ref target="https://doi.org/10.61147/des.6">10.61147/des.6</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">Schmidt-Biggemann, W. (2004) 
+                        <hi rend="italic">Philosophia perennis: Historical Outlines of Western Spirituality in Ancient, Medieval and Early Modern Thought</hi>. Dordrecht: Springer.
+                    </bibl>
+                    <bibl style="text-align: left; ">Schmitt, C.B. (1966) “Perennial philosophy: from Agostino Steuco to Leibniz”, 
+                        <hi rend="italic">Journal of the History of Ideas</hi>, 27, pp. 505–532.
+                    </bibl>
+                    <bibl style="text-align: left; ">Walker, D.P. (1972) 
+                        <hi rend="italic">The Ancient Theology: Studies in Christian Platonism from the Fifteenth to the Eighteenth Century</hi>. Ithaca, NY: Cornell University Press.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

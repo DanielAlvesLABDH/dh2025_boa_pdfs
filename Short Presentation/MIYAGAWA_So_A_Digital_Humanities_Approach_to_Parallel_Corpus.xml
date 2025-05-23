@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MIYAGAWA_So_A_Digital_Humanities_Approach_to_Parallel_Corpus">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main"/>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Miyagawa</surname>
+                        <forename>So</forename>
+                    </persName>
+                    <affiliation>University of Tsukuba, Japan; National Institute for Japanese Language and Linguistics (NINJAL), Japan</affiliation>
+                    <email>miyagawa.so.kb@u.tsukuba.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ito</surname>
+                        <forename>Takanori</forename>
+                    </persName>
+                    <affiliation>Institute of Science Tokyo, Japan</affiliation>
+                    <email>takanoriito0658@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ohsaki</surname>
+                        <forename>Kaho</forename>
+                    </persName>
+                    <affiliation>University of Tsukuba, Japan</affiliation>
+                    <email>c5kaho@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T09:17:15.503329223</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Japanese</term>
+                    <term>Ryukyuan</term>
+                    <term>Bible translations</term>
+                    <term>corpus</term>
+                    <term>stylometry</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>scholarly editing and editions development</term>
+                    <term>analysis</term>
+                    <term>and methods</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>Asian studies</term>
+                    <term>Cultural studies</term>
+                    <term>Linguistics</term>
+                    <term>Translation studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <head/>
+            <div type="div1" rend="DH-Heading">
+                <head>
+                    <anchor xml:id="id__rn9kv0ues11u"/>Introduction
+                </head>
+                <p>This paper presents the development and analysis of a comprehensive parallel corpus of Bible translations in pre-modern Japan and the Ryukyus, demonstrating how digital humanities methods can reveal previously unrecognized patterns in historical translation networks. Our research addresses the complex relationships between Chinese translations and their influence on Japanese and Ryukyuan translations while developing sustainable digital infrastructure for linguistic heritage preservation.</p>
+                <p>The corpus infrastructure uses Omeka S as the content management system (
+                    <hi rend="color(#333333)">Corporation for Digital Scholarship </hi>
+                    <hi rend="color(#333333)">2025)</hi>, implementing Linked Open Data principles to ensure interoperability and sustainability. The texts are encoded following TEI Guidelines, specifically representing historical orthographic variations and ruby annotations across Chinese, Japanese, and Okinawan writing systems. Our API allows the corpus to be accessed in JSON-LD format, enabling seamless integration with other digital humanities projects.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>
+                    <anchor xml:id="id__20wekd10n77e"/>Historical Context and Translation Networks
+                </head>
+                <p>While John Saris reported the existence of a complete Japanese New Testament translation from the Kirishitan period, it has yet to be discovered. However, various Kirishitan materials contain biblical excerpts that provide valuable insights into early Japanese Christian terminology. Our corpus encompasses Kirishitan-era Japanese Biblical excerpts such as those in 
+                    <hi rend="italic">Contemptus Mundi</hi> (1596), digitized by Osterkamp et al. (2023), but those excerpts are highly partial.
+                </p>
+                <p>The first substantial Japanese Bible translation was produced by Karl Friedrich August Gützlaff, who published his translation of the Gospel of John and the Letters of John in Singapore in 1837. Gützlaff's translation shows the influence of the Chita Peninsula dialect and reflects early attempts to establish Christian terminology in Japanese (Miyagawa 2023).</p>
+                <p>Bernard Jean Bettelheim, a Hungarian Jewish convert to Anglican Christianity, produced two significant translations. During his eight-year confinement at Gokokuji Temple in Naha, the biggest port city of the Kingdom of the Ryukyus, from 1846, he created the first Okinawan translation, reflecting the period's Northern Ryukyuan Okinawan language variety. After returning to Europe, he published a Japanese-Chinese parallel translation in Vienna in 1873, demonstrating his evolving understanding of the linguistic differences between Japanese and Ryukyuan languages.</p>
+                <p>The Chinese translation network includes Morrison-Milne’s 1823 and Bridgman-Culbertson’s 1864 translations, which served as crucial source texts for subsequent Japanese translations. Morrison and Milne specifically had Japanese readers in mind, knowing that educated Japanese could read Chinese during this period. This Chinese-mediated translation pathway proved fundamental for establishing Christian terminology in Japanese.</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmplugv23bm/Pictures/c21ccebb065069733494804f83cd8062.png"/>
+                    </figure>
+                </p>
+                <p>
+                    <hi rend="bold">Figure 1</hi>: Visualization of parallel corpus utilizing Omeka S with RDF and JSON-LD outputs
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>
+                    <anchor xml:id="id__gsknjdtbkr4y"/>Technical Implementation and Methodology
+                </head>
+                <p>Our technical implementation employs innovative approaches to digital corpus construction, particularly to the challenges posed by East Asian writing systems. The TEI encoding schema has undergone careful adaptation to accommodate these complexities, incorporating sophisticated solutions for handling multiple writing systems simultaneously. We have developed comprehensive systems with custom vocabulary terms designed explicitly for biblical texts and specialized metadata schemas that capture nuanced translation relationships. The implementation features robust API endpoints that facilitate programmatic access to our resources. At the core of our infrastructure, the Omeka S platform enables comprehensive digital humanities research while ensuring long-term sustainability. This sustainability is achieved through structured metadata using JSON-LD and RDF formats, alongside the thorough implementation of Linguistic Linked Open Data principles (Insight Centre for Data Analytics 2025). Our approach emphasizes seamless integration with existing digital humanities infrastructure while carefully preserving linguistic heritage through standardized metadata practices.</p>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>
+                    <anchor xml:id="id__4v8j16ls4ti6"/>Stylometric Analysis and Translation Networks
+                </head>
+                <p>The most significant contribution of our research lies in applying stylometric methods using the R stylo package (Eder et al. 2016), which has revealed previously unrecognized patterns in translation networks. Our analysis demonstrates how Chinese translations influenced subsequent Japanese and Okinawan translations through direct and indirect pathways. Through careful examination, the stylometric analysis has revealed four distinct and significant clusters in the translation network. The modern literary Japanese group, which encompasses Meiji and Taisho translations and Protestant translations, demonstrates the emergence of standardized religious terminology through its consistent patterns. In contrast, the classical Japanese group, including the Orthodox 1902 translation by Nikolai and the Catholic 1910 translation by Raguet, reveals the persistent influence of traditional Buddhist and Confucian terminology in religious translation. The regional language group, exemplified by Gützlaff’s 1837 Japanese translation and Bettelheim’s 1855 Ryukyuan translation, provides fascinating insights into how early translators negotiated between source languages and local linguistic traditions.</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmplugv23bm/Pictures/c21ccebb065069733494804f83cd8062.png"/>
+                    </figure>
+                </p>
+                <p>
+                    <hi rend="bold">Figure 2: </hi>Stylometric clustering of seven 19th–early 20th century translations
+                </p>
+                <p>Our research has identified several distinct translation lineages that reveal essential patterns in developing religious texts. The Protestant lineage begins with Gützlaff’s translation and continues through the Hepburn/Brown translation to the Meiji translation (Kondo 2022), showing a progressive standardization of religious terminology throughout its evolution. In parallel, the Orthodox-Catholic lineage, represented by Russian Orthodox Nikolai’s and Roman Catholic Raguet’s translations, demonstrates the significant influence of classical Japanese and Buddhist terminology. Additionally, the regional language lineage, exemplified by Bettelheim’s Okinawan translation, illustrates how translators skilfully adapted Christian concepts to local linguistic and cultural contexts.</p>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>
+                    <anchor xml:id="id__x6zwak4jj3ra"/>Conclusion and Future Directions
+                </head>
+                <p>This research demonstrates the value of combining traditional philological analysis with innovative digital methods in understanding historical translation networks. By providing methodological innovations and substantive findings about historical translation networks, our research contributes to the ongoing development of digital humanities as a field that bridges traditional scholarship and computational methods. Our future work will emphasize expanding the corpus to include additional biblical texts and integrate more Chinese translations that influenced East Asian Protestant translations. We will continue developing new analytical methods for understanding translation networks while enhancing the digital infrastructure for long-term sustainability. Through this comprehensive approach to digital corpus construction and analysis, we demonstrate how digital humanities methods can improve our understanding of historical and cultural exchange while providing a model for future research in multilingual digital humanities. Our work provides a foundation for future research in multilingual digital humanities. It offers new possibilities for understanding how texts move between languages and cultures in East Asia during the early modern period.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="color(#333333)bold">Corporation for Digital Scholarship</hi>
+                        <hi rend="color(#333333)"> </hi>
+                        <hi rend="color(#333333)">(2025):</hi>
+                        <hi rend="color(#333333)"> </hi>
+                        <hi rend="color(#333333)">“</hi>Omeka S”, Omeka &lt;https://omeka.org/s/&gt; [09.05.2025].
+                    </bibl>
+                    <bibl>
+                        <anchor type="bookmark-start" xml:id="id___DdeLink__1307_2649779409"/>Eder, Maciej / Rybicki, Jan / Kestemont, Mike (2016): “Stylometry with R: A package for computational text analysis”, in: 
+                        <emph>The R Journal</emph> 8, 1: 107–121 &lt;https://journal.r-project.org/archive/2016/RJ-2016-007/RJ-2016-007.pdf&gt; [09.05.2025].
+                    </bibl>
+                    <bibl>Insight Centre for Data Analytics (2025):“Linguistic Linked Open Data”, Linguistic Linked Open Data &lt;https://linguistic-lod.org/&gt; [09.05.2025].</bibl>
+                    <bibl>Kondo, Yasuhiro (2022): “Meiji genyaku shinyaku seisho no shohon no keitou to buntai [The genealogy and writing style of various versions of the Meiji original translation of the New Testament]”, in: 
+                        <emph>Kokugo to Kokubungaku [Language and Literature of Japan]</emph> 99, 8: 3–20.
+                    </bibl>
+                    <bibl>Miyagawa, So (2023): “Edo jidai kouki no seisho wayaku: Gützlaff-yaku ‘Yohane fukuin no den’ wa shinyaku seisho girishiago honbun kara yakushita ka [Was Gützlaff’s Japanese translation of the Gospel of John in the late Edo period translated from the Greek New Testament text?]”, in: 
+                        <emph>Nihongo no Kenkyuu [Studies in the Japanese Language]</emph> 19, 2: 37–52. DOI: 10.20666/nihongonokenkyu.19.2_37.
+                    </bibl>
+                    <bibl>Osterkamp, Sven / Takahashi, Sophie / Miyagawa, So (2025): “Contemptus Mundi [HAB copy]”, National Institute for Japanese Language and Linguistics (NINJAL), revised version &lt;https://www2.ninjal.ac.jp/textdb_dataset/en/cmhab/&gt; [09.05.2025].
+                        <ptr type="bookmark-end" target="#id___DdeLink__1307_2649779409"/>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

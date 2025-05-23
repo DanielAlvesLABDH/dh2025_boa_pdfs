@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="RITTENHOUSE_Brad_Accessible_Models_for_High_Performance_Comp">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Accessible Models for High-Performance Computing in the Humanities</title>
+                <author>
+                    <persName>
+                        <surname>Rittenhouse</surname>
+                        <forename>Brad</forename>
+                    </persName>
+                    <affiliation>Stanford University, United States of America</affiliation>
+                    <email>bcritt@stanford.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T16:45:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>critical infrastructure</term>
+                    <term>program building and management</term>
+                    <term>DEI</term>
+                    <term>capacity building</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>curricular and pedagogical development and analysis</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>project design</term>
+                    <term>organization</term>
+                    <term>management</term>
+                    <term>sustainable procedures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>Education/ pedagogy</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>While older models like BERT and BERT derivations (RoBERTa, deBERTa, etc.) generally still excel at academic NLP tasks—NER, text classification, word embeddings—LLMs and generative AI (Gen AI) offer clear benefits in specific research areas, and will undoubtedly outpace older methods moving forward as AI simultaneously offers more intuitive modes of human-computer interaction and outpaces the less sophisticated methods computationally. That said, the computational cost of LLMs is at least an order of magnitude larger than that of BERT-like models, which consist of millions, rather than billions of parameters. As Gen AI and LLMs continue to become more sophisticated, and especially as the technical know-how for interfacing with chatbots like Chat-GPT continues to drop, we can expect more and more researchers to avail themselves of extremely sophisticated digital methods with little to no barriers to entry.</p>
+            <p> While chatbots can render certain aspects of digital research non-technical (“Hey ChatGPT, what places are mentioned most in the works of Zadie Smith?”), they are unlikely to be able to address more sophisticated questions or workflows, especially if actual data is needed as an output. For example, when I asked ChatGPT for a dataset of place mentions in Zadie Smith, I got the following response: “I don't have the capability to provide specific counts or datasets of place mentions in Zadie Smith's works directly.” This is all to say that moving forward, academic researchers are likely to use the power of LLMs without being able to leverage the web-based chatbot UX and VC-funded servers. At the same time, their personal or research computers, especially in the humanities where institutionally-funded workstations are either non-existent or only word processor-capable, won’t be able to support research workflows with LLM backends, an issue that will only worsen as these models grow more complex. </p>
+            <p> For many researchers, this will necessitate an exodus to high-powered computing (HPC) resources, whether provided by their home institutions, centralized consortia (
+                <ref target="https://www.psc.edu/">Pittsburgh Supercomputing Center</ref>/
+                <ref target="https://access-ci.org/">ACCESS</ref>), or private solutions like Google Cloud Platform (
+                <ref target="https://console.cloud.google.com/">GCP</ref>). Fortunately, humanities researchers, even now, can almost always gain access to HPC resources, but there are often significant barriers—administrative, educational, monetary—that can prove formidable to the uninitiated. 
+            </p>
+            <p> While the technocratic and cloistered nature of DH labs has been well documented,<ref n="1" target="ftn1"/> HPC centers can be even more impenetrable for those in the humanities and social sciences. Staffed by system administrators with professional computational degrees, former researchers from scientific disciplines, and professionals from HPC-heavy fields like the civic, defense, and space industries support, outreach, and documentation can often feel arcane and bureaucratic.
+            </p>
+            <p>As a DH scholar leveraging HPC methods since 2014, and as a Research Data Facilitator at Stanford Research Computing since 2022, I am one of the few people in HPC hired specifically to cater to users in the humanities and social sciences, am quite familiar with these pitfalls, and have developed tools, programs, and curricula to help smooth the rocky path I had to travel getting into the field. For those unfamiliar with HPC, the research experience can be alien, taking place primarily on remote servers, in command line interfaces (CLIs) rather than graphical user interfaces (GUIs) like Windows or MacOS, and subject to advanced computational concepts like job scheduling (
+                <ref target="https://slurm.schedmd.com/overview.html">Slurm</ref>, 
+                <ref target="https://altair.com/pbs-professional/">PBS</ref>, etc.), parallel processing (
+                <ref target="https://www.open-mpi.org/">MPI</ref>, Slurm arrays), and containerization (
+                <ref target="https://apptainer.org/">Apptainer</ref>, 
+                <ref target="https://podman.io/">Podman</ref>). 
+            </p>
+            <p>This short paper will present scholars and DH facilitators with low-cost strategies for doing outreach, developing capacity, and building collaborations and curriculum to support growing DH/HPC research communities. In the talk, I will discuss numerous strategies I have implemented over the past ten years to help humanities researchers move into HPC. These include:</p>
+            <list type="unordered">
+                <item>Two administratively low-cost, funded fellowships: 
+                    <ref target="https://ugrow.as.miami.edu/">UGrow</ref> at the University of Miami and the 
+                    <ref target="https://srcc.stanford.edu/src_grad_fellowship">SRC Graduate Fellowship</ref> at Stanford University
+                </item>
+                <item>Development of an interactive learning environment on an active cluster for experimental, experiential learning</item>
+                <item>Development of script repos for “drag and drop” implementation of common DH research processes</item>
+                <item>Curriculum and instruction best practices when expanding HPC documentation to humanities researchers</item>
+                <item>Building outreach and relationships with potential collaboration partners both on and off campus</item>
+            </list>
+            <p>All strategies will prioritize a low-cost, DIY ethos encouraging inclusivity. While many institutions cannot support an HPC center, cutting-edge technical research does not have to be out of reach for DH scholars.</p>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                     Bailey, Moya. 2015b. “All the Digital Humanists Are White, All the Nerds Are Men, But Some of Us Are Brave.” 
+                        <hi rend="italic">Journal of Digital Humanities</hi> 1, no. 1 (Winter). http://journalofdigitalhumanities.org/1-1/all-the-digital-humanists-are-white-all-the-nerds-are-men-but-some-of-usare-brave-by-moya-z-bailey/ is one example.
+                    
+                </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl rend="footnote text">
+                        <hi rend="bold">Bailey, Moya Z</hi>. (2015): “All the Digital Humanists Are White, All the Nerds Are Men, But Some of Us Are Brave“, in 
+                        <hi rend="italic">Journal of Digital Humanities</hi> 1, no. 1 (Winter). 
+                        <ref target="https://journalofdigitalhumanities.org/1-1/all-the-digital-humanists-are-white-all-the-nerds-are-men-but-some-of-us-are-brave-by-moya-z-bailey/">https://journalofdigitalhumanities.org/1-1/all-the-digital-humanists-are-white-all-the-nerds-are-men-but-some-of-us-are-brave-by-moya-z-bailey/</ref>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

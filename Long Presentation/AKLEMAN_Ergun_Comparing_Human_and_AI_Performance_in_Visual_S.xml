@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="AKLEMAN_Ergun_Comparing_Human_and_AI_Performance_in_Visual_S">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Comparing Human and AI Performance in Visual Storytelling through Creation of Comic Strips: A Case Study</title>
+                <author>
+                    <persName>
+                        <surname>Onal</surname>
+                        <forename>Ugur</forename>
+                    </persName>
+                    <affiliation>Istanbul Technical University, Istanbul, Turkey</affiliation>
+                    <email>uonal.96@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Sariel</surname>
+                        <forename>Sanem</forename>
+                    </persName>
+                    <affiliation>Istanbul Technical University, Istanbul, Turkey</affiliation>
+                    <email>ssariel@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Sezgin</surname>
+                        <forename>Metin</forename>
+                    </persName>
+                    <affiliation>Koc University, Istanbul, Turkey</affiliation>
+                    <email>mtsezgin@alum.mit.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Akleman</surname>
+                        <forename>Ergun</forename>
+                    </persName>
+                    <affiliation>TEXAS A&amp;M UNIVERSITY, United States of America</affiliation>
+                    <email>ergun.akleman@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Visual Storytelling</term>
+                    <term>AI</term>
+                    <term>Comic Studies</term>
+                    <term>Comic Strips</term>
+                    <term>Cartoons</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>digital art production and analysis</term>
+                    <term>image processing and analysis</term>
+                    <term>Computer science</term>
+                    <term>Humanities computing</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference online</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Abstract</head>
+                <p style="text-align: left; ">This article presents a case study comparing the capabilities of humans and artificial intelligence (AI) for visual storytelling. We developed detailed instructions to recreate a three-panel Nancy cartoon strip by Ernie Bushmiller and provided them to both humans and AI systems. The human participants were 20-something students with basic artistic training but no experience or knowledge of this comic strip. The AI systems used were popular commercial models trained to draw and paint like artists, though their training sets may not necessarily include Bushmiller’s work. Results showed that AI systems excel at mimicking professional art but struggle to create coherent visual stories. In contrast, humans proved highly adept at transforming instructions into meaningful visual narratives.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction and Motivation</head>
+                <p style="text-align: left; ">Creating visually compelling images has traditionally required significant effort and expertise. Recently, AI-based drawing and painting systems have gained popularity, sparking controversies in the art community, such as a dispute in a cartoon competition (Cumhuriyet, 2024; Darroch, 2017; Kotbas, 2024).</p>
+                <p style="text-align: left; ">While AI is argued to boost efficiency and create jobs requiring advanced skills (Trivedi et al., 2023), studies show people prefer human-made art for its emotional depth, narrative, and meaning (Bellaiche et al., 2023). AI systems have notable limitations in graphic design (Sindhura and Abdul, 2021). As a solution, hybrid intelligence has been proposed, combining human and AI capabilities to enhance performance, as seen in projects like celestial body classification via crowdsourcing (Kamar et al., 2012) and integrating expert knowledge with AI to improve results (Chang et al., 2017; Bansal et al., 2021).This paper demonstrates that AI struggles to create nuanced visual images for effective storytelling, emphasizing the need for human expertise to craft meaningful visuals.</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Context and Motivation</head>
+                    <p style="text-align: left; ">Effective visual storytelling is challenging, even for professionals. Subtle details play a crucial role, as illustrated in Figure 1, which compares two nearly identical cartoon panels on privacy published in IEEE Computer Magazine (Akleman, 2021) 1. A minor change in the eyes transforms mischievous children into surprised ones, shifting the narrative from intentionally reading their sister’s diary to an accidental discovery.</p>
+                    <figure>
+                        <graphic n="1001" width="13.851466666666667cm" height="6.011333333333333cm" url="/tmp/tmpnxd4kut1/Pictures/65092fb780db47a18df73d2fab6a6780.jpg" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; ">Figure 1: An example highlights the role of subtle facial expressions in storytelling. In the left panel, the children appear surprised, likely finding the diary by accident, unaware of their sister’s anger as they’re engrossed in its contents. In contrast, the right panel shows mischievous children who deliberately searched for the diary, fully aware of their sister’s angry gaze.</p>
+                    <p style="text-align: left; ">Effective storytelling relies on creating appropriate human affects, such as emotions, mood, or attachment. For AI, generating such affects is challenging as they involve complex expressive cues—facial, vocal, or gestural behaviors—learned by humans over decades of interactions (VandenBos, 2007). Subtle cues like body posture or gaze direction can significantly alter the perception of affects (Liu et al., 2012; Akleman et al., 2015; Dede et al., 2024). However, standard research on human affects focuses mainly on broad categories like facial, vocal, and gestural expressions (Ekman and Oster, 1979; Ekman and Keltner, 1997; Ekman, 1999; Russell et al., 2003), struggling to classify subtle and uncommon expressions.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Basis, Rationale and Contributions</head>
+                    <p style="text-align: left; ">Creating human affects is challenging due to the subtle, context-dependent nature of expressive cues, which go beyond simple image and text inputs. Effective storytelling requires considering all sensory inputs within context, as small details like droplets or body posture significantly enhance expression (Akleman and Celik, 2020) (see Figure 2). Subtle cues in storytelling, akin to micro-expressions in emotion recognition, are brief and difficult to synthesize or detect algorithmically (Merghani et al., 2018; Li et al., 2022). While AI tools like facial image generators (Viazovetskyi et al., 2020) produce impressive visuals, minor inconsistencies can disrupt intended meanings (Fan et al., 2022).</p>
+                    <p style="text-align: left; ">Expert artists and animators excel at creating subtle, context-aware cues through practice, though few formally document their methods (Johnston and Thomas, 1981; McCloud and Martin, 1993; Blair, 1995; McCloud, 2006; Eisner, 2008; Celik, 2011). Simplified user studies combined with expert knowledge could improve the understanding and application of these cues, aiding dataset creation (Dede et al., 2024).</p>
+                    <p style="text-align: left; ">Context is equally vital for understanding human interactions and storytelling. Defined in ubiquitous computing as "physical activity, location, and the psychophysiology and affective state of a person" (Bulling and Roggen, 2011), context shapes behavior and norms. Misunderstandings may arise from cultural differences, such as conflicting views on personal space. In human-computer interaction, context-aware systems enhance usability by adapting to specific situations, such as recognizing faster, louder speech in emergencies like house fires, where failure could have critical consequences.</p>
+                    <figure>
+                        <graphic n="1002" width="16.002cm" height="3.0819833333333335cm" url="/tmp/tmpnxd4kut1/Pictures/65092fb780db47a18df73d2fab6a6780.jpg" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; ">Figure 2: The position and orientation of small props like droplets can alter perceived expressions Droplets near the eyes suggest sadness, on the forehead indicate fatigue, and under the nose imply sickness, even on a neutral face. More examples can be found in</p>
+                    <p style="text-align: left; ">In conclusion, understanding subtle expressions and their context is essential for compelling storytelling. Computational agents, such as AI systems, must analyze and adapt to their operational contexts. This study shows that AI systems still lag behind humans in generating nuanced expressions and contextual understanding necessary for effective storytelling.</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Process</head>
+                <p style="text-align: left; ">Our process for comparing human and AI performance in visual storytelling through the creation of comic strips consists of four steps:</p>
+                <p style="text-align: left; ">
+                    <hi rend="bold" xml:space="preserve">Selection of a Comic Strip: </hi>In this stage, the goal is to select well-known comic strips that are recognized and praised by visual storytelling experts for their effectiveness.
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Creation of verbal instructions, i.e. prompts:</hi> This stage involves describing the chosen comic strip in as much detail as possible using only text. These descriptions, referred to as prompts in the context of artificial intelligence, are essentially verbal instructions for completing a task. Such verbal instructions have long been used by humans to describe tasks.
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Creation of Comic Strips by using verbal instructions:</hi> In this stage, the same verbal instructions are sent to both humans and various AI systems to produce corresponding comic strips.
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Analyzing comic strips in terms of their quality:</hi> In this final stage, the quality of the comic strips is analyzed and compared.
+                </p>
+                <p style="text-align: left; ">This process is general and can be repeated with many different comic strips. However, in this paper, we focus on a single strip, as it is well-known for its quality.</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Selection of Comic Strip</head>
+                    <p style="text-align: left; ">To compare the creative capabilities of human and artificial intelligence, we used a prompt based on a famous Ernie Bushmiller cartoon strip (see Figure 3). This strip was chosen because it is extensively analyzed in Paul Karasik and Mark Newgarden’s Eisner Award-winning book, How to Read Nancy: The Elements of Comics in Three Easy Panels (Newgarden and Karasik, 1988, 2017). The book, recognized as Best Comics-Related Book in 2018, highlights the strip’s artistic significance, arguing that Nancy, often dismissed as simple, is a cornerstone of comic art.</p>
+                    <p style="text-align: left; ">Karasik and Newgarden dissect this Nancy strip panel by panel, revealing how lines, shapes, timing, and space contribute to its storytelling and humor. They argue that Bushmiller’s simplicity masks his precision and mastery. The authors highlight universal comic principles like pacing, visual economy, and text-image integration, showcasing this strip as a model of effective comic art.</p>
+                    <p style="text-align: left; ">They argue that the strip’s humor is crafted with mathematical precision, relying on perfect element placement and timing. Bushmiller’s methods offer valuable lessons for aspiring cartoonists, demonstrating the storytelling power of visual art and highlighting often-overlooked nuances in comic storytelling.</p>
+                    <figure>
+                        <graphic n="1003" width="16.002cm" height="5.1681944444444445cm" url="/tmp/tmpnxd4kut1/Pictures/65092fb780db47a18df73d2fab6a6780.jpg" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; ">Figure 3: The original "How to Read Nancy" comic strip drawn by Ernie Bushmiller that the prompt is derived from. To the best of our knowledge, this particular strip is in the public domain. While the copyrights for many 
+                        <hi rend="italic">Nancy</hi> comic strips are held by Andrews McMeel Syndication, this specific strip does not appear in their published list of copyrighted works. We contacted the syndicate on two separate occasions, and they did not assert copyright ownership over this strip.
+                    </p>
+                    <figure>
+                        <graphic n="1004" width="16.002cm" height="7.641166666666667cm" url="/tmp/tmpnxd4kut1/Pictures/65092fb780db47a18df73d2fab6a6780.jpg" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; ">Table 1: Instructions that are used to create the comic strips.</p>
+                    <p style="text-align: left; ">This strip, celebrated for its wit and depth, is ideal for testing how human or artificial intelligence replicates the mechanics of comics. Its visual economy suggests that transforming illustrations into a cohesive strip reveals the complexity of a specific type of intelligence.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Prompt Creation</head>
+                    <p style="text-align: left; ">Reproducing this particular strip can offer fresh insights into the intelligence required to create the simplest-seeming works. We also expected that it would be possible to evaluate the importance of meticulous craftsmanship provided by Artificial Intelligence in terms of the creation of visual stories.</p>
+                    <p style="text-align: left; ">In the prompt, we specifically converted the names of the characters to X and Y to prevent AI tools from being influenced by character names if they exist in their database and to ensure human artists are not biased by prior knowledge of the “How to Read Nancy" comics. Additionally, some AI tools impose a character limit on the prompts they process. You can see the instructions that are used to create the comic strips in Table 1.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Creation of Comic Strips: AI vs. Humans</head>
+                    <p style="text-align: left; ">After creating the prompt, it was given to three 20-something students with basic artistic training but no experience or knowledge of this comic strip and various AI tools to compare their ability to visualize the instructions. A large set of outputs was generated using AI, but we present only the four best examples here, as shown in Figure 4. The humans, who were unfamiliar with the comic strip, produced three strips, as shown in Figure 5.</p>
+                    <figure>
+                        <graphic n="1005" width="16.002cm" height="16.38652777777778cm" url="/tmp/tmpnxd4kut1/Pictures/65092fb780db47a18df73d2fab6a6780.jpg" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; ">Figure 4: The four "comic strips" created by AI using the prompt.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Analysis of Comic Strips: AI vs. Humans</head>
+                    <p style="text-align: left; ">AI systems demonstrated strengths in generative image creation, especially in character visualization, producing visually accurate images based on prompts. Custom-trained AI models and tools yielded superior visual quality as shown in Figure 4 showing potential when high-end resources are available. However, AI struggled with sequential contexts, such as comic strips, where its limitations overshadowed its strengths.</p>
+                    <p style="text-align: left; ">In contrast, human-generated comics consistently captured the prompt’s narrative, showing a bully with a water gun disturbing others and a girl secretly preparing a stronger weapon as shown in Figure 5.These works incorporated subtle nuances that enriched the story, highlighting a key advantage of human intelligence over AI. AI often overlooked these minor yet impactful details essential for enhancing storytelling depth and quality.</p>
+                    <figure>
+                        <graphic n="1006" width="15.664138888888889cm" height="14.005997222222222cm" url="/tmp/tmpnxd4kut1/Pictures/65092fb780db47a18df73d2fab6a6780.jpg" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; ">Figure 5: The three comic strips created by 20-something students with basic artistic training but no experience or knowledge of this comic strip only based on the prompt provided to them.</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion and Future Work</head>
+                <p style="text-align: left; ">This work highlights a significant distinction between the intelligence demonstrated by AI and humans in creative tasks. AI-generated artworks often exhibit impressive detail and technical precision, yet they lack the fundamental elements required for effective storytelling. In contrast, humans not only understand instructions well but also excel at reproducing the subtle details necessary for visual narratives.</p>
+                <p style="text-align: left; ">In summary, our findings show that while AI systems are proficient at mimicking professional drawing and painting styles, they fall short in crafting coherent visual stories. Humans, on the other hand, demonstrate exceptional capability in transforming well-defined instructions into compelling and meaningful visual narratives.</p>
+                <p style="text-align: left; ">There is a need for similar studies, using the same or different comic strips, to track the progress of AI systems in visual storytelling.</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Disclaimer</head>
+                    <p style="text-align: left; ">This study was conducted in 2024. A new version of ChatGPT, released in March 2025, began generating significantly improved cartoon strips from the same prompts, although some minor issues with facial expressions remain as shown in Figure 6. This development suggests that much stronger support for visual storytelling can be expected in the near future.</p>
+                    <figure>
+                        <graphic n="1007" width="16.002cm" height="10.436930555555556cm" url="/tmp/tmpnxd4kut1/Pictures/65092fb780db47a18df73d2fab6a6780.jpg" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; ">Figure 6: This is an example of the output generated using the prompt in the table with the new version of ChatGPT released in March 2025. </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Acknowledgment</head>
+                    <p style="text-align: left; ">We extend our heartfelt gratitude to Abdullah Raşid Gün, Feyza Güreli, and Mücahit Morcol for their invaluable contributions in creating the human sketches based on the given prompts. We are also deeply thankful to Doğukan Kıvrak and Sena Erokyar for their support with paid and custom-trained AI models and for sharing their final outputs.</p>
+                </div>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Akleman, E. (2021). Computing through time: Privacy. Computer, 54(08):9–9. </bibl>
+                    <bibl style="text-align: left; ">Akleman, E. and Celik, H. (2020). Droplets. Sequentials, 1(4):4–29.</bibl>
+                    <bibl style="text-align: left; ">Akleman, E., Franchi, S., Kaleci, D., Mandell, L., Yamauchi, T., Akleman, D., et al. (2015). A theoretical framework to represent narrative structures for visual storytelling. proceedings of bridges 2015: mathematics, Music, art, architecture, culture.</bibl>
+                    <bibl style="text-align: left; ">Bansal, G., Wu, T., Zhou, J., Fok, R., Nushi, B., Kamar, E., Ribeiro, M. T., and Weld, D. (2021). Does the whole exceed its parts? the effect of ai explanations on complementary team performance. In Proceedings of the 2021 CHI conference on human factors in computing systems, pages 1–16.</bibl>
+                    <bibl style="text-align: left; ">Bellaiche, L., Shahi, R., Turpin, M. H., Ragnhildstveit, A., Sprockett, S., Barr, N., Christensen, A., and Seli, P. (2023). Humans versus ai: whether and why we prefer human-created compared to ai-created artwork. Cognitive Research: Principles and Implications, 8(1):42.</bibl>
+                    <bibl style="text-align: left; ">Blair, P. (1995). Cartoon Animation: The Collector’s Series. Walter Foster Publishing.</bibl>
+                    <bibl style="text-align: left; ">Bulling, A. and Roggen, D. (2011). Recognition of visual memory recall processes using eye movement analysis. In Proceedings of the 13th international conference on Ubiquitous computing, pages 455–464. </bibl>
+                    <bibl style="text-align: left; ">Celik, H. (2011). On cartoon drawing. Bizim Gazete.</bibl>
+                    <bibl style="text-align: left; ">Chang, J. C., Amershi, S., and Kamar, E. (2017). Revolt: Collaborative crowdsourcing for labeling machine learning datasets. In Proceedings of the 2017 CHI conference on human factors in computing systems, pages 2334–2346.</bibl>
+                    <bibl style="text-align: left; ">Cumhuriyet (2024). 14. international turhan selcuk cartoon competition results. Cumhuriyet Newspa- per: 2208058.</bibl>
+                    <bibl style="text-align: left; ">Darroch, G. (2017). Netherlands ’will pay the price’ for blocking turkish visit – . erdogan.</bibl>
+                    <bibl style="text-align: left; ">Dede, E., Agilonu, K. A., Akleman, E., and Sezgin, M. (2024). On the power of subtle expressive cues in the perception of human affects. arXiv preprint arXiv:2401.18013.</bibl>
+                    <bibl style="text-align: left; ">Eisner, W. (2008). Comics and sequential art: Principles and practices from the legendary cartoonist. WW Norton &amp; Company.</bibl>
+                    <bibl style="text-align: left; ">Ekman, P. (1999). Facial expressions. Handbook of cognition and emotion, 16(301):e320.</bibl>
+                    <bibl style="text-align: left; ">Ekman, P. and Keltner, D. (1997). Universal facial expressions of emotion. Segerstrale U, P. Molnar P, eds. Nonverbal communication: Where nature meets culture, pages 27–46.</bibl>
+                    <bibl style="text-align: left; ">Ekman, P. and Oster, H. (1979). Facial expressions of emotion. Annual review of psychology, 30(1):527–554.</bibl>
+                    <bibl style="text-align: left; ">Fan, X., Shahid, A. R., and Yan, H. (2022). Edge-aware motion based facial micro-expression generation with attention mechanism. Pattern Recognition Letters, 162:97–104.</bibl>
+                    <bibl style="text-align: left; ">Johnston, O. and Thomas, F. (1981). The illusion of life: Disney animation. Disney Editions New York.</bibl>
+                    <bibl style="text-align: left; ">Kamar, E., Hacker, S., and Horvitz, E. (2012). Combining human and machine intelligence in large-scale crowdsourcing. In AAMAS, volume 12, pages 467–474.</bibl>
+                    <bibl style="text-align: left; ">Kotbas, M. (2024). Yapay zekalı ortalık toz duman.. at Izi It ˙Izine karıs¸maya bas¸ladı. Kotbas¸ ArtColors Blogspot: https://kotbasartcolors.blogspot.com/2024/05/yapay-zekal-ortalk-toz-duman-at-izi-it.html.</bibl>
+                    <bibl style="text-align: left; ">Li, Y., Wei, J., Liu, Y., Kauttonen, J., and Zhao, G. (2022). Deep learning for micro-expression recognition: A survey. IEEE Transactions on Affective Computing, 13(4):2028–2046.</bibl>
+                    <bibl style="text-align: left; ">Liu, Y., Akleman, E., Chen, J., et al. (2012). Never-ending storytelling with discrete-time markov processes. Proceedings of Bridges, pages 85–92.</bibl>
+                    <bibl style="text-align: left; ">McCloud, S. (2006). Making comics: Storytelling secrets of comics, manga and graphic novels. Kitchen sink press Northampton, MA.</bibl>
+                    <bibl style="text-align: left; ">McCloud, S. and Martin, M. (1993). Understanding comics: The invisible art, volume 106. Kitchen sink press Northampton, MA.</bibl>
+                    <bibl style="text-align: left; ">Merghani, W., Davison, A. K., and Yap, M. H. (2018). A review on facial micro-expressions analysis: Datasets, features and metrics.</bibl>
+                    <bibl style="text-align: left; ">Newgarden, M. and Karasik, P. (1988). How to read nancy. In he Best of Ernie Bushmiller’s Nancy, pages 98–105. Henry Holt/Comicana.</bibl>
+                    <bibl style="text-align: left; ">Newgarden, M. and Karasik, P. (2017). How to Read Nancy. Fantagraphics Books.</bibl>
+                    <bibl style="text-align: left; ">Russell, J. A., Bachorowski, J.-A., and Fernández-Dols, J.-M. (2003). Facial and vocal expressions of emotion. Annual review of psychology, 54(1):329–349.</bibl>
+                    <bibl style="text-align: left; ">Sindhura, S. P. and Abdul, A. (2021). Virtues and shortcomings of artificial intelligence in graphic design arena. Trivedi, </bibl>
+                    <bibl style="text-align: left; ">A., Kaur, E. K., Choudhary, C., Kunal, and Barnwal, P. (2023). Should ai technologies replace the human jobs? In 2023 2nd International Conference for Innovation in Technology (INOCON), pages 1–6. URL-1 (2024). . [Online; date retrieved 18.09.2024].</bibl>
+                    <bibl style="text-align: left; ">VandenBos, G. R. (2007). APA dictionary of psychology. American Psychological Association.</bibl>
+                    <bibl style="text-align: left; ">Viazovetskyi, Y., Ivashkin, V., and Kashin, E. (2020). Stylegan2 distillation for feed-forward image manipulation. In Vedaldi, A., Bischof, H., Brox, T., and Frahm, J.-M., editors, Computer Vision – ECCV 2020, pages 170–186, Cham. Springer International Publishing.</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

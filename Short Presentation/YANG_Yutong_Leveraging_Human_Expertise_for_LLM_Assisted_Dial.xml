@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="YANG_Yutong_Leveraging_Human_Expertise_for_LLM_Assisted_Dial">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Leveraging Human Expertise for LLM-Assisted Dialogue Character Extraction and Attribution in Classic Chinese Novels</title>
+                <author>
+                    <persName>
+                        <surname>Yang</surname>
+                        <forename>Yutong</forename>
+                    </persName>
+                    <affiliation>Shanghai Jiao Tong University, People's Republic of China</affiliation>
+                    <email>flora20@sjtu.edu.cn</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Guo</surname>
+                        <forename>Yuhan</forename>
+                    </persName>
+                    <affiliation>Peking University, People's Republic of China</affiliation>
+                    <email>yuhan.guo@pku.edu.cn</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Dong</surname>
+                        <forename>Xiaoju</forename>
+                    </persName>
+                    <affiliation>Shanghai Jiao Tong University, People's Republic of China</affiliation>
+                    <email>xjdong@sjtu.edu.cn</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Yuan</surname>
+                        <forename>Xiaoru</forename>
+                    </persName>
+                    <affiliation>Peking University, People's Republic of China</affiliation>
+                    <email>xiaoru.yuan@pku.edu.cn</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>classic Chinese novels</term>
+                    <term>interactive annotation</term>
+                    <term>dialogue character extraction</term>
+                    <term>visualization</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>natural language processing</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>Humanities computing</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>1 Abstract</p>
+            <p>In this work, we propose a framework for extracting, annotating, attributing and visualizing dialogue characters in classic Chinese novels. We leverage interactive workflows to incorporate expert’s knowledge in the dialogue character extraction and attribution process.</p>
+            <p>
+                <anchor xml:id="OLE_LINK2"/>
+                <hi rend="bold">2 Introduction</hi>
+            </p>
+            <p>
+                <anchor xml:id="OLE_LINK3"/>
+                <anchor xml:id="OLE_LINK19"/>Classic Chinese novels feature complex characters and intricate relationships. Key questions in social network analysis of literature include identifying central characters and understanding their connections (Liao 2010). Humanities scholars are increasingly using digital methods to analyze character networks, revealing new insights into narrative roles and relationships. For example, the Term-Clips Method (Du 2016), a semi-manual approach, was used to extract characters and analyze their relationships through Social Network Analysis, identifying key characters vital to the narrative structure (Zhao 2018). In literary analysis, previous studies have investigated the use of character networks for tasks such as clustering novels (Ardanuy &amp; Sporleder, 2015) and enhancing character detection in literary texts (Vala et al., 2015), with a primary focus on English-language works.
+            </p>
+            <p>Manual extraction of characters from classic Chinese novels is highly labor-intensive and time-consuming, with limited scalability. The richness of context in novels and the complexity of character references present significant challenges for fully automated extraction methods. 
+                <anchor xml:id="OLE_LINK9"/>Furthermore, co-reference resolution—identifying whether different names refer to the same character—is challenging due to multiple aliases, context-dependent naming, cultural nuances, and the lack of explicit connections.
+            </p>
+            <p>
+                <anchor xml:id="OLE_LINK13"/>To address these challenges, we propose a 
+                <anchor xml:id="OLE_LINK20"/>large language model (LLM) assisted framework and an annotation prototype that leverages the pre-stored knowledge of LLMs to interpret and understand context. This framework includes a backend for 
+                <anchor xml:id="OLE_LINK7"/>segmentation, extraction, and database storage, and a frontend for interactive annotation. For co-reference resolution, we utilize LLM and visualization-assisted approach to integrate user expertise into the name attribution process. This approach bridges the gap between fully automated methods and human expertise, offering a scalable and effective solution for dialogue character recognition.
+            </p>
+            <p>3 Framework</p>
+            <p>The framework (Figure 1) is divided into two primary components: the 
+                <hi rend="bold">back-end data processing modules</hi> and the 
+                <hi rend="bold">front-end annotation interface</hi>. The back-end extracts dialogue information and attributes aliases, while the front-end enables interactive refinement.
+            </p>
+            <p>
+                <hi rend="bold">3.1 Back-end: Extraction with LLM</hi>
+            </p>
+            <p>The back-end consists of three key modules. The 
+                <hi rend="bold">segmentation module</hi> uses rule-based methods to structure dialogue by segmenting it into units that include dialogue sentences, context, book title, chapter, paragraph, and sentence position. The extract module takes the structured dialogue and inputs the dialogue sentences along with their context to a LLM (in this work, we adopted GLM-4) with pre-configured prompt, guiding it to determine the speaker(s), primary listener(s), and secondary listener(s) for each dialogue. To generate more structured and consistent outputs, we fine-tuned the model using manually annotated chapters. The
+                <anchor xml:id="OLE_LINK15"/> names are stored in a name database as keys, with their earliest occurrence and total frequency recorded. Finally, the 
+                <hi rend="bold">alias attribution module</hi> compares each name, using the LLM to determine whether two names refer to the same character. If confirmed, the names are added to a name chain database, with a primary name assigned to each character and aliases linked accordingly.
+            </p>
+            <p>
+                <hi rend="bold">3.2 Front-end: Annotation with Visualization</hi>
+            </p>
+            <p>The front-end provides an interactive interface for annotation and visualization. 
+                <anchor xml:id="OLE_LINK18"/>
+                <anchor xml:id="OLE_LINK17"/>
+            </p>
+            <p>In the 
+                <hi rend="bold">character annotation interface</hi>, segmented dialogues are displayed with color-coded names: speakers in orange, primary listeners in green, secondary listeners in light green, and other names in blue, with a clickable feature to toggle between identities. Unrecognized names can be selected by hovering the cursor, which will be automatically added to the name database.
+            </p>
+            <p>A 
+                <hi rend="bold" xml:space="preserve">dialogue network </hi>visualizes characters as nodes and speaker-listener relationships as links, with colors transitioning from darker to lighter to indicate the speaker-to-listener direction. The network enables users to focus on specific characters.
+            </p>
+            <p>The name chain database initially provided by the LLM-based attribution can be refined through visual aids. In the network, large nodes represent clusters of aliases for the same character, with small nodes for each alias. An auxiliary table enables experts to manually edit name chains, automatically updating the back-end database and regenerating the network.</p>
+            <p>Additionally, the system supports chapter-specific networks, generating dialogue networks for all character relationships up to the current chapter, revealing narrative progression while providing detailed insights into the structure and dynamics of the story.</p>
+            <figure>
+                <graphic n="1001" width="16.002cm" height="11.55523611111111cm" url="/tmp/tmpfffionz8/Pictures/58ff1733403c60e338dc105ad9c6e357.png" rend="inline"/>
+            </figure>
+            <p>
+                <anchor xml:id="OLE_LINK21"/>
+                <hi rend="italic">Figure 1.</hi>
+                <anchor xml:id="OLE_LINK22"/>
+                <hi rend="italic">The framework, consisting of two main components: the back-end data processing modules (top) and the front-end annotation interface (bottom), with arrows (middle) illustrating the data flow between them and integrating experts into the annotation process.</hi>
+            </p>
+            <p>
+                <anchor xml:id="OLE_LINK23"/>
+                <anchor xml:id="OLE_LINK16"/>
+                <hi rend="bold" xml:space="preserve">4. Case: </hi>
+                <anchor xml:id="OLE_LINK24"/>
+                <hi rend="bold">Dream of the Red Chamber</hi>
+            </p>
+            <p>We showcase the workflow and accuracy with the Chinese classic 
+                <hi rend="italic">Dream of the Red Chamber</hi>. The process began with an initial extraction of character relationships, followed by minor refinements to address erroneous pronouns through manual validation and adjustments. We manually extracted all the speakers and listeners from one chapter of the book, and calculated the accuracy of the corresponding automatically extracted data for that chapter, which resulted in an accuracy rate of 63.41% for speakers, 53.66% for primary listeners, and 95.12% for secondary listeners. In the extracted data, there were coreference resolution issues, such as "<hi rend="Chinese">子兴" </hi>and "<hi rend="Chinese">冷子兴"</hi>. Next, we applied the automatic attribution process for coreference resolution. When these distinctions were ignored, the accuracy rates increased to 95.12%, 92.68%, and 97.56%, respectively. 
+            </p>
+            <p>After processing several chapters, through the dialogue network generation button, we identified that the 
+                <anchor xml:id="OLE_LINK14"/>automatic attribution process failed to link “<hi rend="Chinese">颦儿” </hi>with “<hi rend="Chinese">林黛玉”</hi>. We manually adjusted the attribution to ensure that all aliases for “<hi rend="Chinese">林黛玉” </hi>were correctly connected based on our knowledge. Upon regenerating the network, we observed that the node now correctly included related aliases, with both the occurrence count and dialogue count updated accordingly. In the end, the data processed through this workflow is clean and reliable enough to be used for conducting social network analysis based on character dialogues.
+            </p>
+            <p>Acknowledgment</p>
+            <p>We are very grateful to Professor Wei Zhao from Chinese Academy of Social Sciences for her valuable expert perspectives and assistance. We thank the help of Weijie Li and Shaoxiong Jiang.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold" xml:space="preserve">Ardanuy, M. C. / Sporleder, C. </hi>(2015). 
+                        <anchor xml:id="OLE_LINK27"/>Clustering of Novels Represented as Social Networks. LiLT (Linguistic Issues in Language Technology), 12.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Du, Hsieh-Chang</hi> (2016). Semi-Automatic Vocabulary Extraction: A Simplified Word Sandwich Method and Its Development and Application as a JavaScript Component. In: Digital Humanities: Between the Past, Present, and Future, pp. 171–206. Taipei: National Taiwan University Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Liao, Junfan</hi> (2010). Social Network Relationships in Chinese Classical Vernacular Novels: A Case Study of The Scholars. Master's Thesis, Graduate Institute of Networking and Multimedia, National Taiwan University, pp. 1–163.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Vala, H. / Jurgens, D. / Piper, A. / Ruths, D.</hi> (2015). Mr. Bennet, His Coachman, and the Archbishop Walk into a Bar but Only One of Them Gets Recognized: On the Difficulty of Detecting Characters in Literary Texts. Proceedings of the Conference on Empirical Methods in Natural Language Processing, pp. 769-774.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" xml:space="preserve">Zhao, Wei </hi>(2018). Social Network Analysis and Character Functions in “The Waves Trilogy”. Shandong Social Sciences, 2018(9), 50–64.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MALATERRE_Christophe_Inferring_Semantic_Social_Networks_from">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Inferring Semantic Social Networks from Scientific Texts: The Case of Astrobiology</title>
+                <author>
+                    <persName>
+                        <surname>Malaterre</surname>
+                        <forename>Christophe</forename>
+                    </persName>
+                    <affiliation>University of Québec in Montréal (UQAM), Canada; CIRST, Canada</affiliation>
+                    <email>malaterre.christophe@uqam.ca</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Lareau</surname>
+                        <forename>Francis</forename>
+                    </persName>
+                    <affiliation>University of Québec in Montréal (UQAM), Canada; CIRST, Canada; Sherbrooke University, Canada</affiliation>
+                    <email>lareau.francis@courrier.uqam.ca</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-11T00:36:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>semantic social networks</term>
+                    <term>topic model</term>
+                    <term>science studies</term>
+                    <term>history of science</term>
+                    <term>astrobiology</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>natural language processing</term>
+                    <term>network analysis and graphs theory and application</term>
+                    <term>semantic analysis</term>
+                    <term>text mining and analysis</term>
+                    <term>History of science</term>
+                    <term>Logic and epistemology</term>
+                    <term>Sociology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">Social network analysis (SNA) is a powerful methodology for understanding relationships between actors, whether they are individuals, organizations, or groups. SNA is widely used to study structures such as scholarly networks and scientific collaborations. By analyzing the nodes (actors) and edges (connections) of social networks, SNA provides insights into key actors, their relationships, and the structural dynamics of networks over time. In science studies, SNA has proven essential for exploring the social fabric of scientific communities. Studies have uncovered “hidden colleges” of researchers 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"LtTdXpds","properties":{"formattedCitation":"(Crane 1969; Zuccala 2006)","plainCitation":"(Crane 1969; Zuccala 2006)","noteIndex":0},"citationItems":[{"id":8767,"uris":["http://zotero.org/users/1760897/items/YJA2RL8F"],"itemData":{"id":8767,"type":"article-journal","container-title":"American Sociological Review","DOI":"10.2307/2092499","ISSN":"00031224","issue":"3","journalAbbreviation":"American Sociological Review","language":"en","page":"335","source":"DOI.org (Crossref)","title":"Social Structure in a Group of Scientists: A Test of the \"Invisible College\" Hypothesis","title-short":"Social Structure in a Group of Scientists","volume":"34","author":[{"family":"Crane","given":"Diana"}],"issued":{"date-parts":[["1969",6]]}}},{"id":10871,"uris":["http://zotero.org/users/1760897/items/MBTDTIWA"],"itemData":{"id":10871,"type":"article-journal","abstract":"This article addresses the invisible college concept with the intent of developing a consensus regarding its definition. Emphasis is placed on the term as it was defined and used in Derek de Solla Price's work (1963, 1986) and reviewed on the basis of its thematic progress in past research over the years. Special attention is given to Lievrouw's (1990) article concerning the structure versus social process problem to show that both conditions are essential to the invisible college and may be reconciled. A new definition of the invisible college is also introduced, including a proposed research model. With this model, researchers are encouraged to study the invisible college by focusing on three critical components—the subject specialty, the scientists as social actors, and the information use environment (IUE)","container-title":"Journal of the American Society for Information Science and Technology","DOI":"10.1002/asi.20256","ISSN":"1532-2890","issue":"2","language":"en","license":"Copyright © 2005 Wiley Periodicals, Inc.","note":"_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/asi.20256","page":"152-168","source":"Wiley Online Library","title":"Modeling the invisible college","volume":"57","author":[{"family":"Zuccala","given":"Alesia"}],"issued":{"date-parts":[["2006"]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(Crane 1969; Zuccala 2006), traced the dynamics of collaboration 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"bg8807Tz","properties":{"formattedCitation":"(Tang et al. 2008)","plainCitation":"(Tang et al. 2008)","noteIndex":0},"citationItems":[{"id":8785,"uris":["http://zotero.org/users/1760897/items/ZSIZNVG3"],"itemData":{"id":8785,"type":"paper-conference","abstract":"This paper addresses several key issues in the ArnetMiner system, which aims at extracting and mining academic social networks. Speciﬁcally, the system focuses on: 1) Extracting researcher proﬁles automatically from the Web; 2) Integrating the publication data into the network from existing digital libraries; 3) Modeling the entire academic network; and 4) Providing search services for the academic network. So far, 448,470 researcher proﬁles have been extracted using a uniﬁed tagging approach. We integrate publications from online Web databases and propose a probabilistic framework to deal with the name ambiguity problem. Furthermore, we propose a uniﬁed modeling approach to simultaneously model topical aspects of papers, authors, and publication venues. Search services such as expertise search and people association search have been provided based on the modeling results. In this paper, we describe the architecture and main features of the system. We also present the empirical evaluation of the proposed methods.","container-title":"Proceeding of the 14th ACM SIGKDD international conference on Knowledge discovery and data mining - KDD 08","DOI":"10.1145/1401890.1402008","event-place":"Las Vegas, Nevada, USA","event-title":"the 14th ACM SIGKDD international conference","ISBN":"978-1-60558-193-4","language":"en","page":"990","publisher":"ACM Press","publisher-place":"Las Vegas, Nevada, USA","source":"DOI.org (Crossref)","title":"ArnetMiner: extraction and mining of academic social networks","title-short":"ArnetMiner","URL":"http://dl.acm.org/citation.cfm?doid=1401890.1402008","author":[{"family":"Tang","given":"Jie"},{"family":"Zhang","given":"Jing"},{"family":"Yao","given":"Limin"},{"family":"Li","given":"Juanzi"},{"family":"Zhang","given":"Li"},{"family":"Su","given":"Zhong"}],"accessed":{"date-parts":[["2022",6,3]]},"issued":{"date-parts":[["2008"]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(Tang et al. 2008), and illuminated the role of networks in discovery and career progression 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"dCzvX4nP","properties":{"formattedCitation":"(Fortunato et al. 2018; Kong et al. 2019)","plainCitation":"(Fortunato et al. 2018; Kong et al. 2019)","noteIndex":0},"citationItems":[{"id":6980,"uris":["http://zotero.org/users/1760897/items/V7PA62CK"],"itemData":{"id":6980,"type":"article-journal","container-title":"Science","DOI":"10.1126/science.aao0185","ISSN":"0036-8075, 1095-9203","issue":"6379","journalAbbreviation":"Science","language":"en","page":"eaao0185","source":"DOI.org (Crossref)","title":"Science of science","volume":"359","author":[{"family":"Fortunato","given":"Santo"},{"family":"Bergstrom","given":"Carl T."},{"family":"Börner","given":"Katy"},{"family":"Evans","given":"James A."},{"family":"Helbing","given":"Dirk"},{"family":"Milojević","given":"Staša"},{"family":"Petersen","given":"Alexander M."},{"family":"Radicchi","given":"Filippo"},{"family":"Sinatra","given":"Roberta"},{"family":"Uzzi","given":"Brian"},{"family":"Vespignani","given":"Alessandro"},{"family":"Waltman","given":"Ludo"},{"family":"Wang","given":"Dashun"},{"family":"Barabási","given":"Albert-László"}],"issued":{"date-parts":[["2018",3,2]]}}},{"id":8790,"uris":["http://zotero.org/users/1760897/items/GJWH54TS"],"itemData":{"id":8790,"type":"article-journal","abstract":"In the fast-growing scholarly big data background, social network technologies have recently aroused widespread attention in academia and industry. The concept of academic social networks is created precisely in the context of scholarly big data, which refers to the complicated academic network formed by academic entities and their relationships. There are a wealth of scholarly big data processing methods to analyze the rich structural types and related information about academic social networks. Nowadays, various academic data can be easily obtained, which makes it easier for us to analyze and study academic social networks. This study investigates the background, the current status, and trends of academic social networks. We ﬁrst elaborate on the concept of academic social networks and related research background. Secondly, we analyze models based on nodes’ types and timeliness. Thirdly, we review analytical methods, including relevant metrics, network properties, and available academic analysis tools. Furthermore, we sort out some key mining technologies for academic social networks. Finally, we systematically review representative research tasks in this domain from three levels: actor, relationship, and network. In addition, some academic social networking sites are presented. This survey concludes with the current challenges and open issues.","container-title":"Journal of Network and Computer Applications","DOI":"10.1016/j.jnca.2019.01.029","ISSN":"10848045","journalAbbreviation":"Journal of Network and Computer Applications","language":"en","page":"86-103","source":"DOI.org (Crossref)","title":"Academic social networks: Modeling, analysis, mining and applications","title-short":"Academic social networks","volume":"132","author":[{"family":"Kong","given":"Xiangjie"},{"family":"Shi","given":"Yajie"},{"family":"Yu","given":"Shuo"},{"family":"Liu","given":"Jiaying"},{"family":"Xia","given":"Feng"}],"issued":{"date-parts":[["2019",4]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(Fortunato et al. 2018; Kong et al. 2019). Such analyses often depend on well-documented relational data, such as co-authorship, citations, or collaborations. This limits the scope of SNA, particularly in contexts where relational data are unavailable. Furthermore, SNA typically require supplementary metadata—for instance about scientific specialties—for interpretation. 
+                </p>
+                <p style="text-align: left; ">Here we propose a novel approach to infer social networks directly from the textual data produced by actors, focusing on semantic similarities. This method is particularly relevant for contexts where actors’ texts are available but explicit relational data are scarce or absent. By analyzing the semantic content of texts, we aim to uncover “hidden communities of interest” (HCoIs)—groups of actors connected by shared semantic content, even when their social ties are implicit or unknown. Our approach combines topic modeling and community detection to reconstruct actor networks based on the semantic similarity of their texts. This allows us to identify “semantic social networks” where the relationships between nodes emerge from textual similarities, rather than explicit relational data. Furthermore, interpretation of identified communities is facilitated by extracting topic profiles from the textual data. By extending this framework with diachronic analysis, we can also examine the temporal evolution and genealogies of these communities. </p>
+                <p style="text-align: left; ">Semantic networks, which map relationships between terms based on their co-occurrence, have been extensively applied to study word associations and named-entity relations 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"Lha18vsr","properties":{"formattedCitation":"(Carley 1993; Diesner and Carley 2004)","plainCitation":"(Carley 1993; Diesner and Carley 2004)","noteIndex":0},"citationItems":[{"id":10288,"uris":["http://zotero.org/users/1760897/items/KW3MJUMY"],"itemData":{"id":10288,"type":"article-journal","container-title":"Sociological methodology","DOI":"https://doi.org/10.2307/271007","note":"publisher: JSTOR","page":"75–126","source":"Google Scholar","title":"Coding choices for textual analysis: A comparison of content analysis and map analysis","title-short":"Coding choices for textual analysis","volume":"23","author":[{"family":"Carley","given":"Kathleen"}],"issued":{"date-parts":[["1993"]]}}},{"id":10291,"uris":["http://zotero.org/users/1760897/items/XI7T6V3Z"],"itemData":{"id":10291,"type":"paper-conference","abstract":"Herein we demonstrate how to get from sets of texts to network representations of covert networks represented in texts. We report on the application of a computer-supported technique that combines network analysis of texts with classifying social and organizational systems into an ontology called the meta-matrix model. The resulting combinatory method is referred to as Meta-Matrix Text Analysis. We apply this technique to detect the social and organizational structure of a Mideastern country. Social agents covered in our coding are people and organizations identified by human subject matter experts to be relevant to intelligence matters in that area.","container-title":"Proceedings of the North American Association for Computational Social and Organizational Science (NAACSOS) Conference (Vol. 3)","event-place":"Pittsburgh, PA","language":"en","publisher":"NAACSOS","publisher-place":"Pittsburgh, PA","source":"Zotero","title":"Using Network Text Analysis to Detect the Organizational Structure of Covert Networks","author":[{"family":"Diesner","given":"Jana"},{"family":"Carley","given":"Kathleen M"}],"issued":{"date-parts":[["2004"]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(Carley 1993; Diesner and Carley 2004). While these methods can be adapted to analyze actors’ texts, our approach goes further by leveraging topic modeling to infer semantic similarities at the actor level. Similar efforts have been explored in directional social media networks 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"23Y1Ik5z","properties":{"formattedCitation":"(McCallum, Wang, and Corrada-Emmanuel 2007)","plainCitation":"(McCallum, Wang, and Corrada-Emmanuel 2007)","noteIndex":0},"citationItems":[{"id":8780,"uris":["http://zotero.org/users/1760897/items/8NT3GMHS"],"itemData":{"id":8780,"type":"article-journal","abstract":"Previous work in social network analysis (SNA) has modeled the existence of links from one entity to another, but not the attributes such as language content or topics on those links. We present the Author-Recipient-Topic (ART) model for social network analysis, which learns topic distributions based on the direction-sensitive messages sent between entities. The model builds on Latent Dirichlet Allocation (LDA) and the Author-Topic (AT) model, adding the key attribute that distribution over topics is conditioned distinctly on both the sender and recipient---steering the discovery of topics according to the relationships between people. We give results on both the Enron email corpus and a researcher's email archive, providing evidence not only that clearly relevant topics are discovered, but that the ART model better predicts people's roles and gives lower perplexity on previously unseen messages. We also present the Role-Author-Recipient-Topic (RART) model, an extension to ART that explicitly represents people's roles.","container-title":"Journal of Artificial Intelligence Research","DOI":"10.1613/jair.2229","ISSN":"1076-9757","language":"en","license":"Copyright (c)","page":"249-272","source":"www.jair.org","title":"Topic and Role Discovery in Social Networks with Experiments on Enron and Academic Email","volume":"30","author":[{"family":"McCallum","given":"A."},{"family":"Wang","given":"X."},{"family":"Corrada-Emmanuel","given":"A."}],"issued":{"date-parts":[["2007",10,13]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(McCallum, Wang, and Corrada-Emmanuel 2007) and co-authorship data 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"jvU0dIQX","properties":{"formattedCitation":"(Zhou et al. 2006)","plainCitation":"(Zhou et al. 2006)","noteIndex":0},"citationItems":[{"id":8831,"uris":["http://zotero.org/users/1760897/items/7PVPUSIY"],"itemData":{"id":8831,"type":"paper-conference","container-title":"Proceedings of the 15th ACM international conference on Information and knowledge management","event-place":"New York, NY","page":"248–257","publisher":"ACM Press","publisher-place":"New York, NY","source":"Google Scholar","title":"Topic evolution and social interactions: how authors effect research","title-short":"Topic evolution and social interactions","author":[{"family":"Zhou","given":"Ding"},{"family":"Ji","given":"Xiang"},{"family":"Zha","given":"Hongyuan"},{"family":"Giles","given":"C. Lee"}],"issued":{"date-parts":[["2006"]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(Zhou et al. 2006), notably by adding prior constraining data on nodes, as in semi-supervised community detection algorithms and graph neural network approaches 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"EJ2VaO9J","properties":{"formattedCitation":"(Yang et al. 2014; Ye, Chen, and Zheng 2018)","plainCitation":"(Yang et al. 2014; Ye, Chen, and Zheng 2018)","noteIndex":0},"citationItems":[{"id":8866,"uris":["http://zotero.org/users/1760897/items/FB9FWGXX"],"itemData":{"id":8866,"type":"article-journal","container-title":"IEEE transactions on cybernetics","issue":"11","note":"publisher: IEEE","page":"2585–2598","source":"Google Scholar","title":"A unified semi-supervised community detection framework using latent space graph regularization","volume":"45","author":[{"family":"Yang","given":"Liang"},{"family":"Cao","given":"Xiaochun"},{"family":"Jin","given":"Di"},{"family":"Wang","given":"Xiao"},{"family":"Meng","given":"Dan"}],"issued":{"date-parts":[["2014"]]}}},{"id":8868,"uris":["http://zotero.org/users/1760897/items/KTJM2ULD"],"itemData":{"id":8868,"type":"paper-conference","container-title":"Proceedings of the 27th ACM international conference on information and knowledge management","event-place":"New York, NY","page":"1393–1402","publisher":"ACM Press","publisher-place":"New York, NY","source":"Google Scholar","title":"Deep autoencoder-like nonnegative matrix factorization for community detection","author":[{"family":"Ye","given":"Fanghua"},{"family":"Chen","given":"Chuan"},{"family":"Zheng","given":"Zibin"}],"issued":{"date-parts":[["2018"]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(Yang et al. 2014; Ye, Chen, and Zheng 2018). Our focus here is on inferring networks where relational data are absent. 
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Corpus and methods</head>
+                <p style="text-align: left; ">Our study focuses on a corpus of 3,698 articles from three key astrobiology journals: 
+                    <hi rend="italic">Origins of Life and Evolution of Biospheres</hi>, 
+                    <hi rend="italic">Astrobiology</hi>, and 
+                    <hi rend="italic">International Journal of Astrobiology</hi>. These journals represent critical vectors for the institutionalization of astrobiology as a discipline 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"s3eFfuI6","properties":{"formattedCitation":"(Dick and Strick 2004)","plainCitation":"(Dick and Strick 2004)","noteIndex":0},"citationItems":[{"id":8013,"uris":["http://zotero.org/users/1760897/items/MSGMKHY5"],"itemData":{"id":8013,"type":"book","event-place":"Piscataway, NJ","publisher":"Rutgers University Press","publisher-place":"Piscataway, NJ","title":"The Living Universe NASA and the Development of Astrobiology","author":[{"family":"Dick","given":"Steven J."},{"family":"Strick","given":"James E."}],"issued":{"date-parts":[["2004"]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(Dick and Strick 2004). By analyzing articles from 1968 to 2020, we aim to identify communities of researchers based on shared research interests, as reflected in the semantic content of their publications. The proposed approach comprises five main steps: (1) Topic Modeling—We applied Latent Dirichlet Allocation (LDA) to extract probabilistic topic distributions for each article. This topic model was previously validated for capturing astrobiological themes 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"LrrI3AYL","properties":{"formattedCitation":"(Malaterre and Lareau 2023)","plainCitation":"(Malaterre and Lareau 2023)","noteIndex":0},"citationItems":[{"id":9746,"uris":["http://zotero.org/users/1760897/items/F5WRML6L"],"itemData":{"id":9746,"type":"article-journal","abstract":"Astrobiology is often defined as the study of the origin, evolution, distribution, and future of life on Earth and in the Universe. As a discipline that emerged in the past decades of the 20th century, its contours have not always been straightforward, resulting from the interweaving of several lines of research as early as the 1960s. By applying computational topic-modeling approaches to the complete full-text corpus of three flagship journals in the field, Origins of Life and Evolution of Biospheres (1968–2020), Astrobiology (2001–2020), and the International Journal of Astrobiology (2002–2020), we identify specific topics that characterize the early blossoming of the discipline. We also map their evolution through time, as emphasis changed between different readings of astrobiology, from an exobiology and origins-of-life perspective to a more space- and planetary-sciences view of the discipline.","container-title":"Astrobiology","DOI":"10.1089/ast.2022.0122","ISSN":"1531-1074","issue":"5","note":"publisher: Mary Ann Liebert, Inc., publishers","page":"496-512","source":"liebertpub.com (Atypon)","title":"The Emergence of Astrobiology: A Topic-Modeling Perspective","title-short":"The Emergence of Astrobiology","volume":"23","author":[{"family":"Malaterre","given":"Christophe"},{"family":"Lareau","given":"Francis"}],"issued":{"date-parts":[["2023",2,24]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(Malaterre and Lareau 2023). (2) Author Topic Profiles—For each author, we computed topic profiles by averaging the topic distributions of the articles they contributed to, segmented into four time periods to enable diachronic analysis. (3) Actor Network Construction—Correlation matrices of author topic profiles were used to construct actor networks, where edges represent semantic similarities between authors. (4) Community Detection—Louvain community detection was applied to identify clusters of authors (Blondel et al. 2008), with each cluster representing an HCoI. Community topic profiles were computed by averaging the topic profiles of their members, allowing straightforward semantic interpretation. And (5) Diachronic Analysis—By measuring distances between community topic profiles across time periods, we mapped the evolution and genealogical relationships of communities. 
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results</head>
+                <p style="text-align: left; ">Our methods revealed several key findings. First, in terms of the identification of hidden communities of interest, the semantic similarities between authors allowed us to infer meaningful clusters of researchers, even in the absence of explicit relational data. These HCoIs reflect underlying thematic commonalities within the astrobiology community (Fig. 1). Second, the community topic profiles provided immediate insights into the thematic focus of each group, thereby facilitating the interpretation of the communities. For example, certain clusters emphasized planetary habitability, while others concentrated on origins-of-life experiments or extremophiles. Finally, diachronic analysis revealed the temporal evolution of communities, including the emergence of new clusters, the fragmentation of existing ones, and thematic shifts over time. This genealogical mapping highlighted the dynamic interplay of scientific interests in astrobiology. </p>
+                <figure>
+                    <graphic n="1001" width="15.919302777777778cm" height="10.02695cm" url="/tmp/tmpw5p61z9l/Pictures/97676986496b31032d3e1d397c2f97aa.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 1. (A) Astrobiology semantic social network 2000-2009 (B) Community topic profiles</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Discussion</head>
+                <p style="text-align: left; ">The approach demonstrates the utility of combining topic modeling and community detection to infer semantic social networks. Compared to traditional SNA methods, this framework allows for the exploration of latent relationships based on shared semantic content, overcoming the limitations posed by the absence of explicit relational data. By focusing on “who talks about the same thing as who”, our method captures thematic affinities that often underpin scientific research communities but may not be reflected in citation or co-authorship networks. This provides a complementary perspective on scientific communities, revealing the shared intellectual terrain that connects researchers. Beyond astrobiology, our approach can be applied to various domains where textual data are abundant, but relational data are lacking. Examples include the identification in sociology of networks based on shared narratives in blogs or newsfeeds; literary studies, the analysis of thematic clusters of authors in specific literary genres; in historical studies, the mapping of intellectual communities from archival documents or correspondence; or in philosophy, the investigation of philosophers’ thematic communities and intellectual genealogies. By offering a scalable and interpretable framework, this approach opens new avenues for exploring the structure and dynamics of social and intellectual networks.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Blondel, Vincent D. / Guillaume, Jean-Loup / Lambiotte, Renaud / Lefebvre, Etienne (</hi>2008): “Fast Unfolding of Communities in Large Networks.” Journal of Statistical Mechanics: Theory and Experiment 2008 (10): P10008.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Carley, Kathleen</hi> (1993): “Coding Choices for Textual Analysis: A Comparison of Content Analysis and Map Analysis.” 
+                        <hi rend="italic">Sociological Methodology</hi> 23:75–126.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Crane, Diana</hi> (1969): “Social Structure in a Group of Scientists: A Test of the ‘Invisible College’ Hypothesis.” 
+                        <hi rend="italic">American Sociological Review</hi> 34 (3): 335. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Dick, Steven J. / Strick, James E.</hi> (2004): 
+                        <hi rend="italic">The Living Universe NASA and the Development of Astrobiology</hi>. Piscataway, NJ: Rutgers University Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Diesner, Jana / Carley Kathleen M.</hi> (2004). “Using Network Text Analysis to Detect the Organizational Structure of Covert Networks.” In 
+                        <hi rend="italic">Proceedings of the North American Association for Computational Social and Organizational Science (NAACSOS) Conference (Vol. 3)</hi>. Pittsburgh, PA: NAACSOS.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Fortunato, Santo / Bergstrom Carl T. / Börner, Katy / Evans, James A. / Helbing, Dirk / Milojević, Staša / Petersen, Alexander M. et al.</hi> (2018): “Science of Science.” 
+                        <hi rend="italic">Science</hi> 359 (6379): eaao0185.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kong, Xiangjie / Shi, Yajie / Yu, Shuo / Liu, Jiaying / Xia, Feng</hi> (2019): “Academic Social Networks: Modeling, Analysis, Mining and Applications.” 
+                        <hi rend="italic">Journal of Network and Computer Applications</hi> 132 (April):86–103. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Malaterre, Christophe / Lareau, Francis</hi> (2023): “The Emergence of Astrobiology: A Topic-Modeling Perspective.” 
+                        <hi rend="italic">Astrobiology</hi> 23 (5): 496–512. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">McCallum, Andrew / Wang, Xuerui / Corrada-Emmanuel, Andrés</hi> (2007): “Topic and Role Discovery in Social Networks with Experiments on Enron and Academic Email.” 
+                        <hi rend="italic">Journal of Artificial Intelligence Research</hi> 30 (October):249–72. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Tang, Jie / Zhang, Jing / Yao, Limin / Li, Juanzi / Zhang, Li / Su, Zhong</hi> (2008) : “ArnetMiner: Extraction and Mining of Academic Social Networks.” In 
+                        <hi rend="italic">Proceeding of the 14th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining - KDD 08</hi>, 990. Las Vegas, Nevada, USA: ACM Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Yang, Liang / Cao, Xiaochun / Jin, Di / Wang, Xiao / Meng, Dan</hi> (2014): “A Unified Semi-Supervised Community Detection Framework Using Latent Space Graph Regularization.” 
+                        <hi rend="italic">IEEE Transactions on Cybernetics</hi> 45 (11): 2585–98.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Ye, Fanghua / Chen, Chuan / Zheng, Zibin</hi> (2018): “Deep Autoencoder-like Nonnegative Matrix Factorization for Community Detection.” In 
+                        <hi rend="italic">Proceedings of the 27th ACM International Conference on Information and Knowledge Management</hi>, 1393–1402. New York, NY: ACM Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Zhou, Ding / Ji, Xiang / Zha, Hongyuan / Giles, C. Lee</hi> (2006): “Topic Evolution and Social Interactions: How Authors Effect Research.” In 
+                        <hi rend="italic">Proceedings of the 15th ACM International Conference on Information and Knowledge Management</hi>, 248–57. New York, NY: ACM Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Zuccala, Alesia</hi> (2006): “Modeling the Invisible College.” 
+                        <hi rend="italic">Journal of the American Society for Information Science and Technology</hi> 57 (2): 152–68.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

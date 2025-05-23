@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="M_HLEDER_Peter_Creating_Interactive_3D_Applications_with_the">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Creating Interactive 3D Applications with the Open-Source Game Engine “Godot” – A DH Hackathon/Game Jam</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Mühleder</surname>
+                        <forename>Peter</forename>
+                    </persName>
+                    <affiliation>Saxon Academy of Sciences and Humanities, Germany</affiliation>
+                    <email>muehleder@saw-leipzig.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Naether</surname>
+                        <forename>Franziska</forename>
+                    </persName>
+                    <affiliation>Saxon Academy of Sciences and Humanities, Germany</affiliation>
+                    <email>naether@saw-leipzig.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Goldhahn</surname>
+                        <forename>Dirk</forename>
+                    </persName>
+                    <affiliation>Saxon Academy of Sciences and Humanities, Germany</affiliation>
+                    <email>goldhahn@saw-leipzig.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Bleckmann</surname>
+                        <forename>Patrice</forename>
+                    </persName>
+                    <affiliation>Saxon Academy of Sciences and Humanities, Germany</affiliation>
+                    <email>patriceb@t-online.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-25T14:56:17.499729205</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Mini-conference</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digital publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>Galleries and museum studies</term>
+                    <term>Games studies</term>
+                    <term>History</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading">
+                <head>Game Engines and Their Potential in Digital Humanities</head>
+                <p>A game engine is a framework for developing video games that simplifies the creation of complex real-time 2D and 3D applications. General-purpose game engines typically include components for rendering, physics simulation, audio, networking, and more. They also often provide visual scene editors for creating detailed 3D environments with ease.</p>
+                <p>The Godot Game Engine (https://godotengine.org/), released in 2014 as open-source software, has been continuously developed by hundreds of contributors and is now supported by the Godot Foundation. As of version 4, Godot has established itself as one of the most-used game engines alongside Unity and Unreal, offering benefits such as being lightweight, open-source, and user-friendly.</p>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>Applications in Digital Humanities</head>
+                <p>Game engines have emerged as interesting tools in Digital Humanities research, offering versatile applications across a range of areas:</p>
+                <list type="unordered">
+                    <item>
+                        <hi rend="bold">Research tools</hi>: As research tools, game engines can aid the implementation of advanced simulations—fluid dynamics, lighting, animations, crowd behaviour, and mechanical processes—accessible without extensive technical resources (Münster 2022). Such built-in tools or plugins reduce development costs and complexity, making them practical for DH projects.
+                    </item>
+                    <item>
+                        <hi rend="bold">Cultural heritage</hi>: Game engines can be used for documenting and preserving intangible heritage, such as oral traditions and Indigenous storytelling. For example, Wyeld et al. (2007) demonstrated how game engines preserve cultural narratives in Australian Indigenous communities. Beyond static displays, game engines allow dynamic recreations of rituals, stories, and performances through soundscapes, animations, and interactive elements (Skublewska Paszkowska et al., 2022).
+                    </item>
+                    <item>
+                        <hi rend="bold">Communication of research results</hi>: Game engines can effectively and immersively present research findings, such as presenting 3D reconstructions in museums or creating educational "serious games." They can also serve as tools for reaching broad audiences. For instance, historians increasingly collaborate with game developers on projects like Assassin’s Creed, which bridges academic and popular history (see Houghton 2018).
+                    </item>
+                    <item>
+                        <hi rend="bold">Education</hi>: In academic settings, game engines can foster immersive learning environments. Virtual reality experiences, powered by game engines, have been shown to enhance student engagement, motivation, and knowledge retention (Hutson/Olsen 2022).
+                    </item>
+                </list>
+                <p>By integrating game engines into DH projects, researchers can breathe new life into digitized artifacts, making them more accessible and interactive for diverse audiences. Tools like Godot stand out for their lightweight design, open-source nature, and user-friendly interface, making them valuable for experimental research and effective knowledge transfer.</p>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>Target Audience</head>
+                <p>This mini-conference is designed for practitioners in Digital Humanities and GLAM institutions. Programming experience (e.g., Python) is desirable but not mandatory. Participants are encouraged to bring their own datasets, such as 3D models or artifacts, preferably under open licenses, to integrate into their projects – and, of course, project ideas!</p>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>Structure of the Mini-Conference</head>
+                <p>The mini-conference consists of two parts, each lasting four hours. The first part begins with a brief introduction to the potential of interactive 3D applications in Digital Humanities. This is followed by an overview of game engines and real-time rendering. During the remainder of the first session, participants will learn to use the Godot editor, import 3D objects, create 3D scenes, and implement simple interactions.</p>
+                <p>The second part takes the form of a hackathon or mini game jam. Participants will develop their own ideas for interactive applications or games and collaborate with the workshop team to bring them to life. To support this process, several project templates (e.g., a virtual museum exhibition space) will be provided by the workshop team.</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Morning Session: Foundations and Skill-Building (4 hours)</head>
+                    <list type="unordered">
+                        <item>The Potential of 3D applications in DH (30 min): Case studies in cultural heritage and immersive education.</item>
+                        <item>Introduction to game engines and real-time Rendering (30 min): Understanding how game engines like Godot are applied in DH.</item>
+                        <item>Getting started with Godot (90 min): Hands-on tutorial for setting up the Godot editor, importing 3D objects, building basic interactions and workflows for exporting/publishing projects.</item>
+                        <item>Exercise (90 min): Practice building functional 3D environments by placing objects, configuring lighting, and setting up cameras, using exercise templates provided by the workshop team.</item>
+                    </list>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Afternoon Session: Collaborative Hackathon (4 hours)</head>
+                    <list type="unordered">
+                        <item>Ideation and project development: Participants are invited to develop ideas for games and interactive applications related to their own research and discuss these ideas with other participants.</item>
+                        <item>Hackathon/Mini game jam: Teams create 3D scenes based on participants’ ideas and datasets, with support from the workshop team.</item>
+                        <item>Closing Discussion (30 min): Participants will showcase their projects, receive feedback, and discuss the possibilities of interactive real-time 3D applications within Digital Humanities research.</item>
+                    </list>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>Key Features and Tools</head>
+                <list type="unordered">
+                    <item>
+                        <hi rend="bold">Godot Game Engine</hi>: A lightweight, open-source tool ideal for collaborative projects.
+                    </item>
+                    <item>
+                        <hi rend="bold">Collaborative Environment</hi>: Emphasis on teamwork and knowledge sharing.
+                    </item>
+                    <item>
+                        <hi rend="bold">Custom Datasets</hi>: Participants will integrate their own materials to create unique projects.
+                    </item>
+                </list>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>Technical Requirements</head>
+                <list type="unordered">
+                    <item>
+                        <hi rend="bold">Workshop Room</hi>: Projector, Wi-Fi, sufficient power outlets
+                    </item>
+                    <item>
+                        <hi rend="bold">Participants</hi>: Laptop (Windows, Linux, or Mac); a mouse is recommended for operating the Godot editor; Godot Game Engine (cross-platform, ~43 MB download); optional: own 3D models/datasets (preferably released under an open license).
+                    </item>
+                </list>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>Team and Expertise</head>
+                <list type="unordered">
+                    <item>Peter Mühleder: Research Software Engineer with extensive experience in Godot and digital humanities projects.</item>
+                    <item>Franziska Naether: Expert in digital exhibitions and 3D digitization of cultural artifacts.</item>
+                    <item>Dirk Goldhahn: Specialist in digital research methods and data modelling.</item>
+                    <item>Patrice Bleckmann: Computer science student with a focus on image processing.</item>
+                </list>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Brennan, Matthew </hi>
+                        <hi rend="color(#000000)bold">/</hi>
+                        <hi rend="color(#000000)bold"> Christiansen, Leif</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2018</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “Virtual Materiality: A Virtual Reality Framework for the Analysis and Visualization of Cultural Heritage 3D Models”, </hi>
+                        <hi rend="color(#000000)">i</hi>
+                        <hi rend="color(#000000)">n: </hi>
+                        <hi rend="color(#000000)italic">Digital Heritage 2018 </hi>
+                        <hi rend="color(#000000)">(Conference Paper). </hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Houghton, Robert </hi>
+                        <hi rend="color(#000000)">(2</hi>
+                        <hi rend="color(#000000)">018</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “World, Structure and Play: A Framework for Games as Historical Research Outputs, Tools, and Processes”, </hi>
+                        <hi rend="color(#000000)">i</hi>
+                        <hi rend="color(#000000)">n: </hi>
+                        <hi rend="color(#000000)italic">Práticas</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)italic">da História</hi>
+                        <hi rend="color(#000000)">, 7, 11-43.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Hutson, James </hi>
+                        <hi rend="color(#000000)bold">/</hi>
+                        <hi rend="color(#000000)bold"> Olsen, Trenton</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2022</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “Virtual Reality and Art History: A Case Study of Digital Humanities and Immersive Learning Environments”, </hi>
+                        <hi rend="color(#000000)">i</hi>
+                        <hi rend="color(#000000)">n: </hi>
+                        <hi rend="color(#000000)italic">Journal of Higher Education Theory and Practice</hi>
+                        <hi rend="color(#000000)">, 22(2), 50-65.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Münster, Sander</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2022</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “Digital 3D Technologies for Humanities Research and Education: An Overview”, </hi>
+                        <hi rend="color(#000000)">i</hi>
+                        <hi rend="color(#000000)">n: </hi>
+                        <hi rend="color(#000000)italic">Appl. Sci.</hi>
+                        <hi rend="color(#000000)">,12, 2426. DOI: 10.3390/app12052426.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Skublewska-Paszkowska, Maria / Marek Milosz </hi>
+                        <hi rend="color(#000000)bold">/</hi>
+                        <hi rend="color(#000000)bold"> Pawel Powroznik</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)bold">/</hi>
+                        <hi rend="color(#000000)bold"> Lukasik, Edyta</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2022</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “3D technologies for intangible cultural heritage preservation—literature review for selected databases”, </hi>
+                        <hi rend="color(#000000)">i</hi>
+                        <hi rend="color(#000000)">n: </hi>
+                        <hi rend="color(#000000)italic">Heritage Science</hi>
+                        <hi rend="color(#000000)">, 10:3. DOI: 10.1186/s40494-021-00633-x</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Wyeld, Theodor G. / Joti Carroll / Craig Gibbons / Brendan Ledwich / Brett Leavy / James Hills </hi>
+                        <hi rend="color(#000000)bold">/</hi>
+                        <hi rend="color(#000000)bold"> Docherty, Michael</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2007</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “Doing Cultural Heritage Using the Torque Game Engine: Supporting Indigenous Storytelling in a 3D Virtual Environment”, </hi>
+                        <hi rend="color(#000000)">i</hi>
+                        <hi rend="color(#000000)">n: </hi>
+                        <hi rend="color(#000000)italic">International Journal of Architectural Computing,</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">418-435. DOI: 10.1260/147807707781514931.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

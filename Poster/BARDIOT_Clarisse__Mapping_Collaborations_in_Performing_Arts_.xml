@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BARDIOT_Clarisse__Mapping_Collaborations_in_Performing_Arts_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main"> Mapping Collaborations in Performing Arts: Building the Festival d’Avignon Digital Corpus </title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Foucault</surname>
+                        <forename>Nicolas</forename>
+                    </persName>
+                    <affiliation>Université Rennes 2, France</affiliation>
+                    <email>nicolas.foucault@univ-rennes2.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Fras</surname>
+                        <forename>Jeanne</forename>
+                    </persName>
+                    <affiliation>Université Rennes 2, France</affiliation>
+                    <email>jeanne.fras@univ-rennes2.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Bardiot</surname>
+                        <forename>Clarisse</forename>
+                    </persName>
+                    <affiliation>Université Rennes 2, France</affiliation>
+                    <email>clarisse.bardiot@univ-rennes2.fr</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-05T15:57:21.380142494</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>performing arts</term>
+                    <term>collaboration</term>
+                    <term>corpus</term>
+                    <term>programs</term>
+                    <term>machine learning</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>cultural analytics</term>
+                    <term>information retrieval and querying algorithms and methods</term>
+                    <term>optical character recognition and handwriting recognition</term>
+                    <term>Art history</term>
+                    <term>Cultural studies</term>
+                    <term>Performance Studies: Dance</term>
+                    <term>Theatre</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <hi rend="color(#000000)">This poster outlines the creation of the pAFA corpus, a digital resource built from the show programmes (“programme de salle” in French, is a document provided to audience members on the day of the performance. It  offers key information about it — from production credits and biographical notes on the author or director to any other details that help contextualize and enhance the audience’s understanding of the show.) of the Festival d’Avignon (1947–2024). As part of the ERC-funded </hi>
+                <hi rend="color(#000000)italic">STAGE</hi>
+                <hi rend="color(#000000)"> </hi>
+                <hi rend="color(#000000)">project, this corpus supports the study of collaborations in contemporary European performing arts.</hi>
+            </p>
+            <div type="div1" rend="DH-Heading1">
+                <head>Context</head>
+                <p>
+                    <hi rend="color(#000000)">STAGE aims to develop a new historiography of </hi>
+                    <hi rend="color(#000000)italic">mise en scène</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">and creative processes in post-WWII Europe by integrating performing arts studies with digital tools, particularly data-driven AI methods. One goal is to examine creation contexts and networks through the lens of collaboration. Building on actor-network theory (Latour 1999; 2005) and the works of Caplan (2016), Miller (2014), and Bardiot (2021), we hypothesise that mapping networks of performance contributors will offer new insights into the intricate contexts of contemporary European stagings. Visualising these networks will reveal patterns and influences, highlighting the collaborative nature of performances and the interplay among diverse artists across disciplines, languages, and cultures.</hi>
+                </p>
+                <p>
+                    <hi rend="color(#000000)">By focusing on show programmes</hi>
+                    <hi rend="color(#000000)"> – </hi>
+                    <hi rend="color(#000000)">a valuable yet understudied resource – we seek to extract, structure, and analyse information about contributors, professions, and collaborations. A show programme often includes the place, date, distribution, photographs and text of the related performance. Information found in show programmes tends to be more reliable and up to date than in season programmes, since the former programmes are printed very close to the </hi>
+                    <hi rend="color(#000000)italic">premiere</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">performance date, and not a year in advance like season programmes. Moreover, existing databases (Roussillon &amp; Schuwey 2020) often reduce show programmes to minimal metadata, overlooking the rich contextual data available in their literal transcription. In contrast, our approach preserves the original content of the document while structuring it for computational analysis.</hi>
+                </p>
+                <p>As a starting point, we are examining a multimodal French corpus from the Archives of the Festival d’Avignon (AFA), including 1,870 show programmes in PDF format. This major event, featuring over 2,000 performances since 1947, provides an unprecedented resource for performing arts analytics.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Corpus creation</head>
+                <p>We built a corpus called the pAFA corpus, by processing the 1,870 AFA’s programmes aforementioned, representing a total of 8,139 pages. This corpus will enable us to map out networks of Avignon’s contributors in the performing arts, based in particular on names and corresponding professions. In this poster, we detail the pAFA corpus construction.</p>
+                <p>The main steps for creating the pAFA corpus are: (a) collection, (b) processing, and (c) release.</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Collection (a)</head>
+                    <p>
+                        <hi rend="color(#000000)">The corpus was compiled from two sources: the Bibliothèque nationale de France (BnF) through Gallica, and the Festival d’Avignon’s public relations service (Avignon). Differences in data organisation required harmonisation before merging them into a unified corpus. The corpus covers 1947 to 2024, with born-digital documents for recent years (since 2003) and paper archives for earlier ones. The digitisation process was necessary for older documents (before 2003). A naming system identifies the source, name, and date for each PDF document (e.g. </hi>
+                        <hi rend="color(#000000)">Gallica_prog_FDA2015.pdf</hi>
+                        <hi rend="color(#000000)">). We used the ShareDocs cloud service by </hi>
+                        <ref target="https://www.huma-num.fr/">
+                            <hi rend="color(#1155cc)underline">IR* HumaNum</hi>
+                        </ref>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">for data storage.</hi>
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Processing (b)</head>
+                    <p>Processing is automated: (i) preprocessing original documents (segmentation and OCR), (ii) parsing preprocessed documents, and (iii) extracting content from the parsed representations obtained (text, tables and images), ideally without any information loss, particularly preserving words initial forms (i.e. the literal transcription of the text found in original documents).</p>
+                    <p>
+                        <hi rend="color(#000000)bold">Preprocessing</hi>
+                        <hi rend="color(#000000)">: all PDFs are split in sub-pages using an in-house PDF splitter implemented in Python (based on dhSegment (Ares Oliveira et al. 2018)), as it helps to read text in the correct order for parsing documents. Pre-2003 PDFs, containing only scanned images, received an additional text layer using a reliable OCR solution (Kiessling 2021).</hi>
+                    </p>
+                    <p>
+                        <hi rend="color(#000000)bold">Parsing and extracting</hi>
+                        <hi rend="color(#000000)">: we use IBM’s PDF content-based open-source Python library Docling (Livathinos et al. 2025)</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">for parsing preprocessed documents. IBM’s solution is state-</hi>
+                        <hi rend="color(#000000)">of-the-art, actively updated, and shown to be much more efficient than any other solutions we tested such as </hi>
+                        <ref target="https://github.com/pdfminer/pdfminer.six">
+                            <hi rend="color(#1155cc)underline">pdfminer.six</hi>
+                        </ref>
+                        <hi rend="color(#000000)">, </hi>
+                        <ref target="https://github.com/pymupdf/PyMuPDF">
+                            <hi rend="color(#1155cc)underline">pyMuPDF</hi>
+                        </ref>
+                        <hi rend="color(#000000)">, </hi>
+                        <ref target="https://unstructured.io/">
+                            <hi rend="color(#1155cc)underline">unstructured.io</hi>
+                        </ref>
+                        <hi rend="color(#000000)">, and </hi>
+                        <ref target="https://github.com/opendatalab/MinerU">
+                            <hi rend="color(#1155cc)underline">minerU</hi>
+                        </ref>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(Wang et al. 2024).</hi>
+                    </p>
+                    <p>
+                        <hi rend="color(#000000)">The corpus will be</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">available in two formats, human and machine-readable respectively : (f1) markdown and (f2) DoclingDocument (markdown in JSON format with PDFs coordinates), both formats suitable for LLM ingestion, along with IIIF link to original PDF for each document. DoclingDocument is Docling’s unified document representation. It can be enriched and used by downstream applications (such as </hi>
+                        <ref target="https://www.langchain.com/">
+                            <hi rend="color(#1155cc)underline">LangChain</hi>
+                        </ref>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">and </hi>
+                        <ref target="https://spacy.io/">
+                            <hi rend="color(#1155cc)underline">Spacy</hi>
+                        </ref>
+                        <hi rend="color(#000000)">) through IBM’s API to inspect, export, or chunk documents for various purposes. As </hi>
+                        <ref target="https://docs.pydantic.dev/latest/">
+                            <hi rend="color(#1155cc)underline">Pydantic</hi>
+                        </ref>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">data model, this format can express various common document features.</hi>
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Release (c)</head>
+                    <p>
+                        <hi rend="color(#000000)">This step involves both manual and automatic controls of the processing results to assess the quality of the corpus. The pAFA corpus and related extraction tools will be made accessible on Nakala, a platform supported by IR* HumaNum.</hi>
+                        <hi rend="color(#000000)"> </hi>
+                    </p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Perspectives</head>
+                <p>The pAFA corpus will facilitate analysis of technical and artistic roles as well as their related relationships and evolution over time by mapping networks of performances participants.</p>
+                <p>
+                    <hi rend="color(#000000)">We also plan to ingest AFA’s programmes into a multi-modal RAG system — an innovative approach that combines various data types, such as text, images and videos, using Colpali (Faysse et al. 2025)</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">through </hi>
+                    <ref target="https://github.com/AnswerDotAI/byaldi">
+                        <hi rend="color(#1155cc)underline">Byaldi</hi>
+                    </ref>
+                    <hi rend="color(#000000)">. This way, we will be able to evaluate the relevance of historiographical studies through natural language as well as to understand whether the related LLM-generated Knowledge Graph might help us in developing our performing arts ontology (Bardiot et al. 2025).</hi>
+                </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Ares Oliveira, Sofia / Seguin, Benoit / Kaplan, Frederic</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2018</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “dhSegment: A Generic Deep-Learning Approach for Document Segmentation”</hi>
+                        <hi rend="color(#000000)">,</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">i</hi>
+                        <hi rend="color(#000000)">n: Proceedings of the 16th International Conference on Frontiers in Handwriting Recognition (ICFHR’18). </hi>
+                        <ptr target="https://doi.org/10.48550/arXiv.1804.10371"/>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Bardiot, Clarisse</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2021</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)italic">Performing Arts and Digital Humanities: From Traces to Data</hi>
+                        <hi rend="color(#000000)">. Hoboken: ISTE / Wiley.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Bardiot, Clarisse / Jacquemin, Bernard / Lagarias, Antonios / Fras, Jeanne / Foucault, Nicolas / Hart, Jacob / Beraldin, Alexandra</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2025</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “From Stage to Data: Ontologies for Performing Arts and Linked Open Data”, in: </hi>
+                        <hi rend="color(#000000)italic">DH Benelux 2025.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Caplan, Debra</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2016</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “Reassessing Obscurity: The Case for Big Data in Theatre History”, </hi>
+                        <hi rend="color(#000000)">in: </hi>
+                        <hi rend="color(#000000)italic">Theatre Journal</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">68 (4): 555–73.</hi>
+                        <ref target="https://doi.org/10.1353/tj.2016.0106">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.1353/tj.2016.0106</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Kiessling, Benjamin / Kurin, Gennady / Miller, Matthew Thomas / Smail, Kader</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2021</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “Advances and Limitations in Open Source Arabic-Script OCR: A Case Study”, </hi>
+                        <hi rend="color(#000000)">in:</hi>
+                        <hi rend="color(#000000)"> Journal of Digital Studies/Le Champ Numérique (DSCN) Open Issue 2021. </hi>
+                        <ptr target="https://doi.org/10.16995/DSCN.8094"/>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Latour, Bruno</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">1999</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “On Recalling ANT”, </hi>
+                        <hi rend="color(#000000)">i</hi>
+                        <hi rend="color(#000000)">n: </hi>
+                        <hi rend="color(#000000)italic">Actor Network Theory and After</hi>
+                        <hi rend="color(#000000)">, edited by John Law and John Hassard, 15–25. Boston: Blackwell.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Latour, Bruno</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2005</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)italic">Reassembling the Social: An Introduction to Actor-Network-Theory</hi>
+                        <hi rend="color(#000000)">. Oxford; New York: Oxford University Press.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Faysse, Manuel / Sibille, Hugues / Wu, Tony / Bilel, Omrani / Viaud, Gautier / Hudelot, Céline / Colombo, Pierre</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2025</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “ColPali: Efficient Document Retrieval with Vision Language Models”, </hi>
+                        <hi rend="color(#000000)">i</hi>
+                        <hi rend="color(#000000)">n: </hi>
+                        <hi rend="color(#000000)italic">ICLR’25</hi>
+                        <hi rend="color(#000000)">. Singapore. </hi>
+                        <ptr target="https://doi.org/10.48550/arXiv.2407.01449"/>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Miller, Derek</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2014</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “Visualizing Broadway: A Research Project in the Digital Humanities”, </hi>
+                        <hi rend="color(#000000)">in: </hi>
+                        <hi rend="color(#000000)italic">IFTR/FIRT 2014</hi>
+                        <hi rend="color(#000000)">. Warwick.</hi>
+                        <ref target="http://www.visualizingbroadway.com/Visualizations/Broadway/">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">http://www.visualizingbroadway.com/Visualizations/Broadway/</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Livathinos, Nikolaos / Auer, Christoph / Lysak, Maksym / Nassar, Ahmed / Dolfi, Michele / Vagenas, Panos / Berrospi Ramis, Cesar / Omenetti, Matteo / Dinkla, Kasper / Kim, Yusik / Gupta, Shubham / Teixeira de Lima, Rafael / Weber, Valery / Morin, Lucas / Meijer, Ingmar / Kuropiatnyk, Viktor / W. J. Staar, Peter </hi>
+                        <hi rend="color(#000000)bold">(</hi>
+                        <hi rend="color(#000000)">2025</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “Docling: An Efficient Open-Source Toolkit for AI-driven Document Conversion”, </hi>
+                        <hi rend="color(#000000)">in:</hi>
+                        <hi rend="color(#000000)"> Workshop of AAAI’25. </hi>
+                        <ptr target="https://doi.org/10.48550/arXiv.2501.17887"/>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Roussillon, Marine / Schuwey, Christophe</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2020</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)italic">Revue d’historiographie du théâtre : écrire l’histoire des spectacles avec des bases de données</hi>
+                        <hi rend="color(#000000)">. 5. Paris: Société d’histoire du théâtre.</hi>
+                        <ref target="https://sht.asso.fr/revue/ecrire-lhistoire-des-spectacles-avec-des-bases-de-donnees/">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">https://sht.asso.fr/revue/ecrire-lhistoire-des-spectacles-avec-des-bases-de-donnees/</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Wang, Bin / Xu, Chao / Zhao, Xiaomeng / Ouyang, Linke / Wu, Fan / Zhao, Zhiyuan / Xu, Rui / Liu, Kaiwen / Qu, Yuan / Shang, Fukai / Zhang, Bo / Wei, Liqun / Sui, Zhihao / Li, Wei / Shi, Botian / Qiao, Yu / Lin, Dahua / He, Conghui</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2024</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “MinerU: An Open-Source Solution for Precise Document Content Extraction”. </hi>
+                        <ptr target="https://doi.org/10.48550/arXiv.2409.18839"/>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

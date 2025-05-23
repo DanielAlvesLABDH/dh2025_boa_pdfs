@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="TSUTSUMI_Tomoaki_Development_and_Evaluation_of_the_Informati">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Development and Evaluation of the Information Retrieval System for Humanities Archives using LLM</title>
+                <author>
+                    <persName>
+                        <surname>Kobayashi</surname>
+                        <forename>Kenshin</forename>
+                    </persName>
+                    <affiliation>GLOBAL SECURITY EXPERTS Inc., Japan</affiliation>
+                    <email>s2321689@u.tsukuba.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Itagaki</surname>
+                        <forename>Koki</forename>
+                    </persName>
+                    <affiliation>University of Tsukuba, Japan</affiliation>
+                    <email>s2521676@u.tsukuba.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>TSUTSUMI</surname>
+                        <forename>Tomoaki</forename>
+                    </persName>
+                    <affiliation>University of Tsukuba, Japan</affiliation>
+                    <email>tsutsumi.tomoaki.gn@u.tsukuba.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Matsumura</surname>
+                        <forename>Atsushi</forename>
+                    </persName>
+                    <affiliation>University of Tsukuba, Japan</affiliation>
+                    <email>matsumur@slis.tsukuba.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Uda</surname>
+                        <forename>Norihiko</forename>
+                    </persName>
+                    <affiliation>University of Tsukuba, Japan</affiliation>
+                    <email>uda@slis.tsukuba.ac.jp</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>LLM</term>
+                    <term>RAG</term>
+                    <term>Digital Humanities</term>
+                    <term>Digital Archives</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>digital archiving</term>
+                    <term>natural language processing</term>
+                    <term>Asian studies</term>
+                    <term>Humanities computing</term>
+                    <term>Informatics</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <div>
+                    <head>Background</head>
+                    <p>The field of humanities generates new knowledge and insights through detailed analysis and interpretation of various materials. Among these, classical texts often present fewer copyright challenges, making it possible to digitize a significant number of them and make them readily accessible online. The proliferation of such digital archives has markedly advanced humanities research by enabling scholars to access an extensive array of materials. However, significant challenges arise when the large volume of data in these archives is insufficiently organized, making it difficult for researchers and students to locate specific resources effectively.</p>
+                    <p>For example, the National Institute for Japanese Language and Linguistics (NINJAL) offers a range of databases for humanities research on the web, including text collections, corpora, and images related to the historical development of the Japanese language [1]. While researchers can search these datasets using NINJAL's material search system, it remains difficult to perform content-specific searches. For example, identifying materials mentioning specific characters in text collections, such as Edo-period novels like Ninjōbon, proves to be a complex task. Archives such as those provided by NINJAL often prioritize material preservation over research-oriented publication, making it challenging for users to fully comprehend and utilize the content without the assistance of specialized archivists. However, securing such archivists with expertise in Japanese materials has become increasingly difficult.</p>
+                    <p>In response, data-providing organizations have explored methods to present information by developing searchable databases and web-accessible catalogs. Nevertheless, these efforts remain insufficient. To address this issue, this paper introduces a prototype system that leverages emerging technologies, particularly Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG), to offer more intuitive and flexible methods of presenting information compared to traditional approaches. Furthermore, this study examines the effective application of AI in the presentation of humanities-related materials.</p>
+                </div>
+                <div>
+                    <head>Target of Information Presentation</head>
+                    <p>This study specifically focuses on the text data of Edo-period books, particularly 
+                        <hi rend="italic">Sharebon</hi> and 
+                        <hi rend="italic">Ninjōbon</hi> texts provided by NINJAL. These transcriptions of Edo-period books aim to create a comprehensive corpus for analysis. 
+                        <hi rend="italic">Sharebon</hi> and 
+                        <hi rend="italic">Ninjōbon</hi> are genres of novels that evolved during the Edo period, primarily depicting the romantic lives of common people. These texts are characterised by a dialogue-heavy structure that lacks formal chapters or sections, making it difficult to divide the content according to conventional structural markers. However, the centrality of dialogue to the narrative suggests that conversations can serve as crucial compositional units for analysis.
+                    </p>
+                </div>
+                <div>
+                    <head>Prototype System</head>
+                    <p>The system architecture is illustrated in Figure 1. It comprises three main components: an LLM model for response generation, a vector database created from the target text data, and the RAG system that integrates these components. The LLM model utilized is OpenAI's GPT-4o mini, and the vector database is constructed using OpenAI's text-embedding-3-large. The system that bridges the LLM and RAG functions, along with the conversational search interface, was implemented in Python 3. Figure 2 provides an example of the conversational interface, accessed via a web browser. In this example, the system responds to the query, "<hi rend="Japanese">丹次郎とはどのような人物ですか </hi>(What kind of person is Tanjiro?)" by presenting referenced data and generating links to the web pages hosting the original sources.</p>
+                    <figure>
+                        <graphic n="1001" width="15.901458333333334cm" height="8.784166666666666cm" url="/tmp/tmpt5w2stcs/Pictures/8a7006a96acaf21a9e13c10c36593705.png" rend="inline"/>
+                        <head>System Overview</head>
+                    </figure>
+                    <figure>
+                        <head>System Overview</head>
+                        <graphic n="1002" width="15.901458333333334cm" height="18.838333333333335cm" url="/tmp/tmpt5w2stcs/Pictures/8a7006a96acaf21a9e13c10c36593705.png" rend="inline"/>
+                        <head>System operation image</head>
+                    </figure>
+                </div>
+                <div>
+                    <head>Experiments and Results</head>
+                    <p>The target materials present challenges due to the difficulty of identifying sentence boundaries. Consequently, comparative experiments were conducted using multiple chunking methods, as the results are expected to vary significantly depending on the segmentation approach. Additionally, two search methods were compared: vector search alone and a hybrid method combining vector and keyword searches. The experimental settings are summarized in Table 1, while the average scores from the five-point scale and the RAGAS evaluation results are shown in Table 2.</p>
+                    <p>The five-point evaluations showed no significant differences in average scores across systems. Most conversation-based segmentations produced comparable results regardless of system configurations. In addition, questions that asked for relatively simple facts were often answered appropriately. The RAGAS evaluation revealed high Faithfulness scores, confirming that all systems generated contextually accurate responses. However, minor score differences among systems employing the same LLM highlight the need for further analysis.</p>
+                    <p>Answer Relevance scores were generally low, potentially reflecting the sensitivity of the metric to redundant expressions and extraneous information. Context Precision scores were also modest, with conversation-based chunking systems outperforming page-based chunking systems, suggesting that chunking strategy influences search accuracy. Context Recall scores were generally low, though hybrid search systems showed a slight advantage over vector-only searches. These findings suggest that chunking and search method differences impact performance, particularly in terms of Context Precision and Context Recall.</p>
+                    <p>Based on these results, implementing a conversation-based segmentation system tailored to the characteristics of the target materials improves search accuracy. Moreover, for questions that require relatively short answers, we were able to demonstrate the possibility of using LLM to search classical Japanese materials with different grammars, without translating them into modern languages.</p>
+                    <p>Table 1: Comparison System Number and Settings</p>
+                    <table rend="rules">
+                        <row>
+                            <cell style="text-align: left;">System </cell>
+                            <cell style="text-align: left;">Chunking </cell>
+                            <cell style="text-align: left;">Search Method </cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;">A </cell>
+                            <cell style="text-align: left;">Conversation </cell>
+                            <cell style="text-align: left;">Vector </cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;">B </cell>
+                            <cell style="text-align: left;">Conversation </cell>
+                            <cell style="text-align: left;">Hybrid </cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;">C </cell>
+                            <cell style="text-align: left;">Page </cell>
+                            <cell style="text-align: left;">Vector </cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;">D </cell>
+                            <cell style="text-align: left;">Page </cell>
+                            <cell style="text-align: left;">Hybrid </cell>
+                        </row>
+                    </table>
+                    <p>
+                        <hi rend="bold" xml:space="preserve">Table 2: Average of the Five-Point Evaluations and </hi>RAGAS 
+                        <hi rend="bold">Evaluation Results</hi>
+                    </p>
+                    <table rend="rules">
+                        <row>
+                            <cell style="text-align: left;">System </cell>
+                            <cell style="text-align: center;">Average of the Five-Point Evaluations</cell>
+                            <cell style="text-align: left;">Faithfulness </cell>
+                            <cell style="text-align: left;">Answer Relevance </cell>
+                            <cell style="text-align: left;">Context Precision </cell>
+                            <cell style="text-align: left;">Context Recall </cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;">A </cell>
+                            <cell style="text-align: left;">2.78 </cell>
+                            <cell style="text-align: left;">0.78 </cell>
+                            <cell style="text-align: left;">0.57 </cell>
+                            <cell style="text-align: left;">0.72 </cell>
+                            <cell style="text-align: left;">0.57 </cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;">B </cell>
+                            <cell style="text-align: left;">2.89 </cell>
+                            <cell style="text-align: left;">0.81 </cell>
+                            <cell style="text-align: left;">0.54 </cell>
+                            <cell style="text-align: left;">0.73 </cell>
+                            <cell style="text-align: left;">0.60 </cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;">C </cell>
+                            <cell style="text-align: left;">2.85 </cell>
+                            <cell style="text-align: left;">0.74 </cell>
+                            <cell style="text-align: left;">0.57 </cell>
+                            <cell style="text-align: left;">0.60 </cell>
+                            <cell style="text-align: left;">0.50 </cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;">D </cell>
+                            <cell style="text-align: left;">2.85 </cell>
+                            <cell style="text-align: left;">0.73 </cell>
+                            <cell style="text-align: left;">0.58 </cell>
+                            <cell style="text-align: left;">0.59 </cell>
+                            <cell style="text-align: left;">0.54 </cell>
+                        </row>
+                    </table>
+                </div>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>[1] NINJAL. Database<hi rend="Japanese">・</hi>corpus. https://www.ninjal.ac.jp/resources/,2025-04-30 accessed.</bibl>
+                    <bibl>[2] Patrick Lewis, et al. (2020):“Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks”. NIPS'20: Proceedings of the 34th International Conference on Neural Information Processing Systems. no.793, p.9459–94,</bibl>
+                    <bibl>[3] OpenAI. :OpenAI developer platform. https://platform.openai.com, 2025-04-30 accessed.</bibl>
+                    <bibl>[4] Open AI.:Vector embeddings. https://platform.openai.com/docs/guides/embeddings, 2025-0-30 accessed.</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

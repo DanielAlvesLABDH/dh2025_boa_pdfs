@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ESCOBAR_VARELA_Miguel_Advancing_OCR_and_Word_Sense_Disambigu">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Advancing OCR and Word Sense Disambiguation for the Jawi Script using LLMs and VLMs</title>
+                <author>
+                    <persName>
+                        <surname>Escobar Varela</surname>
+                        <forename>Miguel</forename>
+                    </persName>
+                    <affiliation>National University of Singapore, Singapore</affiliation>
+                    <email>m.escobar@nus.edu.sg</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Bressan</surname>
+                        <forename>Stephane</forename>
+                    </persName>
+                    <affiliation>National University of Singapore, Singapore</affiliation>
+                    <email>steph@nus.edu.sg</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Zakaria</surname>
+                        <forename>Faizah</forename>
+                    </persName>
+                    <affiliation>National University of Singapore, Singapore</affiliation>
+                    <email>fzakaria@nus.edu.sg</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Iyer</surname>
+                        <forename>Ganesh Neelalkanta</forename>
+                    </persName>
+                    <affiliation>National University of Singapore, Singapore</affiliation>
+                    <email>gni@nus.edu.sg</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Seng</surname>
+                        <forename>Guo Quan</forename>
+                    </persName>
+                    <affiliation>National University of Singapore, Singapore</affiliation>
+                    <email>hissgq@nus.edu.sg</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Karmakar</surname>
+                        <forename>Pratik</forename>
+                    </persName>
+                    <affiliation>National University of Singapore, Singapore</affiliation>
+                    <email>pratik.karmakar@u.nus.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>OCR</term>
+                    <term>LLM</term>
+                    <term>word sense disambiguation</term>
+                    <term>Malay</term>
+                    <term>Arabic</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>natural language processing</term>
+                    <term>optical character recognition and handwriting recognition</term>
+                    <term>Asian studies</term>
+                    <term>History</term>
+                    <term>Linguistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Abstract</head>
+                <p>In Southeast Asia, many key historical records are written in Jawi, an Arabic-derived writing system historically used for the Malay language. This paper presents a novel approach to making these documents machine-readable through two main contributions: a high-quality OCR system that outperforms previous solutions with a Character Error Rate (CER) of 8.66%, and a context-aware word sense disambiguation model that achieves 99.2% accuracy. We introduce novel datasets and fine-tuned models for both tasks, advancing the accessibility of Jawi documents and enabling downstream NLP applications.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>1. Introduction</head>
+                <p>For over five centuries, the Jawi script - an adaptation of Arabic writing - served as one of the primary means of written communication in Southeast Asia. This project addresses the challenge of making historical Jawi texts machine-readable through OCR and post-OCR correction, contributing to a growing body of Digital Humanities work on historical writing systems (Strange et al, 2014; Hill and Hengchen, 2019). As an under-resourced script, Jawi presents unique challenges and opportunities that we explore through this case study. To contextualize our approach, we begin with a brief history of the script.</p>
+                <p>Malay, which is an official language in Malaysia and Singapore, and is used elsewhere in Southeast Asia, is now typically written using the roman script, or Rumi Malay. However, for much of the fourteenth to the early twentieth century, Jawi was the script most widely used in written records, letters, manuscripts and tombstone inscriptions. Letters in Jawi largely correspond to those in Arabic, with modifications made to accommodate sounds absent in Arabic such as /ng/ and /p/. Unlike the Arabic script, Jawi largely developed without an institutional center that regulated the form of the script, thus leading to a lack of uniformity in spelling and orthography (Rashid and Juhari, 2006; Collins, 1998; Fogg, 2015). This was especially evident in the use of vowels. A famous example, used by Jawi expert Mulaika Hijjas (2024) is the form بنتڠ )bntng), which can be interpreted in at least five different ways: 
+                    <hi rend="italic">banteng</hi> (wild ox), 
+                    <hi rend="italic">banting</hi> (throw down), 
+                    <hi rend="italic">bentang</hi> (spread out), 
+                    <hi rend="italic">benteng</hi> (fortification), and 
+                    <hi rend="italic">bintang</hi> (star). The absence of diacritics may also result in idiosyncratic use of vowels such that a single Rumi spelling may result in multiple Jawi renderings, for instance, 
+                    <hi rend="italic">merah</hi> (red) which can be written مره or ميره. 
+                </p>
+                <p>Vocabulary lists in Rumi began appearing in the early 16
+                    <hi rend="superscript">th</hi> century as European explorers began learning the Malay language (Bausani, 1960; Teeuw, 1959). Outside the colonial administration, however, Jawi was still widely used. Malay printing presses published their books, pamphlets and newspapers in Jawi, retaining its use in the public sphere (Lent, 1978). However, after decolonisation, there was a clear pivot towards Rumi, and Jawi is now rarely used. 
+                </p>
+                <p>Given the historical importance of Jawi, and the current dominance of Rumi, we aim to be able to accurately represent historical Jawi texts in machine-readable formats, in both Jawi and Rumi. This two-pronged approach will enable more widespread access to historical texts in Rumi (as less people read Jawi today), but also preserve the original Jawi script for those who wish to engage with historical documents in their authentic form. We also wish to enable downstream NLP tasks (such as NER, classification and information retrieval) in both scripts.</p>
+                <p>To achieve these larger goals, we first need to advance the following tasks (represented visually in Figure 1):</p>
+                <p>Accurately render Jawi texts in UTF-8 (through OCR). </p>
+                <p>Transliterate UTF-8 Jawi inti UTF-8 Rumi, using a combination of:</p>
+                <p> A rule-based system (which would render بنتڠ as “bntng”.</p>
+                <p>A disambiguation system, which would convert forms such as “bntng” into the correct words (“bentang”, “bintang”, etc.).</p>
+                <figure>
+                    <graphic n="1001" width="15.910277777777777cm" height="3.242027777777778cm" url="/tmp/tmp5pbjjdex/Pictures/16876197a08a0d8d4829e8607fce0dd1.png" rend="inline"/>
+                </figure>
+                <p>Figure 1. A diagrammatic representation of our research pipeline</p>
+                <p>Task 2.1 is relatively straightforward, so in this paper, we focus on task 1 and task 2.2, which present several challenges. While there is a wealth of resources for Arabic OCR, these systems don’t work well for Jawi. The second task, transcribing Jawi into Rumi, also presents unique problems. As noted earlier, the script typically omits short vowel markers, leading to significant ambiguity in interpretation. These characteristics, combined with the historical nature of many Jawi documents, and changes in spelling conventions, make traditional approaches for OCR and transcription inadequate for the Jawi context. For example, Arnia et al (2019) report a 94% accuracy rate in detecting individual Jawi letters using a relatively straightforward algorithm (which they call the Tree Root algorithm). Razali at al. (2024) were also reportedly able to achieve a 94.9% accuracy ret using RestNet34 on individual Jawi letters. However, the problem of these approaches is that they don’t scale well to longer texts.</p>
+                <p>Recent advances in Large Language Models (LLMs) and Visual Language Models (VLMs) have opened new possibilities for OCR and post-OCR correction (Thomas et al, 2024; Madarász et al. 2024; Mattingly, 2024) in under-resourced languages. However, the application of these techniques to Jawi has been limited by the scarcity of high-quality training data, evaluation benchmarks and the unique challenges posed by the script's uniqueness and inherent ambiguities. To address these limitations, we introduce datasets and models for OCR word sense disambiguation. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>2. Data and methods</head>
+                <p>As part of our work, we developed two novel datasets for evaluating OCR and disambiguation tasks in Jawi. The first dataset pairs images of Jawi text with their UTF-8 transcriptions, enabling direct evaluation of OCR accuracy. For this dataset, we used a scanned copy of the Warta Malaya newspaper, the first of the independent Malay dailies of the 1930s, and which ran for 10 years (National Library Singapore, n.d.). A selection of scanned pages from this newspaper was provided to us by the National Library of Singapore. We extracted all sentences from these pages and captured each one as a digital image with a corresponding UTF-8 transcription (a combined total of 1139 sentences). It should be noted that these examples sometimes include Roman-script English text, reflecting the multilingual nature of historical Malay newspapers. </p>
+                <p>Several pages from the Warta Malaya had been previously transliterated into Rumi, as part of the Malay Transliteration Project at the National University of Singapore (Emmanuel and Barnard, 2009). Hijjas has also led another project for transliterating Jawi into Rumi (From The Page, n.d.). However, to the extent of our knowledge, there are no openly accessible datasets that include Jawi texts and their UTF-8 representations. Our data is available on Hugging Face at 
+                    <ref target="https://huggingface.co/datasets/mevsg/Jawi-OCR-v1">https://huggingface.co/datasets/mevsg/Jawi-OCR-v1</ref>. 
+                </p>
+                <p>The second dataset addresses word sense disambiguation, focusing on common ambiguous cases in Jawi script. We collected 2,500 contextual examples centered around the aforementioned Jawi form بنتڠ )bntng), and five possible interpretations: banteng (wild ox), banting (throw down), bentang (spread out), benteng (fortification), and bintang (star). Each interpretation is represented by 500 examples, providing a balanced dataset for training and evaluation. These examples were synthetically generated using Open AI’s gpt-4o-mini model via their API. The data is available on Hugging Face at 
+                    <ref target="https://huggingface.co/datasets/mevsg/bntng-disambiguation-v1">https://huggingface.co/datasets/mevsg/bntng-disambiguation-v1</ref>.
+                </p>
+                <p>Both the transcription and the disambiguation datasets were independently verified by two annotators. Our OCR system builds upon the Qwen2-VL-2B-Instruct model, which we fine-tuned for Jawi script recognition using the transcription dataset described above. For finetuning this model, we were inspired by Mattingly’s (2024) approach. This model was finetuned on a H100 GPU for 6 hours. The resulting model, and usage instructions are available at 
+                    <ref target="https://huggingface.co/culturalheritagenus/qwen-for-jawi-v1">https://huggingface.co/culturalheritagenus/qwen-for-jawi-v1</ref>. 
+                </p>
+                <p>Our word sense disambiguation system builds on recent advances in large language models for Southeast Asian languages. AI Singapore developed the SEA-LION model (2024) from scratch, specifically to work with these languages. For our word sense disambiguation task, we fine-tuned sea-lion-7b-instruct-research, an instruct-tuned variant of this model. Our finetuning script ran for 16hours on a single A6000 GPU and our model, together with usage instructions, is available at 
+                    <ref target="https://huggingface.co/culturalheritagenus/bntng-dis-v2">https://huggingface.co/culturalheritagenus/bntng-dis-v2</ref>. 
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>5. Results and Discussion</head>
+                <p>Our OCR system achieved the following error rates:</p>
+                <p>Character Error Rate (CER): 8.66</p>
+                <p>Word Error Rate (WER): 25.50</p>
+                <p>This is a significant improvement over Parichuri’s (2024) Surya, a state-of-the-art general-purpose OCR model which reports a &gt;95% accuracy for Arabic, but performs poorly on our Jawi data:</p>
+                <p>Character Error Rate (CER): 70.89%</p>
+                <p>Word Error Rate (WER): 91.73%</p>
+                <p>Our character and word error rates, though far from perfect are remarkably encouraging given the extremely small dataset we used for training (911 sentences, 80% of our dataset). Given the complexity and multilingualism of these examples, our results demonstrate that VLMs are excellent candidates for future OCR exploration. Our word sense disambiguation model achieved 99.2% accuracy on the validation set. While accuracy is extremely high, we should note that the dataset only included a single ambiguous form, and more research is needed to expand this to a general disambiguation model. That said, this approach is clearly promising given the high accuracy achieved in this initial experiment.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>6. Conclusion</head>
+                <p>Our work convincingly demonstrates the effectiveness of modern deep learning approaches in handling the complexities of Jawi script processing. The combination of improved OCR capabilities with robust word sense disambiguation represents a significant step forward in making historical Jawi texts more accessible to researchers and the public.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Arnia, Fitri / Saddami, Khairun / Munadi, Khairul</hi> (2019): “Moment Invariant-Based Features for Jawi Character Recognition”, in: International Journal of Electrical and Computer Engineering (IJECE) 9, 3: 1711–1719. DOI: 10.11591/ijece.v9i3.pp1711-1719.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Bausani, Alessandro</hi> (1960): “The First Italian-Malay Vocabulary by Antonio Pigafetta”, in: East and West 11, 4: 229–248.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Collins, James T.</hi> (1998): Malay, World Language: A Short History. Kuala Lumpur: Dewan Bahasa dan Pustaka.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Fogg, Kevin</hi> (2015): “The Standardisation of the Indonesian Language and Its Consequences for Islamic Communities”, in: Journal of Southeast Asian Studies 46, 1: 86–110.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">From The Page</hi> (2024): “Jawi Transcription Project”, 
+                        <ref target="https://www.fromthepage.com/mulaika/jawi-transcription-project">
+                            <hi rend="underline color(0000FF)">https://www.fromthepage.com/mulaika/jawi-transcription-project</hi>
+                        </ref> [accessed 20.11.2024].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Gallop, Annabel Teh</hi> (1990): “Early Malay Printing: An Introduction to the British Library Collections”, in: Journal of the Malaysian Branch of the Royal Asiatic Society 63, 1 (258): 85–124.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Gallop, Annabel Teh et al.</hi> (2015): “A Jawi Sourcebook for the Study of Malay Palaeography and Orthography”, in: Indonesia and the Malay World 43, 125: 13–171. DOI: 10.1080/13639811.2015.1008253.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hijjas, Mulaika</hi> (2022a): “Is Jawi Islamic?”, in: Malay-Indonesian Islamic Studies: 269–293. Leiden: Brill. DOI: 10.1163/9789004529397_011.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hijjas, Mulaika</hi> (2022b): “Marsden’s Malay Manuscripts: Reassessing a Colonial Collection”, in: Philological Encounters 8, 1: 38–72.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hijjas, Mulaika</hi> (2022c): “Teaching Jawi in the Pandemic”, in: Teaching the Codex (blog), 
+                        <ref target="https://teachingthecodex.com/2022/02/23/teaching-jawi-in-the-pandemic/">
+                            <hi rend="underline color(0000FF)">https://teachingthecodex.com/2022/02/23/teaching-jawi-in-the-pandemic/</hi>
+                        </ref> [accessed 20.11.2024].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hill, Mark J. / Hengchen, Simon</hi> (2019): “Quantifying the Impact of Dirty OCR on Historical Text Analysis: Eighteenth Century Collections Online as a Case Study”, in: Digital Scholarship in the Humanities 34, 4: 825–843. DOI: 10.1093/llc/fqz024.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Lent, J.A</hi>. (1978): “Malaysia’s National Language Mass Media: History and Present Status”, in: Southeast Asian Studies 15, 4: 599–612.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Madarász, Gábor / Ligeti-Nagy, Noémi / Holl, András / Váradi, Tamás</hi> (2024): “OCR Cleaning of Scientific Texts with LLMs”, in: International Workshop on Natural Scientific Language Processing and Research Knowledge Graphs: 49–58. Cham: Springer Nature Switzerland. 
+                        <ref target="https://library.oapen.org/bitstream/handle/20.500.12657/93249/1/978-3-031-65794-8.pdf#page=60">
+                            <hi rend="underline color(0000FF)">https://library.oapen.org/bitstream/handle/20.500.12657/93249/1/978-3-031-65794-8.pdf#page=60</hi>
+                        </ref> [accessed 20.11.2024].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Mattingly, William</hi> (2024): “Qwen2-vl-Finetune-Huggingface”, Python script, 
+                        <ref target="https://github.com/wjbmattingly/qwen2-vl-finetune-huggingface">
+                            <hi rend="underline color(0000FF)">https://github.com/wjbmattingly/qwen2-vl-finetune-huggingface</hi>
+                        </ref> [accessed 26.11.2024].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">National Library Singapore</hi> (2024): “Warta Malaya”, 
+                        <ref target="https://www.nlb.gov.sg/main/article-detail?cmsuuid=a8edfbe8-a5e8-4c08-8b3f-2908fcf56e2f">
+                            <hi rend="underline color(0000FF)">https://www.nlb.gov.sg/main/article-detail?cmsuuid=a8edfbe8-a5e8-4c08-8b3f-2908fcf56e2f</hi>
+                        </ref> [accessed 20.11.2024].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Paruchuri, Vik</hi> (2024): “Surya”, Python script, 
+                        <ref target="https://github.com/VikParuchuri/surya">
+                            <hi rend="underline color(0000FF)">https://github.com/VikParuchuri/surya</hi>
+                        </ref> [accessed 30.11.2024].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Rashid, Melebek Abdul / Juhari, Moain Amat</hi> (2006): Sejarah Bahasa Melayu. Kuala Lumpur: Utusan Publications and Distributors.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Strange, Carolyn / McNamara, Daniel / Wodak, Josh / Wood, Ian</hi> (2014): “Mining for the Meanings of a Murder: The Impact of OCR Quality on the Use of Digitized Historical Newspapers”, in: Digital Humanities Quarterly 8, 1.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Teeuw, Andries</hi> (1959): “The History of the Malay Language: A Preliminary Survey”, in: Bijdragen tot de Taal-, Land- en Volkenkunde 115, 2: 138–159.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Thomas, Alan / Gaizauskas, Robert / Lu, Haiping</hi> (2024): “Leveraging LLMs for Post-OCR Correction of Historical Newspapers”, in: Association for Computational Linguistics (ed.): Proceedings of the Third Workshop on Language Technologies for Historical and Ancient Languages (LT4HALA) @ LREC-COLING-2024: 116–121. 
+                        <ref target="https://aclanthology.org/2024.lt4hala-1.14/">
+                            <hi rend="underline color(0000FF)">https://aclanthology.org/2024.lt4hala-1.14/</hi>
+                        </ref> [accessed 20.11.2024].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

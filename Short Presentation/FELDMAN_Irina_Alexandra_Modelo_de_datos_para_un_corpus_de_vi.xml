@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="FELDMAN_Irina_Alexandra_Modelo_de_datos_para_un_corpus_de_vi">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Modelo de datos para un corpus de viajeros en el Chaco boliviano a partir del caso de Louis-Émile Cerceau</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Feldman</surname>
+                        <forename>Irina Alexandra</forename>
+                    </persName>
+                    <affiliation>Middlebury College, United States of America</affiliation>
+                    <email>ifeldman@middlebury.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Pareja</surname>
+                        <forename>Roberto</forename>
+                    </persName>
+                    <affiliation>Independent Scholar, United States of America</affiliation>
+                    <email>politica.pareja@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-28T10:50:55.545106482</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>literatura de viajes</term>
+                    <term>modelización de datos</term>
+                    <term>análisis y visualización de datos</term>
+                    <term>Palladio</term>
+                    <term>humanidades abiertas públicas y participativas</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data modeling</term>
+                    <term>digital archiving</term>
+                    <term>digital biography</term>
+                    <term>personography</term>
+                    <term>and prosopography</term>
+                    <term>public humanities collaborations and methods</term>
+                    <term>Indigenous studies</term>
+                    <term>Geography and geo-humanities</term>
+                    <term>History</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>En esta ponencia presentamos un modelo de datos que formaliza un dominio de conocimiento específico en el campo de los estudios histórico-culturales bolivianos: un corpus de literatura de viajeros en el Chaco boliviano. Este corpus se presta a un análisis tipo ‘lectura distante’ (Moretti 2013) porque involucra una gran cantidad de entidades muy variadas en cuanto al tipo y la distribución geográfica. Las Humanidades Digitales (HD) ofrecen ejemplos de este tipo de proyectos, siendo Mapping the Republic of Letters (Mapping the Republic of Letters), un ejemplo paradigmático. Este proyecto incluía varios estudios de caso, entre ellos, uno que se enfoca en los viajes de arquitectos británicos a la península itálica durante el siglo XVIII usando datos de una versión digitalizada de un diccionario de viajeros (Ceserani). Usando extensamente la herramienta Palladio (Palladio) para visualizar y analizar los datos extraídos del diccionario, produjeron visualizaciones geolocalizadas, redes de entidades, galerías de recursos visuales y análisis estadísticos básicos. En un artículo de 2017, el equipo responsable por este estudio de caso, subraya que, en un principio, la idea era trazar rutas de viajeros sobre mapas históricos, pero que pronto se dieron cuenta de los límites de los datos del proyecto para una aproximación de este tipo, ya que no poseían suficiente información geográfica para la mayoría de los viajeros del corpus (Ceserani et al. 2017). </p>
+            <p>En nuestro caso, y teniendo en cuenta la naturaleza del corpus en cuestión, proponemos generar visualizaciones de las rutas de los viajeros que en efecto muestran el avance de los trayectos específicos a lo largo del espacio y el tiempo. Este tipo de análisis y visualización de los datos del corpus ayudará a responder preguntas de investigación relacionadas a los cambios ocurridos en diversos periodos históricos en cuánto a las características de los viajes en el Chaco boliviano. El caso del ingeniero francés Louis-Émile Cerceau y su manuscrito (Cerceau 1899) sobre sus viajes en el Chaco y el Oriente de Bolivia (1891-1894), recientemente traducido al español (Cerceau 2024), es interesante por su marginalidad y excentricidad respecto de la mayoría de los viajeros en el Chaco boliviano, por ejemplo porque sus viajes no fueron financiados por ninguna institución o persona al momento de su partida y solamente en casos específicos logra conseguir fondos de autoridades bolivianas para realizar viajes de exploración para abrir caminos en rutas particulares. Partiendo de este caso, esta ponencia ofrece un modelo de datos que permite capturar información necesaria para visualizar las rutas de los viajeros y filtrar las visualizaciones geolocalizadas en base a diversos criterios: nombres de personas, lugares y objetos; características de las personas; fechas. Usando Palladio es posible construir facetas de los datos y visualizar cronológicamente el progreso de ciertos trayectos. Partiendo del caso de Cerceau iremos incluyendo a otros viajeros y la ponencia ofrecerá una muestra de visualizaciones en base a los datos capturados hasta el momento.</p>
+            <p>Una limitación fundamental de Palladio reside en la naturaleza temporal de las visualizaciones que genera. El usuario puede guardar un archivo JSON con los parámetros y los datos del proyecto en su propio aparato y puede cargar Palladio con ese archivo para reconstruir las visualizaciones, pero el aplicativo mismo no registra los datos. Palladio tampoco ofrece la posibilidad de usar el aplicativo dentro de una página web; sin embargo recientemente se han propuesto varias maneras de embeber Palladio en un sitio web y desplegar las visualizaciones geolocalizadas, las visualizaciones de redes y las galerías de imágenes usando componentes web escritos en JavaScript (Wiles). Esta ponencia mostrará cómo las visualizaciones del viaje de Cerceau generadas en Palladio se pueden desplegar en un sitio web estático, construido usando Docusaurus (Docusaurus), como parte de una muestra digital del corpus de viajeros en el Chaco boliviano.</p>
+            <p>El proyecto piloto incluye la transcripción del manuscrito francés de Cerceau usando Transkribus (Transkribus - Unlocking the past with AI) y la extracción de entidades nombradas usando herramientas de código abierto en Python (opensemanticsearch - Overview). Esta parte del proyecto está en sus inicios y permitirá el enriquecimiento semántico del corpus digitalizado con grafos de datos ligados tipo Wikidata, ontologías web, bases de datos SQL o simples tablas CSV, TSV, o hojas de cálculo Excel. La ponencia presentará solamente un breve adelanto de ese aspecto del proyecto.</p>
+            <p>A partir del modelo basado en el texto de Cerceau, descrito en esta ponencia, en la próxima fase del proyecto, planeamos incluir en el corpus a otros viajeros franceses desde principios del siglo XIX a mediados del siglo XX, por ejemplo Jules Crevaux que murió asesinado por indígenas del Chaco a orillas del río Pilcomayo en 1882 (Combès 2022). Nuestro objetivo será añadir la granularidad a la historia de exploración del Chaco mediante visualizaciones que permitan comparaciones y análisis macro de rutas, topónimos, redes de ayuda y financiación, y relación con la metrópoli. Las visualizaciones geolocalizadas y de redes, junto con la galería de imágenes relacionadas (personas, lugares, objetos) se presentarán en forma de un sitio web de HD abiertas y públicas, con el potencial de su uso pedagógico y participativo en un curso universitario de Estudios Culturales enfocado en el encuentro entre exploradores e indígenas en el Chaco boliviano en el cual los estudiantes trabajan extrayendo datos y generando las visualizaciones como parte del proceso de aprendizaje. Adicionalmente, el corpus formará parte de un archivo/colección digital enriquecido con datos ligados y abiertos. </p>
+            <p>Las siguientes preguntas de investigación guiarán nuestras visualizaciones: </p>
+            <p>• ¿Cuáles fueron las fuentes de financiamiento de los viajes y cómo esto influyó en la ruta, descripciones y consecuencias del viaje?</p>
+            <p>• ¿Qué lugares visitó el viajero?</p>
+            <p>• ¿Con qué grupos e individuos interactuó en su viaje y con qué resultado? Por ejemplo, los padres franciscanos y los pueblos indígenas locales eran presencias claves en la región en las décadas en cuestión; los dueños de las estancias eran fuentes irreemplazables de información y víveres; las autoridades locales podían asistir u obstaculizar el viaje. </p>
+            <p>• ¿Qué fortuna le tocó a la narrativa del viaje de viajero?</p>
+            <p>• ¿Cuáles ilustraciones de objetos (flora, fauna, vivienda, etc) dejaron los viajeros y cuales pueden ser incluídos en la visualización?</p>
+            <p>• ¿Cómo fue la vida del viajero después del viaje y cómo el viaje ha determinado esta vida posterior?</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Cerceau, Louis-Émile (2024): 
+                        <hi rend="italic">El Chaco y el Oriente boliviano (1891-1894)</hi>, Santa Cruz de la Sierra: El País.
+                    </bibl>
+                    <bibl>Cerceau, Louis-Émile (1899): ‘Le Chaco et l’Orient bolivien’, &lt;https://gallica.bnf.fr/ark:/12148/btv1b10874591g&gt; [14.11.2024].</bibl>
+                    <bibl>Ceserani, Giovanna 
+                        <hi rend="italic">British Architects on the Grand Tour in Eighteenth-Century Italy</hi>, 
+                        <hi rend="italic">Mapping the Republic of Letters Data Visualizations</hi>, &lt;http://republicofletters.stanford.edu&gt; [14.11.2024].
+                    </bibl>
+                    <bibl>Ceserani, Giovanna / Caviglia, Giorgio / Coleman, Nicole / De Armond, Thea / Murray, Sarah / Taylor-Poleskey, Molly (2017): ‘British Travelers in Eighteenth-Century Italy: The Grand Tour and the Profession of Architecture’, in: 
+                        <hi rend="italic">The American Historical Review</hi>, 122, 2, 425–450, DOI: 10.1093/ahr/122.2.425.
+                    </bibl>
+                    <bibl>Combès, Isabelle (2022): 
+                        <hi rend="italic">Qui a tué Jules Crevaux ? : un assassinat dans le Chaco bolivien en 1882</hi> (1 vol), Abreschviller: La Valette.
+                    </bibl>
+                    <bibl>
+                        <hi rend="italic">Docusaurus</hi> &lt;https://docusaurus.io/&gt; [22.11.2024].
+                    </bibl>
+                    <bibl>
+                        <hi rend="italic">Mapping the Republic of Letters</hi> &lt;http://republicofletters.stanford.edu/&gt; [14.11.2024].
+                    </bibl>
+                    <bibl>Moretti, Franco (2013): 
+                        <hi rend="italic">Distant reading</hi>, London: Verso.
+                    </bibl>
+                    <bibl>
+                        <hi rend="italic">opensemanticsearch - Overview</hi>
+                        <hi rend="italic">GitHub</hi>, &lt;https://github.com/opensemanticsearch&gt; [28.4.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="italic">Palladio</hi>
+                        <hi rend="italic">Palladio</hi>, &lt;http://hdlab.stanford.edu&gt; [22.11.2024].
+                    </bibl>
+                    <bibl>
+                        <hi rend="italic">Transkribus - Unlocking the past with AI</hi> &lt;https://www.transkribus.org/&gt; [14.11.2024].
+                    </bibl>
+                    <bibl>Wiles, Simon 
+                        <hi rend="italic">simonwiles/palladio-webcomponents: Web components for rendering visualizations created with the Palladio app.</hi>, &lt;https://github.com/simonwiles/palladio-webcomponents&gt; [22.11.2024].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

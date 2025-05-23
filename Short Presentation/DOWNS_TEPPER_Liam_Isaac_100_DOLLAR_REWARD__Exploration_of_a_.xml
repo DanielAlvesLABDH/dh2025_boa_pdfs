@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="DOWNS_TEPPER_Liam_Isaac_100_DOLLAR_REWARD__Exploration_of_a_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>100 DOLLAR REWARD: Exploration of a Historical Crime Journal</title>
+                <author>
+                    <persName>
+                        <surname>Downs-Tepper</surname>
+                        <forename>Liam Isaac</forename>
+                    </persName>
+                    <affiliation>University of Vienna, Austria</affiliation>
+                    <email>liam.downs-tepper@univie.ac.at</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T16:16:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>OCR</term>
+                    <term>Crime</term>
+                    <term>Layout Parsing</term>
+                    <term>Newspapers</term>
+                    <term>Open Access</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data</term>
+                    <term>object</term>
+                    <term>and artefact preservation</term>
+                    <term>digitization (2D &amp; 3D)</term>
+                    <term>natural language processing</term>
+                    <term>text mining and analysis</term>
+                    <term>Communication studies</term>
+                    <term>History</term>
+                    <term>Linguistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">
+                <hi rend="italic">WANTED FOR GRAND LARCENY: A woman styling herself here as Mrs. F. W. Williams, Test Medium and Clairvoyant, is badly wanted by this Department for grand larceny for fleecing a number of ‘soft’ female residents out of various amounts of jewelry and coin… She prevails on the victim to leave in her hands jewelry worn by the person in quest of knowledge, also as much gold coin as possible as “then the Spirits will be more apt to reveal.”</hi> (The Detective, 1901)
+            </p>
+            <p style="text-align: left; ">The above is one of hundreds of wanted ads from The Detective, the “Official Journal of the Police Authorities and Sheriffs of the United States,” published from 1885 through the mid 1930s. As well as wanted ads, the journal offers its readers job postings for detective agencies, highlights recent arrests, and includes advertisements for such wonders as “Zeglen's bullet-proof fabric… it should be worn by the police and by all others who risk death by shooting—almost as light as gauze, it affords protection equal to that of a stone wall.” (The Detective, 1901)</p>
+            <p style="text-align: left; ">It is a fascinating read and a wonderful reflection of its time and circumstances. It is also available digitally from only one archive; it has seemingly never been the subject of any scholarly work; and the OCR quality of the available issues is lacking. This last issue, OCR, is understandable: the scans are sometimes incomplete, there are some pencil notes on top of various segments, column structures are inconsistent, and images are sometimes irregularly shaped and break structural boundaries.</p>
+            <p style="text-align: left; ">This project has two goals. The first is data-oriented: new and better digitization/OCR, including, given the irregular arrangement of pages in the magazine, layout-sensitive text and image recognition. The second uses this new dataset as a base: novel examination of discourse around crime using a number of different methods. These include network analysis of depictions of criminals and law enforcement, as both are highlighted throughout, including under multiple pseudonyms; tracking evolution of crime patterns as depicted through topic modelling; and language use in context, in relation to race and gender.</p>
+            <p style="text-align: left; ">The data preparation portions of this work are in and of themselves valuable, as they offer insights into the available methodologies for layout detection and OCR, particularly in light of the recent boom in AI-based approaches in scholarship. This paper intentionally steps back from AI and takes a different approach; methodological selection is intended to maximize both transparency and accessibility by both minimizing use of black-boxes and focusing on free tools and resources. This necessarily means turning away from projects like NewsEye, which is based on Transkribus - a paid tool. This also leans on more traditional approaches to OCR instead of AI transcription; while typical OCR errors are relatively easy to identify and even correct, AI OCR errors, including hallucinations, can be much tougher to discern. This methodological workflow, as both a general model for similar projects and as a concrete code offering, should be considered an additional goal/output of this project. </p>
+            <p style="text-align: left; ">The actual method is broken into a few deceptively simple steps:</p>
+            <list type="unordered">
+                <item>Page layout parsing. Building upon John Scanella’s work on newspaper layout detection and OCR, although the inclusion of images in The Detective - one of the selling points of the journal - adds complications (Scanella 2020). The figure below shows how “smearing” (dilating) the text can be used to isolate segments.</item>
+                <item>Page splitting and OCR of each segment. Segment OCR decreases error rate by removing surrounding noise and allows for easier error correction.</item>
+                <item>OCR error correction. Both manual and automated error detection and correction are necessary; automated correction has a robust historiography of its own, vastly predating LLM and AI work (Nguyen et al. 2021; Tong/Evans 1996).</item>
+            </list>
+            <figure>
+                <lb/>
+                <graphic n="1001" width="16.002cm" height="7.013222222222222cm" url="/tmp/tmp2dxcw62n/Pictures/2815ab9a2b4c258a8a851610c673470e.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 1: Use of dilation and edges to find individual text segments</p>
+            <p style="text-align: left; ">This pipeline is intended to be reproducible for any to use on their own materials, creates greatly improved machine-readable text of The Detective for broader use, and provides the text data for the content-centered portion of this work.</p>
+            <p style="text-align: left; ">For this paper, the substantive work is generally more exploratory. Naturally, the data included in The Detective is far from objective; the journal is primarily notices submitted by different law enforcement agencies. Examining the text, therefore, should not be viewed as providing insights into crime patterns themselves, beyond the broadest of generalizations. Instead, work on The Detective can be used to illuminate discourse on crime itself, and through such, provide a window into public fears and concerns at the time. There is a surprising lack of literature on this subject in a historical context, with the notable exception of Caroline Stabile’s 
+                <hi rend="italic">White Victims, Black Villains: Gender, Race, And Crime News in US Culture</hi> (Stabile 2006). This paper expands upon some of Stabile’s ideas by applying a distant-reading approach.
+            </p>
+            <p style="text-align: left; ">There are a number of different specific sub-methods and subtopics included in this distant reading. The first step is the extraction of persons from the text, with attendant information; demographic data like race and age, known aliases, associates, number of mentions across issues, location, reward offered, and so on. This, in conjunction with Named Entity Recognition, allows for much more elaborate work:</p>
+            <list type="unordered">
+                <item>Network analysis of persons included in The Detective, which would reveal whether the focus of the journal was isolated individuals or something more coordinated.</item>
+                <item>Impact of race and gender on language selection, including potential changes in standards over time.</item>
+                <item>Contrasting demographics with crimes committed and rewards offered: do men and women who have committed the same crime have the same reward offered for capture?</item>
+                <item>Changes in time over which crimes are reported; the digitized span of The Detective covers, among other things, the emergence of the Model-T and all the significant societal changes that come with it.</item>
+                <item>Spatial analysis of reported crimes, which, layered in contrast to law enforcement recruitment, could provide a look at the split between which crimes are being discussed and where there may be enforcement shortages, show urban/rural splits in crime reporting, and illuminate the interaction of race and place in reporting.</item>
+            </list>
+            <p style="text-align: left; ">All of these are applications of proven methods, but the combination thereof offers a unique blend of approaches and insights.</p>
+            <p style="text-align: left; ">This project offers three distinct outputs:</p>
+            <list type="unordered">
+                <item>A streamlined and accessible pipeline for layout and text extraction using freely accessible tools (Viola / Verheul 2020; Hui 2023; Segev 2020).</item>
+                <item>High quality OCR text for an as-of-yet broadly ignored historical resource for study.</item>
+                <item>Exploration and examination of an understudied period and subject, cross-applying a variety of DH approaches which have been shown effective for other cases.</item>
+            </list>
+            <p style="text-align: left; ">Each would be a worthwhile project; the combination is so good that it’s basically criminal.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Hui, Haifeng</hi> (2023): “What Can Digital Humanities Do for Literary Adaptation Studies: Distant Reading of Children’s Editions of Robinson Crusoe”, in: 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi> 38, 4: 1564–1576. DOI: 10.1093/llc/fqad059.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Nguyen, Quoc-Dung / Le, Duc-Anh / Phan, Nguyet-Minh / Zelinka, Ivan</hi> (2021): “OCR Error Correction Using Correction Patterns and Self-Organizing Migrating Algorithm”, in: 
+                        <hi rend="italic">Pattern Analysis and Applications</hi> 24, 2: 701–721. DOI: 10.1007/s10044-020-00936-y.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Scancella, John</hi> (2020): “Better OCR for Newspapers”, in: 
+                        <hi rend="italic">Medium</hi> (blog), 20.08.2020 
+                        <ref target="https://medium.com/@blacksmithforlife/better-ocr-for-newspapers-c7c1e2788b7a">https://medium.com/@blacksmithforlife/better-ocr-for-newspapers-c7c1e2788b7a</ref> [29.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Segev, Elad</hi> (2020): “Textual Network Analysis: Detecting Prevailing Themes and Biases in International News and Social Media”, in: 
+                        <hi rend="italic">Sociology Compass</hi> 14, 4: e12779. DOI: 10.1111/soc4.12779.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Stabile, Carol A.</hi> (2006): 
+                        <hi rend="italic">White Victims, Black Villains: Gender, Race, And Crime News in US Culture</hi>. 1st ed. New York / London: Routledge.
+                    </bibl>
+                    <bibl style="text-align: left; ">The Detective (1901): “Advertisement”, in: 
+                        <hi rend="italic">The Detective</hi>, September 1901, 189.
+                    </bibl>
+                    <bibl style="text-align: left; ">The Detective (1901): “Wanted Ad”, in: 
+                        <hi rend="italic">The Detective</hi>, September 1901, 189.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Tong, Xiang / Evans, David A.</hi> (1996): “A Statistical Approach to Automatic OCR Error Correction in Context”, in: Scott, Donia (ed.): 
+                        <hi rend="italic">Fourth Workshop on Very Large Corpora</hi>, Herstmonceux Castle, Sussex, UK: Association for Computational Linguistics. 
+                        <ref target="https://aclanthology.org/W96-0108">https://aclanthology.org/W96-0108</ref> [29.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Viola, Lorella / Verheul, Jaap</hi> (2020): “Mining Ethnicity: Discourse-Driven Topic Modelling of Immigrant Discourses in the USA, 1898–1920”, in: 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi> 35, 4: 921–943. DOI: 10.1093/llc/fqz068.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

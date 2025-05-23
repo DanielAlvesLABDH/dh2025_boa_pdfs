@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NABAIS_Francisco_Manuel_Dias_As_Humanidades_Digitais_na_Expe">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">As Humanidades Digitais na Experiência Museológica em Portugal: O Website do Museu Nacional Resistência e Liberdade</title>
+                    <title type="sub">Digital Humanities in the Museological Experience in Portugal: The Website of the National Museum of Resistance and Freedom</title>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Nabais</surname>
+                        <forename>Francisco Manuel Dias</forename>
+                    </persName>
+                    <affiliation>Faculdade de Ciências Sociais e Humanas da Universidade Nova de Lisboa, Portugal</affiliation>
+                    <email>francisco26@live.com.pt</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-24T20:05:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Humanidades Digitais</term>
+                    <term>Narrativa museológica</term>
+                    <term>Protótipo de aplicação</term>
+                    <term>Museu Nacional Resistência e Liberdade Resistência</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>spatial &amp; spatio-temporal analysis</term>
+                    <term>modeling and visualization</term>
+                    <term>user experience design and analysis</term>
+                    <term>Galleries and museum studies</term>
+                    <term>History</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>Inaugurated in 2024, the National Museum of Resistance and Freedom (Museu Nacional Resistência e Liberdade, MNRL) employs interdisciplinary methodologies and tools to research, preserve, and communicate the memory of the resistance against the Portuguese fascist regime — one of which is its website. </p>
+                <p>This contribution centres precisely on the website as its object of study, and departs from the following research question: In what ways can this website be enhanced through a Digital Humanities intervention to strengthen user communication, immersion, and interaction with the Museum’s content? The aim of this work-in-progress is to contribute to a potential answer to this question.</p>
+                <p>Drawing on an action-research methodology, an analysis of the website interface was conducted, along with conversations with the MNRL management, to design a proposed intervention. This presentation will discuss two models for the digital presentation of content on the website. One of them aims to develop the interface for a memorial page for the former prisoners and the other intends to create a new interactive way for visitors to learn about the prison escapes through storymaps.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Background</head>
+                <p>Since the early 21st century, the museum sector has undergone significant digital transformation, contributing to the accessibility, preservation, communication, and interaction with cultural heritage (Lewi et al. 2019; Torres Barragán / Camilo Alfonso 2017; Wilson 2011). Several case studies stand as evidence of the successful impact of Digital Humanities on the museum experience. Two projects are particularly noteworthy, associated respectively with the digital cataloguing of information and the use of storymaps in museological narratives. The first, 
+                    <ref target="https://homensenaviosdobacalhau.cm-ilhavo.pt/">
+                        <hi rend="italic">Homens e Navios do Bacalhau</hi>
+                    </ref>, a digital archive linked to the Ílhavo Maritime Museum, exemplifies a portuguese Digital Humanities intervention that enabled accessible research via an interactive and engaging interface. The second, 
+                    <ref target="https://ricegis.maps.arcgis.com/apps/Cascade/index.html?appid=b3b82f0369994442b3a6fa86c0ff5a20">
+                        <hi rend="italic">Mapping Civil War Narratives</hi>
+                    </ref>—developed by the Woodson Research Center at Rice University—employs storymap methodologies to build an interactive narrative that enhances understanding of the American Civil War. It offers users various layers of information that they can choose to explore in more or less depth. Although not affiliated with a museum, this project demonstrates the potential of storymaps in enriching museological narratives. The proposed models are grounded in such projects and in institutions connected to Digital Humanities, such as the 
+                    <ref target="https://www.myt.org.mx/">Museo Memoria y Tolerancia</ref>.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>A case study</head>
+                <p>Regarding the identification of issues in the website’s interface, critical observation and requirements gathering revealed limitations affecting the MNRL communication and its ability to attract new visitors. These include: disorganisation of presented content, the existence of pages with content that is difficult to interpret, and above all, long texts that hinder user engagement. Furthermore, there is a lack of interactive elements associated with the Museum’s most significant themes.</p>
+                <p>Based on this analysis, the proposed intervention focuses on building two prototype models for two central aspects of the institution’s identity and museographic narrative: the memorial to former political prisoners held at the Peniche Fortress, and the prison escapes that took place between 1936 and 1960. It was understood that improving the Museum’s digital narrative around these core memory themes would require a rethinking of how this content is organised, communicated, and digitally preserved on its website.</p>
+                <p>Concerning the 
+                    <ref target="https://www.museunacionalresistencialiberdade-peniche.gov.pt/pt/memorial-4/">“Memorial” page</ref>, it was found that the page mirrors the physical memorial at the National Museum of Resistance and Freedom. The aim is to pay equal tribute to all former prisoners by presenting their names side by side in alphabetical order. While this approach achieves the intended effect in the physical space, it poses accessibility and usability challenges in the digital format hosted on WordPress. The page contains over 2,600 names on a single web page, with no search, filter, or categorisation options. Moreover, to access further information on each individual, the Museum only provides hyperlinks directing users to prison records housed on the website of the National Archive of Torre do Tombo. This results in a digital dependency on an external website and only offers unprocessed information, which is difficult to understand. To address this issue, a redesigned interface model was proposed, facilitating searchability. The intention is also for each hyperlink to lead to a dedicated page within the Museum’s own website, containing categorised information thus improving both the organisation and the accessibility.
+                </p>
+                <p>As for the content related to the prison escapes, there is currently no structured or comprehensive information available on this topic, except for a brief mention on the 
+                    <ref target="https://www.museunacionalresistencialiberdade-peniche.gov.pt/pt/visitas-guiadas/">“Museum Visits” page</ref>. Given that prison escapes are one of the central themes of the MNRL, there is a consistent demand for more information. Considering this, a new content visualisation model was proposed. A storymaps type model. This option intends to ensure accessible, informative, and interactive communication. It also allows for the chronological and geographical tracking of each of the escapes from the Prison, supported by textual excerpts and digitised museum artefacts related to the topic. Given that this methodology is unfamiliar to the Museum team and anticipating potential technical issues such as “outmoded plug-ins, broken links, and obsolete, no longer functioning platforms” (Drucker 2021), the project will aim to ensure the sustainability of the model and the self-sufficiency of the staff in its future maintenance and development.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Ethical considerations</head>
+                <p>It should be emphasised that this project follows Kremers (2020) and Vilelas (2020) ethical recommendations and prioritises accurate and respectful representation of memory and history, ensuring data protection, informed consent with those mentioned, and accessibility for all users while embraces open, transparent, and sustainable research practices. Methodological choices are documented, and collaboration with the Museum ensures continuous validation and acknowledgment of contributions.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>The future of the project</head>
+                <p>After the completion of the prototypes, a project evaluation phase will be initiated. This will involve usability testing with a random sample of visitors and members of the Museum team, who will be observed by the researcher and asked to complete a questionnaire regarding their interaction with the prototypes. The results will be analysed to identify strengths and weaknesses, informing a proposal for future improvements in the next action-research cycle, with the aim of reaching an optimal model.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Drucker, Johanna</hi> (2021): 
+                        <hi rend="italic">The digital humanities coursebook: An introduction to digital methods for research and scholarship</hi> (1.
+                        <hi rend="superscript">st</hi> ed.). Routledge/Taylor &amp; Francis.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Kremers, Horst</hi> (ed.) (2020): 
+                        <hi rend="italic">Digital Cultural Heritage</hi>. Springer International Publishing. DOI: 10.1007/978-3-030-15200-0.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Lewi, Hannah / Smith, Wally / Vom Lehn, Dirk / Cooke, Steven</hi> (2019): 
+                        <hi rend="italic">The Routledge International Handbook of New Digital Practices in Galleries, Libraries, Archives, Museums and Heritage Sites</hi> (Lewi, Hannah / Smith, Wally / Vom Lehn, Dirk / Cooke, Steven, (Eds.; 1.
+                        <hi rend="superscript">st</hi> ed.). Routledge. DOI: 10.4324/9780429506765.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Torres Barragán, Camilo Alfonso</hi> (2017): “Patrimonio virtual y humanidades digitales—Debates y puntos de encuentro“, in: 
+                        <hi rend="italic">Boletín OPCA</hi>, 12: 44–52. DOI: 10.57784/1992/4920
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Vilelas, José</hi> (2020): 
+                        <hi rend="italic">Investigação: o processo de construção do conhecimento</hi> (3.
+                        <hi rend="superscript">rd</hi> ed.). Sílabo.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Wilson, Ross</hi> (2011): “Behind the scenes of the museum website”, in: 
+                        <hi rend="italic">Museum Management and Curatorship</hi>, 
+                        <hi rend="italic">26</hi>(4): 373–389. DOI: 10.1080/09647775.2011.603934
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

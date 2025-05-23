@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LUBIN_Jonah_Introducing_iberz__a_database_of_Yiddish_transla">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Introducing iberz, a database of Yiddish translations</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Lubin</surname>
+                        <forename>Jonah</forename>
+                    </persName>
+                    <affiliation>Harvard University, United States of America</affiliation>
+                    <email>jonah_lubin@g.harvard.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Fischer</surname>
+                        <forename>Frank</forename>
+                    </persName>
+                    <affiliation>Freie Universität Berlin, Germany</affiliation>
+                    <email>fr.fischer@fu-berlin.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-27T10:53:37.990453034</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>yiddish</term>
+                    <term>translation</term>
+                    <term>database</term>
+                    <term>bibliography</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>bibliographic analysis</term>
+                    <term>cultural analytics</term>
+                    <term>physical &amp; minimal computing</term>
+                    <term>Literary studies</term>
+                    <term>Translation studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading">
+                <head>Introduction</head>
+                <p>There is a specter haunting Yiddish literature: the specter of translation. Why has the Yiddish literary establishment sought to repress the translational aspect of Yiddish literature? Yiddish literary authorities have long been anxious about Yiddish’s relations with and dependence on other languages. This anxiety is on the one hand linguistic (“Is Yiddish simply a dialect of German?”), and on the other hand literary (“Is Yiddish literature simply a derivative of European literature?”). Yiddish literary authority’s desire to establish a national language on the model of European languages has made translation into Yiddish, which necessarily deals with linguistic and literary dependence, a touchy subject. This touchiness has led to a paucity of scholarship on translational literature in Yiddish, both marked and otherwise. This paucity is only recently beginning to be addressed (Abeliovich et al., 2024; Zaritt, 2024; Kirzane, 2020).</p>
+                <p>There is another specter haunting Yiddish: the specter of metadata (or the lack thereof). Thanks to the efforts of the Yiddish Book Center, YIVO, the National Library of Israel, and others, Yiddish literature is well digitized. The Yiddish Book Center’s digital collection offers over 11,000 PDFs of Yiddish books, free to all who might want to read them. Unfortunately, the metadata concerning these books is rather sparse, limited to basic bibliographical information. In the case of translations, essential metadata such as translator, author, source work is often missing or inaccurate. JEWTACT, which covers translation into Jewish languages in early modernity, includes translations into Yiddish but ends in 1830 (Idelson-Shein et al., 2024).</p>
+                <p>
+                    <hi rend="color(#000000)italic">iberz</hi>
+                    <hi rend="color(#000000)"> – </hi>
+                    <hi rend="color(#000000)">a database of Yiddish translations which can be found at</hi>
+                    <ref target="http://iberz.org/">
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#1155cc)underline">iberz.org</hi>
+                    </ref>
+                    <hi rend="color(#000000)">– </hi>
+                    <hi rend="color(#000000)">seeks to address both specters by creating a bibliographic database of translations into Yiddish. At present, the database comprises 1,375 translations, published between 1868 and 1993, all of which correspond to texts from the Yiddish Book Center’s digital library. The basic unit of the database is the translated work, which is related to a source work, as well as particular editions and volumes. Using this scheme, the translations in this database are related to translators, source texts, and publication data. These source works are, when possible, </hi>
+                    <hi rend="color(#000000)">linked to Wikidata IDs, with the goal of integrating this information into linked open data, and making it accessible to federated queries.</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Technical description</head>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Data</head>
+                    <p>
+                        <hi rend="color(#000000)">At present, the data is stored in two YAML files in a GitHub repository (</hi>
+                        <ref target="https://github.com/sreyfe/iberz_data">
+                            <hi rend="color(#1155cc)underline">here</hi>
+                        </ref>
+                        <hi rend="color(#000000)">), one for translations, the other for sources. Each translation and source is distinguished by a unique identifier. Each translation entry can reference one or more sources. For example, Zilburg’s translation of Meyrink’s </hi>
+                        <hi rend="color(#000000)italic">Der Golem</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">has the identifier “ytd000641,” and the value of its “source” key is “ytds000605.”</hi>
+                    </p>
+                    <p>The data model in the YAML files is based on the WEMI model (Work, Expression, Manifestation, Item). It is non-tabular, in order to better represent the nested structure of the data. YAML was chosen for human-readability. A file in JSON format, with tabular data, is produced from the YAML files using a Python script. This flattened representation of the data can be interfaced with on the web app’s homepage.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Web app</head>
+                    <p>
+                        <hi rend="color(#000000)">The </hi>
+                        <hi rend="color(#000000)">web app </hi>
+                        <hi rend="color(#000000)">is </hi>
+                        <hi rend="color(#000000)">accessible</hi>
+                        <hi rend="color(#000000)"> at </hi>
+                        <ref target="http://iberz.org/">
+                            <hi rend="color(#1155cc)underline">iberz.org</hi>
+                        </ref>
+                        <hi rend="color(#000000)">. </hi>
+                        <hi rend="color(#000000)">S</hi>
+                        <hi rend="color(#000000)">tatic </hi>
+                        <hi rend="color(#000000)">HTML is</hi>
+                        <hi rend="color(#000000)"> produced by Jekyll and hosted via GitHub pages. Th</hi>
+                        <hi rend="color(#000000)">e</hi>
+                        <hi rend="color(#000000)"> decision to use this format (as opposed to an SQL database) was made in order to conform with minimal computing principles. (del Rio Riande et al., 2023) This means that </hi>
+                        <ref target="http://iberz.org/">
+                            <hi rend="color(#1155cc)underline">iberz.org</hi>
+                        </ref>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">is fast, lightweight, and eminently hostable. </hi>
+                    </p>
+                    <p>The homepage of the web app (Fig. 1) is a searchable, tabular representation of the data, written in JavaScript and queried from the most recent data. The table combines relevant information on both the translations and their source texts, and is meant to be interfaced with by means of the search bar at the top of the page. Search is enabled using Fuse.js, a fast and lightweight fuzzy-search library for JavaScript. (Risk, 2012)</p>
+                    <p>
+                        <figure>
+                            <graphic url="/tmp/tmpef4038cf/Pictures/9680c6f5700dd0e290e73ef9bb04a311.png"/>
+                        </figure>
+                    </p>
+                    <p>
+                        <hi rend="color(#000000)bold">Figure 1: </hi>
+                        <hi rend="color(#000000)">The </hi>
+                        <hi rend="color(#000000)italic">iberz</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">homepage.</hi>
+                    </p>
+                    <p>
+                        <hi rend="color(#000000)">The search bar is used to narrow down results. More information on the translation and source texts can then be accessed by clicking on the hyperlinks under “Title” and “Source title.” Each translation and source text has its own persistent webpage (Fig. 2, Villafiorita, 2014), as well as a stable URI produced using the w3id.org service (e.g. </hi>
+                        <ref target="http://w3id.org/iberz/id/ytd000109/">
+                            <hi rend="color(#1155cc)underline">w3id.org/iberz/id/ytd000109/</hi>
+                        </ref>
+                        <hi rend="color(#000000)">).</hi>
+                    </p>
+                    <p>
+                        <hi rend="color(#000000)">
+                            <figure>
+                                <graphic url="/tmp/tmpef4038cf/Pictures/9680c6f5700dd0e290e73ef9bb04a311.png"/>
+                            </figure>
+                        </hi>
+                        <hi rend="color(#000000)"> </hi>
+                    </p>
+                    <p>
+                        <hi rend="color(#000000)bold">Figure 2: </hi>
+                        <hi rend="color(#000000)">A page for a single translation entry.</hi>
+                    </p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results</head>
+                <p>
+                    <hi rend="color(#000000)">The results of this ongoing project are twofold. Firstly, we have produced for the first time structured data pertaining to these translations. We have identified 1,375 translations in the Yiddish Book Center’s digital library, by 763 translators, published by 582 publishers in 51 locations. Corresponding to these translations, we have identified 1,069 source texts. These texts range from Jewish religious literature (e.g. the </hi>
+                    <hi rend="color(#000000)italic">Tanakh</hi>
+                    <hi rend="color(#000000)">), to canonized world literature (e.g. </hi>
+                    <hi rend="color(#000000)italic">Madame Bovary</hi>
+                    <hi rend="color(#000000)">); from philosophy (e.g. Bergson’s </hi>
+                    <hi rend="color(#000000)italic">Introduction à la métaphysique</hi>
+                    <hi rend="color(#000000)">) to elementary mathematics textbooks (e.g. </hi>
+                    <hi rend="color(#000000)italic">Arytmetyka</hi>
+                    <hi rend="color(#000000)">). We have identified 814 authors corresponding to these source texts, and they are in 34 different languages. We have published all of this data at </hi>
+                    <ref target="http://iberz.org/">
+                        <hi rend="color(#1155cc)underline">iberz.org</hi>
+                    </ref>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">and in our GitHub data repository.</hi>
+                </p>
+                <p>Also of interest are those works which are more difficult to include within our structures. For example: the pseudotranslations, falsely attributed works, and highly modified translations produced by the Hebrew Publishing Company and its affiliates before the First World War. These include, but are not limited to: invented sections of the Decameron (Lubin et al., 2024); editions supposedly by Jules Verne, which are actually by Mayne Reid; Sacher-Masoch passed-off as Maupassant. These bibliographic discoveries enable us to better understand the translational norms of Yiddish translation in Pre-WWI period, an understudied phenomenon (cf. Toury, 2008). Beyond the scope of our structured data model, this information is contained in the “notes” section of the entries.</p>
+                <p>Beyond the bibliographical results of this project, though necessarily following it, the structured form of this metadata prepares it to undergo statistical analysis (cf. Illmer et al., 2024). Of particular interest has been the examination of the languages present in the database, and the relative synchronic and diachronic popularity thereof. In total, there are 34 source languages represented in the database. The most popular languages are Russian, German, English, Hebrew, and French. These represent the overwhelming majority of source languages represented in the corpus. (Fig. 3)</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpef4038cf/Pictures/9680c6f5700dd0e290e73ef9bb04a311.png"/>
+                    </figure>
+                </p>
+                <p>
+                    <hi rend="color(#000000)bold">Figure 3: </hi>
+                    <hi rend="color(#000000)">A pie chart indicating the proportions of source languages by number of volumes in </hi>
+                    <hi rend="color(#000000)italic">iberz</hi>
+                    <hi rend="color(#000000)">.</hi>
+                </p>
+                <p>Also of interest is the diachronic development of language popularity in the corpus. Before the First World War, German was the most popular language. During the interwar period, due in part to the Soviet Union’s early patronage of Yiddish literature, it was Russian. This is concurrent with a massive spike in Yiddish translational activity. After the Second World War, it was Hebrew, indicating the shrinking horizons of the Yiddish world-literary project. (Fig. 4, cf. Shandler, 2006)</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpef4038cf/Pictures/9680c6f5700dd0e290e73ef9bb04a311.png"/>
+                    </figure>
+                </p>
+                <p>
+                    <hi rend="color(#000000)bold">Figure 4: </hi>
+                    <hi rend="color(#000000)">Change in the popularity of source languages over time.</hi>
+                </p>
+                <p>A formally similar picture emerges when the most popular places of publication are examined. Before the First World War, when the Czar’s censor still held sway, New York was the most popular place of publication. After the First World War, Russian revolution, and the foundation of independent Poland and Lithuania, Warsaw became the most popular location, with Vilnius soon taking second place. After the Second World War, the most prominent publishing location was Buenos Aires, where secular Yiddish culture remained vital until IKUF’s disavowal of the language in the early 1960s. (Fig. 5)</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpef4038cf/Pictures/9680c6f5700dd0e290e73ef9bb04a311.png"/>
+                    </figure>
+                </p>
+                <p>
+                    <hi rend="color(#000000)bold">Figure 5: </hi>
+                    <hi rend="color(#000000)">Change in the popularity of publication locations over time.</hi>
+                </p>
+                <p>Through this metadata, we are able to reconstruct Yiddish literature’s relationships with the languages and literatures with which it came into contact. We witness early strivings toward worldliness, which then blossom in the translational fervor of the Interwar period, before wilting in the period after the Second World War. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Summary and Outlook</head>
+                <p>This project is dedicated to the production, dissemination, and study of structured bibliographic data concerning translation into Yiddish, which is a highly understudied corpus. We have produced bibliographic data on 1,375 translations into Yiddish, and related these translations to their source works. We have made this data available in two interconnected forms: as a web app, meant to be human-readable, and in a serialized format, meant to be machine-readable. We have then used this metadata in order to study Yiddish’s relations with other literatures, providing the first quantitative account of the world literature translated into Yiddish.</p>
+                <p>Looking outward, an exhaustive catalog of translations into Yiddish is the end goal of this project. This is one of the promises of Yiddish digital humanities: the body of Yiddish texts is large and interesting, but also small enough that it may one day be well-described.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Abeliovich, </hi>
+                        <hi rend="bold">Ruthie</hi>
+                        <hi rend="bold"> /</hi>
+                        <hi rend="bold"> Tamir, </hi>
+                        <hi rend="bold">Einat</hi>
+                        <hi rend="bold"> / </hi>
+                        <hi rend="bold">Trinh, </hi>
+                        <hi rend="bold">Miriam</hi>
+                        <hi rend="bold"> / </hi>
+                        <hi rend="bold">Rusinek, </hi>
+                        <hi rend="bold">Sinai</hi> (2024) 
+                        <hi rend="italic">The DYBBUK project | Yiddish Popular Theatre 1880-1920 | Israel</hi>, 
+                        <hi rend="italic">DYBBUK</hi>. Available at: 
+                        <ref target="https://www.dybbuk.co/">https://www.dybbuk.co</ref> (Accessed: 8 December 2024).
+                    </bibl>
+                    <bibl>
+                        <hi rend="italic">Digital Yiddish Library | Yiddish Book Center</hi> (no date). Available at: 
+                        <ptr target="https://www.yiddishbookcenter.org/collections/digital-yiddish-library"/> (Accessed: 8 December 2024).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Idelson-Shein, </hi>
+                        <hi rend="bold">Iris</hi>
+                        <hi rend="bold"> /</hi>
+                        <hi rend="bold"> Goren, </hi>
+                        <hi rend="bold">Ahuvia</hi>
+                        <hi rend="bold"> /</hi>
+                        <hi rend="bold"> Jánošíková, </hi>
+                        <hi rend="bold">Magdaléna</hi>
+                        <hi rend="bold"> /</hi>
+                        <hi rend="bold"> Karkason, </hi>
+                        <hi rend="bold">Tamir</hi>
+                        <hi rend="bold"> / </hi>
+                        <hi rend="bold">Mayer, </hi>
+                        <hi rend="bold">Yakov</hi>
+                        <hi rend="bold"> </hi>
+                        <hi rend="bold">Z.</hi> (2025) 
+                        <hi rend="italic">JEWTACT: Jewish Translation and Cultural Transfer</hi>, 
+                        <hi rend="italic">Jewish Translation and Cultural Transfer in Early Modern Europe: A Bibliographic Database.</hi> Available at: 
+                        <ref target="https://www.jewtact.com/">https://www.jewtact.com</ref> (Accessed: 8 December 2024).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Illmer, </hi>
+                        <hi rend="bold">Viktor</hi>
+                        <hi rend="bold"> </hi>
+                        <hi rend="bold">J. / Çakir, Dîlan C. / Fischer, </hi>
+                        <hi rend="bold">Frank</hi>
+                        <hi rend="bold"> /</hi>
+                        <hi rend="bold"> Milling, </hi>
+                        <hi rend="bold">Carsten</hi>
+                        <hi rend="bold"> /</hi>
+                        <hi rend="bold"> Welz, </hi>
+                        <hi rend="bold">Lilly</hi> (2024) ‘Univariate Statistical Analysis of a Non-Canonical Literary Genre’, in. 
+                        <hi rend="italic">CHR 2024: Computational Humanities Research Conference,</hi> Aarhus.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Karpilove, </hi>
+                        <hi rend="bold">Miriam</hi> (2020) 
+                        <hi rend="italic">Diary of a lonely girl, or the battle against free love</hi>. First edition. Syracuse, New York: Syracuse University Press (Judaic traditions in literature, music, and art).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Lubin, </hi>
+                        <hi rend="bold">Jonah</hi> (2024) 
+                        <hi rend="italic">iberz</hi>. Available at: 
+                        <ptr target="https://iberz.org/"/> (Accessed: 6 December 2024).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Lubin, </hi>
+                        <hi rend="bold">Jonah</hi>
+                        <hi rend="bold"> / </hi>
+                        <hi rend="bold">Lazzarotti, </hi>
+                        <hi rend="bold">Maria</hi>
+                        <hi rend="bold"> </hi>
+                        <hi rend="bold">L.</hi> (2024) 
+                        <hi rend="italic">Pseudo-Boccaccio, Yiddish Pulp Fiction, and the Man Who Ripped Off Joyce</hi>, 
+                        <hi rend="italic">The Public Domain Review</hi>. Available at: 
+                        <ptr target="https://publicdomainreview.org/essay/pseudo-boccaccio-yiddish-pulp-fiction-and-the-man-who-ripped-off-joyce/"/> (Accessed: 6 December 2024).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">del Rio Riande, </hi>
+                        <hi rend="bold">Gimena</hi>
+                        <hi rend="bold"> / </hi>
+                        <hi rend="bold">Viglianti, </hi>
+                        <hi rend="bold">Raffaele</hi> (2023) ‘Against infrastructure: global approaches to digital scholarly editing’. Available at: 
+                        <ptr target="https://www.aacademica.org/gimena.delrio.riande/224"/> (Accessed: 6 December 2024).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Risk, </hi>
+                        <hi rend="bold">Kiro</hi> (2024) ‘krisk/Fuse’. Available at: 
+                        <ptr target="https://github.com/krisk/Fuse"/> (Accessed: 6 December 2024).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Shandler, </hi>
+                        <hi rend="bold">Jeffrey</hi> (2006) 
+                        <hi rend="italic">Adventures in Yiddishland: postvernacular language &amp; culture</hi>. Berkeley: University of California Press (S. Mark Taper Foundation imprint in Jewish studies).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Toury, </hi>
+                        <hi rend="bold">Giden</hi> (2012) 
+                        <hi rend="italic">Descriptive Translation Studies--and Beyond</hi>. John Benjamins Publishing.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Villafiorita, </hi>
+                        <hi rend="bold">Adolfo</hi> (2024) ‘avillafiorita/jekyll-datapage_gen’. Available at: 
+                        <ptr target="https://github.com/avillafiorita/jekyll-datapage_gen"/> (Accessed: 6 December 2024).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Zaritt, </hi>
+                        <hi rend="bold">Saul</hi>
+                        <hi rend="bold"> </hi>
+                        <hi rend="bold">N.</hi> (2024) 
+                        <hi rend="italic">A Taytsh manifesto: Yiddish, translation, and the making of modern Jewish culture</hi>. New York: Fordham University Press.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

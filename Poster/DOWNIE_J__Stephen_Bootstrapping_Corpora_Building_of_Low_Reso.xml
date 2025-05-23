@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="DOWNIE_J__Stephen_Bootstrapping_Corpora_Building_of_Low_Reso">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Bootstrapping Corpora Building of Low-Resourced Language Texts Using the Universal Declaration of Human Rights</title>
+                <author>
+                    <persName>
+                        <surname>Bainbridge</surname>
+                        <forename>David</forename>
+                    </persName>
+                    <affiliation>University of Waikato, New Zealand</affiliation>
+                    <email>davidb@waikato.ac.nz</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Algee</surname>
+                        <forename>Sulhan</forename>
+                    </persName>
+                    <affiliation>University of Waikato, New Zealand</affiliation>
+                    <email>sulhan.ageel@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Downie</surname>
+                        <forename>J. Stephen</forename>
+                    </persName>
+                    <affiliation>University of Illinois, United States of America</affiliation>
+                    <email>jdownie@illinois.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Whanga</surname>
+                        <forename>Hemi</forename>
+                    </persName>
+                    <affiliation>University of Massey, New Zealand</affiliation>
+                    <email>h.whaanga@massey.ac.nz</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-28T23:55:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Low-resourced languages</term>
+                    <term>Corpora building</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>natural language processing</term>
+                    <term>text mining and analysis</term>
+                    <term>Computer science</term>
+                    <term>Humanities computing</term>
+                    <term>Library &amp; information science</term>
+                    <term>Linguistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">Digital Humanities scholars who want to broaden their cultural explorations beyond well-resourced languages can have a difficult time building the appropriate analytic tools because of a paucity of training data and prebuilt tools (Nigatu et al. 2024). For example, many Natural Language Processing (NLP) tools require a corpus of training text in the target language to function properly. While NLP tools such as Lingua, OpenNLP, and FastText boast impressive numbers of languages detected—respectively 75, 103, and 176—this falls short of the world’s 7000+ spoken languages. Further, because these tools are dependent on pre-existing corpora, they primarily represent higher-resourced languages. For example, while there are 38 recognised Polynesian languages, te reo Māori is the only one available in OpenNLP as it is included as part of the Leipzig Corpus (Goldhahn et al. 2012).</p>
+                <p style="text-align: left; ">The paradox is that DH scholars need NLP tools to create and analyze new corpora, but such tools need to be trained on “non-existent” target language corpora. This is a classic bootstrapping problem. Broadening from our previous work (Bainbridge et al. 2020; Ageel 2023) we propose using the Universal Declaration of Human Rights (UDHR) in combination with an iterative lexicon-based search strategy via search APIs to surmount the bootstrapping problem with regard to language identification NLP tools. The UDHR provides high-quality texts in 576 different languages many of which are low-resourced or endangered. Each translation comprises approximately 450 unique terms. We use term frequencies from the target language UDHR translations to create a seed lexicon that is used to bootstrap our iterative search strategy.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Approach </head>
+                <p style="text-align: left; ">For the chosen target language, the workflow instilled in the developed software is as follows:</p>
+                <list type="ordered">
+                    <item>Generate term-frequency counts from the UDHR text for target language</item>
+                    <item>Remove foreign words, such as English, and store remainder as seed lexicon</item>
+                    <item>Create and store a term-frequency vector for target language based on lexicon</item>
+                    <item>Use lexicon to generate queries</item>
+                    <item>Perform API-based search with the generated queries and download the resulting pages</item>
+                    <item>Per-paragraph, for each downloaded page:
+                        <list type="ordered">
+                            <item>Create a term-frequency vector for the paragraph</item>
+                            <item>Calculate cosine similarity between paragraph and target language vector</item>
+                            <item>For those paragraphs that exceed the similarity threshold, add its words into the lexicon</item>
+                        </list>
+                    </item>
+                </list>
+                <p style="text-align: left; ">With the new lexicon generated, this process can be repeated until a training corpus of a sufficient size and quality is accumulated.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Proof-of-Concept Testing</head>
+                <p style="text-align: left; ">To illustrate the utility of the approach, we used our workflow to bootstrap and grow lexicons for two Polynesian languages: te reo Māori and lea faka-Tonga. In the first experiment, to test the accuracy of our cosine similarity measure, we formed a Māori text corpus. We chose Māori because NLP detection tools exist for this language (e.g., Lingua NLP). This allowed us to automatically compare the texts selected via the cosine similarity measure against a NLP-based decision about which language is present. Using the Māori UDHR lexicon, we generated 365 3-word queries fed to the Google search API, resulting in 659,831 paragraphs from the 4,129 downloaded pages. Of these, 156,359 were identified as Māori using the cosine similarity score, applying a threshold of 0.5. Using the Lingua NLP judgements as ground truth, our method yielded a precision rate of 0.97. This high precision rate provides confidence that our automatically growing lexicon is concentrating on the target language. </p>
+                <p style="text-align: left; ">Because the first experiment results were excellent, we then turned to the Tongan language, which is not supported by open tools such as Lingua, OpenNLP or FastText. The focus here was establishing the ability of our method to yield a corpus of at least 1000 Tongan sentences, the baseline recommended by Lingua, for example, for adding support for a new language to the tool. Over 6 iterations of the method, 2,455 terms were added into the Togan lexicon. When our implementation was run in paragraph output mode, this produced 320 paragraphs from 137 documents. This resulted in 1,478 sentences, establishing that this approach can be used to bootstrap the creation of training corpora for a variety of NLP tools.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusions and Future Work</head>
+                <p style="text-align: left; ">Beyond tool-building, this approach can also be used to build corpora for low-resourced languages analyzed and studied by DH scholars. The approach is light-weight and can be run on local laptop computers. For languages not found in the UDHR, such as a dead language, the approach is workable whenever one has access to a seed collection of target language terms. Currently, a manual process is needed to prepare the identified text into a format suitable for ingestion into NLP tools so we will be working toward automating tool ingestion processes. Our software is available open-source through GitHub:</p>
+                <list type="unordered">
+                    <item>
+                        <ref target="https://github.com/davidbwaikato/webcrawl-lowres-lang">https://github.com/davidbwaikato/webcrawl-lowres-lang</ref>
+                    </item>
+                </list>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Ageel, Sulhan</hi> (2023) 
+                        <hi rend="italic">Focused Web Crawling of Polynesian Languages</hi>. Honours Dissertation, Department of Software Engineering, University of Waikato.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bainbridge, David / Downie, J. Stephen / Whaanga, Hemi</hi> (2020) “An Open Data Approach to Revealing Indigenous Texts in Large-Scale Digital Repositories: A Case-Study of Locating Pages of Māori Text in the HathiTrust”, in Laura Estill, Jennifer Guiliano (eds.): 
+                        <hi rend="italic">15th Annual International Conference of the Alliance of Digital Humanities Organizations, DH 2020</hi>, Ottawa, Canada.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Goldhahn, Dirk / Eckart, Thomas / Quasthoff, Uwe</hi> (2012) “Building Large Monolingual Dictionaries at the Leipzig Corpora Collection: From 100 to 200 Languages”, in Proceedings of the 8th International Language Resources and Evaluation (LREC'12), 759–765.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Nigatu, Hellina Hailu / Canny, John / Chasins, Sarah E.</hi> (2024) “Low-Resourced Languages and Online Knowledge Repositories: A Need-Finding Study”, in 
+                        <hi rend="italic">Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems (CHI '24)</hi>. ACM, New York, USA, Article 562, (21 pages). 
+                        <ref target="https://doi.org/10.1145/3613904.3642605">https://doi.org/10.1145/3613904.3642605</ref>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SLUYTER_G_THJE_Henny_Towards_Modularised_Open_Infrastructure">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Towards Modularised Open Infrastructures: Enhancing Research Publications in Digital Humanities – “Detecting Small Worlds” as an Example.</title>
+                <author>
+                    <persName>
+                        <surname>Sluyter-Gäthje</surname>
+                        <forename>Henny</forename>
+                    </persName>
+                    <affiliation>University of Potsdam, Germany</affiliation>
+                    <email>sluytergaeth@uni-potsdam.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Börner</surname>
+                        <forename>Ingo</forename>
+                    </persName>
+                    <affiliation>University of Potsdam, Germany</affiliation>
+                    <email>ingo.boerner@uni-potsdam.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Trilcke</surname>
+                        <forename>Peer</forename>
+                    </persName>
+                    <affiliation>University of Potsdam, Germany</affiliation>
+                    <email>trilcke@uni-potsdam.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ustinova</surname>
+                        <forename>Evgeniya</forename>
+                    </persName>
+                    <affiliation>Saarland University, Germany</affiliation>
+                    <email>evgeniya.ustinova@uni-saarland.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Fischer</surname>
+                        <forename>Frank</forename>
+                    </persName>
+                    <affiliation>Freie Universität Berlin, Germany</affiliation>
+                    <email>fr.fischer@fu-berlin.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Milling</surname>
+                        <forename>Carsten</forename>
+                    </persName>
+                    <affiliation>University of Potsdam, Germany</affiliation>
+                    <email>cmil@hashtable.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-22T09:20:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>scientific publishing</term>
+                    <term>publication modules</term>
+                    <term>reproducibility</term>
+                    <term>research infrastructure</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digital publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>open access methods</term>
+                    <term>sustainable procedures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">Over recent years, the channels and formats for publishing research outputs have diversified significantly. While executable papers (cf. Gabriel, Carpone 2011; Somers 2018; Walkowski, Burghardt 2022) – such as those published by the "Journal of Digital History" – represent an important step towards moving beyond the rigid PDF format in scientific publishing, PDFs remain the standard for most books of abstracts, conference proceedings, and journal articles.</p>
+                <p style="text-align: left; ">In fields like Digital Humanities (DH), where research often involves applying programming code to data, simply sharing links to repositories along with brief method descriptions presents challenges. These include difficulties in comprehending and reproducing the research (due to infrastructural limitations or lack of skills), as well as issues with the reusability and accessibility of the methods.</p>
+                <p style="text-align: left; ">In this context, we are also observing a trend in the Digital Humanities towards publishing research outputs in the form of an ensemble of differentiated, modular and networked elements. In these cases, individually composed, ‘tactical’ infrastructures (Edmond et al. 2019: 209) are emerging, which overcome the static form of the publication by enriching and/or accompanying the static publication not only with data and code, but also for example with videos, data dashboards, websites, podcasts or the like (see Kestemont et al. 2022). </p>
+                <p style="text-align: left; ">In the following, we present our own experimental approach to contributing to this trend towards (what we call) "modularised open infrastructures for research publications”. The basic idea of this trend is, in our view, to not assume one single, central and integral place of publication, but to understand the published artefacts more as a composition of individual, modular elements. This also changes the character of the publication: it is no longer a ‘work’ in the classical sense, but rather a dynamic network of research outputs in a “hybrid” form (cf. Breuer, Trilcke 2021: 8).</p>
+                <p style="text-align: left; ">The starting point for our experiment is a classical PDF publication, our study on Detecting Small Worlds in a Corpus of Thousands of Theatre Plays (Trilcke et al. 2024), which in the usual way is accompanied by the publication of our data and code. This triadic publication structure has been extended by additional components which make the study fully reproducible (using Docker<ref n="1" target="ftn1"/> as proposed by Börner et al. 2023, chap. 2.1), allow for the interactive exploration of the results (chap. 2.2) and enhance the reusability by providing a Python rewrite of the original R code (chap. 2.3). Out of these components, which we will characterise in the following, an open, modularised infrastructure around the conducted study emerges.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Composing an Open Modularised Infrastructure for a Publication: “Detecting Small Worlds” as an Example </head>
+                <p style="text-align: left; ">Most open access studies in DH are represented with a triad of a published paper, the code used to conduct the research and the data on which the code is executed. In traditional publication formats, space is limited and the data as well as the method cannot be described in great detail. The code can serve as an extended explanation of the method for those who are able to read the programming language that is being used. The results, if available in a data format (e.g. as text, table, JSON), can, as a sort of secondary data, have additional explanatory power.</p>
+                <p style="text-align: left; ">To counteract the challenges for the comprehensibility, reproducibility and reusability posed by this traditional set up, we can make use of already existing techniques (e.g dockerisation, interactive and multimodal data exploration) to build an expandable set of modules around the research study which facilitate specific tasks for further investigation into the study using the paper, the code and the data as a base. We will exemplify this by presenting the three modules we developed based on our study by Trilcke et al. (2024), which uses the openly available drama corpora from DraCor<ref n="2" target="ftn2"/> (Fischer et al. 2019; Börner, Trilcke 2023) and compares different operationalisations of the concept of “Small Worlds” in network theory (Watts, Strogatz 1998; Watts 1999). The different methods on how to calculate the “small-world-ness” are implemented in R and publicly available on GitHub<ref n="3" target="ftn3"/>. 
+                </p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Reproducibility module: Docker </head>
+                    <p style="text-align: left; ">To avoid the challenges of replicating the data as it was at the time of the study (as corpora in DraCor are living corpora (Börner, Trilcke 2024) which means plays can be changed or added over time) and to try to get the R code running, a Dockerfile is provided with which the analysis environment can be set up quickly and the analysis can be run as described by Börner et al. (2023). For this, docker needs to be installed but no other software is required which makes the study fully reproducible while making the execution as simple as possible.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Comprehensibility module: Data Explorer</head>
+                    <p style="text-align: left; ">To be able to comprehend and check the interpretation of the results presented in a paper, it often suffices to investigate the results which would mean understanding the file format and structure which, depending on the documentation, can be quite challenging. Furthermore, researchers would need to find a way to process the file(s). To avoid these difficulties, we built a data dashboard / explorer<ref n="4" target="ftn4"/> which displays the result data and displays the same plots as in the paper, but with the possibility of interaction, e.g. filtering the table and the plots, or displaying the play names of single data points in the plot. This way the data is made transparent, it can be experimented on and the claims and results can be tested without writing a single line of code.
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Accessibility module: Python reimplementation</head>
+                    <p style="text-align: left; ">In computational literary studies, as well as for many other fields, the programming language R is not as widespread as Python which for many researchers makes it harder to reuse the code if they want to conduct their own analyses. We are therefore currently developing a rewrite of the analysis using Python. This will make the method in use more accessible. In addition, the re-write in itself is a reproducibility test, in the sense of same data, different code.</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Summary </head>
+                <p style="text-align: left; ">The presented modules only form a starting point to a modularised and networked infrastructure around a research study which could range from materials for science communication (e.g blogs, videos etc.) to an adaption of the method for an entirely different research question. This way the study gets embedded in a richer and more powerful form of representation which makes it possible for a wider range of audiences to interact and build on the conducted research. </p>
+                <p style="text-align: left; ">However, this publication strategy, which is adapted to the decentralised and dynamic media environments of the internet with its modular, network-like infrastructure, brings with it new challenges. These include, in particular, the lack of metadata standards for an integrative description of the various elements and their connection, as well as the lack of correspondingly powerful finding aids that can act as a FAIR principle (Wilkinson et al. 2016) oriented ‘glue’ between the elements. In the current research project “DraCorOS. Fostering Open Science in Digital Humanities by connecting the DraCor Ecosystem to EOSC”<ref n="5" target="ftn5"/>, we are researching solutions to these challenges based on knowledge graphs. The aim is to develop ontology-based modelling approaches that allow for the "glue-ification" of the decentralised, modular elements that digital research processes produce today.
+                </p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                        
+                            <hi style="font-size:10pt"> </hi>
+                            <ref target="https://www.docker.com/">
+                                <hi rend="color(1155CC)" style="font-size:10pt">https://www.docker.com/</hi>
+                            </ref>
+                            <hi style="font-size:10pt">, last accessed: 22/04/2025.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                        
+                            <hi style="font-size:10pt"> </hi>
+                            <ref target="https://dracor.org/">
+                                <hi rend="color(1155CC)" style="font-size:10pt">https://dracor.org/</hi>
+                            </ref>
+                            <hi style="font-size:10pt">, last accessed: 22/04/2025.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                        
+                            <ref target="https://github.com/dracor-org/small-world-paper/tree/develop">
+                                <hi rend="color(1155CC)" style="font-size:10pt">https://github.com/dracor-org/small-world-paper/tree/develop</hi>
+                            </ref>
+                            <hi style="font-size:10pt">, last accessed: 22/04/2025.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn4" n="4">
+                            
+                                <ref target="https://showcases.clsinfra.io/network-analysis/explore_small_worlds">
+                                    <hi style="font-size:10pt">https://showcases.clsinfra.io/network-analysis/explore_small_worlds</hi>
+                                </ref>
+                                <hi style="font-size:10pt" xml:space="preserve"> The data dashboards were developed in the context of the CLS INFRA project which has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No. 101004984.</hi>
+                            
+                        </note>
+<note rend="footnote text" xml:id="ftn5" n="5">
+                        
+                            <ref target="https://oscars-project.eu/projects/dracoros-fostering-open-science-digital-humanities-connecting-dracor-ecosystem-eosc">
+                                <hi style="font-size:10pt">https://oscars-project.eu/projects/dracoros-fostering-open-science-digital-humanities-connecting-dracor-ecosystem-eosc</hi>
+                            </ref>
+                            <hi style="font-size:10pt">. DraCorOS is funded through the “OSCARS” project which received funding from the European Commission’s Horizon Europe Research and Innovation programme under grant agreement No. 101129751.</hi>
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: justify;">
+                        <hi style="font-size:11pt" xml:space="preserve">Börner, Ingo / Trilcke, Peer / Milling, Carsten / Fischer, Frank / Sluyter-Gäthje, Henny  (2023): “Dockerizing DraCor – A Container-based Approach to Reproducibility in Computational Literary Studies”, in: </hi>
+                        <hi rend="italic" style="font-size:11pt">Proceedings of DH23 “Collaboration as Opportunity”</hi>
+                        <hi style="font-size:11pt" xml:space="preserve">. DOI: </hi>
+                        <ref target="https://doi.org/10.5281/zenodo.8107836">
+                            <hi rend="color(1155CC)" style="font-size:11pt">10.5281/zenodo.8107836</hi>
+                        </ref>
+                        <hi style="font-size:11pt">.</hi>
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi style="font-size:11pt">Börner, Ingo / Trilcke, Peer (2023): CLS INFRA D7.1 On Programmable Corpora (v1.0.0). Zenodo. DOI:</hi>
+                        <ref target="https://doi.org/10.5281/zenodo.7664964" xml:space="preserve"> </ref>
+                        <ref target="https://doi.org/10.5281/zenodo.7664964">
+                            <hi rend="color(1155CC)" style="font-size:11pt">10.5281/zenodo.7664964</hi>
+                        </ref>
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi style="font-size:11pt">Börner, Ingo / Trilcke, Peer (2024): CLS INFRA D7.3 On Versioning Living and Programmable Corpora (v1.0.0). Zenodo. DOI:</hi>
+                        <ref target="https://doi.org/10.5281/zenodo.11081934" xml:space="preserve"> </ref>
+                        <ref target="https://doi.org/10.5281/zenodo.11081934">
+                            <hi rend="color(1155CC)" style="font-size:11pt">10.5281/zenodo.11081934</hi>
+                        </ref>
+                        <hi rend="underline color(1155CC)" style="font-size:11pt">.</hi>
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi style="font-size:11pt" xml:space="preserve">Breuer, Constanze / Trilcke, Peer (2021): Expanding academic publishing practices alongside the digital turn. Ed. by the »Scientific practice« working group of the Priority Initiative »Digital Information« by the Alliance of Science Organisations. DOI: </hi>
+                        <ref target="https://doi.org/10.48440/allianzoa.041">10.48440/allianzoa.042</ref>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:11pt" xml:space="preserve">Edmond, Jennifer / Fischer, Frank / Romary, Laurent / Tasovac, Toma (2019): “Springing the Floor for a Different Kind of Dance: Building DARIAH as a Twenty-First-Century Research Infrastructure for the Arts and Humanities”, in: Edmond, Jennifer (ed.): </hi>
+                        <hi rend="italic" style="font-size:11pt">Digital Technology and the Practices of Humanities Research.</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> Cambridge, UK: Open Book Publishers 2020, pp. 207–234. DOI: </hi>
+                        <ref target="https://doi.org/10.11647/OBP.0192.09">
+                            <hi rend="color(1155CC)" style="font-size:11pt">10.11647/OBP.0192.09</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:11pt" xml:space="preserve">Fischer, Frank / Börner, Ingo / Göbel, Mathias / Hechtl, Angelika / Kittel, Christopher / Milling, Carsten / Trilcke, Peer (2019): “Programmable Corpora: Introducing DraCor, an Infrastructure for the Research on European Drama”, in: </hi>
+                        <hi rend="italic" style="font-size:11pt">Proceedings of DH2019: "Complexities"</hi>
+                        <hi style="font-size:11pt" xml:space="preserve">, Utrecht. DOI: </hi>
+                        <ref target="https://doi.org/10.5281/zenodo.4284002">
+                            <hi rend="color(1155CC)" style="font-size:11pt">10.5281/zenodo.4284002</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:11pt" xml:space="preserve">Gabriel, Ann / Capone, Rebecca (2011): "Executable Paper Grand Challenge Workshop", in: </hi>
+                        <hi rend="italic" style="font-size:11pt">Procedia Computer Science</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> 4: 577–78. DOI: </hi>
+                        <ref target="https://doi.org/10.1016/j.procs.2011.04.060">
+                            <hi rend="color(1155CC)" style="font-size:11pt">10.1016/j.procs.2011.04.060</hi>
+                        </ref>
+                        <hi style="font-size:11pt">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:11pt" xml:space="preserve">Kestemont, Mike / Karsdorp, Folgert / de Bruijn, Elisabeth / Driscoll, Matthew / Kapitan, Katarzyna A. / Ó Macháin, Pádraig / Sawyer, Daniel / Sleiderink, Remco / Chao, Anne (2022): “Forgotten books: The application of unseen species models to the survival of culture”. In </hi>
+                        <hi rend="italic" style="font-size:11pt" xml:space="preserve">Science </hi>
+                        <hi style="font-size:11pt" xml:space="preserve">375, pp. 765-769. DOI: </hi>
+                        <ref target="https://doi.org/10.1126/science.abl7655">
+                            <hi rend="color(1155CC)" style="font-size:11pt">10.1126/science.abl7655</hi>
+                        </ref>
+                        <hi rend="underline color(1155CC)" style="font-size:11pt">. </hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:11pt" xml:space="preserve">Somers, James (2018): “The Scientific Paper Is Obsolete. Here’s What’s Next.”, in: </hi>
+                        <hi rend="italic" style="font-size:11pt">The Atlantic</hi>
+                        <hi style="font-size:11pt" xml:space="preserve">, 5 April. </hi>
+                        <ref target="https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/">
+                            <hi rend="color(1155CC)" style="font-size:11pt">https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/</hi>
+                        </ref>
+                        <hi style="font-size:11pt" xml:space="preserve"> [22/04/2025]</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:11pt" xml:space="preserve">Walkowski, Niels-Oliver / Burghardt, Manuel (2022). "Executable Papers in den Computational Humanities - Von technischen Herausforderungen und erkenntnistheoretischen Mehrwerten", in </hi>
+                        <hi rend="italic" style="font-size:11pt">DHd 2022 Kulturen des digitalen Gedächtnisses. Book of Abstracts</hi>
+                        <hi style="font-size:11pt" xml:space="preserve">. Potsdam. DOI: </hi>
+                        <ref target="https://doi.org/10.5281/zenodo.6328213">
+                            <hi rend="color(1155CC)" style="font-size:11pt">10.5281/zenodo.6328213</hi>
+                        </ref>
+                    </bibl>
+                    <bibl style="text-align: justify;">
+                        <hi style="font-size:11pt" xml:space="preserve">Trilcke, Peer / Ustinova, Evgeniya / Börner, Ingo / Fischer, Frank / Milling, Carsten (2024): "Detecting Small Worlds in a Corpus of Thousands of Theater Plays", in: Andresen, Melanie / Reiter, Nils (eds.): </hi>
+                        <hi rend="italic" style="font-size:11pt">Computational Drama Analysis: Reflecting on Methods and Interpretations</hi>
+                        <hi style="font-size:11pt">, Berlin, Boston: De Gruyter, pp. 7-34. DOI:</hi>
+                        <ref target="https://doi.org/10.1515/9783111071824-002" xml:space="preserve"> </ref>
+                        <ref target="https://doi.org/10.1515/9783111071824-002">
+                            <hi rend="color(1155CC)" style="font-size:11pt">10.1515/9783111071824-002</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:11pt" xml:space="preserve">Watts, Duncan J. / Strogatz, Steven H. (1998): “Collective Dynamics of ‘Small-World’ Networks.”, in: </hi>
+                        <hi rend="italic" style="font-size:11pt">Nature</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> 393.6684, pp. 440–442. DOI: </hi>
+                        <ref target="https://doi.org/10.1038/30918">
+                            <hi rend="color(1155CC)" style="font-size:11pt">10.1038/30918</hi>
+                        </ref>
+                        <hi style="font-size:11pt">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:11pt" xml:space="preserve">Watts, Duncan J. (1999). </hi>
+                        <hi rend="italic" style="font-size:11pt">Small Worlds: The Dynamics of Networks Between Order and Randomness</hi>
+                        <hi style="font-size:11pt">. Princeton.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:11pt" xml:space="preserve">Wilkinson, Mark D. / Dumontier, Michel / Aalbersberg, IJsbrand Jan / Appleton, Gabrielle / Axton, Myles / Baak, Arie / Blomberg, Niklas / Boiten, Jan-Willem / Bonino da Silva Santos, Luiz / Bourne, Philip E. / Bouwman, Jildau / Brookes, Anthony J. / Clark, Tim / Crosas, Mercè / Dillo, Ingrid / Dumon, Olivier / Edmunds, Scott / Evelo, Chris T. / Finkers, Richard / Gonzalez-Beltran, Alejandra / Gray, Alasdair J.G. / Groth, Paul / Goble, Carole / Grethe, Jeffrey S. / Heringa, Jaap / ’t Hoen, Peter A.C / Hooft, Rob / Kuhn, Tobias / Kok, Ruben / Kok, Joost / Lusher, Scott J. / Martone, Maryann E. / Mons, Albert / Packer, Abel L. / Persson, Bengt / Rocca-Serra, Philippe / Roos, Marco / van Schaik, Rene / Sansone, Susanna-Assunta / Schultes, Erik / Sengstag, Thierry / Slater, Ted / Strawn, George / Swertz, Morris A. / Thompson, Mark / van der Lei, Johan / van Mulligen, Erik / Velterop, Jan / Waagmeester, Andra / Wittenburg, Peter / Wolstencroft, Katherine / Zhao, Jun / Mons, Barend (2016) “The FAIR Guiding Principles for scientific data management and stewardship”, in </hi>
+                        <hi rend="italic" style="font-size:11pt">Sci Data</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> 3, 160018. DOI: </hi>
+                        <ref target="https://doi.org/10.1038/sdata.2016.18">
+                            <hi rend="color(1155CC)" style="font-size:11pt">10.1038/sdata.2016.18</hi>
+                        </ref>
+                        <hi style="font-size:11pt">.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

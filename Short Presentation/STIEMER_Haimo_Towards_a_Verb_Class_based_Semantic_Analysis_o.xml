@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="STIEMER_Haimo_Towards_a_Verb_Class_based_Semantic_Analysis_o">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Towards a Verb Class-based Semantic Analysis of German Literary Texts</title>
+                <author>
+                    <persName>
+                        <surname>Hatzel</surname>
+                        <forename>Hans Ole</forename>
+                    </persName>
+                    <affiliation>Universität Hamburg</affiliation>
+                    <email>hans.ole.hatzel@uni-hamburg.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Stiemer</surname>
+                        <forename>Haimo</forename>
+                    </persName>
+                    <affiliation>Technical University of Darmstadt, Germany</affiliation>
+                    <email>stiemer@linglit.tu-darmstadt.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Biemann</surname>
+                        <forename>Chris</forename>
+                    </persName>
+                    <affiliation>Universität Hamburg</affiliation>
+                    <email>chris.biemann@uni-hamburg.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Gius</surname>
+                        <forename>Evelyn</forename>
+                    </persName>
+                    <affiliation>Technical University of Darmstadt, Germany</affiliation>
+                    <email>evelyn.gius@tu-darmstadt.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-28T14:15:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>verb classes</term>
+                    <term>events</term>
+                    <term>computational literary studies</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>semantic analysis</term>
+                    <term>Informatics</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Analyzing themes in literary texts is a challenge in traditional and computational literary studies. Traditional approaches to thematic structures, such as "Stoff" (roughly: plot material) or "Motiv" (motif), as discussed by Frenzel (1980) and Daemmrich &amp; Daemmrich (1995), focus on conventionalized themes and lack modern methodological rigor. Topic modeling in computational approaches, on the other hand, does not provide a general thematic structure and is therefore heavily interpretation-dependent. Therefore, we explore the use of semantic verb classes to create thematic profiles of literary texts. Although resources such as BookNLP (Bamman 2021), which incorporate semantic role labeling (SRL), are available for English, an equivalent implementation for German semantic analysis is still lacking. While projects like GermaNet provide valuable semantic networks for the German language, their integration into SRL frameworks remains an open challenge. Developing tools analogous to BookNLP from scratch requires extensive annotated corpora and carefully calibrated linguistic resources. Accordingly, we build on GermaNet (Hamp &amp; Feldweg, 1997) for developing a classification of verbs into semantic classes for thematic analysis. GermaNet,, inspired by WordNet (Fellbaum, 1998), categorizes verbs into 15 broad semantic fields derived from Levin’s taxonomy (Levin, 1993). These fields are abstract, avoiding the sparse coverage issues seen in fine-grained lexicons like FrameNet (Ruppenhofer et al., 2016) or GermaNets own synsets. Instead, broad categories like "Körperfunktion" (verbs of the body) and "Schöpfung" (verbs of creation) allow for coarse-grained thematic analysis.</p>
+            <p rend="heading 5">1. Annotation of Semantic Verb Classes</p>
+            <p>We conducted manual annotations of the EvENT-Korpus (Vauth &amp; Gius 2022), relying on a GermaNet web interface to explore existing word-sense annotations.. Based on the definitions provided by GermaNet, literary studies students classified verbs in verbal phrases according to their main verb while excluding modal verbs. This resulted in 10,547 annotations (cf. Table 1).</p>
+            <figure>
+                <graphic n="1001" width="11.403541666666667cm" height="8.21075cm" url="/tmp/tmpeq5lp0j9/Pictures/cb7f895c1b3fcba75cb983e8ee833562.jpg" rend="inline"/>
+            </figure>
+            <p>Table 1: Occurrences of Verb Classes.</p>
+            <p>Cohen’s Kappa scores average 0.59 across the analyzed texts, indicating what is widely considered moderate agreement (cf. Table 2). However, the scores vary significantly across texts, potentially reflecting the strong influence of context on semantic interpretation in literary texts. For example, “Die Verwandlung” (Kafka) and “Die Judenbuche” (Droste-Hülshoff) achieve scores above 0.6, while “Der blonde Eckbert” (Tieck) scores only 0.33 (due to a single annotator’s outlier ratings).</p>
+            <p>We observe a wide range in agreement scores across verb classes, also possibly indicating variations in the difficulty of their annotations. For instance, "Verbrauch" (verbs of consumption) achieves near-perfect agreement, while "Konkurrenz" (verbs of competition) often overlappes with "Kommunikation" (verbs of communication) or "Lokation" (verbs of location). Additionally, the verb class "Allgemein" (stative verbs) dominates the dataset, accounting for 25% of the 10,547 annotations. This prevalence raises questions about whether "Allgemein" functions as a catch-all for ambiguous cases instead of being a specified class.</p>
+            <figure>
+                <graphic n="1002" width="16.015097222222224cm" height="4.312708333333333cm" url="/tmp/tmpeq5lp0j9/Pictures/cb7f895c1b3fcba75cb983e8ee833562.jpg" rend="inline"/>
+            </figure>
+            <p style="text-align: left;">Table 2: Annotations and agreement scores.</p>
+            <p rend="heading 5">2. Semantic Verb Classes for Text Analysis</p>
+            <p>For the semantic exploration, we generated radar plots illustrating the ratio of verb class occurrences in each text relative to the expected occurrence of each class, accounting for both their global frequency and the text length (cf. Fig. 1). The text-specific representation of the verb classes reveals distinct thematic profiles in at least four of the five texts. "Das Erdbeben in Chili" (Kleist) prominently features "Naturphänomen" (verbs of natural phenomena), reflecting its focus on natural disasters. Meanwhile, Kafka’s "Die Verwandlung" exhibits a more generic profile, and "Die Judenbuche" shows limited thematic distinctions, likely due to the relative class frequencies evening out over the longer text. Shorter texts allow rare classes, such as "Konkurrenz" (verbs of competition), to stand out, whereas longer texts emphasize common categories such as "Allgemein" (stative verbs) and "Kognition" (verbs of cognition).</p>
+            <figure>
+                <graphic n="1003" width="16.002cm" height="8.665986111111112cm" url="/tmp/tmpeq5lp0j9/Pictures/cb7f895c1b3fcba75cb983e8ee833562.jpg" rend="inline"/>
+            </figure>
+            <p>Figure 1: The comparative frequency of verb classes in our analyzed texts. Note that the radial axis is on a logarithmic scale.</p>
+            <p>We further analyzed the relationship between semantic classes and event types, following the framework proposed by Vauth et al. (2021), in which events are categorized into non-events, stative events, process events, and changes of state based on their narrativity. Our analysis revealed that specific verb classes strongly correlate with particular event types. For instance, "Kommunikation" (verbs of communication) predominantly represents process events (89%), whereas "Naturphänomen" (verbs of natural phenomena) is primarily associated with stative events (64%).</p>
+            <p rend="heading 5">3. Next Steps</p>
+            <p>For the automation of this approach, we experimented with retrieval-augmented generation based on Llama-3 and achieved promising results with an accuracy of 91%, about on par with human annotators. For an exploration of the potential of our approach for literary analysis of bigger corpora, we are currently working on a comparative corpus study of German Modernism.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi style="font-size:11pt">Bamman. D. (2021). BookNLP. https://github.com/booknlp/booknlp.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:11pt" xml:space="preserve">Daemmrich, H. S., &amp; Daemmrich, I. G. (1995). </hi>
+                        <hi rend="italic" style="font-size:11pt">Themen und Motive in der Literatur. Ein Handbuch</hi>
+                        <hi style="font-size:11pt">. Francke.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:11pt" xml:space="preserve">Fellbaum, C. (1998). </hi>
+                        <hi rend="italic" style="font-size:11pt">WordNet: An Electronic Lexical Database</hi>
+                        <hi style="font-size:11pt">. MIT Press.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:11pt" xml:space="preserve">Frenzel, E. (1980). </hi>
+                        <hi rend="italic" style="font-size:11pt">Motive der Weltliteratur: Ein Lexikon dichtungsgeschichtlicher Längsschnitte</hi>
+                        <hi style="font-size:11pt">. Kröner.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:11pt">Hamp, B., &amp; Feldweg, H. (1997). GermaNet – A Lexical-Semantic Net for German.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:11pt" xml:space="preserve">Levin, B. (1993). </hi>
+                        <hi rend="italic" style="font-size:11pt">English Verb Classes and Alternations: A Preliminary Investigation</hi>
+                        <hi style="font-size:11pt">. University of Chicago Press.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:11pt" xml:space="preserve">Vauth, M., Hatzel, H.O., Gius, E. &amp; Biemann, C. (2021). “Automated Event Annotation in Literary Texts.” In </hi>
+                        <hi rend="italic" style="font-size:11pt">CHR 2021: Computational Humanities Research Conference</hi>
+                        <hi style="font-size:11pt">, 2989:333–45. CEUR Workshop Proceedings. Amsterdam, The Netherlands.</hi>
+                        <ref target="http://ceur-ws.org/Vol-2989/short_paper18.pdf">
+                            <hi style="font-size:11pt">http://ceur-ws.org/Vol-2989/short_paper18.pdf</hi>
+                        </ref>
+                        <hi style="font-size:11pt">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:11pt" xml:space="preserve">Vauth, M. &amp; Gius, E. (2022). “Event Annotations of Prose.” </hi>
+                        <hi rend="italic" style="font-size:11pt">Journal of Open Humanities Data</hi>
+                        <hi style="font-size:11pt" xml:space="preserve"> 8: 19.</hi>
+                        <ref target="https://doi.org/10.5334/johd.83">
+                            <hi style="font-size:11pt">https://doi.org/10.5334/johd.83</hi>
+                        </ref>
+                        <hi style="font-size:11pt">.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

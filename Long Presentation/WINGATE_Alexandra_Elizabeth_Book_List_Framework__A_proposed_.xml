@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="WINGATE_Alexandra_Elizabeth_Book_List_Framework__A_proposed_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Book List Framework: A proposed data structure standard for book lists</title>
+                <author>
+                    <persName>
+                        <surname>Wingate</surname>
+                        <forename>Alexandra Elizabeth</forename>
+                    </persName>
+                    <affiliation>Indiana University Bloomington, United States of America</affiliation>
+                    <email>alewinga@iu.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Escrivà Llorca</surname>
+                        <forename>Ferran</forename>
+                    </persName>
+                    <affiliation>Universitat de València, Spain</affiliation>
+                    <email>ferran.escriva-llorca@uv.es</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-23T16:38:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>book history</term>
+                    <term>book lists</term>
+                    <term>FRBR</term>
+                    <term>data model</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data modeling</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>digital libraries creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>Book and print history</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">Printed or manuscript book lists constitute valuable primary sources for book history (Bennassar 1984; Dedieu 1997; Jagersma et al. 2023). Examples include post-mortem inventories, lists of books involved in a trade dispute, inventories of printers’ warehouses, and auction catalogs, among others. Using these book lists, book historians investigate what books were circulating in a given time and place by identifying the books described (e.g., author, work, publication information). However, despite significant work with book lists by many scholars since the beginning of the 20
+                    <hi rend="superscript">th</hi> century, it remains difficult to build upon each other’s research. Jagersma et al. (2023) argue it is an essential task “to gather hard-to-find publications and sources and provide access to them” (p. 14)—through digitization and digital humanities projects—to facilitate comparative approaches if research involving book lists is to move forward. Unlike aggregations of bibliographic metadata in national library catalogs and online short title catalogs to which large-scale methods like bibliographic data science can be applied, book list data is spread among a constellation of isolated publications and projects (Lahti et al. 2019). 
+                </p>
+                <p style="text-align: left; ">We argue a shared basic data structure for book list research is the solution to connecting individual scholars’ efforts and making both the transcribed sources and book identification data accessible, reusable, and interoperable. We propose the Book List Framework (BLF) as a potential generic framework and discuss two case studies using the BLF to show how it functions and could promote the necessary “gathering” of book list data constructing book historical knowledge from a more diverse, comprehensive source base.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Current dissemination of book list data</head>
+                <p style="text-align: left; ">At present, neither traditional publishing book list data nor existing databases of book lists satisfactorily encourage exploration, interoperability, and reuse of data. The conventional manner of publishing inventories in journals or books does not permit easy exploration because researchers cannot easily search, filter, or sort the data, and reuse requires significant labor (e.g., scanning, correcting OCR, re-entering or cleaning data). Published studies also tend to be individualized in their inclusion and presentation of transcription and bibliographic data (Dedieu 1997). </p>
+                <p style="text-align: left; ">Current book list databases solve the exploration problem. Examples include Private Libraries in Renaissance England (PLRE), French Book Trade in Enlightenment Europe (FBTEE), Measuring Enlightenment: Disseminating Ideas, Authors and Texts in Europe, 1665-1830 (MEDIATE), KOBINO, and Inventarios y Bibliotecas del Siglo de Oro (IBSO). However, these databases do not necessarily present both the transcription data and the book identification data, and their data is generally not downloadable. Of the live databases, FBTEE is the only one to provide download access to their data.</p>
+                <list type="unordered">
+                    <item>PLRE preserves both the transcription data and bibliographic metadata of 429 book lists, but navigation is difficult (PLRE n.d.). </item>
+                    <item>KOBINO, publishes 123 book lists from colonial New Spain but does not preserve the transcriptions even if the bibliographic metadata is nicely navigable (García Aguilar / Campillo Pardo, 2023; KOBINO n.d.). </item>
+                    <item>IBSO aggregates 43 early modern Spanish book inventories previously published by scholars and preserves both transcriptions and metadata (BIDISO n.d.). </item>
+                    <item>MEDIATE is currently being constructed but will contain at least 600 European private library sales catalogs. The “sandbox” database provides access to both transcriptions and bibliographic metadata (MEDIATE n.d.).</item>
+                    <item>FBTEE provides sophisticated access to metadata about the books sold by the Société Typographique de Neuchâtel, though it does not reproduce its sources (Burrows / Hiribarren 2014). </item>
+                </list>
+                <p style="text-align: left; ">These five databases also differ in their structure, which has implications for interoperability and reuse. The differences in structure partially correlate with differing source bases and interests, but MEDIATE and FBTEE are in fact interoperable because they utilize Functional Requirements for Bibliographic Records (FRBR) to model their bibliographic metadata (Montoya 2023). FRBR is a standard developed by the International Federation of Library Associations and Institutions (IFLA) for creating bibliographic metadata that reflect different types of bibliographic entities and the relations between them, and that also support user tasks in accessing and understanding said metadata (e.g., the relation of a work to a specific edition) (IFLA 1998; Tillett 2005; Dickey 2008). FRBR was consolidated in 2017 with Functional Requirements for Authority Data (FRAD), and Functional Requirements for Subject Authority Data (FRSAD) to form the Library Reference Model (LRM) (Riva et al. 2017: 5). FRBR (and its continuation in LRM) is particularly useful and important for book identification data because it allows scholars to precisely define, relate, and aggregate individual items, editions, and works, and it is aligned with other data standards like CIDOC CRM and FaBiO (Burrows 2015; Burrows / Nurmikko-Fuller 2020).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Proposed Book List Framework (BLF) structure</head>
+                <p style="text-align: left; ">Given these aspects of traditional publishing and existing digital humanities projects, we propose BLF as a generic structure for adoption by future book list databases that includes both the transcribed sources and the identifying bibliographic data. Figure 1 shows a basic structure consisting of two lines of connected entities, one representing the transcribed document and one representing the bibliographic metadata of the item described. The transcribed document line contains the Case, Document (book list), and Entry. Individual documents are composed of one or more entries, and a case may contain one or more documents (e.g., a court case containing a post-mortem inventory book list and an auction book list). The bibliographic metadata line uses FRBR/LRM’s structure by containing Work, Expression, Manifestation, and Item (WEMI), which means there is potential for integration with databases like FBTEE and MEDIATE.<ref n="1" target="ftn1"/> However, Item is the only required entity. This permits the structure to deal with the fact that items are not always identifiable to a specific work or edition.
+                </p>
+                <figure>
+                    <graphic n="1001" width="16.51cm" height="10.27233888888889cm" url="/tmp/tmpngrh2phy/Pictures/a6d486d5f7f22d7aea48b820eea7124c.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 1. Entity relationship diagram of BLF</p>
+                <p style="text-align: left; ">These two lines connect through a “description event.” The event handles complex relationships between descriptions and items that have already surfaced in the tested data, such as a single entry describing more than one item or the same item being described by entries in different documents. Simon Burrows (2015) has advocated for an event-based structure for bibliographic databases of the book trade and ownership in order to track event series over books’ lifetimes.<ref n="2" target="ftn2"/>
+                </p>
+                <p style="text-align: left; ">Two projects are currently testing the BLF: Libros en Navarra | Books in Navarre (LN|BN) and Valencian Music Books (VMB). LN|BN documents books sold and owned in 16th- and 17th-century Navarre, Spain and currently contains 40 book lists representing 4,248 entries describing 4,488 items. It will eventually contain at least 190 booklists representing about 15,000 entries. VMB currently consists of 41 inventories, ranging from 1413 to 1641 and focusing on the historical Kingdom of Valencia. It focuses specifically on music books (print and manuscript plainchant, polyphony, instrumental music, and liturgical and educational materials). While both databases are about Spanish book lists and utilize the Heurist open-source relational database platform, the structure is sufficiently generic to be transferable to other geographic and temporal contexts and other technical infrastructures.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p style="text-align: left; ">The presentation will comprise the challenges of book list data discussed above, a more in-depth discussion of the proposed database structure, the implementation of the BLF in our individual projects, and remaining challenges and limitations. A generic structure for publishing book list data is ultimately needed to overcome the shortcomings of current publishing practices, ensure book historians’ digital efforts are minimally interoperable, and foster aggregated analyses of one of book history’s most important sources. Without it, book historians will continue to fall short of the comparative, comprehensive analyses we seek.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                         FRBR is more well known than LRM in book history, hence the continued reference to it here despite the update to LRM. In the actual implementation of the databases discussed below in Heurist and our documentation, IFLA's LRM documentation and definitions are used so that if it is necessary or desired at a future point, FRAD and FRSAD entities and relationships could be integrated. However, the primary definitions and relationships between Work, Expression, Manifestation, and Item are similar enough between FRBR and LRM.
+                    </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                         FBTEE (of which Burrows is the project leader) has an event-based structure (Burrows 2015).
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Bennassar, Bartolome </hi>(1984): “Los inventarios post-mortem y la historia de las mentalidades”, in: Eiras Roel, Antonio (ed.): 
+                        <hi rend="italic">Actas del II coloquio de metodología histórica aplicada: la documentación notarial y la historia</hi>. Salamanca: Universidad de Santiago de Compostela 139–46.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">BIDISO </hi>(n.d.): “Inventarios”, in: 
+                        <hi rend="italic">IBSO: Inventarios y Bibliotecas del Siglo de Oro</hi>. &lt;https://www.bidiso.es/IBSO/ListarInventarios.do&gt; [23.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Burrows, Simon </hi>(2015): “Locating the Minister’s Looted Books: From Provenance and Library History to the Digital Reconstruction of Print Culture”, in: 
+                        <hi rend="italic">Library &amp; Information History</hi> 31, 1: 1–17. DOI: 10.1179/1758348914Z.00000000071.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Burrows, Simon / Hiribarren, Vincent </hi>(2014): “FBTEE: The French Book Trade in Enlightenment Europe | Mapping the Trade of the Société Typographique de Neuchâtel, 1769-1794”, in: 
+                        <hi rend="italic">FBTEE</hi>. &lt;http://fbtee.uws.edu.au/main/&gt; [23.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Burrows, Simon / Nurmikko-Fuller, Terhi </hi>(2020): “Charting Cultural History through Historical Bibliometric Research: Methods; Concepts; Challenges; Results”, in: Schuster, Kristin / Dunn, Stuart (eds.): 
+                        <hi rend="italic">Routledge International Handbook of Research Methods in Digital Humanities</hi>. Abingdon: Routledge 109–24. DOI: 10.4324/9780429777028-9.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Dedieu, Jean-Pierre </hi>(1997): “El sistema nicanto”, in: 
+                        <hi rend="italic">Bulletin Hispanique</hi> 99, 1: 325–36.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Dickey, Timothy J. </hi>(2008): “FRBRization of a Library Catalog: Better Collocation of Records, Leading to Enhanced Search, Retrieval, and Display”, in 
+                        <hi rend="italic">Information Technology &amp; Libraries</hi> 27, 1: 23–32.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">García Aguilar, Idalia / Campillo Pardo, Alberto José </hi>(2023): “Private Libraries in New Spain: A Project in Progress”, in: Jagersma, Rindert / Blom, Helwi / Chayes, Evelien / Hansen, Ann-Marie (eds.): 
+                        <hi rend="italic">Private Libraries and Their Documentation, 1665–1830</hi>. Leiden: Brill, 225–45. DOI: 10.1163/9789004542969_012.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">IFLA Study Group on the Functional Requirements for Bibliographic Records </hi>(1998): 
+                        <hi rend="italic">Functional Requirements for Bibliographic Records</hi>. Munich: K.G.Saur Verlag GmbH &amp; Co. KG. &lt;https://repository.ifla.org/handle/20.500.14598/830&gt; [04.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Jagersma, Rindert / Blom, Helwi / Hansen, Ann-Marie </hi>(2023): “Goldmines or Minefields? Private Libraries and Their Documentation (1665–1830)”, in: Jagersma, Rindert / Blom, Helwi / Chayes, Evelien / Hansen, Ann-Marie (eds.): 
+                        <hi rend="italic">Private Libraries and Their Documentation, 1665–1830</hi>. Leiden: Brill 1–17. DOI: 10.1163/9789004542969_002.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">KOBINO </hi>(n.d.): “Catálogo Digital”, in: 
+                        <hi rend="italic">KOBINO: Circulación de libros en la Nueva España catalog</hi>. &lt;https://libant.kohasxvi.mx/cgi-bin/koha/opac-library.pl&gt; [23.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Lahti, Leo / Marjanen, Jani / Roivainen, Hege / Tolonen, Mikko </hi>(2019): “Bibliographic Data Science and the History of the Book (c. 1500–1800)”, in: 
+                        <hi rend="italic">Cataloging &amp; Classification Quarterly</hi> 57, 1: 5–23. DOI: 10.1080/01639374.2018.1543747.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">MEDIATE </hi>(n.d.): “About This Database”, 
+                        <hi rend="italic">MEDIATE Database</hi>. &lt;https://mediate-database.cls.ru.nl/about/&gt; [04.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Montoya, Alicia C. </hi>(2023): “Civic Fictions: Modelling Book-Reader Interactions in the Age of Revolution”, in: 
+                        <hi rend="italic">Digital Enlightenment Studies</hi>, 1, 1. DOI: 10.61147/des.7.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">PLRE </hi>(n.d.): “PLRE.Folger”, in: 
+                        <hi rend="italic">Private Libraries in Renaissance England</hi>. &lt;https://plre.folger.edu/project.php&gt; [04.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Riva, Pat / Le Bœuf, Patrick / Žumer, Maja </hi>(2017): 
+                        <hi rend="italic">IFLA Library Reference Model: A Conceptual Model for Bibliographic Information</hi>. Den Haag: IFLA &lt;https://www.ifla.org/wp-content/uploads/2019/05/assets/cataloguing/frbr-lrm/ifla-lrm-august-2017_rev201712.pdf&gt; [14.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Tillett, Barbara </hi>(2005): “What Is FRBR? A Conceptual Model for the Bibliographic Universe”, in: 
+                        <hi rend="italic">The Australian Library Journal</hi> 54, 1: 24–30. DOI: 10.1080/00049670.2005.10721710.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

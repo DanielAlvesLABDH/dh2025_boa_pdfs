@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ALVANIDES_Seraphim_Semi_automated_methods_for_digitising_bom">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Semi/automated methods for digitising bomb damage from historical maps of the 2&lt;sup&gt;nd&lt;/sup&gt; world war</title>
+                <author>
+                    <persName>
+                        <surname>Alvanides</surname>
+                        <forename>S.</forename>
+                    </persName>
+                    <affiliation>Otto-Friedrich-Universität Bamberg, Germany</affiliation>
+                    <email>S.Alvanides@outlook.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Bauch</surname>
+                        <forename>A.</forename>
+                    </persName>
+                    <affiliation>Otto-Friedrich-Universität Bamberg, Germany</affiliation>
+                    <email>anastasia.bauch@uni-bamberg.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Enss</surname>
+                        <forename>C.M.</forename>
+                    </persName>
+                    <affiliation>Otto-Friedrich-Universität Bamberg, Germany</affiliation>
+                    <email>carmen.enss@uni-bamberg.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Stein</surname>
+                        <forename>K.</forename>
+                    </persName>
+                    <affiliation>Otto-Friedrich-Universität Bamberg, Germany</affiliation>
+                    <email>klaus.stein@uni-bamberg.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ludwig</surname>
+                        <forename>C.</forename>
+                    </persName>
+                    <affiliation>Universität des Saarlandes, Germany</affiliation>
+                    <email>carol.ludwig@uni-saarland.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Spatial Humanities</term>
+                    <term>Automated Vectorisation</term>
+                    <term>Bombed Cities</term>
+                    <term>Historical Cartography.</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>digitization (2D &amp; 3D)</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>spatial &amp; spatio-temporal analysis</term>
+                    <term>modeling and visualization</term>
+                    <term>Computer science</term>
+                    <term>Geography and geo-humanities</term>
+                    <term>Central/Eastern European Studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Cities affected by the destructive effects of the Second World War had to undertake a revision of their building stock between 1939 and 1949. City administrations, specialised authorities, associations, companies and private individuals created a wealth of maps that made material and non-material assessments of the buildings or provided information on changes to technical infrastructures, demolition and stabilisation needs or rubble displacement and building material extraction. Such thematic maps emerged in accelerated procedures and specifically in preparation for decisions to demolish or rebuild after the war. As media for guiding urban planning processes, they are now visual sources of the transformation intentions of the time (Elżanowski / Enss, 2022). Our contribution examines methods for capturing spatial information from historical thematic maps for the German cities of Nuremberg 
+                <hi rend="italic">(Nürnberg)</hi> from the 1940s onwards.
+            </p>
+            <p>As one of the most heavily bomb-damaged city in Germany, with its historic city center almost entirely destroyed, Nuremberg provides an excellent example for exploring the use of thematic maps as media for the urban transformation of postwar cities. The proposed short paper covers the depiction of bomb damage through a range of thematic maps from that period. This is achieved by converting features depicted in historic maps into geospatial data that is analysed with a Geographical Information System (GIS). We bring together heterogeneous maps from the war/postwar period, by converting urban features depicted in these maps into geospatial data that can be further analysed within a spatio-temporal analytical framework. This is achieved by assessing methods for semi/automated vectorization of map features on historical maps.</p>
+            <p style="text-align: left; ">We demonstrate three ways of capturing information from historical maps. First, a visual assessment of destruction at the District level of Nuremberg (Ludwing / Alvanides, 2023) is presented briefly. Secondly, the visual assessment is compared to data resulting from the manual vectorization of destruction for individual buildings. Thirdly, a semi-automated method for the vectorization of building footprints in QGIS is presented and the results are compared to the visual inspection and the manual methods. Through the critical presentation of different methods for capturing information from historical maps, this short presentation aims to generate interdisciplinary dialog with scholars working on related topics.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Elżanowski J. / Enss C. M.</hi> (2022): Cartographies of catastrophe: mapping World War II destruction in Germany and Poland, 
+                        <hi rend="italic" xml:space="preserve">Urban History </hi>49(3): 589-611 
+                        <ref target="https://doi.org/10.1017/S0963926820000772" xml:space="preserve">https://doi.org/10.1017/S0963926820000772 </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Ludwig C. / Alvanides S.</hi> (2023): A spatio-temporal analysis of the urban fabric of Nuremberg from the 1940s onwards. 
+                        <hi rend="italic" xml:space="preserve">Urban Planning </hi>8(1): 239-254 
+                        <ref target="https://doi.org/10.17645/up.v8i1.6084">https://doi.org/10.17645/up.v8i1.6084</ref>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

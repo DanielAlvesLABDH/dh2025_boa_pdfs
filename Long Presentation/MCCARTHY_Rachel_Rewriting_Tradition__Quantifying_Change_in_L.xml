@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MCCARTHY_Rachel_Rewriting_Tradition__Quantifying_Change_in_L">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Rewriting Tradition: Quantifying Change in Lady Gregory’s Irish Legends </title>
+                <author>
+                    <persName>
+                        <surname>McCarthy</surname>
+                        <forename>Rachel</forename>
+                    </persName>
+                    <affiliation>University College Cork, Ireland</affiliation>
+                    <email>rachelmccarthy@ucc.ie</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Edirisinghe</surname>
+                        <forename>Rasika</forename>
+                    </persName>
+                    <affiliation>University College Cork, Ireland</affiliation>
+                    <email>rasika.edirisinghe@ucc.ie</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>O'Sullivan</surname>
+                        <forename>James</forename>
+                    </persName>
+                    <affiliation>University College Cork, Ireland</affiliation>
+                    <email>james.osullivan@ucc.ie</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ó Gallchoir</surname>
+                        <forename>Clíona</forename>
+                    </persName>
+                    <affiliation>University College Cork, Ireland</affiliation>
+                    <email>c.gallchoir@ucc.ie</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Minghim</surname>
+                        <forename>Rosane</forename>
+                    </persName>
+                    <affiliation>University College Cork, Ireland</affiliation>
+                    <email>rosane.minghim@ucc.ie</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Murphy</surname>
+                        <forename>Órla</forename>
+                    </persName>
+                    <affiliation>University College Cork, Ireland</affiliation>
+                    <email>o.murphy@ucc.ie</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-28T15:58:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>lady gregory</term>
+                    <term>irish literature</term>
+                    <term>word embeddings</term>
+                    <term>text analysis</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>natural language processing</term>
+                    <term>text mining and analysis</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">This paper investigates how Lady Augusta Gregory reimagined Ireland in her retellings of traditional legends, repurposing them to align with her cultural nationalist perspectives. While commonly understood as English language translations of original Irish language myths, Gregory’s works differ significantly from their predecessors. Using quantitative analyses, this study explores the linguistic, thematic, and ideological divergences between Gregory’s retellings and their traditional counterparts. The results reveal the depth of Gregory’s intervention, highlighting her strategic amplification of gendered narratives, nationalist motifs, and folkloric themes. She consciously reshaped the traditional legends to serve the broader goals of the Irish Literary Revival, which sought to cultivate a unified national identity. This research uses computational methods to offer new insights into the intersections of translation, adaptation, and cultural politics in the context of Irish revivalist literature.</p>
+                <p style="text-align: left; ">Existing scholarship recognises Lady Gregory’s contributions to the Irish Literary Revival and her role in preserving Irish mythology through her collection 
+                    <hi rend="italic" xml:space="preserve">Cuchulain of </hi>
+                    <anchor xml:id="Int_P0nQH4lw"/>
+                    <hi rend="italic">Muirthemne</hi> (Gregory 1903; Bowles 1999; McAteer 2004; Pick 1940). However, critiques often fail to fully quantify the ideological and thematic shifts she introduced into these texts. Previous studies have focused on her literary style, her collaborations with figures such as W.B. Yeats, and her role in fostering Irish nationalism (Matter 2004; Sönmez 2017), but no existing research has employed computational techniques to examine the linguistic and thematic reconfigurations in her adaptations. 
+                </p>
+                <p style="text-align: left; "> This study reveals how Gregory condensed and streamlined the legends to heighten their ideological impact, placing emphasis on female characters, narrowing the gender gap and infusing traditionally male-dominated narratives with feminine perspectives. Gregory’s strategic incorporation of nationalist terms and themes are also quantified and contrasted against the original texts. Finally, this study highlights Gregory’s use of pastoral, idyllic imagery to construct a nostalgic vision of Ireland, reshaping legends into vehicles of cultural and nationalistic cohesion. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methodology</head>
+                <p style="text-align: left; ">To investigate the linguistic, thematic, and emotional shifts in Gregory's retellings, a series of computational methods was employed, focusing on word frequency analysis, sentiment analysis, and word embeddings. The analysis is based on English texts: fourteen stories from Lady Gregory’s 
+                    <hi rend="italic">Cuchulain of Muirthemne</hi> (Gregory 1903), originally written in English, were compared with English translations of the same stories from earlier Irish-language sources (Best et al. 1954–1983; Compert Con Culainn 1956; Cross / Slover 1996; Henderson 2010; Hull,1898; Maelmuiri mac Ceileachair 1905; Meyer 1883–1885; The Harvard Classics c. 1910; Van Hamel 1933). The original Irish texts date from the 9th to the 12th centuries, predating Gregory’s publication by approximately eight-hundred years.
+                </p>
+                <p style="text-align: left; ">The texts were first pre-processed using the NLTK library to remove special characters, punctuation, and numbers, and to normalize the text to a consistent format. Instances of variant spellings, particularly for character and place names, were manually reviewed and normalized to a consistent form across both corpora. After tokenizing the texts, a word frequency analysis was conducted to identify shifts in vocabulary between Gregory’s texts and the original Irish myths (Bird et al. 2009). Frequencies of individual words were compared across the two corpora to detect stylistic differences and areas where Gregory’s retellings deviated from traditional narratives. This analysis highlighted patterns of vocabulary amplification or suppression, revealing thematic and stylistic changes.</p>
+                <p style="text-align: left; ">To assess thematic divergences, thematic keywords related to gender, nationalism, and folklore were identified manually through close reading of both corpora. Normalised frequencies of these keywords were calculated and visualized using comparative bar charts (see Fig. 1), providing insight into how Gregory emphasised or downplayed specific themes. To uncover broader linguistic patterns, a Principal Component Analysis (PCA) was conducted on a Term Frequency–Inverse Document Frequency (TF-IDF) matrix (Pearson 1901; Pedregosa et al. 2011). PCA, a dimensionality reduction technique, highlights the most influential terms contributing to the differences between Gregory’s adaptations (labelled “g_”) from the original legends (labelled “o_”). Scatter plots of the principal components were generated to visualize these divergences (see Fig. 2). </p>
+                <p style="text-align: left; ">Acknowledging the importance of emotional tone in narrative construction, sentiment analysis was incorporated to assess the emotional dimensions of Gregory’s retellings. A pre-trained BERT model was utilized (Abadi et al. 2016; Devlin et al. 2019). This model, known for its ability to capture context and nuances in language, was applied to sentences containing thematic keywords. Sentiment scores for each sentence were aggregated to compare the emotional tones across Gregory’s adaptations and the original myths.</p>
+                <p style="text-align: left; ">To examine shifts in semantic relationships and thematic alignment, a Word2Vec model was trained on each corpus (Mikolov et al. 2013; Řehůřek &amp; Sojka 2011). This method was chosen for its ability to capture semantic relationships beyond mere co-occurrence frequencies. Reference embeddings for each thematic keyword group were calculated by averaging the word vectors, and cosine similarity scores between the reference vectors and the corpus embeddings were computed to assess how well each text aligned with specific themes.</p>
+                <p style="text-align: left; ">Finally, collocation analysis was used to investigate the contextual framing of the thematic keywords. By analysing the words that frequently co-occurred with thematic keywords, this method revealed how Gregory recontextualized traditional themes to align with her cultural and nationalist objectives.</p>
+                <p style="text-align: left; ">Combined, these techniques provide a multidimensional approach to examining Gregory’s writings, and the findings reveal how her adaptations strategically amplified gendered narratives, nationalist motifs, and folkloric elements.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results &amp; Analysis</head>
+                <p style="text-align: left; ">Gregory’s adaptions amplify the presence of gendered language, reflecting her strategic reimagining of female and male roles. Female terms, such as “girl” and “woman” occur ~18% more frequently in Gregory’s texts than in the originals, while male terms increase by ~14% (see Fig. 1). Words like “idle”, “mocking”, and “killed” appear alongside female characters in Gregory’s work, compared to more neutral descriptors in the original texts, such as “fair”, “beautiful” and “proud.” Gregory’s depiction of women leans more towards narrative dynamism, utilising words that describe actions and emotions in addition to beauty. In comparison, the original legends portray women as static figures, emphasising their appearance and social status. Sentiment analysis reveals that Gregory imbues female figures with a mix of emotional complexity and agency, with ~79% of sentiments associated with women being positive, compared to 50% for men. </p>
+                <figure>
+                    <graphic n="1001" width="16.002cm" height="10.00125cm" url="/tmp/tmphbtitvtg/Pictures/244f66772f140eab55d5d1a54f441923.png" rend="inline"/>
+                    <head>Comparative bar chart of normalised word counts of gendered terms in Gregory’s text and original texts</head>
+                </figure>
+                <p style="text-align: left; ">Gregory places a greater focus on the strength and heroic deeds of her male characters, creating the archetype of “strong”, “brave”, and “learned” Irish heroes. The original texts blend personal attributes such as “good” and “handsome” with regional identifiers (“Ulster”, “Erin’s”), resulting in a portrayal that is less vivid or complex in comparison. These interventions reflect Gregory’s intent to balance the traditionally male-dominated narratives with greater representation of women’s voices, aligning with the Irish Literary Revival’s vision of Ireland as both maternal and heroic.</p>
+                <p style="text-align: left; ">The use of folkloric and pastoral imagery in Gregory’s 
+                    <hi rend="italic">Cuchulain of Muirthemne</hi> surpasses that of the original legends by ~74%. Words such as “valley”, “lawn”, “waves”, and “quiet” evoke a romanticised, rural Ireland. PCA results show that Gregory’s narratives cluster around themes of idyllic landscapes and cultural symbolism, contrasting with the originals’ emphasis on conflict and action (see Fig. 2). By linking Irish identity to an idealised rural lifestyle, Gregory sought to create a unifying cultural narrative, emphasising Ireland’s distinctiveness and its connection to a shared, harmonious past. 
+                </p>
+                <p style="text-align: left; ">Sentiment analysis further demonstrates a stronger positive framing of folkloric elements in Gregory’s texts (~64%) compared to the originals (~43%), with fewer negative sentiments being associated with Ireland and the natural world. This strategic romanticisation aligns with her nationalist aims, presenting Ireland as a land worth preserving and fighting for, and one which has a distinct, separate past from British colonisation. </p>
+                <p style="text-align: left; ">Gregory’s works foreground a broad nationalist identity, reducing “Ulster” references, which appear 25 times more frequently in the original texts. Instead, Gregory amplifies terms associated with collective Irishness, such as “Ireland” and “great”, as revealed by PCA and word frequency analysis (see Fig. 2). Nationalist themes in Gregory’s texts increase, with sentiment analysis indicating a markedly positive portrayal of nationalistic terms (~79% positive). However, she expresses twice as many negative sentiments with “Ulster” and its related terms when compared to the original texts as her political biases start to come through. 
+                    <anchor xml:id="Int_92fS2Id7"/>Collocation analyses reveal her usage of terms such as “destroying”, “serve”, and “leaving” with the keyword “Ulster”, a sharp contrast to the original legends which considered Ulster “valiant”, “esteemed”, and “noble”. Her framing aligns with the political climate of the early 20th century, aiming to rally a unified Irish identity against British colonialism. By diminishing regional divisions and emphasizing shared cultural heritage, Gregory’s adaptations serve as a call to collective action and cultural pride.
+                </p>
+                <figure>
+                    <graphic n="1002" width="16.002cm" height="10.34873611111111cm" url="/tmp/tmphbtitvtg/Pictures/244f66772f140eab55d5d1a54f441923.png" rend="inline"/>
+                    <head>PCA Analysis of Gregory’s text and the original texts</head>
+                </figure>
+                <p style="text-align: left; ">Lady Gregory, as a woman writing during a time of significant political upheaval in Ireland - marked by the struggle for Irish independence and the rise of nationalist movements - offers a unique lens through which to explore issues of gender, nationalism, and cultural preservation. By using computational methods to quantify these transformations, this study demonstrates the potential of digital humanities to uncover hidden dimensions of literary adaptation. Additionally, it deepens our understanding of Gregory’s work as a deliberate act of cultural translation, reframing traditional myths to foster gender balance, nationalism, and a romanticised Irish identity. These findings invite broader interdisciplinary discussions about the role of adaptation in nationalist movements and the use of digital tools to analyse cultural texts. </p>
+                <p style="text-align: left; ">Lady Gregory’s 
+                    <hi rend="italic">Cuchulain of Muirthemne</hi> stands as a testament to the power of storytelling in forging cultural identity. By integrating feminist and postcolonial perspectives, the paper contributes to a more inclusive understanding of Irish literary history, advancing methodologies in digital literary studies and opening new avenues for exploring the intersections of gender, nationalism, and folklore in cultural history.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Acknowledgements</head>
+                <p style="text-align: left; ">This research is funded by CASCADE (101119511) a Horizon Europe MSCA Doctoral Network funded by the European Union and UK Research and Innovation (UKRI).</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Best, Richard I. / Bergin, Osborn / O'Brien, Michael A. / O'Sullivan, Anne (1954–1983): 
+                        <hi rend="italic">The Book of Leinster, formerly Lebar na Núachongbála</hi> (Vol. 6, 1138–1161). Dublin: Dublin Institute for Advanced Studies https://www.maryjones.us/ctexts/index_irish.html.
+                    </bibl>
+                    <bibl style="text-align: left; ">Best, Richard I. / Bergin, Osborn / O'Brien, Michael A. / O'Sullivan, Anne (1954–1983): 
+                        <hi rend="italic">The Book of Leinster, formerly Lebar na Núachongbála</hi> (Vol. 6, 1162–1169). Dublin: Dublin Institute for Advanced Studies https://www.maryjones.us/ctexts/index_irish.html.
+                    </bibl>
+                    <bibl style="text-align: left; ">Best, Richard I. / Bergin, Osborn / O'Brien, Michael A. / O'Sullivan, Anne (1954–1983): 
+                        <hi rend="italic" xml:space="preserve">The Book of Leinster, formerly Lebar na Núachongbála </hi>(Vol. 6, 142–206). Dublin: Dublin Institute for Advanced Studies https://www.maryjones.us/ctexts/index_irish.html.
+                    </bibl>
+                    <bibl style="text-align: left; ">Best, Richard I. / Bergin, Osborn / O'Brien, Michael A. / O'Sullivan, Anne (1954–1983): 
+                        <hi rend="italic">The Book of Leinster, formerly Lebar na Núachongbála</hi> (Vol. 6). Dublin: Dublin Institute for Advanced Studies https://www.maryjones.us/ctexts/index_irish.html.
+                    </bibl>
+                    <bibl style="text-align: left; ">Bird, Steven / Klein, Ewan / Loper, Edward (2009): Natural Language Processing with Python: Analyzing Text with the Natural Language Toolkit. Sebastopol, CA: O'Reilly Media.</bibl>
+                    <bibl style="text-align: left; ">Bowles, Noelle (1999): “Nationalism and Feminism in Lady Gregory’s ‘Kincora,’ ‘Dervorgilla,’ and ‘Grania’”, in: 
+                        <hi rend="italic">New Hibernia Review / Iris Éireannach Nua</hi> 3, 3: 116–130 http://www.jstor.org/stable/20557586.
+                    </bibl>
+                    <bibl style="text-align: left; ">Compert Con Culainn and Other Stories (1956): Dublin: Dublin Institute for Advanced Studies https://www.maryjones.us/ctexts/index_irish.html.</bibl>
+                    <bibl style="text-align: left; ">Cross, Tom P. / Slover, Clark H. (1996): “The boyhood deeds of Cu Chulainn”, in: 
+                        <hi rend="italic">Ancient Irish Tales</hi>. New York: Barnes &amp; Noble https://www.maryjones.us/ctexts/index_irish.html.
+                    </bibl>
+                    <bibl style="text-align: left; ">Devlin, Jacob / Chang, Ming-Wei / Lee, Kenton / Toutanova, Kristina (2019): “BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding”, in: arXiv https://arxiv.org/abs/1810.04805.</bibl>
+                    <bibl style="text-align: left; ">Gregory, Lady Augusta (1903): 
+                        <hi rend="italic">Cuchulain of Muirthemne: The Story of the Men of the Red Branch of Ulster</hi> (2nd ed.). New York: Charles Scribner’s Sons.
+                    </bibl>
+                    <bibl style="text-align: left; ">Hull, Eleanor (1898): “The Cuchullin Saga in Irish Literature”, in: 
+                        <hi rend="italic">The Cuchullin Saga in Irish Literature</hi>: 235–249. London: D. Nutt https://books.google.com/books?id=8zRh-BJSDe0C.
+                    </bibl>
+                    <bibl style="text-align: left; ">Maelmuiri mac Ceileachair (1905): “The Sick-Bed of Cúchulainn”, in: Leahy, A. H. (ed.): 
+                        <hi rend="italic">Heroic Romances of Ireland</hi> Vol. 1. London: David Nutt, 57–85 https://www.maryjones.us/ctexts/index_irish.html.
+                    </bibl>
+                    <bibl style="text-align: left; ">Mattar, Sinéad G. (2004): “‘Wage for Each People Her Hand Has Destroyed’: Lady Gregory’s Colonial Nationalism”, in: 
+                        <hi rend="italic">Irish University Review</hi> 34, 1: 49–66. http://www.jstor.org/stable/25504956.
+                    </bibl>
+                    <bibl style="text-align: left; ">McAteer, Michael (2004): “‘Kindness in Your Unkindness’: Lady Gregory and History”, in: Irish University Review 34, 1: 94–108 http://www.jstor.org/stable/25504959.</bibl>
+                    <bibl style="text-align: left; ">Meyer, Kuno (1883–1885): “Anecdota from the Stowe MS. n° 992”, in: 
+                        <hi rend="italic">Revue Celtique</hi> 6: 173–186.
+                    </bibl>
+                    <bibl style="text-align: left; ">Mikolov, Tomas / Chen, Kai / Corrado, Greg / Dean, Jeffrey (2013): “Efficient Estimation of Word Representations in Vector Space”, in: arXiv https://arxiv.org/abs/1301.3781.</bibl>
+                    <bibl style="text-align: left; ">Pearson, Karl (1901): “On Lines and Planes of Closest Fit to Systems of Points in Space”, in: 
+                        <hi rend="italic">The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science</hi> 2, 11: 559–572 https://doi.org/10.1080/14786440109462720.
+                    </bibl>
+                    <bibl style="text-align: left; ">Pedregosa, Fabian / Varoquaux, Gaël / Gramfort, Alexandre / Michel, Vincent / Thirion, Bertrand / Grisel, Olivier / et al. (2011): “Scikit-learn: Machine Learning in Python”, in: Journal of Machine Learning Research 12 (Oct): 2825–2830.</bibl>
+                    <bibl style="text-align: left; ">Pick, Marianne (1940): 
+                        <hi rend="italic">The Work of Lady Gregory: Her Contribution to the Irish Dramatic and Literary Revival.</hi> University of London, Bedford College, United Kingdom.
+                    </bibl>
+                    <bibl style="text-align: left; ">Rehurek, Radim / Sojka, Petr (2011): “Gensim – Python Framework for Vector Space Modelling”, in: NLP Centre, Faculty of Informatics, Masaryk University, Brno, Czech Republic 3, 2.</bibl>
+                    <bibl style="text-align: left; ">Sönmez, Margaret (2017): “Lady Gregory’s Distinct Hand in Two Plays Written with W. B. Yeats: 
+                        <hi rend="italic">Cathleen ni Houlihan and The Unicorn from the Stars”,</hi> in: Erol, Bilge (ed.): 
+                        <hi rend="italic">One Day Lady Gregory</hi> (Irish Writers Series No. 7). Ankara: Hacettepe University, 81–109. 
+                    </bibl>
+                    <bibl style="text-align: left; ">The Harvard Classics (c.1910): 
+                        <hi rend="italic">Epic and Saga</hi> (No. 49). New York: P. F. Collier &amp; Son https://sourcebooks.fordham.edu/source/1100derga.asp.
+                    </bibl>
+                    <bibl style="text-align: left; ">Van Hamel, Anton G. (1933; repr. 1978): “Aided Óenfir Aífe”, in: 
+                        <hi rend="italic">Compert Con Culainn and Other Stories</hi>, Dublin: Dublin Institute for Advanced Studies, 11–15 https://www.maryjones.us/ctexts/index_irish.html.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

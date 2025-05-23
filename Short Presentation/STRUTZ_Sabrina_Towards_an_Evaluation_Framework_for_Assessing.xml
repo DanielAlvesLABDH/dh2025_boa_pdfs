@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="STRUTZ_Sabrina_Towards_an_Evaluation_Framework_for_Assessing">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Towards an Evaluation Framework for Assessing Large Language Models in Text Encoding</title>
+                <author>
+                    <persName>
+                        <surname>Strutz</surname>
+                        <forename>Sabrina</forename>
+                    </persName>
+                    <affiliation>University of Graz, Austria</affiliation>
+                    <email>sabrina.strutz@uni-graz.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Vogeler</surname>
+                        <forename>Georg</forename>
+                    </persName>
+                    <affiliation>University of Graz, Austria</affiliation>
+                    <email>georg.vogeler@uni-graz.at</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-25T15:31:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>LLMs</term>
+                    <term>text encoding</term>
+                    <term>annotation evaluation</term>
+                    <term>digital editions</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>natural language processing</term>
+                    <term>scholarly editing and editions development</term>
+                    <term>analysis</term>
+                    <term>and methods</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: justify;">This contribution proposes a multifaceted evaluation strategy for assessing the performance of Large Language Models (LLMs) in text encoding, focusing on historical correspondence editions. Using the Joseph von Hammer-Purgstall correspondence edition, it explores the challenges of evaluating LLM-generated TEI markup for historical documents. By addressing both deterministic and interpretive evaluation challenges, and by integrating quantitative and qualitative analyses, the evaluation framework aims to establish a comprehensive approach for assessing TEI-encoded letters produced by LLMs.</p>
+            <p style="text-align: justify;">The advent of Large Language Models introduces new possibilities for automating text processing tasks, demonstrating promising results in various NLP tasks, including data annotation (Brown, et al., 2020; Ding, et al., 2020; Gilardi, Alizadeh, &amp; Kubli, 2023; Holter &amp; Ell, 2023; Huang, Kwak, &amp; An, 2023; Kuzman, Mozetič, &amp; Ljubešić, 2023). While these annotation tasks usually focus on contemporary English language data, text encoding in digital edition projects is often complicated by non-contemporary vocabulary and writing conventions, multilingual content, and non-standard orthography found in historical data (McGillivray, 2020). LLMs’ ability to transform unstructured text into structured formats, and their potential to streamline and scale complex tasks, make them a promising avenue for DH practices. Recent experiments suggest these technologies could effectively support the labor-intensive annotation phase in digital edition projects (Czieml, et al., 2024; Pollin, 2024; Scholger, Strutz, &amp; Pollin, 2024), requiring detailed structural and semantic encoding in alignment with predefined rules and DH standards such as the TEI Guidelines. </p>
+            <p style="text-align: justify;">To contribute to the ongoing discourse on the feasibility, potential benefits, and limitations of LLM-based processes, systematic testing and evaluation of these technologies within DH scenarios is essential. Traditional benchmarking of LLMs is often limited in scope, focusing primarily on contemporary English texts and overlooking the unique challenges presented by historical documents. The scarcity of comprehensive research addressing the integration of LLMs into annotation workflows of DH projects, coupled with the lack of a well-defined evaluation strategy specifically tailored to the needs of digital editions, highlights a significant gap in the current literature. </p>
+            <p style="text-align: justify;">This paper seeks to address this gap by exploring the integration of Large Language Models into the annotation process of digital correspondence editions, using the historical and multilingual correspondence of Joseph von Hammer-Purgstall (1774-1856), an Austrian orientalist, historian and diplomat, as a case study. The correspondence consists of more than 8,500 handwritten letters, primarily in German, but also in English, Italian, and French. To date, more than 3,400 letters have been transcribed and edited in multiple MS Word files, with a significant portion already published in a print edition (Höflechner et al., 2021). The project is currently being revised to create a sustainable digital edition that reflects current standards in data storage and presentation. This includes the development of a workflow to convert these letters into TEI XML format through TEI Garage conversions, XSLT transformations, and manual processing steps. A small subset of letters has already been post-edited and used as examples of input-output pairs for preliminary prompting experiments, where the encoding of the letter structure (opener, dateline, closer, paragraph, salutation, signature, and postscript) was assigned to the LLM. Another small subset of refined TEI-encoded letters was used for comparison and initial evaluation approaches. At the time of submission of the paper, experiments were limited to GPT-4, one of the leading proprietary models. As the quality of open-source models is continuously improving, the project aims to extend the research also to open-source models, such as Llama 3.1.</p>
+            <p style="text-align: justify;">Preliminary LLM-assisted annotation approaches in the context of the correspondence edition have highlighted the need for a well-designed evaluation strategy. This requires examining the under-explored area of annotation evaluation in the context of digital editions, where conditions of uncertainty influence empirical claims that often cannot be assessed against absolute truths. The evaluation landscape presents many options, requiring multiple choices: Which metrics are most relevant to our task, and at what point should we begin evaluation during batch processing—immediately after processing a small subset in order to fine-tune our prompt design based on the results? How can we consider LLM-inherent error sources such as biases and hallucinations? Can evaluation rely solely on quantitative methods, or should experts be involved to validate complex cases? Is an adaptive evaluation framework required given multiple valid solutions?</p>
+            <p style="text-align: justify;">The primary objective is therefore to define and categorize a comprehensive taxonomy of evaluation criteria that balances computational metrics with humanities-driven interpretive needs. This taxonomy forms the foundation for a stratified evaluation framework incorporating both "hard", mainly computational metrics (structural validity like well-formedness of XML structure and TEI compliance, precision, recall, F1 scores) and "soft" humanities-driven criteria (semantic adequacy, interpretive consistency) that accommodate interpretive variability in scholarly encoding decisions. Without such a structured approach that acknowledges both technical requirements and scholarly interpretation, evaluation frameworks risk either oversimplifying or overcomplicating the assessment of LLM-generated TEI. The resulting evaluation model thus aims to balance the efficiency of automated assessment with the nuanced judgment of human experts, ensuring that LLM-generated TEI encoding maintains both technical correctness and scholarly value—a critical consideration for the responsible integration of AI into digital humanities practice.</p>
+            <p style="text-align: justify;">The results from applying this stratified evaluation framework to the Hammer-Purgstall correspondence edition are expected to reveal both the capabilities and limitations of current LLMs in scholarly encoding tasks, and to inform best practices for assessing LLMs in digital scholarly editing workflows. Systematically identifying common error patterns, the evaluation process might generate valuable insights for developing more effective prompting strategies and post-processing validation routines, with potential relevance for future AI-supported DH projects.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A., Agarwal, S., Herbert-Voss, A., Krueger, G., Henighan, T., Child, R., Ramesh, A., Ziegler, D. M., Wu, J., Winter, C., Hesse, C., Chen, M., Sigler, E., Litwin, M., Gray, S., Chess, B., Clark, J., Berner, C., McCandlish, S., Radford, A., Sutskever, I., &amp; Amodei, D. (2020, July). </hi>
+                        <hi rend="italic" style="font-size:10pt">Language models are few-shot learners</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">. arXiv. </hi>
+                        <ref target="https://doi.org/10.48550/arXiv.2005.14165">
+                            <hi rend="color(0563C1)" style="font-size:10pt">https://doi.org/10.48550/arXiv.2005.14165</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Czmiel, A., Dumont, S., Fischer, F., Pollin, C., Sahle, P., Schaßan, T., Scholger, M., Vogeler, G., Roeder, T., Fritze, C., &amp; Henny-Krahmer, U. (2024, February 21). Generative KI, LLMs und GPT bei digitalen Editionen. DHd 2024 Quo Vadis DH (DHd2024), Passau, Deutschland. </hi>
+                        <ref target="https://doi.org/10.5281/zenodo.10698210">
+                            <hi rend="color(0563C1)" style="font-size:10pt">https://doi.org/10.5281/zenodo.10698210</hi>
+                        </ref>
+                        <hi style="font-size:10pt"> </hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Ding, B., Qin, C., Liu, L., Chia, Y. K., Joty, S., Li, B., &amp; Bing, L. (2023, June). </hi>
+                        <hi rend="italic" style="font-size:10pt">Is GPT-3 a good data annotator?</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> arXiv. </hi>
+                        <ref target="https://doi.org/10.48550/arXiv.2212.10450">
+                            <hi style="font-size:10pt">https://doi.org/10.48550/arXiv.2212.10450</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Driscoll, M. J., &amp; Pierazzo, E. (Eds.). (2016). </hi>
+                        <hi rend="italic" style="font-size:10pt">Digital Scholarly Editing: Theories and Practices</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (1 ed., Vol. 4). Open Book Publishers. Retrieved September 3, 2023, from </hi>
+                        <ref target="https://www.jstor.org/stable/j.ctt1fzhh6v">
+                            <hi rend="color(0563C1)" style="font-size:10pt">https://www.jstor.org/stable/j.ctt1fzhh6v</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Gilardi, F., Alizadeh, M., &amp; Kubli, M. (2023, July). ChatGPT outperforms crowd workers for text-annotation tasks. </hi>
+                        <hi rend="italic" style="font-size:10pt">Proceedings of the National Academy of Sciences, 120</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">. </hi>
+                        <ref target="https://doi.org/10.1073/pnas.2305016120">
+                            <hi rend="color(0563C1)" style="font-size:10pt">https://doi.org/10.1073/pnas.2305016120</hi>
+                        </ref>
+                        <hi style="font-size:10pt"> </hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Höflechner, W., Wager, A., Koitz.Arko, G., &amp; Kowatch, S. (2021). </hi>
+                        <hi rend="italic" style="font-size:10pt">Joseph von Hammer-Purgstall 1774-1856 : ein altösterreichisches Gelehrtenleben : Eine Annäherung (Vol. 93, Forschungen zur geschichtlichen Landeskunde Steiermark). Graz: ADEVA.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Holter, O. M., &amp; Ell, B. (2023). Human-machine collaborative annotation: A case study with GPT-3. In S. Carvalho, A. F. Khan, A. O. Anić, B. Spahiu, J. Gracia, J. P. McCrae, D. Gromann, B. Heinisch, &amp; A. Salgado (Eds.), </hi>
+                        <hi rend="italic" style="font-size:10pt">Proceedings of the 4th Conference on Language, Data and Knowledge</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (pp. 193-206). NOVA CLUNL.  </hi>
+                        <hi rend="underline color(0563C1)" style="font-size:10pt">https://aclanthology.org/2023.ldk-1.17</hi>
+                        <hi style="font-size:10pt"> </hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Huang, F., Kwak, H., &amp; An, J. (2023, April). Is ChatGPT better than Human Annotators? Potential and Limitations of ChatGPT in Explaining Implicit Hate Speech. </hi>
+                        <hi rend="italic" style="font-size:10pt">Companion Proceedings of the ACM Web Conference 2023</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">, (pp. 294–297). </hi>
+                        <ref target="https://doi.org/10.1145/3543873.3587368">
+                            <hi rend="color(0563C1)" style="font-size:10pt">https://doi.org/10.1145/3543873.3587368</hi>
+                        </ref>
+                        <hi style="font-size:10pt"> </hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Kuzman, T., Mozetič, I., &amp; Ljubešić, N. (2023, March). </hi>
+                        <hi rend="italic" style="font-size:10pt">ChatGPT: Beginning of an End of Manual Linguistic Data Annotation? Use Case of Automatic Genre Identification.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> Tech. rep., arXiv. </hi>
+                        <ref target="https://doi.org/10.48550/arXiv.2303.03953">
+                            <hi rend="color(0563C1)" style="font-size:10pt">https://doi.org/10.48550/arXiv.2303.03953</hi>
+                        </ref>
+                        <hi style="font-size:10pt"> </hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">McGillivray, B., Poibeau, T., &amp; Fabo, P. R. (2020). Digital humanities and natural language processing: "Je t’aime... moi non plus." </hi>
+                        <hi rend="italic" style="font-size:10pt">Digital Humanities Quarterly, 14</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">(2). Retrieved from </hi>
+                        <ref target="https://www.digitalhumanities.org/dhq/vol/14/2/000454/000454.html">
+                            <hi rend="color(0563C1)" style="font-size:10pt">https://www.digitalhumanities.org/dhq/vol/14/2/000454/000454.html</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Pollin, C. (2024). </hi>
+                        <hi rend="italic" style="font-size:10pt">Workshopreihe "Angewandte Generative KI in den (digitalen) Geisteswissenschaften" (v1.1.0)</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">. </hi>
+                        <ref target="https://doi.org/10.5281/zenodo.10647754">
+                            <hi rend="color(0563C1)" style="font-size:10pt">https://doi.org/10.5281/zenodo.10647754</hi>
+                        </ref>
+                        <hi style="font-size:10pt">    </hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Scholger, M., Strutz, S., &amp; Pollin, C. (2024). Empowering Text Encoding with Large Language Models: Benefits and Challenges. Zenodo. </hi>
+                        <ref target="https://doi.org/10.5281/zenodo.13969082">
+                            <hi rend="color(0563C1)" style="font-size:10pt">https://doi.org/10.5281/zenodo.13969082</hi>
+                        </ref>
+                        <hi style="font-size:10pt">  </hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

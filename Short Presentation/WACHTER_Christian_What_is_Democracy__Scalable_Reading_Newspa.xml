@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="WACHTER_Christian_What_is_Democracy__Scalable_Reading_Newspa">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>What is Democracy? Scalable Reading Newspapers of the Weimar Republic</title>
+                <author>
+                    <persName>
+                        <surname>Wachter</surname>
+                        <forename>Christian</forename>
+                    </persName>
+                    <affiliation>Bielefeld University, Germany</affiliation>
+                    <email>christian.wachter@uni-bielefeld.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-08T20:37:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>scalable reading</term>
+                    <term>discourse analysis</term>
+                    <term>newspapers</term>
+                    <term>history</term>
+                    <term>democracy</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>open access methods</term>
+                    <term>semantic analysis</term>
+                    <term>text mining and analysis</term>
+                    <term>History</term>
+                    <term>Humanities computing</term>
+                    <term>Linguistics</term>
+                    <term>Political science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Digital Newspaper Research and Cultural History of Politics of Interwar Germany</head>
+                <p style="text-align: left; ">This paper introduces an ongoing project focused on analyzing newspaper discourses of the Weimar Republic (Wachter 2023a, 2023b). It features a workflow that combines quantitative digital analysis with textual hermeneutics, resulting in a scalable reading approach. This method responds to a critical need in historical research: Traditionally, historians have characterized interwar Germany’s political development through a narrative of crisis. However, this perspective has increasingly been challenged by historians who highlighted the potential for stability and democratic culture. Despite this shift, prodemocratic attitudes within Weimar’s primary opinion-forming medium, newspapers, remain underexplored due to methodological limitations. This is because traditional research methods struggle with the vast volume of newspapers, forcing historians to narrow their focus by region, period, or topic. In contrast, scalable reading enables historians to obtain more extensive, detailed, and nuanced insights into democratic thinking.</p>
+                <p style="text-align: left; ">Scalable reading approaches have been applied to large volumes of newspapers in other historical contexts (e.g., Sung, Sun, and Arnold 2014; Keck, Knabben, and Pado 2020). For example, they concentrate on text reuse, which has also been highlighted as an important avenue for accessing cultural history (Salmi 2024). Other studies examine argument strategies in migration discourse (Oberbichler 2020, Oberbichler and Pfanzelter 2022), providing valuable inspiration for further newspaper discourse analysis. However, these approaches are inadequate for direct application to the Weimar case, where specialized scalable reading workflows for large newspaper volumes have never been applied (Giulia de Paduanis (2023) followed a similar approach in her master's thesis, but conducted only a small-scale analysis): The fragmented press landscape of interwar Germany was characterized by strong opinion journalism, featuring effective strategies of legitimation and delegitimation – also regarding ideas on democracy. In a scalable reading workflow, these strategies must be systematically identified as discourse linguistic characteristics, which has not been done before. Therefore, the ongoing project draws on Theo van Leeuwen’s (2007) analytical differentiation of legitimation strategies that invoke (1) authority (e.g., the constitution), (2) moral evaluation (reinforcing ethical standards), (3) rationalization (defending institutions/measures as reasonable), and (4) mythopoesis (narratives rewarding legitimate actions and punishing non-legitimate ones). These discourse-analytic categories are central to the project’s concept and methodological pipeline.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methodological Critique: Beyond the Text Surface</head>
+                <p style="text-align: left; ">Terms such as “democracy” or “constitution” do not fully capture the underlying meanings and experiences that characterize discourse. Equally important is understanding what remains unsaid and why (Kutter 2017). In this context, searches for key terms and text mining must be supplemented by qualitative selections of relevant newspaper issues, such as those published before and after significant political events like elections. While distant reading is a critical exploratory element in the project, it alone does not suffice for this context sensitivity. Even quantitative analysis of absent terms and phrases proves insufficient within the framework of discourse analysis as conceptualized in this project, as it would merely operate on the text surface, ignoring the discursive findings that lie beneath it (cf. Kergomard 2022). For instance, in an article explicitly criticizing prewar German bureaucracy, we could identify an implicit endorsement of participatory politics for a democratized society.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Pilot Studies</head>
+                <p style="text-align: left; ">To test and refine the scalable reading workflow – not to engage in fully-fledged discourse research – the project will conduct three pilot studies: (1) social-democrat discourse on Constitution Day (the national holiday), (2) the city of Bielefeld’s regional discourse on the murder of Foreign Minister Walter Rathenau, and (3) Berlin’s discourse on the end of the First Portuguese Republic. For these pilot studies, digitized historical newspapers will be accessed through portals such as zeit.punktNRW, digiPress, ZEFYS, the German Newspaper Portal, and Europeana Newspapers. While only a fraction of Weimar era newspapers has been digitized, the issues relevant to the pilot studies are widely available: 31,816 issues in total, minimizing the need to examine non-digitized archival material.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>OCR Cleaning</head>
+                <p style="text-align: left; ">Historical newspapers often suffer from noisy OCR. Various approaches to OCR cleaning have been developed using smaller language models (e.g., Soper, Fujimoto, and Yu 2021; Rakshit, Mehta, and Dasgupta 2023). More recently, large language models have been introduced for this task, often outperforming smaller models with little or no need for finetuning (e.g., Oberbichler 2024; Thomas, Gaizauskas, and Lu 2024). Building on Oberbichler’s (2024) work in this field, Christian Wachter and Patrick Jentsch from Bielefeld University’s Digital History Working Group have developed a method for testing and employing various locally hosted LLMs, utilizing Ollama, to encance the OCR quality of the aforementioned newspaper issues with Python.<ref n="1" target="ftn1"/>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Corpus Compilation through Methodological Triangulation </head>
+                <p style="text-align: left; ">The cleaned issues are to be imported into the annotation and analysis tool CATMA, where they undergo keyword searches. Relevant keywords are derived from research literature, and further terms are identified inductively in later analysis steps, entering new searches in an iterative workflow. Articles thus found become included in the corpus. Complementarily, topic modeling (LDA, with the tool MALLET) supports the exploration of additional relevant articles, as this method hints to potentially relevant word groups. These analysis results present democracy as a subject of discussion across various contexts – ranging from expectations towards the day-to-day work of parliamentarians, to the constitution as the political and ideological foundation of Weimar Germany, and the economy and administrative institutions as arenas of democratization. Like other distant reading methods, topic modeling is particularly effective at revealing unexpected findings – specifically, articles that were not published in connection with major politically significant events, where discourses of democracy would typically be expected. Furthermore, the LLM setup from the OCR-cleaning step also supports content analysis, uncovering discourse on democracy. This is achieved through few-shot prompting that seeks formulations which avoid explicitly mentioning “democracy” and related terms, instead operating through indirect statements (such as “we should do this…”). Additionally, van Leeuwen’s archetypical (de-)legitimation strategies serve as analytical cornerstones for finding relevant press articles. Lastly, manual selections from newspaper portals and physical archives (digitized with the tool nopaque) will be added.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Structuring the Corpus</head>
+                <p style="text-align: left; ">The corpus is subjected to word frequency (relative/absolute) analyses in CATMA, which serve as starting points for close reading. This process aims to identify and annotate distinct discursive strategies and topoi in CATMA. The annotation scheme aligns with van Leeuwen’s typology. CATMA’s query function then allows the corpus texts to be accessed according to specific annotations, such as filtering for the annotation tag “praising the constitution” (reference to authority, according to van Leeuwen) or the tag “opposing the amalgamation of antidemocratic discourse and antisemitism” (moral evaluation). This process uncovers semantic connections between these passages. The free-to-use tool CATMA is particularly well-suited for these tasks. It offers flexible capabilities for searching the corpus, annotating texts, and visualizing and evaluating data within a browser-based environment. In addition, CATMA supports exporting data for further analysis with external tools. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Source Critique and Interpretation</head>
+                <p style="text-align: left; ">The structured annotations, visualized through CATMA (distribution chart), Gephi (network graph), and Seaborn plots in Python (e.g., scatter plot) support thorough source critique and interpretation. Previously examined discourse elements can be quickly revisited and reinterpreted when new questions arise in light of additional newspaper articles. Moreover, diachronic comparisons are easily feasible.</p>
+                <p style="text-align: left; ">This workflow seeks to methodologically advance research on the cultural history of politics of the Weimar Republic, specifically for examining discourse on democracy, which has not previously seen a systematic scalable reading methodology for large volumes of newspapers. It enables more extensive, detailed, and nuanced insights into political discourse of Weimar’s press. In doing so, the project also methodologically contributes to digital newspaper research at large – ensured by documenting and publishing all the code as Jupyter Notebooks, as well as the produced data and metadata on GitHub and the TextGrid Repository. This provides open documentation and reusability.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                         The Python code, along with a prompt detailing the OCR-cleaning instructions, has been published in a Jupyter Notebook under an open license (Wachter and Jentsch 2025).
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Keck, Jana, Moritz Knabben, and Sebastian Pado. 2020. “Who’s in the News? Methodological Challenges and Opportunities in Studying 19th-Century Writers in Historical Newspapers.” Europeana Pro, Newspapers, no. 16. 
+                        <ref target="https://pro.europeana.eu/page/issue-16-newspapers#who-s-in-the-news">https://pro.europeana.eu/page/issue-16-newspapers#who-s-in-the-news</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Kergomard, Zoé. 2023. “A Source Like Any Other?” In Digitised Newspapers – A New Eldorado for Historians?, edited by Estelle Bunout, Maud Ehrmann, and Frédéric Clavert, 359–78. Studies in Digital History and Hermeneutics 3. Berlin: De Gruyter Oldenbourg. 
+                        <ref target="https://doi.org/10.1515/9783110729214-016">https://doi.org/10.1515/9783110729214-016</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Kutter, Amelie. 2017. “Corpus Analysis.” In The Routledge Handbook of Language and Politics, edited by Ruth Wodak and Bernhard Forchtner, 169–86. Milton Park, Abingdon, Oxon and New York, NY: Routledge. 
+                        <ref target="https://doi.org/10.4324/9781315183718.ch11">https://doi.org/10.4324/9781315183718.ch11</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Leeuwen, Theo van. 2007. “Legitimation in Discourse and Communication.” Discourse &amp; Communication 1 (1): 91–112. 
+                        <ref target="https://doi.org/10.1177/1750481307071986">https://doi.org/10.1177/1750481307071986</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Oberbichler, Sarah. 2020. “Argumentationsanalyse von Historischen Migrationsdiskursen in Zeitungsberichterstattung Mittels Atlas.Ti.” Zeitgeschichte 47 (4): 467–89.</bibl>
+                    <bibl style="text-align: left; ">Oberbichler, Sarah. 2024. “Large-Scale Research with Historical Newspapers: A Turning Point through Generative AI.” Digital Humanities Lab: Leibniz-Institut Für Europäische Geschichte (blog). June 21, 2024. 
+                        <ref target="https://dhlab.hypotheses.org/4938">https://dhlab.hypotheses.org/4938</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Oberbichler, Sarah, and Eva Pfanzelter. 2022. “Tracing Discourses in Digital Newspaper Collections.” In Digitised Newspapers – A New Eldorado for Historians?, edited by Estelle Bunout, Maud Ehrmann, and Frédéric Clavert, 125–52. Studies in Digital History and Hermeneutics 3. Berlin: De Gruyter Oldenbourg. 
+                        <ref target="https://doi.org/10.1515/9783110729214-007">https://doi.org/10.1515/9783110729214-007</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Paduanis, Giulia de. 2023. “Learning from the Past: The Case of the Weimar Republic: A Proposal for Historical Analysis, Revision and Digitization.” Master thesis, Linnaeus University. 
+                        <ref target="https://www.google.com/url?sa=t&amp;source=web&amp;rct=j&amp;opi=89978449&amp;url=https://www.diva-portal.org/smash/record.jsf%3Fpid%3Ddiva2:1729669&amp;ved=2ahUKEwjJycGl7r-JAxVngf0HHTaoN-UQFnoECBQQAQ&amp;usg=AOvVaw0Npxj1EKWmVPuXzqRX3p8C">https://www.google.com/url?sa=t&amp;source=web&amp;rct=j&amp;opi=89978449&amp;url=https://www.diva-portal.org/smash/record.jsf%3Fpid%3Ddiva2:1729669&amp;ved=2ahUKEwjJycGl7r-JAxVngf0HHTaoN-UQFnoECBQQAQ&amp;usg=AOvVaw0Npxj1EKWmVPuXzqRX3p8C</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Rakshit, Aishik, Samyak Mehta, and Anirban Dasgupta. 2023. “A Novel Pipeline for Improving Optical Character Recognition through Post-Processing Using Natural Language Processing.” arXiv. 
+                        <ref target="https://doi.org/10.48550/ARXIV.2307.04245">https://doi.org/10.48550/ARXIV.2307.04245</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Salmi, Hannu. 2024. “Textuality as Amplification: Reconsidering Close Reading and Distant Reading in Cultural History.” Rethinking History 28 (2): 261–77. 
+                        <ref target="https://doi.org/10.1080/13642529.2024.2360318">https://doi.org/10.1080/13642529.2024.2360318</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Soper, Elizabeth, Stanley Fujimoto, and Yen-Yun Yu. 2021. “BART for Post-Correction of OCR Newspaper Text.” In Proceedings of the Seventh Workshop on Noisy User-Generated Text (W-NUT 2021), edited by Wei Xu, Alan Ritter, Tim Baldwin, and Afshin Rahimi, 284–90. Online: Association for Computational Linguistics. 
+                        <ref target="https://doi.org/10.18653/v1/2021.wnut-1.31">https://doi.org/10.18653/v1/2021.wnut-1.31</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Sung, Doris, Liying Sun, and Matthias Arnold. 2014. “The Birth of a Database of Historical Periodicals: Chinese Women’s Magazines in the Late Qing and Early Republican Period.” Tulsa Studies in Women’s Literature 33 (2): 227–37. 
+                        <ref target="https://doi.org/10.1353/tsw.2014.0004">https://doi.org/10.1353/tsw.2014.0004</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Thomas, Alan, Robert Gaizauskas, and Haiping Lu. 2024. “Leveraging LLMs for Post-OCR Correction of Historical Newspapers.” In LREC-COLING 2024: Workshop Proceedings, edited by Rachele Sprugnoli and Marco Passarotti, 116–21. Turin. 
+                        <ref target="https://aclanthology.org/2024.lt4hala-1.0">https://aclanthology.org/2024.lt4hala-1.0</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Wachter, Christian. 2023a. “Capturing Discourse through the Digital Lens: Towards a Framework for the Analysis of Pro-Democratic Discourse in the Weimar Republic.” In Zoomland: Exploring Scale in Digital History and Humanities, edited by Florentina Armaselu and Andreas Fickers, 43–75. Studies in Digital History and Hermeneutics, 7. Berlin; Boston: De Gruyter Oldenbourg. 
+                        <ref target="https://doi.org/10.1515/9783111317779-003">https://doi.org/10.1515/9783111317779-003</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">———. 2023b. “Democracy and Uncertainty: Approaching a Heuristic Framework for Studying Political Discourse in the Weimar Republic.” In Digitale Methoden in der geschichtswissenschaftlichen Praxis: Fachliche Transformationen und ihre epistemologischen Konsequenzen: Konferenzbeiträge der Digital History 2023, Berlin, 23.-26.5.2023, edited by Melanie Althage, Martin Dröge, Torsten Hiltmann, and Claudia Prinz, 1–10. Berlin: Zenodo. 
+                        <ref target="https://doi.org/10.5281/zenodo.8322406">https://doi.org/10.5281/zenodo.8322406</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Wachter, Christian, and Patrick Jentsch. 2025. “LLM-Supported Workflow for Processing Faulty OCR.” GitHub. May 7, 2025. 
+                        <ref target="https://github.com/Digital-History-Bielefeld/llm-supported-workflow-for-processing-faulty-ocr/blob/main/notebook.ipynb">https://github.com/Digital-History-Bielefeld/llm-supported-workflow-for-processing-faulty-ocr/blob/main/notebook.ipynb</ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

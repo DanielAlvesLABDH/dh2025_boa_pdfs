@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MESSNER_Stefanie__em_Doing_Literature__em___A_Multimedial_In">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>&lt;em&gt;Doing Literature&lt;/em&gt;: A Multimedial Index of Research Outputs</title>
+                <author>
+                    <persName>
+                        <surname>Messner</surname>
+                        <forename>Stefanie</forename>
+                    </persName>
+                    <affiliation>fortext lab, Technische Universität Darmstadt, Germany</affiliation>
+                    <email>stefanie.messner@tu-darmstadt.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Illmer</surname>
+                        <forename>Viktor J.</forename>
+                    </persName>
+                    <affiliation>EXC 2020 ‘Temporal Communities’, Freie Universität Berlin, Germany</affiliation>
+                    <email>v.illmer@fu-berlin.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Schwindt</surname>
+                        <forename>Mark</forename>
+                    </persName>
+                    <affiliation>EXC 2020 ‘Temporal Communities’, Freie Universität Berlin, Germany</affiliation>
+                    <email>mark.schwindt@fu-berlin.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-06T07:40:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Digital Public Humanities</term>
+                    <term>Web Design</term>
+                    <term>Open Data</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>project design</term>
+                    <term>organization</term>
+                    <term>management</term>
+                    <term>public humanities collaborations and methods</term>
+                    <term>user experience design and analysis</term>
+                    <term>Design studies</term>
+                    <term>Humanities computing</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">
+                <hi rend="italic">Doing Literature</hi><ref n="1" target="ftn1"/> is a web portal designed to collect and curate research contributions of the humanities in multimedia formats and is conceptualised as a contribution to the Digital Public Humanities. It showcases the diverse practices and outcomes generated since 2019 within the Cluster of Excellence 
+                <hi rend="italic">Temporal Communities: Doing Literature in a Global Perspective</hi> at Freie Universität Berlin, aiming to develop a framework that engages diverse audiences, thereby applying established Digital Humanities standards and highlighting their collaborative nature and potential for knowledge creation. The project is implemented using the SvelteKit web framework in TypeScript. Code and content are stored on GitHub to enable a pull request-based workflow for both development and editorial processes involving technical and non-technical contributors. This underlying data is published as JSON-LD under an open licence, enabling secondary use in analysis of the research outputs.
+            </p>
+            <div type="div1" rend="DH-Heading1">
+                <head>Concept and Design</head>
+                <p style="text-align: left; ">
+                    <hi rend="italic">Doing Literature</hi> functions as a multimedial index, at the core of which lays a randomised feed, continuously reshuffling entries in new configurations. Each entry spotlights a specific research activity, providing insights and linking to a detailed subpage offering more thorough documentation. In addition to categorising entries by collection, which serve as the editorial sources of the portal, entries are tagged to reveal thematic connections, enabling users to filter the content.
+                </p>
+                <figure>
+                    <graphic n="1001" width="15.801730555555556cm" height="9.133947222222222cm" url="/tmp/tmplbgava6q/Pictures/20ed882dc6dd4dc26f75840e293b5864.png" rend="inline"/>
+                    <head>Screenshot of the 
+                        <hi rend="italic">Doing Literature</hi> interface, showing filter options for each collection at the top. The tiles are randomly re-arranged with each view.
+                    </head>
+                </figure>
+                <p style="text-align: left; ">
+                    <hi rend="italic">Doing Literature</hi> integrates affordances suited to humanities topics and is designed to cater to a wide array of audiences, fostering dissemination as a multi-faceted effort that facilitates connections between various fields of academia, the arts, and the public. In this context, we conceptualise 
+                    <hi rend="italic">Doing Literature</hi> as a component of the Digital Public Humanities, with the aim of “lifting the humanities out of their university ivory tower” (Seltmann, 2012) by “laying an infrastructure of relationships” (Jacobson, 2021) and enabling collaboration among actors across research, teaching, academic management, and related fields. The emphasis is hence on creating a framework that allows scholars, including those with limited technical skills, to engage in editorial contributions.
+                </p>
+                <p style="text-align: left; ">By highlighting its collaborative nature, we assert that “Public Humanities is in the doing,” (Jacobson, 2021) seeing it as both a creator of new knowledge and a means to deepen our understanding of the humanities themselves (Smulyan, 2021). Building further on the praxeological approach of the Cluster, and in particular by valuing artistic practices as a boundary form of scientific research, 
+                    <hi rend="italic">Doing Literature</hi> interfaces both as equals. This approach challenges Frick et al.’s framework (2021), which defines science communication as a relationship between science and the public, by addressing the increasingly ambiguous boundaries between scientific actors. It expands the scope of inquiry to include not only the actors, but also the premises involved in dissemination.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Technical Implementation</head>
+                <p style="text-align: left; ">The web interface is developed in TypeScript with the SvelteKit framework (Svelte, 2024), targeting a static build output. We therefore require no server-side execution beyond basic web hosting, maximising portability and ensuring that the site can be served and archived with minimal technical requirements. The underlying data is stored in a GitHub repository as individual YAML records that are manipulated in place using a third-party CMS (Content Management System) service, thereby simplifying editing by non-technical users while producing neat diff outputs. The repository follows a workflow based on pull requests (PRs), which enables collaborative discussion, review and approval processes among contributors for both code and content changes.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Data Availability</head>
+                <p style="text-align: left; ">To foster transparency and reuse, underlying structured data powering 
+                    <hi rend="italic">Doing Literature</hi> is made available under an open licence (Open Database License, Open Data Commons, 2011). The raw data is transformed to JSON-LD (W3C, 2021) and its structure is mapped to the 
+                    <hi rend="italic">Schema.org</hi> vocabulary (Schema.org, 2024). This representation makes the dataset both more easily reusable and largely self-documenting: The top-level item is of type 
+                    <hi rend="italic">Dataset</hi> contains metadata as well as the individual records via the 
+                    <hi rend="italic">hasPart</hi> property (Figure 2).
+                </p>
+                <figure>
+                    <graphic n="1002" width="14.700075cm" height="14.465016666666667cm" url="/tmp/tmplbgava6q/Pictures/20ed882dc6dd4dc26f75840e293b5864.png" rend="inline"/>
+                    <head>Example of Schema.org 
+                        <hi rend="italic">WebPage</hi> item as modelled in the 
+                        <hi rend="italic">Doing Literature</hi> dataset. The associated 
+                        <hi rend="italic">MediaObject</hi> items includes assets’ URLs as hosted on our site, canonical URLs, and licence information. These properties go beyond what is offered by the web interface, such as items’ types, dates, or their associations to specific research groups of the Cluster.
+                    </head>
+                </figure>
+                <p style="text-align: left; ">Beyond supporting the functionality of our website, the structured dataset represents a valuable resource: By making this data openly available, we provide an opportunity for secondary analysis that can help identify gaps, highlight connections, and offer insights into the research landscape of the cluster. This secondary data usage scenario could facilitate broader reflections on research practices and networks.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p style="text-align: left; ">Looking beyond its immediate application, 
+                    <hi rend="italic">Doing Literature</hi> may serve as a template for other humanities institutions seeking to make their research more accessible and engaging to broader audiences. The project demonstrates how the integration of contemporary web technologies, user-centred design, and open data practices can support one of the core missions of Digital Public Humanities: making scholarly work more accessible, interactive, and visible. While acknowledging that the project does not engage the public directly in the creation process, but rather primarily provides infrastructure, it aims to foster new forms of collaborative knowledge and dissemination.
+                </p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                     The idea for 
+                        <hi rend="italic">Doing Literature</hi> was developed by 
+                        <hi rend="italic">Anne Eusterschulte</hi>, 
+                        <hi rend="italic">Kristiane Hasselmann</hi> and 
+                        <hi rend="italic">Andrew James Johnston</hi>.
+                    
+                </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Frick, C. / Heller, L. / Ramünke, S. / Strauß, F.</hi> (2021, December 3): 
+                        <hi rend="italic">Bibliotheken als Dienstleisterinnen und Labore der Wissenschaftskommunikation</hi>. &lt;https://doi.org/10.5281/zenodo. 5752401&gt;.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Jacobson, M. F.</hi> (2021): “Afterword: The “doing” of doing public humanities”, in S. Smulyan (Ed.): 
+                        <hi rend="italic">Doing public humanities</hi>. London.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Open Data Commons</hi> (2011): 
+                        <hi rend="italic">Open database license (ODbL) v1.0</hi>. &lt;https://opendatacommons.org/licenses/odbl/1-0/&gt;.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Schema.org</hi> (2024): 
+                        <hi rend="italic">Schema.org</hi>. &lt;https://schema.org/&gt;.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Seltmann, M.</hi> (2012, March 12): 
+                        <hi rend="italic">#PublicDH or just #WissKomm? [Public Humanities].</hi> &lt;https://doi.org/10.58079/t26t&gt;.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Smulyan, S.</hi> (2021): “Introduction”, In: S. Smulyan (Ed.): 
+                        <hi rend="italic">Doing public humanities</hi>. London.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Svelte</hi> (2024): 
+                        <hi rend="italic">SvelteKit: Introduction</hi>. &lt;https://svelte.dev/docs/kit/introduction&gt;.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">W3C</hi> (2021): 
+                        <hi rend="italic">JSON-LD 1.1</hi>. &lt;https://www.w3.org/TR/json-ld11/&gt;.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

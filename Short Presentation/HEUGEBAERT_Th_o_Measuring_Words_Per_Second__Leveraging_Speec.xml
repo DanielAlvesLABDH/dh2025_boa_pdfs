@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="HEUGEBAERT_Th_o_Measuring_Words_Per_Second__Leveraging_Speec">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Measuring Words Per Second: Leveraging Speech Recognition to Analyze Rhythmic Transformations in Theatrical Creative Processes</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Heugebaert</surname>
+                        <forename>Théo</forename>
+                    </persName>
+                    <affiliation>Université Rennes 2, France</affiliation>
+                    <email>theo.heugebaert@univ-rennes2.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Hart</surname>
+                        <forename>Jacob</forename>
+                    </persName>
+                    <affiliation>Université Rennes 2, France</affiliation>
+                    <email>jacob.hart@univ-rennes2.fr</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T08:29:05.792970304</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>theatre analytics</term>
+                    <term>creative process studies</term>
+                    <term>diction speed</term>
+                    <term>speak recognition</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>music and sound digitization</term>
+                    <term>encoding</term>
+                    <term>and analysis</term>
+                    <term>speech processing analysis and methods</term>
+                    <term>Humanities computing</term>
+                    <term>Performance Studies: Dance</term>
+                    <term>Theatre</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <hi rend="color(#000000)">In the field of culture analytics, notably in the performing arts, analyzing the inherently intangible nature of creative processes presents significant challenges. As Bardiot (2021) notes,  “</hi>
+                <hi rend="color(#000000)italic">The computational analysis of performances and its corollary – the conversion of performances into data – are among the most difficult questions that are asked in the field of performing arts and more generally in the field of culture analytics</hi>
+                <hi rend="color(#000000)">”</hi>
+                <hi rend="color(#000000)">. An important aspect of the digital humanities is to find operationalization indicators which allow to decompose a concept into a series of quantitative operations. This study proposes a methodology for analyzing one specific indicator of creative process evolution in theater: the speaking rate of performers. We illustrate this approach </hi>
+                <hi rend="color(#000000)italic">via </hi>
+                <hi rend="color(#000000)">a corpus based on the work of stage director Arthur Nauzyciel and his recent re-production of </hi>
+                <hi rend="color(#000000)italic">Le Malade imaginaire </hi>
+                <hi rend="color(#000000)italic">ou le Silence de Molière</hi>
+                <hi rend="color(#000000)">.</hi>
+            </p>
+            <p>
+                <hi rend="color(#000000)">Across the course of a creative process in theater, we identify two main categories of transformations that can be observed in actors’ interpretations. 1. </hi>
+                <hi rend="color(#000000)bold">Fluctuations </hi>
+                <hi rend="color(#000000)">refer to actions reproduced identically but with variability in execution time. 2. </hi>
+                <hi rend="color(#000000)bold">Mutations</hi>
+                <hi rend="color(#000000)">, on the other hand, involve the emergence of new actions or significant modifications in gestures performed by the actors. </hi>
+                <hi rend="color(#000000)">F</hi>
+                <hi rend="color(#000000)">luctuations impact the rhythmic </hi>
+                <hi rend="color(#000000)italic">quality </hi>
+                <hi rend="color(#000000)">of a performance (performance tempo, speed, duration). </hi>
+                <hi rend="color(#000000)">M</hi>
+                <hi rend="color(#000000)">utations affect its rhythmic </hi>
+                <hi rend="color(#000000)italic">structure </hi>
+                <hi rend="color(#000000)">(additions, modifications, or removal of sequences). This study aims to detect transformations over the course of a creative process (from first readings to first performances) by analyzing the evolution of speaking rate, and discerning if they are due to fluctuations or mutations.</hi>
+            </p>
+            <div type="div1" rend="DH-Heading1">
+                <head>State of the art</head>
+                <p>
+                    <hi rend="color(#000000)">Knowledge and analyses regarding speaking rate measurement primarily stem from the fields of linguistics (Pasdeloup 2004), information sciences (Rist 1999), and cognitive sciences (Guiraud 2017) or all three (Pellegrino </hi>
+                    <hi rend="color(#000000)italic">et al.</hi>
+                    <hi rend="color(#000000)"> 2011). These approaches mainly rely on calculating the number of </hi>
+                    <hi rend="color(#000000)italic">syllables</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">spoken per second, although various units such as </hi>
+                    <hi rend="color(#000000)italic">words</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">or </hi>
+                    <hi rend="color(#000000)italic">breath groups</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">are also considered. A foundational work for our research is Garcìa Martìnez's PhD thesis (Garcìa Martìnez 1995) on rhythm in theater, in which he measures </hi>
+                    <hi rend="color(#000000)">and describes the composition of breath groups and speaking rate based on recordings of select lines performed by actors. However, by focusing solely on a single utterance of these lines and extracting them from their creative process, this initial approach leaves the question of the transformation of speaking rate during the creative process untouched.</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methodology</head>
+                <p>Our approach to measuring and analyzing speaking rate is rooted in computational linguistics and machine learning techniques. The methodology unfolds in two main stages: data extraction and analysis.</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Data Extraction</head>
+                    <p>The corpus consists of 176 audio and video recordings of rehearsals, run-throughs and public performances spanning over two different productions of the play. To ensure data quality, recordings were filtered based on word recognition accuracy, and only those with a minimum accuracy threshold of 0.64 were included in the analysis. This resulted in a refined dataset that enabled comparative analyses across different stages of the production.</p>
+                    <p>
+                        <hi rend="color(#000000)">Using the open-source </hi>
+                        <ref target="https://alphacephei.com/vosk/models">
+                            <hi rend="color(#1155cc)underline italic">vosk-model-fr-0.22</hi>
+                        </ref>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">speech recognition model, we extracted timestamps for each spoken word within the recordings. Once the starts and end times for individual words are identified, this </hi>
+                        <ref target="https://github.com/jdchart/dps">
+                            <hi rend="color(#1155cc)underline">workflow</hi>
+                        </ref>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">parses them into </hi>
+                        <hi rend="color(#000000)bold">time series graphs</hi>
+                        <hi rend="color(#000000)">. These graphs represent speaking rate as words-per-second (WPS), calculated using a rolling window of </hi>
+                        <hi rend="color(#000000)italic">n</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">seconds. The resulting curves provide a granular view of speaking rate variations across the duration of each recording.</hi>
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Data Analysis</head>
+                    <p>The analysis phase applied clustering methods and curve comparison techniques to distinguish fluctuations from mutations. By normalizing the curve durations, we apply a k-means clustering algorithm to generate centroid WPS curves for the various clusters. On a corpus of thirteen run-throughs and performances recorded over the course of a year, three clusters emerged from our analysis that correspond to the chronology of rehearsals. This indicates that the progression of the creative process significantly influences not only speech rate (fluctuation) but also the rhythmic structures of prosody (mutation), with some segments of the production undergoing drastic changes.</p>
+                    <p>
+                        <figure>
+                            <graphic url="/tmp/tmp4el_hke_/Pictures/44110e427a7b088e5f49c654c2147e34.png"/>
+                        </figure>
+                    </p>
+                    <p>Figure 1. Clusters of the Normalized Curves from WPS</p>
+                    <p>Once these clusters are identified (Figure 1.), difference curves can be plotted between them to pinpoint mutation points - segments where the difference curve exceeds a certain threshold. In the following graph (Figure 2.), we have doubled the first-order difference measurement in order to identify mutation points between transitions from one cluster to another. Mutation points are identifiable by detecting segments during which the second-degree difference exceeds a certain threshold (here, 0.7) over a specific duration range (here, &gt; 30 sec).</p>
+                    <p>
+                        <figure>
+                            <graphic url="/tmp/tmp4el_hke_/Pictures/44110e427a7b088e5f49c654c2147e34.png"/>
+                        </figure>
+                    </p>
+                    <p>Figure 2. Difference Curve Between the Difference Curves from Clusters Centroids</p>
+                    <p>In figure 2., the highest peak, located at the 24-minute mark, corresponds to a mutation not in the speaking rate but in the aesthetic of the performance. At this point, the director introduced the use of microphones with a significant reverb effect. As a result, the Vosk-model was no longer able to accurately recognize the spoken words, leading to a variation in the measured speaking rate.</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>Results and discussions</head>
+                <p>The analysis reveals that speaking rate is a valuable indicator of both micro-level adjustments (fluctuations) and macro-level shifts (mutations) in theatrical productions. Fluctuations, characterized by minor variations in tempo, often reflect performers' adaptations to directorial feedback or their evolving comfort with the material. Mutations mark more profound changes, such as the reconfiguration of sequences or the introduction of new artistic elements.</p>
+                <p>Initially designed to analyze fluctuations and mutations in speaking rate, the current model also enables the observation of broader sound mutations in the performance, as these directly impact the performance of the word recognition model.</p>
+                <p>
+                    <hi rend="color(#000000)">In this workflow, both stages provide avenues for reflection and open new experimental possibilities. </hi>
+                    <hi rend="color(#000000)">W</hi>
+                    <hi rend="color(#000000)">e observed that theatrical diction poses significant challenges for speech recognition due to its stylization and the layering of sound effects. Current models are not trained on the vocabulary of theatrical works, such as Molière’s plays, nor on the prosodic variations and elongations associated with theatrical intonations. We intend to prolong this research with other available models (</hi>
+                    <ref target="https://github.com/openai/whisper">
+                        <hi rend="color(#1155cc)underline">Whisper</hi>
+                    </ref>
+                    <hi rend="color(#000000)">, </hi>
+                    <ref target="https://github.com/coqui-ai/STT">
+                        <hi rend="color(#1155cc)underline">CoquiSTT</hi>
+                    </ref>
+                    <hi rend="color(#000000)">) but this also raises the question of whether training a speech recognition model tailored to theater might better capture its unique prosodic characteristics.</hi>
+                </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="color(#000000)">Bardiot, Clarisse </hi>
+                        <hi rend="color(#000000)">(2021):</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)italic">Performing Arts and Digital Humanities. From Traces to Data.</hi>
+                        <hi rend="color(#000000)"> Wiley-ISTE. </hi>
+                        <ptr target="https://univ-rennes2.hal.science/hal-03884691"/>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">García Martínez, Manuel </hi>
+                        <hi rend="color(#000000)">(1995): </hi>
+                        <hi rend="color(#000000)italic">Réflexions Sur La Perception Du Rythme Au Théâtre.</hi>
+                        <hi rend="color(#000000)"> Phd thesis, Paris 8.</hi>
+                        <ref target="https://www.theses.fr/1995PA081036">
+                            <hi rend="color(#1155cc)underline"> </hi>
+                            <hi rend="color(#1155cc)underline">https://www.theses.fr/1995PA081036</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Guiraud, Hélène </hi>
+                        <hi rend="color(#000000)">(2017): </hi>
+                        <hi rend="color(#000000)italic">Symphonie des oscillations cérébrales lors de la perception de la parole : études comportementale et en magnétoencéphalographie chez les enfants neurotypiques et dysphasiques.</hi>
+                        <hi rend="color(#000000)"> Phd thesis, Université de Lyon.</hi>
+                        <ref target="https://theses.hal.science/tel-01887759">
+                            <hi rend="color(#1155cc)underline"> </hi>
+                            <hi rend="color(#1155cc)underline">https://theses.hal.science/tel-01887759</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>Heugebaert, Théo (2021): 
+                        <hi rend="italic">Du processus à la création : le rythme, principe structurant de la mise en scène.</hi> Master’s thesis under the direction of Sophie Lucet, Université Rennes 2.
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Ikotun, Abiodun M., Absalom E. Ezugwu </hi>
+                        <hi rend="color(#000000)italic">et al. </hi>
+                        <hi rend="color(#000000)">(2023):</hi>
+                        <hi rend="color(#000000)"> “K-Means Clustering Algorithms: A Comprehensive Review, Variants Analysis, and Advances in the Era of Big Data”,</hi>
+                        <hi rend="color(#000000)italic"> </hi>
+                        <hi rend="color(#000000)">in:</hi>
+                        <hi rend="color(#000000)italic"> Information Sciences 622</hi>
+                        <hi rend="color(#000000)">: 178–210.</hi>
+                        <ref target="https://doi.org/10.1016/j.ins.2022.11.139">
+                            <hi rend="color(#1155cc)underline"> </hi>
+                        </ref>
+                        <hi rend="color(#000000)">DOI: </hi>
+                        <ref target="http://doi.org/10.1016/j.ins.2022.11.139">10.1016/j.ins.2022.11.139</ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>Lèbre, Jérôme / Rogozinski, Jacob (2017): 
+                        <hi rend="italic">Jean-Luc Nancy: penser la mutation</hi>. Strasbourg: Presses Universitaires De Strasbourg.
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Mcauley, Gay </hi>
+                        <hi rend="color(#000000)">(2008):</hi>
+                        <hi rend="color(#000000)"> “Not Magic but Work: Rehearsal and the Production of Meaning”, </hi>
+                        <hi rend="color(#000000)">in:</hi>
+                        <hi rend="color(#000000)"> Theatre Research International 33, no. 3: 276–88.</hi>
+                        <ref target="https://doi.org/10.1017/S0307883308003970">
+                            <hi rend="color(#1155cc)underline"> </hi>
+                            <hi rend="color(#1155cc)underline">DOI: </hi>
+                            <hi rend="color(#1155cc)underline">10.1017/S0307883308003970</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>Pasdeloup, Valérie (2004): “Le rythme n’est pas élastique : étude préliminaire de l’influence du débit de parole sur la structuration temporelle”, in: Actes des Journées d’Etudes sur la Parole. Fès.</bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Pellegrino, François / </hi>
+                        <hi rend="color(#000000)">Coupé, </hi>
+                        <hi rend="color(#000000)">Christophe </hi>
+                        <hi rend="color(#000000)italic">et al</hi>
+                        <hi rend="color(#000000)italic">. </hi>
+                        <hi rend="color(#000000)">(2011):</hi>
+                        <hi rend="color(#000000)"> “A Cross-Language Perspective on Speech Information Rate”, </hi>
+                        <hi rend="color(#000000)">in:</hi>
+                        <hi rend="color(#000000)"> Language 87, no. 3: 539–58.</hi>
+                        <ref target="https://doi.org/10.1353/lan.2011.0057">
+                            <hi rend="color(#1155cc)underline"> </hi>
+                            <hi rend="color(#1155cc)underline">DOI: </hi>
+                            <hi rend="color(#1155cc)underline">10.1353/lan.2011.0057</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Rist, Colas </hi>
+                        <hi rend="color(#000000)">(1999): </hi>
+                        <hi rend="color(#000000)">“200 mots à la minute : le débit oral des médias”, </hi>
+                        <hi rend="color(#000000)">in:</hi>
+                        <hi rend="color(#000000)"> Communication &amp; Langages 119, no. 1: 66–75. </hi>
+                        <hi rend="color(#000000)">DOI: </hi>
+                        <ref target="https://doi.org/10.3406/colan.1999.2909">
+                            <hi rend="color(#1155cc)underline">10.3406/colan.1999.2909</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Ryan, Bruce P. </hi>
+                        <hi rend="color(#000000)">(2000):</hi>
+                        <hi rend="color(#000000)"> “Speaking Rate, Conversational Speech Acts, Interruption, and Linguistic Complexity of 20 Pre-School Stuttering and Non-Stuttering Children and Their Mothers”, </hi>
+                        <hi rend="color(#000000)">in:</hi>
+                        <hi rend="color(#000000)"> Clinical Linguistics &amp; Phonetics 14, no. 1: 25–51.</hi>
+                        <ref target="https://doi.org/10.1080/026992000298931">
+                            <hi rend="color(#1155cc)underline"> </hi>
+                            <hi rend="color(#1155cc)underline">DOI: </hi>
+                            <hi rend="color(#1155cc)underline">10.1080/026992000298931</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>Ubersfeld, Anne (1977): 
+                        <hi rend="italic">Lire le théâtre. 2: L’école du spectateur</hi>. (first published Paris: Editions sociales, 1977). Paris: Belin, 2005.
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Zrar Kh., Abdul / Al-Talabani, Abdulbasit K. </hi>
+                        <hi rend="color(#000000)">(2022): “</hi>
+                        <hi rend="color(#000000)">Mel Frequency Cepstral Coefficient and Its Applications: A Review”, </hi>
+                        <hi rend="color(#000000)">in: </hi>
+                        <emph>
+                            <hi rend="color(#000000)">IEEE Access</hi>
+                        </emph>
+                        <hi rend="color(#000000)">, vol. 10: 122136-122158. DOI: </hi>
+                        <ref target="https://doi.org/10.1109/ACCESS.2022.3223444">
+                            <hi rend="color(#1155cc)underline">10.1109/ACCESS.2022.3223444</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

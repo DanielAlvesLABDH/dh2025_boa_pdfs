@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="CHENG_Luotong_The_GOLEM_Ontology_for_Narrative_and_Fiction">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>The GOLEM Ontology for Narrative and Fiction</title>
+                <author>
+                    <persName>
+                        <surname>Pianzola</surname>
+                        <forename>Federico</forename>
+                    </persName>
+                    <affiliation>University of Groningen, The Netherlands</affiliation>
+                    <email>f.pianzola@rug.nl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Pannach</surname>
+                        <forename>Franziska</forename>
+                    </persName>
+                    <affiliation>University of Groningen, The Netherlands</affiliation>
+                    <email>f.a.pannach@rug.nl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Cheng</surname>
+                        <forename>Luotong</forename>
+                    </persName>
+                    <affiliation>University of Groningen, The Netherlands; University of Twente, The Netherlands</affiliation>
+                    <email>l.cheng@utwente.nl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Yang</surname>
+                        <forename>Xiaoyan</forename>
+                    </persName>
+                    <affiliation>University of Groningen, The Netherlands</affiliation>
+                    <email>xiaoyan.yang@rug.nl</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-08T19:13:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Narrative</term>
+                    <term>Ontology</term>
+                    <term>Semantic Web</term>
+                    <term>Linked Data</term>
+                    <term>CIDOC-CRM</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data modeling</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>linked (open) data</term>
+                    <term>semantic analysis</term>
+                    <term>Cognitive sciences and psychology</term>
+                    <term>Computer science</term>
+                    <term>Humanities computing</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">Narrative phenomena can be viewed as interconnected systems in which various components influence one another. Understanding the properties of narratives requires analyzing them in relation to each other and within their broader context, rather than in isolation (Pianzola 2018). To explore narrative structures, computational methods offer valuable insights. Computational narratology focuses on studying narratives through the lens of computation and information processing (Mani 2019). It emphasizes the algorithmic processes involved in the creation and interpretation of narratives, allowing narrative structures to be modeled in formal and computable forms. However, the predominance of probabilistic-quantitative methods in digital literary studies is often insufficient for capturing all aspects of literary phenomena (Ciotti 2016). This limitation necessitates a more nuanced approach, such as a mixed human-machine methodology, like ontology modeling, which also provides a level of abstraction that facilitates the comparison of different stories.</p>
+                <p style="text-align: left; ">An ontology, defined as a formal, explicit specification of a shared conceptualization (Studer et al. 1998), provides the theoretical and technical means for operationalizing these conceptual frameworks. The GOLEM (Graphs and Ontologies for Literary Evolution Models) project aims to model how narratives adapt across languages and cultures by developing an ontology that represents narratives independently of specific domains. To achieve this, the GOLEM ontology for narrative and fiction establishes a framework defining the interrelationships among key narrative elements, such as characters, social relationships, and events. It creates a library of modules containing these components. In alignment with Linked Open Data principles, the GOLEM ontology is developed as an extension of CIDOC-CRM (CRM) and LRMoo (LRM), two ontologies for cultural heritage, while aligning with the foundational ontology DOLCE-Lite-Plus (DLP).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Related Works</head>
+                <p style="text-align: left; ">Various ontologies for narratives have been developed over the years. Nakasone and Ishizuka introduced the Storytelling Ontology Model (2006), emphasizing event coherence through Rhetorical Structure Theory (RST). Swartjes and Theune's Fabula Model for Emergent Narrative (2006) take a character-based approach to event sequencing. The Archetype Ontology (Damiano &amp; Lieto 2013) explores recurring narrative roles. The Narrative Ontology (NOnt) focuses on events and is integrated with CIDOC-CRM (Bartalesi et al., 2016; Meghini et al., 2021). The Ody Ontology (Khan et al., 2016) applies temporal structures to literary analysis. The Drammar Ontology (Damiano et al., 2019) focuses on character conflicts. The ProppOnto (Peinado &amp; Iaz-Agudo, 2004) examines character roles based on Propp's Morphology of the Folktale. A related enhanced version is the ProppOntology (Pannach et al. 2021), designed to analyze multicultural folktales and their differences in narrative structures. While these models provide valuable insights, their specialized scope underscore the need for a more extended and reusable ontology.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methodology</head>
+                <p style="text-align: left; ">The GOLEM ontology utilizes conceptual modeling and modularization. We begin by defining key narratological concepts, such as character, relationship, and event, linking them to essential elements that describe their characteristics and functions. Our classes are designed for interoperability, connecting with existing ontologies like CIDOC CRM, LRMoo, and DOLCE-Lite-Plus. We establish relationships between these elements and construct the ontology using Description Logic (DL) to facilitate computational inference. Finally, the ontology is used to populate a knowledge graph (Pannach et al., 2024a), allowing users to perform SPARQL queries for efficient data retrieval and analysis.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Dataset</head>
+                <p style="text-align: left; ">The current dataset used for the GOLEM knowledge graph is based on fanfiction collected from Archive of Our Own (AO3). We selected AO3 for its accessibility, supportive web scraping policy, and comprehensive metadata system (Pannach et al., 2024b). In line with the ontology's objective to encompass a wide range of narratives, we plan to expand our data sources in the future to include stories from other domains and fictional universes, like folklore.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Module Overview</head>
+                <p style="text-align: left; ">The GOLEM Ontology includes modules for characters, relationships, events, settings, narrative, and inference (see Figure 1). A wiki and the complete documentation of the ontology can be found on the project’s GitHub<ref n="1" target="ftn2"/> and on the pyLODE-generated web page.<ref n="2" target="ftn3"/>
+                </p>
+                <figure>
+                    <graphic n="1001" width="15.917333333333334cm" height="7.725833333333333cm" url="/tmp/tmpncfz81hz/Pictures/e7f51acdef4a495f3eb0b058ee76b801.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; text-align: justify;">
+                    <hi rend="bold" style="font-size:12pt">Figure 1.</hi>
+                    <hi style="font-size:12pt" xml:space="preserve"> Overview of the GOLEM ontology’s main classes and properties. </hi>
+                </p>
+                <p style="text-align: left; ">The character module introduces the class G1_Character, which is a subclass of crm:E89_Propositional_Object and aligns to dlp:agentive-social-object. Characters are viewed as participants within a storyworld, distinct from real-world individuals (Jannidis, 2019). The module also defines the class G0_Character-Stoff (subclass of crm:E89_Propositional_Object), derived from Erzählstoff (narrative material), representing the full range of potential variations for a character across different media (Zgoll et al., 2020). By employing the concept of Character-Stoff, we link all variants of the same character-stoff to a cohesive framework. </p>
+                <p style="text-align: left; ">While CIDOC CRM provides a class for physical features (E26_Physical_Feature) and quantifiable features (E54_Dimension), it lacks a class for non-physical or qualitative features. Thus, we create G2_Feature, with subclasses G17_Character_Feature and G18_Textual_Feature. G17_Character_Feature includes qualitative character attributes, such as biographical, physical, and psychological traits, while G18_Textual_Feature, is used for aspects like narrative style and point of view (POV). </p>
+                <p style="text-align: left; ">The relationship module models the social relationships between characters by using dlp:social-relationship. It focuses on the events that shape relationships over time and the roles that characters assume within those relationships (Mika &amp; Gangemi 2016). It regards social relationships as dynamic and evolving rather than fixed (Chaturvedi et al., 2015). Furthermore, this module distinguishes between homogeneous relationships, where all characters share the same role (such as friends), and heterogeneous relationships, where characters have distinct roles. A prime example of the latter is a love triangle, where one character may be linked to two others in different relationships, each with its own distinct role, such as lover and rival. However, the current model does not account for nuances such as the sign (positive or negative) or strength (strong or weak) of these relationships (Mika &amp; Gangemi, 2016).</p>
+                <p style="text-align: left; ">The event module focuses on the class G5_Narrative_Event, which aligns with dlp:perdurant. This module models two primary types of relations among narrative events (Bartalesi et al. 2017): mereological relations, in which events are parts of larger events, and temporal occurrence relations, which associate events with time intervals to indicate whether one event occurs before, during, or after another.</p>
+                <p style="text-align: left; ">The setting module models the narrative universe in which a story unfolds. The primary class, G12_Setting, aligns with dlp:situation A situation emerges from a narrative that delineates the setting into spatial, temporal, and social structures that serve the story's needs (DOLCE-Lite-Plus, 2005). Importantly, each setting aligns with the overarching narrative structure of the work, rather than being defined by individual events.</p>
+                <p style="text-align: left; ">The narrative module introduces key concepts for modeling narrative structures, including G7_Narrative_Sequence (aligned with dlp:course), G9_Narrative_Unit (a subclass of crm:E89_Propositional_Object aligned with dlp:description), G10_Narrative_Function (aligned with dlp:role), G11_Narrative_Role (aligned with dlp:role), and G14_Narrative-Stoff (a subclass of crm:E89_Propositional_Object aligned with dlp:description). </p>
+                <p style="text-align: left; ">The G9_Narrative_Unit serves as the fundamental building block, encompassing actions, states, or themes within a story. The G7_Narrative_Sequence organizes these units into structured patterns, primarily through the concepts of fabula and syuzhet. Fabula refers to the chronological sequence of events that outlines "what happens" in a narrative (Abbott 2019). In contrast, syuzhet (often referred to as "plot") focuses on how these events are presented to create effects such as suspense (Kukkonen, 2019; Abbott, 2019). G7_Narrative_Function describes the roles that narrative units play, exemplified by Proppian functions like “Villain causes harm” (Propp 1968). The G11_Narrative_Role specifies the roles of characters, such as "hero" or "villain." Finally, G14_Narrative-Stoff represents the essential materials that underpin a narrative variant (Zgoll et al. 2020).</p>
+                <p style="text-align: left; ">The inference module addresses the complexities of observational data in narratives by documenting their provenance. Inspired by MiMoTextBase and Wikidata (Schöch et al. 2022), this module aims to capture the diverse interpretations that can arise from a single source. By modeling the relationships between statements, methods, and sources, the module enhances transparency and traceability (Carroll 2015). To achieve this, we utilize the crm:E13_Attribute_Assignment class, which captures the attribution of properties to subjects. The module also incorporates the sources and methods used to generate each statement, allowing one crm:E13_Attribute_Assignment to serve as the source or premise for another.</p>
+                <p style="text-align: left; ">In addition to its modular structure, the project utilizes the CIDOC CRM class E55_Type to link controlled vocabularies to specific class instances, thereby enhancing interoperability while remaining flexible with respect to various literary and narrative theories. For instance, instances of the class G10_Narrative_Function can take values from the list of "Proppian functions" (crm:E55_Type).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Contribution </head>
+                <p style="text-align: left; ">The GOLEM ontology plays a crucial role in Digital Humanities by making implicit narrative structures explicit, facilitating computational reasoning and uncovering hidden connections between narrative elements (Ciotti 2016). It provides a structured framework for comparative studies across cultural contexts, enhancing our understanding of cumulative cultural evolution in narratives (Pianzola et al. 2020). Aligned with CIDOC CRM, LRMoo, and DOLCE-Lite-Plus, GOLEM adheres to Linked Open Data (LOD) principles, promoting reusability across research domains. Its modular design allows scholars to apply different modules to specific areas of narrative and fiction studies. As it evolves, GOLEM will encompass a wider range of narratives, enabling analysis of both metadata and textual content, making it valuable for researchers in narrative analysis.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn2" n="1">
+                         See GitHub repository: 
+                            <ref target="https://github.com/GOLEM-lab/golem-ontology">https://github.com/GOLEM-lab/golem-ontology</ref>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn3" n="2">
+                         See web page: 
+                            <ref target="https://ontology.golemlab.eu/">https://ontology.golemlab.eu/</ref>
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Abbott, H. P. (2019). Narrativity. In P. Hühn et al. (Eds.), The living handbook of narratology. Hamburg University.</bibl>
+                    <bibl style="text-align: left; ">Bartalesi, V. &amp; Meghini, C., Metilli, D. (2016). Steps towards a formal ontology of narratives based on narratology. In 7th workshop on Computational Models of Narrative (CMN 2016). Schloss Dagstuhl–Leibniz-Zentrum für Informatik.</bibl>
+                    <bibl style="text-align: left; ">Bartalesi, V., Meghini, C., &amp; Metilli, D. (2017). A conceptualisation of narratives and its expression in the CRM. International Journal of Metadata, Semantics and Ontologies, 12(1), 35-46. https://doi.org/10.1504/IJMSO.2017.10005083</bibl>
+                    <bibl style="text-align: left; ">Carroll, N. (2015). Interpretation. In The Routledge companion to philosophy of literature (pp. 302–312). Routledge.</bibl>
+                    <bibl style="text-align: left; ">Chaturvedi, S., Srivastava, S., Daume III, H., &amp; Dyer, C. (2015). Modeling dynamic relationships between characters in literary novels. arXiv preprint arXiv:1511.09376. 
+                        <ref target="http://arxiv.org/abs/1511.09376">http://arxiv.org/abs/1511.09376</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">Ciotti, F. (2016). Toward a formal ontology for narrative. MATLIT: Materialidades da Literatura, 4(1), 29-44.</bibl>
+                    <bibl style="text-align: left; ">Damiano, R. &amp; Lieto, A. (2013). Ontological representations of narratives: a case study on stories and actions. Open Access Series in Informatics, 76-93.</bibl>
+                    <bibl style="text-align: left; ">Damiano, R., Lombardo, V., &amp; Pizzo, A. (2019). The ontology of drama. Applied Ontology, 14(1), 79-118.</bibl>
+                    <bibl style="text-align: left; ">Jannidis, F. (2019). Character. In P. Hühn et al. (Eds.), The living handbook of narratology. Hamburg University.</bibl>
+                    <bibl style="text-align: left; ">Khan, A. F., Bellandi, A., Benotto, G., Frontini, F., Giovannetti, E., &amp; Reboul, M. (2016). Leveraging a narrative ontology to query a literary text. In 7th Workshop on </bibl>
+                    <bibl style="text-align: left; ">Computational Models of Narrative (CMN 2016). Schloss-Dagstuhl-Leibniz Zentrum für Informatik.</bibl>
+                    <bibl style="text-align: left; ">Kukkonen, K. (2019). Plot. In P. Hühn et al. (Eds.), The living handbook of narratology. </bibl>
+                    <bibl style="text-align: left; ">Hamburg University.</bibl>
+                    <bibl style="text-align: left; ">Lea, K. M. (1962). Italian popular comedy: A study in the commedia dell'arte, 1560–1620 with special reference to the English stage (Vol. 1). Russell &amp; Russell.</bibl>
+                    <bibl style="text-align: left; ">Mani, Inderjeet: "Computational Narratology". In: Hühn, Peter et al. (eds.): the living handbook of narratology. Hamburg: Hamburg University. </bibl>
+                    <bibl style="text-align: left; ">Meghini, C., Bartalesi, V., &amp; Metilli, D. (2021). Representing narratives in digital libraries: The narrative ontology. Semantic Web, 12(2), 241-264.</bibl>
+                    <bibl style="text-align: left; ">Mika, P. &amp; Gangemi, A. (2016). Descriptions of social relations. Benefits, 1, 14. 
+                        <ref target="https://doi.org/10.3390/benefits1010014">https://doi.org/10.3390/benefits1010014</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">Nakasone, A. &amp; Ishizuka, M. (2006, December). Storytelling ontology model using RST. In 2006 IEEE/WIC/ACM International Conference on Intelligent Agent Technology (pp. 163-169). IEEE.</bibl>
+                    <bibl style="text-align: left; ">Pannach, F. &amp; Sporleder, C. &amp; May, W., Krishnan, A. &amp; Sewchurran, A. (2021). Of lions and Yakshis. Semantic Web, 12(2), 219-239.</bibl>
+                    <bibl style="text-align: left; ">Pannach, F. &amp; Yang, X. &amp; Solissa, N. V. &amp; Yu, Z. &amp; Van Cranenburgh, A. &amp; Van Der Ree, M. &amp; Pianzola, F. (2024b). The GOLEM Triple Store: A Graph-based Representation of Narrative and Fiction. In Joint of the ESWC 2024 Workshops and Tutorials, ESWC-JP 2024. CEUR Workshop Proceedings (CEUR-WS. org).</bibl>
+                    <bibl style="text-align: left; ">Pannach, F. &amp; Pianzola, F. &amp; Cheng, L. (2024a). The GOLEM Knowledge Graph and Search  Interface: Perspectives into Narrative and Fiction. In Computational Humanities Research 2024.</bibl>
+                    <bibl style="text-align: left; ">Peinado, F. &amp; Gervás, P. &amp; Díaz-Agudo, B. (2004). A description logic ontology for fairy tale generation. In Procs. of the Workshop on Language Resources for Linguistic Creativity, LREC (Vol. 4, pp. 56-61).</bibl>
+                    <bibl style="text-align: left; ">Pianzola, F. (2018). Looking at narrative as a complex system: The proteus principle. In Narrating complexity (pp. 101-122).</bibl>
+                    <bibl style="text-align: left; ">Pianzola, F. &amp; Acerbi, A. &amp; Rebora, S. (2020). Cultural accumulation and improvement in online fan fiction. In CEUR Workshop Proceedings (Vol. 2723). CEUR-WS. org.</bibl>
+                    <bibl style="text-align: left; ">Propp, V. (1968). Morphology of the folktale. University of Texas Press.</bibl>
+                    <bibl style="text-align: left; ">Schöch, C. &amp; Hinzmann, M. &amp; Röttgermann, J. &amp; Dietz, K. &amp; Klee, A. (2022). Smart modelling for literary history. International Journal of Humanities and Arts Computing, 16(1), 78–93.</bibl>
+                    <bibl style="text-align: left; ">Studer, R. &amp; Benjamins, V. R. &amp; Fensel, D. (1998). Knowledge engineering: Principles and methods. Data &amp; knowledge engineering, 25(1-2), 161-197.</bibl>
+                    <bibl style="text-align: left; ">Swartjes, I. &amp; Theune, M. (2006, December). A fabula model for emergent narrative. In International Conference on Technologies for Interactive Digital Storytelling and Entertainment (pp. 49-60). Berlin, Heidelberg: Springer Berlin Heidelberg.</bibl>
+                    <bibl style="text-align: left; ">Zgoll, C. (2020). Myths as polymorphous and polystratic Erzählstoffe. In Mythische Sphärenwechsel: Methodisch neue Zugänge zu antiken Mythen in Orient und Okzident (pp. 9-82).</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

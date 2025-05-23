@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BIRIUCHINSKII_Mikhail_Using_LLMs_for_post_OCR_correction_on_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Using LLMs for post-OCR correction on historical French texts: A case study using synthetic data</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Biriuchinskii</surname>
+                        <forename>Mikhail</forename>
+                    </persName>
+                    <affiliation>ObTIC, Sorbonne University</affiliation>
+                    <email>mikhail.biriuchinskii@sorbonne-universite.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Alrahabi</surname>
+                        <forename>Motasem</forename>
+                    </persName>
+                    <affiliation>ObTIC, Sorbonne University</affiliation>
+                    <email>motasem.alrahabi@sorbonne-universite.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Roe</surname>
+                        <forename>Glenn</forename>
+                    </persName>
+                    <affiliation>ObTIC, Sorbonne University</affiliation>
+                    <email>glenn.roe@sorbonne-universite.fr</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-15T15:30:02.971660404</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>OCR</term>
+                    <term>large language model</term>
+                    <term>synthetic data generation</term>
+                    <term>historical text</term>
+                    <term>digital humanities</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>natural language processing</term>
+                    <term>optical character recognition and handwriting recognition</term>
+                    <term>Computer science</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>Automated text recognition systems have recently achieved remarkable accuracy, with character error rates (CER) as low as 0.01% (Reul et al., 2018). However, transcription quality remains a persistent challenge for degraded or complex layouts, particularly in historical documents. These often feature ornate fonts, physical degradation, and unconventional page layouts, making OCR particularly error-prone.</p>
+                <p>As part of the Valentin Haüy Digital Library project<ref n="1" target="ftn1"/>, our goal is to establish a pipeline for the digitization and OCR of texts, as well as their correction and enriched digital editing. In this paper, we focus on the issue of post-OCR correction.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>State of the art</head>
+                <p>Three main approaches to post-OCR correction are prominent: lexical methods, machine learning techniques, and language models (Petkovic et al., 2022). Lexical approaches are declining, but machine learning and pre-trained models show promise.</p>
+                <p>Pre-trained LLMs have garnered interest. Thomas et al. (2024) showed that fine-tuned Llama-2 models reduced CER by 50% in the British newspaper dataset BLN600. Boros et al. (2024) reported mixed results with pre-trained models evaluated with the Post-Correction Improvement Score (PCIS). They noted quality degradation across models and prompts but slight improvements with sentence-level tokenization and zero-shot prompts with explicit instructions for the GPT-4 model.</p>
+                <p>Jonathan Bourne (2024) emphasized diverse training data for OCR correction. Analyzing OCR error distributions with a character-level Markov corruption process, he developed the 'ScrambledText' Python library to simulate OCR errors. Bourne found that augmenting datasets with synthetic errors improved performance on real-world data.</p>
+                <p>Our study builds on these insights to explore the application of advanced LLMs for post-OCR correction, focusing on the unique challenges presented by French historical texts. </p>
+                <p>OCR evaluation metrics vary, sometimes incorporating semantic or morphosyntactic features based on evaluation needs (Roux et al., 2022). This study used WER, CER, and PCIS (Boros et al., 2024). PCIS (-1 to 1) reflects improvement (positive) or degradation (negative).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Dataset &amp; Preprocessing</head>
+                <p>
+                    <hi rend="color(#000000)">The dataset</hi>
+                    <hi rend="color(#000000)"><ref n="2" target="ftn2"/>
+                    </hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">used is from the ICDAR 2017 competition corpus (Chiron et al., 2017a; 2017b), containing historical OCR transcriptions aligned with ground truth (GT). Texts were filtered by publication year (19th century), type (monograph), and language (French).</hi>
+                </p>
+                <p>After character-level preprocessing<ref n="3" target="ftn3"/>, OCR and GT texts were tokenized with pySBD (Sadvilkar &amp; Neumann, NLPOSS 2020), ensuring identical phrase splits. A similarity threshold of 85% was applied via the ‘FuzzyWuzzy’ module to verify sentence pairing.
+                </p>
+                <p>Table 1 summarizes the dataset, detailing sizes of training, development, and test sets with CER and WER medians. A filter limited zero CER cases to 15%, ensuring models learned to preserve accurate OCR outputs. Consequently, 89% of cases showed 0-0.03 CER between OCR and GT pairs.</p>
+                <table rend="frame" xml:id="Table1">
+                    <row>
+                        <cell/>
+                        <cell rend="center color(#000000)bold">Train</cell>
+                        <cell rend="center color(#000000)bold">Dev</cell>
+                        <cell rend="center color(#000000)bold">Test</cell>
+                    </row>
+                    <row>
+                        <cell rend="center color(#000000)bold">Phrases</cell>
+                        <cell rend="center color(#000000)">2.63k</cell>
+                        <cell rend="center color(#000000)">336</cell>
+                        <cell rend="center color(#000000)">301</cell>
+                    </row>
+                    <row>
+                        <cell rend="center color(#000000)bold">Characters</cell>
+                        <cell rend="center color(#000000)">434k</cell>
+                        <cell rend="center color(#000000)">48k</cell>
+                        <cell rend="center color(#000000)">46k</cell>
+                    </row>
+                    <row>
+                        <cell rend="center color(#000000)bold">CER </cell>
+                        <cell rend="center color(#000000)">0.0126</cell>
+                        <cell rend="center color(#000000)">0.0147</cell>
+                        <cell rend="center color(#000000)">0.0139</cell>
+                    </row>
+                    <row>
+                        <cell rend="center color(#000000)bold">WER </cell>
+                        <cell rend="center color(#000000)">0.0552</cell>
+                        <cell rend="center color(#000000)">0.0632</cell>
+                        <cell rend="center color(#000000)">0.0621</cell>
+                    </row>
+                </table>
+                <p>
+                    <hi rend="italic">Table 1: </hi>
+                    <hi rend="italic"> Summary of the dataset's characteristics</hi>
+                </p>
+                <p>To increase CER diversity, the ‘ScrambledText’ Python module introduced realistic OCR errors based on observed error probabilities. This created a ‘Sentence_OCR_corrupted’ version, raising CER in 51% of sentences to 0.07 – 0.11.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Case Study</head>
+                <p>We used the Llama-3.2-3B-Instruct model for OCR correction with a resource-constrained setup using Low-Rank Adaptation (LoRA) for efficient fine-tuning. Experiments were conducted on two instruction datasets: “natural” with authentic OCR errors and “synthetic” augmented with simulated errors from the ‘ScrambledText’ library.</p>
+                <table rend="frame" xml:id="Table2">
+                    <row>
+                        <cell rend="center color(#000000)bold">Prompt template</cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <p rend="justify color(#000000)">You are performing a task to correct OCR-processed text.</p>
+                            <p rend="justify color(#000000)">1. Correct OCR errors (missing letters, accents) in the text provided from the Gallica digital library.  </p>
+                            <p rend="justify color(#000000)">2. Preserve the 19th-century style and language, avoiding modernization.  </p>
+                            <p rend="justify color(#000000)">3. Do not alter line break markers (e.g., seu-lement, oc-tobre).  </p>
+                            <p rend="justify color(#000000)">4. Return the corrected text only between the tags `&lt;RESULT&gt;&lt;/RESULT&gt;`.</p>
+                        </cell>
+                    </row>
+                </table>
+                <p>
+                    <hi rend="italic">Table </hi>
+                    <hi rend="italic">2</hi>
+                    <hi rend="italic">: </hi>
+                    <hi rend="italic"> Prompt translation from French</hi>
+                </p>
+                <p>This approach evaluated the impact of different training data on model performance. Task-specific details were included in prompts to improve contextual understanding, and formatting constraints required wrapping corrected text in XML-style tags.</p>
+                <p>Using LoRA, we adapted the model efficiently without updating all parameters, reducing computational demands. Fine-tuning employed 4-bit quantization for memory efficiency with Hugging Face TRL's SFTTrainer, evaluating every 30 steps and applying early stopping after 7 steps without improvement.</p>
+                <p>3 models were prepared for this study:</p>
+                <list type="unordered">
+                    <item>
+                        <hi rend="bold">Base model</hi> trained on “natural” errors of the original dataset;
+                    </item>
+                    <item>
+                        <hi rend="bold">Synth model</hi> trained on phrases with “synthetic” errors;
+                    </item>
+                    <item>
+                        <p>
+                            <hi rend="bold">Mixed model</hi> trained on 80% “natural” and 20% “synthetic” errors.
+                        </p>
+                    </item>
+                </list>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results</head>
+                <p>All three final models showed negative PCIS scores, suggesting that the fine-tuning process did not improve the OCR output:</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpuw6_4eca/Pictures/60eb64b4b40dbac56d74a61a5e08fa5f.png"/>
+                        <head>Average of post-correction improvement score (PCIS) per model and dataset evaluation type</head>
+                    </figure>
+                </p>
+                <p>Figure 2 &amp; 3 show that the best-performing model, which was fine-tuned on and tested with real data, did not achieve significant improvements in terms of CER and WER, indicating that the LLMs were unsuccessful in reducing these error rates for this dataset.</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpuw6_4eca/Pictures/60eb64b4b40dbac56d74a61a5e08fa5f.png"/>
+                        <head>Comparison of Average Model Character Error Rates</head>
+                    </figure>
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpuw6_4eca/Pictures/60eb64b4b40dbac56d74a61a5e08fa5f.png"/>
+                        <head>Comparison of Average Word Error Rates</head>
+                    </figure>
+                </p>
+                <p>These results highlight the inherent challenges of generalization that arise when using LLMs to correct OCR output on historical documents. Anecdotally, LLMs – especially when used through the chatbot interfaces they power – are capable of OCR text correction at a fine-grained level, but even then can be prone to overcorrection and hallucinations. At the scale of large corpora, LLMs still fall short of surpassing the state-of-the-art in post-OCR correction, particularly for historical texts. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Perspectives &amp; limitations</head>
+                <p>This study illustrates the difficulties of achieving positive results in real-world conditions, where resource constraints often prevent the full potential of advanced techniques from being realized. Although this result does not have an immediate impact on our project (since the expected digital edition at the end of the project will still require manual correction after the automatic process), we aim to focus in the near future on optimizing training strategies and exploring alternative approaches. This includes developing a custom dataset, integrating more sophisticated error simulations, or leveraging greater computational resources.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Data availability</head>
+                <p>
+                    <hi rend="color(#000000)">The code and data resources used in this work are available at : </hi>
+                    <ptr target="https://github.com/obtic-sorbonne/ocr_correction"/>
+                    <hi rend="color(#000000)">.</hi>
+                </p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn1" rend="footnote text" n="1">
+                        
+                            <anchor xml:id="id_docs-internal-guid-52619cd1-7fff-0a5b-6b11-15c69e6e8f20"/>
+                            <hi rend="color(#000000)">  </hi>
+                            
+                        
+                    </note>
+<note xml:id="ftn2" rend="footnote text" n="2">
+                            
+                                <hi rend="color(#1155cc)underline"> </hi>
+                                
+                                <hi rend="color(#000000)">. See also </hi>
+                                
+                                <hi rend="color(#000000)"> </hi>
+                                <hi rend="color(#000000)">and </hi>
+                                
+                                <hi rend="color(#000000)">. </hi>
+                            
+                        </note>
+<note xml:id="ftn3" rend="footnote text" n="3">
+                        
+                            <anchor xml:id="id_docs-internal-guid-6206bdd7-7fff-fd82-6e00-91940b91b643"/> Symbols such as "@" mark alignment points, while "#" represents uncertainties in the dataset. Since no images of the original documents were included, we first preprocessed the GT by replacing "#" symbols with the corresponding OCR characters to maintain input coherence. This ensures that LLMs can identify and learn patterns in corrupted text, leaving untouched the corrupted text difficult to reconstruct.
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Baňeras Roux, Thibault / Rouvier, Mickael / Wottawa, Jane / Dufour, Richard (2022) : « Mesures linguistiques automatiques pour l’évaluation des systèmes de Reconnaissance Automatique de la Parole », in : 
+                        <emph>29ème Conférence sur le Traitement Automatique des Langues Naturelles (TALN)</emph>, Avignon, France.
+                        <lb/>&lt;
+                        <ptr target="https://hal.science/hal-03688029v2"/>&gt; [16.04.2025].
+                    </bibl>
+                    <bibl>Boros, Emanuela / Ehrmann, Maud / Romanello, Matteo / Najem-Meyer, Sven / Kaplan, Frédéric (2024) : « Post-Correction of Historical Text Transcripts with Large Language Models: An Exploratory Study », in : 
+                        <emph>Proceedings of the 8th Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature (LaTeCH-CLfL 2024)</emph>, St. Julians, Malta : 133–159.
+                        <lb/>&lt;
+                        <ptr target="https://aclanthology.org/2024.latechclfl-1.14/"/>&gt; [16.04.2025].
+                    </bibl>
+                    <bibl>Bourne, Jonathan (2024) : « Scrambled Text: Training Language Models to Correct OCR Errors Using Synthetic Data », in : 
+                        <emph>arXiv preprint</emph> arXiv:2409.19735.
+                        <lb/>&lt;
+                        <ptr target="https://arxiv.org/abs/2409.19735"/>&gt; [16.04.2025].
+                    </bibl>
+                    <bibl>Chiron, Guillaume / Doucet, Antoine / Coustaty, Mickaël / Moreux, Jean-Philippe (2017a) : « ICDAR2017 Competition on Post-OCR Text Correction », in : 
+                        <emph>2017 14th IAPR International </emph>
+                        <emph>Conference on Document Analysis and Recognition (ICDAR)</emph>, vol. 01 : 1423–1428.
+                        <lb/>&lt;
+                        <ptr target="https://ieeexplore.ieee.org/document/8270163"/>&gt; [16.04.2025].
+                    </bibl>
+                    <bibl>Chiron, Guillaume / Doucet, Antoine / Coustaty, Mickaël / Visani, Muriel / Moreux, Jean-Philippe (2017b) : « Impact of OCR Errors on the Use of Digital Libraries: Towards a Better Access to Information », in : 
+                        <emph>Proceedings of the 17th ACM/IEEE Joint Conference on Digital Libraries</emph>, Toronto, ON, Canada : 249–252.
+                        <lb/>&lt;
+                        <ptr target="https://ieeexplore.ieee.org/document/7991582"/>&gt; [16.04.2025].
+                    </bibl>
+                    <bibl>Guan, Shan / Greene, Derek (2024) : « Advancing Post-OCR Correction: A Comparative Study of Synthetic Data », in : 
+                        <emph>Findings of ACL 2024</emph>.
+                        <lb/>&lt;
+                        <ptr target="https://aclanthology.org/2024.findings-acl.361/"/>&gt; [16.04.2025].
+                    </bibl>
+                    <bibl>Petkovic, Ljudmila / Alrahabi, Motasem / Roe, Glenn (2022) : « Impact de la correction automatique de l’OCR/HTR sur la reconnaissance d’entités nommées dans un corpus bruité », in : 
+                        <emph>JIS – Journal of Information Sciences</emph> 21, 2 : 42–57.
+                        <lb/>&lt;
+                        <ptr target="https://hal.science/hal-04063970"/>&gt; [16.04.2025].
+                    </bibl>
+                    <bibl>Reul, Christian / Springmann, Uwe / Wick, Christoph / Puppe, Frank (2018) : « State of the Art Optical Character Recognition of 19th Century Fraktur Scripts Using Open Source Engines », in : 
+                        <emph>arXiv preprint</emph> arXiv:1810.03436.
+                        <lb/>&lt;
+                        <ptr target="https://arxiv.org/abs/1810.03436"/>&gt; [16.04.2025].
+                    </bibl>
+                    <bibl>Sadvilkar, Nipun / Neumann, Mark (2020) : « PySBD: Pragmatic Sentence Boundary Disambiguation », in : 
+                        <emph>Proceedings of the Second Workshop for NLP Open Source Software (NLP-OSS)</emph>, Online : 110–114.
+                        <lb/>&lt;
+                        <ptr target="https://aclanthology.org/2020.nlposs-1.15/"/>&gt; [16.04.2025].
+                    </bibl>
+                    <bibl>Thomas, Alan / Gaizauskas, Robert / Lu, Haiping (2024) : « Leveraging LLMs for Post-OCR Correction of Historical Newspapers », in : 
+                        <emph>Proceedings of the Third Workshop on Language Technologies for Historical and Ancient Languages (LT4HALA) @ LREC-COLING 2024</emph>, Torino, Italia : 116–121.
+                        <lb/>&lt;
+                        <ptr target="https://aclanthology.org/2024.lt4hala-1.14/"/>&gt; [16.04.2025].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

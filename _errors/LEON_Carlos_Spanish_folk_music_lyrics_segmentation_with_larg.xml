@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LEON_Carlos_Spanish_folk_music_lyrics_segmentation_with_larg">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Spanish folk music lyrics segmentation with large language models and verse metrics</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Sachez Carrasco</surname>
+                        <forename>María</forename>
+                    </persName>
+                    <affiliation>Dept. of Computer Science and Artificial Intelligence, Universidad Complutense de Madrid, Spain</affiliation>
+                    <email>marsache@ucm.es</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Romero Hernández</surname>
+                        <forename>Alejandro</forename>
+                    </persName>
+                    <affiliation>Dept. of Computer Science and Artificial Intelligence, Universidad Complutense de Madrid, Spain</affiliation>
+                    <email>alerom02@ucm.es</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>León</surname>
+                        <forename>Carlos</forename>
+                    </persName>
+                    <affiliation>Dept. of Computer Science and Artificial Intelligence, Universidad Complutense de Madrid, Spain</affiliation>
+                    <email>cleon@ucm.es</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Reyes Zúñiga</surname>
+                        <forename>Lénica</forename>
+                    </persName>
+                    <affiliation>PTNera Consulting, Spain</affiliation>
+                    <email>lenica@ptneraconsulting.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Hernández Jaramillo</surname>
+                        <forename>José Miguel</forename>
+                    </persName>
+                    <affiliation>PTNera Consulting, Spain</affiliation>
+                    <email>jmhj@ptneraconsulting.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Gonçalo Oliveira</surname>
+                        <forename>Hugo</forename>
+                    </persName>
+                    <affiliation>CISUC/LASI, Dept. Informatics Engineering, University of Coimbra, Portugal</affiliation>
+                    <email>hroliv@dei.uc.pt</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T10:49:15.553074370</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>folk music</term>
+                    <term>lyrics</term>
+                    <term>large language models</term>
+                    <term>verse</term>
+                    <term>dataset</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>digital libraries creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>music and sound digitization</term>
+                    <term>encoding</term>
+                    <term>and analysis</term>
+                    <term>text mining and analysis</term>
+                    <term>Ethnography and folklore</term>
+                    <term>Literary studies</term>
+                    <term>Musicology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1">
+                <head>
+                    <anchor xml:id="id__r8bjef5i4enl"/>Introduction
+                </head>
+                <p>The comparative analysis of music, particularly within oral tradition repertoires, presents a significant challenge in the technological realm. Despite numerous efforts, the outcomes have often fallen short of expectations set by (ethno)musicologists. Ethnomusicologist Miguel A. García and others have highlighted risks associated with studies in digital humanities that prioritize technological innovation over qualitative results, a phenomenon known as “technodeterminism”, and other ethical issues 
+                    <ref target="https://www.zotero.org/google-docs/?aV9rRU">(García, 2016; Holzapfel et al., 2018)</ref>. The core challenge is to align mathematical measures of musical similarity with the culturally and contextually significant aspects valued by (ethno)musicologists, as many algorithms fail to capture these nuances, rendering them ineffective for (ethno)musicological purposes.
+                </p>
+                <p>In response to these challenges, some propose an innovative approach based on their experience with the semi-automatic comparison of large musical corpora from both oral and academic traditions
+                    <hi rend="color(#0000ff)"> </hi>
+                    <ref target="https://www.zotero.org/google-docs/?GKtizS">(Hernández Jaramillo, 2015; L. R. Z. y J. M. H. Jaramillo, s. f.; Zúñiga, 2011, 2015)</ref>. This approach emphasizes segmenting musical pieces and comparing these segments rather than conducting blind searches across long note sequences in entire pieces. For music from sung oral traditions, it was found that segmenting by verses is particularly effective when songs contain poetic text. This enables the comparison of the music associated with each verse to that of others 
+                    <ref target="https://www.zotero.org/google-docs/?NQbw5L">(J. M. H. Jaramillo &amp; Zúñiga, 2018)</ref> and allows for a more precise and contextualized comparison of the music associated with each verse.
+                </p>
+                <p>However, this presents a challenge. To analyze large musical corpora encoded in formats like XML or MEI, it is crucial to clearly identify where each verse begins and ends. When these files include the sung syllable for each note, the initial challenge is to determine the boundaries of each verse. For this, one has to develop a system that segments not only by considering the melody of the verse but also its metric structure. </p>
+                <p>Additionally, the existing materials are hard to analyse because they are heterogeneous, and were collected through different systems and during different periods. The automatic digitalization of the materials is lossy. Many involve optical character recognition processes of sometimes hand-written lyrics).</p>
+                <p>Automatic text analysis has recently seen a revolution with the widespread use of large language models (LLMs). LLMs are relatively recent machine-learning models trained on vast amounts of textual corpora. They have been used in a wide range of language oriented tasks (
+                    <hi rend="color(#222222) background-color(#ffffff)">Törnberg,2023; </hi>Rathje, 2024) with outstanding results in some of them. Based on the 
+                    <hi rend="italic">Transformer</hi> architecture 
+                    <ref target="https://www.zotero.org/google-docs/?3gePZK">(Vaswani et al., 2017)</ref>, these models have outperformed previous approaches in a wide range of tasks. Additionally, their use for text analysis tasks has been democratized with open models. Their utilization is simple because simple prompting and zero-shot learning implies predictions without supervision or annotated data. Yet, while LLMs typically produce human-like output, it is well known that they tend to 
+                    <hi rend="italic">hallucinate</hi>, or give outputs that may seem structurally correct, but deviate from a reasonable response.
+                </p>
+                <p>Still, the application of LLMs for segmenting song lyrics by verses is so far unexplored. In this paper, we report on a comparison of purely algorithmic lyrics segmentation with the result obtained by prompting open source LLMs. </p>
+            </div>
+            <div type="div1">
+                <head>
+                    <anchor xml:id="id__wez2ik1la7hn"/>Comparative study of verse segmentation
+                </head>
+                <p>As previously introduced, this study is focused on analysing the available datasets of Spanish lyrics of folk songs, including songs from Spain and Mexico, acquired from diverse sources: scanned documents with automatic text recognition and digital versions. The corpus includes songs catalogued during the XVII, XIX and XX centuries. The corpus includes musical information, but it was discarded for this study. The available digital resources are not fully curated and have missing information and errors. Given the size of the corpus and particularities of the content, fixing them by hand is both costly and time consuming because, in many cases, there is no clear golden standard. Folk songs are usually transmitted orally and the way in which they are sung does not correspond to the classic verse analysis. Besides, the texts do not conform to normative Spanish, including highly colloquial, hard to automatically parse constructions (“Y hágase p’acá”) and non-existing words (“
+                    <hi rend="italic">a la rorrorró</hi>”; “
+                    <hi rend="italic">larán larán larito</hi>”).
+                </p>
+                <p>In this paper, we report on a two-fold study: a metric-based algorithm and a method based on prompting LLMs. The former is based on searching for possible options within a symmetric division of the verses. Given a text and following the general syllable-counting rules, we explore all possible segmentations (from 5-syllable to 16-syllable verses), discarding those that do not comply with the established rules. For this, we divide text into verses of 
+                    <hi rend="italic">N</hi> syllables and check if they violate any rules. This gives us a list of viable versifications, which we then filter based on the number of rhymes, selecting the one with the highest number. The results have been compared against a golden standard analysis carried out by experts.
+                </p>
+                <p>We have compared the algorithmic solution against the LLM 
+                    <hi rend="italic">Mistral Large</hi>
+                    <ref target="https://www.zotero.org/google-docs/?z7O96k">(Jiang et al., 2023)</ref>. Among the freely available LLMs, the performance of Mistral competes with OpenAI’s models, which are closed 
+                    <ref target="https://www.zotero.org/google-docs/?8vnuQ6">(OpenAI, 2024)</ref>. For this, each song was fed to the model with the prompt in Figure 1.
+                </p>
+                <table rend="frame" xml:id="Table1">
+                    <row>
+                        <cell rend="justify">
+                            <hi rend="italic">You are someone who uses segmentation to divide a song into verses. Add no comment about the reflective process. Write only the verses separated by line breaks. Output a JSON and just a JSON. The JSON has only two fields: 'Verses', with the segmented song as a single string separated by line breaks; and another field called 'Syllables', an array with the number of syllables of every segmented verse. Must be integer numbers, not strings. Underscores mean syllables that count as one, that is, a synalepha. This is the song you have to parse: “</hi>
+                            <hi rend="italic">{SONG LYRICS}</hi>
+                            <hi rend="italic">”.</hi>
+                        </cell>
+                    </row>
+                </table>
+                <p>
+                    <hi rend="italic">Figure 1: Prompt used for verse analysis (</hi>
+                    <hi rend="italic">{SONG LYRICS}</hi>
+                    <hi rend="italic"> would be replaced by the content of the song on each case).</hi>
+                </p>
+                <p>The analysis included 121 songs. Each song was analysed by the algorithm and through the LLM, outputting the verses and their computed length in syllables. Additionally, the automated lyrics segmentation was compared against a hand-made division carried out by two experts. </p>
+            </div>
+            <div type="div1">
+                <head>
+                    <anchor xml:id="id__247exaa4gtyh"/>Results and analysis
+                </head>
+                <p>For each song, the analysis yielded a specific verse division. Each of them was compared against a golden standard of hand-made analysis by the experts. </p>
+                <p>The algorithm yielded an average difference of 1.76 syllables per verse (stdev=2.81, min=0, max=11). That is, on average, the algorithm had 1.76 wrong syllables. It is important to note that the deviation from the correct version is accumulative: once verse 
+                    <hi rend="italic">N</hi> is wrongly identified, most remaining verses do not match the correct version. Thus, the high values do not represent the sample well, as they are produced by linguistic structures that are very hard to recognize.
+                </p>
+                <p>The LLM version shows an average deviation of 2.99 syllables per verse (stdev=3.00, min=0, max=15). In some cases, the verse is correctly recognized but the counting is wrong, so it could be fixed by hand or by counting the output syllables with other approaches. For the sake of comparability, the original output is provided.</p>
+                <p>Results show that LLMs have a clear tendency to 
+                    <hi rend="italic">hallucinate </hi>
+                    <ref target="https://www.zotero.org/google-docs/?6OAs9o">(Huang et al., 2024)</ref>. This was expected, but adjusting the prompt to achieve less incoherent results has not led to reliable results. While not perfect, the algorithm performs better in general.
+                </p>
+                <p>Spanish poetry metrics include synalephas, but sung lyrics can use it or not, therefore bypassing its application. Some lyrics in the dataset include underscores to indicate a synalepha but others do not. The algorithm considers this information, but the analysis through the LLM does not address it specifically, and given the complexity of the model, it is challenging to quantify the impact. In any case, the used dataset currently includes 258 underscores out of 2814 words (less than 1 per 10 words), so it is assumed that the actual qualitative impact does not greatly impact the conclusions. </p>
+            </div>
+            <div type="div1">
+                <head>
+                    <anchor xml:id="id__wwswzhd9ikyp"/>Conclusions
+                </head>
+                <p>Comparative study of folk music lyrics is a challenging task. Particularly, analysing available corpora implies a number of challenges, because the data is imperfect. We have reported on a comparative automatic study of Spanish folk songs lyrics, using LLM versus an algorithm for computing the metrics. Acquired data reveals the inherent limitations of automatic lyrics segmentation using LLMs, and the way in which data is stored makes it impossible to achieve reliable performance with classic metric counting methods. Results lead us to conclude that straightforward methods are not sufficient to analyse existing databases, and hybrid approaches, combining different techniques and possibly human-based curation are needed.</p>
+                <p>The pace of evolution of LLMs makes it difficult to predict robust improvements for specific tasks, including verse identification. However, it is not possible to discard qualitatively better results with more developed models, in particular with fine-tuning methods.</p>
+            </div>
+            <div type="div1">
+                <head>
+                    <anchor xml:id="id__s0bvzhgi01y7"/>Acknowledgements
+                </head>
+                <p>This work is funded by the “
+                    <hi rend="italic">EA-DIGIFOLK: An European and Ibero-American approach for the digital collection, analysis and dissemination of folk music</hi>” project (grant agreement no. 101086338), funded by the European Commission.
+                </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Rathje, S., Mirea, D. M., Sucholutsky, I., Marjieh, R., Robertson, C. E., &amp; Van Bavel, J. J. (2024). GPT is an effective tool for multilingual psychological text analysis. Proceedings of the National Academy of Sciences, 121(34), e2308950121.</bibl>
+                    <bibl>Törnberg, P. (2023). How to use llms for text analysis. arXiv preprint arXiv:2307.13106.</bibl>
+                    <bibl>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">García, M. A. (2016). Some Questions Related to Musicology and its Methods. </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">
+                            <hi rend="italic">El oído pensante 4 (1)</hi>
+                        </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">. https://www.academia.edu/23874308/Some_Questions_Related_to_Musicology_and_its_Methods</ref>
+                    </bibl>
+                    <bibl>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">Hernández Jaramillo, J. M. (2015). </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">
+                            <hi rend="italic">Automatización computacional del análisis paradigmático musical. Su aplicación a la música del Flamenco</hi>
+                        </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">[Http://purl.org/dc/dcmitype/Text, Universidad de Sevilla]. https://dialnet.unirioja.es/servlet/tesis?codigo=145667</ref>
+                    </bibl>
+                    <bibl>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">Holzapfel, A., Sturm, B., &amp; Coeckelbergh, M. (2018). Ethical Dimensions of Music Information Retrieval Technology. </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">
+                            <hi rend="italic">Transactions of the International Society for Music Information Retrieval</hi>
+                        </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">, </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">
+                            <hi rend="italic">1</hi>
+                        </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">(1), 44-55.</ref>
+                    </bibl>
+                    <bibl>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">Huang, L., Yu, W., Ma, W., Zhong, W., Feng, Z., Wang, H., Chen, Q., Peng, W., Feng, X., Qin, B., &amp; Liu, T. (2024). A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions. </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">
+                            <hi rend="italic">ACM Trans. Inf. Syst. </hi>
+                        </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">https://doi.org/10.1145/3703155</ref>
+                    </bibl>
+                    <bibl>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">Jaramillo, J. M. H., &amp; Zúñiga, L. R. (2018). El sonecito del churripampli. Un acercamiento a las prácticas musicales de las clases subalternas del periodo colonial. </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">
+                            <hi rend="italic">Músicas coloniales a debate. Procesos de intercambios euroamericanos</hi>
+                        </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">. https://www.academia.edu/39767848/El_sonecito_del_churripampli_Un_acercamiento_a_las_pr%C3%A1cticas_musicales_de_las_clases_subalternas_del_periodo_colonial</ref>
+                    </bibl>
+                    <bibl>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">Jaramillo, L. R. Z. y J. M. H. (s. f.). </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">
+                            <hi rend="italic">De jarabes, puntos, zapateos y guajiras. Un sistema musical de transformaciones (Siglos XVIII-XXI)</hi>
+                        </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">. Lénica Reyes Zúñiga y José Miguel Hernández Jaramillo. Recuperado 6 de diciembre de 2024, de https://www.gerinel.org/index.php/es/publicaciones/tesis/de-jarabes-puntos-zapateos-y-guajiras-un-sistema-musical-de-transformaciones-siglos-xviii-xxi</ref>
+                    </bibl>
+                    <bibl>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">Jiang, A. Q., Sablayrolles, A., Mensch, A., Bamford, C., Chaplot, D. S., Casas, D. de las, Bressand, F., Lengyel, G., Lample, G., Saulnier, L., Lavaud, L. R., Lachaux, M.-A., Stock, P., Scao, T. L., Lavril, T., Wang, T., Lacroix, T., &amp; Sayed, W. E. (2023). </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">
+                            <hi rend="italic">Mistral 7B</hi>
+                        </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">(No. arXiv:2310.06825). arXiv. https://doi.org/10.48550/arXiv.2310.06825</ref>
+                    </bibl>
+                    <bibl>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">OpenAI. (2024). </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">
+                            <hi rend="italic">ChatGPT</hi>
+                        </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">[Software]. https://chat.openai.com/chat</ref>
+                    </bibl>
+                    <bibl>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł. ukasz, &amp; Polosukhin, I. (2017). Attention is All you Need. </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">
+                            <hi rend="italic">Advances in Neural Information Processing Systems</hi>
+                        </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">, </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">
+                            <hi rend="italic">30</hi>
+                        </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">. https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html</ref>
+                    </bibl>
+                    <bibl>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">Zúñiga, L. R. (2011). </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">
+                            <hi rend="italic">La petenera en México. Hacia un sistema de transformaciones (Tesis de maestría)</hi>
+                        </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">. https://www.academia.edu/14464918/La_petenera_en_M%C3%A9xico_Hacia_un_sistema_de_transformaciones_Tesis_de_maestr%C3%ADa_</ref>
+                    </bibl>
+                    <bibl>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">Zúñiga, L. R. (2015). </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">
+                            <hi rend="italic">Las malagueñas del siglo XIX en España y México. Historia y sistema musical (Tesis doctoral, etnomusicología)</hi>
+                        </ref>
+                        <ref target="https://www.zotero.org/google-docs/?khDnSz">. https://www.academia.edu/17690517/Las_malague%C3%B1as_del_siglo_XIX_en_Espa%C3%B1a_y_M%C3%A9xico_Historia_y_sistema_musical_Tesis_doctoral_etnomusicolog%C3%ADa_</ref>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

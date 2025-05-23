@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="TWENTE_Moritz_Minimal_Computing_Meets_Public_History__The_St">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Minimal Computing Meets Public History: The Stadt.Geschichte.Basel Approach to Open Research Data with CollectionBuilder</title>
+                <author>
+                    <persName>
+                        <surname>Twente</surname>
+                        <forename>Moritz</forename>
+                    </persName>
+                    <affiliation>Universität Basel, Switzerland</affiliation>
+                    <email>moritz.twente@unibas.ch</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Mähr</surname>
+                        <forename>Moritz</forename>
+                    </persName>
+                    <affiliation>Universität Basel, Switzerland; Universität Bern, Switzerland</affiliation>
+                    <email>moritz.maehr@faculty.unibe.ch</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>online collections</term>
+                    <term>open research data</term>
+                    <term>minimal computing</term>
+                    <term>public history</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>physical &amp; minimal computing</term>
+                    <term>project design</term>
+                    <term>organization</term>
+                    <term>management</term>
+                    <term>sustainable procedures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>Archaeology</term>
+                    <term>Computer science</term>
+                    <term>History</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">In an increasingly digital research environment, the long-term accessibility and inclusivity of historical data are often compromised by resource-intensive infrastructures and limited technical expertise. Stadt.Geschichte.Basel addresses this gap by building a sustainable, open-access research data platform using CollectionBuilder, an open-source minimal-computing framework. This poster demonstrates how minimal computing offers a practical, scalable solution for digital history projects by lowering technical barriers, promoting FAIR data principles, and ensuring broader, interdisciplinary reuse of research outputs. Emphasis is put on enhancements developed by the Stadt.Geschichte.Basel team that cater to needs of historical research data and facilitate adapting CollectionBuilder for similar projects.</p>
+            <div type="div1" rend="DH-Heading1">
+                <head>Stadt.Geschichte.Basel</head>
+                <p style="text-align: left; ">At the interdisciplinary research project 
+                    <ref target="https://stadtgeschichtebasel.ch/">Stadt.Geschichte.Basel</ref>, the Research Data Management (RDM) Team supports over 70 archaeologists and historians in investigating the history of Basel from traces of early settlements (50’000 before our time) to the present day and in a ten-volume book series. The RDM team is tasked with developing an 
+                    <ref target="https://forschung.stadtgeschichtebasel.ch/">online research data repository</ref> for providing access to historical research data also after the end of the project (Mähr 2023a). For this platform, the project team turned to 
+                    <ref target="https://collectionbuilder.github.io/">CollectionBuilder</ref> (CB) which is being maintained at the University of Idaho (Williamson et al. 2019). The software’s modular framework provides a suitable foundation for developing a version of CollectionBuilder tailored to the specific needs of a historical research project while keeping up the accessibility and sustainability offered by CollectionBuilder. The project’s research data platform, available at 
+                    <ref target="https://forschung.stadtgeschichtebasel.ch/">forschung.stadtgeschichtebasel.ch</ref>, enables users to access datasets, bibliographic resources, and interactive tools such as maps and timelines, making the rich history of Basel discoverable from diverse perspectives across disciplines and fostering the reuse of our annotated datasets in further research.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Building a Research Data Platform with CollectionBuilder</head>
+                <p style="text-align: left; ">The solution we showcase on this poster addresses issues that are common occurrences in digital humanities projects – such as limited technical expertise, financial constraints, and infrastructure availability (Mähr 2023b). Adherence to principles of minimal computing ensures that projects built with CB remain accessible, functional, and adaptable over time. Efforts of the 
+                    <ref target="https://dokumentation.stadtgeschichtebasel.ch/">Stadt.Geschichte.Basel RDM team</ref> to promote their research data platform design include introductory CollectionBuilder workshops for users with little IT expertise and infrastructure (Görlich et al. 2024a and 2024b) that illustrate how our approach to making research data accessible is pragmatic, accessible and long-term viable.
+                </p>
+                <p style="text-align: left; ">CollectionBuilder, the open-source tool powering the Stadt.Geschichte.Basel platform, is an open-source, minimal-computing tool that empowers researchers, educators, GLAM professionals and citizen scientists to create accessible digital collections and exhibits. CB is built on the static site generator Jekyll and hosted on GitHub Pages, adhering to minimal computing principles. Its lightweight and modular structure allows for rapid development of sustainable digital humanities projects. CB offers multiple versions, ranging from simplified options suitable for users with minimal technical expertise to more robust versions for teams with programming experience. Use cases range from smaller collections with data being stored locally or on e.g. Wikimedia Commons, to bigger projects such as the Stadt.Geschichte.Basel project that uses an Omeka instance for storing high-resolution research data.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Our Enhancements for Historical Research Data</head>
+                <p style="text-align: left; ">Developing their platform, the Stadt.Geschichte.Basel team built on CollectionBuilder‘s foundational functionality by introducing enhancements to improve usability for diverse audience and to address scholarly requirements regarding display and annotation possibilities for a wide range of data types (Mähr 2022). Showcasing the Stadt.Geschichte.Basel platform as a case study, these features are also being introduced on this poster: 
+                    <ref target="https://github.com/Stadt-Geschichte-Basel/forschung.stadtgeschichtebasel.ch">Our own additions</ref> to the CollectionBuilder environment include the integration of an OMEKA server for data storage and cooperation with the Swiss National Data and Service Center for the Humanities (DaSCH) for long-term archiving. In terms of frontend development, an upgraded timeline supports the Extended Date/Time Format (EDTF), enabling more precise representation of historical dates. A new interactive map view for geoJSON files enhances the exploration of spatial data, while a searchable table format allows for the display of tabular data directly within the online collection. To ensure inclusivity, multi-language support has been implemented, offering themes in German and Spanish alongside English as the default language. Ethical considerations are reflected by annotating our data with discriminatory-free metadata  (Mähr/Schnegg 2024) and users are presented with the possibility to directly give feedback on faulty data, promoting data accuracy and community engagement. The Stadt.Geschichte.Basel research data platform’s code is – just as CollectionBuilder itself – openly 
+                    <ref target="https://github.com/Stadt-Geschichte-Basel/forschung.stadtgeschichtebasel.ch">available</ref> under the MIT license (Mähr et al. 2024).
+                </p>
+                <p style="text-align: left; ">In summary, this poster illustrates how Stadt.Geschichte.Basel facilitated the creation of their Open Research Data Platform following a minimal-computing approach while enhancing accessibility and inclusivity with carefully tailor-made but adaptable features. This case study underscores the potential of static frameworks like CollectionBuilder to advance open, accessible, and durable digital humanities research.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Görlich, Nico, Moritz Mähr, Moritz Twente, and Cristina Wildisen-Münch. 2024a. “Accessible Public History: Digitale Sammlungen mit CollectionBuilder selbst erstellen.” Contributed Workshop presented at the Praxislabor at Historikertag 2024, online, October 15. 
+                        <ref target="https://doi.org/10.58079/11sc7">
+                            <hi rend="color(467886)">https://doi.org/10.58079/11sc7</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Görlich, Nico, Moritz Mähr, Moritz Twente, and Cristina Wildisen-Münch. 2024b. “Accessible Public History: digitale Sammlungen mit CollectionBuilder selbst erstellen.” Contributed Workshop presented at the Digital History und Citizen Science 2024, University of Halle, September 21. 
+                        <ref target="https://www.conftool.org/digital-humanities-citizen-science-2024/index.php?page=browseSessions&amp;form_session=74">
+                            <hi rend="color(467886)">https://www.conftool.org/digital-humanities-citizen-science-2024/index.php?page=browseSessions&amp;form_session=74</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Mähr, Moritz. 2023a. ‘Digital Longevity: Learnings from the (Digital) History Project Stadt.Geschichte.Basel’. Paper presented at Legal History Meets Digital Humanities, Max Planck Institute for Legal History and Legal Theory, December 12.
+                        <ref target="https://doi.org/10.5281/zenodo.10368874">
+                            <hi rend="color(467886)">https://doi.org/10.5281/zenodo.10368874</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Mähr, Moritz. 2023b. ‘Accessible Public History: CollectionBuilder’s Minimalist Approach to Open-Source Collections and Exhibits’. Infrastructure pitch presented at DARIAH-CH Study Day, University of Bern, October 20.
+                        <ref target="https://doi.org/10.5281/zenodo.10003519">
+                            <hi rend="color(467886)">https://doi.org/10.5281/zenodo.10003519</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Mähr, Moritz. 2022. ‘Research Data Management in (Public) History’. Key note presented at the Digital Humanities Methodologies DHCH 2022, Istituto Svizzero di Roma, June 15.
+                        <ref target="https://doi.org/10.5281/zenodo.6637118">
+                            <hi rend="color(467886)">https://doi.org/10.5281/zenodo.6637118</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Mähr, Moritz, Nico Görlich and Moritz Twente. 2024. Stadt.Geschichte.Basel Research Data Platform [Computer software]. 
+                        <ref target="https://github.com/Stadt-Geschichte-Basel/forschung.stadtgeschichtebasel.ch">
+                            <hi rend="color(467886)">https://github.com/Stadt-Geschichte-Basel/forschung.stadtgeschichtebasel.ch</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Mähr, Moritz, and Noëlle Schnegg. 2024. ‘Handbuch zur Erstellung diskriminierungsfreier Metadaten für historische Quellen und Forschungsdaten: Erfahrungen aus dem geschichtswissenschaftlichen Forschungsprojekt Stadt.Geschichte.Basel’. Zenodo.
+                        <ref target="https://doi.org/10.5281/ZENODO.11124720">
+                            <hi rend="color(467886)">https://doi.org/10.5281/ZENODO.11124720</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Williamson, Peter, Devin Becker, and Olivia Wikle. 2019. ‘CollectionBuilder Project’.
+                        <ref target="https://collectionbuilder.github.io/">
+                            <hi rend="color(467886)">https://collectionbuilder.github.io/</hi>
+                        </ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

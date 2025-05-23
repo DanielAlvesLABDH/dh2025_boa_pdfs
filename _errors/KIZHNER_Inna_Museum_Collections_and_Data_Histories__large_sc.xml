@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KIZHNER_Inna_Museum_Collections_and_Data_Histories__large_sc">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Museum Collections and Data Histories: large scale analysis and close reading of Jewish-related metadata in the online collection of the British Museum</title>
+                <author>
+                    <persName>
+                        <surname>Kizhner</surname>
+                        <forename>Inna</forename>
+                    </persName>
+                    <affiliation>Haifa University, Israel</affiliation>
+                    <email>inna.kizhner@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Skorinkin</surname>
+                        <forename>Daniil</forename>
+                    </persName>
+                    <affiliation>University of Potsdam, Germany</affiliation>
+                    <email>daniil.skorinkin@uni-potsdam.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Netzer</surname>
+                        <forename>Yael</forename>
+                    </persName>
+                    <affiliation>Hebrew University of Jerusalem, Israel</affiliation>
+                    <email>yael.netzer@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Zaagsma</surname>
+                        <forename>Gerben</forename>
+                    </persName>
+                    <affiliation>University of Luxembourg, Luxembourg</affiliation>
+                    <email>gerben.zaagsma@uni.lu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Likhter</surname>
+                        <forename>Julia</forename>
+                    </persName>
+                    <affiliation>Archaeological research in construction business LTD, Russia</affiliation>
+                    <email>julialikhter@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-13T15:33:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Metadata</term>
+                    <term>online museum collections</term>
+                    <term>Jewish history</term>
+                    <term>data histories</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>digital archiving</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>media archaeology</term>
+                    <term>Cultural studies</term>
+                    <term>Galleries and museum studies</term>
+                    <term>History</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction </head>
+                <p style="text-align: left; ">This paper reports on an ongoing study of collectors’ bias in the representation of Jewish related-content in the online digital collection of the British Museum. In doing so, we expand upon recent work on the museum’s collection history through collection data analysis (MacDonald 2023). While MacDonald focuses on analysing “acquisition data stored in the BM collection database as a research tool to examine the history of its collection” we are interested in what such data, by extension, can also tell us about representations of minorities in the museum’s online collections. </p>
+                <p style="text-align: left; ">Museum metadata and library catalogues constitute an important source to study online representations of cultures. Much has been written about possible obstacles skewing the results of collection analysis at scale (Bode 2020, Kizhner et al. 2021, Zaagsma 2022, Gooding et al. 2025). However, the difficulties of collection data analysis are not only related to gaps and biases in metadata that result in epistemic omissions (Ortolja-Baird and Nyhan 2022, Kocsis and Ogden 2022). Their origin may lie in collectors’ preferences, histories of collections and the histories of research in the humanities. Calls in recent literature to understand collectors’ bias and early collectors’ preferences for herbaria (Daru et al. 2018) can be easily extrapolated to collections of material and visual culture. In the case of the British Museum this is especially important because its assemblage of objects is to a large extent ‘a collection of collections’ (MacDonald 2023) as its database demonstrates. Cataloguer’s bias is critical here as indexing collections entails the reduction of uncertainty and ambiguity to define geography, temporality or culture. Traditional attributions used within particular academic communities, when converted into and expressed in online metadata, can steer users towards privileged interpretations. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Data Sources </head>
+                <p style="text-align: left; ">To study the above, we used the website of the digital online collections of the British Museum as a data source. The dataset published on the museum website covers 56% of the physical collection for the British Museum. As of February 2024, there was no publicly available API either for the British Museum, therefore, we resorted to web scraping, i.e. automatic copying of data from the HTML web pages of the museum websites. </p>
+                <p style="text-align: left; ">Searching metadata for Jewish-related concepts, we retrieved a sample of 9,529 records, using such keywords as Jew/Jewish, Hebrew and Israel. We used English search terms (not Hebrew or other languages) as cataloguers use the language of the countries where the museums are located for titles and descriptions. Descriptive metadata that was useful for the purposes of retrieval and analysis was ‘object type”, “description”, “culture/periods”, ‘findspot’, ‘bibliographic references’, ‘inscriptions’, and sometimes ‘curator’s comments’ or ‘exhibition history’. </p>
+                <p style="text-align: left; ">To identify the types of data represented by Jewish-related objects, we selected 4,260 records with curators’ comments and built another spreadsheet where we manually tabulated 10% of the dataset. We focused on the curators’ comments and the data on the source of acquisition because this gave us a more detailed view of objects and enabled us to understand the histories of these data. The British Museum’s metadata system includes fields with the biographies of collectors or donors (Fig. 1). It also shows the amount of objects acquired through a person or an organization and links metadata to the objects in the online collection database. In doing so, we were able to analyse several case studies which showed that Jewish-related items often came from smaller collections. It is important that the purposes and interests of collectors determine what was included and why. These interests were shaped by how antiquarianism and scholarship developed in the 19th or early 20th centuries when most objects were acquired. </p>
+                <p style="text-align: left; ">The dataset contained words which required disambiguation. The sample of the data related to the search term ‘Israel’ included about a thousand records which were connected to Israel Goldman (1958-), a collector of Japanese prints. This circumstance resulted in about a thousand records that were false positives unless we can think of Japanese prints as of Jewish possessions (a possible hypothesis, but quite difficult to validate). </p>
+                <p style="text-align: left; ">Figure 1 shows some of the metadata fields for an object retrieved using ‘Hebrew’ as a search term. The field value is the name of Sir Augustus Wollaston Franks, an antiquarian scholar and museum administrator, instrumental for bringing almost 40,000 objects as the British Museum acquisitions in the second half of the 19th century. The Latin inscription on the ring is an equivalent of Hebrew words. This shows a distant connection with Jewish culture. Metadata produces biased results, following a smaller collection’s history.</p>
+                <figure>
+                    <graphic n="1001" width="16.002cm" height="9.660819444444444cm" url="/tmp/tmp3f5n81ve/Pictures/e0d144f9e8f1c843387e1cfe5def7ecb.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 1. Amulet ring, 14th century. AF.1000. © The Trustees of the British Museum. Shared under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) licence. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Preliminary results </head>
+                <p style="text-align: left; ">Our keyword searches returned specific groups of Jewish-related objects in the British Museum’s online collections which advance particular representations of Jewish history and culture and are revealing of the museum’s collection acquisition histories. The keyword search ‘Hebrew’ returned objects related to 19th and early 20th century ‘Hebrew inscriptions’ as well as prints and drawings illustrating the Scripture. ‘Israel’ revealed objects related to ethnographic collections featuring Bedouin or Palestinian material culture. Finally, ‘Jew/Jewish’ returned mostly antisemitic drawings and prints. </p>
+                <p style="text-align: left; ">Records involving ‘Hebrew inscriptions’ on scrolls in prints, medals, coins or scarabs are frequent for sub-collections acquired during the 19th and early 20th century. As ancient languages were seen as an important foundation for and in university education, Hebrew was an essential skill for Biblical Criticism and Oriental Studies (van Boxel 2008). The subcollections retrieved, using such search terms as ‘Hebrew’, ‘Israel’, and ‘Jew’, were related to Biblical Studies. They have prints and drawings illustrating the Old and the New Testament, including the parts of the Scripture where Jews in illustrations are Pharisees. Sometimes, subcollections include Egyptian and Assyrian objects mentioned in references covering Israelite contexts for Ancient Egypt or Assyria. </p>
+                <p style="text-align: left; ">‘Israel’, an important keyword we used for the search, brought other sub-collections. This word indexes ethnographic objects belonging to Bedouins or Palestinians that were acquired from the Church Missionary Society (1799 -), and the Church’s Ministry among the Jewish People (1809 -) in the second half of the 20th century. Other subcollections include postcards with representations of 20th century Israel, drawings produced by Israeli artists at the end of the 20th century, or images related to Israeli army or Israeli flags. </p>
+                <p style="text-align: left; ">Finally, our search for the keywords ‘Jew’ or ‘Jewish’ returned more than two hundred antisemitic drawings and prints, which were acquired in the second half of the 19th century. </p>
+                <p style="text-align: left; ">The conference presentation will demonstrate the quantitative breakdown and the analysis of different types of Jewish-related objects in the online collection of the British Museum. We will show that the analysis is complicated by ambiguity of search terms, sometimes unrelated to the content of the object from the collection. Those objects that are related to Jewish history became a part of the online collection as groups of physical objects, acquired in response to research questions posed at different periods of time by different scholars. Future research may follow the path of studying collection histories that determined what objects were included in smaller collections. </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Bode, Katherine (2020): Why you can’t model away bias. Modern Language Quarterly, 81(1), 95-124.</bibl>
+                    <bibl style="text-align: left; ">Boxel, Patris van. (2008). The Hebrew collections in Oxford: a treasure grove for Jewish studies. European Judaism, 41(2), 56-66.</bibl>
+                    <bibl style="text-align: left; ">Daru, Barnabas, Park, Daniel, Primack, Richard, Willis, Charles, Barrington, David, Whitfeld, Timothy, Seidler, Tristram, Sweeney, Patrick, Foster David, Ellison, Aaron, Davis, Charles (2018): Widespread sampling biases in herbaria revealed from large
+                        <hi style="font-family:Cambria Math">‐</hi>scale digitization. New Phytologist, 217(2), 939-955.
+                    </bibl>
+                    <bibl style="text-align: left; ">Gooding, Paul, Terras, Melissa, Ames, Sarah (2025 forthcoming): Library Catalogues as Data: Research, Practice and Usage.</bibl>
+                    <bibl style="text-align: left; ">Kocsis, Andrea, Ogden, Bernard (2022): Uncertainty in Visualising Crowdsourced History: Mapping the Operation War Diary Data. In: Dewar, Serena. Proceedings of the Digital Humanities Congress 2022. Sheffield: The Digital Humanities Institute, 2022. Available online at: &lt;https://www.dhi.ac.uk/books/dhc2022&gt; Accessed 27 November 2024.</bibl>
+                    <bibl style="text-align: left; ">Kizhner, Inna, Terras, Melissa, Rumyantsev, Maxim, Khokhlova, Valentina, Demeshkova, Elisaveta, Rudov, Ivan, Afanasieva, Julia (2021): Digital cultural colonialism: measuring bias in aggregated digitized content held in Google Arts and Culture. Digital Scholarship in the Humanities, 36(3), 607-640.</bibl>
+                    <bibl style="text-align: left; ">MacDonald, Isobel (2023). Counting when, who and how: visualizing the British Museum’s history of acquisition through collection data, 1753–2019. Journal of the History of Collections, 35(2), 305-320.</bibl>
+                    <bibl style="text-align: left; ">Ortolja-Baird, Alexandra, &amp; Nyhan, Julianne (2022). Encoding the haunting of an object catalogue: on the potential of digital technologies to perpetuate or subvert the silence and bias of the early-modern archive. Digital Scholarship in the Humanities, 37(3), 844-867.</bibl>
+                    <bibl style="text-align: left; ">Zaagsma, Gerben. (2023). Digital history and the politics of digitization. Digital Scholarship in the Humanities, 38(2), 830-851.</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KATAKURA_Shumpei_Metadata_Framework_for_Digitizing_the_Derge">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Metadata Framework for Digitizing the Derge Edition of the Tibetan Buddhist Canon</title>
+                <author>
+                    <persName>
+                        <surname>Katakura</surname>
+                        <forename>Shumpei</forename>
+                    </persName>
+                    <affiliation>Archives, Tohoku University</affiliation>
+                    <email>skatakura0314@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Kikuya</surname>
+                        <forename>Ryuta</forename>
+                    </persName>
+                    <affiliation>Koyasan University</affiliation>
+                    <email>kikuya@koyasan-u.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Hanzawa</surname>
+                        <forename>Tomoe</forename>
+                    </persName>
+                    <affiliation>Information Service Division, Tohoku University Library</affiliation>
+                    <email>tomoe.hanzawa.e5@tohoku.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Yanagihara</surname>
+                        <forename>Sachiko</forename>
+                    </persName>
+                    <affiliation>Information Service Division, Tohoku University Library</affiliation>
+                    <email>sachiko.yanagihara.a1@tohoku.ac.jp</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Digital Archiving</term>
+                    <term>Tibetan Buddhist Canon</term>
+                    <term>Derge Edition</term>
+                    <term>Metadata Management</term>
+                    <term>Database creation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>digital archiving</term>
+                    <term>digitization (2D &amp; 3D)</term>
+                    <term>metadata standards</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>Asian studies</term>
+                    <term>Humanities computing</term>
+                    <term>Library &amp; information science</term>
+                    <term>Philology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Background (Introduction)</p>
+            <p>Tohoku University in Japan is globally recognized for its extensive collection of Tibetan materials and has been at the forefront of Tibetan studies for nearly a century. Among its most valuable holdings is the “Derge Edition of the Tibetan Buddhist Canon” (hereafter the Derge Edition). The term “Derge” refers to the region in eastern Tibet where this edition was originally printed. The Tibetan Buddhist Canon consists of texts in Tibetan, which were originally composed in Sanskrit. Among the many existing manuscript and print editions, the Derge Edition at Tohoku University is particularly notable for its remarkable textual accuracy and superior printing quality. In the 1930s, researchers at Tohoku University thoroughly examined this 97,159-page collection, creating a modern catalog through philological methods (Ui et al., 1934). The resulting numbering system, known as the “Tohoku Numbers,” has since become a widely recognized global standard.</p>
+            <p>In 2024, the university launched the Tohoku University Digital Archives<ref n="1" target="ftn1"/> (ToUDA) (Hanzawa, 2024), with a dedicated focus on digitizing and making the Derge Edition accessible on this platform.
+            </p>
+            <p>Materials</p>
+            <figure>
+                <graphic n="1001" width="15.000111111111112cm" height="6.00075cm" url="/tmp/tmp2ovt_bzx/Pictures/f6fefe497d84c666de7b9cd5a5f9ebe1.png" rend="inline"/>
+            </figure>
+            <p style="text-align: center;">Figure 1: First page of a Bundle in the Derge Edition (Kikuya, 2023, p. 2)</p>
+            <p>In the Tibetan Buddhist Canon, metadata are provided at the beginning and end (colophon) of each text. As shown in Figure 1, the first page of a text in the Derge Edition includes (1) a Sanskrit title and (2) a Tibetan title, followed by the main text. In addition, metadata such as the bundle number, page number, and classification details (5) appear on the left side of each page. These metadata types, along with textual information from the Tibetan Buddhist Canon, have already been digitized by organizations such as the Buddhist Digital Resource Center, which also has digitized images of the Canon<ref n="2" target="ftn2"/>.
+            </p>
+            <p>A distinctive feature of the Derge Edition is the inclusion of (3) portrait illustrations and (4) captions that consistently appear on the first page of each text. These captions, written in verse, consist of two-line couplets beneath each portrait, forming a four-line stanza on each page. T
+                <anchor xml:id="Hlk184064932"/>he second and fourth lines reference the proper noun associated with the portrait, while the first and third lines incorporate the text title or relevant doctrine and deeds. The portrait and caption metadata have not yet been fully digitized. Organizing and publishing this information alongside the Derge Edition images on ToUDA would be highly valuable.
+            </p>
+            <figure>
+                <graphic n="1002" width="15.000111111111112cm" height="4.183944444444444cm" url="/tmp/tmp2ovt_bzx/Pictures/f6fefe497d84c666de7b9cd5a5f9ebe1.png" rend="inline"/>
+            </figure>
+            <p style="text-align: center;">Figure 2: Example of a Bundle in the Derge Edition</p>
+            <p>In addition to the thematic division of individual texts, the Derge Edition is physically divided into bundles (Figure 2). A single bundle may include several texts, and a single text can extend across several bundles. In some instances, bundles may 
+                <anchor xml:id="Hlk184065026"/>transition in the middle of a text. Since the portraits and their captions appear on the first page of each bundle, bundle information becomes crucial.
+            </p>
+            <p>Methods</p>
+            <figure>
+                <graphic n="1003" width="15.000111111111112cm" height="5.755569444444444cm" url="/tmp/tmp2ovt_bzx/Pictures/f6fefe497d84c666de7b9cd5a5f9ebe1.png" rend="inline"/>
+            </figure>
+            <p style="text-align: center;">Figure 3: Two-dimensional table organizing the catalog data</p>
+            <p>The digitization of the Derge Edition involves creating two databases: (I) the “Canon Database,” which facilitates metadata-based image retrieval and textual content search, and (II) the “Portrait Database,” which highlights the unique features of the Derge Edition, particularly the Buddha portraits and their captions. To develop these databases from a single source, two parallel strategies are being implemented: “catalog data organization” and “portrait data organization.” The catalog data organization process involves transcribing information from a pre-existing catalog (Ui et al., 1934), including the Tohoku numbers, into a two-dimensional table (Figure 3). In contrast, portrait data organization focuses on extracting metadata, such as the page numbers where portraits appear and caption transcription. Portrait images for the Portrait Database II are extracted from the complete Canon images in the Canon Database I. By publishing the Canon Database I using the IIIF framework, these portraits can be efficiently cropped for use in Database II, enabling a single image source to be used for both databases (Figure 4).</p>
+            <figure>
+                <graphic n="1004" width="15.000111111111112cm" height="7.983361111111111cm" url="/tmp/tmp2ovt_bzx/Pictures/f6fefe497d84c666de7b9cd5a5f9ebe1.png" rend="inline"/>
+            </figure>
+            <p style="text-align: center;">Figure 4: “I. Canon Database” and “II. Portrait Database”</p>
+            <p>Conclusions and Prospects</p>
+            <p>The digitization of the Derge Edition, particularly the development of the “Portrait Database” (Database II), is expected to make notable contributions to Buddhist studies. By employing the robust ToUDA platform, the challenges associated with public access can be effectively addressed, greatly enhancing data accessibility and usability. Furthermore, Databases I and II are designed using the IIIF framework and highly versatile metadata vocabularies, ensuring seamless compatibility with various other digital collections, including Buddhist scriptures.</p>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                    
+                        <ref target="https://touda.tohoku.ac.jp/portal/en">https://touda.tohoku.ac.jp/portal/en</ref> (accessed:2024/11/19)
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                    
+                        <ref target="https://library.bdrc.io/">https://library.bdrc.io/</ref> (accessed:2024/11/20)
+                    
+                </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Ui, Hakuju., Suzuki, Munetada., Kanakura, Enshou. and Tada, Toukan. (1934). 
+                        <hi rend="italic">Comprehensive Catalog of the Tibetan Buddhist Canon</hi> (In Japanese). Tokyo: The Faculty of Law and Letters of Tohoku Imperial University.
+                    </bibl>
+                    <bibl>Kikuya, Ryuta. (2023). 
+                        <hi rend="italic">The Current Status and Future Prospects of Tibetan Materials at Tohoku University: Focusing on the Derge Edition of the Tibetan Buddhist Canon</hi> (In Japanese). Tohoku University Archives Newsletter. 39: pp.2-3.
+                    </bibl>
+                    <bibl>Hanzawa, Tomoe. (2024). 
+                        <hi rend="italic">Constructing New Digital Archive of Tohoku University</hi> (In Japanese). Journal of the Japan Society for Digital Archive. 8: pp.88-91.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BISHOP_Judith_Understanding_AI_Emily__Designing_an_AI_genera">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Understanding AI Emily: Designing an AI-generated lyric poetry dataset for evaluation experiments</title>
+                <author>
+                    <persName>
+                        <surname>Bishop</surname>
+                        <forename>Judith</forename>
+                    </persName>
+                    <affiliation>La Trobe University, Melbourne, Australia, Australia</affiliation>
+                    <email>J.Bishop@latrobe.edu.au</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Mineur</surname>
+                        <forename>Ruby</forename>
+                    </persName>
+                    <affiliation>La Trobe University, Melbourne, Australia, Australia</affiliation>
+                    <email>R.Mineur@latrobe.edu.au</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T09:34:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Generative AI</term>
+                    <term>Poetry</term>
+                    <term>Semantics</term>
+                    <term>Data Collection</term>
+                    <term>Creative Writing</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>artificial intelligence and machine learning</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>semantic analysis</term>
+                    <term>Cognitive sciences and psychology</term>
+                    <term>Linguistics</term>
+                    <term>Literacy</term>
+                    <term>composition</term>
+                    <term>and creative writing</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Abstract of Submission</p>
+            <p>This paper presents early work-in-progress on AI Emily, a parallel corpus of 40 original and 360 AI-generated annotated poems by, and in the style of, Emily Dickinson. This dataset will provide a richly annotated literary-historical record of the developing poetic capabilities of commercial generative AI models. It will support our application of digital humanities analyses to the textual corpus, and we anticipate, our future collaboration on cognitive neuroscience and bibliotherapy experiments using the corpus to facilitate controlled comparisons of the neurocognitive and emotional impacts of human and AI-generated lyric poems.</p>
+            <p>This paper will outline the design of the corpus and its motivations and the results of initial computational analyses of the texts and annotations, which currently include pronunciation, part of speech and Lancaster sensorimotor norms (i.e. cognitive semantic) tags (Lynott et al, 2020). The latter were chosen for their demonstrated relationship to categories of neurocognitive activation. We plan to expand the set of annotations, including the addition of rhetorical structure analysis to support the evaluation of higher-level segments and transitions in the poems. We also plan to generate machine readings of the poems using commercial TTS models for analysis and use in listening experiments. We anticipate that the multiple annotations of linguistic structure at the word level (phonological, semantic and syntactic) will enable future neurocognitive experiments, e.g. eye-tracking and EEG, to test the temporal alignment of attentional and neurocognitive events with phonological, lexical, syntactic, and prosodic events in the poems.</p>
+            <p>
+                <hi rend="bold">Motivations.</hi> AI tools such as Large Language Models (LLMs) can now participate in all stages of human creative writing and reading processes (ideation, expression, editing and textual interpretation). Creative writers have voiced both anxiety and excitement about the impacts of Generative AI on the ecology and economy of creative writing. In line with principles of Open Science, access to the technical expertise that is needed to critically evaluate creative LLM outputs should be expanded to include creative writing practitioners as agents in the evaluation process. It is hoped that this project, led by a published poet and linguist with extensive experience in language dataset curation and annotation, will provide a model for creative practitioner engagement in the technical evaluation of the creative outputs of generative AI. 
+            </p>
+            <p>To date, there has not been a sustained empirical investigation into the linguistic, attentional, perceptual and emotional qualities of AI-generated poetry. Our analyses of the AI Emily dataset are intended to contribute to the emerging body of knowledge about the empirical qualities (literary and linguistic) of AI-generated creative writing compared with human texts (Bishop 2022 &amp; 2023; Hamat 2024; Santarpia 2024; Walsh et al. 2024). As a parallel corpus, AI Emily will facilitate a direct comparison of these qualities between the original and generated versions of the poems. </p>
+            <p>
+                <hi rend="bold">Corpus design.</hi> The AI Emily corpus was intentionally selected to represent the entirety of Emily Dickinson’s output (see Figure 1 below) and to control for two key formal features of the poems (number of stanzas and lines per stanza), which may influence rhetorical structure in the poems (see Figure 2 below). Further, each AI model was prompted with the first four lines of the original poems (typically corresponding to the first stanza) in order to influence lexical and rhetorical selection in the direction of the original poem, while forbidding the repetition of any other lines from the original poem. Three leading commercial models (as of mid-2024), Open AI’s GPT 4o, Google’s Gemini model, accessed through AI Studio, and Anthropic’s Claude, were selected for the generation task, and the default temperature setting was used in each case. No attempt was made to control metrical structure, rhythm or rhyme, in order to investigate the models’ interpretation of the prompt to mimic closely the stylistic, rhythmic and prosodic qualities of Dickinson’s poetry. To enable an investigation of both inter- and intra-model variation in the generated poems, the models were instructed to produce three distinct versions of each poem.
+            </p>
+            <table rend="rules">
+                <row>
+                    <cell style="text-align: center;">
+                        <figure>
+                            <graphic n="1001" width="7.666452777777778cm" height="4.9568972222222225cm" url="/tmp/tmpwo24b7jz/Pictures/619abada464af1c9b35896bebe1a33ca.png" rend="inline"/>
+                        </figure>
+                        <p style="text-align: justify;">Figure 1: Poems were selected with an even distribution throughput the poet’s career, as represented by the poems’ numbering in the authoritative R.W. Franklin edition (Note: poem texts used in this project were drawn from the corresponding versions of the poems in the public domain)</p>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <figure>
+                            <graphic n="1002" width="7.796777777777778cm" height="9.754775cm" url="/tmp/tmpwo24b7jz/Pictures/619abada464af1c9b35896bebe1a33ca.png" rend="inline"/>
+                        </figure>
+                        <p>Figure 2: Distribution of numbers of lines per original poem</p>
+                    </cell>
+                </row>
+            </table>
+            <p>
+                <hi rend="bold">
+                    <lb/>Research questions.
+                </hi>
+            </p>
+            <p>The key research questions of this project are:</p>
+            <p>1. Do the original and AI-generated poems differ qualitatively and quantitatively in terms of 1) the representation of perceptual and sensorimotor qualia, including interoceptive feelings; 2) linguistic qualities of attention and salience (Alford 2021); 3) rhetorical and emotional structures and transitions; and 4) phonological and prosodic characteristics (i.e. the musical elements of the language)? If so, how? And if not, what does this tell us about the AI poetry generation process? We will also investigate the poems’ distinctness using Burrow’s Zeta, Jensen-Shannon Divergence and other measures of stylometric similarity, and automated poetry analysis tools described in De Sisto et al. (2024).</p>
+            <p>
+                <lb/>Initial comparative keyness analyses using the log likelihood method (LL) suggest substantial lexical distinctness between the original poems and AI versions. Notable is the greater prominence of a ‘poetic’ set of keywords, such as ‘silent’ and ‘whisper/whispers/whispered’, across all the generative AI outputs when compared to the original poems (Figures 3 – 5). This finding aligns with Walsh et al.‘s (2024) observation of a similar, and partly overlapping, set of keywords including ‘dance’, ‘dream(s)’ and ‘whisper(s)’, in poetry generated by the OpenAI GPT 3.5 and 4 models, and expands this finding to three new models: OpenAI’s GPT 4o model and the Google Gemini and Anthropic Claude models (all from mid-2024). This keyword commonality suggests a significant overlap in the training data used for poetry generation by the three large language models. 
+            </p>
+            <table rend="rules">
+                <row>
+                    <cell style="text-align: left;">
+                        <figure>
+                            <graphic n="1003" width="7.5cm" height="10cm" url="/tmp/tmpwo24b7jz/Pictures/619abada464af1c9b35896bebe1a33ca.png" rend="inline"/>
+                        </figure>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <figure>
+                            <graphic n="1004" width="7.5cm" height="10cm" url="/tmp/tmpwo24b7jz/Pictures/619abada464af1c9b35896bebe1a33ca.png" rend="inline"/>
+                        </figure>
+                    </cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">Figure 3: Keyness comparison using log-likelihood (LL) – top keywords in original 40 Emily Dickinson poems vs Anthropic Claude (July 2024) versions of each poem (40 versions x 3 attempts: v1, v2, v3)</cell>
+                    <cell style="text-align: left;">Figure 4: Keyness comparison using log-likelihood (LL) – top keywords in original 40 Emily Dickinson poems vs Google Gemini (July 2024) versions of each poem (40 versions x 3 attempts: v1, v2, v3)</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <figure>
+                            <graphic n="1005" width="7.5cm" height="10cm" url="/tmp/tmpwo24b7jz/Pictures/619abada464af1c9b35896bebe1a33ca.png" rend="inline"/>
+                        </figure>
+                    </cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">Figure 5: Keyness comparison using log-likelihood (LL) – top keywords in original 40 Emily Dickinson poems vs OpenAI GPT4o (July 2024) versions of each poem (40 versions x 3 attempts: v1, v2, v3)</cell>
+                </row>
+            </table>
+            <p>Computational stylists Herrmann et al. (2021: 468) anticipate “important opportunities for collaborations that align large-scale text analysis with readers’ cognitive and affective responses”. We therefore also look forward to the use of AI Emily as a controlled dataset for the evaluation of AI-generated poems in cognitive neuroscience and bibliotherapeutic experiments (cf. Wassiliwizky et al. 2017; Billington 2021; Magsamen &amp; Ross 2023; James &amp; Römhild 2024), with a view to addressing the following questions:</p>
+            <p>2. Do bibliotherapeutic evaluations of the poems in AI Emily align with the empirical qualities of the texts explored in question 1 above? If so, how? If not, what does this tell us about the reception of AI-generated poetry? </p>
+            <p>3. How can our research into the original and AI poems’ comparative empirical qualities and their reception inform the development of future Creative Writing and Literature curricula?</p>
+            <p>4. Do the original and AI-generated poems in AI Emily produce significantly different patterns of neurocognitive activation in literary expert and non-expert readers and listeners? Or is the demonstrated confusability of human and AI-written poems reflected in similar neurocognitive responses of readers and listeners?</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Alford, Lucy</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2021):</hi>
+                        <hi rend="italic" style="font-size:10pt">Forms of Poetic Attention</hi>
+                        <hi style="font-size:10pt">. New York, NY: Columbia University Press.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Billington, Josie / Steenberg, Mette</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2021): “Literary Reading and Mental Wellbeing.”, in: eds. Kuiken, Donald / Jacobs, Arthur M.:</hi>
+                        <hi rend="italic" style="font-size:10pt">Handbook of Empirical Literary Studies</hi>
+                        <hi style="font-size:10pt">, Berlin, Boston: De Gruyter 393-420.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Bishop, Judith / Mineur, Ruby</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024):</hi>
+                        <hi rend="italic" style="font-size:10pt">AI Emily</hi>
+                        <hi style="font-size:10pt">. Unpublished dataset of 40 original Emily Dickinson poems (in the public domain) and 360 AI versions by 3 Large Language Models, OpenAI GTP 4o, Google Gemini (accessed through Google AI Studio), Anthropic Claude.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Bishop, Judith</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2022): “‘Can you describe this?’: Poetry, Presence, Creativity, AI and the Brain.” in:</hi>
+                        <hi rend="italic" style="font-size:10pt">Island Magazine</hi>
+                        <hi style="font-size:10pt">, 164: 69-76.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Bishop, Judith</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2023): “A Soul at the </hi> ‘
+                        <hi style="font-size:10pt">White Heat’: Poetry, the Author, and the Advent(ure) of Large Language Models.”, in:</hi>
+                        <hi rend="italic" style="font-size:10pt" xml:space="preserve">PN Review </hi>
+                        <hi style="font-size:10pt">271 &lt;</hi>
+                        <ref target="https://www.pnreview.co.uk/cgi-bin/scribe?item_id=1147">
+                            <hi style="font-size:10pt">https://www.pnreview.co.uk/cgi-bin/scribe?item_id=1147</hi>
+                        </ref>
+                        <hi style="font-size:10pt">&gt; [30.4.2025].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">De Sisto, Mirella / Hernández-Lorenzo, Laura / De la Rosa, Javier / Ros, Salvador / González-Blanco, Elena</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024): “Understanding poetry using natural language processing tools: a survey.”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt">Digital Scholarship in the Humanities</hi>
+                        <hi style="font-size:10pt">, 39, 2: 500–521.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Hamat, Afendi</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024): “The Language of AI and Human Poetry: A Comparative Lexicometric Study.”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt">3L: The Southeast Asian Journal of English Language Studies,</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 30,10.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Herrmann, J. Berenike / Jacobs, Arthur / Piper, Andrew</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2021): “Computational Stylistics.”, in: eds. Kuiken, Donald / Jacobs, Arthur M.: </hi>
+                        <hi rend="italic" style="font-size:10pt">Handbook of Empirical Literary Studies</hi>
+                        <hi style="font-size:10pt">, Berlin, Boston: De Gruyter 393-420.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">James, Sara / Römhild, Juliane</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024): “Practising creative bibliotherapy down under: understanding diverse approaches to literature as therapy.”, in:</hi>
+                        <hi rend="italic" style="font-size:10pt">Journal of Poetry Therapy</hi>
+                        <hi style="font-size:10pt">, 37:3, 173-184.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">James, Sara / Turner, Melinda / Römhild, Juliane / Sawyer, Anne-Maree / Maylea, Chris</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024): “Reading to grow together: Sharing great stories &amp; meaningful conversations.”, La Trobe University report &lt;</hi>
+                        <ref target="https://doi.org/10.26181/27139302.v1">
+                            <hi style="font-size:10pt">https://doi.org/10.26181/27139302.v1</hi>
+                        </ref>
+                        <hi style="font-size:10pt">&gt; [30.4.2025].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Lang, Anouk</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2023): “From Atoms to Eternity: Visualizing Space and Scale in Emily Dickinson.”, ADHO Digital Humanities Conference 2023 &lt;</hi>
+                        <ref target="https://zenodo.org/records/8107902">
+                            <hi style="font-size:10pt">https://zenodo.org/records/8107902</hi>
+                        </ref>
+                        <hi style="font-size:10pt">.&gt; [8.12.2024]</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Lynott, Dermott / Connell, Lynott / Brysbaert, Marc / Brand, James / Carney,</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> James (2020): “The Lancaster Sensorimotor Norms: multidimensional measures of perceptual and action strength for 40,000 English words.”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt">Behaviour Research Methods</hi>
+                        <hi style="font-size:10pt">, 52,3: 1271-1291.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Magsamen, Susan / Ross, Ivy</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2023): </hi>
+                        <hi rend="italic" style="font-size:10pt">Your Brain on Art: How the Arts Transform Us</hi>
+                        <hi style="font-size:10pt">. Neuro Arts LLC.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Pojanapunya, Punjaporn / Watson Todd, Richard</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2018): “Log-likelihood and odds ratio: Keyness statistics for different purposes of keyword analysis.”, in:</hi>
+                        <hi rend="italic" style="font-size:10pt">Corpus Linguistics and Linguistic Theory</hi>
+                        <hi style="font-size:10pt">, 14, 1: 133-167 &lt;</hi>
+                        <ref target="https://www.degruyterbrill.com/document/doi/10.1515/cllt-2015-0030/html?lang=en">
+                            <hi style="font-size:10pt">https://www.degruyterbrill.com/document/doi/10.1515/cllt-2015-0030/html?lang=en</hi>
+                        </ref>
+                        <hi style="font-size:10pt">&gt;</hi>
+                        <lb/>
+                        <hi style="font-size:10pt">[30.4.2025]</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Santarpia, Alfonso</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024): “ChatGPT, the voice from elsewhere: a poetic and therapeutic dialog between human and artificial intelligence.” in: </hi>
+                        <hi rend="italic" style="font-size:10pt">Journal of Poetry Therapy</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">, 1-22 &lt; </hi>
+                        <ref target="https://doi.org/10.1080/08893675.2024.2409828">
+                            <hi style="font-size:10pt">https://doi.org/10.1080/08893675.2024.2409828</hi>
+                        </ref>
+                        <hi style="font-size:10pt">&gt; [30.4.2025]</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Shanmugasundaram, Mathura / Tamilarasu, Arunkumar</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2023): “The impact of digital technology, social media, and artificial intelligence on cognitive functions: a review.”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt">Frontiers in Cognition</hi>
+                        <hi style="font-size:10pt">, 2 &lt;</hi>
+                        <ref target="https://www.frontiersin.org/journals/cognition/articles/10.3389/fcogn.2023.1203077/full">
+                            <hi style="font-size:10pt">https://www.frontiersin.org/journals/cognition/articles/10.3389/fcogn.2023.1203077/full</hi>
+                        </ref>
+                        <hi style="font-size:10pt">&gt; [30.4.2025]</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Walsh, Melanie / Preus, Anna / Gronski, Elizabeth</hi>
+                        <hi style="font-size:10pt">(2024): “Does ChatGPT Have a Poetic Style?”, CHR 2024: Computational Humanities Research Conference, December 4–6, 2024, Aarhus, Denmark &lt;</hi>
+                        <ref target="https://arxiv.org/abs/2410.15299">
+                            <hi style="font-size:10pt">https://arxiv.org/abs/2410.15299</hi>
+                        </ref>
+                        <hi style="font-size:10pt">&gt; [30.4.2025]</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:10pt">Wassiliwizky, Eugen / Koelsch, Stefan / Wagner, Valentin / Jacobsen, Thomas / Menninghaus, Winfried</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2017): “The emotional power of poetry: neural circuitry, psychophysiology and compositional principles.” in: </hi>
+                        <hi rend="italic" style="font-size:10pt">Social cognitive and affective neuroscience</hi>
+                        <hi style="font-size:10pt">, 12, 8, 1229–1240. &lt;</hi>
+                        <ref target="https://doi.org/10.1093/scan/nsx069">
+                            <hi style="font-size:10pt">https://doi.org/10.1093/scan/nsx069</hi>
+                        </ref>
+                        <hi style="font-size:10pt">&gt; [30.4.2025]</hi>
+                    </bibl>
+                    <bibl>
+                        <lb/>
+                        <hi rend="bold" style="font-size:10pt">Zorkaltsev, Anton</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024): “Rhetorical Structure Theory: Analysis of Aesthetics and Complexity of Song Poetry.”, 2024 IEEE 25th International Conference of Young Professionals in Electron Devices and Materials (EDM), Altai, Russian Federation, 2024 &lt;</hi>
+                        <ref target="https://ieeexplore.ieee.org/document/10614984">
+                            <hi style="font-size:10pt">https://ieeexplore.ieee.org/document/10614984</hi>
+                        </ref>
+                        <hi style="font-size:10pt">&gt; [30.4.2025]</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

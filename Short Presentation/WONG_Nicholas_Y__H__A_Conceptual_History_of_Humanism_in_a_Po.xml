@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="WONG_Nicholas_Y__H__A_Conceptual_History_of_Humanism_in_a_Po">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>A Conceptual History of Humanism in a Post-WWII Chinese-language Literary Journal via Word Vector Spaces </title>
+                <author>
+                    <persName>
+                        <surname>Wong</surname>
+                        <forename>Nicholas Y. H.</forename>
+                    </persName>
+                    <affiliation>The University of Hong Kong, Hong Kong S.A.R. (China)</affiliation>
+                    <email>nyhwong@hku.hk</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>word vectors; OCR; literary journals; modernism; humanism</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>natural language processing</term>
+                    <term>optical character recognition and handwriting recognition</term>
+                    <term>spatial &amp; spatio-temporal analysis</term>
+                    <term>modeling and visualization</term>
+                    <term>Asian studies</term>
+                    <term>Literacy</term>
+                    <term>composition</term>
+                    <term>and creative writing</term>
+                    <term>Literary studies</term>
+                    <term>Translation studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left;">The post-1945 literary magazine 
+                <hi rend="italic">Chao Foon</hi> (
+                <hi rend="italic">Jiaofeng</hi> in pinyin) holds a central place in defining Mahua modernism. 
+                <hi rend="italic">Mahua</hi>, a hyphenated word for Malayan and Chinese, indexes ethnic Chinese assimilation in a period of postcolonial Malaysia’s nation-building, but obscures the complex 
+                <hi rend="italic" xml:space="preserve">Ma </hi>dimensions of Mahua literature. Recent Cold War literary histories of 
+                <hi rend="italic">Chao Foon</hi> propose a seamless conjuncture of non-Leftist, local, and modernist aesthetics from its contributors and editors. In this narrative, chief editors determine the journal’s poetic styles and social themes, resulting in a clear periodization of 
+                <hi rend="italic">Chao Foon</hi>’s aesthetics. I argue that a keywords approach, using Chinese word vectors via Google’s word2vec model, can challenge our assumptions about the journal and the task of literary periodization. 
+                <lb/> Based on the Optical Character Recognition (OCR) of around five hundred issues of 
+                <hi rend="italic">Chao Foon</hi>, with each issue thirty-six pages or more, across forty-five years (1955–99), published in both traditional and simplified Chinese scripts, this project explores the specific 
+                <hi rend="italic" xml:space="preserve">Ma </hi>dimensions of Mahua literature. The paper develops a conceptual history of 
+                <hi rend="italic">Chao Foon</hi>, such as the emergence of 
+                <hi rend="italic">humanism</hi> (
+                <hi rend="italic">renwen zhuyi</hi>) and other related concepts in the journal’s discourse. To imagine the spaces of editorial transition and shifts in topics, I propose multiple models trained on different windows of editorship. I will discuss the significance of several word vectors, and present some of the challenges faced in OCR preprocessing and tokenizing for Chinese, as well as dealing with smaller corpora. 
+                <lb/> This paper contributes to scholarship on digital multilingual practices, by asking how to accurately represent semantic and syntactic information from languages of 
+                <hi rend="italic">non-Latin script</hi> in geometric spaces. In addition, this paper explores how a minority culture of Chinese understood 
+                <hi rend="italic">humanism</hi> and other keywords within Southeast Asian literary publishing, thus contributing a new angle to studies in world literature, which tend to situate post-war debates on humanism within contexts of French decolonization. Inspired by this paper asks if literary journals, compared to historical sources such as newspapers, produce the same “link between conceptual history and word embedding” (Wevers / Koolen 2020).
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Wevers, Melvin / Koolen, Marijn (2020): “Digital begriffsgeschichte: Tracing semantic change using word embeddings”, in 
+                        <hi rend="italic">Historical Methods: A Journal of Quantitative and Interdisciplinary History</hi> 53, 4: 226–243.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

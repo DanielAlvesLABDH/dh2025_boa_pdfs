@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="GOMES_Daniela_Teixeira_Modificar_para_Restaurar__Implica__es">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Modificar para Restaurar? Implicações éticas do restauro digital de fotografias históricas através de Inteligência Artificial Generativa</title>
+                <author>
+                    <persName>
+                        <surname>Gomes</surname>
+                        <forename>Daniela Teixeira</forename>
+                    </persName>
+                    <affiliation>NOVA FCSH, Portugal</affiliation>
+                    <email>danielatgomes7@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-26T15:26:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Restauro Digital</term>
+                    <term>Fotografia</term>
+                    <term>Redes Adversárias Generativas</term>
+                    <term>Codificadores Automáticos</term>
+                    <term>Ética</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>digital publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>rhetorical analysis</term>
+                    <term>Art history</term>
+                    <term>Communication studies</term>
+                    <term>Film and cinema arts studies</term>
+                    <term>History</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <anchor xml:id="Hlk196574676"/>A aproximação entre as Humanidades Digitais e o Património Cultural é algo notório, que se verifica nos inúmeros projetos desenvolvidos no sentido de preservação de artefactos patrimoniais ao longo da sua origem e consolidação. Em particular, as possibilidades de restauro digital destes artefactos inspiraram o surgimento de projetos de Humanidades Digitais baseados no recurso a técnicas de edição digital, modelagem 3D e à criação de 
+                <hi rend="italic">digital twins</hi> ao longo das últimas décadas.
+            </p>
+            <p> Com uma intensificação da cultura científica que explora a aplicação de tecnologias de Inteligência Artificial (IA) aos mais diversos níveis de tarefas que se tem verificado nos últimos anos, disseminaram-se rapidamente projetos e interfaces que integram esta tipologia de software. Ferramentas de IA estão cada vez mais acessíveis ao utilizador comum, possibilitando o acesso a resultados imediatos e, em certa forma, fascinantes. O entusiasmo gerado por esta aparente novidade levou à tentativa de emprego destes modelos para dar resposta às necessidades das variadas tarefas desenvolvidas pela Humanidade, incluindo em projetos relacionados à preservação e restauro de património cultural. </p>
+            <p>A promessa de que processos dispendiosos económico e temporalmente, como o restauro de imagens fotográficas, passariam a estar acessíveis de forma simplificada através da aplicação de modelos de 
+                <hi rend="italic">Machine Learning</hi> e de IA generativos desafia o atual paradigma desta prática, almejando um cariz cada vez mais digital (Ghaith/Hutson 2024 : 1). Neste sentido, o meio académico tem vindo a explorar esta confluência entre inovação tecnológica e preservação patrimonial, o que resulta em novos projetos metodológicos e conceptuais dentro desta linha de ação(Ghaith/Hutson 2024 : 1). Contudo, estes projetos não tardaram a levantar preocupações éticas sobre a perda de autenticidade de imagens fotográficas enquanto fontes históricas. 
+            </p>
+            <p>Sendo o funcionamento de sistemas de IA generativa baseado em algoritmos de probabilidades, as soluções oferecidas para o restauro fotográfico mostravam-se desadequadas, modificadores e comprometedoras dos significados que deveriam ser transmitidos. Face a este panorama, surge uma importante questão: perante a incapacidade das atuais interfaces direcionadas ao restauro de fotografia baseadas em modelos de IA generativa em asseguras autenticidade histórica e princípios éticos ligados à prática de restauro, qual deve ser o rumo de ação tomado por áreas científicas articulantes como as Humanidades Digitais?</p>
+            <p>A presente comunicação pretende refletir sobre os principais obstáculos que se levantam perante o uso de tecnologias digitais baseadas em IA para o restauro de fotografias históricas. Ao explorar a tenuidade entre “restauro” e “modificação” digital e a forma como pode comprometer a autenticidade histórica, bem como propondo uma análise aos dilemas éticos centrais associados, pretende-se encontrar resposta aquele que tem sido um dos vetores base de questionamento no debate no seio das Humanidades Digitais: Como poderá esta área científica em emergência contribuir para o encontro de um equilíbrio entre a preservação da autenticidade histórica da fotografia e as novas metodologias de restauro digital?</p>
+            <p>De modo a responder a esta questão base, a comunicação propõe, inicialmente, uma compreensão do modo como as tecnologias de IA generativa têm sido empregues em projetos desenvolvidos no sentido do restauro digital, destacando duas principais tipologias de redes neurais: Redes Adversárias Generativas (RAG ou GAN<ref n="1" target="ftn1"/>) e os Codificadores Automáticos (ou 
+                <hi rend="italic">Autoencoders</hi>). O seu 
+                <hi rend="italic">modus operandi</hi> baseado em algoritmos probabilísticos treinados para a reconstrução iconográfica revela-se como um dos principais obstáculos levantados à sua implementação em instituições culturais e de preservação de memória. Perante este impasse, emerge um necessário debate deontológico sobre as contradições entre os vetores bases da ação de restauro e as tecnologias de IA generativa, focando questões como o compromisso da autenticidade histórica, a tensão entre o ato de restaurar e o ato de modificar e as implicações do treinamento destas redes neurais no que toca a dados pessoais e direitos autorais.
+            </p>
+            <p> De modo a verificar as possibilidades de aplicação de tecnologias de IA generativa no restauro de fotografias históricas, implementou-se um teste de diversas metodologias que recorram a estas tecnologias para o restauro digital de numa pequena amostra de fotografias pertencentes ao espólio do Arquivo Municipal de Lisboa. Entre ferramentas automáticas disponíveis online e metodologias mais complexas como o 
+                <hi rend="italic">workflow</hi> sugerido por investigadores sul-coreanos no artigo “Preserving Old Memories in Vivid Detail: Human-Interactive Photo Restoration Framework” (Back et al. 2024), o objetivo deste projeto é avaliar a reprodutibilidade destes métodos de restauro digital, bem como o fator de equilíbrio entre a ferramenta de a intervenção humana ao longo do processo, através de critérios que permitam comparar a eficácia de diferentes metodologias no que toca à preservação máxima da autenticidade histórica após o processo de restauro digital. 
+            </p>
+            <p>Esta componente prática pretende ilustrar que a preocupação ética constantemente invocada neste debate não deve ser desencorajadora do desenvolvimento de projetos de restauro digital, mas sim como uma oportunidade para a promoção de uma maior interdisciplinaridade no seu desenvolvimento. Neste sentido, abordagens promovidas no seio das Humanidades Digitais têm se revelado pertinentes ao rumo futuro que aproveite os benefícios destas redes neurais generativas, aplicando-o ao trabalho científico.</p>
+            <p> Em suma, esta é uma comunicação que pretende trazer à comunidade uma visão das complexidades inerentes ao restauro digital de fotografias históricas através de redes neurais generativas, sobretudo em domínios deontológicos e de salvaguarda da autenticidade histórica. O debate destas premissas tem começado a apresentar resultados em termos normativos e governamentais, porém ainda há um longo caminho a ser percorrido na sua devida regulamentação: um caminho que deve ser traçado através do diálogo e colaboração constantes e que vise equilibrar o potencial destes sistemas com a contínua preservação da história da Humanidade. </p>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                     Da designação inglesa “
+                        <hi rend="italic">Generative Adversial Network”</hi>
+                    
+                </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <anchor xml:id="Hlk184486342"/>
+                        <anchor xml:id="Hlk196576907"/>
+                        <hi rend="bold" style="font-size:12pt">Back, Seung-Yeon / So, Geonho / Jeong, Dahye / Park, Eunil / Woo, Simon S.</hi>
+                        <hi style="font-size:12pt" xml:space="preserve"> (2024):  “Preserving Old Memories in Vivid Detail: Human-Interactive Photo Restoration Framework”. Boise.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:12pt">Cinquepalmi, Federico / Tiburcio, Virginia Adele</hi>
+                        <hi style="font-size:12pt">(2023): “Sustainable Restoration of Cultural Heritage in the digital era” in:</hi>
+                        <hi rend="italic" style="font-size:12pt">Vitruvio</hi>
+                        <hi style="font-size:12pt" xml:space="preserve"> 8, 2 </hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:12pt">Coelho, Maria José Marino Marcela</hi>
+                        <hi style="font-size:12pt" xml:space="preserve"> (2015): “Imagens em Transformação: O Restauro como Método de Ressignificação e Recuperação da Memória das Imagens. Estudo, Conservação e Restauro de Duas Pinturas de História”. Faculdade de Belas Artes da Universidade de Lisboa.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:12pt">Coleman, Stephen Edwin</hi>
+                        <hi style="font-size:12pt" xml:space="preserve"> (2007): “Digital Photo Manipulation: A descriptive Analysis of Codes of Ethics and Ethical Decisions of Photo Editors”. University of Southern Mississipi.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:12pt">Consilium</hi>
+                        <hi style="font-size:12pt" xml:space="preserve"> : “Regulamento Inteligência Artificial (IA): Conselho dá luz verde final às primeiras regras do mundo em matéria de IA”. &lt;</hi>
+                        <ref target="https://www.consilium.europa.eu/pt/press/press-releases/2024/05/21/artificial-intelligence-ai-act-council-gives-final-green-light-to-the-first-worldwide-rules-on-ai/">https://www.consilium.europa.eu/pt/press/press-releases/2024/05/21/artificial-intelligence-ai-act-council-gives-final-green-light-to-the-first-worldwide-rules-on-ai/</ref>
+                        <hi style="font-size:12pt">&gt;[05.11.2024].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:12pt">Donovan, Moira</hi>
+                        <hi style="font-size:12pt" xml:space="preserve"> (2023): “How AI is helping historians better understand our past”. MIT Technology Review. &lt;</hi>
+                        <ref target="https://doi.org/gyreview.com/2023/04/11/1071104/ai-helping-historians-analyze-past/">
+                            <hi style="font-size:12pt">gyreview.com/2023/04/11/1071104/ai-helping-historians-analyze-past/</hi>
+                        </ref>
+                        <hi style="font-size:12pt">&gt; [15.11.2024].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:12pt">“Ética – ARP”. &lt;</hi>
+                        <ref target="https://arp.org.pt/etica/">https://arp.org.pt/etica/</ref>
+                        <hi style="font-size:12pt">&gt;[15.11.2024].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:12pt">Fidalgo, Vitor Palmela</hi>
+                        <hi style="font-size:12pt" xml:space="preserve"> (2018): “Inteligência Artificial e Direitos de Imagem”. Lisboa: PLMJ.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:12pt">Gaber, Jomana Ahmed / Youssef, Sherin Moustafa / Fathalla, Karma Mohamed</hi>
+                        <hi style="font-size:12pt" xml:space="preserve"> (2023):  “The Role of Artificial Intelligence and Machine Learning in preserving Cultural Heritage and Art Works via Virtual Restoration” in: </hi>
+                        <hi rend="italic" style="font-size:12pt">ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences</hi>
+                        <hi style="font-size:12pt">, Vol. 10. 1. Cairo: ISPRS.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:12pt">Ghaith, Kholoud / Hutson, James</hi>
+                        <hi style="font-size:12pt" xml:space="preserve"> (2024) : “A qualitative study on the integration of artificial intelligence in cultural heritage conservation” in:</hi>
+                        <hi rend="italic" style="font-size:12pt">Metaverse</hi>
+                        <hi style="font-size:12pt">5, 2.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:12pt">Histórico XXII Governo</hi>
+                        <hi style="font-size:12pt">: “Portugal quer adoção de primeira lei europeia para inteligência artificial”. &lt;</hi>
+                        <ref target="https://www.portugal.gov.pt/pt/gc22/comunicacao/noticia?i=portugal-quer-adocao-de-primeira-lei-europeia-para-inteligencia-artificial">https://www.portugal.gov.pt/pt/gc22/comunicacao/noticia?i=portugal-quer-adocao-de-primeira-lei-europeia-para-inteligencia-artificial</ref>
+                        <hi style="font-size:12pt">&gt;[05.11.2024].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:12pt">O’brien, Charles / Hutson, James / Olsen, Trent / Ratican, Jeremiah</hi>
+                        <hi style="font-size:12pt" xml:space="preserve"> (2023): “Limitations and possibilities of digital restoration techniques using generative AI tools: Reconstituting Antoine François Callet’s Achilles dragging hector’s body past the walls of troy”, in: </hi>
+                        <hi rend="italic" style="font-size:12pt">Arts &amp; Communication</hi>
+                        <hi style="font-size:12pt">. &lt;</hi>
+                        <ref target="https://doi.org/10.36922/ac.1793">
+                            <hi style="font-size:12pt">https://doi.org/10.36922/ac.1793</hi>
+                        </ref>
+                        <hi style="font-size:12pt">&gt;.[05.11.2024].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:12pt">Schuh, Julien</hi>
+                        <hi style="font-size:12pt" xml:space="preserve"> (2024): “AI As Artificial Memory: A Global Reconfiguration of Our Collective Memory Practices?”, in:</hi>
+                        <hi rend="italic" style="font-size:12pt">Memory Studies Review</hi>
+                        <hi style="font-size:12pt">, 1–25. &lt;</hi>
+                        <ref target="https://doi.org/:10.1163/29498902-202400012">
+                            <hi style="font-size:12pt">https://doi.org/:10.1163/29498902-202400012</hi>
+                        </ref>&gt;
+                        <hi style="font-size:12pt">.[05.11.2024].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:12pt">Schvambach, Janaina / Michelon, Francisca Ferreira / Bonilha, Caroline Leal</hi>
+                        <hi style="font-size:12pt" xml:space="preserve"> (2010): «Fotografia como Monumento Portátil: Cuidados no Uso da Imagem Fotográfica como Meio de Conservação Memorial». Bahia: ANPAP.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:12pt">Turner, Venny</hi>
+                        <hi style="font-size:12pt" xml:space="preserve"> (2023): «Simplifying Autoencoders and Generative Adversarial Networks». Medium. &lt;</hi>
+                        <ref target="https://pub.aimind.so/simplifying-autoencoders-and-generative-adversarial-networks-cd7c54fff2a8">https://pub.aimind.so/simplifying-autoencoders-and-generative-adversarial-networks-cd7c54fff2a8</ref>&gt;
+                        <hi style="font-size:12pt">[10.11.2024]..</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-size:12pt">Wang, Sheng/ Ding, Xin / Zhang, Wei</hi>
+                        <hi style="font-size:12pt">(2024): «Old scratched photos restoration with enhancement and colorization», in:</hi>
+                        <hi rend="italic" style="font-size:12pt">Multimed Tools Appl</hi>
+                        <hi style="font-size:12pt">. &lt;</hi>
+                        <ref target="https://doi.org/10.1007/s11042-024-19595-w">https://doi.org/10.1007/s11042-024-19595-w</ref>&gt;
+                        <hi style="font-size:12pt">.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

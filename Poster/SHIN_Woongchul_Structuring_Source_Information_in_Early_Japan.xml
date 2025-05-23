@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SHIN_Woongchul_Structuring_Source_Information_in_Early_Japan">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Structuring Source Information in Early Japanese Dictionaries Using TEI/XML and RDF</title>
+                <author>
+                    <persName>
+                        <surname>SHIN</surname>
+                        <forename>Woongchul</forename>
+                    </persName>
+                    <affiliation>Hanbat National University, South Korea</affiliation>
+                    <email>shinwngchL@hanbat.ac.kr</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Ruiju Myōgishō</term>
+                    <term>TEI/XML</term>
+                    <term>RDF</term>
+                    <term>Source information</term>
+                    <term>Historical Lexicography</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data modeling</term>
+                    <term>linked (open) data</term>
+                    <term>manuscripts description</term>
+                    <term>representation</term>
+                    <term>and analysis</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>Asian studies</term>
+                    <term>Humanities computing</term>
+                    <term>Library &amp; information science</term>
+                    <term>Philology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">The Zushoryō edition of 
+                    <hi rend="italic">Ruiju Myōgishō</hi>, compiled by a Buddhist scholar-monk at the end of the 11th century, stands out as an essential resource in the history of Japanese lexicography. This dictionary uniquely integrates extensive references to Buddhist scriptures, classical Chinese texts, and various historical sources. Its intricate annotation system, detailing phonetic notations, semantic explanations, and orthographic variations, exemplifies the intellectual and cultural dynamics of the Heian period.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Textual Features and Encoding Challenges</head>
+                <p style="text-align: left; ">
+                    <hi rend="italic">Ruiju Myōgishō</hi> presents substantial challenges for digital text encoding due to its complex, multi-layered annotation structure. The dictionary predominantly includes multi-character entries, unlike previous works focused primarily on single-character entries. Each entry is annotated with detailed citations, which necessitates precise encoding to preserve these complex textual relationships digitally.
+                </p>
+                <figure>
+                    <graphic n="1001" width="6.856336111111111cm" height="13.6cm" url="/tmp/tmp9q9if7ww/Pictures/1789586530e3c2d4a0bd5600547ae80b.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 1: 
+                    <hi rend="italic" xml:space="preserve">Transcription example of Zushoryō edition of </hi>Ruiju Myōgishō
+                    <hi rend="italic" xml:space="preserve"> (Z070-11)</hi>.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Application of TEI/XML</head>
+                <p style="text-align: left; ">To address the complexity, this research employs TEI/XML, a robust markup language specifically designed for encoding humanities texts. TEI/XML efficiently captures structural details such as semantic annotations, bibliographic references, and textual variations. This structured markup enables researchers to maintain the fidelity and usability of the original manuscript in digital form, providing a comprehensive framework for representing lexicographical data.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Limitations of XML and the Need for RDF</head>
+                <p style="text-align: left; ">Despite its strengths, TEI/XML has inherent limitations due to its hierarchical, tree-based structure, which restricts its ability to represent the nuanced relationships found within bibliographic and interpretive layers of 
+                    <hi rend="italic">Ruiju Myōgishō</hi>. Citations within the dictionary frequently reference multiple external sources in non-linear ways, thus necessitating a complementary method to accurately represent these intricate networks.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>RDF for Complex Citation Modeling</head>
+                <p style="text-align: left; ">Resource Description Framework (RDF), with its graph-based structure, complements TEI/XML by effectively modeling complex citation networks. RDF facilitates the representation of non-linear, multidirectional relationships, thus overcoming the limitations of traditional XML encoding. By integrating RDF, this research achieves a more accurate and flexible depiction of the dictionary’s extensive citation practices, linking multiple textual sources, author attributions, and contextual metadata seamlessly.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Hybrid TEI/XML and RDF Model Implementation</head>
+                <p style="text-align: left; ">The core contribution of this research lies in developing a hybrid data modeling approach, integrating TEI/XML and RDF. Initially, a TEI/XML schema tailored to 
+                    <hi rend="italic">Ruiju Myōgishō</hi>'s specific textual characteristics was created, followed by the application of RDF ontologies to represent citation relationships comprehensively. The resulting hybrid model not only captures the dictionary's complexity but also facilitates interoperability with other digital textual resources, significantly enhancing the potential for cross-textual analyses and collaborative scholarly efforts.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Broader Implications and Future Work</head>
+                <p style="text-align: left; ">The developed hybrid model has broader implications for historical lexicography and digital humanities. It exemplifies a successful integration of traditional philological research with advanced digital methodologies, promoting a deeper understanding of textual transmission and intellectual history. Future research will aim to further refine RDF ontologies, incorporating additional semantic layers such as interpretative variants and detailed contextual metadata, and to explore linked-data applications that integrate 
+                    <hi rend="italic" xml:space="preserve">Ruiju Myōgishō </hi>with other East Asian textual corpora.
+                </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Ikeda, Shoju</hi> (2000). “Ruijū Myōgishō Shutten Ryakuchū.” in: 
+                        <hi rend="italic">Kojisho to JIS</hi> 3, 59-74.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Ikeda, Shoju</hi> (2001). “Ruijū Myōgishō Shutten Sakuin.” in: 
+                        <hi rend="italic">Kojisho to JIS</hi> 4, 69-97.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Okada, Kazuhiro</hi> (2020): “Nihon Heianki Kojishono Fugōka Model.” in: 
+                        <hi rend="italic">Digital Humanities</hi> 2: 26-54.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Okada, Kazuhiro</hi> (2022): “Nihon Kojisho no TEI Fugōka.” in: 
+                        <hi rend="italic">Jinbungaku no tame no Text Data K</hi>ō
+                        <hi rend="italic">chiku Ny</hi>ū
+                        <hi rend="italic">mon</hi>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Shin, Woongchul </hi>(2016). “Zushoryōbon Ruijū Myōgishō no Honbun Kaidoku to Database Sakusei no Mondaiten.” in: 
+                        <hi rend="italic">Symposium Han-Digi 2016 Symposium</hi> at Hokkaido University, Sapporo, August 2016.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Shin, Woongchul</hi> (2018). “Zushoryōbon Ruijū Myōgishō no Kōzōka Text no Sekkei to Jissen.” In: 
+                        <hi rend="italic">Symposium Kojisho Kenkyū no Shatei</hi> at NINJAL, Tachikawa, August 2018.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Shin, Woongchul</hi> / 
+                        <hi rend="bold">Liu, Guanwei</hi> (2022): “Zushoryōbon Ruijū Myōgishō no Kōdona Kōzōka Text no Sakusei ni okeru Mondaiten: Chūmon Kōzō no Haaku o Chūshin ni” in: 
+                        <hi rend="italic">Symposium Kojisho / Kanjion Kenkyū to Jinbun Jōhōgaku</hi>, Online, March 2022.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Shin, Woongchul</hi> (2023): “Zushoryōbon Ruijū Myōgishō ui TEI Giban Gujohwa Text Data Guchuk gwa Eungyong e daehan Gochal: Hanmunju wa Waehun ui Daeeung eul Jungsim euro.” in: 
+                        <hi rend="italic">Geunyeok Hanmun Hakhoe 2023 Chugye Gihoek Haksul Daehoe</hi>, Yongin, November 2023.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="CHENG_Luotong_Exploring_the_GOLEM_Ontology_and_Knowledge_Gra">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Exploring the GOLEM Ontology and Knowledge Graph for Narrative and Fiction (Workshop)</title>
+                <author>
+                    <persName>
+                        <surname>Cheng</surname>
+                        <forename>Luotong</forename>
+                    </persName>
+                    <affiliation>University of Groningen, The Netherlands; University of Twente, The Netherlands</affiliation>
+                    <email>l.cheng@utwente.nl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Yang</surname>
+                        <forename>Xiaoyan</forename>
+                    </persName>
+                    <affiliation>University of Groningen, The Netherlands</affiliation>
+                    <email>xiaoyan.yang@rug.nl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Pannach</surname>
+                        <forename>Franziska</forename>
+                    </persName>
+                    <affiliation>University of Groningen, The Netherlands</affiliation>
+                    <email>f.a.pannach@rug.nl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Pianzola</surname>
+                        <forename>Federico</forename>
+                    </persName>
+                    <affiliation>University of Groningen, The Netherlands</affiliation>
+                    <email>f.pianzola@rug.nl</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-08T19:01:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Pre-Conference Workshop and Tutorial</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Ontology</term>
+                    <term>Knowledge Graph</term>
+                    <term>Semantic Web</term>
+                    <term>Linked Data</term>
+                    <term>CIDOC-CRM</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data modeling</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>linked (open) data</term>
+                    <term>semantic analysis</term>
+                    <term>Cognitive sciences and psychology</term>
+                    <term>Computer science</term>
+                    <term>Humanities computing</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Project Description</head>
+                <p style="text-align: left; ">Ontologies, defined as “a formal, explicit specification of a shared conceptualization” (Studer et al., 1998), are essential for implementing Linked Open Data (LOD) principles. They are widely used in various domains in digital humanities research, as they define clear concepts and relationships for entities within a domain, ensuring that data is interconnected and semantically enriched (Kakali et al., 2007; Vlachidis et al., 2021). Knowledge graphs (KGs), which leverage a graph-based data model, provide powerful tools for representing and managing large-scale data from multiple sources (Hogan et al., 2021). Unlike traditional relational models, KGs offer a more flexible and intuitive way to capture complex relationships between entities. Prominent examples such as DBpedia (Lehmann et al., 2015) and Wikidata (Erxleben et al., 2014) serve as valuable resources in digital humanities (Wojcik et al., 2023; Fischer et al., 2023). By incorporating ontologies, knowledge graphs gain a semantic framework that supports reasoning about the relationships between concepts within specific domains. This makes KGs increasingly valuable for a range of applications, including machine learning and natural language processing (Chen et al., 2020; Hogan et al., 2021).</p>
+                <p style="text-align: left; ">While there have been some attempts to create general ontologies for narrative and fiction, such as the Narrative Ontology (Bartalesi et al., 2016), and others in specific domains, such as the Ody Ontology (Khan et al., 2016), Drammar Ontology (Damiano et al., 2019), ProppOntology (Pannach et al., 2021), none has become a standard in the field, unlike for other aspects of cultural heritage, such as CIDOC-CRM. </p>
+                <p style="text-align: left; ">The GOLEM ontology (Graphs and Ontologies for Literary Evolution Models) aims at filling this gap. It establishes a framework that defines the interrelationships among key narrative elements and creates a library of modules for these components. Interoperability and integration with existing standards have guided its development. Accordingly, GOLEM ontology is developed as an extension of the CIDOC-CRM and LRMoo ontologies for cultural heritage and aligned with the foundational DOLCE-Lite-Plus ontology. The GOLEM knowledge graph is built based on the GOLEM ontology. This workshop will introduce participants to the GOLEM ontology and knowledge graph, exploring their design principles and practical applications. Participants will learn how to apply narrative theory through this semantic model and how to query the graph to explore and analyze narrative data. These techniques can be useful when they interact with other knowledge graph based servers in their own research, for example Wiki Data.<ref n="1" target="ftn2"/>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Target Participants</head>
+                <p style="text-align: left; ">This workshop is designed for individuals with interests in literary studies, narratology, and Linked Open Data (LOD), with an expected attendance of 20 to 30 participants. Participants need to bring their own laptops. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Learning Objectives</head>
+                <p style="text-align: left; ">After the workshop, participants will:</p>
+                <list type="unordered">
+                    <item>Understand the design principles of CIDOC-CRM, LRMoo, and the GOLEM ontology for narrative and fiction.</item>
+                    <item>Learn how to use the GOLEM knowledge graph for narrative analysis and querying narrative data through SPARQL.</item>
+                    <item>Explore how narrative theories can be operationalized within a formal semantic framework to analyze literary corpora.</item>
+                    <item>Gain practical experience in applying semantic modeling and knowledge graph techniques to answer research questions.</item>
+                </list>
+                <p style="text-align: left; ">The workshop will be prepared following the example of the MiMoText Tutorial.<ref n="2" target="ftn3"/> Participants will have access to a step-by-step web-based interactive tutorial environment, pre-loaded with example queries and visualizations to facilitate an engaging and practical experience. For the detailed agenda, see the appendix. 
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methodology</head>
+                <p style="text-align: left; ">The GOLEM ontology utilizes conceptual modeling and modularization. We begin by defining key narratological concepts, such as character, relationship, and event, linking them to essential elements that describe their characteristics and functions. Our classes are designed for interoperability, connecting with existing ontologies like CIDOC CRM, LRMoo, and DOLCE-Lite-Plus. We establish relationships between these elements and construct the ontology using Description Logic (DL) to facilitate computational inference. Finally, the ontology is used to populate a knowledge graph (Pannach et al., 2024a), allowing users to perform SPARQL queries for efficient data retrieval and analysis.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Dataset</head>
+                <p style="text-align: left; ">The current dataset used for the GOLEM knowledge graph is based on fanfiction collected from the Archive of Our Own (AO3). We selected AO3 for its accessibility, supportive web scraping policy, and comprehensive metadata system (Pannach et al., 2024b). In line with the ontology's objective to encompass a wide range of narratives, we plan to expand our data sources in the future to include stories from other domains and fictional universes, like folklore.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Ontology Modelling </head>
+                <p style="text-align: left; ">The GOLEM Ontology includes modules for characters, relationships, events, settings, narrative, and inference (see Figure 1). A wiki and the complete documentation of the ontology can be found on the project’s GitHub<ref n="3" target="ftn4"/> and on the pyLODE-generated web page.<ref n="4" target="ftn5"/>
+                </p>
+                <figure>
+                    <graphic n="1001" width="14.478cm" height="7.0272194444444445cm" url="/tmp/tmphlxbp251/Pictures/2edf6ac57d3beef65ea637ba488aa023.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Figure 1</hi>. Overview of the GOLEM ontology’s main classes and properties. 
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Knowledge Graph Querying </head>
+                <p style="text-align: left; ">The GOLEM knowledge graph contains approximately 20,000 stories from AO3, forming a subset of the GOLEM triple store (Pannach et al., 2024b), which represents the first generation of resources for the project. The KG can be queried via the SPARQL endpoint.<ref n="5" target="ftn6"/> For instance, the following query demonstrates how the inference module can be applied to trace the provenance of word count values for stories (see Figure 2):
+                </p>
+                <figure>
+                    <graphic n="1002" width="16.002cm" height="11.952111111111112cm" url="/tmp/tmphlxbp251/Pictures/2edf6ac57d3beef65ea637ba488aa023.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Figure 2</hi>. SPARQL query example. 
+                </p>
+                <p style="text-align: left; ">This query illustrates how the inference module models word count as a type of dimension attributed to a story. Using the crm:E13_Attribute_Assignment class, the module records the assignment of word count values, their provenance, and the methods used to derive them. For example, the query may reveal two word count values for a story: one derived from AO3's metadata and another calculated by the FabulaNet <ref n="6" target="ftn7"/> project leveraging SpaCy. The result of this query can be found here.<ref n="7" target="ftn8"/> 
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Workshop Agenda (3 hours): 13:30-17:00 (Monday 14th July)</head>
+                <figure>
+                    <graphic n="1003" width="16.002cm" height="13.67013888888889cm" url="/tmp/tmphlxbp251/Pictures/2edf6ac57d3beef65ea637ba488aa023.png" rend="inline"/>
+                </figure>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn2" n="1">
+                          
+                            <ref target="https://query.wikidata.org/">https://query.wikidata.org/</ref>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn3" n="2">
+                        
+                            <ref target="https://mimotext.github.io/MiMoTextBase_Tutorial/tutorial_index.html">https://mimotext.github.io/MiMoTextBase_Tutorial/tutorial_index.html</ref>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn4" n="3">
+                        
+                            <ref target="https://github.com/GOLEM-lab/golem-ontology">https://github.com/GOLEM-lab/golem-ontology</ref>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn5" n="4">
+                        
+                            <ref target="https://ontology.golemlab.eu/">https://ontology.golemlab.eu/</ref>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn6" n="5">
+                        
+                            <ref target="http://graph.golemlab.eu:8890/sparql">http://graph.golemlab.eu:8890/sparql</ref>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn7" n="6">
+                        
+                            <ref target="https://centre-for-humanities-computing.github.io/fabula-net/">https://centre-for-humanities-computing.github.io/fabula-net/</ref>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn8" n="7">
+                         Query result: 
+                            <ref target="http://graph.golemlab.eu:8890/sparql?default-graph-uri=&amp;qtxt=PREFIX%20gc%3A%20%3Chttps%3A%2F%2Fontology.golemlab.eu%2F%3E%0APREFIX%20gd%3A%20%3Chttps%3A%2F%2Fdata.golemlab.eu%2Fentity%2F%3E%0APREFIX%20crm%3A%20%3Chttp%3A%2F%2Fwww.cidoc-crm.org%2Fcidoc-crm%2F%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0APREFIX%20gt%3A%20%3Chttps%3A%2F%2Fontology.golemlab.eu%2Ftype%23%3E%0A%0AWITH%20GRAPH%20%3Chttps%3A%2F%2Fgolemlab.eu%2Fgraph%2F%3E%20%0Aselect%20distinct%20%3Fwork%20%3Fmeasurement_label%20%3Ftechnique_label%20%3Fmeasurement_value%20%0Awhere%20%7B%0A%3Fassignment%20a%20crm%3AE13_Attribute_Assignment%20%3B%0Acrm%3AP140_assigned_attribute_to%20%3Fwork%20%3B%0Acrm%3AP141_assigned%20%3Fdimension%20%3B%0Acrm%3AP177_assigned_property_of_type%20%3Fmeasurement_type%20%3B%0Acrm%3AP32_used_general_technique%20%3Ftechnique%20.%20%20%20%0A%3Fmeasurement_type%20skos%3AprefLabel%20%3Fproperty_label%20.%0A%3Ftechnique%20skos%3AprefLabel%20%3Ftechnique_label%20.%0A%3Fwork%20%20crm%3AP43_has_dimension%20%3Fdimension%20.%0A%3Fdimension%20crm%3AP2_has_type%20%3Fmeasurement_type%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20crm%3AP90_has_value%20%3Fmeasurement_value%20.%0A%20%20%20%20%20%20%20%20%3Fmeasurement_type%20skos%3AprefLabel%20%3Fmeasurement_label%20.%20%0A%7D%0Aorder%20by%20(%3Fwork)%0A&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on">http://graph.golemlab.eu:8890/sparql?default-graph-uri=&amp;qtxt=PREFIX%20gc%3A%20%3Chttps%3A%2F%2Fontology.golemlab.eu%2F%3E%0APREFIX%20gd%3A%20%3Chttps%3A%2F%2Fdata.golemlab.eu%2Fentity%2F%3E%0APREFIX%20crm%3A%20%3Chttp%3A%2F%2Fwww.cidoc-crm.org%2Fcidoc-crm%2F%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0APREFIX%20gt%3A%20%3Chttps%3A%2F%2Fontology.golemlab.eu%2Ftype%23%3E%0A%0AWITH%20GRAPH%20%3Chttps%3A%2F%2Fgolemlab.eu%2Fgraph%2F%3E%20%0Aselect%20distinct%20%3Fwork%20%3Fmeasurement_label%20%3Ftechnique_label%20%3Fmeasurement_value%20%0Awhere%20%7B%0A%3Fassignment%20a%20crm%3AE13_Attribute_Assignment%20%3B%0Acrm%3AP140_assigned_attribute_to%20%3Fwork%20%3B%0Acrm%3AP141_assigned%20%3Fdimension%20%3B%0Acrm%3AP177_assigned_property_of_type%20%3Fmeasurement_type%20%3B%0Acrm%3AP32_used_general_technique%20%3Ftechnique%20.%20%20%20%0A%3Fmeasurement_type%20skos%3AprefLabel%20%3Fproperty_label%20.%0A%3Ftechnique%20skos%3AprefLabel%20%3Ftechnique_label%20.%0A%3Fwork%20%20crm%3AP43_has_dimension%20%3Fdimension%20.%0A%3Fdimension%20crm%3AP2_has_type%20%3Fmeasurement_type%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20crm%3AP90_has_value%20%3Fmeasurement_value%20.%0A%20%20%20%20%20%20%20%20%3Fmeasurement_type%20skos%3AprefLabel%20%3Fmeasurement_label%20.%20%0A%7D%0Aorder%20by%20(%3Fwork)%0A&amp;format=text%2Fhtml&amp;timeout=0&amp;signal_void=on</ref> 
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Bartalesi, V., Meghini, C., &amp; Metilli, D. (2016). Steps towards a formal ontology of narratives based on narratology. In 7th workshop on Computational Models of Narrative (CMN 2016). Schloss Dagstuhl–Leibniz-Zentrum für Informatik.</bibl>
+                    <bibl style="text-align: left; ">Bartalesi, V., Meghini, C., &amp; Metilli, D. (2017). A conceptualisation of narratives and its expression in the CRM. International Journal of Metadata, Semantics and Ontologies, 12(1), 35-46. 
+                        <ref target="https://doi.org/10.1504/IJMSO.2017.10005083">https://doi.org/10.1504/IJMSO.2017.10005083</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">Chen, Z., Wang, Y., Zhao, B., Cheng, J., Zhao, X., &amp; Duan, Z. (2020). Knowledge graph completion: A review. Ieee Access, 8, 192435-192456. Damiano, R., Lombardo, V., &amp; Pizzo, A. (2019). The ontology of drama. Applied Ontology, 14(1), 79-118.</bibl>
+                    <bibl style="text-align: left; ">Erxleben, F., Günther, M., Krötzsch, M., Mendez, J., &amp; Vrandečić, D. (2014). Introducing wikidata to the linked data web. In The Semantic Web–ISWC 2014: 13th International Semantic Web Conference, Riva del Garda, Italy, October 19-23, 2014. Proceedings, Part I 13 (pp. 50-65). Springer International Publishing.</bibl>
+                    <bibl style="text-align: left; ">Fischer, F., Blakesley, J., Wojcik, P., &amp; Jaschke, R. (2023). Preface: World Literature in an Expanding Digital Space. Journal of Cultural Analytics, 8(2), 1-14.</bibl>
+                    <bibl style="text-align: left; ">Hogan, A., Blomqvist, E., Cochez, M., d’Amato, C., Melo, G.D., Gutierrez, C., Kirrane, S., Gayo, J.E.L., Navigli, R., Neumaier, S. and Ngomo, A.C.N. (2021). Knowledge graphs. ACM Computing Surveys (Csur), 54(4), 1-37.</bibl>
+                    <bibl style="text-align: left; ">Kakali, C., Lourdi, I., Stasinopoulou, T., Bountouri, L., Papatheodorou, C., Doerr, M., Koutsomitropoulos, D. A., Solomou, G. D., &amp; Papatheodorou, T. S. (2009). Metadata and semantics in digital object collections: A case-study on CIDOC-CRM and Dublin Core and a prototype implementation.</bibl>
+                    <bibl style="text-align: left; ">Khan, A. F., Bellandi, A., Benotto, G., Frontini, F., Giovannetti, E., &amp; Reboul, M. (2016). Leveraging a narrative ontology to query a literary text. In 7th Workshop on Computational Models of Narrative (CMN 2016). Schloss-Dagstuhl-Leibniz Zentrum für Informatik.</bibl>
+                    <bibl style="text-align: left; ">Lea, K. M. (1962). Italian popular comedy: A study in the commedia dell'arte, 1560–1620 with special reference to the English stage (Vol. 1). Russell &amp; Russell.</bibl>
+                    <bibl style="text-align: left; ">Lehmann, J., Isele, R., Jakob, M., Jentzsch, A., Kontokostas, D., Mendes, P. N., ... &amp; Bizer, C. (2015). Dbpedia–a large-scale, multilingual knowledge base extracted from wikipedia. Semantic web, 6(2), 167-195.</bibl>
+                    <bibl style="text-align: left; ">Mika, P., &amp; Gangemi, A. (2016). Descriptions of social relations. Benefits, 1, 14. 
+                        <ref target="https://doi.org/10.3390/benefits1010014">https://doi.org/10.3390/benefits1010014</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">Pannach, F., Sporleder, C., May, W., Krishnan, A., &amp; Sewchurran, A. (2021). Of lions and Yakshis. Semantic Web, 12(2), 219-239.</bibl>
+                    <bibl style="text-align: left; ">Pannach, F., Pianzola, F., &amp; Cheng, L. (2024a). The GOLEM Knowledge Graph and Search  Interface: Perspectives into Narrative and Fiction. In Computational Humanities Research 2024.</bibl>
+                    <bibl style="text-align: left; ">Pannach, F., Yang, X., Solissa, N. V., Yu, Z., Van Cranenburgh, A., Van Der Ree, M., &amp; Pianzola, F. (2024b). The GOLEM Triple Store: A Graph-based Representation of Narrative and Fiction. In Joint of the ESWC 2024 Workshops and Tutorials, ESWC-JP 2024. CEUR Workshop Proceedings (CEUR-WS. org).</bibl>
+                    <bibl style="text-align: left; ">Propp, V. (1968). Morphology of the folktale. University of Texas Press.</bibl>
+                    <bibl style="text-align: left; ">Schöch, C., Hinzmann, M., Röttgermann, J., Dietz, K., &amp; Klee, A. (2022). Smart modelling for literary history. International Journal of Humanities and Arts Computing, 16(1), 78–93.</bibl>
+                    <bibl style="text-align: left; ">Studer, R., Benjamins, V. R., &amp; Fensel, D. (1998). Knowledge engineering: Principles and methods. Data &amp; knowledge engineering, 25(1-2), 161-197.</bibl>
+                    <bibl style="text-align: left; ">Vlachidis, A., Antoniou, A., Bikakis, A., &amp; Terras, M. (2021). Semantic metadata enrichment and data augmentation of small museum collections following the FAIR principles. In Information and Knowledge Organisation in Digital Humanities (pp. 106-129). Routledge.</bibl>
+                    <bibl style="text-align: left; ">Wojcik, P., Bunzeck, B., &amp; Zarrieß, S. (2023). The Wikipedia Republic of Literary Characters. Journal of Cultural Analytics, 8(2).</bibl>
+                    <bibl style="text-align: left; ">Zgoll, C. (2020). Myths as polymorphous and polystratic Erzählstoffe. In Mythische Sphärenwechsel: Methodisch neue Zugänge zu antiken Mythen in Orient und Okzident (pp. 9-82).</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

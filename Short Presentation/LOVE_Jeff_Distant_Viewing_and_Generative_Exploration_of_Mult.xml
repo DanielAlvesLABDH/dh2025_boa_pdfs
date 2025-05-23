@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LOVE_Jeff_Distant_Viewing_and_Generative_Exploration_of_Mult">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Distant Viewing and Generative Exploration of Multimedia Heraldry in Early Modern Europe</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Love</surname>
+                        <forename>Jeff</forename>
+                    </persName>
+                    <affiliation>TU Delft, The Netherlands</affiliation>
+                    <email>j.s.love@tudelft.nl</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T08:29:05.792970304</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>distant viewing</term>
+                    <term>heraldry</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>cultural analytics</term>
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>Art history</term>
+                    <term>Book and print history</term>
+                    <term>Design studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head/>
+                <p>This paper presents preliminary findings from the 
+                    <hi rend="italic">Images on the Move </hi>project (2025–2028), an interdisciplinary initiative uniting librarians, historians of art &amp; design, genealogists and digital humanists to explore the mobility, adaptation and transformation of visual language in early modern Europe. For this presentation we focus on heraldic imagery as a case study and employ art historical and computational methods to examine how coats of arms and related symbols evolved and circulated across the continent during a period characterized by profound technological and cultural shifts such as the displacement of handwritten text and imagery by print.
+                </p>
+                <p>The primary aim of this study is to employ computational methods, specifically those informed by distant viewing (Arnold &amp; Tilton 2023), to analyze a corpus of heraldic images dating from approximately 1450–1700. Around 1700 of these images are sourced from digitized 
+                    <hi rend="italic">alba amicorum </hi>or ‘friendship books’ and serve as a consistent dataset of heraldic illustrations paired with textual annotations. Such books were frequently compiled by prominent European families and offer a unique lens for understanding the persistence and evolution of heraldic motifs over time. Recent digitization efforts by institutions such the National Library of the Netherlands have made these volumes accessible for large-scale analysis, presenting an opportune moment to explore patterns of image creation, adaptation and dissemination across centuries.
+                </p>
+                <p>The methodology employed in this project includes an initial unsupervised clustering algorithm to detect patterns and groupings within the corpus. We employ distant viewing, one lens for examining the visual lexicon across large swatches of space and time, and we visualize the materials using PixPlot (Duhaime et al.), a tool developed by the Yale Digital Humanities Lab. This computational approach aids in surfacing recurring motifs, stylistic changes and potential regional influences. To move beyond quantitative pattern recognition, the study adopts iterative grounded theory (Nelson 2020) to bridge macro-level trends and micro-level analyses and give context to the computational findings within broader historical narratives. To enrich the images in our corpus we experiment with advanced image recognition techniques, such as deformable parts models (cf. Crowley &amp; Zisserman 2013), to generate detailed annotations for individual images. By automating aspects of image analysis, this method facilitates a dual-level inquiry: uncovering broad patterns while also identifying specific heraldic features within individual images, such as colour schemes, blazons and stylistic variations.</p>
+                <p>A second and equally significant goal of this research is the development of a toolkit aimed at supporting scholars and practitioners in identifying and interpreting heraldic imagery. This tool should give approximate matches based on features and be able to meaningfully explain these matches. This is inspired by current work in the field of ecology (Li et al. 2022, Yang et al. 2022) which takes a distributed approach to building up community knowledge bases and visual computational tools for studying them. The core of this toolkit is an image classifier designed to suggest probable identifications for unknown coats of arms. Part of this experiment is also a test of whether the corpus is sufficiently large and well described to create a functioning set of tools for identification. This involves addressing challenges such as transfer learning, i.e. determining how effectively models trained on one medium, such as manuscript illustrations, can classify arms depicted in other formats like ceramics, architectural engravings or paintings. To enhance the classifier’s functionality, it incorporates an ontology-based system for explaining matches based on the foundational work of Hiltmann &amp; Schneider (2023) and draws on foundational reference works on historical heraldry in the Netherlands (e.g. Rietstap 1884-87 and de Boo 2008). We adopt a dual approach of offering plain-language explanations alongside technical heraldic terminology to broaden the toolkit's accessibility to both specialists and general audiences.</p>
+                <p>Given the constraints of working with relatively small datasets, this project explores data augmentation strategies to maximize the utility of machine learning tools conventionally reliant on larger corpora. These strategies not only enhance the classifier’s accuracy and precision but also address a recurrent challenge in digital humanities research: the effective deployment of computational tools within the context of fragmented or sparse datasets. </p>
+                <p>The broader implications of this research extend beyond its immediate findings. Insights generated here will inform two doctoral projects beginning in the spring of 2025, which will delve deeper into the historical and technical dimensions of friendship books over time. This work also serves as a precursor to a planned Citizen Science campaign aimed at engaging genealogists, art historians and amateur heraldic enthusiasts in the co-creation of an evolving knowledge base for heraldic imagery. By periodically retraining the machine learning models with community-contributed data, this initiative seeks to democratize access to and participation in the study of early modern visual culture. </p>
+                <p>This contribution offers a case study in the integration of computational and traditional methods for art historical analysis, showcasing how digital humanities tools can both expand our understanding of historical materials and foster broader collaboration among academic and public communities. The project’s outcomes hold promise not only for advancing the study of heraldry but also for informing methodological frameworks in digital humanities more broadly.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="color(#000000)">Arnold, Taylor and Lauren Tilton. 2023. </hi>
+                        <hi rend="color(#000000)italic">Distant Viewing: Computational Exploration of Digital Images</hi>
+                        <hi rend="color(#000000)">. Cambridge, MA: MIT Press. </hi>
+                        <ptr target="https://www.distantviewing.org/book/"/>
+                        <hi rend="color(#1155cd)"> </hi>
+                        <hi rend="color(#000000)">(Accessed: 6 Dec </hi>2024)
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">de Boo, J.A.. 2008. </hi>
+                        <hi rend="color(#000000)italic">Familiewapens. Kentekens van verwantschap</hi>
+                        <hi rend="color(#000000)">. Den Haag: Centraal </hi>Bureau voor Genealogie.
+                    </bibl>
+                    <bibl>Crowley, Elliot and Andrew Zisserman. 2013. ‘Of Gods and Goats: Weakly Supervised 
+                        <hi rend="color(#000000)">Learning of Figurative Art’. In </hi>
+                        <hi rend="color(#000000)italic">Proceedings British Machine Vision Conference 2013</hi>
+                        <hi rend="color(#000000)">. BMVA Press, 2013. </hi>
+                        <ptr target="https://www.research.ed.ac.uk/files/28430817/paper0039.pdf"/>
+                        <hi rend="color(#1155cd)"> </hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Duhaime, Douglas et al. ‘PixPlot’. </hi>
+                        <ptr target="https://github.com/pleonard212/pix-plot"/>
+                        <hi rend="color(#1155cd)"> </hi>
+                        <hi rend="color(#000000)">(Accessed: 6 Dec </hi>2024)
+                    </bibl>
+                    <bibl>Hiltmann, Torsten and Philipp Schneider. 2023 ‘The History of Heraldry Revisited: Introducing Digital Heraldry Ontology to Describe, Contextualise, and Analyse Medieval and 
+                        <hi rend="color(#000000)">Early Modern Coats of Arms’. </hi>
+                        <hi rend="color(#000000)italic">Genealogica &amp; Heraldica </hi>
+                        <hi rend="color(#000000)">XXXV: 152-167.</hi>
+                    </bibl>
+                    <bibl>Li, Dawei, et al. 2022. ‘PlantNet: A Dual-function Point Cloud Segmentation Network for 
+                        <hi rend="color(#000000)">Multiple Plant Species’. </hi>
+                        <hi rend="color(#000000)italic">ISPRS Journal of Photogrammetry and Remote Sensing </hi>
+                        <hi rend="color(#000000)">184: </hi>243-263.
+                    </bibl>
+                    <bibl>Nelson, Laura K. 2020. 'Computational Grounded Theory: A Methodological Framework'. 
+                        <hi rend="color(#000000)italic">Sociological Methods &amp; Research </hi>
+                        <hi rend="color(#000000)">49.1: 3-42. </hi>
+                        <ptr target="https://www.doi.org/10.1177/0049124117729703"/>
+                    </bibl>
+                    <bibl>Rietstap, Johann Baptist. 1884-87. 2 vols. 
+                        <hi rend="italic">Armorial général précédé d'un dictionnaire des Termes du blason</hi>. Gouda: G.B. van Goor Zonen.
+                    </bibl>
+                    <bibl>Yang, Ziying, et al. 2022. ‘PlantNet: Transfer Learning-based Fine-grained Network for 
+                        <hi rend="color(#000000)">High-throughput Plants Recognition’. </hi>
+                        <hi rend="color(#000000)italic">Soft Computing </hi>
+                        <hi rend="color(#000000)">26.20:: 10581-10590.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

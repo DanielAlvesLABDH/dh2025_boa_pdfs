@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="HART_Jacob_Arvest__an_open_source_environment_for_multimodal">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Arvest: an open source environment for multimodal digital heritage analysis</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Hart</surname>
+                        <forename>Jacob</forename>
+                    </persName>
+                    <affiliation>Université Rennes 2, France</affiliation>
+                    <email>jacob.dchart@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Bardiot</surname>
+                        <forename>Clarisse</forename>
+                    </persName>
+                    <affiliation>Université Rennes 2, France</affiliation>
+                    <email>clarisse.bardiot@univ-rennes2.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Rouquet</surname>
+                        <forename>David</forename>
+                    </persName>
+                    <affiliation>Tétras Libre, France</affiliation>
+                    <email>david.rouquet@tetras-libre.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Geourjon</surname>
+                        <forename>Anthony</forename>
+                    </persName>
+                    <affiliation>Tétras Libre, France</affiliation>
+                    <email>anthony.geourjon@tetras-libre.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Roy</surname>
+                        <forename>Antoine</forename>
+                    </persName>
+                    <affiliation>Tétras Libre, France</affiliation>
+                    <email>antoine.roy@tetras-libre.fr</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-05T14:39:47.324477753</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>interface</term>
+                    <term>annotation</term>
+                    <term>multimodal</term>
+                    <term>iiif</term>
+                    <term>api</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>digital publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>linked (open) data</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>Humanities computing</term>
+                    <term>Performance Studies: Dance</term>
+                    <term>Theatre</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <hi rend="color(#000000)">In 2023, Smits and Wevers announced a multimodal turn in the digital humanities (Smits &amp; Wevers, 2023). Indeed, if historically researchers in the digital humanities have based their research on corpora comprised primarily of text (Nicholson, 2013) and images (Wevers &amp; Smits, 2020), in recent years we have seen the emergence of projects that wish to examine more technically complex artefacts such as audio, video and 3D objects. They amplify some of the issues that constantly cut across the digital humanities: how can we fluidly develop and shift between close and distant reading perspectives? How can we ensure that our sources and the results of our work are stable, reliably citable, and openly accessible to others? When using complex computational methods, how can we ensure that we can return back to the source and keep a trace of the transformations that occur during the research process? How can we annotate and link differently formatted documents together in an </hi>
+                <hi rend="color(#000000)italic">interpretative interface</hi>
+                <hi rend="color(#000000)">, as described by Drucker (Drucker, 2013)?</hi>
+            </p>
+            <p>
+                <hi rend="color(#000000)">Over the past two years, building on a prototype presented at DH 2023 (Hart et al., 2023) and recent research (Bardiot, 2021), our team based in Rennes 2 University has been developing Arvest (</hi>
+                <ptr target="https://www.arvest.app/en"/>
+                <hi rend="color(#000000)">): an open source tool which is designed as an environment for the analysis of multimodal digital heritage that seeks to offer a solution to these questions (Bardiot et al., 2024). Arvest is based entirely around the International Image Interoperability Framework (IIIF, </hi>
+                <ptr target="https://iiif.io/"/>
+                <hi rend="color(#000000)">), a global standard used notably in the GLAM sector as a solution for the storage, serving, and manipulation of digital artifacts. Despite the inclusion of support for audiovisual objects in the standard’s Presentation API (</hi>
+                <ptr target="https://iiif.io/api/presentation/3.0/"/>
+                <hi rend="color(#000000)">) since 2020, the majority of IIIF viewers are still monomodal, allowing only for the manipulation of images. Wider use of IIIF has also been curbed by the technical barriers that must be overcome, such as the setting up of servers, the creation of powerful but complex IIIF Manifests in JSON format, and the need to store media in an open yet secure state. Modular solutions have been proposed to address these issues: the 2021 special issue of </hi>
+                <hi rend="color(#000000)italic">Digital Humanities Quarterly</hi>
+                <hi rend="color(#000000)"> </hi>
+                <hi rend="color(#000000)">highlighted some examples of AV IIIF content and their annotation being used for research (Arnold et al., 2021); Digirati’s (</hi>
+                <ptr target="https://digirati.com/"/>
+                <hi rend="color(#000000)">) Manifest Editor (</hi>
+                <ptr target="https://manifest-editor.digirati.services/"/>
+                <hi rend="color(#000000)">) allows for the creation of IIIF Manifests with a user-friendly GUI; and companies such as Arkhênum </hi>
+                <hi rend="color(#000000)">(</hi>
+                <ptr target="https://www.arkhenum.fr/"/>
+                <hi rend="color(#000000)">) work with institutions to set up internal tools for IIIF-driven digitization and heritage preservation. However, this constellation of services and projects remains nebulous and no one tool proposes a solution that would allow individual, non techno-fluent researchers to start using IIIF for multimodal corpora with ease.</hi>
+            </p>
+            <p>
+                <hi rend="color(#000000)">Arvest contributes to the field by offering a multi-user environment securely hosted by Huma-Num (</hi>
+                <ptr target="https://www.huma-num.fr/"/>
+                <hi rend="color(#000000)">) where users can create an account and instantly start creating and engaging with multimodal IIIF content. Arvest supports images, audio and video (hosted on an instance of PeerTube (</hi>
+                <ptr target="https://joinpeertube.org/"/>
+                <hi rend="color(#000000)">) or YouTube), and allows the user to manipulate these documents within a single working space. It also offers a suite of powerful annotation tools: textual tagging and comments, visual overlays of drawn graphics or images, and linked annotations for the creation of document networks that can be navigated and visualised fluidly. Arvest is built entirely around HTTP requests to propose an open API for the integration of the tool in complex computational workflows, along with a Python package that greatly simplifies the creation of scripts. For more advanced users, Arvest has also been developed in a modular way, which means that users can take certain parts of the platform and integrate them into their bespoke workflows (for more information, please visit our GitHub repositories </hi>
+                <ptr target="https://github.com/arvest-data-in-context"/>
+                <hi rend="color(#000000)">).</hi>
+                <lb/>
+                <hi rend="color(#000000)">This poster comes after the first public release of Arvest in May 2025, meaning that readers can try the platform out for themselves straight away. Following the case studies, principally in the domain of performing arts analytics, that occurred during its development, we are looking forward to developing the tool in light of its use by the digital humanities community at large. Over the coming years, Arvest will notably be used as a part of our ERC-funded STAGE (</hi>
+                <ptr target="https://stage-to-data.huma-num.fr/en/"/>
+                <hi rend="color(#000000)">) project to document the creative processes around several theatrical productions at the Avignon Festival, as well as a tool for research publishing.</hi>
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <anchor xml:id="id_docs-internal-guid-ed924b72-7fff-ea9f-c4ca-923a1f0d5e4b"/>
+                        <hi rend="color(#000000)bold">Arnold, Taylor / Scagliola, Stefania / Tilton, Lauren / Van Gorp, Jasmijn</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2021</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “Introduction: Special Issue on AudioVisual Data in DH”, </hi>
+                        <hi rend="color(#000000)">in:</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)italic">Digital Humanities Quarterly </hi>
+                        <hi rend="color(#000000)">15 (1).</hi>
+                        <ref target="https://www.digitalhumanities.org/dhq/vol/15/1/000541/000541.html">
+                            <hi rend="color(#1155cc)underline"> </hi>
+                            <hi rend="color(#1155cc)underline">https://www.digitalhumanities.org/dhq/vol/15/1/000541/000541.html</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Bardiot, Clarisse</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2021</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)italic">Performing Arts and Digital Humanities. From Traces to Data.</hi>
+                        <hi rend="color(#000000)"> Wiley-ISTE.</hi>
+                        <ref target="https://hal.univ-rennes2.fr/hal-03884691">
+                            <hi rend="color(#1155cc)underline"> </hi>
+                            <hi rend="color(#1155cc)underline">https://hal.univ-rennes2.fr/hal-03884691</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Bardiot, Clarisse / Hart, Jacob / Rouquet, David</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2024</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “In Search of an Interpretative Environment for Digital Traces: The Building of Arvest”, </hi>
+                        <hi rend="color(#000000)">in:</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)italic">Journal of Digital History </hi>
+                        <hi rend="color(#000000)">(3).</hi>
+                        <ref target="https://journalofdigitalhistory.org/en/article/8X2RX68Qavxr">
+                            <hi rend="color(#1155cc)underline"> </hi>
+                            <hi rend="color(#1155cc)underline">https://journalofdigitalhistory.org/en/article/8X2RX68Qavxr</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Drucker, Johanna</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2013</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “Performative Materiality and Theoretical Approaches to Interface”, </hi>
+                        <hi rend="color(#000000)">in:</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)italic">Digital Humanities Quarterly</hi>
+                        <hi rend="color(#000000)"> 7 (1).</hi>
+                        <ref target="https://www.digitalhumanities.org/dhq/vol/7/1/000143/000143.html">
+                            <hi rend="color(#1155cc)underline"> </hi>
+                            <hi rend="color(#1155cc)underline">https://www.digitalhumanities.org/dhq/vol/7/1/000143/000143.html</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hart, Jacob / Rouquet, David / Bardiot, Clarisse</hi> (2023): “MemoRekall-IIIF: An Open Source and Versatile Web Application for Video and Digital Document Annotation”, in: 
+                        <hi rend="italic">Digital Humanities 2023: Book of Abstracts</hi>. Graz, Austria.
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Nicholson, Bob</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2013</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “The Digital Turn: Exploring the Methodological Possibilities of Digital Newspaper Archives”, </hi>
+                        <hi rend="color(#000000)">in:</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)italic">Media History</hi>
+                        <hi rend="color(#000000)"> 19 (1): 59–73.</hi>
+                        <ref target="https://doi.org/10.1080/13688804.2012.752963">
+                            <hi rend="color(#1155cc)underline"> </hi>
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.1080/13688804.2012.752963</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Wevers, Melvin / Smits, Thomas </hi>
+                        <hi rend="color(#000000)bold">(</hi>
+                        <hi rend="color(#000000)">2020</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “The Visual Digital Turn: Using Neural Networks to Study Historical Images” </hi>
+                        <hi rend="color(#000000)">in:</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)italic">Digital Scholarship in the Humanities </hi>
+                        <hi rend="color(#000000)">35</hi>
+                        <hi rend="color(#000000)"> (1): 194–207.</hi>
+                        <ref target="https://doi.org/10.1093/llc/fqy085">https://doi.org/10.1093/llc/fqy085</ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Smits, Thomas / Wevers, Melvin</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2023</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)"> “A Multimodal Turn in Digital Humanities. Using Contrastive Machine Learning Models to Explore, Enrich, and Analyze Digital Visual Historical Collections”, </hi>
+                        <hi rend="color(#000000)">in:</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)italic">Digital Scholarship in the Humanities </hi>
+                        <hi rend="color(#000000)">38</hi>
+                        <hi rend="color(#000000)italic"> </hi>
+                        <hi rend="color(#000000)">(3): 1267–80.</hi>
+                        <ref target="https://doi.org/10.1093/llc/fqad008">
+                            <hi rend="color(#1155cc)underline"> </hi>
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.1093/llc/fqad008</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

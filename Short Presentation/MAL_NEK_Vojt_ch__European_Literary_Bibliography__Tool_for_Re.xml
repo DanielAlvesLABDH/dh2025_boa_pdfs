@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MAL_NEK_Vojt_ch__European_Literary_Bibliography__Tool_for_Re">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title> European Literary Bibliography: Tool for Research on Bibliographical Data on Literature and Literary Science </title>
+                <author>
+                    <persName>
+                        <surname>Malínek</surname>
+                        <forename>Vojtěch</forename>
+                    </persName>
+                    <affiliation>Institute of Czech Literature, Czech Academy of Sciences, Czech Republic</affiliation>
+                    <email>malinek@ucl.cas.cz</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Umerle</surname>
+                        <forename>Tomasz</forename>
+                    </persName>
+                    <affiliation>Institute of Literary Research, Polish Academy of Sciences, Poland</affiliation>
+                    <email>tomasz.umerle@ibl.waw.pl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Vimr</surname>
+                        <forename>Ondřej</forename>
+                    </persName>
+                    <affiliation>Institute of Czech Literature, Czech Academy of Sciences, Czech Republic</affiliation>
+                    <email>vimr@ucl.cas.cz</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-07T14:23:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>bibliography</term>
+                    <term>literary studies</term>
+                    <term>data processing</term>
+                    <term>cultural analytics</term>
+                    <term>research infrastructure</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>bibliographic analysis</term>
+                    <term>cultural analytics</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>Book and print history</term>
+                    <term>Library &amp; information science</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>This paper discusses the workflow and results of the 
+                <ref target="https://literarybibliography.eu/en/">European Literary Bibliography</ref> (ELB) initiative. The ELB is an ongoing international project aimed at processing, integrating, enriching, presenting, and visualizing multilingual bibliographical datasets to enhance the understanding and exploration of the European literary landscape. 
+            </p>
+            <p>Started in 2020, ELB is a joint initiative of Czech and Polish Literary Bibliography. The aim of the service is to collect, merge and provide one interface to present multilingual bibliographical metadata for literary studies and to offer additional tools for data analyses and visualisations. Currently, the ELB includes data from the Czech Republic, Finland, Poland and Spain. It contains over 4.6 million bibliographic records and information on nearly 280,000 individuals and 9,000 places.</p>
+            <p rend="heading 3">ELB Mission</p>
+            <p>Library catalogues and literary bibliographies are crucial for studying book production, literature, and intellectual history. However, the bibliographical metadata landscape presents challenges due to diverse data producers, often with unique standards, processing methods and excerption scope (Umerle et al. 2022). Some of these bibliographies process only records on primary literature (poetry and fiction), some others cover only secondary material (literary science and literary criticism). While the research community curates mostly analytical (article) bibliographies, the bibliography of the books is mostly available as an integral part of general national bibliographies and is often hard to be extracted as a separate dataset in a simple way. Moreover, these literary relevant catalogues are by far the most created as a selective ones (the criterion for the selection might be e. g. the national, territorial or language basis). As a result of this fragmentarity and incompatibility of existing literary bibliographies, a general international catalogue of bibliographical data on literature and literary science is completely lacking at the European or even wider scale.</p>
+            <p rend="heading 3">Aim No. 1 – Collecting the Data</p>
+            <p>With respect to aforementioned, the first aim of the ELB is to identify, collect and harmonise relevant bibliographical data from various heterogeneous local sources. At the current initial phase of the project, the datasets available under the free licences have been ongoingly adopted. This is possible thanks to increasingly growing availability of general national bibliographies under CC0 licence (e. g. 
+                <ref target="https://bl.iro.bl.uk/collections/64e3804a-788a-4c4b-962c-ae180d955455?locale=en">Great Britain</ref>, 
+                <ref target="https://data.nationallibrary.fi/">Finland</ref>, 
+                <ref target="https://www.dnb.de/EN/Professionell/Metadatendienste/Datenbezug/Gesamtabzuege/gesamtabzuege_node.html">Germany</ref> or 
+                <ref target="https://text.en.nkp.cz/about-us/professional-activities/open-data">Czech Republic</ref>; cf. Candela et al. 2023). Most of the library catalogues and digital bibliographies share the 
+                <ref target="https://www.loc.gov/marc/">MARC21 cataloguing standard</ref> but are usually curated and stored independently. Furthermore, various national interpretations of this common MARC21 standard have been developed and next to it, the specific cataloguing rules often changed through the time. Unfortunately, these proprietary interpretations and individual changes are mostly undocumented and have to be carefully identified within data preprocessing (Király, 2019).
+            </p>
+            <p>This variable use of the common data standards significantly complicates their readiness for the interconnection and the research needs. Because of it, the cleaning and harmonisation of the data is of the highest importance for any further processing. With regard to this high level of variability, each individual bibliographical dataset has to be analysed and processed individually before the inclusion into ELB. Furthermore, integrating and reusing these isolated datasets requires addressing challenges related to data availability, licensing, quality, or completeness. </p>
+            <p>For the preparation of ELB data, set of specific pipelines have been developed. The literary data have been identified with the use of various criteria in subsequent individual steps (subject heading systems, information on form/genre, librarian classifications like 
+                <ref target="https://udcc.org/">Universal Decimal Classification</ref> or identified in the title of the document if possible). 
+            </p>
+            <p rend="heading 3">Aim No. 2 – Harmonising and Enriching the Data</p>
+            <p>Once the relevant data is extracted, it has to be harmonised and enriched with persistent identifiers. In most of the cases, data contains IDs of the authority base (mostly national or local authority files) or URIs of various ontologies (e. g. 
+                <ref target="https://finto.fi/en/">Finto</ref>). On the other hand, part of the values like publication places is present within the MARC21 records only in a form of literal strings. To harmonise ELB data, mapping on universal PIDs like 
+                <ref target="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</ref> or 
+                <ref target="https://viaf.org/">VIAF</ref> IDs is provided wherever it is possible. Moreover, enriching traditional bibliographical data with external sources like Wikidata or geotagging services is appealing and rational. These additions offer new perspectives and contextualize the data geographically or sociologically and are particularly helpful for data presentation. 
+            </p>
+            <p>Linked Open Data is crucial in extracting and contextualizing existing and additional information, such as relevant personal information, dates, places, corporates etc., and producing name labels in interface languages. At the same time, the ELB seeks to establish links where existing or external sources lack such information. Essential for analyzing extensive international humanities and social science data, bibliographic data is inherently multilingual and transnational. Data from national libraries spans centuries and multiple languages, presenting challenges like language dependencies and deduplication when merging different datasets (Malínek et al. 2024).</p>
+            <p rend="heading 3">Aim No. 3 – ELB as a Research Tool</p>
+            <p>Building on the updated ELB dataset, the ELB enables statistical analysis, visualization of relationships, and mapping of bibliographic information through geotagging, inviting users to explore literary metadata digitally, spatially, and sociologically. ELB interface is arranged with the intention to offer the end users the set of statistical and analytical tools to present and visualise data from the different perspectives and by doing so to simultaneously open the way to data-driven research (Lahti et al. 2019). Next to the module for querying in bibliographical records, ELB offers modules on persons and places. The record of each individual entity is supplemented with the general statistics and graphs about its frequency within the ELB dataset, network analysis chart showing its most frequent relations or visualisation of this given entity on the map. These individual visualisations might be further individually adapted by the ELB user when working with the interface.</p>
+            <p>The long-term goal of ELB is to continuously add new relevant datasets, continue in development of the data processing and data enriching tools as well as to further beautify the user interface. As the next step, launching of the new modules for institutions and for magazines is planned for 2025.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Candela, Gustavo / Gabriëls, Nelle / Chambers, Sally / Dobreva, Milena / Ames, Sarah / Ferriter, Meghan / Fitzgerald, Neil / Harbo, Victor / Hofmann, Katrine / Holownia, Olga / Irollo, Alba / Mahey, Mahendra / Manchester, Eileen / Pham, Thuy-An / Potter, Abigail / Van Keer, Ellen</hi> (2023): "A checklist to publish collections as data in GLAM institutions", in: 
+                        <hi rend="italic">Global Knowledge, Memory and Communication</hi>, Vol. ahead-of-print No. ahead-of-print. 
+                        <ref target="https://doi.org/10.1108/GKMC-06-2023-0195">https://doi.org/10.1108/GKMC-06-2023-0195</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Király, Péter</hi> (2019). "Validating 126 million MARC records"
+                        <hi style="font-size:10pt">, in:</hi>
+                        <hi rend="italic">DATeCH2019: Proceedings of the 3rd International Conference on Digital Access to Textual Cultural Heritage</hi> 161–168. 
+                        <ref target="https://doi.org/10.1145/3322905.3322929">https://doi.org/10.1145/3322905.3322929</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Lahti, Leo / Marjanen, Jani / Roivainen, Hege / Tolonen, Mikko</hi> (2019). "Bibliographic Data Science and the History of the Book (c. 1500–1800)". 
+                        <hi rend="italic" xml:space="preserve">Cataloging &amp; Classification Quarterly </hi>57, 1: 5–23. 
+                        <ref target="https://doi.org/10.1080/01639374.2018.1543747">https://doi.org/10.1080/01639374.2018.1543747</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold background(white)">Malínek, Vojtěch / Umerle, Tomasz / Gray, Edward / Heibi, Ivan / Király, Péter / Klaes, Christiane / Korytkowski, Przemysław / Lindemann, David / Moretti, Arianna / Panušková, Charlotte / Péter, Róbert / Tolonen, Mikko / Tomczyńska, Aldona / Vimr, Ondřej</hi>
+                        <hi rend="background(white)" xml:space="preserve"> (2024). </hi>"
+                        <hi rend="background(white)">Open Bibliographical Data Workflows and the Multilinguality Challenge</hi>"
+                        <hi rend="background(white)">. </hi>
+                        <hi rend="italic background(white)">Journal of Open Humanities Data</hi>
+                        <hi rend="background(white)" xml:space="preserve"> 10, 1: 27. </hi>
+                        <ref target="https://doi.org/10.5334/johd.190">
+                            <hi rend="background(white)">https://doi.org/10.5334/johd.190</hi>
+                        </ref>
+                        <hi rend="background(white)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Umerle, Tomasz / Colavizza, Giovanni / Herden, Elźbieta / Jagersma, Rindert / Király, Péter / Koper, Beata / Lahti, Leo / Lindemann, David / Łubocki, Jakub / Malínek, Vojtěch / Milanova, Alexandra / Péter, Róbert / Rißler-Pipka, Nanette / Romanello, Matteo / Roszkowski, Marcin / Siwecka, Dorota / Tolonen, Mikko / Vimr, Ondřej</hi> (2022). 
+                        <hi rend="italic">An Analysis of the Current Bibliographical Data Landscape in the Humanities. A Case for the Joint Bibliodata Agendas of Public Stakeholders</hi>. Zenodo. 
+                        <ref target="https://doi.org/10.5281/zenodo.6559857">https://doi.org/10.5281/zenodo.6559857</ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

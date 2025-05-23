@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="OKADA_Kazuhiro_Developing_a_Dataset_for_Analyzing_Historical">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Developing a Dataset for Analyzing Historical Character Shape Evolution in the Japanese Writing System </title>
+                <author>
+                    <persName>
+                        <surname>Okada</surname>
+                        <forename>Kazuhiro</forename>
+                    </persName>
+                    <affiliation>Keio University, Japan</affiliation>
+                    <email>k-okada@keio.jp</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-28T03:31:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Writing system evolution</term>
+                    <term>dataset design</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>data modeling</term>
+                    <term>Asian studies</term>
+                    <term>Linguistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">In this presentation, I aim to introduce my project on creating a dataset for analyzing the historical evolution of character shapes in the Japanese writing system. I also invite scholars to discuss how the dataset design can enhance studies on character shape evolution in general, and, more specifically, for the Japanese writing system.</p>
+            <p style="text-align: left; "> Recent developments in handwritten character recognition (HCR) have achieved remarkable progress, and corresponding training datasets have been developed. These datasets are valuable for researchers studying the history of writing systems (WS). However, as their primary goal is to produce modern, normalized text, they often overlook writing variations, creating an inevitable gap between HCR datasets and those tailored for WS research.</p>
+            <p style="text-align: left; "> The study of character shape evolution in Japanese is no exception. By the 6th century, Japan had adopted Chinese characters. Given the significant transformations in script styles in mainland China, the variety of character shapes may even appear disordered compared to the standardized forms seen today. Hiragana evolved not only in terms of shape but also from a diverse selection of Chinese characters. Hiragana Forms and types that are no longer in use today are referred to as hentaigana (Fig 1). Datasets for HCR of kuzushiji (cursive scripts) have also been organized, with the Kuzushiji-MNIST dataset (KMNIST Dataset), modeled after the MNIST dataset, being particularly well-known (Clanuwat, et al. 2018). In this dataset, hentaigana and variant characters are mapped to their corresponding modern characters, even when the character in question is encodable within the current Unicode standards. While this approach is reasonable for the purposes of HCR, modifications are necessary to make the dataset suitable for studying character shape evolution.</p>
+            <figure>
+                <graphic n="1001" width="16.002cm" height="9.149291666666667cm" url="/tmp/tmpnpr46hnj/Pictures/3b07678a437ea14d525a941f864d5258.jpg" rend="inline"/>
+            </figure>
+            <p>Fig 1 List of 
+                <hi rend="italic">hentaigana</hi> for each syllabary in Unicode (https://codh.rois.ac.jp/char-shape/hentaigana/)
+            </p>
+            <p style="text-align: left; "> Therefore, there are two main issues to address. The first is how to construct a dataset specifically designed for studying character shape evolution and what kinds of annotation it should include. The second is how existing datasets, such as the aforementioned Kuzushiji-MNIST dataset, can be utilized for research on character shape evolution. I also wish to examine the significance of traditional approaches to studying character shape evolution, which often involve comparing shapes before and after changes (e.g., describing which parts were simplified and how, say, from <hi rend="Chinese">爲 </hi>to <hi rend="Chinese">為</hi>, which may be questionable from the perspective of psychological representation). Instead, I aim to focus on capturing the overall patterns of which shapes have been preserved. I also wish to discuss what is necessary for AI to infer and evaluate natural character shape evolution. This may shed light on why, at a certain point, world scripts tend to stabilize in terms of shape.</p>
+            <p style="text-align: left; "> In this presentation, I will address these issues based on examples of annotations added to a hentaigana catalog I previously created (Okada 2016). The catalog is based on a kana dictionary compiled in the 17th century, which is uniquely characterized by its classification of hentaigana according to their shapes. I attempted to annotate examples from this dictionary, dividing them into cases where the shapes evolved as kana and those where different Chinese characters appear to have been incorporated. This is because I believed it would allow for a dataset that clearly distinguishes between shape evolution and differences in character type.</p>
+            <p style="text-align: left; "> The dataset does not aim to pinpoint which parts of a character changed, but instead provides a genealogical ordering of clusters of hiragana shapes. In Fig. 2, the 18th-century scholar Okada Masumi illustrates multiple instances of what Edward Sapir termed drift in the cursivisation of the kana character <hi rend="Japanese">お</hi>. In my view, such drift can be effectively captured by comparing clusters of shapes to determine whether they reflect similar directions of change. Accordingly, a crucial part of the dataset will be the annotation of each shape’s source and its associated evolutionary branch. Further details will be presented in the poster.</p>
+            <figure>
+                <graphic n="1002" width="10.361083333333333cm" height="25.200680555555557cm" url="/tmp/tmpnpr46hnj/Pictures/3b07678a437ea14d525a941f864d5258.jpg" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Fig 2 Okada Masumi, 
+                <hi rend="italic">Kana kō</hi> [A Study on Kana]. 1822. https://kokusho.nijl.ac.jp/biblio/100418503/17 (Access: 8 May 2025).
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Clanuwat, Tarin / Bober-Irizar, Mikel / Kitamoto, Asanobu / Lamb, Alex / Yamamoto, Kazuaki / Ha, David</hi> (2018) “Deep Learning for Classical Japanese Literature”, in: Paper presented at 
+                        <hi rend="italic">NeurIPS 2018</hi> Workshop on Machine Learning for Creativity and Design, Palais des Congrès de Montréal
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Okada, Kazuhiro</hi> (2016) Reorganising a Japanese calligraphy dictionary into a grapheme database and beyond: The case of the 
+                        <hi rend="italic">Wakan Meien</hi> grapheme database. Paper presented at 
+                        <hi rend="italic">JADH2016</hi>, University of Tokyo
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MARIENBERG_MILIKOWSKY_Itay_From_Late_Antique_Text_to_21st_Ce">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>From Late-Antique Text to 21st Century Literature Database: Babylonian Talmud Stories as a Case Study</title>
+                <author>
+                    <persName>
+                        <surname>Marienberg-Milikowsky</surname>
+                        <forename>Itay</forename>
+                    </persName>
+                    <affiliation>Ben-Gurion University of the Negev, Israel</affiliation>
+                    <email>itay.marienberg@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-01T08:29:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Babylonian Talmud</term>
+                    <term>narratology</term>
+                    <term>annotation</term>
+                    <term>databases</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>cultural analytics</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>text mining and analysis</term>
+                    <term>Cultural studies</term>
+                    <term>Literary studies</term>
+                    <term>Philology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">Despite some origins of Digital Humanities lying in pre-modern literary studies, contemporary Computational Literary Studies (CLS) focuses predominantly on modern literature, especially copyright-free 19th and early 20th century works, often marginalizing ancient literatures. These ancient texts—also not copyright-protected—present unique textual, philological, and narratological challenges (von Contzen 2014) that could reclaim the attention of literature enthusiasts in the 21st century; however, when treated digitally, it is usually for online representation and access rather than computational analysis. Even ambitious traditional pre-digital projects with strong computational potential often lack adequate contemporary tools, such as the well-known Aarne-Thompson-Uther (ATU) tale-type index (Uther 2011), available digitally only in searchable PDF and HTML formats, without any complementary device that would enable one to do more with this unparalleled rich source.</p>
+            <p style="text-align: left; ">The Babylonian Talmud (BT) stories—a vast corpus embedded within a 1.8 million word text produced by Jewish sages from the third to sixth centuries CE—exemplify this situation. While the BT as a whole has received digital-oriented attention through high-level infrastructures and resources (digitized manuscripts, partially annotated corpora, computerized bibliography indexes, and more), and DH-oriented scholarly work by Satlow (2022; 2024), Marienberg-Milikowsky (2020; 2022), and others, the potential of its stories remains largely unfulfilled from a computational narratology standpoint, as described by Meister (2014) and Jannidis (2018). This is partly due to the diverse character of the BT itself, which accommodates various scholarly perspectives, from classical philology to the history of Jewish religious law. Yet the text contains thousands of miniature stories considered by many scholars to be among the finest in Jewish literature for their cultural complexity, poetic richness, and sophisticated worldview (Rubenstein 1999; 2010); stories that are relevant not only to Jewish literature scholarship but also to late antique literature broadly, including Christian, Hellenistic, and Persian religious texts, and to international folklore. This scholarly domain, focused on traditional literary questions of poetics and storytelling, still lacks a complementary digital turn.</p>
+            <p style="text-align: left; ">In fact, this lack is reflected even in the corpus boundaries: As a result of the dominance of close reading approaches, only a small portion of the entire corpus has received full scholarly attention, creating an 'unofficial' canon. The same stories are repeatedly examined in research, while the broader corpus remains vaguely discussed. Numerically, the scholarly canon includes little more than a hundred stories, while the entire corpus contains approximately seven thousand. In the absence of comprehensive distant-reading oriented research corpora, this limited canon has led to questionable generalizations about Talmudic poetics and storytelling.</p>
+            <p style="text-align: left; ">Using the Babylonian Talmud stories as a case study, this poster illustrates both the potential and difficulty of transferring a rich literary corpus from late antiquity to the digital age. It describes a project in its advanced stages that aims to compile a comprehensive computerized database of all BT stories across genres and subgenres—regardless of their perceived quality, completeness, or predictability. The poster presents, for the first time, a database built over five years of research and development, outlining the conceptual challenges and opportunities encountered when collecting, sorting, structuring, and preparing such unstructured literary data.</p>
+            <p style="text-align: left; ">The poster highlights and problematizes three key issues:</p>
+            <p style="text-align: left; ">
+                <hi rend="bold">Corpus creation methodology:</hi> How can thousands of miniature stories be extracted from a 1.8 million-word text where structure, style, and narrative nature make it challenging to identify and isolate stories from surrounding text?
+            </p>
+            <p style="text-align: left; ">
+                <hi rend="bold">Annotation philosophy:</hi> To move beyond the canon, the database must include stories with lesser degrees of narrativity than those typically examined. Consequently, the narrow ontology sufficient for pre-computational sorting of "representational examples" has proven fundamentally inadequate. How might computer-assisted annotation address this problem?
+            </p>
+            <p style="text-align: left; ">
+                <hi rend="bold">Modeling theory:</hi> The project faces inherent tensions between the specific research interests of the team, the needs of the broader research community, and the requirements for future preservation of the literary corpus. What balance should be struck between robust curatorial standardization and more open literary interpretation?
+            </p>
+            <p style="text-align: left; ">To address these questions, the project's approach prioritizes human manual annotation over automatic methods; uses machine learning and artificial intelligence modestly; commits to capturing nearly 100% of narrated materials rather than settling for "good enough" automatic extraction; grounds its methodology in poetics and classic narratological questions; and systematically validates computational findings against traditional scholarship. Using the Babylonian Talmud as a case study, this approach will be discussed while emphasizing its broader applicability to computational studies of premodern literature requiring dedicated narratological assessment.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">von Contzen, Eva</hi> (2014): "Why We Need a Medieval Narratology: A Manifesto." 
+                        <hi rend="italic">Diegesis: Interdisciplinary E-Journal for Narrative Research</hi> 3(2): 1-21.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Jannidis, Fotis</hi> (2018): "IV.2.3 Computergestützte Erzähltextforschung." In: Martin Huber and Wolf Schmid (eds.): 
+                        <hi rend="italic">Grundthemen der Literaturwissenschaft: Erzählen</hi>. Berlin and Boston: De Gruyter 597-612.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Marienberg-Milikowsky, Itay</hi> (2020): “Digital Research of Jewish Texts: Challenges and Opportunities.” In: Avriel Bar-Levav and Uzi Rebhun (eds.): 
+                        <hi rend="italic">Studies in Contemporary Jewry 31: Textual Transmission in Contemporary Jewish Cultures</hi>. Oxford: Oxford University Press 15-25.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Marienberg-Milikowsky, Itay</hi> (2022): “It Functions, and that's (almost) All: Tagging the Talmud.” In: Domenico Fiormonte, Paola Ricaurte, and Sukanta Chaudhuri (eds.): 
+                        <hi rend="italic">Global Debates in the Digital Humanities</hi>. Minneapolis: University of Minnesota Press 141-150.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Meister, Jan Christoph</hi> (2014): ‘Toward a Computational Narratology’. In: M. Agosti and F. Tomasi (eds.): 
+                        <hi rend="italic">Collaborative Research Practices and Shared Infrastructures for Humanities Computing</hi>. Padua: CLEUP 17-36.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Rubenstein, Jeffrey L.</hi> (1999): 
+                        <hi rend="italic">Talmudic Stories: Narrative Art, Composition, and Culture</hi>. Baltimore: Johns Hopkins University Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Rubenstein, Jeffrey L.</hi> (2010): 
+                        <hi rend="italic">Stories of the Babylonian Talmud</hi>. Baltimore: Johns Hopkins University Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Satlow, Michael</hi> (2022): “The Promise and Challenges of Digital Humanities for the Study of Jews and Judaism in Antiquity.” In: Garrick V. Allen, Sara Schulthes, Paul Dilley and Peter Phillips (eds.): 
+                        <hi rend="italic">New Approaches to Textual and Image Analysis in Early Jewish and Christian Studies</hi>, Leiden: Brill 26-43. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Satlow, Michael / Sperling Michael</hi> (2024): "Social network analysis of the Babylonian Talmud." 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi> 39, no. 3: 968-983.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Uther, Hans-Jörg</hi> (2011): 
+                        <hi rend="italic">The Types of International Folktales: A Classification and Bibliography Based on the System of Antti Aarne and Stith Thompson</hi>. Folklore Fellows’ Communications, vol. 284–286, 2nd printing ed. Helsinki: Suomalainen Tiedeakatemia.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

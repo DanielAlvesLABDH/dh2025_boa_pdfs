@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BATTISTI_Tommaso_Simple_visualisation_techniques_for_simplif">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Simple visualisation techniques for simplified Humanities. A survey of Digital Humanities projects</title>
+                <author>
+                    <persName>
+                        <surname>Battisti</surname>
+                        <forename>Tommaso</forename>
+                    </persName>
+                    <affiliation>Alma Mater Studiorum - Univeristy of Bologna, Italy</affiliation>
+                    <email>tommaso.battisti5@unibo.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Daquino</surname>
+                        <forename>Marilena</forename>
+                    </persName>
+                    <affiliation>Alma Mater Studiorum - Univeristy of Bologna, Italy</affiliation>
+                    <email>marilena.daquino2@unibo.it</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T14:02:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Information Visualisation</term>
+                    <term>Data-driven narratives</term>
+                    <term>Uncertainty representation</term>
+                    <term>Interaction design</term>
+                    <term>Survey</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>meta-criticism (reflections on digital humanities and humanities computing)</term>
+                    <term>Communication studies</term>
+                    <term>Design studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head> Introduction</head>
+                <p style="text-align: left; ">Generous interfaces (Whitelaw 2015) and storytelling tools (Renda et al. 2023) are argued to support interpretation in Cultural Heritage, yet humanistic knowledge cannot be easily embedded into visualisation systems (Drucker 2011; 2014). Scholars advocate for visualisations exposing interpretative aspects (Drucker 2011; 2014; Windhager et al. 2019; Trocchianesi / Bollini 2023; Elli et al. 2021; Viola 2023), encouraging slow visualisation (Elli et al. 2021; Hinrichs et al. 2019; Bradley et al. 2016) and epistemic potential (Münster / Terras 2020; Schwan et al. 2019).</p>
+                <p style="text-align: left; ">Domain-agnostic taxonomies and classifications describe interaction techniques (Shneiderman 1996; Yi et al. 2007; Dimara / Perin 2020; Brehmer / Munzner 2013) and narrative design spaces (Segel / Heer 2010; McKenna et al. 2017; Zhao / Elmqvist 2023). Though uncertainty visualisation taxonomies (Kinkeldey et al. 2014) informed DH research (Panagiotidou et al. 2023), surveys reveal limited attempts to visualise uncertainty, scarce narrativity, and use of multiple visualisations (Khulusi et al. 2020; Windhager et al. 2019; Panagiotidou et al. 2023). However, studies remain narrow-scoped, disregarding approaches to humanities enquiry. This work addresses uncertainty in DH projects and introduces novel classificatory aspects for tailored visualisations.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methods</head>
+                <p style="text-align: left; ">We analysed 186 web-based DH projects collected from the literature (Windhager et al. 2019) and follow-up projects (33 projects), DH associations’ websites (AIUCD<ref n="1" target="ftn1"/>, EADH<ref n="2" target="ftn2"/>) and research centres (104 projects), and the Digital Humanities Awards website<ref n="3" target="ftn3"/> (49 projects). Selected entities include accessible web projects without access barriers that significantly rely on visualisations.
+                </p>
+                <p style="text-align: left; ">Our iterative methodology, inspired by (Segel / Heer 2010), developed a classification schema through direct observation and interaction with the visualisation systems, minimising bias from discrepancies between documented features and actual implementation. The framework adapts previous models, covering: 1) narrativity and narrative strategies (McKenna et al. 2017); 2) humanities domains (Terras at al. 2016: 138; Schreibman et al. 2004); 3) visualisation techniques (Windhager et al. 2019); 4) interaction techniques (Yi et al. 2007; Dimara / Perin 2020; Brehmer / Munzner 2013); 5) uncertainty visualisation methods (Kinkeldey et al. 2014; Panagiotidou et al. 2023; Drucker 2011); and 6) critical adaptations, identifying tailored visualisations that embrace humanities-specific complexity, promoting slow looking inquiry.</p>
+                <p style="text-align: left; ">Three research questions guided our analysis:</p>
+                <list type="unordered">
+                    <item>
+                        <hi rend="bold">RQ1.</hi> How do DH projects employ information visualisation, interaction, and narrative techniques?
+                    </item>
+                    <item>
+                        <hi rend="bold">RQ2.</hi> How do DH projects address humanities visualisation needs?
+                    </item>
+                    <item>
+                        <hi rend="bold">RQ3.</hi> How do DH projects differ from projects in other humanities-related contexts?
+                    </item>
+                </list>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results and discussion</head>
+                <p style="text-align: left; ">The dataset (Battisti 2024) is analysed in a dedicated Jupyter Notebook (Battisti 2025).</p>
+                <p style="text-align: left; ">Our findings confirm a naive reuse of visualisation techniques. DH projects use more maps and fewer networks compared to previous studies (Windhager et al. 2019; Khulusi et al. 2020; Panagiotidou et al. 2023), likely due to network readability issues (Koponen / Hildén 2019). Interactive strategies are limited to easy-to-deploy options, with some non-interactive visualisations present (Figure 1). Specific visualisation and interaction patterns were identified using the Apriori algorithm<ref n="4" target="ftn4"/>, while a small positive correlation exists between the number of visual and interaction techniques (Spearman coefficient=0.394; p-value=2.54e-08).
+                </p>
+                <figure>
+                    <graphic n="1001" width="16.002cm" height="6.858cm" url="/tmp/tmp4jyzjfm2/Pictures/219c0a7b12e906bdf226dc2f1454e6c5.png" rend="inline"/>
+                    <head>Frequency of visualisation and interaction techniques.</head>
+                </figure>
+                <p style="text-align: left; ">Multiple visualisations are less used than in Cultural Heritage collections (Windhager et al. 2019). Narrative strategies remain underutilised despite growing advocacy (Gershon / Page 2001; Renda et al. 2023). When present, narratives are linear and author-driven, often using tools like StoryMapJS<ref n="5" target="ftn5"/> and TimelineJS<ref n="6" target="ftn6"/> with minimal customisation (Figure 2).
+                </p>
+                <figure>
+                    <graphic n="1002" width="16.002cm" height="6.709833333333333cm" url="/tmp/tmp4jyzjfm2/Pictures/219c0a7b12e906bdf226dc2f1454e6c5.png" rend="inline"/>
+                    <head>Distribution of narratives and decomposition in narrative progression (top) and type (bottom).</head>
+                </figure>
+                <p style="text-align: left; ">“Language and literature” and “history and archaeology” are the most represented domains, each characterised by narrative strategies and visualisations usage (Figure 3).</p>
+                <figure>
+                    <graphic n="1003" width="16.002cm" height="9.292166666666667cm" url="/tmp/tmp4jyzjfm2/Pictures/219c0a7b12e906bdf226dc2f1454e6c5.png" rend="inline"/>
+                    <head>Narrativity (top) and multi-visualisation approaches (bottom) in "language and literature" and "history and archaeology" domains.</head>
+                </figure>
+                <p style="text-align: left; ">Few DH projects critically adapt visual solutions, with uncertainty visualisation remaining underrepresented (Khulusi et al. 2020; Panagiotidou et al. 2023) (Figure 4). Despite arguments about researchers' goals and skills determining approaches to uncertainty (Ma / Xiao 2021), our results confirm a persistent theory-practice gap (Windhager et al. 2019; Panagiotou et al. 2023), reflecting broader DH trends favouring simplistic visualisations repurposing over interpretative, critical approaches rooted in humanistic epistemologies (Allington et al. 2016; Windhager et al. 2019; Viola 2023).</p>
+                <figure>
+                    <graphic n="1004" width="16.002cm" height="3.9422916666666667cm" url="/tmp/tmp4jyzjfm2/Pictures/219c0a7b12e906bdf226dc2f1454e6c5.png" rend="inline"/>
+                    <head>Distribution of critical adaptations and uncertainty representation methods.</head>
+                </figure>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Acknowledgements</head>
+                <p style="text-align: left; ">Project funded by the European Union – NextGenerationEU under the National Recovery and Resilience Plan (NRRP), Investment I.4.1 - Borse PNRR Patrimonio Culturale.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                        
+                            <ref target="https://www.aiucd.it/progetti/">
+                                <hi rend="color(467886)" style="font-size:10pt">https://www.aiucd.it/progetti/</hi>
+                            </ref>
+                            <hi style="font-size:10pt">.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                        
+                            <ref target="https://eadh.org/projects">
+                                <hi rend="color(467886)" style="font-size:10pt">https://eadh.org/projects</hi>
+                            </ref>
+                            <hi style="font-size:10pt">.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                        
+                            <ref target="http://dhawards.org/">
+                                <hi rend="color(467886)" style="font-size:10pt">http://dhawards.org/</hi>
+                            </ref>
+                            <hi style="font-size:10pt">.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn4" n="4">
+                        
+                            <ref target="https://rasbt.github.io/mlxtend/api_subpackages/mlxtend.frequent_patterns/">
+                                <hi rend="color(1155CC)" style="font-size:10pt">https://rasbt.github.io/mlxtend/api_subpackages/mlxtend.frequent_patterns</hi>
+                            </ref>
+                            <hi style="font-size:10pt">/.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn5" n="5">
+                        
+                            <ref target="https://storymap.knightlab.com/">
+                                <hi rend="color(467886)" style="font-size:10pt">https://storymap.knightlab.com/</hi>
+                            </ref>
+                            <hi style="font-size:10pt">.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn6" n="6">
+                        
+                            <ref target="https://timeline.knightlab.com/">
+                                <hi rend="color(467886)" style="font-size:10pt">https://timeline.knightlab.com/</hi>
+                            </ref>
+                            <hi style="font-family:Aptos;font-size:10pt">.</hi>
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Allington, Daniel / Brouillette, Sarah / Golumbia, David</hi> (2016): "Neoliberal Tools (and Archives): A Political History of Digital Humanities", in: 
+                        <hi rend="italic">Los Angeles Review of Books</hi> &lt;
+                        <ref target="https://lareviewofbooks.org/article/neoliberal-tools-archives-political-history-digital-humanities/">
+                            <hi rend="color(1155CC)">https://lareviewofbooks.org/article/neoliberal-tools-archives-political-history-digital-humanities/</hi>
+                        </ref>&gt; [29.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Battisti, Tommaso</hi> (2024): 
+                        <hi rend="italic">Classification of Web-Based Digital Humanities Projects Leveraging Information Visualisation Techniques</hi>. Zenodo. DOI: 
+                        <ref target="https://doi.org/10.5281/zenodo.14234578">
+                            <hi rend="color(1155CC)">10.5281/zenodo.14234578</hi>
+                        </ref>. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Battisti, Tommaso</hi> (2025): 
+                        <hi rend="italic">Data-driven insights into web-based Digital Humanities projects leveraging information visualization techniques: An analysis of the ‘Classification of web-based Digital Humanities projects leveraging information visualisation techniques’ dataset</hi>. Zenodo. DOI: 
+                        <ref target="https://doi.org/10.5281/zenodo.14824189">
+                            <hi rend="color(1155CC)">10.5281/zenodo.14824189</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bradley, Adam James / Mehta, Hrim / Hancock, Mark / Collins, Christopher</hi> (2016): “Visualization, Digital Humanities, and the Problem of Instrumentalism”, in: 
+                        <hi rend="italic">Proc. Workshop Vis. Digit. Hum.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Brehmer, Matthew / Munzner, Tamara</hi> (2013): “A Multi-Level Typology of Abstract Visualization Tasks”, in: 
+                        <hi rend="italic">IEEE Transactions on Visualization and Computer Graphics</hi> 19, 12: 2376–85. DOI: 
+                        <ref target="https://doi.org/10.1109/TVCG.2013.124">
+                            <hi rend="color(467886)">10.1109/TVCG.2013.124</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Dimara, Evanthia / Perin, Charles</hi> (2020): “What Is Interaction for Data Visualization?”, in: 
+                        <hi rend="italic">IEEE Transactions on Visualization and Computer Graphics</hi> 26, 1: 119–29. DOI: 
+                        <ref target="https://doi.org/10.1109/TVCG.2019.2934283">
+                            <hi rend="color(467886)">10.1109/TVCG.2019.2934283</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Drucker, Johanna</hi> (2011): “Humanities Approaches to Graphical Display”, in: 
+                        <hi rend="italic">Digital Humanities Quarterly</hi> 5, 1
+                        <ref target="https://www.digitalhumanities.org/dhq/vol/5/1/000091/000091.html"> &lt;
+                            <hi rend="color(1155CC)">https://www.digitalhumanities.org/dhq/vol/5/1/000091/000091.html</hi>
+                        </ref>&gt; [29.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Drucker, Johanna</hi> (2014): 
+                        <hi rend="italic">Graphesis: Visual Forms of Knowledge Production</hi>. MetaLABprojects. Cambridge, Massachusetts: Harvard University Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Elli, Tommaso / Briones Rojas, María de los Ángeles / Gobbo, Beatrice / Parigini, Margherita / Giustetto, Virginia / Cavalloro, Valeria / Mauri, Michele</hi> (2021): “Metaphors as Knowledge Activators in Data Visualizations: The Case of the Archipelago of Calvino's Literary Works”, in: 
+                        <hi rend="italic">CUMULUS CONFERENCE PROCEEDINGS SERIES</hi> 2: 906–24. Aalto University.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Gershon, Nahum / Page, Ward</hi> (2001): “What Storytelling Can Do for Information Visualization”, in: 
+                        <hi rend="italic">Communications of the ACM</hi> 44, 8: 31–37. DOI: 
+                        <ref target="https://doi.org/10.1145/381641.381653">
+                            <hi rend="color(467886)">10.1145/381641.381653</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Hinrichs, Uta / Forlini, Stefania / Moynihan, Bridget</hi> (2019): “In Defense of Sandcastles: Research Thinking through Visualization in Digital Humanities”, in: 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi> 34, Supplement_1: i80–99. DOI: 
+                        <ref target="https://doi.org/10.1093/llc/fqy051">
+                            <hi rend="color(467886)">10.1093/llc/fqy051</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Khulusi, Richard / Kusnick, Jakob / Meinecke, Christofer / Gillmann, Christina / Focht, Josef / Jänicke, Stefan</hi> (2020): “A Survey on Visualizations for Musical Data”, in: 
+                        <hi rend="italic">Computer Graphics Forum</hi> 39, 6: 82–110. DOI: 
+                        <ref target="https://doi.org/10.1111/cgf.13905">
+                            <hi rend="color(467886)">10.1111/cgf.13905</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kinkeldey, Christoph / MacEachren, Alan M. / Schiewe, Jochen</hi> (2014): “How to Assess Visual Communication of Uncertainty? A Systematic Review of Geospatial Uncertainty Visualisation User Studies”, in: 
+                        <hi rend="italic">The Cartographic Journal</hi> 51, 4: 372–86. DOI: 
+                        <ref target="https://doi.org/10.1179/1743277414Y.0000000099">
+                            <hi rend="color(467886)">10.1179/1743277414Y.0000000099</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Koponen, Juuso / Hildén, Jonatan</hi> (2019): 
+                        <hi rend="italic">Data Visualization Handbook</hi>. First edition. Aalto University Publication Series C 1/2019. Finland: Otavan kirjapaino.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Ma, Rongqian / Xiao, Fanghui</hi> (2021): “What Is a Good Visualization for Digital Humanities Researchers? An Exploratory Study”, in: 
+                        <hi rend="italic">Proceedings of the Association for Information Science and Technology</hi> 58, 1: 484–89. DOI: 
+                        <ref target="https://doi.org/10.1002/pra2.483">
+                            <hi rend="color(467886)">10.1002/pra2.483</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">McKenna, Sean / Henry Riche, Nathalie / Lee, Bongshin / Boy, Jeremy / Meyer, Miriah</hi> (2017): “Visual Narrative Flow: Exploring Factors Shaping Data Visualization Story Reading Experiences”, in: 
+                        <hi rend="italic">Computer Graphics Forum</hi> 36, 3: 377–87. DOI: 
+                        <ref target="https://doi.org/10.1111/cgf.13195">
+                            <hi rend="color(467886)">10.1111/cgf.13195</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Münster, Sander / Terras, Melissa</hi> (2020): “The Visual Side of Digital Humanities: A Survey on Topics, Researchers, and Epistemic Cultures”, in: 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi> 35, 2: 366–89. DOI: 
+                        <ref target="https://doi.org/10.1093/llc/fqz022">
+                            <hi rend="color(467886)">10.1093/llc/fqz022</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Panagiotidou, Georgia / Lamqaddam, Houda / Poblome, Jeroen / Brosens, Koenraad / Verbert, Katrien / Vande Moere, Andrew</hi> (2023): “Communicating Uncertainty in Digital Humanities Visualization Research”, in: 
+                        <hi rend="italic">IEEE Transactions on Visualization and Computer Graphics</hi> 29, 1: 635–45. DOI: 
+                        <ref target="https://doi.org/10.1109/TVCG.2022.3209436">
+                            <hi rend="color(467886)">10.1109/TVCG.2022.3209436</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Renda, Giulia / Daquino, Marilena / Presutti, Valentina</hi> (2023): “Melody: A Platform for Linked Open Data Visualisation and Curated Storytelling”, in: 
+                        <hi rend="italic">Proceedings of the 34th ACM Conference on Hypertext and Social Media</hi>: 1–8. Rome Italy: ACM. DOI: 
+                        <ref target="https://doi.org/10.1145/3603163.3609035">
+                            <hi rend="color(467886)">10.1145/3603163.3609035</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Schreibman, Susan / Siemens, Raymond George / Unsworth, John</hi> (eds.) (2004): 
+                        <hi rend="italic">A Companion to Digital Humanities</hi>. Blackwell Companions to Literature and Culture 26. Malden, MA: Blackwell Pub.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Schwan, Hannah / Jacke, Janina / Kleymann, Rabea / Stange, Jan-Erik / Dörk, Marian</hi> (2019): “Narrelations — Visualizing Narrative Levels and Their Correlations with Temporal Phenomena”, in: 
+                        <hi rend="italic">Digital Humanities Quarterly</hi> 13, 3
+                        <ref target="https://www.digitalhumanities.org/dhq/vol/13/3/000414/000414.html"> &lt;
+                            <hi rend="color(1155CC)">https://www.digitalhumanities.org/dhq/vol/13/3/000414/000414.html</hi>
+                        </ref>&gt; [29.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Segel, Edward / Heer, Jeffrey</hi> (2010): “Narrative Visualization: Telling Stories with Data”, in: 
+                        <hi rend="italic">IEEE Transactions on Visualization and Computer Graphics</hi> 16, 6: 1139–48. DOI: 
+                        <ref target="https://doi.org/10.1109/TVCG.2010.179">
+                            <hi rend="color(467886)">10.1109/TVCG.2010.179</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Shneiderman, Ben</hi> (1996): “The Eyes Have It: A Task by Data Type Taxonomy for Information Visualizations”, in: 
+                        <hi rend="italic">Proceedings 1996 IEEE Symposium on Visual Languages</hi>: 336–43. Boulder, CO, USA: IEEE Comput. Soc. Press. DOI: 
+                        <ref target="https://doi.org/10.1109/VL.1996.545307">
+                            <hi rend="color(467886)">10.1109/VL.1996.545307</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Terras, Melissa / Nyhan, Julianne / Vanhoutte, Edward</hi> (2016): 
+                        <hi rend="italic">Defining Digital Humanities: A Reader</hi>. Routledge.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Trocchianesi, Raffaella / Bollini, Letizia</hi> (2023): “Design, Digital Humanities, and Information Visualization for Cultural Heritage”, in: 
+                        <hi rend="italic">Multimodal Technologies and Interaction</hi> 7, 11: 102. DOI: 
+                        <ref target="https://doi.org/10.3390/mti7110102">
+                            <hi rend="color(467886)">10.3390/mti7110102</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Viola, Lorella</hi> (2023): 
+                        <hi rend="italic">The Humanities in the Digital: Beyond Critical Digital Humanities</hi>. Springer Nature. DOI: 
+                        <ref target="https://doi.org/10.1007/978-3-031-16950-2">
+                            <hi rend="color(1155CC)">10.1007/978-3-031-16950-2</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Whitelaw, Mitchell</hi> (2015): “Generous Interfaces for Digital Cultural Collections”, in: 
+                        <hi rend="italic">Digital Humanities Quarterly</hi> 9, 1.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Windhager, Florian / Federico, Paolo / Schreder, Gunther / Glinka, Katrin / Dork, Marian / Miksch, Silvia / Mayr, Eva</hi> (2019): “Visualization of Cultural Heritage Collection Data: State of the Art and Future Challenges”, in: 
+                        <hi rend="italic">IEEE Transactions on Visualization and Computer Graphics</hi> 25, 6: 2311–30. DOI: 
+                        <ref target="https://doi.org/10.1109/TVCG.2018.2830759">
+                            <hi rend="color(467886)">10.1109/TVCG.2018.2830759</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Yi, Ji Soo / Kang, Youn Ah / Stasko, John / Jacko, J.A.</hi> (2007): “Toward a Deeper Understanding of the Role of Interaction in Information Visualization”, in: 
+                        <hi rend="italic">IEEE Transactions on Visualization and Computer Graphics</hi> 13, 6: 1224–31. DOI: 
+                        <ref target="https://doi.org/10.1109/TVCG.2007.70515">
+                            <hi rend="color(467886)">10.1109/TVCG.2007.70515</hi>
+                        </ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Zhao, Zhenpeng / Elmqvist, Niklas</hi> (2023): “The Stories We Tell About Data: Surveying Data-Driven Storytelling Using Visualization”, in: 
+                        <hi rend="italic">IEEE Computer Graphics and Applications</hi> 43, 4: 97–110. DOI: 
+                        <ref target="https://doi.org/10.1109/MCG.2023.3269850">
+                            <hi rend="color(467886)">10.1109/MCG.2023.3269850</hi>
+                        </ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

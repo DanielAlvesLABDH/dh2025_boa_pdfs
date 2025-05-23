@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BARNEY_Brett_Vital_Signs_Between_the_Lines__Reconsidering_Te">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Vital Signs Between the Lines? Reconsidering Textual Genesis Encoding in a Digital Future</title>
+                <author>
+                    <persName>
+                        <surname>Barney</surname>
+                        <forename>Brett</forename>
+                    </persName>
+                    <affiliation>Walt Whitman Archive, United States of America</affiliation>
+                    <email>bbarney2@unl.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Henzel</surname>
+                        <forename>Katrin</forename>
+                    </persName>
+                    <affiliation>Kiel University Library, Deutschland</affiliation>
+                    <email>katrin.henzel@googlemail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Schäuble</surname>
+                        <forename>Joshua</forename>
+                    </persName>
+                    <affiliation>Rijksuniversiteit Groningen, Nederland</affiliation>
+                    <email>j.k.schauble@rug.nl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Shahidzadeh Asadi</surname>
+                        <forename>Nooshin</forename>
+                    </persName>
+                    <affiliation>Universiteit Antwerpen, België</affiliation>
+                    <email>nooshin.shahidzadehasadi@uantwerpen.be</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Stewart</surname>
+                        <forename>Ashlyn</forename>
+                    </persName>
+                    <affiliation>Boston College Digital Scholarship, United States of America</affiliation>
+                    <email>ashlynstewart404@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-08T04:00:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Panel</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>TEI</term>
+                    <term>manuscripts</term>
+                    <term>HTR</term>
+                    <term>software deveopment</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digital publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>manuscripts description</term>
+                    <term>representation</term>
+                    <term>and analysis</term>
+                    <term>meta-criticism (reflections on digital humanities and humanities computing)</term>
+                    <term>scholarly editing and editions development</term>
+                    <term>analysis</term>
+                    <term>and methods</term>
+                    <term>Humanities computing</term>
+                    <term>Library &amp; information science</term>
+                    <term>Literary studies</term>
+                    <term>Philology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">Ten years ago, debates over the encoding of textual genesis felt vital to the future of digital scholarly editing. In 2011, the expansion of the TEI Guidelines to address genetic editing (“TCW18,” 2010; Jannidis et al., 2010; “Preliminary,” 2011) was heralded by a dedicated community as a step toward capturing the complexities of manuscript writing processes. A transatlantic project titled "Diachronic Markup and Presentation Practices for Text Editions in Digital Research Environments" (Barney, 2016; DFG GEPRIS, no date; NEH, no date) set out to test these guidelines on the encoding of literary drafts by J.W. Goethe, James Joyce, Walt Whitman, and Virginia Woolf, aiming to demonstrate their potential and limitations. Three of the contributors to this paper were deeply involved in that project, grappling with both the technical challenges of implementing these standards and the broader systemic barriers of fragmented infrastructures, project-based funding cycles, and limited interdisciplinary project management expertise.</p>
+            <p style="text-align: left; ">Today, manuscript transcription is increasingly automated, and AI promises new forms of textual analysis. Meanwhile, discussions about encoding have become marginalized, kept alive mainly in isolated forums such as the TEI mailing list. Complaints that technology still fails to support theoretical needs persist, but they ring hollow: the technologies exist. The real failure lies in the inability of scholarly editing as a field to adopt cooperative, scalable workflows or to embrace tools that are common in the wider digital ecosystem. Encoding textual genesis, once seen as essential, now often appears idiosyncratic, unscalable, and, to many, irrelevant. The continual decline of genetic edition projects and their funding reflects this reality.</p>
+            <p style="text-align: left; ">This paper examines whether and under what conditions manuscript encoding still has a place in Digital Humanities. Reflecting on over a decade of experience, we confront hard questions: Why did this field falter? What might be the role for the XML format, which has been criticized as being both not interoperable (Schmidt, 2021) and particularly deficient for encoding literary texts? Can encoding practices adapt to modern tools and infrastructures? Or should the community finally abandon attempts to encode textual genesis and instead focus on technologies that scale, interoperate, and meet contemporary needs? Drawing from diverse perspectives and projects, we critically interrogate what manuscript encoding once offered, what it failed to deliver, and what lessons its rise and decline hold for the broader DH landscape.</p>
+            <div type="div1" rend="DH-Heading1">
+                <head>The Early Promise and Practical Frictions</head>
+                <p style="text-align: left; ">The early adoption of TEI-XML for genetic editing projects reflected a remarkable optimism. Projects such as the Walt Whitman Archive committed to TEI encoding as early as 2000, designing editorially rigorous practices often without the technical infrastructure needed to make these practices truly usable. The TEI's development of markup for genetic editing--following initiatives like the Proust Prototype, early stages of the Faust edition, and the Diachronic Markup project--was met with hope that scholarly editing would gain stable, interoperable protocols capable of capturing complex writing processes.</p>
+                <p style="text-align: left; ">However, practical engagement quickly exposed critical limitations. Despite direct involvement in proposing revisions, issues such as the TEI's lack of support for encoding temporality and complex textual relationships persisted. Much like the “Diachronic Markup” project, academic approaches to develop infrastructures for manuscript encoding have consistently faced the same systemic issues: limited funding periods, no long-term maintenance plans, and insufficient resources for actual technical development. Projects often rely on single developers tasked with delivering complex systems under unrealistic conditions. Without dedicated maintenance and with ever-changing personnel, even promising prototypes quickly stagnated.</p>
+                <p style="text-align: left; ">Early experiments in encoding manuscript genesis thus revealed a growing gap between theoretical ambitions and technological realities. What emerged was not a future-proof solution but a collection of bespoke efforts, each struggling against systemic barriers that the field is poorly equipped to overcome.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>New Users, New Demands</head>
+                <p style="text-align: left; ">While scholarly editors debated the finer points of genetic markup, the broader research landscape changed around them. Advances in handwritten text recognition (HTR) and machine learning opened new possibilities for manuscript work, but also shifted priorities. Platforms like Transkribus and eScriptorium (more broadly, Kraken) provided efficient ways to generate machine-readable transcriptions, emphasizing speed and scalability over editorial depth.</p>
+                <p style="text-align: left; ">At the same time, a new class of users emerged. Collaborations like Ashlyn Stewart's work with the business school dean at Boston College show that interest in marked-up texts now extends far beyond traditional scholarly editing and into text analysis. These users prioritize tools like Visual Studio Code over bespoke environments like Oxygen, value speed over painstaking accuracy, and care more about repeatability and scalability than about the theoretical purity of their markup.</p>
+                <p style="text-align: left; ">Nooshin Shahidzadeh Asadi’s observations reinforce this shift. In the HTR-driven workflows now dominant in many projects, the manuscript itself risks becoming secondary to the data extracted from it. Researchers and institutions seek general visualization tools for large-scale automated transcriptions, not carefully curated editions. This trend is enhanced not only by technological shifts but also by economic realities: the cost of creating traditional digital scholarly editions is often prohibitive, especially compared to machine-driven alternatives.</p>
+                <p style="text-align: left; ">In this environment, the expectations for what manuscript encoding should achieve have fundamentally changed. The traditional values of genetic editing are increasingly out of step with the desires, needs, and workflows of today's researchers.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Systemic and Structural Barriers</head>
+                <p style="text-align: left; ">The stagnation of manuscript encoding cannot be understood without grappling with the broader systemic conditions of academic research. As Joshua Schäuble’s experiences illustrate, project-based funding models are fundamentally incompatible with the needs of sustainable technical development. Short-term grants incentivize rapid prototyping over robust engineering, creating a cycle in which complex digital infrastructures are built, under-maintained, and eventually abandoned.</p>
+                <p style="text-align: left; ">Research infrastructures housed in libraries and data centers, as Katrin Henzel discusses, attempt to fill the gap by offering sustainable hosting solutions. However, these services often favor standardization over complexity. Editions that aim to represent marginal text types or complex genetic phenomena find little support in these environments. Even when standards like the DTA Basisformat promote comparability and reusability, they impose constraints that leave little room for the richness that genetic editing once aspired to capture.</p>
+                <p style="text-align: left; ">The result is a gradual but unmistakable devaluing of complex editions. Practical concerns about sustainability and comparability now outweigh the intellectual ambitions that once drove the development of manuscript encoding.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>The Salvageable, the Obsolete, and the Lessons Learnt</head>
+                <p style="text-align: left; ">Faced with these realities, it is necessary to ask whether manuscript encoding still serves a meaningful scholarly purpose. On one hand, encoding can still offer valuable insights into textual process and editorial practice, particularly when adapted to modern demands for interoperability and scalability. On the other hand, the structural conditions of academia make large-scale, complex encoding projects increasingly untenable.</p>
+                <p style="text-align: left; ">Rather than nostalgically defending the traditions of genetic editing, we propose a critical rethinking. If manuscript encoding is to survive, it must adapt to meet the needs of a broader range of users, embrace contemporary technical infrastructures, and operate within realistic models of labour and funding. The story of manuscript encoding offers a broader lesson about Digital Humanities: innovation alone is not enough. Without sustainable infrastructures, realistic project planning, and institutional support, even the most promising technologies will stagnate. In this paper, we invite attendees to critically examine the “life cycle” of manuscript encoding: its innovations, its stagnation, its obsolescence, and its implications for the wider field of Digital Humanities. Can this “dinosaur” field still offer insights, or is it time to let the line go flat?</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Barney, B. (2016). “Diachronic Markup and Presentation Practices for Text Editions in Digital Research Environments, White Paper,” Knowledge Commons Works, 1 April 2016. https://doi.org/10.17613/M6M94B.</bibl>
+                    <bibl style="text-align: left; ">Deutsche Forschungsgemeinschaft (DFG) GEPRIS (no date). “Diachronic Markup and Presentation Practices for Text Edition [sic] in Digital Research Environments. Project Details.” https://gepris-extern.dfg.de/gepris/projekt/236702990 (Accessed 8 December 2024).</bibl>
+                    <bibl style="text-align: left; ">DTABf. Deutsches Textarchiv – Basisformat (2011–2022). ed. Berlin-Brandenburgische Akademie der Wissenschaften. http://deutschestextarchiv.de/doku/basisformat (Accessed 8 December 2024).</bibl>
+                    <bibl style="text-align: left; ">Fotis, J. et al. “An Encoding Model for Genetic Editions (TEI Council Working Paper 19)” (27 April 2010). https://tei-c.org/Vault/TC/tcw19.html (Accessed 8 December 2024).</bibl>
+                    <bibl style="text-align: left; ">Haaf, S., Geyken, A., and Wiegand, F. (2014/15). “The DTA ‘Base Format’: A TEI Subset for the Compilation of a Large Reference Corpus of Printed Text from Multiple Sources,” jTEI 8. https://doi.org/10.4000/jtei.1114.</bibl>
+                    <bibl style="text-align: left; ">NEH (no date). “Diachronic Markup and Presentation Practices for Text Editions in Digital Research Environments.” https://apps.neh.gov/publicquery/AwardDetail.aspx?gn=HG-50047-13 (Accessed 8 December 2024).</bibl>
+                    <bibl style="text-align: left; ">“Preliminary updates for genetic editing in P5” (TEI Council Working Paper 21) (10 September 2011). https://tei-c.org/Vault/TC/tcw21.html (Accessed 8 December 2024).</bibl>
+                    <bibl style="text-align: left; ">Schmidt, D. (2021). “True interoperability for digital scholarly editions,” Umanistica Digitale, 10. http://doi.org/10.6092/issn.2532-8816/12604</bibl>
+                    <bibl style="text-align: left; ">“TCW18: Summary of Genetic Working Group proposals” (27 April 2010). https://old.tei-c.org/activities/council/working/tcw18-summary-of-genetic-working-group-proposals/ (Accessed 8 December 2024).</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

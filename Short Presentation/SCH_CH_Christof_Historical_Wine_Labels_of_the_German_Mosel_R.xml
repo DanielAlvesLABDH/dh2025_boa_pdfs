@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SCH_CH_Christof_Historical_Wine_Labels_of_the_German_Mosel_R">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Historical Wine Labels of the German Mosel Region: Enabling Insights into Visual Cultural Heritage using Linked Open Data</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Schöch</surname>
+                        <forename>Christof</forename>
+                    </persName>
+                    <affiliation>Trier Center for Digital Humanities, Trier University, Germany; Computational Linguistics and Digital Humanities, Trier University, Germany</affiliation>
+                    <email>schoech@uni-trier.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Hinzmann</surname>
+                        <forename>Maria</forename>
+                    </persName>
+                    <affiliation>Trier Center for Digital Humanities, Trier University, Germany</affiliation>
+                    <email>hinzmannm@uni-trier.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Wassermayr</surname>
+                        <forename>Veronica</forename>
+                    </persName>
+                    <affiliation>Trier Center for Digital Humanities, Trier University, Germany</affiliation>
+                    <email>wassermayr@uni-trier.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Weis</surname>
+                        <forename>Joëlle</forename>
+                    </persName>
+                    <affiliation>Trier Center for Digital Humanities, Trier University, Germany</affiliation>
+                    <email>weis@uni-trier.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Rettinger</surname>
+                        <forename>Achim</forename>
+                    </persName>
+                    <affiliation>Computational Linguistics and Digital Humanities, Trier University, Germany</affiliation>
+                    <email>rettinger@uni-trier.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-18T10:56:28.152760523</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Cultural Heritage</term>
+                    <term>Wine Labels</term>
+                    <term>Germany</term>
+                    <term>Wikibase</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>data modeling</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>linked (open) data</term>
+                    <term>Art history</term>
+                    <term>Cultural studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>The Mosel region in southwestern Germany is a wine-making region with a tradition reaching back to the times of Roman settlement. Even today, the steep vineyards are ubiquitous along the winding river Mosel and growing, making, selling and consuming wine is an integral part of the regional identity (Laufner et al. 1987; Matheus 2019). </p>
+                <p>This rich cultural history is documented, in part, through paper-based wine labels emerging in the early nineteenth century (Sachse-Weinert 2019). Over time, the visual styles and the textual information on wine labels have changed tremendously in reaction to technical, cultural, commercial and legal developments (fig. 1). </p>
+                <p>As the guardian of several collections of wine labels, the Trier Center for Digital Humanities (TCDH) has set out to model and analyze information about this aspect of cultural heritage, using recent advances in text and image processing and in techniques for modeling of cultural heritage data. </p>
+                <p>Our aim with this paper is to highlight the topic as a rich domain of text/image media to be explored by DH, but also to showcase our particular approach to this material. </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp8n20gcxq/Pictures/b0896ea9111315eaf1d4ef671b6367d8.png"/>
+                    </figure>
+                    <hi rend="color(#000000)">Figure 1: Selection of several historical wine labels in the Wikibase.cloud instance (1850s and 1860s).</hi>
+                    <hi rend="color(#000000)"> </hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Previous work </head>
+                <p>We are aware of two major precursor projects: the “Amerine Wine Label Collection” at UC Davis Library (4970 labels, mostly from the 1930s and 1940s) and the “Weinetikettensammler” website (10,000+ labels, including 2,200+ from the Mosel region). Both have a less complete or less systematic annotation, compared to our enriched and interlinked data.<ref n="1" target="ftn0"/>
+                </p>
+                <p>Names of vineyards and wines are defined by law in most countries and there is considerable scholarly discussion about them (e.g. Hornickel 1979; Christoffel 1979; Klaß &amp; Mühlhölzer 1997) as well as about wine labels (e.g. Joseph 1987; Molyneux-Berry 1996; Crestin-Billet 2005; Kammer &amp; Rios-Morales 2016). </p>
+                <p>There have been significant advances in text and image processing through the use of deep learning and multimodal large language models (see Caffagni et al. 2024 for a survey and Büttner et al. 2022; Arnold &amp; Tilton 2024 for applications to historical documents). Similarly, modeling of cultural heritage data using Linked Open Data currently receives increased interest (see e.g. Hogan 2021 for an introduction and Zhao 2022 for a survey of LOD in DH). However, we are not aware of any other project enriching and analyzing wine labels with LLMs and LOD at this time (but see Weis &amp; Schöch 2024). </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Data sources</head>
+                <p>We have gathered reference information about historical and current vineyards, wineries and label printers both from relevant government agencies and private initiatives. This information – with the grouping of individual vineyards into collective vineyards, areas, and regions and information on vineyard locations and characteristics, augmented with geolocations from Wikidata – serves as the foundation for the dataset.</p>
+                <p>As for the labels, the TCDH owns or has access to several physical collections of historical wine labels for the German Southwest, comprising around 8,000 labels. They are in the process of being digitized, enriched and made discoverable using a Wikibase instance available at 
+                    <ref target="https://mosel.wikibase.cloud/">https://mosel.wikibase.cloud</ref> (JSON and RDF dumps: 
+                    <ptr target="https://doi.org/10.5281/zenodo.14230387"/>).
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Data model </head>
+                <p>In the absence of an existing data model, we designed one that we call the Wine Label Vocabulary (WLV) and that is now being implemented in a Wikibase instance. The data model currently distinguishes a number of key classes relevant to the domain (e.g. vineyard, wine label, winery, village), 78 properties, and several controlled vocabularies (e.g. depicted objects, soil types, grape varieties). External identifiers from authority files are used extensively to support identification and interoperability, e.g. for depicted objects (Getty AAT), vineyards (LWK), or grape varieties (VIVC).<ref n="2" target="ftn1"/>
+                </p>
+                <p>The data model is described in prose on the platform and partly formalized using EntitySchemas. Written in ShEx (Shape Expressions), they describe the classes, the properties used on them, and the classes or data types that can be used as values (fig. 2). They serve to document the data model in a machine-readable, standardized way and to maintain data quality and consistency. </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp8n20gcxq/Pictures/b0896ea9111315eaf1d4ef671b6367d8.png"/>
+                    </figure>
+                </p>
+                <p>Figure 2: EntitySchema (top, partially shown) and SPARQL query (middle) for validation with the ShEx2 validator. See: 
+                    <ptr target="https://mosel.wikibase.cloud/wiki/EntitySchema:E2"/>. 
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>State of play </head>
+                <p>In the current pilot phase, we use a public Wikibase.cloud instance, concurrently adding instances and refining the data model. There are currently 1905 entries for wine labels, 1234 vineyards (466 current and 768 historical), 641 wineries, 200 villages and towns and 45 label printing companies. </p>
+                <p>The data requires numerous refinements but is already richly interlinked: for example, all wineries, vineyards, and labels are associated with a village or town (and therefore geolocated). The data can already be usefully queried using the SPARQL endpoint and be mapped, visualized and explored in multiple ways (fig. 3). </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp8n20gcxq/Pictures/b0896ea9111315eaf1d4ef671b6367d8.png"/>
+                    </figure>Figure 3: Map view of part of the data, with one entry highlighted.
+                </p>
+                <p>Research questions that can be investigated include: Which historical vineyards belong to a given village in the Mosel region? Which labels mention a particular village or vineyard? What proportion of labels from the 19th century is undated? What proportion of labels refers to villages or to vineyards, per decade? Numerous sample queries provided on the platform illustrate the possibilities (Fig. 4 and 
+                    <ptr target="https://mosel.wikibase.cloud/query/"/>). 
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp8n20gcxq/Pictures/b0896ea9111315eaf1d4ef671b6367d8.png"/>
+                    </figure>Figure 4: The SPARQL query service with example queries. 
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Next steps </head>
+                <p>We are continually increasing the number of labels, vineyards and wineries included in the Wikibase, enhancing the breadth and precision of the annotations, and refining the details of the data model. At the same time, we aim to maintain compatibility with classes used, for example, in Wikidata, in order to enhance interoperability. </p>
+                <p>In addition, we are in the process of leveraging multimodal large language models to annotate labels automatically, particularly using the controlled vocabulary of depicted objects and annotations by humans. We also plan to date the considerable number of labels that are not dated using both visual cues (e.g. colors and shapes of ornaments) and contextual knowledge from the Wikibase (e.g. about the times of activity of printers often mentioned on the label margins). </p>
+                <p>Moreover, the unclear legal status especially of the more recent labels requires clarification before they can be made available online. Finally, we also strive to progressively generalize our data model to be able to capture information about further wine regions, beyond the German Mosel, with their own legal frameworks and terminological traditions. </p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn0" rend="footnote text" n="1"> See: 
+                         and 
+                        . 
+                    </note>
+<note xml:id="ftn1" rend="footnote text" n="2"> See: 
+                         (Getty Art and Architecture Thesaurus), 
+                         (Vitis International Variety Catalogue) and 
+                         (Weinbergsrolle Rheinland-Pfalz).
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Arnold, Taylor / Tilton, Lauren </hi>(2024): “Explainable Search and Discovery of Visual Cultural Heritage Collections with Multimodal Large Language Models”. In: 
+                        <hi rend="italic">Proceedings of the Computational Humanities Research Conference 2024</hi>, edited by Wouter Haverals, Marijn Koolen, Laure Thompson. Aarhus, CHR. 
+                        <ptr target="https://ceur-ws.org/Vol-3834/paper1.pdf"/>. 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Büttner, Jochen / Martinetz, Julius / El-Hajj, Hassan / Valleriani, Matteo </hi>(2022): “CorDeep and the Sacrobosco Dataset: Detection of Visual Elements in Historical Documents.” 
+                        <hi rend="italic">Journal of Imaging</hi> 8/10: 285. 
+                        <ptr target="https://doi.org/10.3390/jimaging8100285"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Caffagni, Davide / Cocchi, Federico / Barsellotti, Luca / Moratelli, Nicholas </hi>
+                        <hi rend="bold">/</hi>
+                        <hi rend="bold"> Sarto, Sara / Baraldi, Lorenzo / Cornia, Marcella / Cucchiara, Rita </hi>(2024): “The Revolution of Multimodal Large Language Models: A Survey.” 
+                        <hi rend="italic">arXiv</hi>. 
+                        <ptr target="https://doi.org/10.48550/arXiv.2402.12451"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Christoffel, Karl</hi> (1979): 
+                        <hi rend="italic">Die Weinlagen der Mosel und ihre Namensherkunft: Deutung der Lagennamen von Mosel, Saar, Ruwer im Rahmen der moselländischen Weinbaugeschichte</hi>. Trier: Spree-Verlag.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Crestin-Billet, Frédérique</hi> (2005): 
+                        <hi rend="italic">La Folie des étiquettes de vins</hi>. Paris: Flammarion.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hogan, Aidan</hi> (2020): 
+                        <hi rend="italic">The Web of Data</hi>. Cham: Springer.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hornickel, Ernst</hi> (1979): 
+                        <hi rend="italic">Hornickels Weinbibliothek. 3: Die Lagen</hi>. München: Wilhelm Heyne.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Joseph, Robert</hi> (1987): 
+                        <hi rend="italic">Art of the Wine Label</hi>. Leicester: Windward / Quarto.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Kammer, Christian / Rios-Morales, Ruth </hi>(2016): “Wine Labels: The Impact of a Module in Wine Knowledge,” 
+                        <hi rend="italic">International Journal of Globalisation and Small Business</hi> 8/1. 
+                        <ptr target="https://doi.org/10.1504/ijgsb.2016.076450"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Klaß, Christa / Mühlhölzer, Ilse</hi>, eds. (1997): 
+                        <hi rend="italic">Alte Weinlagennamen und ihre Geschichte: Einblicke in die historische Vielfalt der Weinkultur in Deutschland und Europa</hi>. Walsheim: Ed. Europa.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Laufner, Richard / Binsfeld, Wolfgang / Cüppers, Heinz</hi>, eds. (1987): 
+                        <hi rend="italic">2000 Jahre Weinkultur an Mosel-Saar-Ruwer: Denkmäler und Zeugnisse zur Geschichte von Weinanbau, Weinhandel, Weingenuß</hi>. Trier: Rheinisches Landesmuseum.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Matheus, Michael</hi>, ed. (2019): 
+                        <hi rend="italic">Weinkultur und Weingeschichte an Rhein, Nahe und Mosel</hi>. Stuttgart: Franz Steiner.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Molyneux-Berry, David</hi> (1996): 
+                        <hi rend="italic">Die klassischen Weine der Welt und ihre Etiketten. Translated by Peter Gillhofer</hi>. Bindlach: Gondrom.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Sachse-Weinert, Martin</hi> (2019): “Information, Marketing und Kunst. Anmerkungen zur Multifunktionalität von Weinetiketten.” In 
+                        <hi rend="italic">Weinkultur und Weingeschichte an Rhein, Nahe und Mosel</hi>, edited by Michael Matheus, 159–80. Stuttgart: Franz Steiner.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Weis, Joëlle / Schöch, </hi>
+                        <hi rend="bold">Christof</hi> (2024): “Vom Perler Hasenberg zur Lehmener Würzlay – Weinetiketten digital erschließen.” In 
+                        <hi rend="italic">Sammlungsforschung im digitalen Zeitalter</hi>, edited by Katharina Günther and Stefan Alschner, 19–28. Göttingen: Wallstein. 
+                        <ptr target="https://doi.org/10.15499/kds-005-002"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Zhao, Fudie</hi> (2022). “A Systematic Review of Wikidata in Digital Humanities Projects.” 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi> 38/2: 852–74. 
+                        <ptr target="https://doi.org/10.1093/llc/fqac083"/>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

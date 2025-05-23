@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BARYSHNIKOVA_Anna_Digital_Mapping_of_Baltic_German_Historica">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Digital Mapping of Baltic German Historical Landscapes Using Named-Entity Recognition and Geographical Visualization</title>
+                <author>
+                    <persName>
+                        <surname>Baryshnikova</surname>
+                        <forename>Anna</forename>
+                    </persName>
+                    <affiliation>University Erlangen-Nuremberg, Germany</affiliation>
+                    <email>a.baryshnikova@yahoo.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-07T06:30:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Baltic Germans</term>
+                    <term>Digital Mapping</term>
+                    <term>Named-Entity Recognition (NER)</term>
+                    <term>Cultural Preservation</term>
+                    <term>Geospatial Analysis</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data</term>
+                    <term>object</term>
+                    <term>and artefact preservation</term>
+                    <term>digital archiving</term>
+                    <term>optical character recognition and handwriting recognition</term>
+                    <term>spatial &amp; spatio-temporal analysis</term>
+                    <term>modeling and visualization</term>
+                    <term>Cultural studies</term>
+                    <term>Geography and geo-humanities</term>
+                    <term>Humanities computing</term>
+                    <term>Central/Eastern European Studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">
+                    <hi style="font-size:12pt">This project explores the historical and cultural landscapes of the Baltic Germans through a digital methodology that combines Named-Entity Recognition (NER), linguistic annotation, and geospatial visualization. The newspaper Baltische Briefe (1949–2004), a vital postwar medium of cultural memory for the Baltic German diaspora, serves as the primary corpus. In collaboration with the Institute of the National Czech Corpus, we developed an interactive map that visualizes spatial references from the newspaper, revealing geographic patterns of identity and displacement. This project contributes a reusable model for digital heritage research on diasporic communities.</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Background and Related Work</head>
+                <p style="text-align: left; ">
+                    <hi style="font-size:12pt">Although NER and GIS-based visualizations are established tools in digital humanities, few projects have applied them to the Baltic region or historical German-language diaspora texts. This work builds on earlier DH projects in historical mapping (e.g., Jewish migration cartographies) while introducing linguistic adaptations for historical German and integration with Wikidata. It also addresses a significant gap in the representation of Eastern European cultural heritage in DH discourse.</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Research Questions</head>
+                <p style="text-align: left; ">
+                    <hi style="font-size:12pt">1. How can NER and geovisualization be applied to fragmented historical texts like Baltische Briefe?</hi>
+                </p>
+                <p style="text-align: left; ">2. What spatial patterns emerge from the corpus, and how do they reflect Baltic German cultural identity?</p>
+                <p style="text-align: left; ">3. Can these digital methods be transferred to other diasporic communities with similar archival challenges?</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Corpus and Annotation</head>
+                <p style="text-align: left; ">
+                    <hi style="font-size:12pt">The corpus includes five representative issues of Baltische Briefe:</hi>
+                </p>
+                <p style="text-align: left; ">- 1949–1950: Postwar displacement and identity preservation.</p>
+                <p style="text-align: left; ">- 1988–1991: Baltic independence and geopolitical transformation.</p>
+                <p style="text-align: left; ">- 2004: EU accession and symbolic return to Europe.</p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:12pt">Editions were sourced from the Bavarian and Berlin State Libraries. After OCR digitization with ABBYY FineReader, the texts were annotated for part-of-speech, syntax, and named entities using the Universal Dependencies framework. Place names were geocoded and enriched with Wikidata URIs to enable multilingual context.</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methodology</head>
+                <p style="text-align: left; ">1. OCR and Cleanup: Texts were digitized, corrected manually, and structured in XML.</p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:12pt">2. NER and Disambiguation: Place names were extracted using NameTag3 and SpaCy; ambiguities were resolved using entity-fishing.</hi>
+                </p>
+                <p style="text-align: left; ">3. Annotation: Entities were tagged for parts of speech, syntax, and named entity classes (person, location, organization).</p>
+                <p style="text-align: left; ">4. Geocoding and Mapping: Locations were mapped using OpenStreetMap and historical cartographic overlays. </p>
+                <p style="text-align: left; ">5. Digital Map Interface: Created using Python’s Folium library with interactive features, such as filters, historical layers, and multimedia content.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results</head>
+                <p style="text-align: left; ">- Over 1,200 place names were extracted and visualized.</p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:12pt">- Core sites like Riga, Dorpat (Tartu), and Lüneburg emerged as recurring cultural anchors.</hi>
+                </p>
+                <p style="text-align: left; ">- Shifting spatial references reflect phases of identity: loss, nostalgia, reintegration.</p>
+                <p style="text-align: left; ">- Historical maps contextualize geographic references across decades.</p>
+                <figure>
+                    <graphic n="1001" width="15.920872222222222cm" height="7.390686111111111cm" url="/tmp/tmpaa6wx3b_/Pictures/c2aa82f22676fffbe9fcc194551714b6.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 1: Heatmap showing place name density across issues.</p>
+                <figure>
+                    <graphic n="1002" width="15.920872222222222cm" height="6.7997805555555555cm" url="/tmp/tmpaa6wx3b_/Pictures/c2aa82f22676fffbe9fcc194551714b6.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 2: Visualization of Bauska (Latvia) as an example of local narrative significance.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Challenges</head>
+                <p style="text-align: left; ">- Historical Toponyms: Resolved using gazetteers and archival maps.</p>
+                <p style="text-align: left; ">- OCR Errors: Corrected through token validation and manual review.</p>
+                <p style="text-align: left; ">- Adaptation of Tools: Linguistic tuning of NER models to account for spelling variation and historical syntax.</p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:12pt">- Platformization: The map currently exists as a developed product but needs a stable hosting solution. Planned approaches include hosting via GitHub Pages, Heroku, or an institutional server, enhancing interactivity with dynamic filters, and ensuring long-term maintenance through open-source documentation and update workflows.</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Diversity and Transferability</head>
+                <p style="text-align: left; ">While focused on Baltic Germans, this project offers a methodology applicable to other displaced or marginalized communities. It contributes to inclusivity in DH by amplifying underrepresented histories and providing tools for memory mapping beyond dominant narratives.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion and Future Work</head>
+                <p style="text-align: left; ">This interdisciplinary project shows how digital tools can illuminate cultural geography in diasporic texts. Planned extensions include:</p>
+                <p style="text-align: left; ">- Expanding the corpus with new editions and related documents.</p>
+                <p style="text-align: left; ">- Adding demographic and economic overlays.</p>
+                <p style="text-align: left; ">- Developing event-timeline layers and community storytelling modules.</p>
+                <p style="text-align: left; ">- Publishing the map through a dynamic, sustainable web platform with an accessible user interface.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Explore the corpus</head>
+                <p style="text-align: left; ">Baltische Briefe Corpus on Czech National Corpus 
+                    <ref target="https://wiki.korpus.cz/doku.php/en:cnk:baltischebriefe">https://wiki.korpus.cz/doku.php/en:cnk:baltischebriefe</ref>
+                </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi style="font-size:12pt">Binder, Mario / Nickel, Julia (2023): “Geovisualization in Cultural Heritage: Mapping Narratives in Historical Texts”, in: </hi>
+                        <hi rend="italic" style="font-size:12pt">Digital Scholarship in the Humanities</hi>
+                        <hi style="font-size:12pt"> 38, 1: 112–130.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi style="font-size:12pt">Gartner, Georg / Huang, Haosheng (eds.) (2021): </hi>
+                        <hi rend="italic" style="font-size:12pt">Progress in Location-Based Services 2020</hi>
+                        <hi style="font-size:12pt">. Cham: Springer.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi style="font-size:12pt">Gillings, Mark / Hacιgüzeller, Piraye / Lock, Gary (eds.) (2020): </hi>
+                        <hi rend="italic" style="font-size:12pt">Archaeological Spatial Analysis: A Methodological Guide</hi>
+                        <hi style="font-size:12pt">. New York: Routledge.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi style="font-size:12pt">Moretti, Franco (2005): </hi>
+                        <hi rend="italic" style="font-size:12pt">Graphs, Maps, Trees: Abstract Models for a Literary History</hi>
+                        <hi style="font-size:12pt">. London: Verso.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi style="font-size:12pt">Ridge, Mia (2017): </hi>
+                        <hi rend="italic" style="font-size:12pt">Crowdsourcing Our Cultural Heritage</hi>
+                        <hi style="font-size:12pt">. London: Routledge.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi style="font-size:12pt">Schmidt, Desmond (2020): “The Future of the Past: Digital Tools for Historical Texts”, in: </hi>
+                        <hi rend="italic" style="font-size:12pt">Journal of Digital Humanities</hi>
+                        <hi style="font-size:12pt">, 9(3). </hi>
+                        <ref target="https://journalofdigitalhumanities.org/future-historical-tools-schmidt">https://journalofdigitalhumanities.org/future-historical-tools-schmidt</ref>
+                        <hi style="font-size:12pt"> [15.03.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi style="font-size:12pt">Southall, Humphrey / Mostern, Ruth / Berman, M. L. (2011): “On Historical Gazetteers”, in: </hi>
+                        <hi rend="italic" style="font-size:12pt">International Journal of Humanities and Arts Computing</hi>
+                        <hi style="font-size:12pt"> 5(2): 127–145.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi style="font-size:12pt">Terras, Melissa / Nyhan, Julianne / Vanhoutte, Edward (eds.) (2013): </hi>
+                        <hi rend="italic" style="font-size:12pt">Defining Digital Humanities: A Reader</hi>
+                        <hi style="font-size:12pt">. Farnham: Ashgate.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; text-align: justify;">
+                        <hi style="font-size:12pt">Van Dijk, Teun A. (2008): </hi>
+                        <hi rend="italic" style="font-size:12pt">Discourse and Power</hi>
+                        <hi style="font-size:12pt">. Basingstoke: Palgrave Macmillan.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

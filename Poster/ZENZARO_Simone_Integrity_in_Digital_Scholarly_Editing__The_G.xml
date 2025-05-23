@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ZENZARO_Simone_Integrity_in_Digital_Scholarly_Editing__The_G">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Integrity in Digital Scholarly Editing: The GreekSchools Case</title>
+                <author>
+                    <persName>
+                        <surname>Zenzaro</surname>
+                        <forename>Simone</forename>
+                    </persName>
+                    <affiliation>Istituto di Linguistica Computazionale "A. Zampolli" - CNR, Italy</affiliation>
+                    <email>simone.zenzaro@cnr.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Del Grosso</surname>
+                        <forename>Angelo Mario</forename>
+                    </persName>
+                    <affiliation>Istituto di Linguistica Computazionale "A. Zampolli" - CNR, Italy</affiliation>
+                    <email>angelo.delgrosso@ilc.cnr.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Boschetti</surname>
+                        <forename>Federico</forename>
+                    </persName>
+                    <affiliation>Istituto di Linguistica Computazionale "A. Zampolli" - CNR, Italy</affiliation>
+                    <email>federico.boschetti@ilc.cnr.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ranocchia</surname>
+                        <forename>Graziano</forename>
+                    </persName>
+                    <affiliation>Università di Pisa</affiliation>
+                    <email>graziano.ranocchia@unipi.it</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-16T15:37:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Domain Specific Languages</term>
+                    <term>Computational Philology</term>
+                    <term>Digital Philology</term>
+                    <term>DSE tools</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>scholarly editing and editions development</term>
+                    <term>analysis</term>
+                    <term>and methods</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>Philology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Textual scholarship aims to reconstruct and publish texts by investigating philological phenomena and documenting findings through critical apparatuses or editorial notes (Stussi 2015). Textual scholarship involves intricate, multi-stage processes that are further complicated by the digital environment, which demands formal protocols and standardized workflows (Shillingsburg 2015; Berti 2019). This formalization can be burdensome and error-prone for traditional scholars (Boschetti and Del Grosso 2020) depending on the amount of text and textual phenomena that are in place.The gradual transition to Digital Scholarly Editions (DSE) offers benefits, including explicit encoding of textual phenomena in a machine-actionable format for example, by complying to the XML/TEI encoding guidelines (Del Grosso et al. 2023; Driscoll and Pierazzo 2016), and the ability to conduct thorough automated text searches. In this context, a strong dichotomy between traditional and digital approaches to scholarly editing may appear to exist.</p>
+            <p>The DSL-based DSE method (Zenzaro et al. 2023; Zenzaro et al. 2021) establishes a middle ground approach. At its core, this method aims to preserve scholars' traditional ecdotic knowledge while utilizing computational capabilities through the use of Domain-Specific Languages (DSLs). This bridges the gap between traditional methodologies and the digital techniques. Furthermore, the DSL-based DSE method facilitates the implementation of open science principles, particularly the FAIR principles (Wilkinson et al. 2016).</p>
+            <p>The DSL-Based DSE method derives from the Euporia annotation method (Boschetti et al. 2023) and adheres to the following principles: 1) enabling scholars to work in a familiar text-focused environment, 2) ensuring machine actionability and interoperability (Fig 1), 3) granting the overall consistency of the edition, and 4) improving the coherence of each statement.</p>
+            <p>The first principle is accomplished by employing a set of DSLs that closely align with traditional editorial conventions, making the text easily manageable for scholars while also ensuring it is represented in a machine-actionable format.</p>
+            <p>The second principle is realized by integrating computational functionalities into the text, interpreted as a DSL, that adhere to shared standards, such as XML/TEI converters and the Web Annotation Data Model format for annotations.</p>
+            <p>The third principle involves consistency: all parts of a digital scholarly edition must be non-contradictory with respect to one another. For instance, a gap encoded as a 5-letters lacuna in the diplomatic edition cannot be filled by a 7-letters conjecture in the related critical edition.</p>
+            <p>The fourth principle concerns coherence: all the same phenomena must be encoded in the same way and all different phenomena must be encoded in different ways. This principle prevents (or at least inhibits) the introduction of false positives and false negatives and consequently optimizes the precision and recall of the overall system.</p>
+            <p>The GreekSchools ERC-885222 project provides an ideal environment for validating the DSL-based DSE method. The project's primary objective is to publish scholarly editions of selected Herculaneum papyri, which would comprise over 1,800 carbonized scrolls containing unedited Greek philosophical texts (Ranocchia, 2022). The potential of computational advancements to improve papyrologists' workflows has been demonstrated by recent AI challenges and initiatives (Riemenschneider and Anette 2023), including tools like Ithaca (Assael et al. 2022) and the Vesuvio Challenge, as well as platforms such as the well-known papyri.info. Moreover, the GreekSchools project aligns with the goals of the Humanities and Heritage Italian Open Science Cloud (H2IOSC) consortium<ref n="1" target="ftn1"/> targeting CLARIN<ref n="2" target="ftn2"/>, DARIAH<ref n="3" target="ftn3"/>; E-RIHS<ref n="4" target="ftn4"/>, and OPERAS<ref n="5" target="ftn5"/> Research Infrastructures (RIs).
+            </p>
+            <p>In the context of the GreekSchools project we are developing CoPhiEditor: a web-based digital scholarly environment for Digital Scholarly Editing. This tool fits into the set of initiatives such as Proteus (Williams et al. 2015), Textual Communities (Robinson and Bordalejo 2016), and LEAF-writer<ref n="6" target="ftn6"/>.
+            </p>
+            <p>The primary objective of CoPhiEditor is to enable a collaborative and cooperative workflow, allowing multiple scholars to engage with the same text simultaneously or to work on different sections asynchronously. By building upon this workflow and its underlying principles, CoPhiEditor utilizes formal Domain-Specific Languages (DSLs), language technologies, and the IIIF framework to provide automated support, thereby enhancing the overall quality of the editing process and the final editorial output. CoPhiEditor significantly minimizes the need for manual checks to ensure compliance with editorial conventions (Fig. 4), such as encoding lacunae, unclear characters, and readings from apographs. It also verifies cross-textual constraints, ensuring consistency between diplomatic and literary transcriptions as well as accurate references in apparatus entries. Furthermore, it optimizes the time dedicated to critical textual phenomena, such as assessing hypotheses for reconstructing texts with variant readings and conjectures. Additionally, CoPhiEditor adheres to standard formats like EpiDoc (Fig. 5), which ensures interoperability of the digital edition across various software applications. This capability facilitates diverse processing tasks, including search functionalities, information extraction, and the creation of training sets for machine learning applications. </p>
+            <figure>
+                <graphic n="1001" width="16.007291666666667cm" height="6.799791666666667cm" url="/tmp/tmpduuz_sfp/Pictures/8bfd6cbb0a2b8ba90acd6394ea408f48.jpeg" rend="inline"/>
+            </figure>
+            <p>Figure 1 - DSL-Based DSE approach: editing with editorial convention DSL (on top) and TEI/EpiDoc automatic generated document (at bottom)</p>
+            <figure>
+                <graphic n="1002" width="15.896166666666666cm" height="9.228666666666667cm" url="/tmp/tmpduuz_sfp/Pictures/8bfd6cbb0a2b8ba90acd6394ea408f48.jpeg" rend="inline"/>
+            </figure>
+            <p>Figure 2 - CoPhiEditor main GUI</p>
+            <figure>
+                <graphic n="1003" width="15.536333333333333cm" height="8.360833333333334cm" url="/tmp/tmpduuz_sfp/Pictures/8bfd6cbb0a2b8ba90acd6394ea408f48.jpeg" rend="inline"/>
+            </figure>
+            <p>Figure 3 - Comments in CoPhiEditor</p>
+            <figure>
+                <graphic n="1004" width="15.980833333333333cm" height="2.2225cm" url="/tmp/tmpduuz_sfp/Pictures/8bfd6cbb0a2b8ba90acd6394ea408f48.jpeg" rend="inline"/>
+            </figure>
+            <p>Figure 4 - Automatic validation for editorial conventions</p>
+            <figure>
+                <graphic n="1005" width="15.9385cm" height="0.7408333333333333cm" url="/tmp/tmpduuz_sfp/Pictures/8bfd6cbb0a2b8ba90acd6394ea408f48.jpeg" rend="inline"/>
+            </figure>
+            <p>Figure 5 - TEI/EpiDoc of an editorial deletion and addition</p>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                    
+                        <hi style="font-size:10pt" xml:space="preserve"> https://www.h2iosc.cnr.it</hi>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                    
+                        <hi style="font-size:10pt" xml:space="preserve"> https://www.clarin.eu/</hi>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                    
+                        <hi style="font-size:10pt" xml:space="preserve"> https://www.dariah.eu/</hi>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn4" n="4">
+                    
+                        <hi style="font-size:10pt" xml:space="preserve"> https://www.e-rihs.eu/</hi>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn5" n="5">
+                    
+                        <hi style="font-size:10pt" xml:space="preserve"> https://operas-eu.org/</hi>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn6" n="6">
+                    
+                        <hi style="font-size:10pt" xml:space="preserve"> https://leaf-writer.leaf-vre.org/#about</hi>
+                    
+                </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Assael, Yannis, Thea Sommerschield, Brendan Shillingford, Mahyar Bordbar, John Pavlopoulos, Marita Chatzipanagiotou, Ion Androutsopoulos, Jonathan Prag, and Nando de Freitas. 2022. “Restoring and Attributing Ancient Texts Using Deep Neural Networks.” </hi>
+                        <hi rend="italic" style="font-size:10pt">Nature</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 603 (7900): 280–83.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Berti, Monica, ed. 2019. </hi>
+                        <hi rend="italic" style="font-size:10pt">Ancient Greek and Latin in the Digital Revolution</hi>
+                        <hi style="font-size:10pt">. Berlin, Boston: De Gruyter Saur.</hi>
+                        <ref target="https://doi.org/doi:10.1515/9783110599572" xml:space="preserve"> </ref>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Boschetti, Federico, Luigi Bambaci, Angelo Mario Del Grosso, Gloria Mugelli, Anas Fahad Khan, Andrea Bellandi, and Andrea Taddei. 2023. “Collaborative and Multidisciplinary Annotations of Ancient Texts: The Euporia System.” In </hi>
+                        <hi rend="italic" style="font-size:10pt">The Ancient World Goes Digital</hi>
+                        <hi style="font-size:10pt">, 6:172–223. Leiden: Brill Academic Publishers.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Boschetti, Federico, and Angelo Mario Del Grosso. 2020. “L’annotazione di testi storico-letterari al tempo dei social media.” </hi>
+                        <hi rend="italic" style="font-size:10pt">Italica Wratislaviensia (Print)</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 11: 65–99.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Del Grosso, Angelo Mario, Federico Boschetti, Simone Zenzaro, and Graziano Ranocchia. 2023. “GreekSchools: Making Traditional Papyrology Machine Actionable Through Domain-Driven Design.” In </hi>
+                        <hi rend="italic" style="font-size:10pt">2023 7th IEEE Congress on Information Science and Technology (CiSt) (IEEE CiSt’23)</hi>
+                        <hi style="font-size:10pt">, edited by Mohammed El Mohajir, Mohammed Al Achhab, Badr Eddine El Mohajir, Bernadetta Kwintiana Ane, and Ismail Jellouli, 6. Agadir - Essaouira, Morocco: IEEE Computer Society.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Driscoll, Matthew James, and Elena Pierazzo, eds. 2016. </hi>
+                        <hi rend="italic" style="font-size:10pt">Digital Scholarly Editing: Theories and Practices</hi>
+                        <hi style="font-size:10pt">. Vol. 4. Digital Humanities Series. Open Book Publishers.</hi>
+                        <ref target="http://www.openbookpublishers.com/product/483/digital-scholarly-editing%E2%80%93theories-and-practices/eec262cdd3121ebd5eb2bf78581594f2" xml:space="preserve"> </ref>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Hohenegger, Hansmichael, Federico Boschetti, Iacopo Chiaravalli, Fabio Ciotti, Eleonora De Longis, Angelo Mario Del Grosso, Tiziana Mancinelli, and Federico Meschini. 2023. “Metodologie Di Indagine per Una Nuova Piattaforma: Digital Scholarly Editions Platform and Aligned Translation.” In </hi>
+                        <hi rend="italic" style="font-size:10pt">AIUCD 2023</hi>
+                        <hi style="font-size:10pt">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Ranocchia, G., E. Puglia, C. Vassallo, C. Pernigotti, K. Fleischer, G. Verhasselt, M. Alessandrelli, et al. 2022. “The Greek Philosophical Schools According to Europe’s Earliest History of Philosophy. Towards a New Pioneering Critical Edition of Philodemus’ Arrangement of the Philosophers.” In </hi>
+                        <hi rend="italic" style="font-size:10pt">XXXth International Congress of Papyrology</hi>
+                        <hi style="font-size:10pt">. Studia Papyrologica et Aegyptiaca Parisina. Paris: ACHCByz.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Riemenschneider, Frederick, and Anette Frank. 2023. “Exploring Large Language Models for Classical Philology.” In </hi>
+                        <hi rend="italic" style="font-size:10pt">Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)</hi>
+                        <hi style="font-size:10pt">, edited by Anna Rogers, Jordan Boyd-Graber, and Naoaki Okazaki, 15181–99. Toronto, Canada: Association for Computational Linguistics</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Robinson, Peter, and Barbara Bordalejo. 2016. “Textual Communities.” In </hi>
+                        <hi rend="italic" style="font-size:10pt">DH2016 Abstracts</hi>
+                        <hi style="font-size:10pt">, 876–77. Kraków.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Stussi, A. 2015. </hi>
+                        <hi rend="italic" style="font-size:10pt">Introduzione Agli Studi Di Filologia Italiana</hi>
+                        <hi style="font-size:10pt">. Manuali (Bologna). Il Mulino.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Wilkinson, Mark D., Michel Dumontier, IJsbrand Jan Aalbersberg, Gabrielle Appleton, Myles Axton, Arie Baak, Niklas Blomberg, et al. 2016. “The FAIR Guiding Principles for Scientific Data Management and Stewardship.” </hi>
+                        <hi rend="italic" style="font-size:10pt">Scientific Data</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 3 (1): 160018.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Williams, Alex C., Annapaola Santarsiero, Chiara Meccariello, Gertjan Verhasselt, Hyrum D. Carroll, John F. Wallin, Dirk Obbink, and James H. Brusuelas. 2015. “Proteus: A Platform for Born Digital Critical Editions of Literary and Subliterary Papyri.” In </hi>
+                        <hi rend="italic" style="font-size:10pt">2015 Digital Heritage</hi>
+                        <hi style="font-size:10pt">, 2:453–56.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Shillingsburg, Peter. 2015. “Development Principles for Virtual Archives and Editions.” </hi>
+                        <hi rend="italic" style="font-size:10pt">Variants</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 11: 9–28.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt" xml:space="preserve">Zenzaro, Simone, Angelo Mario Del Grosso, Federico Boschetti, and Graziano Ranocchia. 2023. “Ease the Collaboration Making Scholarly Editions: The GreekSchools Case Study.” In </hi>
+                        <hi rend="italic" style="font-size:10pt">LA MEMORIA DIGITALE: XII CONVEGNO ANNUALE AIUCD</hi>
+                        <hi style="font-size:10pt">, 230–32. Siena: Alma Mater Studiorum-Università di Bologna.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:10pt">Zenzaro, Simone, Federico Boschetti, and Angelo Mario Del Grosso. 2021. “Domain Specific Languages on Editing Papyri: The GreekSchools Case Study.” In Clarin Bazaar.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

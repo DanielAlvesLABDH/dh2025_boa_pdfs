@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KOSIR_Bj_rk_Bridging_Communities_and_Archives__Harvesting_an">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Bridging Communities and Archives. Harvesting and Preserving Born-Digital Cultural Heritage with the Citizen Archive Platform (CAP)</title>
+                <author>
+                    <persName>
+                        <surname>Kosir</surname>
+                        <forename>Björk</forename>
+                    </persName>
+                    <affiliation>Graz Museum, Austria</affiliation>
+                    <email>bjoerk.kosir@stadt.graz.at</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Rakar</surname>
+                        <forename>Amelie</forename>
+                    </persName>
+                    <affiliation>Graz Museum, Austria</affiliation>
+                    <email>amelie.rakar@stadt.graz.at</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T09:30:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Citizen Archive</term>
+                    <term>Preservation</term>
+                    <term>Pre-Ingest</term>
+                    <term>Born-Digitals</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data</term>
+                    <term>object</term>
+                    <term>and artefact preservation</term>
+                    <term>digital archiving</term>
+                    <term>metadata standards</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>Cultural studies</term>
+                    <term>History</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">In the digital age, citizens often possess documents—both physical and digital—of significant value to cultural heritage institutions, particularly municipal archives and city museums. These records align closely with collection profiles and hold potential for enriching historical archives and preserving the future history (Brown 2013:111-114, Giannachi 2016: 144-152, Owens 2018: 81-102). Ensuring the long-term preservation and accessibility of these documents presents considerable challenges for cultural heritage institutions. Addressing these challenges has been a central focus of our project. The process of submitting these data to an archive often poses significant obstacles for individuals, particularly in terms of ease and usability. Simplifying this submission process is therefore a key objective, with the data prepared for seamless integration into subsequent archival workflows and systems.</p>
+                <p style="text-align: left; ">As part of the Creative Europe Program initiative 
+                    <ref target="https://dialogcity.eu/">Dialog City</ref>, led by the Aschaffenburg City Archive, we developed the 
+                    <ref target="https://citizenarchive.eu/en/">Citizen Archive Platform</ref> in collaboration with our project partners. The CAP is a web-based tool designed to facilitate the standardised transfer of born-digital data from individuals and cultural initiatives to cultural heritage institutions such as museums, archives, and libraries.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Functionality and Workflow</head>
+                <p style="text-align: left; ">The Citizen Archive Platform (CAP) enables citizens to contribute their collected data directly to designated archival institutions and is, together with its submission plugin, designed for seamless integration into existing or newly established WordPress-based content management systems. Through its plugin and submission workflow, the CAP supports digital engagement within citizens and their local cultural heritage institutions. Both the plugin and the underlying CAP framework will be made available as open-source software on GitHub to encourage unrestricted reuse, further adaptation, and integration. The framework supports deployment by a single institution or collaboratively by multiple institutions, either within a shared website or through a multisite architecture. To submit content, citizens are required to register in advance and designate the institution to which their contribution is addressed. After registering, users can upload files and enrich them with content-related metadata that captures the context and motivations behind their submission. To support detailed and personalized metadata entry, the CAP offers an intuitive, user-friendly interface.</p>
+                <figure>
+                    <graphic n="1001" width="16.01782222222222cm" height="5.411672222222222cm" url="/tmp/tmp_o3ycicu/Pictures/600267259048462ad4dec414574d55ae.png" rend="inline"/>
+                    <head>Screenshot of the CAPs user-interface (mobile version).</head>
+                </figure>
+                <p style="text-align: left; ">During the upload process, technical metadata are automatically extracted from the submitted files, which are then combined with the user-provided metadata. These inputs are stored in a database and converted into a structured XML format compliant with international archival standards.</p>
+                <figure>
+                    <graphic n="1002" width="16.002cm" height="6.538747222222222cm" url="/tmp/tmp_o3ycicu/Pictures/600267259048462ad4dec414574d55ae.png" rend="inline"/>
+                    <head>Screenshot of a generated XML.</head>
+                </figure>
+                <p style="text-align: left; ">The development, design, and overall process of the platform have been informed by existing and well-established initiatives, including 
+                    <ref target="https://www.topothek.at/en/">Topothek</ref>, 
+                    <ref target="https://heimathub.de/">HeimatHub</ref> and 
+                    <ref target="https://github.com/xamkfi/Digitalia-oneclick-full">OneClick</ref>, which provided valuable reference models for user engagement and digital contribution workflows.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Standards and Compliance</head>
+                <p style="text-align: left; ">The platform adheres to the OAIS (Open Archival Information System) reference model (
+                    <ref target="https://www.iso.org/standard/87471.html">ISO 14721:2025</ref>), ensuring that data are appropriately prepared for long-term preservation in digital repositories. Metadata schema adherence is a cornerstone of the platform: it leverages 
+                    <ref target="https://www.loc.gov/standards/mets/">Metadata Encoding and Transmission Standard</ref> (METS) and 
+                    <ref target="https://www.loc.gov/ead/">Encoded Archival Description</ref> (EAD), with integrated 
+                    <ref target="https://www.loc.gov/standards/premis/">Preservation Metadata: Implementation Strategies</ref> (PREMIS) elements for documenting rights, licenses, and copyright. Legal aspects are addressed clarified during submission.
+                </p>
+                <p style="text-align: left; ">Additionally, the CAP enforces adherence to file format requirements, excluding non-preservable files from submission. To instil these guidelines among participants, the platform emphasizes the principles of personal digital archiving (Rudolf / Oßwald 2023, Zangerl et al. 2022). This focus is essential to fostering an understanding and awareness of the importance of proper digital preservation practices.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Integration into Open Archival Information Systems</head>
+                <p style="text-align: left; ">After submission, curators use the CAP’s verification interface to review and assess the uploaded content and metadata. Curators can supplement metadata as needed, ensuring completeness, quality and accuracy. Once finalised, the platform generates a Submission Information Package (SIP) unique to each submission. Each SIP comprises the original content and a structured header, prepared as an E-ARK standard for seamless integration into an OAIS-compliant digital long-term archive (Ferreira et al. 2024). This process ensures compliance with international digital preservation standards and provides a robust foundation for long-term accessibility.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Significance and Future Outlook</head>
+                <p style="text-align: left; ">By simplifying the submission process and aligning with global standards, the CAP addresses critical gaps in the preservation of born-digital cultural assets. It empowers private individuals to actively contribute to cultural heritage preservation while alleviating technical and administrative challenges for archival institutions. Furthermore, the platform aims to raise awareness of the importance of personal digital archiving. This includes fostering an understanding of the fragility of digital data, the risks associated with file format obsolescence, mismanagement, or accidental loss, and even the impact of environmental disasters. The initiative also highlights the importance of planning for the "afterlife" of digital data through testamentary provisions, emphasizing the principle of taking ownership of one’s digital legacy: 
+                    <hi rend="italic">"Be in charge of your own digital data</hi>" (Meitzler at al. 2024, Park et al. 2024). To further encourage citizens to contribute personal digital data to local cultural heritage institutions, thematic collection calls are employed to bridge the gap between individual engagement and the act of contributing to the future historical record.
+                    <lb/>Future developments will focus on expanding the CAP’s capabilities, enhancing scalability, encouraging the integration with various cultural heritage institutions, and integrating with emerging archival technologies.
+                </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Brown, Adrian </hi>(2013): 
+                        <hi rend="italic">Practical Digital Preservation. A How-to Guide for Organizations of any Size</hi>. Chicago: ALA Neal-Schuman.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Ferreira, Miguel / Aas, Kuldar / Anderson, David / Bredenberg, Karin / Ferros, Luís Miguel (reviewer) / Johansen, Kathrine / Hougaard Edsen / Kaminski, Jaime (reviewer) / Kärberg, Tarvo / Nielsen, Anders Bo / Schlarb, Sven / Silva, Hélder / Skog, Björn / Szilágyi, Levente / Tømmerholt, Phillip Mike / Wilson, Andrew / Wilson, Carl</hi> (2024): 
+                        <hi rend="italic">E-ARK Submission Information Package (SIP) Specification</hi>. Version 2.2.0. DILCIS Board &lt;
+                        <ref target="https://earksip.dilcis.eu">https://earksip.dilcis.eu</ref>&gt; [22.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Giannachi, Gabriella </hi>(2016): 
+                        <hi rend="italic">Archive Everything. Mapping the Everyday</hi>. Cambridge/London: MIT.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Meitzler, Matthias / Heesen Jessica / Hennig, Martin</hi> (2024) „Digital Afterlife and the Future of Collective Memory“, in: 
+                        <hi rend="italic">Memory Studies Review</hi>, 1(2): 274–291. DOI: 
+                        <ref target="https://doi.org/10.1163/29498902-202400013">https://doi.org/10.1163/29498902-202400013</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Owens, Trevor </hi>(2018): 
+                        <hi rend="italic">The Theory and Craft of Digital Preservation.</hi> Baltimore: Johns Hopkins University Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Park, Lance Y.J. / Oh, You W. / Sang, Yoonmo</hi> (2024): „Digital Access, Digital Literacy, and Afterlife Preparedness: Societal Contexts of Digital Afterlife Traces“, in: 
+                        <hi rend="italic">Social Media + Society</hi>, 10(3). DOI: 
+                        <ref target="https://doi.org/10.1177/20563051241274676">https://doi.org/10.1177/20563051241274676</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Rudolf, Sarah / Oßwald, Achim </hi>(2023): “Personal Digital Archiving für kleine und mittlere Archive? Erfahrungen, Ansätze, Perspektiven“, in: 
+                        <hi rend="italic">Tagungsband der 26. AUdS-Tagung im MARCHIVUM in Mannheim vom 21.-22. März 2023:</hi> 52-96.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Zangerl, Lina Maria / Peters-Kottig, Wolfgang / Oßwald, Achim </hi>(2022): „Personal Digital Archiving: Eine neue Aufgabe für Öffentliche und Wissenschaftliche Bibliotheken“, in: 
+                        <hi rend="italic" xml:space="preserve">BIBLIOTHEK – Forschung und Praxis, </hi>46(1): 152-161. DOI: 
+                        <ref target="https://doi.org/10.1515/bfp-2021-0058">https://doi.org/10.1515/bfp-2021-0058</ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

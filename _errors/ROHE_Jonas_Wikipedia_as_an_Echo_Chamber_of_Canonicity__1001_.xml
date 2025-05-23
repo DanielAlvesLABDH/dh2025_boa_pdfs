@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ROHE_Jonas_Wikipedia_as_an_Echo_Chamber_of_Canonicity__1001_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Wikipedia as an Echo Chamber of Canonicity: 1001 Books You Must Read Before You Die</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Rohe</surname>
+                        <forename>Jonas</forename>
+                    </persName>
+                    <affiliation>Freie Universität Berlin, Germany</affiliation>
+                    <email>jonas.rohe@fu-berlin.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Illmer</surname>
+                        <forename>Viktor J.</forename>
+                    </persName>
+                    <affiliation>Freie Universität Berlin, Germany</affiliation>
+                    <email>v.illmer@fu-berlin.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Poggel</surname>
+                        <forename>Lisa</forename>
+                    </persName>
+                    <affiliation>Freie Universität Berlin, Germany</affiliation>
+                    <email>l.poggel@fu-berlin.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Fischer</surname>
+                        <forename>Frank</forename>
+                    </persName>
+                    <affiliation>Freie Universität Berlin, Germany</affiliation>
+                    <email>fr.fischer@fu-berlin.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-22T12:29:12.789586389</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Canon</term>
+                    <term>Wikipedia</term>
+                    <term>Reconciliation</term>
+                    <term>OpenRefine</term>
+                    <term>Python</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>data modeling</term>
+                    <term>information retrieval and querying algorithms and methods</term>
+                    <term>linked (open) data</term>
+                    <term>Humanities computing</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="id_docs-internal-guid-fd8961a7-7fff-ee7f-e2b4-eec3d218feb4"/>Introduction
+                </head>
+                <p>
+                    <hi rend="color(#000000)">Wikipedia sitelinks (also called interwiki links) connect a Wikipedia article to corresponding articles in other languages, enabling quick access to different language versions of a lemma. Currently, 331 Wikipedia language editions are active (Wikipedia statistics, 2024). The number of sitelinks for a lemma indicates its multilingual reach—Charles Dickens, for instance, has 162 sitelinks, meaning there are articles in 162 languages about the English writer across all Wikipedias, while his novel </hi>
+                    <hi rend="color(#000000)italic">A Tale of Two Cities</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">has 51 sitelinks (Wikidata, 2024a).</hi>
+                </p>
+                <p>In the discourse on world literature, the idea of using the number of Wikipedia sitelinks as part of the “Metrics of World Literature” (Robinson, 2017), as “a simple measure of canonicity” (Kukkonen, 2020 p. 244; cf. also Fischer et al., 2023), has been gaining traction. We aim to adapt the idea that multiple language versions can serve as a marker of canonicity to a specific canon project.</p>
+                <p>
+                    <hi rend="color(#000000)">We also propose incorporating QRank (Brawer, 2024) as an additional evaluation metric. QRank is an aggregate ranking score based on Wikidata items’ number of sitelinks and page views across Wikimedia platforms (e.g. Wikipedia, Wikitravel, Wikibooks). To stick with our previous example, Charles Dickens has a QRank of 4,158,626, while </hi>
+                    <hi rend="color(#000000)italic">A Tale of Two Cities</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">has 1,238,166, meaning the author ranks higher than his novel.</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Corpus</head>
+                <p>
+                    <hi rend="color(#000000)">Our analysis is based on </hi>
+                    <hi rend="color(#000000)italic">1001 Books You Must Read Before You Die</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">(2006) compiled by Peter Boxall with input from over 150 contributors. This work, published in multiple editions, presents a canon of mainly novels accompanied by summaries. The chronological list juxtaposes highbrow literature, such as </hi>
+                    <hi rend="color(#000000)italic">Jane Eyre</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">or </hi>
+                    <hi rend="color(#000000)italic">Wuthering Heights</hi>
+                    <hi rend="color(#000000)">, with popular works like Douglas Adams’ </hi>
+                    <hi rend="color(#000000)italic">Dirk Gently’s Holistic Detective Agency</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">or Bret Easton Ellis’ </hi>
+                    <hi rend="color(#000000)italic">American Psycho</hi>
+                    <hi rend="color(#000000)">.</hi>
+                </p>
+                <p>Across its five editions (2006, 2008, 2010, 2012, 2018), the canon expanded from the original 1,001 books to 1,318 works due to additions and corresponding removals. These changes reflect the criticism of the selection process. For instance, Philip Hensher described the selection as “a very loose canon” with “obvious omissions, weird inclusions, and horrid middle-aged attempts at grooviness” (Hensher, 2006).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Dataset and Workflow</head>
+                <p>
+                    <hi rend="color(#000000)">A reading community has formed around the </hi>
+                    <hi rend="color(#000000)italic">1001 Books</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">canon and </hi>
+                    <hi rend="color(#000000)">remains </hi>
+                    <hi rend="color(#000000)">active </hi>
+                    <hi rend="color(#000000)">to this day</hi>
+                    <hi rend="color(#000000)">. On Goodreads, this community has assembled a </hi>
+                    <hi rend="color(#000000)italic">Listopia</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">list of all 1,318 works along with a Google spreadsheet cataloguing metadata like authors or original titles, which serves as our source dataset.</hi>
+                </p>
+                <p>We enriched the spreadsheet using OpenRefine’s (v3.8.2) reconciliation service, linking all authors and most works (1,257 out of 1,318) to Wikidata entries. Linking to Wikidata provides access to additional metadata, enabling a statistical description of the canon, including the gender, nationality, language of authors and first publication dates of the represented works.</p>
+                <p>
+                    <hi rend="color(#000000)">
+                        <figure>
+                            <graphic url="/tmp/tmphb11y8pq/Pictures/ffd05ac8c9f39fdb7e26eb793c2b14d2.png"/>
+                            <head>Figure 1: Histogram of the year of publication from Wikidata (n = 1,173), excluding the 27 works published before 1700 for better readability.</head>
+                        </figure>
+                    </hi>
+                </p>
+                <p>
+                    <hi rend="color(#000000)">Visualizing the publication years shows that most works in the canon were published in the 20th century (Fig. 1). A breakdown of Wikidata gender values highlights a significant disparity: 281 works are attributed to female authors, 1,031 to male authors, and one to a non-binary author, while anonymous works account for the remainder. Charles Dickens and J. M. Coetzee are the most represented authors with 10 works each, followed by Virginia Woolf (9), Graham Greene, Don DeLillo, Ian McEwan, Philip Roth, and Samuel Beckett (8 each). This list alone suggests that English-language works are over-represented in the </hi>
+                    <hi rend="color(#000000)italic">1001 Books </hi>
+                    <hi rend="color(#000000)">canon.</hi>
+                </p>
+                <p>To obtain an overall picture, we correlated individual works with geocodes using the Integrated Authority File (GND) and Wikidata. GND records provide country codes based on the author’s country of origin, the work’s place of origin, or the language of the text (Deutsche Nationalbibliothek, 2024, p. 19). When no GND data was available, we used Wikidata’s property P495 (“country of origin”) and assigned the respective GND country codes. To obtain latitude and longitude, we linked these codes to GeoNames URIs and queried the GeoNames database. This process produced geocodes for 1,144 works (87%): 857 from the GND and 287 from Wikidata.</p>
+                <p>
+                    <hi rend="color(#000000)">
+                        <figure>
+                            <graphic url="/tmp/tmphb11y8pq/Pictures/ffd05ac8c9f39fdb7e26eb793c2b14d2.png"/>
+                            <head>Figure 2: Geographical distribution of works (geodata from GND and Wikidata).</head>
+                        </figure>
+                    </hi>
+                </p>
+                <p>Despite Boxall’s claim in the second edition’s foreword that the selection has been diversified with non-English-language works (Boxall, 2008), the geocodes reveal a persistent focus on English-language texts and a Eurocentric perspective on world literature, unchanged in later editions (Fig. 2). Works from Great Britain dominate (347), followed by the USA (266), France (106), Germany (57), Italy and Russia (30 each).</p>
+                <p>Boxall writes: “Does a body of writing, a canon of essential texts, emerge from a national context, or does it in some way transcend nationality, rising above the contexts that generate it? […] Is it possible to produce a list that can speak at once to the readers in Turkey and in Greece, in Serbia and Croatia?” (Boxall, 2008)</p>
+                <p>
+                    <hi rend="color(#000000)">If the implication is that </hi>
+                    <hi rend="color(#000000)italic">1001 Books</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">has succeeded in doing so, the metadata strongly suggests otherwise. The canon of </hi>
+                    <hi rend="color(#000000)italic">1001 Books </hi>
+                    <hi rend="color(#000000)">remains firmly rooted in its national context – Boxall himself teaches at the University of Sussex in England. It seems difficult to make a </hi>
+                    <hi rend="color(#000000)">selection of texts that attempt to appeal to Greek, Turkish and Serbian readers in equal measure while only six Greek, two Serbian and one Turkish work (Orhan Pamuk's </hi>
+                    <hi rend="color(#000000)italic">Snow</hi>
+                    <hi rend="color(#000000)">) have been included in the anthology.</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Sitelinks and QRanks</head>
+                <p>We now turn to the analysis of canonicity using Wikipedia sitelinks and QRanks. Using a Python Jupyter notebook, we retrieved metadata from Wikidata for all authors and works in the corpus, including Wikipedia sitelinks, QRanks and publication years. Together, sitelinks and QRanks enrich our dataset with two robust relevance measures that are resistant to seasonal popularity shifts.</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmphb11y8pq/Pictures/ffd05ac8c9f39fdb7e26eb793c2b14d2.png"/>
+                        <head>Figure 3: Histogram of the number of Wikipedia sitelinks for works (n = 1,318, h = 1).</head>
+                    </figure>
+                </p>
+                <p>
+                    <hi rend="color(#000000)">Figure 3 shows that 90 of the 1,318 works in the corpus have Wikidata entries but no associated Wikipedia articles. The largest group (109 works) has just one article. The top </hi>
+                    <hi rend="color(#000000)">six </hi>
+                    <hi rend="color(#000000)">works with the highest number of sitelinks are </hi>
+                    <hi rend="color(#000000)italic">The Thousand and One Nights</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">(130), </hi>
+                    <hi rend="color(#000000)italic">Don Quixote</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">(123), </hi>
+                    <hi rend="color(#000000)italic">The Little Prince</hi>
+                    <hi rend="color(#000000)"> (114), </hi>
+                    <hi rend="color(#000000)italic">The Lord of the Rings</hi>
+                    <hi rend="color(#000000)"> (114), </hi>
+                    <hi rend="color(#000000)italic">A Dream of Red Mansions</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">(102), and </hi>
+                    <hi rend="color(#000000)italic">The Tale of Genji</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">(100). On average, works have 13.7 sitelinks, with a median of 7.</hi>
+                </p>
+                <div type="div2">
+                    <head>
+                        <figure>
+                            <graphic url="/tmp/tmphb11y8pq/Pictures/ffd05ac8c9f39fdb7e26eb793c2b14d2.png"/>
+                            <head>Figure 4: Histogram of the number of Wikipedia sitelinks for authors (n = 768, h = 5).</head>
+                        </figure>
+                    </head>
+                    <p>In contrast, all authors in the corpus have at least one Wikipedia article (Fig. 4). Authors average 58.6 sitelinks, with a median of 48, far exceeding the coverage of works.</p>
+                    <p>Table 1 shows the correlation between QRanks and sitelinks for authors, specifically the ten authors with the highest QRanks.</p>
+                    <p>Table 1: QRanks and sitelinks of the authors, ranked by Author QRank.</p>
+                    <table rend="frame" xml:id="Tabelle1">
+                        <row>
+                            <cell rend="color(#000000)bold">Author </cell>
+                            <cell rend="end color(#000000)bold">Author QRank</cell>
+                            <cell rend="end color(#000000)bold">Author Sitelinks</cell>
+                        </row>
+                        <row>
+                            <cell rend="color(#000000)">Poe, Edgar Allan</cell>
+                            <cell rend="end color(#000000)">6,770,125</cell>
+                            <cell rend="end color(#000000)">145</cell>
+                        </row>
+                        <row>
+                            <cell rend="color(#000000)">Kafka, Franz</cell>
+                            <cell rend="end color(#000000)">5,827,580</cell>
+                            <cell rend="end color(#000000)">166</cell>
+                        </row>
+                        <row>
+                            <cell rend="color(#000000)">King, Stephen</cell>
+                            <cell rend="end color(#000000)">5,752,199</cell>
+                            <cell rend="end color(#000000)">110</cell>
+                        </row>
+                        <row>
+                            <cell rend="color(#000000)">Hemingway, Ernest</cell>
+                            <cell rend="end color(#000000)">5,732,463</cell>
+                            <cell rend="end color(#000000)">148</cell>
+                        </row>
+                        <row>
+                            <cell rend="color(#000000)">Dostoevsky, Fyodor</cell>
+                            <cell rend="end color(#000000)">5,714,591</cell>
+                            <cell rend="end color(#000000)">173</cell>
+                        </row>
+                        <row>
+                            <cell rend="color(#000000)">Christie, Agatha</cell>
+                            <cell rend="end color(#000000)">5,620,277</cell>
+                            <cell rend="end color(#000000)">139</cell>
+                        </row>
+                        <row>
+                            <cell rend="color(#000000)">Tolkien, J.R.R.</cell>
+                            <cell rend="end color(#000000)">5,533,813</cell>
+                            <cell rend="end color(#000000)">154</cell>
+                        </row>
+                        <row>
+                            <cell rend="color(#000000)">Tolstoy, Leo</cell>
+                            <cell rend="end color(#000000)">5,046,400</cell>
+                            <cell rend="end color(#000000)">182</cell>
+                        </row>
+                        <row>
+                            <cell rend="color(#000000)">Wilde, Oscar</cell>
+                            <cell rend="end color(#000000)">4,522,706</cell>
+                            <cell rend="end color(#000000)">127</cell>
+                        </row>
+                        <row>
+                            <cell rend="color(#000000)">Dickens, Charles</cell>
+                            <cell rend="end color(#000000)">4,158,626</cell>
+                            <cell rend="end color(#000000)">162</cell>
+                        </row>
+                    </table>
+                    <p>Ranking the top 10 by number of sitelinks reveals some interesting changes (Table 2). Here, only one English-language author appears.</p>
+                    <p>Table 2: QRanks and sitelinks of the authors, ranked by author sitelinks.</p>
+                    <table rend="frame" xml:id="Tabelle2">
+                        <row>
+                            <cell rend="color(#ffffff)bold">Author</cell>
+                            <cell rend="end color(#ffffff)bold">Author QRank</cell>
+                            <cell rend="end color(#ffffff)bold">Author Sitelinks</cell>
+                        </row>
+                        <row>
+                            <cell rend="color(#000000)">Goethe, Johann Wolfgang von</cell>
+                            <cell rend="end color(#000000)">3,380,565</cell>
+                            <cell rend="end color(#000000)">186</cell>
+                        </row>
+                        <row>
+                            <cell rend="color(#000000)">Tolstoy, Leo</cell>
+                            <cell rend="end color(#000000)">5,046,400</cell>
+                            <cell rend="end color(#000000)">182</cell>
+                        </row>
+                        <row>
+                            <cell rend="color(#000000)">Hugo, Victor</cell>
+                            <cell rend="end color(#000000)">3,917,537</cell>
+                            <cell rend="end color(#000000)">176</cell>
+                        </row>
+                        <row>
+                            <cell rend="color(#000000)">Cervantes Saavedra, Miguel de</cell>
+                            <cell rend="end color(#000000)">2,272,986</cell>
+                            <cell rend="end color(#000000)">176</cell>
+                        </row>
+                        <row>
+                            <cell rend="color(#000000)">Dostoevsky, Fyodor</cell>
+                            <cell rend="end color(#000000)">5,714,591</cell>
+                            <cell rend="end color(#000000)">173</cell>
+                        </row>
+                        <row>
+                            <cell rend="color(#000000)">Voltaire</cell>
+                            <cell rend="end color(#000000)">3,293,244</cell>
+                            <cell rend="end color(#000000)">171</cell>
+                        </row>
+                        <row>
+                            <cell rend="color(#000000)">Kafka, Franz</cell>
+                            <cell rend="end color(#000000)">5,827,580</cell>
+                            <cell rend="end color(#000000)">166</cell>
+                        </row>
+                        <row>
+                            <cell rend="color(#000000)">Pushkin, Alexander</cell>
+                            <cell rend="end color(#000000)">4,027,476</cell>
+                            <cell rend="end color(#000000)">164</cell>
+                        </row>
+                        <row>
+                            <cell rend="color(#000000)">Dickens, Charles</cell>
+                            <cell rend="end color(#000000)">4,158,626</cell>
+                            <cell rend="end color(#000000)">162</cell>
+                        </row>
+                        <row>
+                            <cell rend="color(#000000)">Tagore, Rabindranath</cell>
+                            <cell rend="end color(#000000)">4,068,155</cell>
+                            <cell rend="end color(#000000)">161</cell>
+                        </row>
+                    </table>
+                    <p>
+                        <hi rend="color(#000000)">For works, we have visualised the QRank</hi>
+                        <hi rend="color(#000000)">–</hi>
+                        <hi rend="color(#000000)">sitelink correlation (Fig. 5). As expected, there is a positive correlation between the number of sitelinks and the QRank of the works. Works with a higher number of sitelinks have a higher QRank on average. A quadratic regression was performed to analyse the correlation between the number of work sitelinks (</hi>
+                        <hi rend="color(#000000)italic">x</hi>
+                        <hi rend="color(#000000)">) and the work QRank (</hi>
+                        <hi rend="color(#000000)italic">y</hi>
+                        <hi rend="color(#000000)">). This was able to achieve a value of 0.72 for the coefficient of determination R², which indicates that 72% of the variance of the QRank variable is explained by the number of sitelinks and the quadratic term in the regression model.</hi>
+                    </p>
+                    <p>
+                        <figure>
+                            <graphic url="/tmp/tmphb11y8pq/Pictures/ffd05ac8c9f39fdb7e26eb793c2b14d2.png"/>
+                            <head>Figure 5: Correlation between number of work title links and work QRank with quadratic regression line (n = 1,230, R² = 0.72).</head>
+                        </figure>
+                    </p>
+                    <p>
+                        <hi rend="color(#000000)">However, </hi>
+                        <hi rend="color(#000000)">there are </hi>
+                        <hi rend="color(#000000)">notable outliers. Edgar Allan Poe’s </hi>
+                        <hi rend="color(#000000)italic">The Fall of the House of Usher</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">has the highest QRank (5,547,853) in the corpus, but only 27 sitelinks. Similarly, Cormac McCarthy’s </hi>
+                        <hi rend="color(#000000)italic">Blood Meridian</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">has a QRank of 1,912,318, but just 15 sitelinks. These discrepancies may stem from frequent use of these works in English-language educational contexts, driving pageviews. </hi>
+                        <hi rend="color(#000000)">T</hi>
+                        <hi rend="color(#000000)">he exact reasons would have to be determined more precisely on a case-by-case basis.</hi>
+                    </p>
+                    <p>
+                        <hi rend="color(#000000)">Interestingly, some works surpass their authors in prominence: George Orwell’s </hi>
+                        <hi rend="color(#000000)italic">Nineteen Eighty-Four</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">has a QRank of 5,547,853 compared to the author’s 3,995,278, and also Margaret Atwood’s </hi>
+                        <hi rend="color(#000000)italic">The Handmaid’s Tale</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(1,799,096) exceeds the QRank of its author (1,156,848). In such cases, the works achieve higher visibility on W</hi>
+                        <hi rend="color(#000000)">i</hi>
+                        <hi rend="color(#000000)">kipedia than their creators.</hi>
+                    </p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Summary and Outlook</head>
+                <p>Overall, we found that Wikipedia and especially Wikipedia sitelink counts are well suited as an “echo chamber for canonicity”. Every author and over 90% of the works in our corpus have at least one Wikipedia article. Correlating with QRank revealed other useful ranking variants that are equally easy to research.</p>
+                <p>However, the mere existence of an article in a language version reveals little about its quality, and WikiMetrix, a tool we developed (Illmer et al., 2024) can be combined with canonicity measures to provide deeper insights.</p>
+                <p>
+                    <hi rend="color(#000000)">We have published both our code and the dataset, including geocodes and calculations, in our GitHub repository so that our method is easily applicable to other canon compilations (Rohe et al., 2024;</hi>
+                    <ref target="https://github.com/temporal-communities/1001-books">
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#1155cc)underline">https://github.com/temporal-communities/1001-books</hi>
+                    </ref>
+                    <hi rend="color(#000000)">).</hi>
+                </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <anchor xml:id="id_docs-internal-guid-4bc32e14-7fff-3575-b799-049c1053fbb2"/>
+                        <hi rend="color(#000000)">Boxall, P. (2006). </hi>
+                        <hi rend="color(#000000)italic">1001 Books You Must Read Before You Die</hi>
+                        <hi rend="color(#000000)">. Cassell Illustrated.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Boxall, P. (2008). </hi>
+                        <hi rend="color(#000000)italic">1001 Books You Must Read Before You Die. Zweite Ausgabe</hi>
+                        <hi rend="color(#000000)">. Cassell Illustrated.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Brawer, S. (2024). </hi>
+                        <hi rend="color(#000000)italic">Wikidata QRank: Technical Design</hi>
+                        <hi rend="color(#000000)">.</hi>
+                        <ref target="https://github.com/brawer/wikidata-qrank/blob/main/doc/design.md">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">https://github.com/brawer/wikidata-qrank/blob/main/doc/design.md</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)italic">Data:Wikipedia statistics/meta.tab</hi>
+                        <hi rend="color(#000000)">. (2024).</hi>
+                        <ref target="https://commons.wikimedia.org/w/index.php?title=Data:Wikipedia_statistics/meta.tab&amp;oldid=900618439">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">https://commons.wikimedia.org/w/index.php?title=Data:Wikipedia_statistics/meta.tab&amp;oldid=900618439</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Delpeuch, A. </hi>
+                        <hi rend="color(#000000)">et al</hi>
+                        <hi rend="color(#000000)">. (2024). </hi>
+                        <hi rend="color(#000000)italic">OpenRefine/OpenRefine: Zenodo</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(Version 3.8.2) [Computer software].</hi>
+                        <ref target="https://doi.org/10.5281/zenodo.12689605">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.5281/zenodo.12689605</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Deutsche Nationalbibliothek. (2023). </hi>
+                        <hi rend="color(#000000)italic">GND Geographic Area Codes</hi>
+                        <hi rend="color(#000000)">.</hi>
+                        <ref target="https://d-nb.info/standards/vocab/gnd/geographic-area-code.html">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">https://d-nb.info/standards/vocab/gnd/geographic-area-code.html</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Deutsche Nationalbibliothek. (2024). </hi>
+                        <hi rend="color(#000000)italic">Der Ländercode (LC) in der Gemeinsamen Normdatei (GND) – Leitfaden zu seiner Vergabe</hi>
+                        <hi rend="color(#000000)">.</hi>
+                        <ref target="https://wiki.dnb.de/download/attachments/90411323/Laendercodeleitfaden.pdf">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">https://wiki.dnb.de/download/attachments/90411323/Laendercodeleitfaden.pdf</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Fischer, F., Blakesley, J., Wojcik, P., &amp; Jäschke, R. (2023). Preface: World Literature in an Expanding Digital Space. </hi>
+                        <hi rend="color(#000000)italic">Journal of Cultural Analytics</hi>
+                        <hi rend="color(#000000)">, </hi>
+                        <hi rend="color(#000000)italic">8</hi>
+                        <hi rend="color(#000000)">(2).</hi>
+                        <ref target="https://doi.org/10.22148/001c.74598">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.22148/001c.74598</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">GeoNames. (2024). </hi>
+                        <hi rend="color(#000000)italic">GeoNames Web Services Documentation</hi>
+                        <hi rend="color(#000000)">.</hi>
+                        <ref target="https://www.geonames.org/export/web-services.html#get">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">https://www.geonames.org/export/web-services.html#get</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Geopandas Development Team. (2024). </hi>
+                        <hi rend="color(#000000)italic">Geopandas Version 1.0.1</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">[Computer software].</hi>
+                        <ref target="https://doi.org/10.5281/zenodo.12625316">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.5281/zenodo.12625316</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#1155cc)underline">Hensher, P. (2006, February 25). A very loose canon. </hi>
+                        <hi rend="color(#1155cc)underline italic">The Spectator</hi>
+                        <hi rend="color(#1155cc)underline">, 35.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Illmer, V. J., Soethaert, B., Welz, L., Fischer, F., &amp; Jäschke, R. (2024). Literatur im Wikiversum – Eine praktische Annäherung über API-Abfragen und Wikipedia-Metriken. </hi>
+                        <hi rend="color(#000000)italic">DHd2024: DH Quo Vadis. Book of Abstracts</hi>
+                        <hi rend="color(#000000)">.</hi>
+                        <ref target="https://doi.org/10.5281/zenodo.10698426">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.5281/zenodo.10698426</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Kukkonen, K. (2020). Does Cognition Translate? Predictions, Plot, and World Literature. </hi>
+                        <hi rend="color(#000000)italic">Poetics Today</hi>
+                        <hi rend="color(#000000)">, </hi>
+                        <hi rend="color(#000000)italic">41</hi>
+                        <hi rend="color(#000000)">(2), 243–259.</hi>
+                        <ref target="https://doi.org/10.1215/03335372-8172556">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.1215/03335372-8172556</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)italic">Listopia: 1001 Books You Must Read Before You Die</hi>
+                        <hi rend="color(#000000)">. (2024).</hi>
+                        <ref target="https://www.goodreads.com/list/show/952.1001_Books_You_Must_Read_Before_You_Die">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">https://www.goodreads.com/list/show/952.1001_Books_You_Must_Read_Before_You_Die</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">lobid. (2024). </hi>
+                        <hi rend="color(#000000)italic">Lobid-gnd API</hi>
+                        <hi rend="color(#000000)">.</hi>
+                        <ref target="https://lobid.org/gnd/api">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">https://lobid.org/gnd/api</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Matplotlib Development Team. (2024). </hi>
+                        <hi rend="color(#000000)italic">Matplotlib: Visualization with Python</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(Version 3.9.1) [Computer software].</hi>
+                        <ref target="https://doi.org/10.5281/zenodo.12652732">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.5281/zenodo.12652732</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Robinson, D. (2017). Metrics of World Literature. In </hi>
+                        <hi rend="color(#000000)italic">Aleksis Kivi and/as World Literature</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(pp. 43–83). Brill.</hi>
+                        <ref target="https://doi.org/10.1163/9789004340268_003">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.1163/9789004340268_003</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Rohe, J., Illmer, V. J., Poggel, L., &amp; Fischer, F. (2024). </hi>
+                        <hi rend="color(#000000)italic">1001 Books You Must Read Before You Die</hi>
+                        <hi rend="color(#000000)">.</hi>
+                        <ref target="https://github.com/temporal-communities/1001-books">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">https://github.com/temporal-communities/1001-books</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Vink, R. et al. (2024). </hi>
+                        <hi rend="color(#000000)italic">Python Polars 1.2.0</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">[Computer software].</hi>
+                        <ref target="https://doi.org/10.5281/zenodo.12751859">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.5281/zenodo.12751859</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Waskom, M. (2021). seaborn: Statistical data visualization. </hi>
+                        <hi rend="color(#000000)italic">Journal of Open Source Software</hi>
+                        <hi rend="color(#000000)">, </hi>
+                        <hi rend="color(#000000)italic">6</hi>
+                        <hi rend="color(#000000)">(60), 3021.</hi>
+                        <ref target="https://doi.org/10.21105/joss.03021">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.21105/joss.03021</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Wikidata. (2024a). </hi>
+                        <hi rend="color(#000000)italic">Charles Dickens (Q5686). A Tale of Two Cities (Q308918)</hi>
+                        <hi rend="color(#000000)">.</hi>
+                        <ref target="https://www.wikidata.org/w/index.php?title=Q5686&amp;oldid=2199384142,%20https://www.wikidata.org/w/index.php?title=Q308918&amp;oldid=2183733159">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">https://www.wikidata.org/w/index.php?title=Q5686&amp;oldid=2199384142, https://www.wikidata.org/w/index.php?title=Q308918&amp;oldid=2183733159</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Wikidata. (2024b). </hi>
+                        <hi rend="color(#000000)italic">Property P495 country of origin</hi>
+                        <hi rend="color(#000000)">.</hi>
+                        <ref target="https://www.wikidata.org/wiki/Property:P495">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">https://www.wikidata.org/wiki/Property:P495</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)">Winko, S. (2007). Textbewertung. In </hi>
+                        <hi rend="color(#000000)italic">Handbuch Literaturwissenschaft. Band 2</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(pp. 233–266). Metzler.</hi>
+                        <ref target="https://doi.org/10.1007/978-3-476-01271-5_13">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.1007/978-3-476-01271-5_13</hi>
+                        </ref>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

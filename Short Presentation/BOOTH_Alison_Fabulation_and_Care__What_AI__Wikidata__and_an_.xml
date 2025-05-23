@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BOOTH_Alison_Fabulation_and_Care__What_AI__Wikidata__and_an_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Fabulation and Care: What AI, Wikidata, and an XML Schema Can Recognize in Women's Biographies</title>
+                <author>
+                    <persName>
+                        <surname>Booth</surname>
+                        <forename>Alison</forename>
+                    </persName>
+                    <affiliation>University of Virginia, United States of America</affiliation>
+                    <email>ab6j@virginia.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-08T16:44:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>AI</term>
+                    <term>XML</term>
+                    <term>biography</term>
+                    <term>prosopography</term>
+                    <term>Wikidata</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>digital biography</term>
+                    <term>personography</term>
+                    <term>and prosopography</term>
+                    <term>rhetorical analysis</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>Book and print history</term>
+                    <term>Feminist studies</term>
+                    <term>History</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Recent advances in generative AI using large language models (LLMs) offer alternatives to the methods of literary textual analysis often referred to as "distant reading" (Moretti 2013). "Mid-Range Reading" (Booth 2017), as we label the approach of this paper, is not a form of machine learning or language model. Collective Biographies of Women (CBW) is based on the affordances of a relatively small dataset of paragraph-level annotations of short biographies (10-100 paragraphs each) collected in a database of 1274 books. Experimentally, this paper tests the data retrieval, concept structuring, and prose retelling talents of LLM to consider approaches to the texts and data of CBW. </p>
+            <p>CBW's stand-aside XML markup, Biographical Elements and Structure Schema (BESS) (thanks to Daniel Pitti, Worthy Martin, Rennie Mapp, Lloyd Sy, Cindy Girard, and many assistants), was designed for feminist study of narrative form and ideology: how did various versions retell certain women's exceptional actions; what are some governing 
+                <hi rend="italic">topoi</hi> or basic elements of female biography; what can we learn about the singletons, 2/3s of the biographical subjects in these books only one time? After all, biographical discourse for millennia has clustered around the already-told: Semiramis or Erasmus, not our cohorts of more ephemeral one-off examples. Our study began before most books in this neglected genre had been digitized (many of CBW’s books, published before 1929, by now are available digitally), and well before humanities topic modeling. Can various AI generative transformers reveal anything fresh to interpreters of their own or others' painstaking digital humanities (DH) scholarship, or assist in revealing underlying genres or cultural narratives? It seems so, with caution concerning ethical and environmental impact.
+            </p>
+            <p>1. 
+                <hi rend="bold" style="font-size:10pt">Curated XML and Collective Biography, Large Models and Wikipedia</hi>
+            </p>
+            <p>Far from boosterism for so-called AI that monetizes blather and speed, this paper gets us better acquainted with what LLMs "know" about how to write true life narratives of women (with or without facts). It will showcase examples in CBW and queries of varied LLM platforms and speculate about using AI to organize and interconnect data on women's biographical history rather than passively helping the mainstream (always neglecting women) to ingest pre-masticated web content that is in turn based on its own outputs (Kirschenbaum 2025). </p>
+            <p>We should avoid sharing personal data or intellectual property with corporations, but in CBW we can only build on what a publisher already shared; the chapters portray deceased women whose renown has circulated in print-era sources (occasionally the living contribute bios to a civic album). We recognize the bias of CBW's bibliography (most women historically are unrecorded) but undertake this inquiry in the same spirit in which many have edited Wikipedia to improve representation of women, people of color, and other diverse subjects. Careful AI prompting has begun to serve the next phase of our BESS work, which due to the conditions of XML and available digitized text has been focused on samples (versions of one person; tables of contents of related books). We have 400 chapters BESS-annotated but need to develop readier ways for researchers to access and visualize the networks of types and distributions of values. Work using ChatGPT, Copolit, Claude and others will be revised for an article to be submitted to the journal 
+                <hi rend="italic">Critical AI.</hi> This will lead to a planned collection of essays on CBW (bookend to [Booth 2004]) contributing to narrative theory of nonfiction; it will connect systems of prosopographical data in past centuries with global commodifications of identities today. 
+            </p>
+            <p>Unlike LLMs and Morettian textual analysis of 50K digitized novels, a spectrum of early DH projects resisted the givens of prevailing datasets, using customized metadata, XML markup, and the laborious care of human teamwork. Some online exhibits and editions made marginalized subjects accessible while critiquing systems of recognition. Influenced by 
+                <hi rend="italic" xml:space="preserve">Orlando </hi>(Brown et al 2024) and 
+                <hi rend="italic" xml:space="preserve">Women Writers Project </hi>(2025), CBW grew out of a monograph and bibliography of English-language, women-only prosopographies or collective biographies (Booth 2004), that is, collections of nonfiction chapters about sets of historical women's lives (many occupations, not just writers). As DH projects age, XML is proving adaptable independently of the tech stack.
+            </p>
+            <p>
+                <hi rend="bold">2. Overview of the Collective Biographies of Women Project</hi>
+            </p>
+            <p>
+                <ref target="https://cbw.iath.virginia.edu/">Collective Biographies of Women</ref> consists of:
+            </p>
+            <list type="unordered">
+                <item>1274 English-language books (primarly published 1830-1940) that include three or more short biographies of women</item>
+                <item>14,733 individual biographies (chapters) in those books</item>
+                <item>8700 persons in the database: subjects of chapters or biographers</item>
+                <item>A remarkable 7021 of those biographical subjects appear in only one chapter.</item>
+                <item>Each person in the database has been assigned types, e.g. queen; writer</item>
+                <item>Each volume has at least one "collection type" (over 130 varieties of contents, form)</item>
+            </list>
+            <p>CBW rediscovers extensive profiles of women that searchers like Virginia Woolf had said were all but absent from history. A longstanding collaboration in Scholars' Lab and IATH at the University of Virginia (ACLS and NEH support), it resurfaces the frequent publication of collective biographies of women (by men as well as women) in English. These varied volumes avoided repeating themselves as sales would recommend, but offered immersive, realistic life stories befitting national pride and gender ideology while sticking to facts proper to the individual portrayed. The relational database affords quantitative comparison among types of book collections (titles, tables of contents) and types of people identified as women. CBW avoids being siloed: we link to text repositories and library records (HathiTrust and OCLC). Cohorts of the persons have been matched (linking pages) with persons in 
+                <hi rend="underline color(467886)">Social Networks and Archival Context</hi>. Reviving “hidden figures” can seem easier than ever with powerful search engines and generative AI, but time-saving shortcuts are based on smoothing of history's variations and conflicts. 
+            </p>
+            <p>An ongoing question for CBW is its own accessibility (as website; as resource). A prompt on 8 May 2025, "How many collective biographies of women were published in English in 1870?" led to a respectable pause and the following response: </p>
+            <p>
+                <hi style="font-size:10pt">"Based on the most authoritative source for this topic-the Collective Biographies of Women (CBW) project-there were</hi>
+                <hi rend="bold" style="font-size:10pt">four collective biographies of women published in English in 1870</hi>
+                <hi style="font-size:10pt">. ...CBW database...systemactically catalogues English-language books containing collections of three or more short biographies of women, with detailed year-by-year breakdowns."</hi>
+            </p>
+            <p>The response continues with an additional paragraph on CBW, "led by Alison Booth," inaccurately claiming it focuses on "the late 19th century." Footnotes refer to the 2011 bibliography rather than the current database, and a 
+                <hi rend="italic" xml:space="preserve">Reviews in DH </hi>review that only noticed the older version. Using a laptop that constantly searches all aspects of CBW did not steer this search to CBW. 
+                <ref target="https://cbw.iath.virginia.edu/books.php?collection_title=&amp;collection_title-id=&amp;author_name=&amp;author_name-id=&amp;unique_id=&amp;collection_type_logic=AND&amp;year_logic=AND&amp;collection_years%5B%5D=1870&amp;search_logic=AND&amp;form_submit=Search">There, it is easy</ref> for a researcher to find that the publication date 1870 is true for 
+                <hi rend="bold">thirty books</hi>. Even a search of the 
+                <ref target="https://womensbios.lib.virginia.edu/">site footnoted by Perplexity</ref> quickly leads to "1870" far more than 4 times.
+            </p>
+            <p>The Promethean devisers of LLM bots claim to know not 
+                <hi rend="italic">how.</hi> But even skeptics can be impressed with some capacities approximating research. This paper knows not how some chatbots nimbly generate middle-school reports on people who have solid (but narratively lacking) Wikipedia pages. Can we assess why or when at other times different LLMs are stumped by lack of historical knowledge about women's lives? Generative AI 
+                <hi rend="italic">absolutely</hi> (frequent vocabulary of the chatbots) knows what "write a short biography of __" means. Conversely, the anthropomorphic interlocutor may fabulate a standard life message for any name given to it. Human expectations for nonfiction narratives about real people conflict with AI's design to issue plausible utterance rather than to search and confirm. 
+            </p>
+            <p>Wikipedia has long been a resource for our data, as it generally links open data about persons, cross-referencing VIAF, Library of Congress, Oxford Dictionary of Biography and so on. By 2017, Wikidata’s bots had captured CBW’s person identifiers; Wikidata is readily repurposed in Google Knowledge Graph. Wikipedia matters to this conversation between CBW and AI because this successful "wiki" model of upscaling information (which then 
+                <hi rend="italic">may</hi> lead to knowledge) has been widely adopted in ~300 languages, and it has the collaborative and non-extractive tendencies of DH as well as openness to community edit-a-thons. The limitations (cultural, gender bias and so on) of Wikipedia are more conspicuous and redressable than those of the "black box" LLMs.
+            </p>
+            <p>
+                <hi rend="bold">3.</hi>
+                <hi rend="bold" style="font-size:10pt" xml:space="preserve">  A One-Off</hi>
+            </p>
+            <p>
+                <ref target="https://commons.wikimedia.org/wiki/File:0f25msfuyzfz3m0t.jpg">A search in Wikipedia discovers mention of 
+                    <hi style="font-size:10pt" xml:space="preserve"> Mary Sanderson Grasses</hi>
+                </ref>
+                <hi style="font-size:10pt">: a low-resolution, public-domain photograph captioned: "</hi>
+                <hi rend="color(202122)" style="font-size:10pt" xml:space="preserve">Brooklyn Colored School students with their teacher, Mary Sanderson in 1870." This standard outdoor class picture appears in the teacher's father's entry: </hi>
+                <hi rend="bold color(202122)" style="font-size:10pt">Jeremiah Burke Sanderson</hi>
+                <hi rend="color(202122)" style="font-size:10pt"> (August 10, 1821 – August 19, 1875), mixed-race abolitionist. Mary Sanderson Grasses was "the first Black public school teacher in Oakland, California."</hi>
+                <lb/>
+            </p>
+            <p>Only one biography of Mary Sanderson Grasses appears in CBW, among 82 Black women noted in 
+                <hi rend="italic">Lifting as They Climb</hi> (Davis 1933). This source is the sole reason 
+                <ref target="https://snaccooperative.org/">SNAC</ref> and CBW refer to each other on this pioneering Black woman educator. See 
+                <ref target="https://localwiki.org/oakland/Mary_Sanderson-Grases">Oakland Wiki</ref> and 
+                <ref target="https://cbw.iath.virginia.edu/women_display.php?id=20886">CBW Mary Sanderson Grasses</ref>. In the person entry for Sanderson Grasses or Sanderson-Grases, you find links to her chapter, the biographer and book as well as to SNAC. Only one book (1933) recorded this person. Note that Sanderson Grasses is tagged with multiple types that could lead a searcher to related cohorts, as could the Radial graph using tables of contents. We have yet to acquire this copyright text for our repository and BESS analysis of the chapters. 
+            </p>
+            <p>Prompting ChatGPT4 on December 7, 2024, "A Life of Mary Sanderson Grasses," resulted in a very brief response: "Mary Sanderson Grasses does not appear to be a widely known historical figure or public personality based on my database....could you provide more details...or the context [of her notability]?" It offered to write "a fictional biography....Let me know!"</p>
+            <p>4. 
+                <hi rend="bold" style="font-size:10pt">BESS Analysis of a Print version of Once-Celebrated Follower of Florence Nightingale</hi>
+            </p>
+            <p style="text-align: center;">
+                <hi rend="color(006400) background(white)">&lt;!-- Begin Stage of Life --&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;stageOfLife&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;textUnitReference&gt;</hi>
+                <hi rend="background(white)">2</hi>
+                <hi rend="color(000096) background(white)">&lt;/textUnitReference&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;name&gt;</hi>
+                <hi rend="background(white)">after</hi>
+                <hi rend="color(000096) background(white)">&lt;/name&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;/stageOfLife&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;stageOfLife&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;textUnitReference&gt;</hi>
+                <hi rend="background(white)">3</hi>
+                <hi rend="color(000096) background(white)">&lt;/textUnitReference&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;name&gt;</hi>
+                <hi rend="background(white)">before</hi>
+                <hi rend="color(000096) background(white)">&lt;/name&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;/stageOfLife&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;stageOfLife&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;textUnitRangeReference&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;start&gt;</hi>
+                <hi rend="background(white)">4</hi>
+                <hi rend="color(000096) background(white)">&lt;/start&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;end&gt;</hi>
+                <hi rend="background(white)">6</hi>
+                <hi rend="color(000096) background(white)">&lt;/end&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;/textUnitRangeReference&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;name&gt;</hi>
+                <hi rend="background(white)">middle</hi>
+                <hi rend="color(000096) background(white)">&lt;/name&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;/stageOfLife&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;stageOfLife&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;textUnitReference&gt;</hi>
+                <hi rend="background(white)">7</hi>
+                <hi rend="color(000096) background(white)">&lt;/textUnitReference&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;name&gt;</hi>
+                <hi rend="background(white)">beginning</hi>
+                <hi rend="color(000096) background(white)">&lt;/name&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;/stageOfLife&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;stageOfLife&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;textUnitReference&gt;</hi>
+                <hi rend="background(white)">8</hi>
+                <hi rend="color(000096) background(white)">&lt;/textUnitReference&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;name&gt;</hi>
+                <hi rend="background(white)">end</hi>
+                <hi rend="color(000096) background(white)">&lt;/name&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;/stageOfLife&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;stageOfLife&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;textUnitRangeReference&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;start&gt;</hi>
+                <hi rend="background(white)">9</hi>
+                <hi rend="color(000096) background(white)">&lt;/start&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;end&gt;</hi>
+                <hi rend="background(white)">12</hi>
+                <hi rend="color(000096) background(white)">&lt;/end&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;/textUnitRangeReference&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;name&gt;</hi>
+                <hi rend="background(white)">middle</hi>
+                <hi rend="color(000096) background(white)">&lt;/name&gt;</hi>
+                <lb/>
+                <hi rend="color(000096) background(white)">&lt;/stageOfLife&gt;</hi>
+            </p>
+            <p>
+                <hi style="font-size:10pt">Figure {1} BESS analysis, excerpt of Stage of Life markup of 15-paragraph biography of Agnes Jones, chapter 10 of</hi>
+                <hi rend="italic" style="font-size:10pt" xml:space="preserve">Some Eminent Women of Our Times </hi>
+                <hi style="font-size:10pt" xml:space="preserve">(1889), showing chronological disorder of narrative biographies (unlike AI summaries). </hi>
+            </p>
+            <p>Agnes Jones,10 November 1832 – 19 February 1868, nurse and social worker who died in service, receives 10 chapters. On 8 December 2024, "A Life of Agnes Jones" (purposefully bare-bones prompt) received from ChatGPT4 a general but accurate account of this person's life (not copied here). Notably it emulates the entry formats of Oxford Dictionary of National Biography or Wikipedia under headings: Early Life and Education; Nursing Career; Reforms in Liverpool; Legacy and Death (though why not the other way around?). Narrative versions in CBW vary chronology and add scenes.</p>
+            <p>5. 
+                <hi rend="bold" style="font-size:10pt">Claude organizes semantic relevance in 1300 BESS values</hi>
+            </p>
+            <p>In Spring 2025, four MA students (trained as BESSers using Oxygen software) explored the course topic of taste in CBW's biographies, among other uses of its data. We had explored taste in various texts Voyant. BESS includes dozens of values that might be chosen for each element type, a total of 1320 terms, each permitted for one element type: 
+                <hi rend="italic" xml:space="preserve">event, persona description, topos, </hi>or 
+                <hi rend="italic">discourse</hi>. The teacher and students read through a Word document marking in pencil any controlled values that more or less related to our course theme. (Biographers will be judging women's lives in terms of taste.) Reminded by a colleague to consider degrees of relevance, we pasted a Word document, a list of the values under bold element-type headings, into Claude and prompted for a list in descending order of relevance to taste. It immediately mashed values regardless of element categories (
+                <hi rend="italic" xml:space="preserve">you have too much; let me reduce it for you), </hi>"tasteful" followed by 22 other terms. A few prompts later, we had our ranking of 71 actual BESS values tied to element types, and a helpful, sharp-witted definition of subcategories of taste; it resembles educated intelligence.
+            </p>
+            <p>
+                <hi style="font-size:10pt">"The concept of taste operates across multiple domains: literal gustatory experience, aesthetic judgment, social distinction, cultural capital, and moral/ethical sensibility. Terms relating to any of these domains connect to the broader concept of taste, with decreasing relevance as they become more tangential to the core experience of discernment or preference....Many of the terms ...relate indirectly to taste through the lens of class, status, and cultural capital - concepts that sociologist Pierre Bourdieu identified as integral to how taste functions as a mechanism of social distinction."</hi>
+            </p>
+            <p>
+                <hi rend="bold" style="font-size:10pt" xml:space="preserve">6. Further Experimentation </hi>
+            </p>
+            <p>Mid-Range reading can advance with the care of XML markup, human curation, and effort to make findings accessible to the public as well as researchers. Wikipedia continues to be far more transparent than neural networks, while it also needs constant public engagement to avoid replicating paradigms that increase bias and marginalization. CBW plans to continue cautious experimentation with generative AI to highlight how models of life narrative replicate without questioning; and to discover ways to train more controlled data analysis in the BESS corpus of unpredictable, unique versions of actual women's lives.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left;">Alvarado, Rafael C. (2024): “What Large Language Models Know”, in: 
+                        <hi rend="italic">Critical AI</hi> 2, 1. doi: 
+                        <hi rend="underline color(467886)">https://doi.org/10.1215/2834703X-11205161</hi>.
+                    </bibl>
+                    <bibl style="text-align: left;">Booth, Alison (2023). “But Why Always the Novel?: Midrange Reading Samples of Persons and Texts", in: 
+                        <hi rend="italic">New Literary History</hi> 54
+                        <hi rend="background(yellow)">, 1: 559-81.</hi>
+                    </bibl>
+                    <bibl style="text-align: left;">Booth, Alison (2004): 
+                        <hi rend="italic">How to Make It as a Woman: Collective Biographical History from Victoria to the Present</hi>. Chicago: University of Chicago Press, 2004.
+                    </bibl>
+                    <bibl style="text-align: left;">Booth, Alison (2017): “Mid-Range Reading: Not a Manifesto", in: 
+                        <hi rend="italic">PMLA</hi> 132: 3 (May 2017): 620-27.
+                    </bibl>
+                    <bibl style="text-align: left;">Booth, Alison (2015): “Prosopography and Crowded Attention in Old and New Media”, in Leader, Zachary (ed.):
+                        <hi rend="italic" xml:space="preserve"> On Life-Writing</hi>. Oxford: Oxford University Press: 72-98.
+                    </bibl>
+                    <bibl style="text-align: left;">Bamman, David / Smith, Noah (2014): “Unsupervised Discovery of Biographical Structure from Text”, in: 
+                        <hi rend="italic">Transactions of the Association for Computational Linguistics</hi>, 
+                        <hi rend="color(1A1A1A)" style="font-family:Helvetica">2: 363–376</hi>.
+                    </bibl>
+                    <bibl style="text-align: left;">Carter, Philip (2019): “What Is National Biography For?: Dictionaries and Digital History”, in Fox, Karen (ed.): 
+                        <hi rend="italic">True Biographies of Nations?’: The Cultural Journeys of Dictionaries of National Biography</hi>. Canberra, Australia: ANU Press: 57–78. 
+                        <hi rend="underline color(467886)">doi.org/10.22459/TBN.2019.04</hi>.
+                    </bibl>
+                    <bibl style="text-align: left;">Conway, Mike (2010): “Mining a Corpus of Biographical Texts Using Keywords”, in: 
+                        <hi rend="italic">Literary and Linguistic Computing</hi> 25: 23-35.
+                    </bibl>
+                    <bibl style="text-align: left;">Brown, Susan / 
+                        <hi rend="color(1D1D1D)">Clements, Patricia / Grundy, Isobel (eds.) (2024): </hi>
+                        <hi rend="italic">
+                            <hi rend="color(1D1D1D)" xml:space="preserve">Orlando: Women's Writing in </hi>
+                            <hi rend="color(1D1D1D)">the</hi>
+                            <hi rend="color(1D1D1D)" xml:space="preserve"> British Isles </hi>
+                            <hi rend="color(1D1D1D)">from</hi>
+                            <hi rend="color(1D1D1D)">the</hi>
+                            <hi rend="color(1D1D1D)">Beginnings</hi>
+                            <hi rend="color(1D1D1D)">to</hi>
+                            <hi rend="color(1D1D1D)">the</hi>
+                            <hi rend="color(1D1D1D)">Present</hi>
+                        </hi>
+                        <hi rend="color(1D1D1D)">, Cambridge: Cambridge University Press. https://orlando.cambridge.org. </hi>
+                    </bibl>
+                    <bibl style="text-align: left;">Finegold, Michael/ Otis, Jessica/ Shalizi, Cosma/ Shore, Daniel / Wang, Lawrence/ Warren, Christopher (2016). “Six Degrees of Francis Bacon: A Statistical Method for Reconstructing Large Historical Social Networks.” 
+                        <hi rend="italic" xml:space="preserve">Digital Humanities Quarterly </hi>10, 3.
+                    </bibl>
+                    <bibl style="text-align: left;">Fludernik, Monika (2013). “Factual Narrative: A Missing Narratological Paradigm.” 
+                        <hi rend="italic">Germanish-Romanische Monatsschrift</hi> 63, 1: 117–34.
+                    </bibl>
+                    <bibl style="text-align: left;">Gibson, Nathan P./ Schwartz, Daniel / Torabi, Katayoun (2022): “Modeling a Born-Digital Factoid Prosopography Using the TEI and Linked Data”, 
+                        <hi rend="italic">Journal of the Text Encoding Initiative</hi>. 
+                        <hi rend="underline color(467886)">https://doi.org/10.4000/jtei.3979</hi>.
+                    </bibl>
+                    <bibl style="text-align: left;">Graham, Pamela (2015): “‘An Encyclopedia, Not an Experiment in Democracy’: Wikipedia Biographies, Authorship, and the Wikipedia Subject", in 
+                        <hi rend="italic">Biography</hi> 38, 2: 222–44. 
+                        <hi rend="underline color(467886)">https://doi.org/10.1353/bio.2015.0023</hi>.
+                    </bibl>
+                    <bibl style="text-align: left;">Hanlon, Aaron R. (2024). “LLM Outputs Are Fictions”, 
+                        <hi rend="italic">Critical AI</hi> 2, 1. doi: 
+                        <hi rend="underline color(467886)">https://doi.org/10.1215/2834703X-11205210</hi>
+                    </bibl>
+                    <bibl style="text-align: left;">Hayles, N. Katherine (2023): “Inside the Mind of an AI: Materiality and the Crisis of Representation", in 
+                        <hi rend="italic">New Literary History</hi> 54, 1: 635-66.
+                    </bibl>
+                    <bibl style="text-align: left;">Keats-Rohan, Katharine S. B./ Borymchuk, Olga/ Fernholz, Jacquelyn: 
+                        <hi rend="italic">Prosopography Research</hi>. Oxford University. 
+                        <hi rend="underline color(96607D)">https://prosopography.history.ox.ac.uk/bibliography.htm</hi> Accessed 3 May 2025.
+                    </bibl>
+                    <bibl style="text-align: left;">Kirschenbaum, Matt (2025): "Textpocalypse Now", Lecture, Department of English, University of Virginia, 8 April. Based on "Prepare for the Textpocalypse", in 
+                        <hi rend="italic">The Atlantic</hi> 8 March 2023. 
+                    </bibl>
+                    <bibl style="text-align: left;">Leeds, Dana/ Little, Steve/ Thompson, Mark (2024): “Genealogy Meets AI: Expert Guide to ChatGPT, Claude, and Beyond.” Webinar October 7, 2024. 
+                        <hi rend="underline color(467886)">https://</hi>
+                        <ref target="http://www.youtube.com/watch?v=5jT2KYepyCk">
+                            <hi rend="underline color(467886)">www.youtube.com/watch?v=5jT2KYepyCk</hi>
+                        </ref> Accessed December 7, 2024.
+                    </bibl>
+                    <bibl style="text-align: left;">Moretti, Franco (2013): 
+                        <hi rend="italic">Distant Reading</hi>. New York: Verso.
+                    </bibl>
+                    <bibl style="text-align: left;">Newfield, Christopher (20230. “How to Make ‘AI’ Intelligent; or, The Question of Epistemic Equality", in 
+                        <hi rend="italic">Critical AI</hi> 1, 1–2. 
+                        <hi rend="underline color(467886)">https://doi.org/10.1215/2834703X-10734076</hi>.
+                    </bibl>
+                    <bibl style="text-align: left;">Perez, Sarah (2012). “Wikipedia’s Next Big Thing: Wikidata, A Machine-Readable, User-Editable Database Funded By Google, Paul Allen And Others.” TechCrunch. 
+                        <hi rend="underline color(96607D)">https://social.techcrunch.com/2012/03/30/wikipedias-next-big-thing-wikidata-a-machine- readable-user-editable-database-funded-by-google-paul-allen-and-others/</hi>. Accessed December 7, 2024.
+                    </bibl>
+                    <bibl style="text-align: left;">Piper, Andrew (2016). “Fictionality”, in 
+                        <hi rend="italic">Journal of Cultural Analytics</hi> 2, 2. 
+                        <ref target="https://doi.org/10.22148/16.011">https:/​/​doi.org/​10.22148/​16.011</ref>
+                        <hi rend="color(333333)">.</hi>
+                    </bibl>
+                    <bibl style="text-align: left;">
+                        <hi rend="italic">Women Writers Project</hi> (1999–2025). Northeastern University. 
+                        <ref target="http://www.wwp.northeastern.edu/">
+                            <hi rend="underline color(1155CC)">http://www.wwp.northeastern.edu/</hi>.
+                        </ref> Accessed 3 May 2025.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

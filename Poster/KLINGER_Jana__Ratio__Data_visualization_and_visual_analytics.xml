@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KLINGER_Jana__Ratio__Data_visualization_and_visual_analytics">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main"> Ratio! Data visualization and visual analytics for medieval codex formats. A proof of concept for integrative metadata exploitation from digital manuscript libraries </title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Klinger</surname>
+                        <forename>Jana</forename>
+                    </persName>
+                    <affiliation>University of Wuppertal, Germany</affiliation>
+                    <email>jana.klinger@uni-wuppertal.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-28T13:35:45.209538446</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>proof of concept</term>
+                    <term>codicology</term>
+                    <term>visualization</term>
+                    <term>data reuse</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data modeling</term>
+                    <term>meta-criticism (reflections on digital humanities and humanities computing)</term>
+                    <term>spatial &amp; spatio-temporal analysis</term>
+                    <term>modeling and visualization</term>
+                    <term>History</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Handwritten codices have been systematically cataloged for centuries to compile the available knowledge on these artifacts from (mostly) the Middle Ages. While originally published in book format, with the rise of the digital age, the field of codicology quickly became a pioneer in encoding knowledge in machine-readable formats. Today, hundreds of thousands of catalog entries can be accessed digitally via various platforms. As a proof of concept, within my non-funded one-person research project, I scrutinized the current possibilities in accessing, harvesting, curating, and processing this domain of knowledge to create a visual tool for further analysis and heuristic research. </p>
+            <p>I collected over 550.000 data sets of medieval manuscripts from 17 different sources (portals, libraries, and databases). The data sets came in various formats and standards (CSV, EAD, JSON, MarcXML, METS, TEI, and XSLX) and various levels of machine readability. After filtering and unifying the relevant data on page sizes, about a third of the collected data sets remained usable for the planned visualization of page dimensions.<ref n="1" target="ftn1"/><ref n="2" target="ftn2"/> My integrative data model contained information on the original data source, the holding library, the shelfmark, title, place of origin, century of origin, height, and width in millimeters, and, if available, genre and script. Values for the page dimensions, original data source and century of origin were highly normalized, while the rest remained quite diverse. (Klinger 2023a: 7–48)
+            </p>
+            <p>The data visualization was realized as a web application (see figure 1).<ref n="3" target="ftn3"/> The unified data resides in a PostgreSQL database connected to the node.js backend. Via REST API, the backend connects to the frontend, which uses HTML, CSS, Bootstrap, JavaScript, and SVG. The visualization consists of a coordinate system with width on the x-axis and height on the y-axis. Every dot in the coordinate system represents one codex’s page dimensions. Individual dots are translucent. The more dots overlap, the darker their color gets, rendering more typical sizes of codices visible. A line running through the coordinate system marks the mean ratio of the depicted data points. The depicted data can be filtered by data source and century, as well as (theoretically) place of origin, genre, and script. However, the data in the latter categories currently is too diverse to allow for any meaningful usage and interpretation. (Klinger 2023a: 48–73)
+            </p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmps4hvenwt/Pictures/fc2649b69bb1fbf07dd01d9de96cac5e.png"/>
+                </figure>Figure 1 The visualization's interface showing the dimensions of 68.035 codices in an unfiltered display.
+            </p>
+            <p>Visualizing the dimensions of handwritten codices in this way enables—for the very first time—a comprehensive view of medieval book culture and its material dimensions. The option to filter the displayed data by aspects of time, space, and content potentially discloses dependencies of these factors on book formats. However, a visualization can only be as good as the data it represents. While the information on place of origin, genre, and script is too unsystematic to be useful in its current state, it still demonstrates the unused potential hidden within many of the existing data sets describing medieval manuscripts. Furthermore, the web application can be used as a tool for quality assurance, as deviations from the suspected distribution of dots within the coordinate systems point to errors within the data. When hovering over any dot within the coordinate system, the data source, holding library, and shelfmark pop up in a tooltip, enabling the user to identify specific manuscripts. The same goes for the century of origin. While leading to some preliminary insights concerning shifts in size from one century to the next,<ref n="4" target="ftn4"/> a more granular degree of dating would provide more satisfactory results. (Klinger 2023a: 73–84)
+            </p>
+            <p>The realization of this project showed that the use of digital methods in codicology can lead to interesting conclusions and new research approaches. To usefully apply digital methods, one must combine knowledge of the subject matter with technical knowledge to subsume, reflect on, and evaluate any given findings. This indicates the need for interdisciplinary cooperation to utilize digital methods’ full potential.</p>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn1" rend="footnote text" n="1">After sorting out all data sets that did not describe a codex (but a fragment of a codex, charters, etc.) and all those that did not contain information about page dimensions that was or could be made to be machine-readable, 182.273 data sets from 17 sources were left. When building the web application it turned out that the technical infrastructure was not built to deal with such a high number of data sets which is why I decided, out of pragmatic reasons, to leave out the 114.238 remaining data sets from the Schoenberg Database, which lead to the number of data sets finally depicted in the visualization: 68.035 data sets from 16 different sources.</note>
+<note xml:id="ftn2" rend="footnote text" n="2">To date, medieval codices’ page dimensions were the focus of a variety of studies. (e.g. Bozzolo and Ornato 1980; Kwakkel 2012; Robinson 2008; Gumbert 1993)</note>
+<note xml:id="ftn3" rend="footnote text" n="3">The web application can be accessed at 
+                    . (Klinger 2023b)
+                </note>
+<note xml:id="ftn4" rend="footnote text" n="4">In its final version, the visualization displays approximately 68.000 data sets and confirms the research conducted by Ornato and Bozzolo in 1980, which compared the page dimensions of 6.200 codices. From the 9th to the 12th century, the page ratio declined and rose again up to the 15th century. (cf. Bozzolo and Ornato 1980: 287) Furthermore, the visualization shows that in the 15th and 16th centuries, the data points were spread along the coordinate system clustering at about the sizes of today’s DIN A-standard.</note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Bozzolo, Carla, / Ezio Ornato</hi> (1980): 
+                        <hi rend="italic">Pour Une Histoire Du Livre Manuscrit Au Moyen Age: Trois Essais de Codicologie Quantitative</hi>. Textes et Études / Equipe de Recherche Sur l’humanisme Français Des XIVe et XVe Siècles 2. Paris: Editions du Centre national de la recherche scientifique.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Gumbert, J</hi>
+                        <hi rend="bold">ohan</hi>
+                        <hi rend="bold"> Peter</hi> (1993): “Sizes and Formats.”, in: Marilena Maniaci (ed.): 
+                        <hi rend="italic">Ancient and Medieval Book Materials and Techniques (Erice, 18-25 September 1992</hi>
+                        <hi rend="italic">)</hi>. Città del Vaticano: Biblioteca apostolica vaticana 227–64. DOI: 10.1400/246389.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Klinger, Jana</hi> (2023a): 
+                        <hi rend="italic">Ratio – Handschriftenformate Als Digital-History-Anwendung Und Data Science-Problem</hi>. Master thesis (unpublished), Wuppertal.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Klinger, Jana</hi> (2023b): 
+                        <hi rend="italic">Ratio. Dimensions of Medieval Manuscripts.</hi> Wuppertal. &lt;
+                        <ptr target="http://dh.uni-wuppertal.de/klinger-ratio"/>&gt; [16.03.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Kwakkel, Erik</hi> (2012): “‘Dit Boek Heeft Niet de Vereiste Breedte’: Afwijkende Bladdimensies in de Elfde En Twaalfde Eeuw.”, in: 
+                        <hi rend="italic">Jaarboek Voor Nederlandse Boekgeschiedenis</hi> 19: 33–49.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Robinson, Pamela </hi>(2008): “The Format of Books – Books, Booklets and Rolls.”, in: Nigel J. Morgan / Rodney M. Thomson (eds.): 
+                        <hi rend="italic">The Cambridge History of the Book in Britain: Volume 2: 1100–1400.</hi> The Cambridge History of the Book in Britain. Cambridge: Cambridge University Press 39–54. DOI: 10.1017/CHOL9780521782180.005.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

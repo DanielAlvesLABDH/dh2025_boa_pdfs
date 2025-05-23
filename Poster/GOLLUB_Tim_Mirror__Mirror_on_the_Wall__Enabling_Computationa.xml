@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="GOLLUB_Tim_Mirror__Mirror_on_the_Wall__Enabling_Computationa">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Mirror, Mirror on the Wall: Enabling Computational Research on Beauty Ideals</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Gollub</surname>
+                        <forename>Tim</forename>
+                    </persName>
+                    <affiliation>Bauhaus-Universität Weimar, Germany</affiliation>
+                    <email>tim.gollub@uni-weimar.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Achkar</surname>
+                        <forename>Pierre</forename>
+                    </persName>
+                    <affiliation>Leipzig University; Fraunhofer Institute Leipzig</affiliation>
+                    <email>pierre.achkar@uni-leipzig.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Potthast</surname>
+                        <forename>Martin</forename>
+                    </persName>
+                    <affiliation>University of Kassel, hessian.AI, and ScaDS.AI</affiliation>
+                    <email>martin.potthast@uni-weimar.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Stein</surname>
+                        <forename>Benno</forename>
+                    </persName>
+                    <affiliation>Bauhaus-Universität Weimar, Germany</affiliation>
+                    <email>benno.stein@uni-weimar.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-28T10:48:49.785397170</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>beauty-ideals</term>
+                    <term>multi-modal classification</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>cultural analytics</term>
+                    <term>Anthropology</term>
+                    <term>Computer science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p> We present our work on the development of machine learning classifiers trained to assess whether a given input image aligns with a specific beauty ideal. The work is part of our effort toward enabling large-scale computational research on beauty ideals, a subject that is both culturally significant and socially impactful. </p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp9kwwg2je/Pictures/b7b5034ba5693de6a32a7d314ebfb13b.png"/>
+                </figure>
+            </p>
+            <p>Figure 1. Illustrative samples of “reinforcing beauty ideal” (left) and “not reinforcing beauty ideal”` (right) images generated using Stable Diffusion XL.</p>
+            <p>Beauty ideals are largely socially constructed, differing across cultural groups and evolving over time. To be established and reinforced, beauty ideals are promoted in media, making them a compelling topic for investigation within the digital humanities, especially cultural analytics (Manovich, 2017). However, studying beauty ideals has traditionally been challenging due to their subjective nature and the limited scalability of manual analysis. Existing studies are either qualitative interviews (26 young woman (Siddiqui, 2021), 200 mainly young woman (Gill, 2021)), or quantitative on manually labeled data sets (246 Instagram posts (Lazuka, 2020), 640 Instagram posts (Cohen, 2019)). Given the recent advances in computer vision and natural language processing, our research aims to develop machine learning models which facilitate large scale research on the production and reinforcement of beauty ideals in historic and contemporary media.</p>
+            <p>Towards this goal, in collaboration with a group of digital anthropologists from Tübingen University in Germany, we compile an annotated corpus of social media posts. Each post consists of an image depicting a human body, an optional textual user comment, and a binary annotation as to whether the image reinforces a contemporary Western beauty ideal as perceived by a reference group of five female German university students. At the time of writing, the corpus consists of 928 posts. To give an impression of the image modality while preserving data privacy, Figure 1 shows eight generated images which closely resemble images from the data set.</p>
+            <p> With the aid of this deliberately subjective corpus, we train and evaluate a variety of machine learning classifiers: (1) Vision-only models, including popular models like ResNet (He et al., 2015) and the Vision Transformer ViT (Dosovitskiy et al., 2021), but also more recent and domain-specific variants, (2) text-only BERT (Devlin et al., 2018) models fine-tuned either on the raw user comments or on GPT-4 reformulated comments with verbalized hashtags and emojis, and (3) multi-modal models, which take both modalities as input. Here, we experiment with a late-fusion modal, i.e., a fully-connected three layer neural network which takes as input the concatenated uni-modal ViT and BERT representations of a post, as well as with LlaVa (Liu et al., 2023), a multi-modal large language model which we tune through prompt-engineering.</p>
+            <p> On our hold-out test set, the best-performing vision-only model is the domain-specific SEER model (Goyal et al., 2022), which achieves an accuracy of 87%. Given only the user comments, the BERT model with reformulated captions achieves an accuracy of 76%. Given both modalities, we achieve 85% accuracy with the LLava model and 92% with the late fusion model. In our view, these results substantiate that today's machine learning technology is indeed capable of facilitating computational research on complex cultural concepts such as beauty ideals.</p>
+            <p>To demonstrate the application domain of our research, we apply our classifier to the image search results from a major Web search engine. By varying the search queries across dimensions such as age, ethnicity, and gender, we uncover significant disparities in the prevalence of beauty-ideal images. The results are given in Figure 2. For instance, the ratio of images conforming to the beauty ideal of our corpus ranges from 6.12% for "adult Indigenous females" to 83.67% for "young Asian females." These findings highlight how beauty ideals are represented differently across demographic categories.</p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp9kwwg2je/Pictures/b7b5034ba5693de6a32a7d314ebfb13b.png"/>
+                </figure>
+            </p>
+            <p> Figure 2. Results of the showcase study: Percentage of beauty ideal images in the image search results obtained for queries that differ by stated Ethnicity, Gender, and Age.</p>
+            <p> In our poster presentation at the conference, we will not only explain the scope and goals of our interdisciplinary research project as well as technical details, but also offer a live demonstration of our classifier. Visitors can either try out our classifiers with their smartphones or learn how to apply it to social media feeds using the Zeeschuimer browser extension.<ref n="1" target="ftn1"/> With our contribution to the conference, we hope to stimulate fruitful discussions about the cultural, social, and ethical aspects of beauty ideal research.
+            </p>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn1" rend="footnote text" n="1"> https://github.com/digitalmethodsinitiative/zeeschuimer</note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Cohen, R. / Irwin, L. / Newton-John, T. / Slater, A.</hi> (2019): “# bodypositivity: A content analysis of body positive accounts on instagram”. Body image 29, 47–57
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Devlin, J. / Chang, M. / Lee, K. / Toutanova, K. </hi>(2018): “BERT: pre-training of deep bidirectional transformers for language understanding”. CoRR abs/1810.04805
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Dosovitskiy, A., Beyer, L., Kolesnikov, A., Weissenborn, D., Zhai, X., Unterthiner, T., Dehghani, M., Minderer, M., Heigold, G., Gelly, S., Uszkoreit, J., Houlsby, N. </hi>(2021): “An image is worth 16x16 words: Transformers for image recognition at scale”. In: 9
+                        <hi rend="sup">th</hi> International Conference on Learning Representations, ICLR 2021, Virtual Event, Austria.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Gill, R. </hi>(2021): “Being watched and feeling judged on social media”. Feminist Media Studies 21(8), 1387–1392.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Goyal, P. / Duval, Q. / Seessel, I. / Caron, M. / Misra, I. / Sagun, L. / Joulin, A. / Bojanowski, P.</hi> (2022): “Vision models are more robust and fair when pretrained on uncurated images without supervision”. CoRR abs/2202.08360.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">He, K. / Zhang, X. / Ren, S. / Sun, J. </hi>(2015): “Deep residual learning for image recognition”. CoRR abs/1512.03385.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Lazuka, R.F. / Wick, M.R. / Keel, P.K. / Harriger, J.A.</hi> (2020): “Are we there yet? progress in depicting diverse images of beauty in instagram’s body positivity movement”. Body Image 34, 85–93.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Liu, H. / Li, C. / Wu, Q. / Lee, Y.J.</hi> (2023): “Visual instruction tuning”. CoRR abs/2304.08485.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Manovich, L. </hi>(2017): “Instagram and contemporary image”.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Siddiqui, A.</hi> (2021): “Social media and its role in amplifying a certain idea of beauty”. Infotheca 21(1), 73–85.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

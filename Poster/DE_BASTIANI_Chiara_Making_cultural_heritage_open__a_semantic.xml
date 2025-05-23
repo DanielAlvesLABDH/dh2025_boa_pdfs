@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="DE_BASTIANI_Chiara_Making_cultural_heritage_open__a_semantic">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Making cultural heritage open: a semantic portal for Germanic Cultural Heritage in Veneto</title>
+                <author>
+                    <persName>
+                        <surname>De Bastiani</surname>
+                        <forename>Chiara</forename>
+                    </persName>
+                    <affiliation>Università Ca' Foscari Venezia, Italy</affiliation>
+                    <email>chiara.debastiani@unive.it</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>User Interface</term>
+                    <term>Sampo Model</term>
+                    <term>LOD</term>
+                    <term>Accessibility</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>linked (open) data</term>
+                    <term>Archaeology</term>
+                    <term>Humanities computing</term>
+                    <term>Philology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">With this poster, I present the architecture behind a Semantic Portal for the querying and visualization of data related to Germanic Cultural Heritage (CH) items in Veneto. The portal was developed within the project “OntoVE-Ontologies for the description of Germanic Cultural Heritage items in Veneto”, under the supervision of Marina Buzzoni and in collaboration with Net7 (https://www.netseven.it/). The project is funded by the Italian National Operational Programme (PON, http://www.ponricerca.gov.it/pon-ricerca/programme/) on Research and Innovation 2014-2020 and the European Social Fund (ESF, https://eur-lex.europa.eu/EN/legal-content/glossary/european-social-fund-esf.html) within the Recovery assistance for cohesion and the territories of Europe (REACT-EU, https://www.europarl.europa.eu/factsheets/en/sheet/215/recovery-assistance-for-cohesion-and-the-territories-of-europe-react-eu-). The OntoVE ontology specification can be consulted here: https://w3id.org/ontove/ontology.</p>
+            <p style="text-align: left; ">As described in De Bastiani (2023, 2024) and De Bastiani/Fabbris/Peratello (2024), the project consists in the creation of a Knowledge Base via the reuse of established ontologies, to maximize interoperability. Besides giving access to the data through a SPARQL Endpoint, the project also provides a dedicated User Interface (UI), based on the model elaborated by the Semantic Computing Research Group (SeCO, https://seco.cs.aalto.fi/), and referred to here as the Sampo Model (Ikkala et al. 2022). The project aims in fact to present the data described in the Knowledge Base to a diversified audience. Users with the relevant expertise can query the data through the dedicated Apache-Jena-Fuseki SPARQL Endpoint (https://jena.apache.org/documentation/fuseki2/). However, not all users interested in exploring the dataset may be willing or able to write a SPARQL query; to this end, an intuitive UI is being implemented, to allow non-expert users to explore the dataset.<ref n="1" target="ftn1"/> The prospected users include not only scholars with little to no expertise in SPARQL, but also students, citizens and tourists interested in the history of the area and the relationship between Veneto and the Germanic populations that transited through it or had an influence on the political history of the region.<ref n="2" target="ftn2"/>
+            </p>
+            <p style="text-align: left; ">The principles guiding the architecture of the user interface are based on the Faro Convention (https://www.coe.int/en/web/culture-and-heritage/faro-convention), which highlights the importance of making cultural heritage openly accessible to citizens for a democratic fruition of it. Visualization of Linked Open Data (LOD) through e.g. the faceted search paradigm (Tunkelang 2009) can greatly aid non-expert users grasping the meaning of the resources they are inspecting (Po et al. 2020: 1); providing adequate access to LOD without forcing the users to learn the standards of the Semantic Web boosts therefore the democratization of data. The approach of the OntoVE project is inspired by CH portals, such as Europeana (https://www.europeana.eu/it), and by projects that present LOD e.g. through storytelling, such as MythLOD (Pasqual/Tomasi 2022, https://dharc-org.github.io/mythlod/storytelling/index.html), and by the series of portals elaborated by the SeCo group.</p>
+            <p style="text-align: left; ">The Sampo UI is a Javascript framework that can be reused to create semantic portals based on SPARQL queries to an RDF triplestore; the framework has been tested and employed by the SeCo group, leading to the creation of several semantic portals (Rantala et al. 2023). Its potential and functionalities have been therefore thoroughly tested, and the source code is being constantly maintained and implemented. This constitutes one of the advantages in using this model, but other advantages lie in the reusability and adaptability of the interface to external SPARQL endpoints and different datamodels, without modifying the underlying data or LOD service. Moreover, the interface provides rich functionalities for data exploration and is domain-agnostic (Rantala et al. 2023).</p>
+            <p style="text-align: left; ">Within the OntoVE project, this model has been reused to create different search perspectives on the data described in the Knowledge Base, that range from archaeological to bibliographic items. The UI is in English and Italian.<ref n="3" target="ftn3"/> Aim of this poster is to present the different perspectives elaborated, that gather, e.g., information about CH items and their locations, of interest for example to tourists (cf. Figure 1), but also about scholarly processes and bibliographical information related to the description of specific items (cf. Figure 2), thereby making scholarly processes open to a diversified audience. In the future, we aim to add further analytical tools, such as maps or pie charts, in order to enhance the exploration of the data. However, the interface needs to be tested with different types of users; in the near future, we aim to test it in a didactic environment.
+            </p>
+            <p style="text-align: left; ">Even though the discussion in this poster revolves around a specific application of the Sampo Model to the OntoVE Knowledge Base, the approach undertaken could be potentially applied to other cultural domains since the project reuses open tools and models. Moreover, the code of the OntoVE-Sampo-UI and the dataset are openly accessible (De Bastiani et al. 2024a-b), thus rendering the output of the project retrievable and replicable.</p>
+            <p style="text-align: left; ">
+                <graphic n="1001" width="16.002cm" height="6.942191666666667cm" url="/tmp/tmpt0uj7_b8/Pictures/76651876e73301349ffcb52b88ade2db.png" rend="inline"/>
+            </p>
+            <p style="text-align: left; ">Figure 1 – the “Locations” perspective</p>
+            <p style="text-align: left; ">
+                <graphic n="1002" width="16.002cm" height="6.927208333333334cm" url="/tmp/tmpt0uj7_b8/Pictures/76651876e73301349ffcb52b88ade2db.png" rend="inline"/>
+            </p>
+            <p style="text-align: left; ">Figure 2 – The “Cultural Scope” perspective</p>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                    
+                        <hi style="font-size:10pt">The SPARQL Endpoint is available here:</hi>
+                        <ref target="https://ontove-endpoint.chitontove.it/#/">
+                            <hi style="font-size:10pt">https://ontove-endpoint.chitontove.it/#/</hi>
+                        </ref>
+                        <hi style="font-size:10pt" xml:space="preserve">.  For web-security reasons, the Endpoint has limited access at the moment. The OntoVE UI is available here: </hi>
+                        <ref target="https://ontove-ui.chitontove.it/en/">
+                            <hi style="font-size:10pt">https://ontove-ui.chitontove.it/en/</hi>
+                        </ref>
+                        <hi style="font-size:10pt" xml:space="preserve">. </hi>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                    
+                        <hi style="font-size:10pt" xml:space="preserve">A third visualization output for the project has also been implemented; a part of the dataset can be also explored via CHIt (Cultural Heritage of Italy, Fabbris/Bertozzi 2024, </hi>
+                        <ref target="https://chit.chitontove.it/">
+                            <hi style="font-size:10pt">https://chit.chitontove.it/</hi>
+                        </ref>
+                        <hi style="font-size:10pt">). The outcomes of the collaboration between the OntoVE and the CHIt projects are illustrated in De Bastiani/Fabbris (2023) and are visible here:</hi>
+                        <hi rend="Hyperlink" xml:space="preserve"> </hi>
+                        <ref target="https://chit.chitontove.it/risorse?provider=sparql&amp;page=1">
+                            <hi style="font-size:10pt">https://chit.chitontove.it/risorse?provider=sparql&amp;page=1</hi>
+                        </ref>
+                        <hi style="font-size:10pt" xml:space="preserve">. </hi>
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                    
+                        <hi style="font-size:10pt" xml:space="preserve"> While the architecture of the UI is in both languages and the OntoVE items also have a label in both languages, visualization of the labels in both languages still needs to be perfected.</hi>
+                    
+                </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">De Bastiani, Chiara</hi> (2023): “Harmonizing and modelling a bibliographic ontology of imperial diplomas within the OntoVE Knowledge Base”, La memoria digitale: forme del testo e organizzazione della conoscenza. In UMANISTICA DIGITALE, Siena, Università degli Studi di Siena, pp. 51-56, Conference: AIUCD 2023 - Siena, 05-07/06/2023 (ISBN 978-88-942535-7-3) (ISSN 2532-8816)
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">De Bastiani, Chiara</hi> (2024): “Connecting and visualizing data: a Knowledge Base of Germanic Cultural Heritage items in Venice”, Short paper presentation held during the conference DH Benelux 24. https://zenodo.org/records/11485003 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">De Bastiani, Chiara / Fabbris, Giulia</hi> (2023): “Collaboration within a shared digital paradigm: opportunities and outcomes”, Zenodo https://zenodo.org/records/8198555 , Alliance of Digital Humanities Association, ADHO23.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">De Bastiani, Chiara / Fabbris, Giulia / Peratello, Paola</hi> (2024): “Reinventing approaches to accessibility within the Digital Paradigm: some Italian case studies” in Jajwalya Karajgikar, Andrew Janco, Jessica Otis, DH2024 Book of Abstracts, Zenodo, pp. 124-127, Conference: DH 2024. Reinvention &amp; Responsibility, 6-9 August 2024, https://zenodo.org/records/13761079 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">De Bastiani, Chiara / Aiola, Chiara / Bertozzi, Alessandro / Buzzoni, Marina</hi> (2024a): “ChiDeBa/ontove: Initial Release”, https://doi.org/10.5281/zenodo.14551337
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">De Bastiani, Chiara / Aiola, Chiara / Bertozzi, Alessandro / Buzzoni, Marina</hi> (2024b): “ChiDeBa/ontove-sampo-ui: Initial Release”, https://doi.org/10.5281/zenodo.14551332 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Fabbris, Giulia / Bertozzi, Alessandro</hi> (2024): Use, Reuse, and Valorization: A Web App for Italian Cultural Heritage. Mimesis journal 13(2), 135–149. https://doi.org/10.13135/2389-6086/9998. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Ikkala, Esko / Hyvonen, Eero / Rantala,Heikki / Koho, Mikko</hi> (2022): “Sampo-UI: A Full Stack JavaScript Framework for Developing Semantic Portal User Interfaces”, Semantic Web – Interoperability, Usability, Applicability, vol. 13, no. 1, pp. 69-84, January, 2022. Online version published in 2021, print version in 2022. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Po, Laura / Bikakis, Nikos / Desimoni, Federico / Papastefanatos, George</hi> (2020): Linked Data Visualization: Techniques, Tools, and Big Data, “Synthesis Lectures on the Semantic Web: Theory and Technology”, 10 (2020), 1, https://doi.org/10.1007/978-3-031-79490-2 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Pasqual, Valentina / Tomasi, Francesca</hi> (2022): “Linked Open Data Per La Valorizzazione Di Collezioni Culturali: Il Dataset MythLOD”, AIB Studi 62 (1):149-68. https://doi.org/10.2426/aibstudi-13301 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Rantala, Heiki / Ahola, Annastiina / Ikkala, Esko / Hyvönen, Eero</hi> (2023): “How to create easily a data analytic semantic portal on top of a SPARQL endpoint: introducing the configurable Sampo-UI framework”, VOILA! 2023 Visualization and Interaction for Ontologies, Linked Data and Knowledge Graphs 2023, CEUR Workshop Proceedings, Vol. 3508, October, 2023. https://ceur-ws.org/Vol-3508/paper3.pdf 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Tunkelang, Daniel</hi> (2009): Faceted Search. Springer Nature, “Synthesis Lectures on Information Concepts, Retrieval, and Services”, 1 (2009). https://doi.org/10.1007/978-3-031-02262-3
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="RICHARDSON_Andrew__Flow_Filter___Introducing_an_upstream_exp">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>‘Flow Filter’: Introducing an upstream exploratory visualisation and filtering of large and detailed datasets. </title>
+                <author>
+                    <persName>
+                        <surname>Richardson</surname>
+                        <forename>Andrew</forename>
+                    </persName>
+                    <affiliation>Northumbria University, United Kingdom</affiliation>
+                    <email>andrew.richardson@northumbria.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Butterworth</surname>
+                        <forename>Alex</forename>
+                    </persName>
+                    <affiliation>University of Sussex, United Kingdom</affiliation>
+                    <email>alex@alexbutterworth.co.uk</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T15:03:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>design</term>
+                    <term>visualisation</term>
+                    <term>exploration</term>
+                    <term>filtering</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>Communication studies</term>
+                    <term>Design studies</term>
+                    <term>History</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">The scale and diversity of historical digital data that is becoming available, accelerated by Machine Learning methods of preparation and linkage, and the detail with which it is sometimes modelled, has intensified the challenges and opportunities presented by ‘the computational turn’ in humanities research (Berry 2011). The need for bespoke tools and models for graphical argument construction (Drucker 2020) which support humanistic methods of analysis involving nuance, multi-axial zoom (Butterworth 2023) and multi-perspectival possibilities (Viola 2023) have become more acute.</p>
+            <p style="text-align: left; ">One particularly significant requirement for ‘generous’ tools and interfaces, (Whitelaw 2015), involves a capacity to work across scale: enabling users to delve into the nuance of data within its local context while also zooming out to position it in broader, global contexts—whether singly or comparatively. However, whilst the authors’ design attention is most often given to those bespoke tools for visualising nuance and complexity, such fine-grain insights are likely to be unworkable at the scale of complete datasets, and so need a pre-filter to produce targeted subsets. Having identified this as an essential and generalisable requirement, we subsequently broadened the questions we seek to address. How does someone coming to a richly modelled dataset with some domain knowledge but little familiarity with the schema or properties available for exploration, begin to understand the shape and texture of the data, intuitively and as a productive stage in their research? How can this process be designed as a first stage of increasingly refined exploration, allowing users both to preview possibilities and to reverse and reassess past decisions, while maintaining an overview of the dataset? Without such exploratory tools a researcher may be restricted to well-trodden pathways, driven by prior knowledge and predefined assumptions, with insights into potentially novel connections within a dataset remaining hidden.</p>
+            <p style="text-align: left; ">The result of these reflections was a set of requirements that re-enforce the need for an exploratory principle of anticipation/preview of comparison/consequence, combined with provisionally and continual iteration for serendipitous discovery, within a large cycle of hypothesis generation and testing. The current range of interfaces available for humanities data is limited and limiting, failing to adequately address these requirements. Existing approaches typically rely on generic search methods, which facet and filter data sets through static menu-based queries and ‘trial-and-error’ workflows. </p>
+            <p style="text-align: left; ">While this is effective for retrieving specific results, such methods are poorly suited for dynamic exploration, especially by those without prior knowledge of the data. They do not support broader, dynamic exploration of a dataset holistically, in the way necessary to reveal connections, strands and linkages, nor do they allow for interpretative processes (Ciuccarelli / Elli 2019). To meet these challenges, we have adopted a design-based approach of speculative prototyping, or “sandcastle building” (Hindrichs et al. 2019). This method serves as an important mechanism for the construction of argumentation in graphical form (Radzikowska / Rucker 2022) which has informed the design and development of the 
+                <hi rend="italic">Flow Filter.</hi>
+            </p>
+            <p style="text-align: left; ">The 
+                <hi rend="italic">Flow Filter</hi> is a generalisable exploratory data visualisation component that sits upstream within an environment of multiple different downstream components, each with more specialised analytical application. Drawing on principles from the familiar ‘alluvial’ data visualisation form, the 
+                <hi rend="italic">Flow Filter</hi> functions simultaneously as a visual query builder and a predictive visualisation environment. The interface operates on several levels. It presents a simplified representation of the data structure, for a conceptual overview of the dataset’s organisation. It offers an intuitive interface for serendipitous exploration, encouraging the iterative refinement of research questions. Additionally, its visual rhetorics reveal characteristics and linkages between data attributes in ways that can be shared and communicated across research contexts. 
+            </p>
+            <p style="text-align: left; ">The 
+                <hi rend="italic">Flow Filter</hi> enables the user to construct "sluice gates" through which data is filtered, with each gate assigned a data attribute, with associated properties that can be selected by the user. This visual logic integrates two aspects of query logic: “OR” logic applies when adding gates, while “AND” logic governs the selection of properties within gates. ‘Flows’ connect these gates, dynamically illustrating relationships and distributions between data attributes. The width of each flow line is proportional to the volume of data passing through it, visually mapping the shape of the data: its structure, densities, and interconnections.
+            </p>
+            <p style="text-align: left; ">The interface is interactive and responsive to user intuitions and curiosity. The selection of ‘flows’ and ‘bars’ can be modified dynamically, with queries always updatable, enabling researchers not only to 
+                <hi rend="italic">view</hi> determined search results but also 
+                <hi rend="italic">anticipate</hi> potential pathways and connections within the dataset. By previewing the breadth or narrowness of downstream ‘flows’, users are guided toward areas of interest for more detailed analysis: whether their interest foregrounds more representative or more anomalous data, or the relationship between the two. As familiarity with the dataset grows, even the non-expert rapidly begins to be able to derive useful insights and formulate questions.
+            </p>
+            <figure>
+                <graphic n="1001" width="14.622805555555555cm" height="21.934208333333334cm" url="/tmp/tmpk9a15vy6/Pictures/19788dd83a75bbbeac5a0643b8da72cf.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">
+                <hi rend="italic">Figure 1. A screenshot of a ‘Flow Filter’, illustrating connections between scientific instrument makers based in London, the Guilds they belong to and the instruments they advertised making.</hi>
+            </p>
+            <p style="text-align: left; ">The paper will demonstrate both the use and intrinsic effectiveness of the 
+                <hi rend="italic">Flow Filter</hi> as a discrete interface, and as the generalisable upstream component that is applied to three datasets which can integrated with their more specific downstream interface components, to enable an expanded scope for iterated exploration. 
+            </p>
+            <p style="text-align: left; ">The datasets used for the demonstration are: the ‘social clusters’ of residents distributed between 3,500 households in the Saltaire ideal town in the later nineteenth century; the social and business networks of scientific instrument maker communities in Britain from the mid-eighteenth to mid-nineteenth centuries (around 12,000 individuals); and the individuals involved, in varied roles, in the flights from Britain into wartime France in support of resistance networks.</p>
+            <p style="text-align: left; ">Particular attention will be given to the first of these, for exemplary purposes, around the refinement of broad record sets into meaningful subsets. It will demonstrate how households can be probed and filtered based on attributes such as census year, household size, the ‘identity’ of households (as annotated following network science analysis), gender, place of birth and occupational types and subtypes (as variously categorised by different classificatory systems). It will show how 
+                <hi rend="italic">flowlines</hi> can reveal trends like household size distribution over time or the relationship between gender and occupational roles, prior to more sophisticated analysis of selected subsets. 
+            </p>
+            <p style="text-align: left; ">By advancing interactive visualisation methods, 
+                <hi rend="italic">Flow Filter</hi> contributes to digital humanities research, advancing an intuitive and engaged approach to data exploration which has broad applications in an era of large-scale data and knowledge graph technologies.
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Berry, David M</hi>. (2011): “The computational turn: Thinking about the digital humanities”, in: Culture Machine 12.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Butterworth, Alex</hi> (2023): “Adventures in Zoomland: Transitions in Scale and the Visual Exploration of Historical Knowledge Graphs as Sequential Storytelling”, in: Armesela, F. / Fickers, A. (eds.): 
+                        <hi rend="italic">Zoomland: Exploring Scale in Digital History and Humanities</hi>: 20.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Ciuccarelli, Paolo / Elli, Tommaso</hi> (2019): “Beyond visualization”, in: 
+                        <hi rend="italic">Reassembling the Republic of Letters in the Digital Age</hi>. Göttingen: Universitätsverlag Göttingen: 299–314.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Drucker, Johanna</hi> (2020): 
+                        <hi rend="italic">Visualization and Interpretation: Humanistic Approaches to Display</hi>. Cambridge, MA: MIT Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Hinrichs, Uta / Forlini, Stefania / Moynihan, Bridget</hi> (2019): “In defense of sandcastles: Research thinking through visualization in digital humanities”, in: 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi> 34, Supplement 1: i80–i99.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Radzikowska, Milena / Ruecker, Stan</hi> (2022): 
+                        <hi rend="italic">Design and the Digital Humanities: A Handbook for Mutual Understanding</hi>. Bristol: Intellect.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Viola, Lorella.</hi> (2023): 
+                        <hi rend="italic">The Humanities in the Digital: Beyond Critical Digital Humanities</hi>. Cham: Springer Nature: 173.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Whitelaw, Mitchell</hi> (2015): “Generous interfaces for digital cultural collections”, in: 
+                        <hi rend="italic">Digital Humanities Quarterly</hi> 9, 1: 1–16.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

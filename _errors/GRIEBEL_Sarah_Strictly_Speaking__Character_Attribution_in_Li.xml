@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="GRIEBEL_Sarah_Strictly_Speaking__Character_Attribution_in_Li">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Strictly Speaking: Character Attribution in Literary Dialogue with Language Models</title>
+                <author>
+                    <persName>
+                        <surname>Griebel</surname>
+                        <forename>Sarah</forename>
+                    </persName>
+                    <affiliation>Department of Information Sciences, University of Illinois Urbana-Champaign, United States of America</affiliation>
+                    <email>sarahg8@illinois.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Layne-Worthey</surname>
+                        <forename>Glen</forename>
+                    </persName>
+                    <affiliation>HathiTrust Research Center, University of Illinois Urbana-Champaign, United States of America</affiliation>
+                    <email>gworthey@illinois.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Dubnicek</surname>
+                        <forename>Ryan</forename>
+                    </persName>
+                    <affiliation>Department of Information Sciences, University of Illinois Urbana-Champaign, United States of America; HathiTrust Research Center, University of Illinois Urbana-Champaign, United States of America</affiliation>
+                    <email>rdubnic2@illinois.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Evans</surname>
+                        <forename>Daniel J.</forename>
+                    </persName>
+                    <affiliation>Department of Information Sciences, University of Illinois Urbana-Champaign, United States of America</affiliation>
+                    <email>djevans4@illinois.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Downie</surname>
+                        <forename>J. Stephen</forename>
+                    </persName>
+                    <affiliation>Department of Information Sciences, University of Illinois Urbana-Champaign, United States of America; HathiTrust Research Center, University of Illinois Urbana-Champaign, United States of America</affiliation>
+                    <email>jdownie@illinois.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-07T16:31:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>quotation attribution</term>
+                    <term>digital humanities</term>
+                    <term>natural language processing</term>
+                    <term>large language models</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>cultural analytics</term>
+                    <term>electronic literature production and analysis</term>
+                    <term>natural language processing</term>
+                    <term>Computer science</term>
+                    <term>Humanities computing</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction:</head>
+                <p style="text-align: left; ">Research in conversation analysis has increasingly incorporated fictional dialogues, as they may offer insights into societal norms and linguistic ideals, enrich narrative understanding (Piper et al. 2021), and be used as a framework to study social networks (Elson et al. 2010).</p>
+                <p style="text-align: left; ">However, datasets focused uniquely on dialogue in literary novels are scarce and often limited. We believe this scarcity is partially due to the challenges literary texts pose for automated extraction: the format and style of dialogic interactions vary widely across time and editorial practice; character names may be far removed from their dialogue on the page; narrative interjections may interrupt dialogue as characters themselves move, think, and feel in the midst of a speech. State-of-the-art tools like BookNLP (Bamman 2021) have been created to address this difficulty, but can still underperform when source data is generated via optical character recognition (Dubnicek et al. 2022). However, recent technological advances of language models make it possible to improve even on this important work.</p>
+                <p style="text-align: left; ">Our research aims to develop new methods to tackle quotation attribution, leveraging advantages afforded by different language model families, and to create a generalizable method for quality extraction of dialogic interactions. We construct a gold standard dataset featuring labeled dialogue from George Eliot’s 
+                    <hi rend="italic">Middlemarch</hi> and explore fine-tuning techniques to improve automatic quotation attribution using various sizes of the seq2seq model FLAN-T5. We then compare these results with the performance of zero-shot prompting using Llama-3.1-8b-Instruct.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Research questions:</head>
+                <p style="text-align: left; ">Can we improve on state-of-the-art methods of quotation attribution using a fine-tuned seq2seq model or zero-shot prompted causal language model (CLM)?</p>
+                <p style="text-align: left; "> What effect does contextual narrative description have on the models’ performance? </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Background Literature:</head>
+                <p style="text-align: left; ">Much research has used computational methods to study fictional conversations in cinema and TV, where screenplays provide ready-made character disambiguation: Danescu-Niculescu Mizil and Lee (2011) analyze linguistic mirroring in dialogue, while Tigunova et al. (2021) model relationships in multi-speaker dialogue. Chang et al. (2023) compare conversation disentanglement models and study conversation dynamics in media.</p>
+                <p style="text-align: left; ">Fewer studies focus on computational dialogue extraction and speaker identification in novels. Menon (2019) examines conversation broadly across 898 18
+                    <hi rend="superscript">th</hi>- and 19
+                    <hi rend="superscript">th</hi>-century novels, manually tagging speakers in twenty novels. Elson and McKeown (2010) use rule-based and statistical patterning to identify speakers in a corpus of over 3,000 quotations. BookNLP (Bamman 2021) provides a pipeline for literary analysis in novel-length texts using BERT models and spaCy dependency parsing. 
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Data:</head>
+                <p style="text-align: left; ">We created and used a gold standard (hand-annotated) 
+                    <hi rend="italic">Middlemarch</hi> corpus. The book is split into paragraphs, and each dialogic paragraph (i.e., one in which dialogue appears) is given a speaker annotation. Only characters with 50 dialogic paragraphs or more (18 total) are used, resulting in 2,605 total paragraphs.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methods:</head>
+                <p style="text-align: left; ">Research has shown that seq2seq models exhibit strong performance in coreference resolution when fine-tuned (Zhang et al. 2023). We chose FLAN-T5 (Chung et al. 2024), as the T5 family has performed well for coreference tasks (Hicke and Mimno 2024), closely related to speaker identification. We used ten fine-tuning phases, testing five versions of context (see Table 1) and two labeling approaches: one using numerical character IDs and one using standardized character names. For every version, the dataset was randomly split into training and testing sets.</p>
+                <p style="text-align: left; ">As a comparison, we tested zero-shot prompting of Llama-3.1-8b-Instruct (Dubey et al. 2024). Llama-3.1-8b was chosen as it can be used locally, has a much larger parameter size than the FLAN models but is still less resource-intensive for an LLM, and demonstrates impressive language understanding. We constructed prompts to match the labeling approaches used in fine-tuning, pairing the dialogic paragraph with a list of 18 characters and their character ID or standardized name. We also repeated the line of dialogue that we wanted the model to focus on. We then instructed the model to return the character ID, the name of the speaker, or both name and character ID. When returning both name and character ID, a response was considered correct as long as the character ID matched. We tested on the same test set as used in fine-tuning. </p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: left;">
+                            <p>Version</p>
+                        </cell>
+                        <cell style="text-align: left;">Description</cell>
+                        <cell style="text-align: left;">Original</cell>
+                        <cell style="text-align: left;">Fine-tuning Input</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">1</cell>
+                        <cell style="text-align: left;">Whole dialogue-description paragraph</cell>
+                        <cell style="text-align: left;">“I think she is," said Celia, feeling afraid lest she should say something that would not please her sister, and blushing as prettily as possible above her necklace. “She likes giving up."</cell>
+                        <cell style="text-align: left;">“I think she is," said Celia, feeling afraid lest she should say something that would not please her sister, and blushing as prettily as possible above her necklace. “She likes giving up."</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">2</cell>
+                        <cell style="text-align: left;">Concatenated dialogue, no description</cell>
+                        <cell style="text-align: left;">“I think she is," said Celia, feeling afraid lest she should say something that would not please her sister, and blushing as prettily as possible above her necklace. “She likes giving up."</cell>
+                        <cell style="text-align: left;">“I think she is, She likes giving up."</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">3</cell>
+                        <cell style="text-align: left;">Whole dialogue-description paragraph and preceding dialogue-description paragraph</cell>
+                        <cell style="text-align: left;">“We must not inquire too curiously into motives," he interposed, in his measured way. “Miss Brooke knows that they are apt to become feeble in the utterance: the aroma is mixed with the grosser air. We must keep the germinating grain away from the light."</cell>
+                        <cell style="text-align: left;">Mr. Casaubon had come up to the table, teacup in hand, and was listening. “We must not inquire too curiously into motives," he interposed, in his measured way. “Miss Brooke knows that they are apt to become feeble in the utterance: the aroma is mixed with the grosser air. We must keep the germinating grain away from the light."</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">4</cell>
+                        <cell style="text-align: left;">Whole dialogue-description paragraph and following dialogue-description paragraph </cell>
+                        <cell style="text-align: left;">“I wonder you show temper, Dorothea.”</cell>
+                        <cell style="text-align: left;">“I wonder you show temper, Dorothea.” “It is so painful in you, Celia, that you will look at human beings as if they were merely animals with a toilet, and never see the great soul in a man’s face.”</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">5</cell>
+                        <cell style="text-align: left;">Whole dialogue-description paragraph and preceding and following dialogue-description paragraphs</cell>
+                        <cell style="text-align: left;">“I wonder you show temper, Dorothea.”</cell>
+                        <cell style="text-align: left;">Miss Brooke was clearly forgetting herself, and Celia thought so. “I wonder you show temper, Dorothea.” “It is so painful in you, Celia, that you will look at human beings as if they were merely animals with a toilet, and never see the great soul in a man’s face.”</cell>
+                    </row>
+                </table>
+                <p style="text-align: left; ">
+                    <hi rend="bold" xml:space="preserve">Table 1: </hi>Original dialogue-description paragraphs and the matching input for each context version.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results:</head>
+                <p style="text-align: left; ">Fine-tuned FLAN-T5-large achieves the highest accuracy when returning character IDs, with 0.8223 for context version 5 (Table 2). Accuracy drops when returning names alone due to increased “hallucinations” (name that is misspelled or does not appear in training labels). Despite this, the model outperforms all others across nearly all context versions–only exceeded by the base model using context version 1. Llama-3.1-8b-Instruct had the lowest overall accuracy, frequently hallucinating character names. In some cases, hallucinations accounted for nearly one-sixth of its responses. It performed most competitively when returning both character names and IDs.</p>
+                <p style="text-align: left; ">For every model, the context version that included the preceding paragraph (Version 3) outperformed the context version with the following paragraph (Version 4), highlighting the significance of narrative preceding dialogue to identify speakers: an important detail when using models with limited context windows.</p>
+                <p style="text-align: left; ">Figures 1 and 2 show F1 scores for characters with most, median, and fewest dialogue paragraphs. Notably, characters with median and fewest dialogue paragraphs scored higher than characters with the most dialogue across all fine-tuned model versions. (Version 2). </p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: left;"/>
+                        <cell style="text-align: left;">Version 1</cell>
+                        <cell style="text-align: left;">Version 2</cell>
+                        <cell style="text-align: left;">Version 3</cell>
+                        <cell style="text-align: left;">Version 4</cell>
+                        <cell style="text-align: left;">Version 5</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">FLAN-T5-base : character ID</cell>
+                        <cell style="text-align: left;">0.7455</cell>
+                        <cell style="text-align: left;">0.4552</cell>
+                        <cell style="text-align: left;">0.7711</cell>
+                        <cell style="text-align: left;">0.7442</cell>
+                        <cell style="text-align: left;">0.8095</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">FLAN-T5-base : character name</cell>
+                        <cell style="text-align: left;">0.7212</cell>
+                        <cell style="text-align: left;">0.4246</cell>
+                        <cell style="text-align: left;">0.8056</cell>
+                        <cell style="text-align: left;">0.6752</cell>
+                        <cell style="text-align: left;">0.8171</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">FLAN-T5-large : character ID</cell>
+                        <cell style="text-align: left;">0.7327</cell>
+                        <cell style="text-align: left;">0.4808</cell>
+                        <cell style="text-align: left;">0.8120</cell>
+                        <cell style="text-align: left;">0.7404</cell>
+                        <cell style="text-align: left;">0.8223</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">FLAN-T5-large : character name</cell>
+                        <cell style="text-align: left;">0.6790</cell>
+                        <cell style="text-align: left;">0.4322</cell>
+                        <cell style="text-align: left;">0.7621</cell>
+                        <cell style="text-align: left;">0.7494</cell>
+                        <cell style="text-align: left;">0.7877</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">
+                            <p>Llama-3.1-8b-</p>
+                            <p>Instruct: character ID</p>
+                        </cell>
+                        <cell style="text-align: left;">0.5908</cell>
+                        <cell style="text-align: left;">0.1854</cell>
+                        <cell style="text-align: left;">0.6957</cell>
+                        <cell style="text-align: left;">0.6036</cell>
+                        <cell style="text-align: left;">0.6944</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">
+                            <p>Llama-3.1-8b-</p>
+                            <p>Instruct: character name</p>
+                        </cell>
+                        <cell style="text-align: left;">0.5882</cell>
+                        <cell style="text-align: left;">0.2315</cell>
+                        <cell style="text-align: left;">0.7059</cell>
+                        <cell style="text-align: left;">0.5934</cell>
+                        <cell style="text-align: left;">0.7212</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">Llama-3.1-8b- Instruct: character name and ID</cell>
+                        <cell style="text-align: left;">0.6419</cell>
+                        <cell style="text-align: left;">0.2494</cell>
+                        <cell style="text-align: left;">0.7583</cell>
+                        <cell style="text-align: left;">0.7020</cell>
+                        <cell style="text-align: left;">0.8056</cell>
+                    </row>
+                </table>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Table 2</hi>: Accuracy for each model-prompt across all context versions. 
+                </p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: left;"/>
+                        <cell style="text-align: left;">Version 1</cell>
+                        <cell style="text-align: left;">Version 2</cell>
+                        <cell style="text-align: left;">Version 3</cell>
+                        <cell style="text-align: left;">Version 4</cell>
+                        <cell style="text-align: left;">Version 5</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">FLAN-T5-base : character ID</cell>
+                        <cell style="text-align: left;">0</cell>
+                        <cell style="text-align: left;">0.0026</cell>
+                        <cell style="text-align: left;">0</cell>
+                        <cell style="text-align: left;">0</cell>
+                        <cell style="text-align: left;">0.0026</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">FLAN-T5-base : character name</cell>
+                        <cell style="text-align: left;">0.0051</cell>
+                        <cell style="text-align: left;">0.0064</cell>
+                        <cell style="text-align: left;">0.0064</cell>
+                        <cell style="text-align: left;">0.0230</cell>
+                        <cell style="text-align: left;">0.0064</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">FLAN-T5-large : character ID</cell>
+                        <cell style="text-align: left;">0</cell>
+                        <cell style="text-align: left;">0.0038</cell>
+                        <cell style="text-align: left;">0</cell>
+                        <cell style="text-align: left;">0.0013</cell>
+                        <cell style="text-align: left;">0</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">FLAN-T5-large : character name</cell>
+                        <cell style="text-align: left;">
+                            <p>0.0269</p>
+                        </cell>
+                        <cell style="text-align: left;">
+                            <p>0.0115</p>
+                        </cell>
+                        <cell style="text-align: left;">
+                            <p>0.0320</p>
+                        </cell>
+                        <cell style="text-align: left;">
+                            <p>0.0256</p>
+                        </cell>
+                        <cell style="text-align: left;">
+                            <p>0.0243</p>
+                        </cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">Llama-3.1-8b-Instruct: character ID</cell>
+                        <cell style="text-align: left;">0.0166</cell>
+                        <cell style="text-align: left;">0.0460</cell>
+                        <cell style="text-align: left;">0.0141</cell>
+                        <cell style="text-align: left;">0.0205</cell>
+                        <cell style="text-align: left;">0.0153</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">Llama-3.1-8b-Instruct: character name</cell>
+                        <cell style="text-align: left;">0.0729</cell>
+                        <cell style="text-align: left;">0.0077</cell>
+                        <cell style="text-align: left;">0.0780</cell>
+                        <cell style="text-align: left;">0.1560</cell>
+                        <cell style="text-align: left;">0.1164</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;">
+                            <hi rend="bold">Llama-3.1-8b-Instruct: character name and ID</hi>
+                        </cell>
+                        <cell style="text-align: left;">0.0256</cell>
+                        <cell style="text-align: left;">0.1100</cell>
+                        <cell style="text-align: left;">0.0141</cell>
+                        <cell style="text-align: left;">0.0243</cell>
+                        <cell style="text-align: left;">0.0128</cell>
+                    </row>
+                </table>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Table 3:</hi> Fraction of hallucinations for each model-prompt across all context versions. In this case, hallucinations are defined as responses that do not exactly match at least one of the true labels.
+                </p>
+                <figure>
+                    <graphic n="1001" width="15.8496cm" height="7.9248cm" url="/tmp/tmpj8_fm1w0/Pictures/362487908f29b7d363b85f729f291a9a.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Figure 1:</hi> FLAN-T5 F1 scores for each character, grouped by dialogue amount. Each graph represents one model+fine-tuning version. The six characters with the greatest amount of dialogue are shown in dark blue, six characters with median amount of dialogue are shown in light gray, and six characters with the least amount are shown in purple.
+                </p>
+                <figure>
+                    <graphic n="1002" width="15.8496cm" height="9.525cm" url="/tmp/tmpj8_fm1w0/Pictures/362487908f29b7d363b85f729f291a9a.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">
+                    <hi rend="bold">Figure 2:</hi> Llama-3.1-8b-Instruct F1 scores for each character, grouped by dialogue amount. Each graph represents one model-prompt. The six characters with the greatest amount of dialogue are shown in dark blue, six characters with median amount of dialogue are shown in light gray, and six characters with the least amount are shown in purple.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion:</head>
+                <p style="text-align: left; ">This project demonstrates the effectiveness of fine-tuned FLAN-T5 models for speaker identification in fictional narratives, outperforming zero-shot prompted models that are 10-30 times larger in parameter size.</p>
+                <p style="text-align: left; ">Exploring different context versions reveals that while more context is preferable, preceding paragraphs are particularly useful for speaker identification. Providing information from further ahead in the novel may be minimally beneficial, especially when using limited context window sizes. Including pertinent context may be further enhanced when coupled with other tools, such as high-performing named entity extraction (Parulian et al. 2022).</p>
+                <p style="text-align: left; ">Finally, FLAN-T5 identifies characters with fewer lines of dialogue more readily than Llama3.1-8b, suggesting that the fine-tuning process may help codify linguistic features particular to peripheral characters (those with fewer speaking parts), who may serve static or stereotypical roles as compared to main characters. Their speech patterns, the themes they speak about, or whom they speak with may reflect their limited narrative complexity. </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bamman, David</hi> (2021): “BookNLP”, in: GitHub https://github.com/booknlp/booknlp [22.11.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Chang, Kent / Chen, Danica / Bamman, David</hi> (2023): “Dramatic Conversation Disentanglement”, in: Rogers, Anna / Boyd‑Graber, Jordan / Okazaki, Naoaki (eds.): 
+                        <hi rend="italic">Findings of the Association for Computational Linguistics: ACL 2023</hi>. Toronto: Association for Computational Linguistics 4020–46. DOI: 10.18653/v1/2023.findings‑acl.248.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Chung, Hyung Won / Hou, Le / Longpre, Shayne / Zoph, Barret / Tay, Yi / Fedus, William / Li, Yunxuan / et al</hi>. (2024): “Scaling Instruction‑Finetuned Language Models”, in: Journal of Machine Learning Research 25, 70: 1–53 
+                        <ref target="https://jmlr.org/papers/v25/23-0870.html">https://jmlr.org/papers/v25/23-0870.html</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Danescu‑Niculescu‑Mizil, Cristian / Lee, Lillian</hi> (2011): “Chameleons in Imagined Conversations: A New Approach to Understanding Coordination of Linguistic Style in Dialogs”, in: Keller, Frank / Reitter, David (eds.): 
+                        <hi rend="italic">Proceedings of the 2nd Workshop on Cognitive Modeling and Computational Linguistics</hi>, Portland, OR, June 2011: 76–87 
+                        <ref target="https://aclanthology.org/W11-0609">https://aclanthology.org/W11-0609</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Dubey, Abhimanyu / Jauhri, Abhinav / Pandey, Abhinav / Kadian, Abhishek / Al‑Dahle, Ahmad / Letman, Aiesha / Mathur, Akhil / et al</hi>. (2024): “The Llama 3 Herd of Models”, in: arXiv. DOI: 10.48550/arXiv.2407.21783.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Dubnicek, Ryan / Harrison, Jade / Magni, Isabella / Walsh, John A. / Graham, Maryemma / Downie, J. Stephen / Layne‑Worthey, Glen</hi> (2022): “SCWAReD: Scholar‑Curated Worksets from the HathiTrust Research Center”, in: Digital Humanities Congress, University of Sheffield, Sheffield, 09 September 2022.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Elson, David / McKeown, Kathleen</hi> (2010): “Automatic Attribution of Quoted Speech in Literary Narrative”, in: 
+                        <hi rend="italic">Proceedings of the AAAI Conference on Artificial Intelligence</hi> 24, 1: 1013–1019. DOI: 10.1609/aaai.v24i1.7720.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Elson, David / Dames, Nicholas / McKeown, Kathleen</hi> (2010): “Extracting Social Networks from Literary Fiction”, in: Hajič, Jan / Carberry, Sandra / Clark, Stephen / Nivre, Joakim (eds.): 
+                        <hi rend="italic">Proceedings of the 48th Annual Meeting of the Association for Computational Linguistics</hi>, Uppsala: Association for Computational Linguistics 138–147 
+                        <ref target="https://aclanthology.org/P10-1015">https://aclanthology.org/P10-1015</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Hicke, Rebecca / Mimno, David</hi> (2024): “[Lions: 1] and [Tigers: 2] and [Bears: 3], Oh My! Literary Coreference Annotation with LLMs”, in: Bizzoni, Yuri / Degaetano‑Ortlieb, Stefania / Kazantseva, Anna / Szpakowicz, Stan (eds.): 
+                        <hi rend="italic">Proceedings of the 8th Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature (LaTeCH‑CLfL 2024)</hi>, St. Julians: Association for Computational Linguistics 270–277 
+                        <ref target="https://aclanthology.org/2024.latechclfl-1.27/">https://aclanthology.org/2024.latechclfl-1.27/</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Menon, Tara</hi> (2019): “Keeping Count: Direct Speech in the Nineteenth‑Century British Novel”, in: 
+                        <hi rend="italic">Narrative</hi> 27, 2: 160–181. DOI: 10.1353/nar.2019.0010.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Parulian, Nikolaus Nova / Dubnicek, Ryan / Evans, Daniel J. / Hu, Yuerong / Layne‑Worthey, Glen / Downie, J. Stephen / Heaton, Raina / Lu, Kun / Orr, Raymond I. / Magni, Isabella / Walsh, John A.</hi> (2023): “Tuning out the Noise: Benchmarking Entity Extraction for Digitized Native American Literature”, in: 
+                        <hi rend="italic">Proceedings of the 2023 ASIS&amp;T Annual Meeting</hi>, London, 27–31 October 2023. DOI: 10.1002/pra2.839.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Piper, Andrew / So, Richard Jean / Bamman, David</hi> (2021): “Narrative Theory for Computational Narrative Understanding”, in: Moens, Marie-Francine / Huang, Xuanjing / Specia, Lucia / Wen-tau Yih, Scott (eds.): 
+                        <hi rend="italic">Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing</hi>, Punta Cana: Association for Computational Linguistics 298–311. DOI: 10.18653/v1/2021.emnlp-main.26.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Tigunova, Anna / Mirza, Paramita / Yates, Andrew / Weikum, Gerhard</hi> (2021): “PRIDE: Predicting Relationships in Conversations”, in: Moens, Marie-Francine / Huang, Xuanjing / Specia, Lucia / Wen-tau Yih, Scott (eds.): 
+                        <hi rend="italic">Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing</hi>, Punta Cana: Association for Computational Linguistics 4636–4650. DOI: 10.18653/v1/2021.emnlp-main.380.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Zhang, Wenzheng / Wiseman, Sam / Stratos, Karl</hi> (2023): “Seq2seq Is All You Need for Coreference Resolution”, in: Bouamor, Houda / Pino, Juan / Bali, Kalika (eds.): 
+                        <hi rend="italic">Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing</hi>, Singapore: Association for Computational Linguistics 11493–11504. DOI: 10.18653/v1/2023.emnlp-main.704.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

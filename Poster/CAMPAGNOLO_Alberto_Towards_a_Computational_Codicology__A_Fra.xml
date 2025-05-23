@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="CAMPAGNOLO_Alberto_Towards_a_Computational_Codicology__A_Fra">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Towards a Computational Codicology: A Framework for Manuscript Descriptions</title>
+                <author>
+                    <persName>
+                        <surname>Campagnolo</surname>
+                        <forename>Alberto</forename>
+                    </persName>
+                    <affiliation>Université de Tours; KU Leuven</affiliation>
+                    <email>alberto.campagnolo@univ-tours.fr</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-02T09:46:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Codicology</term>
+                    <term>Manuscript Studies</term>
+                    <term>Digital Humanities</term>
+                    <term>Modelling</term>
+                    <term>Computational Framework</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>manuscripts description</term>
+                    <term>representation</term>
+                    <term>and analysis</term>
+                    <term>metadata standards</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>Book and print history</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: center;">Towards a Computational Codicology: A Framework for Manuscript Descriptions</p>
+            <p style="text-align: left;">
+                <hi rend="italic">Alberto Campagnolo (alberto.campagnolo@univ-tours.fr), Université de Tours; KU Leuven</hi>
+            </p>
+            <p>This poster presents a framework being developed within the ERC-funded 
+                <hi rend="bold">PRIMA project</hi> for systematic codicological descriptions of Early Modern manuscripts: Codicological Model for Early Modern Manuscripts (CoMEMM). While traditional digitisation practices and models like TEI document well textual content, they generally lack the granularity required for detailed codicological research. Our framework complements and extends existing standards to capture comprehensive data on physical and structural features, including writing supports, gathering structures, page preparation, and other key material characteristics.
+            </p>
+            <div type="div1" rend="DH-Heading1">
+                <head>Framework Overview</head>
+                <p>Inspired by models like VisColl 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"5e45cHY1","properties":{"formattedCitation":"(Porter et al., 2017; Porter and Campagnolo, 2021)","plainCitation":"(Porter et al., 2017; Porter and Campagnolo, 2021)","noteIndex":0},"citationItems":[{"id":182,"uris":["http://zotero.org/users/146623/items/N7LDZLQA"],"itemData":{"id":182,"type":"chapter","abstract":"The principal physical feature of the book in codex format, the gathering structure, is usually not visualized within digitization projects. If this information is recorded at all, it is generally done with the use of collation formulas. There is not a standard schema for manuscript collation formulas and not all practices are able to record accurately the structure of books. There have been some attempts in the past to describe gathering structures in more formalised ways. VisColl is building on past experiences and strives to describe, visualize, and communicate the gathering structure of books. Successful applications of the new tool are presented as examples. Future versions will add functionality to link physical details of a manuscript with additional information about the content, which will enable a complete mapping of a physical manuscript.","collection-number":"11","collection-title":"Schriften des Instituts für Dokumentologie und Editorik","container-title":"Kodikologie & Paläographie im Digitalen Zeitalter 4 | Codicology & Palaeography in the Digital Age 4","event-place":"Norderstedt","ISBN":"978-3-7448-3877-1","language":"EN","license":"Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC-BY-NC-ND)","page":"81-100","publisher":"Books on Demand GmbH","publisher-place":"Norderstedt","title":"VisColl: A New Collation Tool for Manuscript Studies","title-short":"VisColl: A New Collation Tool","URL":"https://kups.ub.uni-koeln.de/7782/","author":[{"family":"Porter","given":"Dot"},{"family":"Campagnolo","given":"Alberto"},{"family":"Connelly","given":"Erin"}],"editor":[{"family":"Busch","given":"Hannah"},{"family":"Fischer","given":"Franz"},{"family":"Sahle","given":"Patrick"}],"issued":{"date-parts":[["2017"]]},"citation-key":"porterVisCollNewCollation2017"},"label":"page"},{"id":2841,"uris":["http://zotero.org/users/146623/items/9PERPZBN"],"itemData":{"id":2841,"type":"book","abstract":"VisColl: Modeling and Visualizing the Physical Construction of Codex Manuscripts","event-place":"Philadelphia (PA)","language":"en","publisher":"University of Pennsylvania Libraries","publisher-place":"Philadelphia (PA)","title":"VisColl: Modeling and Visualizing the Physical Construction of Codex Manuscripts","title-short":"VisColl","URL":"https://viscoll.org/","author":[{"family":"Porter","given":"Dot"},{"family":"Campagnolo","given":"Alberto"}],"contributor":[{"family":"Emery","given":"Doug"},{"family":"Perkins","given":"Patrick"},{"family":"Ransom","given":"Lynn"},{"family":"Tuohy","given":"Conal"},{"literal":"Old Books New Science Lab, University of Toronto"}],"accessed":{"date-parts":[["2020",11,15]]},"issued":{"date-parts":[["2021"]]},"citation-key":"porterVisCollModelingVisualizing2021"},"label":"page"}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>
+                    <hi style="font-size:12pt">(Porter et al., 2017; Porter and Campagnolo, 2021)</hi>, the Ligatus schema for the description of bookbindings 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"AdJhi4Gc","properties":{"formattedCitation":"(Ligatus, 2007; Velios and Pickwoad, 2012; Velios and Pickwoad, 2020b)","plainCitation":"(Ligatus, 2007; Velios and Pickwoad, 2012; Velios and Pickwoad, 2020b)","noteIndex":0},"citationItems":[{"id":2429,"uris":["http://zotero.org/users/146623/items/99XHGINX"],"itemData":{"id":2429,"type":"book","event-place":"London","publisher":"University of the Arts London","publisher-place":"London","title":"Survey schemas","URL":"http://www.ligatus.org.uk/stcatherines/node/1052","author":[{"literal":"Ligatus"}],"accessed":{"date-parts":[["2014",8,22]]},"issued":{"date-parts":[["2007"]]},"citation-key":"ligatusSurveySchemas2007"},"label":"page"},{"id":13066,"uris":["http://zotero.org/users/146623/items/EEWD58T8"],"itemData":{"id":13066,"type":"chapter","collection-title":"New Technologies in Medieval and Renaissance Studies","container-title":"Digitizing medieval and early modern material culture","event-place":"Tempe (AZ)","language":"en","page":"201-228","publisher":"Iter: Gateway to the Middle Ages and Renaissance Toronto, Ontario; Arizona Center for Medieval and Renaissance Studies (ACMRS)","publisher-place":"Tempe (AZ)","title":"The digitization of bookbindings","title-short":"The digitization","volume":"3","author":[{"family":"Velios","given":"Athanasios"},{"family":"Pickwoad","given":"Nicholas"}],"editor":[{"family":"Nelson","given":"Brent"},{"family":"Terras","given":"Melissa M."}],"issued":{"date-parts":[["2012"]]},"citation-key":"veliosDigitizationBookbindings2012"},"label":"page"},{"id":3020,"uris":["http://zotero.org/users/146623/items/XHWTILLB"],"itemData":{"id":3020,"type":"chapter","collection-number":"13","collection-title":"Schriften des Instituts für Dokumentologie und Editorik","container-title":"Versioning Cultural Objects. Digital Approaches","event-place":"Norderstedt","ISBN":"978-3-7504-2702-0","language":"German","note":"OCLC: 1135367076","page":"109-134","publisher":"Books on Demand","publisher-place":"Norderstedt","source":"Open WorldCat","title":"Versioning Materiality: Documenting Evidence of Past Binding Structures","title-short":"Versioning Materiality","editor":[{"family":"Bleier","given":"Roman"},{"family":"Winslow","given":"Sean M."}],"author":[{"family":"Velios","given":"Athanasios"},{"family":"Pickwoad","given":"Nicholas"}],"issued":{"date-parts":[["2020"]]},"citation-key":"veliosVersioningMaterialityDocumenting2020"},"label":"page"}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>
+                    <hi style="font-size:12pt">(Ligatus, 2007; Velios and Pickwoad, 2012; Velios and Pickwoad, 2020b)</hi>, and the practices of quantitative and analytical codicology 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"6sL3iiPp","properties":{"formattedCitation":"(Andrist et al., 2013; Ornato, 2020)","plainCitation":"(Andrist et al., 2013; Ornato, 2020)","noteIndex":0},"citationItems":[{"id":1924,"uris":["http://zotero.org/users/146623/items/AFGFKH8G"],"itemData":{"id":1924,"type":"book","abstract":"\"Pourquoi les auteurs ont-ils intitulé leur essai \"La syntaxe du codex\"? C'est par analogie avec les catégories grammaticales habituelles, qui distinguent morphologie et syntaxe. La morphologie du codex concernerait les éléments qui le constituent (les mots de la grammaire): matière utilisée, composition en cahiers, type et style d'écriture, encre, couleurs, mise en page, ornementation, reliure, notes de lecteurs ou de possesseurs, etc. La syntaxe consisterait à mettre en relation ces éléments pour comprendre comment le codex 'tient ensemble' et se modifie avec le temps. Les réflexions des auteurs concernent uniquement ce dernier aspect de la 'grammaire du codex' mais supposent la connaissance d'un certain nombre de notions codicologiques de base, indispensable pour suivre l'évolution du raisonnement.\"-- Provided by publisher.","collection-number":"34","collection-title":"Bibliologia","event-place":"Turnhout","ISBN":"978-2-503-54393-2","language":"French","note":"OCLC: 786442677\n\nAnnotated bibliography: Codicological descriptions","publisher":"Brepols","publisher-place":"Turnhout","source":"Open WorldCat","title":"La syntaxe du codex: essai de codicologie structurale","title-short":"La syntaxe du codex","author":[{"family":"Andrist","given":"Patrick"},{"family":"Canart","given":"Paul"},{"family":"Maniaci","given":"Marilena"}],"issued":{"date-parts":[["2013"]]},"citation-key":"andristSyntaxeCodexEssai2013"},"label":"page"},{"id":135,"uris":["http://zotero.org/users/146623/items/QYUI3C7V"],"itemData":{"id":135,"type":"chapter","abstract":"\"The Application of Quantitative Methods to the History of the Book\" published on by Oxford University Press.","container-title":"The Oxford Handbook of Latin Palaeography","event-place":"Oxford; New York (NY)","ISBN":"978-0-19-533694-8","language":"en","note":"DOI: 10.1093/oxfordhb/9780195336948.013.34","page":"651-668","publisher":"Oxford University Press","publisher-place":"Oxford; New York (NY)","title":"The Application of Quantitative Methods to the History of the Book","title-short":"The quantitative application","URL":"https://www.oxfordhandbooks.com/view/10.1093/oxfordhb/9780195336948.001.0001/oxfordhb-9780195336948-e-34","author":[{"family":"Ornato","given":"Ezio"}],"editor":[{"family":"Coulson","given":"Frank T."},{"family":"Babcock","given":"Robert G."}],"accessed":{"date-parts":[["2021",2,4]]},"issued":{"date-parts":[["2020",12,17]]},"citation-key":"ornatoApplicationQuantitativeMethods2020"},"label":"page"}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>
+                    <hi style="font-size:12pt">(Andrist et al., 2013; Ornato, 2020)</hi>, the framework integrates manual and metadata-driven descriptions into computationally analysable datasets. This approach supports both detailed studies of individual manuscripts and comparative analyses across collections. Serialized through an XML schema, the modular structure of the model allows for flexible yet consistent documentation of complex material features, enabling cross-collection analysis and highlighting of production patterns, also integrating external models (such as VisColl full collation models). The framework’s design prioritises extensibility, allowing researchers to incorporate new descriptive elements as research methodologies evolve.
+                </p>
+                <figure>
+                    <graphic n="1001" width="15.885583333333333cm" height="14.982472222222222cm" url="/tmp/tmppvwfr8_f/Pictures/2ece4d3b074b2b2e1058218e6af33f57.png" rend="inline"/>
+                    <head>Figure 1. Diagram of the higher-level fields of the CoMEMM framework. Asterisks (*) denote fields that can have one or more instances, while question marks (?) indicate fields with zero or more instances.</head>
+                </figure>
+                <p>At its core, the framework builds on established codicological methodologies and applies stratigraphic principles commonly used in archaeology 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"hrO1LRXL","properties":{"formattedCitation":"(Warburton, 2008)","plainCitation":"(Warburton, 2008)","noteIndex":0},"citationItems":[{"id":17149,"uris":["http://zotero.org/users/146623/items/6YTQ86P9"],"itemData":{"id":17149,"type":"entry-encyclopedia","abstract":"Discussion of the nature and methods of archaeological stratigraphy. Includes critical discussions of examples as well as advice on relations between terminology, methodology and excavation techniques.","container-title":"Encyclopedia of Archaeology","event-place":"Cambridge (MA)","ISBN":"978-0-12-373962-9","language":"en","note":"DOI: 10.1016/B978-012373962-9.00301-0","page":"2101-2111","publisher":"Academic Press","publisher-place":"Cambridge (MA)","title":"Stratigraphic analysis","URL":"https://www.sciencedirect.com/science/article/pii/B9780123739629003010","author":[{"family":"Warburton","given":"David Alan"}],"editor":[{"family":"Pearsall","given":"Deborah M."}],"issued":{"date-parts":[["2008"]]},"citation-key":"warburtonStratigraphicAnalysis2008"}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>
+                    <hi style="font-size:12pt">(Warburton, 2008)</hi>. It conceptualises the manuscript as a layered artifact, where each element—such as gathering assemblies, ruling patterns, page preparation, or binding structure—contributes to a broader understanding of its construction and use. By capturing the relationships among these features the framework assists researchers in studying production processes and in identifying interventions throughout a manuscript’s history. For example, ruling patterns and 
+                    <hi rend="italic">mise-en-page</hi> can be systematically analysed to reveal how manuscripts were designed to suit specific purposes, offering insights into scribal practices and manuscript design principles 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"SKYbsyhW","properties":{"formattedCitation":"(Ornato, 2020)","plainCitation":"(Ornato, 2020)","noteIndex":0},"citationItems":[{"id":135,"uris":["http://zotero.org/users/146623/items/QYUI3C7V"],"itemData":{"id":135,"type":"chapter","abstract":"\"The Application of Quantitative Methods to the History of the Book\" published on by Oxford University Press.","container-title":"The Oxford Handbook of Latin Palaeography","event-place":"Oxford; New York (NY)","ISBN":"978-0-19-533694-8","language":"en","note":"DOI: 10.1093/oxfordhb/9780195336948.013.34","page":"651-668","publisher":"Oxford University Press","publisher-place":"Oxford; New York (NY)","title":"The Application of Quantitative Methods to the History of the Book","title-short":"The quantitative application","URL":"https://www.oxfordhandbooks.com/view/10.1093/oxfordhb/9780195336948.001.0001/oxfordhb-9780195336948-e-34","author":[{"family":"Ornato","given":"Ezio"}],"editor":[{"family":"Coulson","given":"Frank T."},{"family":"Babcock","given":"Robert G."}],"accessed":{"date-parts":[["2021",2,4]]},"issued":{"date-parts":[["2020",12,17]]},"citation-key":"ornatoApplicationQuantitativeMethods2020"}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>
+                    <hi style="font-size:12pt">(Ornato, 2020)</hi>. Additionally, the model facilitates the study of hybridisation and material reuse, repair, and other traces of historical intervention that inform a manuscript’s life cycle and evolving role in cultural contexts.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Analytical Capabilities and Applications</head>
+                <p>The framework integrates elements of quantitative codicology, enabling the systematic analysis of large datasets to uncover macroscopic trends in manuscript production, use, and circulation. This includes identifying correlations between features, such as standardised formats for specific manuscript types or regional variations in techniques like ruling, gathering composition, or layout design. By tracking these attributes across collections, researchers can reveal evolving preferences, production practices, and manuscript functionality over time and space. The structured data also supports the integration of material evidence of use and function, such as staining or annotations, both of which contribute to understanding reader practices and cultural significance of manuscripts beyond their production.</p>
+                <p>The analytical capabilities extend towards the development of advanced tools for pattern recognition and visualization. For example, like VisColl models, the framework’s structured data can be used to create visual representations of page layouts or to enable analyses of ruling systems and identification of specific production practices. These applications provide a basis for linking manuscripts to production centres or regional traditions.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Technical Implementation and Interoperability </head>
+                <p>The framework is designed to align codicological documentation with computational models, facilitating the integration of disparate datasets. A structured XML schema provides standardised field names and descriptive terminologies for material and structural features, establishing a shared vocabulary 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"x6if51Oo","properties":{"formattedCitation":"(Muzerelle, 2002; Andrist et al., 2013; Velios and Pickwoad, 2020a)","plainCitation":"(Muzerelle, 2002; Andrist et al., 2013; Velios and Pickwoad, 2020a)","noteIndex":0},"citationItems":[{"id":1336,"uris":["http://zotero.org/users/146623/items/SPRZ2UDH"],"itemData":{"id":1336,"type":"book","edition":"Edition hypertextuelle, Version 1.1","event-place":"Paris","publisher":"Institut de recherche et d'histoire des textes, CNRS","publisher-place":"Paris","title":"Vocabulaire codicologique: répertoire méthodique des termes français relatifs aux manuscrits avec leurs équivalents en anglais, italien, espagnol.","title-short":"Vocabulaire Codicologique","URL":"http://vocabulaire.irht.cnrs.fr/","author":[{"family":"Muzerelle","given":"Denis"}],"accessed":{"date-parts":[["2011",12,29]]},"issued":{"date-parts":[["2002"]],"season":"2003"},"citation-key":"muzerelleVocabulaireCodicologiqueRepertoire2002"},"label":"page"},{"id":1924,"uris":["http://zotero.org/users/146623/items/AFGFKH8G"],"itemData":{"id":1924,"type":"book","abstract":"\"Pourquoi les auteurs ont-ils intitulé leur essai \"La syntaxe du codex\"? C'est par analogie avec les catégories grammaticales habituelles, qui distinguent morphologie et syntaxe. La morphologie du codex concernerait les éléments qui le constituent (les mots de la grammaire): matière utilisée, composition en cahiers, type et style d'écriture, encre, couleurs, mise en page, ornementation, reliure, notes de lecteurs ou de possesseurs, etc. La syntaxe consisterait à mettre en relation ces éléments pour comprendre comment le codex 'tient ensemble' et se modifie avec le temps. Les réflexions des auteurs concernent uniquement ce dernier aspect de la 'grammaire du codex' mais supposent la connaissance d'un certain nombre de notions codicologiques de base, indispensable pour suivre l'évolution du raisonnement.\"-- Provided by publisher.","collection-number":"34","collection-title":"Bibliologia","event-place":"Turnhout","ISBN":"978-2-503-54393-2","language":"French","note":"OCLC: 786442677\n\nAnnotated bibliography: Codicological descriptions","publisher":"Brepols","publisher-place":"Turnhout","source":"Open WorldCat","title":"La syntaxe du codex: essai de codicologie structurale","title-short":"La syntaxe du codex","author":[{"family":"Andrist","given":"Patrick"},{"family":"Canart","given":"Paul"},{"family":"Maniaci","given":"Marilena"}],"issued":{"date-parts":[["2013"]]},"citation-key":"andristSyntaxeCodexEssai2013"},"label":"page"},{"id":2346,"uris":["http://zotero.org/users/146623/items/3TYL2H7A"],"itemData":{"id":2346,"type":"chapter","collection-title":"Collection Development, Cultural Heritage, and Digital Humanities","container-title":"Book Conservation and Digitization. The Challenges of Dialogue and Collaboration","event-place":"Leeds","language":"en","license":"Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC-BY-NC-ND)","page":"157-168","publisher":"Arc Humanities Press","publisher-place":"Leeds","title":"The development of the Language of Bindings thesaurus","title-short":"The development","author":[{"family":"Velios","given":"Athanasios"},{"family":"Pickwoad","given":"Nicholas"}],"editor":[{"family":"Campagnolo","given":"Alberto"}],"issued":{"date-parts":[["2020"]]},"citation-key":"veliosDevelopmentLanguageBindings2020"},"label":"page"}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>
+                    <hi style="font-size:12pt">(Muzerelle, 2002; Andrist et al., 2013; Velios and Pickwoad, 2020a)</hi>. By serializing the data in machine-readable formats, the framework supports long-term preservation, data exchange, and computational analysis. This interoperability enhances broader access to and reuse of codicological data and possible integration within TEI documents through namespacing.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion and Future Implications</head>
+                <p>By bridging traditional codicological methods with computational approaches, this framework advances digital codicology while fostering interoperability, accessibility, and data integration in cultural heritage research. The resulting datasets support both focused scholarly investigation and broader quantitative analyses, contributing to a deeper understanding of historical book production, usage, and circulation. The framework’s extensibility and modular design ensure its adaptability to emerging research methodologies, making it a valuable tool for future investigations into manuscript studies. Furthermore, its potential extends beyond the manuscript book, offering opportunities for interdisciplinary integration with related fields such as book history and cultural heritage studies. As a foundation for evolving methodologies, this framework plays a key role in the growing landscape of digital codicology.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl rend="Bibliography" style="text-align: left; ">
+                        <?biblio ADDIN ZOTERO_BIBL {"uncited":[],"omitted":[],"custom":[]} CSL_BIBLIOGRAPHY?>
+                        <hi rend="bold">Andrist, Patrick., Canart, Paul. and Maniaci, Marilena.</hi> (2013). 
+                        <hi rend="italic">La syntaxe du codex: essai de codicologie structurale</hi>. Turnhout: Brepols.
+                    </bibl>
+                    <bibl rend="Bibliography" style="text-align: left; ">
+                        <hi rend="bold">Ligatus</hi> (2007). 
+                        <hi rend="italic">Survey Schemas</hi>. London: University of the Arts London.http://www.ligatus.org.uk/stcatherines/node/1052 (accessed 22 August 2014).
+                    </bibl>
+                    <bibl rend="Bibliography" style="text-align: left; ">
+                        <hi rend="bold">Muzerelle, Denis.</hi> (2002). 
+                        <hi rend="italic">Vocabulaire Codicologique: Répertoire Méthodique Des Termes Français Relatifs Aux Manuscrits Avec Leurs Équivalents En Anglais, Italien, Espagnol.</hi> edition hypertextuelle, version 1.1. Paris: Institut de Recherche et d’histoire Des Textes, CNRS.http://vocabulaire.irht.cnrs.fr/ (accessed 29 December 2011).
+                    </bibl>
+                    <bibl rend="Bibliography" style="text-align: left; ">
+                        <hi rend="bold">Ornato, Ezio.</hi> (2020). The Application of Quantitative Methods to the History of the Book. In Coulson, F.T. and Babcock, R.G. (eds), 
+                        <hi rend="italic">The Oxford Handbook of Latin Palaeography</hi>. Oxford; New York (NY): Oxford University Press, pp. 651–68. 10.1093/oxfordhb/9780195336948.013.34.
+                    </bibl>
+                    <bibl rend="Bibliography" style="text-align: left; ">
+                        <hi rend="bold">Porter, Dot. and Campagnolo, Alberto.</hi> (2021). 
+                        <hi rend="italic">VisColl: Modeling and Visualizing the Physical Construction of Codex Manuscripts</hi>. Philadelphia (PA): University of Pennsylvania Libraries.https://viscoll.org/ (accessed 15 November 2020).
+                    </bibl>
+                    <bibl rend="Bibliography" style="text-align: left; ">
+                        <hi rend="bold">Porter, Dot., Campagnolo, Alberto. and Connelly, Erin.</hi> (2017). VisColl: A New Collation Tool for Manuscript Studies. In Busch, H.Fischer, F.and Sahle, P. (eds), 
+                        <hi rend="italic">Kodikologie &amp; Paläographie Im Digitalen Zeitalter 4 | Codicology &amp; Palaeography in the Digital Age 4</hi>. Schriften des Instituts für Dokumentologie und Editorik. Norderstedt: Books on Demand GmbH, pp. 81–100.https://kups.ub.uni-koeln.de/7782/.
+                    </bibl>
+                    <bibl rend="Bibliography" style="text-align: left; ">
+                        <hi rend="bold">Velios, Athanasios. and Pickwoad, Nicholas.</hi> (2020a). The Development of the Language of Bindings Thesaurus. In Campagnolo, A. (ed.), 
+                        <hi rend="italic">Book Conservation and Digitization. The Challenges of Dialogue and Collaboration</hi>. Collection Development, Cultural Heritage, and Digital Humanities. Leeds: Arc Humanities Press, pp. 157–68.
+                    </bibl>
+                    <bibl rend="Bibliography" style="text-align: left; ">
+                        <hi rend="bold">Velios, Athanasios. and Pickwoad, Nicholas.</hi> (2012). The Digitization of Bookbindings. In Nelson, B. and Terras, M.M. (eds), 
+                        <hi rend="italic">Digitizing Medieval and Early Modern Material Culture</hi>. New Technologies in Medieval and Renaissance Studies. Tempe (AZ): Iter: Gateway to the Middle Ages and Renaissance Toronto, Ontario; Arizona Center for Medieval and Renaissance Studies (ACMRS), pp. 201–28.
+                    </bibl>
+                    <bibl rend="Bibliography" style="text-align: left; ">
+                        <hi rend="bold">Velios, Athanasios. and Pickwoad, Nicholas.</hi> (2020b). Versioning Materiality: Documenting Evidence of Past Binding Structures. In Bleier, R. and Winslow, S.M. (eds), 
+                        <hi rend="italic">Versioning Cultural Objects. Digital Approaches</hi>. Schriften des Instituts für Dokumentologie und Editorik. Norderstedt: Books on Demand, pp. 109–34.
+                    </bibl>
+                    <bibl rend="Bibliography" style="text-align: left; ">
+                        <hi rend="bold">Warburton, David Alan.</hi> (2008). Stratigraphic Analysis Pearsall, D.M. (ed.). 
+                        <hi rend="italic">Encyclopedia of Archaeology</hi>, pp. 2101–11. 10.1016/B978-012373962-9.00301-0.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

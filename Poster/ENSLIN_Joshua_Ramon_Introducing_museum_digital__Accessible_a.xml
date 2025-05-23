@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ENSLIN_Joshua_Ramon_Introducing_museum_digital__Accessible_a">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Introducing museum-digital: Accessible and collaborative collection management and publication for and by museums</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Enslin</surname>
+                        <forename>Joshua Ramon</forename>
+                    </persName>
+                    <affiliation>Freies Deutsches Hochstift / Frankfurter Goethemuseum, Germany</affiliation>
+                    <email>jenslin@freies-deutsches-hochstift.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T01:10:16.413457989</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Cultural heritage</term>
+                    <term>collaboration</term>
+                    <term>museums</term>
+                    <term>linked open data</term>
+                    <term>collection data</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>linked (open) data</term>
+                    <term>metadata standards</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>user experience design and analysis</term>
+                    <term>Computer science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Museums’ collection data can be an important resource for research in the digital humanities and fields beyond. Publishing collection data in an accessible and comprehensive way however has often been itself rather inaccessible. More well-funded institutions can afford to build dedicated solutions to present their collections on their website and at times also provide the relevant data sets in a machine-readable manner. In turn, supra-national or national platforms like Europeana or the German Digital Library long required a previous canonical publication of the collection data to link back to, effectively requiring museums to primarily publish their data elsewhere. With sufficient funding, museums they may turn to commercial software like ZetCOM’s eMuseumPlus or Vernon’s e-Hive; with expertise they may build upon existing open-source software such as Omeka. Smaller museums however often lack both the funds and expertise to maintain their own online collections as well as the prestige to attain a reasonable level of visibility by themselves, even if they manage to set up an own online catalogue. Similarly, smaller museums often lack professional collection management software that would allow for a systematic indexation of their collection in the first place (Institut für Museumsforschung 2023).</p>
+            <p>Several initiatives have developed to facilitate the collaborative publication and at times management of collection data. Among these is museum-digital, founded by a range of smaller and medium-sized museums in the German state of Saxony-Anhalt in early 2009. Initially only aimed at providing a shared, accessible and - notably - visible centralized platform for the publication of the participating museums’ collections, the initiative has since developed in scope and size (Kopp-Sievers et al. 2015).</p>
+            <p>In doing so, development is based on community feedback and actions as well as the larger discussion in the field of cultural heritage. As it became apparent that museums actually used the backend for entering collection data for collection management, that backend has since been developed into a full-fledged collection management system (musdb). Aiming to facilitate the recording of high-quality collection data, all participating museums use shared controlled vocabularies that are collaboratively generated and enriched. In doing so, museum-digital takes a similar approach to some discipline-specific indexation and publication platforms such as the Interactive Catalogue of the Coin Cabinet<ref n="1" target="ftn0"/>, while taking a decidedly different approach from comparable general-purpose platforms such as DigiCult. The shared use and curation of a common set of controlled vocabularies allows for a much improved immediate interoperability between the collections of the different participating institutions while significantly reducing the workload of curation and enrichment with, among others, translations and links to norm data repositories such as Wikidata or the Library of Congress Subject headings vis-a-vis the use of institution-specific controlled vocabularies. The controlled vocabularies are made available on a dedicated norm data platform in both human- and machine-readable formats such as SKOS (md:term).
+            </p>
+            <p>As narratives and exhibitions are a central part of museums’ work beyond the collections themselves, tools for publishing these online have been created (themator). While each of the components is free to use and maintained in a combination of volunteer efforts and dedicated support by museum associations, museums can opt to use only those suitable for their workflows and use cases. Many larger museums import their data to museum-digital for publication only while they maintain their own collection management solutions. To simplify the import of collection data, the initiative provides validation and data conversion tools (csvxml, md:quality (Enslin 2023)). To ensure a consistent level of accessibility, all web-facing tools are regularly checked with relevant browser extensions such as Lighthouse and WAVE (Enslin 2011).</p>
+            <p>Similar to its expanding scope, the initiative has grown in size. By now, over a thousand museums, primarily from Germany, Hungary and Ukraine have published their data using museum-digital.<ref n="2" target="ftn1"/> Thanks to the shared, multilingual controlled vocabularies, it is possible for users to search across over one million objects from these institutions using a single unified platform (museum-digital:global). The use of linked open data concepts thus provides the groundwork for multilingual accessibility, while open access licenses ensure a legal foundation for the reusability of much of the published data (restrictive licenses can be selected where necessary; e.g. in the case of displays of contemporary art). The simple inclusion of a specific contact email address for the majority of pages has provided for much feedback and information flowing back to the museums from the wider public.
+            </p>
+            <p>All data published via museum-digital is made accessible using REST-APIs documented using the OpenAPI standard<ref n="3" target="ftn2"/> as well as suitable APIs following relevant open standards (e.g. LIDO for object metadata, IIIF for images, VCard for institutions’ contact information), etc. This poster presents the different components of museum-digital outlined above focusing on their collaborative aspects as well as their APIs.
+            </p>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn0" rend="footnote text" n="1">See the IKMK’s norm data portal, 
+                    <ref target="https://ikmk.smb.museum/ndp/home?lang=de">https://ikmk.smb.museum/ndp</ref> as well as the closely linked nomisma, 
+                    .
+                </note>
+<note xml:id="ftn1" rend="footnote text" n="2">See museum-digtial’s general dashboard at 
+                    .
+                </note>
+<note xml:id="ftn2" rend="footnote text" n="3">Instance-specific API documentation comes with specific examples and convenience features. For the global instance’s API, see 
+                    .
+                </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Enslin, </hi>
+                        <hi rend="bold">Joshua </hi>
+                        <hi rend="bold">R.</hi> (2021, April 23). “Barrierefreiheit bei museum-digital”. 
+                        <hi rend="italic">museum-digital:blog</hi>. 
+                        <ptr target="https://blog.museum-digital.org/de/2021/04/23/barrierefreiheit-bei-museum-digital/"/>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Enslin, </hi>
+                        <hi rend="bold">Joshua </hi>
+                        <hi rend="bold">R. </hi>(2023), October 10. 
+                        <hi rend="italic">Datenqualität messen dank offenen Standards und Linked Open Data</hi>. Herbsttagung der FG Dokumentation des Deutschen Museumsbunds, Konrad-Zuse-Institut Berlin. 
+                        <ptr target="https://quality.museum-digital.org/"/>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Institut für Museumsforschung</hi> (2023). 
+                        <hi rend="italic">Statistische Gesamterhebung an den Museen der Bundesrepublik Deutschland für das Jahr 2021 (Heft 77)</hi>. Eds. P. Rahemipour &amp; K. Grotz. arthistoricum.net. DOI: 
+                        <ptr target="https://doi.org/10.11588/ifmzm.2023.1"/>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Kopp-Sievers, </hi>
+                        <hi rend="bold">Susanne /</hi>
+                        <hi rend="bold"> Scheeder, </hi>
+                        <hi rend="bold">Bettina /</hi>
+                        <hi rend="bold"> Wübbenhorst, </hi>
+                        <hi rend="bold">Jens</hi> (2015). “museum-digital – Ein zivilgesellschaftliches Projekt großer und kleiner Museen”. in: 
+                        <hi rend="italic">Handbuch Kulturportale - Online-Angebote aus Kultur und Wissenschaft</hi>. Eds. E. Euler, M. Hagedorn-Saupe, et al. 322–329. 
+                        <ref target="https://doi.org/10.1515/9783110405774-032">DOI: 10.1515/9783110405774-032</ref>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

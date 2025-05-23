@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BISIANI_Simona_A_Semi_Automated_Directory_System_for_the_UK_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>A Semi-Automated Directory System for the UK Local News Landscape: Supporting Policy and Research</title>
+                <author>
+                    <persName>
+                        <surname>Bisiani</surname>
+                        <forename>Simona</forename>
+                    </persName>
+                    <affiliation>University of Surrey, United Kingdom</affiliation>
+                    <email>s.bisiani@surrey.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Mitchell</surname>
+                        <forename>Joe</forename>
+                    </persName>
+                    <affiliation>Public Interest News Foundation, United Kingdom</affiliation>
+                    <email>joe@publicinterestnews.org.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Gulyas</surname>
+                        <forename>Agnes</forename>
+                    </persName>
+                    <affiliation>Canterbury Christ Church University, United Kingdom</affiliation>
+                    <email>agnes.gulyas@canterbury.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Heravi</surname>
+                        <forename>Bahareh</forename>
+                    </persName>
+                    <affiliation>University of Surrey, United Kingdom</affiliation>
+                    <email>b.heravi@surrey.ac.uk</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-02T14:24:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>News directory automation; Local news ecosystem; UK media landscape; Media pluralism; Open-source intelligence (OSINT);</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>systems and information architecture and usability</term>
+                    <term>text mining and analysis</term>
+                    <term>Communication studies</term>
+                    <term>Media studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <hi rend="normaltextrun">
+                        <hi rend="normalweight">Abstract</hi>
+                    </hi>
+                </head>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun">This research addresses the lack of comprehensive databases on local media outlets in the UK through the development of a semi-automated system that leverages open-source intelligence (OSINT) and computational workflows to maintain a comprehensive directory across print, digital, radio, and television in the UK. The system tracks closures, launches, ownership changes, and geographic coverage, significantly reducing manual research labour for the database maintenance while enhancing data accuracy (PINF 2023; The Media Reform Coalition 2023; Bisiani and Heravi 2023).</hi>
+                    <hi rend="eop"> </hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <hi rend="normaltextrun">
+                        <hi rend="normalweight">Introduction</hi>
+                    </hi>
+                </head>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun">The UK local news ecosystem lacks a comprehensive data resource, with existing directories providing only partial snapshots of the industry (Ramsay and Moore 2016; Bisiani and Heravi 2023). This poster introduces a solution to this gap by presenting an automated approach to directory maintenance, which is crucial for understanding the fragile local news landscape.</hi>
+                    <hi rend="eop"> </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun">Local media faces severe economic challenges, including revenue losses and consolidation (Franklin 2006; Cairncross 2019), leading to declining outlets, journalists, and publishers. This has created "local media gaps" (Gulyas and Baines 2020; Ramsay and Moore 2016) with implications for democratic engagement (Hayes and Lawless 2018) and public resource management (Gao, Lee, and Murphy 2020). Similar trends are observed globally (Abernathy 2018; Hess 2018). As a result, several initiatives are being launched to track and monitor the health and scope of the local media industry, in the UK and elsewhere (Institutet for Mediestudier 2024; Hamburg Media School 2024; Abernathy 2018; Dickson et al 2022). Common to these initiatives are challenges in data maintenance or a lack of existing initiatives to curate databases of local media brands (Bisiani and Heravi 2023; Gulyas 2021).</hi>
+                    <hi rend="eop"> </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun">This work describes a semi-automated system developed by the Public Interest News Foundation (PINF) that processes publicly available information about UK local news media. The system integrates data processing with human expertise to track industry changes with unprecedented accuracy.</hi>
+                    <hi rend="eop"> </hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <hi rend="normaltextrun">
+                        <hi rend="normalweight">Methodology</hi>
+                    </hi>
+                </head>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun">The research employs a structured approach to define and maintain the local news directory. Inclusion criteria require outlets to be legally incorporated, have a principal purpose of providing local news, and show recent activity (publishing within the past month). The data structure includes twelve key variables tracking outlets' status, ownership, location, media type, and more. The automated system integrates five main sources of open-source intelligence: 1) Circulation data from ABC and JICREG auditors to identify new entries or disappearances, 2) Industry news from HoldTheFrontPage and Press Gazette analyzed using keywords and natural language processing to detect closures, launches, and acquisitions, 3) Company information from UK Government's Companies House API to track new media companies and update existing details, 4) Website activity monitoring to identify non-functional URLs and potential "ghost" sites, and 5) Geographic coverage verification using Office for National Statistics data to maintain accurate Local Authority District information. The workflow operates through three stages: automated data collection and analysis, manual review by researchers, and insight generation through additional automated analyses—an approach previously suggested by Bisiani and Heravi (2023) for improving directory maintenance efficiency.</hi>
+                    <hi rend="eop"> </hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <hi rend="normaltextrun">
+                        <hi rend="normalweight">Results</hi>
+                    </hi>
+                </head>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun">The system's effectiveness is demonstrated through quantitative analysis showing flagged and implemented changes across different automation types. Manual research time for updating the database was reduced from weeks to just three days. Between July 2023 and April 2024, the system identified 33 closures, 7 launches, 15 ownership changes, and numerous other modifications.</hi>
+                    <hi rend="eop"> </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun">The updated directory reveals approximately 1,196 local news outlets in the UK (one per 56,000 people), with England being relatively underserved (Bisiani and Mitchell 2024). The analysis identifies 28 "absolute" news deserts, 10 "relative" news deserts, and areas of concentrated media ownership where three publishers' control 37.6% of outlets.</hi>
+                    <hi rend="eop"> </hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <hi rend="normaltextrun">
+                        <hi rend="normalweight">Conclusion</hi>
+                    </hi>
+                </head>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun">This initiative establishes a historical record of local media brands while enabling longitudinal research on news provision, similar to efforts in Sweden (Nygren 2023; Institutet for Mediestudier 2024), the USA (Abernathy 2018), Germany (Hamburg Media School 2024), and Australia (Dickson, Arturi, and Balen 2022). Future research directions include monitoring news deserts over time (Abernathy 2018), studying the resilience of independent outlets, examining media ownership concentration's effects (Coalition 2023), analysing geographic distribution related to demographics (Napoli 2018; Gulyas 2021), and assessing the efficacy of the Local Democracy Reporting Service (Barnett and Greenslade 2020).</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <hi rend="normaltextrun">References</hi>
+                </head>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun">Abernathy, Penelope Muse (2018): “The expanding news desert”. Chapel Hill: University of North Carolina.</hi>
+                    <hi rend="eop"> </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun">Barnett, Steven / Greenslade, Roy (2020): “Not the way to use our money”. In: British Journalism Review 31, 2: 43–49. DOI: 10.1177/0956474820931404. </hi>
+                    <hi rend="eop"> </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun">Bisiani, Simona / Heravi, Bahareh (2023): “Uncovering the state of local news databases in the UK: Limitations and impacts on research”. In: Journalism and Media 4, 4: 1211–1231. DOI: 10.3390/journalmedia4040077. </hi>
+                    <hi rend="eop"> </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun">Bisiani, Simona / Mitchell, Joe (2024): UK Local News Report April 2024. London: Public Interest News Foundation.</hi>
+                    <hi rend="eop"> </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun" xml:space="preserve">Cairncross, Frances (2019): “The Cairncross Review: A sustainable future for journalism”. GOV.UK. </hi>
+                    <ref target="https://www.gov.uk/government/publications/the-cairncross-review-a-sustainable-future-for-journalism">
+                        <hi rend="normaltextrun">
+                            <hi rend="underline color(0000FF)">https://www.gov.uk/government/publications/the-cairncross-review-a-sustainable-future-for-journalism</hi>
+                        </hi>
+                    </ref>
+                    <hi rend="normaltextrun" xml:space="preserve"> [08.15.2023].</hi>
+                    <hi rend="eop"> </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun" xml:space="preserve">Dickson, Gary / Arturi, Sarah / Balen, Clancy (2022): Australian News Index. Public Interest Journalism Initiative. </hi>
+                    <ref target="https://apo.org.au/node/317819">
+                        <hi rend="normaltextrun">
+                            <hi rend="underline color(0000FF)">https://apo.org.au/node/317819</hi>
+                        </hi>
+                    </ref>
+                    <hi rend="normaltextrun" xml:space="preserve"> [07.28.2023].</hi>
+                    <hi rend="eop"> </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun">Franklin, Bob (2006): Local Journalism and Local Media: Making the Local News. London: Routledge. DOI: 10.4324/9780203969205.</hi>
+                    <hi rend="eop"> </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun">Gao, Pengjie / Lee, Chang / Murphy, Dermot (2020): “Financing dies in darkness? The impact of newspaper closures on public finance”. In: Journal of Financial Economics 135, 2: 445–467. DOI: 10.1016/j.jfineco.2019.06.003</hi>
+                    <hi rend="eop"> </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun">Gulyas, Agnes (2021): “Local news deserts”, in: Harte, David / Matthews, Rachel (eds.): Reappraising Local and Community News in the UK. London: Routledge, 16-28.</hi>
+                    <hi rend="eop"> </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun">Gulyas, Agnes / Baines, David (2020): “Introduction: Demarcating the field of local media and journalism”. In: The Routledge Companion to Local Media and Journalism. London: Routledge.</hi>
+                    <hi rend="eop"> </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun" xml:space="preserve">Hamburg Media School (2024): “Wüstenradar (wuestenradar.de)”. </hi>
+                    <ref target="https://www.wuestenradar.de/studie/">
+                        <hi rend="normaltextrun">
+                            <hi rend="underline color(0000FF)">https://www.wuestenradar.de/studie/</hi>
+                        </hi>
+                    </ref>
+                    <hi rend="normaltextrun" xml:space="preserve"> [12.03.2024]. </hi>
+                    <hi rend="eop"> </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun">Hayes, Danny / Lawless, Jennifer L. (2018): “The decline of local news and its effects: New evidence from longitudinal data”. In: The Journal of Politics 80, 1: 332–336. DOI: 10.1086/694105.</hi>
+                    <hi rend="eop"> </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun">Hess, Kristy (2018): “Mining the depleted ‘Rivers of Gold’: Public notices and the sustainability of Australian local news in a digitised democracy”. In: Digitizing Democracy: 88–99.</hi>
+                    <hi rend="eop"> </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun" xml:space="preserve">Institutet for mediestudier (2024): “Kommundatabasen”. </hi>
+                    <ref target="https://kommundatabas.mediestudier.se/">
+                        <hi rend="normaltextrun">
+                            <hi rend="underline color(0000FF)">https://kommundatabas.mediestudier.se/</hi>
+                        </hi>
+                    </ref>
+                    <hi rend="normaltextrun" xml:space="preserve"> [03.28.2024].</hi>
+                    <hi rend="eop"> </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun">Nygren, Gunnar (2023): “Local journalism with state support”. In: Media and Communication 11, 3: 401–403. DOI: 10.17645/mac.v11i3.7503.</hi>
+                    <hi rend="eop"> </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun">Napoli, Philip M. / Weber, Matthew / McCollough, Kathleen (2018): “An approach to assessing the robustness of local news provision”. In: The Routledge Handbook of Developments in Digital Journalism Studies. London: Routledge.</hi>
+                    <hi rend="eop"> </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun" xml:space="preserve">PINF (2023): Deserts, Oases and Drylands. </hi>
+                    <ref target="https://www.publicinterestnews.org.uk/map">
+                        <hi rend="normaltextrun">
+                            <hi rend="underline color(0000FF)">https://www.publicinterestnews.org.uk/map</hi>
+                        </hi>
+                    </ref>
+                    <hi rend="normaltextrun" xml:space="preserve"> [10.06.2023].</hi>
+                    <hi rend="eop"> </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun">Ramsay, Gordon / Moore, Martin (2016): “Monopolising local news: Is there an emerging local democratic deficit in the UK due to the decline of local newspapers?” London: King’s College London. DOI: 10.18742/pub01-026.</hi>
+                    <hi rend="eop"> </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi rend="normaltextrun">The Media Reform Coalition (2023): Who Owns the UK Media? London: King’s College University.</hi>
+                </p>
+            </div>
+        </body>
+    </text>
+</TEI>

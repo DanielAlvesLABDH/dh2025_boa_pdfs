@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VIEIRA_Miguel_Prototyping_a_RAG_System_for_Digital_Humanitie">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Prototyping a RAG System for Digital Humanities: Ethical Considerations in AI Processing of Indigenous Data</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Vieira</surname>
+                        <forename>Miguel</forename>
+                    </persName>
+                    <affiliation>King's Digital Lab, King's College London, United Kingdom</affiliation>
+                    <email>jose.m.vieira@kcl.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Callaghan</surname>
+                        <forename>Samantha</forename>
+                    </persName>
+                    <affiliation>King's Digital Lab, King's College London, United Kingdom</affiliation>
+                    <email>samantha.callaghan@kcl.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ciula</surname>
+                        <forename>Arianna</forename>
+                    </persName>
+                    <affiliation>King's Digital Lab, King's College London, United Kingdom</affiliation>
+                    <email>arianna.ciula@kcl.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Lu</surname>
+                        <forename>Zihao</forename>
+                    </persName>
+                    <affiliation>King's Digital Lab, King's College London, United Kingdom</affiliation>
+                    <email>zihao.lu@kcl.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ong</surname>
+                        <forename>Tiffany</forename>
+                    </persName>
+                    <affiliation>King's Digital Lab, King's College London, United Kingdom</affiliation>
+                    <email>tiffany.ong@kcl.ac.uk</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-08T16:15:15.994392000</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Retrieval-Augmented Generation</term>
+                    <term>Indigenous Data</term>
+                    <term>AI Ethics</term>
+                    <term>Cultural Heritage</term>
+                    <term>Research Software Engineering</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>digital access</term>
+                    <term>privacy</term>
+                    <term>and ethics analysis</term>
+                    <term>natural language processing</term>
+                    <term>Indigenous studies</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Keywords: Retrieval-Augmented Generation, Indigenous Data, AI Ethics, Cultural Heritage, Research Software Engineering</p>
+            <p>This poster presents work conducted by 
+                <ref target="https://kdl.kcl.ac.uk/">King's Digital Lab</ref> as part of 
+                <ref target="https://kdl.kcl.ac.uk/projects/ireal/">iREAL</ref> (Indigenous Rights and Ethics in AI Libraries), a six-month scoping project funded by the Arts and Humanities Research Council's "Bridging Responsible AI Divides" scheme in the United Kingdom. iREAL aims to foster collaboration between Indigenous communities, librarians, and AI developers to ensure responsible inclusion of Indigenous knowledge in library AI systems, with a particular focus on Aboriginal and Torres Strait Islander communities in Australia.
+            </p>
+            <p>Within this broader context, we developed a 
+                <ref target="https://github.com/kingsdigitallab/iREAL/tree/main">proof-of-concept</ref> Retrieval-Augmented Generation (RAG) system to explore the ethical implications of applying AI/ML technologies to Indigenous cultural data in Digital Humanities research. The prototype, developed as part of a dashboard, processes historical records from Aboriginal schools to stimulate critical discussion around AI ethics and cultural sensitivity in digital research methodologies.
+            </p>
+            <p>Our implementation combines large language models with a specialised knowledge base, incorporating key technical components including document processing pipelines, embedding and vectorisation systems, and multi-modal retrieval mechanisms. While exploring different language models for the prototype, we gained valuable insights into the trade-offs between model capabilities, computational requirements, and openness. This exploration highlighted how lighter, open-source models could make future implementations more sustainable and easier to maintain (Cordell, 2020). The system architecture emphasises modularity and configurability, allowing for iterative refinement based on stakeholder feedback. Development was informed by insights from a diverse project team and benefited from extensive feedback during two of the workshops, that contributed to the project's ethical framework and technical decisions.</p>
+            <p>From a technical perspective, the prototype was built using the 
+                <ref target="https://www.llamaindex.ai/">LlamaIndex</ref> framework, implementing a hybrid search approach that combines vector similarity search with 
+                <ref target="https://en.wikipedia.org/wiki/Okapi_BM25#cite_note-5">BM25</ref> keyword matching for improved retrieval accuracy. The system uses the 
+                <ref target="https://huggingface.co/mistralai/Mistral-7B-v0.1">Mistral-7B</ref> language model for both text generation and embeddings, chosen for its balance of performance and resource requirements. Document processing uses a "
+                <ref target="https://docs.llamaindex.ai/en/stable/examples/node_parsers/semantic_chunking/">semantic chunking</ref>" strategy to maintain context coherence, with the processed chunks stored in a 
+                <ref target="http://qdrant.tech/">Qdrant</ref> vector database. Observability is implemented via 
+                <ref target="https://phoenix.arize.com/">Arize Phoenix</ref> to provide insights into the RAG system's performance, improving the transparency and optimisation of the implementation.
+            </p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmpzet0asyn/Pictures/81d70c5423f5d82c4e93039d767c5d69.png"/>
+                </figure>RAG question/answer architecture diagram
+            </p>
+            <p>The prototype's development involved a multidisciplinary team working over a short period, focusing on both technical implementation and ethical frameworks. Through this process, we identified several key considerations for future implementations, including the importance of balancing model capabilities with resource constraints, the need for continuous community involvement throughout development, the value of flexible architectures that can accommodate different types of cultural materials, and the importance of transparent documentation of AI system choices. The poster visualises key features including a user feedback system for response evaluation, integration with primary sources for verification, and transparent presentation of AI-generated insights. The system processes documents through a conversion pipeline from Word to JSON/Markdown formats, highlighting the technical challenges in standardising historical documents for machine processing.</p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmpzet0asyn/Pictures/81d70c5423f5d82c4e93039d767c5d69.png"/>
+                </figure>Dashboard highlighting the RAG functionality
+            </p>
+            <p>Significant challenges encountered during development included addressing semantic drift and maintaining cultural sensitivity while processing historical data. These challenges underscore the gap between basic RAG implementation and developing systems suitable for serious research applications. The project's findings emphasise the importance of community involvement in AI development processes, particularly when dealing with culturally sensitive materials (Lewis 2023).</p>
+            <p>While not intended for production use, this prototype serves as a valuable case study in applying AI/ML technologies to cultural heritage data. Through visual representations and interactive demonstrations at the poster session, we aim to stimulate discussion about ethical AI development, community involvement in technical projects, and the balance between innovation and cultural sensitivity in digital humanities research. The insights gained from this prototype will inform iREAL's broader goal of developing proposals for inclusive AI systems in libraries that respect Indigenous rights, knowledges, and data (Maiam nayri Wingara 2018).</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Indigenous Archives Collective</hi> (2021). The Indigenous Archives Collective position statement on the right of reply to Indigenous knowledges and information held in archives. 
+                        <emph>Archives and Manuscripts</emph>, 
+                        <emph>49</emph>(3), 244-252. &lt;
+                        <ptr target="https://indigenousarchives.net/indigenous-archives-collective-position-statement-on-the-right-of-reply-to-indigenous-knowledges-and-information-held-in-archives/"/>&gt;[2025-05-08]
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold"> Global Indigenous Data Alliance</hi> (2019). CARE Principles for Indigenous Data Governance. &lt;
+                        <ptr target="https://static1.squarespace.com/static/5d3799de845604000199cd24/t/6397b363b502ff481fce6baf/1670886246948/CARE%2BPrinciples_One%2BPagers%2BFINAL_Oct_17_2019.pdf"/>&gt;[2025-05-08] 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Cordell, Ryan</hi>. “Machine Learning + Libraries”. Library of Congress, 2020. &lt;
+                        <ptr target="https://labs.loc.gov/static/labs/work/reports/Cordell-LOC-ML-report.pdf"/>&gt;[2025-05-08]
+                    </bibl>
+                    <bibl>Lewis, Jason Edward, 'Imagining Indigenous AI', in Stephen Cave, and Kanta Dihal (eds), 
+                        <emph>Imagining AI: How the World Sees Intelligent Machines</emph> (Oxford, 2023; online edn, Oxford Academic, 22 June 2023), &lt;
+                        <ptr target="https://doi.org/10.1093/oso/9780192865366.003.0013"/>&gt;[2025-05-08] 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Maiam nayri Wingara</hi> (2018). Indigenous Data Sovereignty Communique. &lt;
+                        <ptr target="https://static1.squarespace.com/static/5b3043afb40b9d20411f3512/t/63ed934fe861fa061ebb9202/1676514134724/Communique-Indigenous-Data-Sovereignty-Summit.pdf"/>&gt;[2025-05-08]
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

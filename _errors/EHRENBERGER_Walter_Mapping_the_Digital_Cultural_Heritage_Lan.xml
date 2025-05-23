@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="EHRENBERGER_Walter_Mapping_the_Digital_Cultural_Heritage_Lan">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Mapping the Digital Cultural Heritage Landscape: A Data-Driven Approach to Understanding Institutional Networks and Knowledge Distribution</title>
+                <author>
+                    <persName>
+                        <surname>Ehrenberger</surname>
+                        <forename>Walter</forename>
+                    </persName>
+                    <affiliation>Friedrich-Schiller-Universität Jena, Germany</affiliation>
+                    <email>walter.ehrenberger@uni-jena.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-09T10:33:00.0000000Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>institutional networks</term>
+                    <term>research funding analysis</term>
+                    <term>cultural heritage analytics</term>
+                    <term>knowledge distribution</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>data modeling</term>
+                    <term>network analysis and graphs theory and application</term>
+                    <term>spatial &amp; spatio-temporal analysis</term>
+                    <term>modeling and visualization</term>
+                    <term>Computer science</term>
+                    <term>Cultural studies</term>
+                    <term>Galleries and museum studies</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">This short paper proposal presents an extendable ETL-based pipeline and an interactive visualization platform that addresses a crucial gap in understanding the digital cultural heritage landscape. While existing resources like DARIAH-EU, CORDIS, EPOCH, Ariadne and Europeana provide valuable but fragmented views of the field (Münster, 2017; Almevik et al. 2022), our work offers an automated, data-driven approach to continuously mapping institutional relationships, funding patterns, topic development and research focus areas across the cultural heritage domain.</p>
+            <p style="text-align: left; ">
+                <hi style="font-size:10pt">Through quantitative analysis of how cultural heritage knowledge and resources are distributed across institutions, this work supports humanities scholars in examining critical questions about institutional power dynamics, regional differences in research focus, and the evolution of cultural heritage as a field. The platform's visualization of funding patterns enables researchers to identify potential biases in resource allocation and underrepresented areas of cultural heritage research, particularly important for understanding and supporting minority cultural heritage initiatives.</hi>
+            </p>
+            <p style="text-align: left; text-align: left;">
+                <hi rend="bold" style="font-size:10pt">1. Data Intergration Analysis</hi>
+            </p>
+            <p style="text-align: left; ">
+                <hi style="font-size:10pt">Our system integrates, sanitizes, and unifies data from multiple sources through a custom automated ETL pipeline into a coherent data model. We have gathered over 12,000 projects and over 200,000 research outputs (including OCR parsed PDF documents) from Cordis (using the query: cultural OR heritage), over 10,000 projects from OpenAire (using the same query). 200,000 publications from core.ac.uk (using the query: (computing AND cultural) OR (computing AND heritage)) and almost 50,000 publications from arXiv (using the query: computing AND (humanities OR heritage) ). This has resulted in a comprehensive deduplicated dataset comprising 45,725 institutions, 23,055 projects, and 374,998 research outputs with relevant metadata including topics.</hi>
+            </p>
+            <p style="text-align: left; ">
+                <hi style="font-size:10pt">Through interactive geographic visualizations built with deck.gl, users can explore institutional networks, funding distributions, and collaboration patterns given filters for topics in the field of cultural heritage. The system enables analysis of previously unmapped collaboration patterns and institutional relationships across the cultural heritage domain, illuminating both established research networks and potential gaps in cross-institutional collaboration, addressing the sector fragmentation challenges identified by Almevik et al. (2022).</hi>
+            </p>
+            <figure>
+                <graphic n="1001" width="11.400880555555556cm" height="7.858125cm" url="/tmp/tmpk99_83ha//media/image3.png" rend="inline"/>
+            </figure>
+            <p rend="Normal" style="text-align: justify; ">
+                <hi rend="normalweight" style="font-size:10pt">Figure 1: Displaying funding in Portugal for the keywords ‘Cultural AND Heritage’.</hi>
+            </p>
+            <figure>
+                <graphic n="1002" width="11.403544444444444cm" height="8.500822222222222cm" url="/tmp/tmpk99_83ha//media/image3.png" rend="inline"/>
+            </figure>
+            <p rend="Normal" style="text-align: justify; ">
+                <hi rend="normalweight" style="font-size:10pt">Figure 2: Displaying project partners of Faculty of Social and Human Sciences of the New University of Lisbon.</hi>
+            </p>
+            <p style="text-align: left; ">Our data model captures the complex interplay between research outputs, institutional collaborations, and funding patterns, enabling users to trace how specific cultural heritage topics evolve through institutional networks over time.</p>
+            <p style="text-align: left; text-align: left;">
+                <hi rend="bold" style="font-size:10pt">2. Full-Text Analysis and Topic Modeling</hi>
+            </p>
+            <p style="text-align: left; ">While our current work focuses on metadata analysis, we are planning to extend our pipeline to include full-text analysis capabilities. A key challenge lies in accurately identifying which papers and institutions are actually working in the cultural heritage domain. We plan to use large language models deployed on our computing cluster to analyze paper abstracts, helping differentiate cultural heritage research from other domains and improve topic classification. This approach will combine traditional NLP techniques with deep learning models to address a critical stakeholder need: accurately mapping terminology across different cultural heritage domains and identifying emerging research trends. The result will be a more coherent and standardized topic landscape across the cultural heritage domain.</p>
+            <p style="text-align: left; text-align: left;">
+                <hi rend="bold" style="font-size:10pt">3. User Scenarios and Platform Development</hi>
+            </p>
+            <p rend="Normal" style="text-align: justify; ">
+                <hi rend="normalweight" style="font-size:10pt">Building on extensive stakeholder analysis conducted over four years, including consultations with EU policymakers, research ministries, and cultural heritage professionals, we have identified three key usage scenarios for the platform:</hi>
+            </p>
+            <list type="ordered">
+                <item>
+                    <hi rend="normalweight" style="font-size:10pt">Institution and Partnership Mapping: Supporting the identification of institutions active in specific digital heritage topics and their collaboration networks, enabling strategic partnership formation and revealing underserved areas in the field. For example, a regional innovation officer could identify SMEs working on digital preservation technologies to invite to targeted networking events, or research support units could analyze successful project consortium patterns to inform future collaboration strategies.</hi>
+                </item>
+                <item>Topic Evolution and Trends Analysis: Enabling users to track the emergence and development of research areas over time, helping identify gaps and opportunities in cultural heritage research. This could help research ministries identify emerging cross-disciplinary trends, such as the intersection of AI and heritage preservation, or help cultural institutions track how digitization practices have evolved across different regions.</item>
+                <item>Funding Impact Assessment: Analyzing the relationship between funding inputs and research outputs, helping evaluate program effectiveness and identify areas requiring additional support, particularly for minority cultural heritage initiatives. For instance, policy makers could examine how well specific funding programs translate into research outputs in minority heritage domains, or track geographic disparities in cultural heritage funding allocation across Europe.</item>
+            </list>
+            <p rend="Normal" style="text-align: justify; ">
+                <hi rend="normalweight" style="font-size:10pt">These scenarios directly address the sector fragmentation challenges identified by Almevik et al. (2022), where lack of cohesion and communication hinders effective collaboration and resource allocation. Our platform has the potential to address these challenges, enhancing evidence-based decision making, and enabling more efficient resource allocation. Particularly within the context of the DIGICHer project, this tool supports the preservation and promotion of minority cultural heritage by making institutional networks and resource distribution more transparent and accessible. The flexible architecture of our system allows for future expansion to address emerging needs in the digital humanities and cultural heritage domains, as well as the thematic extensions into related domains.</hi>
+            </p>
+            <p rend="Normal" style="text-align: justify; ">
+                <hi rend="italic normalweight" style="font-size:10pt">Acknowledgement: This project has received funding from the European Union’s research and innovation programme Horizon Europe under the grant agreement No. 101132481 .</hi>
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">
+                            <hi rend="bold" style="font-size:10pt">Almevik</hi>
+                            <hi rend="bold" style="font-size:10pt" xml:space="preserve">, Gunnar / Adolfsson, Petra / Grahn, Wera / Higgins, Torgrim / Holmberg, Ingrid / </hi>
+                            <hi rend="bold" style="font-size:10pt">Wollentz</hi>
+                            <hi rend="bold" style="font-size:10pt">, Gustav (2022)</hi>
+                            <hi rend="normalweight" style="font-size:10pt">: Who is not a stakeholder in cultural heritage? CHARTER Alliance Report.</hi>
+                        </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">DARIAH-EU (n.d.)</hi>
+                        <hi style="font-size:10pt">: "DARIAH-EU Open AIRE" https://dariah.openaire.eu/ [07.12.2024].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">EPOCH (n.d.)</hi>
+                        <hi style="font-size:10pt">: "EPOCH - Network of Excellence" http://epochnet.org/ [07.12.2024].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">European Commission (n.d.)</hi>
+                        <hi style="font-size:10pt">: "CORDIS - EU research results" https://cordis.europa.eu/ [07.12.2024].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Europeana (n.d.)</hi>
+                        <hi style="font-size:10pt">: "Europeana" https://www.europeana.eu/en [07.12.2024].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Münster, Sander (2017)</hi>
+                        <hi style="font-size:10pt">: "A Survey on Topics, Researchers and Cultures in the Field of Digital Heritage", in: Digital Heritage 3, 1: 5-23.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

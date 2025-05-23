@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ARRIBAS_COLMENAR_Sara_Letras_en_danza__la_recuperaci_n_del_l">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Letras en danza: la recuperación del legado olvidado de María Lejárraga y la evolución coreográfica del Teatro de Arte a través del análisis de redes sociales (ARS)</title>
+                <author>
+                    <persName>
+                        <surname>Arribas Colmenar</surname>
+                        <forename>Sara</forename>
+                    </persName>
+                    <affiliation>Penn State University, United States of America</affiliation>
+                    <email>sara.arribas16@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-03T23:26:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>María Lejárraga</term>
+                    <term>Teatro de Arte</term>
+                    <term>Análisis de redes sociales</term>
+                    <term>Danza</term>
+                    <term>Siglo XX</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>bibliographic analysis</term>
+                    <term>cultural analytics</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>network analysis and graphs theory and application</term>
+                    <term>Cultural studies</term>
+                    <term>Feminist studies</term>
+                    <term>Literary studies</term>
+                    <term>Performance Studies: Dance</term>
+                    <term>Theatre</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="Hlk197187266"/>La Compañía Cómico-Dramática Martínez Sierra, conocida como Teatro de Arte, se consolidó como una de las agrupaciones más influyentes del teatro español del siglo XX. Su actividad, desarrollada principalmente en el Teatro Eslava de Madrid entre 1916 y 1926, combinó un repertorio variado que abarcaba desde dramas modernos hasta adaptaciones de clásicos, integrando elementos de música y danza que transformaron la escena teatral (Reyero Hermosilla 5). Aunque fundada y dirigida por Gregorio Martínez Sierra, dependía en gran medida de la creatividad y las redes que tejía su esposa María de la O Lejárraga o Martínez Sierra, quien escribía los literatos y conectaba con compositores artistas destacados. 
+                </head>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>A pesar de su papel centrada, María Lejárraga permaneció décadas en la sombre firmando sus obras bajo el nombre de su esposo.<ref n="1" target="ftn1"/> Aunque esta invisibilización se ha intentado corregir a través de las distintas publicaciones, el documental María Lejárraga. A las mujeres de España o de la exposición actual en la biblioteca nacional con la consecuente creación del archivo físico en Logroño, es crucial recuperar también su legado escénico. Sin este, no podemos comprender las transformaciones que llevaron a la compañía a incorporar de manera innovadora la danza y la música en sus producciones. Obras como 
+                    <hi rend="italic">Las golondrinas</hi> (1914), 
+                    <hi rend="italic">El amor brujo</hi> (1915) o 
+                    <hi rend="italic">El sombrero de tres picos</hi> (1919) no habrían sido posibles sin las conexiones que Lejárraga estableció con compositores como Manuel de Falla o José María Usandizaga. Por ello, este estudio tiene como objetivo recuperar su papel central, examinar su influencia en la evolución de la propuesta escénica del Teatro de Arte a través del Análisis de Redes Sociales (ARS) y desentrañar las intersecciones entre la danza, música y literatura que definieron su producción. 
+                </head>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Metodología</head>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Para abordar estos objetivos, se llevó a cabo un trabajo documental exhaustivo basado en las memorias de María Lejárraga, Gregorio y yo, su correspondencia con compositores, los programas de mano de las producciones teatrales y documentos promocionales como 
+                    <hi rend="italic">Compañía Cómico Dramática dirigida por G. Martinez Sierra</hi> (1916) de la Imprenta Clásica Española.<ref n="2" target="ftn2"/> A partir de estas fuentes, se creó una base de datos estructurada mediante un knowledge graph (Dörpinghaus et al. 2022), que permitió sistematizar y conectar entidades ̶ personas y obras escénicas ̶ dentro de un marco temporal y artístico específico. Siguiendo este modelo, se elaboró la documentación en excell de los nodos y las aristas para su posterior estudio a través de Análisis de Redes Sociales (ARS) utilizando Gephi, un software que analiza y visualiza cualquier tipo de grafo. A cada nodo se le asignaron etiquetas específicas donde se incluía su nombre, profesión, género asignado al nacer, nacionalidad y rol desempeñado dentro de la producción. Como el objetivo principal es analizar los diálogos entre danza, literatura y música dentro de la compañía Teatro de Arte, la documentación de las aristas recopila la información relacionada con las puestas en escena y producción de piezas hibridas. Así, las conexiones entre los agentes artísticos se determinaron a partir de su participación conjunta en una misma obra escénica. Para clarificar la estructura interna de la compañía y el papel desempeñado por las personas dentro de las producciones escénicas, en las aristas especificamos el emisor (source), el receptor (target), junto con el nombre de la pieza de danza o teatro, el teatro, la ciudad y la fecha de la puesta en escena.<ref n="3" target="ftn3"/>
+                </head>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>En dicha documentación, se incluyeron concretamente las personas que formaron parte de las siguientes piezas hibridas de teatro, danza y zarzuela: 
+                    <hi rend="italic">Las golondrinas</hi> (1914), 
+                    <hi rend="italic">El amor brujo</hi> (1915), 
+                    <hi rend="italic">El sapo enamorado</hi> (1916), 
+                    <hi rend="italic" xml:space="preserve">El corregidor y la molinera </hi>(1917), 
+                    <hi rend="italic">La llama</hi> (1918), 
+                    <hi rend="italic">Rosaura la viuda astuta</hi> (1919), 
+                    <hi rend="italic">El maleficio de la mariposa</hi> (1920), 
+                    <hi rend="italic">La suerte de Isabelita</hi> (1920), 
+                    <hi rend="italic">Don Juan</hi> (1920), 
+                    <hi rend="italic">Linterna mágica</hi> (1921) y 
+                    <hi rend="italic">El pavo real</hi> (1922). Asimismo, se consideraron producciones realizadas en colaboración con otras compañías como 
+                    <hi rend="italic">El sombrero de tres picos</hi> (1919) llevada a cabo junto con Ballet Russes de Sergei Diaghilev, y dos versiones nuevas de 
+                    <hi rend="italic">Las golondrinas</hi>, estrenadas en 1929 y 1934, en colaboración con la compañía Juan Mestres. Además, se incluyó la información sobre el elenco principal que formaba parte de la compañía en 1916 del folleto promocional de la Imprenta Clásica Española. 
+                </head>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Resultados del análisis</head>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>En cuanto a la estructura general del Teatro de Arte, las visualizaciones generadas con Gephi evidenciaron un patrón recurrente: las producciones que incluían danza requerían la colaboración de artistas externos al elenco principal de la compañía. Como se puede observar en la Figura 1, el análisis revela una fragmentación en la selección del elenco, especialmente en las piezas híbridas de danza y música donde participaban muy pocos integrantes del elenco principal mencionado en la propaganda de 1916. De esta forma, la compañía recurría a artistas externos para las producciones híbridas, probablemente para contar con intérpretes más especializados en danza adaptando así los elencos a las necesidades técnicas y estilísticas de cada obra. Esto marcó una transición hacia la transformación de piezas de zarzuela en piezas de danza, como se observa Las golondrinas, donde el grupo de actores fue paulatinamente sustituido por un cuerpo de baile. Este fenómeno reflejó una tendencia más amplia presente en el teatro español del periodo, caracterizado por una creciente interacción entre las artes escénicas y practicas (Murga Castro 17).</head>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <hi style="color:red; font-size: 14pt; font-weight:bold;" rend="ERROR">�</hi>
+                    <note place="margin" type="conversion" resp="#teitodocx">
+                        <hi rend="docxError">unable to handle picture here, no embed or link</hi>
+                    </note>Figura 1: Red comparativa de las piezas híbridas del Teatro de Arte 
+                    <graphic n="1002" width="16.69697222222222cm" height="22.262041666666665cm" url="/tmp/tmpvf9jv7c5/Pictures/580e550a3524c3dab6c06e1b2c401188.png" rend="block"/>
+                </head>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Por otro lado, el ARS permitió comprender mejor los roles desempeñados por los colaboradores de la compañía. Los datos estadísticos extraídos de Gephi, específicamente los valores de centralidad intermedia (betweenness centrality), revelan que las personas con mayor porcentaje de influencia en la red fueron los libretistas, escenógrafos y compositores. Concretamente, las dos personas con mayor centralidad intermedia fueron: María Lejárraga, libretista principal, y Gregorio Martínez Sierra, director de escena y empresario. Este dato subraya cómo la marca narrativa de la compañía se consolidó casi exclusivamente bajo la pluma de Lejárraga, quien asumió la creación dramatúrgica en la inmensa mayoría de las producciones dancísticas y musicales. Además, en ciertas ocasiones, las producciones no dependían exclusivamente de la compañía del Teatro de Arte. Como se observa en la Figura 2, algunas piezas fueron concebidos para otras compañías o adaptados en versiones específicas en las que María Lejárraga trabajaba colaborativamente con los compositores, posicionándose así como una pieza fundamental no solo para el Teatro de Arte, sino como nexo entre las distintas compañías del momento.</head>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Por último, el análisis pone en evidencia una división de roles que refleja las dinámicas de genero de la industria teatral de la época. Mientras que María Lejárraga era responsable de los libretos y las coreografías fueron creadas principalmente por destacas artistas del momento, como las coreógrafas María Ros, María Esparza, Helena Cortesina o Encarnación López Júlvez, la dirección de escena, la escenografía y la composición recaía predominantemente en las figuras masculinas. Se destaca también la mayoría de las coreógrafas eran contratadas para una temporada exclusivamente, mientras que se tendía a recurrir a los mismos escanógrafos. Este modelo de colaboración contribuyó a una invisibilización sistemática de la figura femenina, minimizando su reconocimiento público y perpetuando una narrativa que las colocaba siempre fuera de escena.</head>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>En definitiva, este marco colaborativo, evidenciado a través de las redes reconstruidas y las visualizaciones obtenidas con Gephi, ilustra de forma muy clara que la compañía Teatro de Arte fue un espacio de interacción entre disciplinas como literatura, pintura y danza, en el que las dinámicas de género jugaron un papel fundamental en la distribución de tareas creativas y técnicas. Al destacar el papel de María Lejárraga como figura central del proceso artístico, el análisis nos permite recuperar su legado además de una mayor comprensión de las estructuras de poder que sustentaron las producciones de la compañía.</head>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                         La autora tras la muerte de su exesposo, Gregorio Martínez Sierra, decidió firmar sus obras bajo el nombre María Martínez Sierra. En cierto modo fue una manera de no perder la fama ganada, pero también de mantener el carácter colaborativo que tuvieron ambos escritores en vida. Es importante comprender que fue una decisión personal que la propia autora tomó. No podemos perder de vista que en esta época las escritoras eran perseguidas y criticadas. Por esto mismo, María Lejárraga confesó en sus memorias Gregorio y yo que no iban a aparecer libros publicados con su nombre porque quería evitar la censura publica, pero también porque estaba profundamente enamorada y estimó que los libros eran ¨hijos de legitimo matrimonio, con nombre del padre tienen honra bastante” (Lejárraga 2023: 30). Para una mayor comprensión sobre la problemática y las decisiones sobre la firma y autoría se recomienda la lectura de Lozano Marín (2017) y Jones (2004).
+                    </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                        Dicha promoción fue escrita por Gregorio Martínez Sierra con las ilustraciones de José Zamora y caricaturas de Luís Bagaría. Se puede consultar en el siguiente enlace: 
+                            <ref target="https://escenadigital.institutdelteatre.cat/catalog/bdam:422874#prettyPhoto">https://escenadigital.institutdelteatre.cat/catalog/bdam:422874#prettyPhoto</ref>. 
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                         En estudios anteriores (Arribas Colmenar 2025) se ha utilizado la misma metodología para analizar tanto tertulias literarias como eventos asociados a la danza como el Concurso de Cante Jondo (1922). Para más información sobre las cuestiones específicas de la misma, se recomienda su lectura. 
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Arribas Colmenar, Sara</hi> (2025): 
+                        <hi rend="italic">Constelaciones de artistas: estudio de los espacios de creación colaborativa y Análisis de Redes en espectáculos y circuitos intelectuales españoles (1909-1936).</hi> Ph.D. thesis, Penn State University. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bastian, Mathieu</hi>, et al. (2009): “Gephi: An Open-Source Software for Exploring and Manipulating Networks” en 
+                        <hi rend="italic">Proceedings of the International AAAI Conference on Web ad Social Media</hi> 3, 1: 361–62.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Borodin, Aleksander Porfirievitx et al.</hi> (1924): 
+                        <hi rend="italic">Compañía de bailes rusos dirigida por Serge Diaghilew. 1 volum. (Temporada de primavera 1924)</hi>
+                        <ref target="https://ddd.uab.cat/record/141906">https://ddd.uab.cat/record/141906</ref>, 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Castells, Josep et al</hi> (1938): 
+                        <hi rend="italic">Las Golondrinas. 1 volum</hi>
+                        <ref target="https://ddd.uab.cat/record/144017">https://ddd.uab.cat/record/144017</ref>. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="italic">Compañía Cómico-Dramática dirigida por G. Martinez Sierra</hi> (1916). Imprenta Clásica Española, 1916, 
+                        <ref target="https://escenadigital.institutdelteatre.cat/catalog/bdam:422874#prettyPhoto">https://escenadigital.institutdelteatre.cat/catalog/bdam:422874#prettyPhoto</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">De Falla, Manuel</hi> (1915): 
+                        <hi rend="italic">El amor brujo</hi>. Ediciones P. Martín.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="italic">Don Juan de España</hi>. (1921): CDAEA Elektra archivo digital artes escénicas, repository/publicas/2015/10/16/198600/,
+                        <ref target="https://www.juntadeandalucia.es/cultura/cdaea/elektra/catalogo_execute.html?tipoObjeto=1&amp;id=198600">https://www.juntadeandalucia.es/cultura/cdaea/elektra/catalogo_execute.html?tipoObjeto=1&amp;id=198600#</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Dörpinghaus, Jens, et al.</hi> (2022): “From Social Networks to Knowledge Graphs: A Plea for Interdisciplinary Approaches.” en 
+                        <hi rend="italic">Social Sciences &amp; Humanities Open</hi> 6: 100337. ScienceDirect, 
+                        <ref target="https://doi.org/10.1016/j.ssaho.2022.100337">https://doi.org/10.1016/j.ssaho.2022.100337</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Jones, Joseph</hi> (2004) “María Lejárraga de Martínez Sierra (1874-1974), Libretista y Letrista.” 
+                        <hi rend="italic">Berceo</hi>, 147:55–95.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Lejárraga, María</hi> (2023): 
+                        <hi rend="italic">Gregorio y yo. Medio siglo de colaboración</hi>. Editorial Renacimiento.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Malvet, Lorenzo et al</hi>. (1931): 
+                        <hi rend="italic" xml:space="preserve">La Llama. 1 volum. (Temporada 1931-1932) </hi>
+                        <ref target="https://ddd.uab.cat/record/144171">https://ddd.uab.cat/record/144171</ref>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Marquina, Eduardo / Martínez Sierra, Gregorio</hi> (1922): 
+                        <hi rend="italic" xml:space="preserve"> El pavo real: comedia poética en tres actos, divididos en diez cuadros. </hi>Editorial Reus.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Martínez Sierra, Gregorio et al. </hi>(1939): 
+                        <hi rend="italic" xml:space="preserve">Zarzuela - Ópera - Ballet. 1 volum. (Temporada 1938-1939) </hi>
+                        <ref target="https://ddd.uab.cat/record/144041">https://ddd.uab.cat/record/144041</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Martínez Sierra, Gregorio</hi> (1918): 
+                        <hi rend="italic">La llama : opera en tres actos y seis cuadros</hi>. J. Pueyo, 1918. Internet Archive, 
+                        <ref target="http://archive.org/details/lallamaoperaentr00mart">http://archive.org/details/lallamaoperaentr00mart</ref>. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Martínez Sierra, Gregorio</hi> (1919): 
+                        <hi rend="italic">Rosaura, la viuda astuta</hi>. Colección Crispin, Internet Archive, 
+                        <ref target="http://archive.org/details/rosauralaviudaas00font">http://archive.org/details/rosauralaviudaas00font</ref>. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Matía Polo, Inmaculada</hi> (2014): “En el Eslava con Martínez Sierra: La colaboración de Encarnación López Júlvez “La Argentinita” con el Teatro Renovador del Arte” en 
+                        <hi rend="italic">Anagnórisis. Revista de investigación teatral</hi>, 10: 43-59.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Murga Castro, Idoia</hi> (2017): 
+                        <hi rend="italic">Escenografía de la danza en la Edad de Plata</hi>. Consejo Superior de Investigaciones Científicas.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">O’Connor, Patricia Walker</hi> (2003): 
+                        <hi rend="italic" xml:space="preserve">Mito y realidad de una dramaturga española, María Martínez Sierra. </hi>Gobierno de La Rioja, Instituto de Estudios Riojanos.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Padovani, Alfredo / Usandizaga, José María</hi> (1929): 
+                        <hi rend="italic">Las Golondrinas. 1 volum. (Temporada 1929-1930)</hi>
+                        <ref target="https://ddd.uab.cat/record/144137">https://ddd.uab.cat/record/144137</ref>. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Padovani, Alfredo / Usandizaga, José María</hi> (1934): 
+                        <hi rend="italic">Las golondrinas. 1 volum. (Temporada 1934-1935)</hi>
+                        <ref target="https://ddd.uab.cat/record/144243">https://ddd.uab.cat/record/144243</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Peral Vega, Emilio</hi> (2020): “El maleficio de la mariposa: inicio de una revolución teatral en clave simbolista” en 
+                        <hi rend="italic">Federico García Lorca: el nacimiento de una revolución teatral. 100 años del estreno de El maleficio de la mariposa</hi>. Centro Federico García Lorca, 29-54.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Peral Vega, Emilio</hi> (2008): “En el Teatro de Arte: Martínez Sierra y Borrás” en 
+                        <hi rend="italic">De un teatro sin palabras. La pantomima en España de 1890 a 1939</hi>. Anthropos Editorial.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

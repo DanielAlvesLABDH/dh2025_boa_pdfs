@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="RODR_GUEZ_ORTEGA_Nuria_Bridging_Discourses__Integrating_Text">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Bridging Discourses: Integrating Text Catalogs and Art Reviews into Knowledge Graphs for Enriched Exhibition Analysis</title>
+                <author>
+                    <persName>
+                        <surname>Rodríguez-Ortega</surname>
+                        <forename>Nuria</forename>
+                    </persName>
+                    <affiliation>Universidad de Málaga, Spain</affiliation>
+                    <email>nro@uma.es</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Díez-Platas</surname>
+                        <forename>M.ª Luisa</forename>
+                    </persName>
+                    <affiliation>Universidad Internacional de La Rioja, Spain</affiliation>
+                    <email>marialuisa.diez@unir.net</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ortiz Tello</surname>
+                        <forename>María</forename>
+                    </persName>
+                    <affiliation>Universidad de Málaga, Spain</affiliation>
+                    <email>mortiztello@uma.es</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Lumbreras Fernández</surname>
+                        <forename>Ángel</forename>
+                    </persName>
+                    <affiliation>Universidad de Málaga, Spain</affiliation>
+                    <email>angelmlumbrerasf@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-08T15:19:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Ontology-based Knowledge Graphs</term>
+                    <term>Exhibition Data Integration</term>
+                    <term>SPARQL Queries for Cultural Analysis</term>
+                    <term>Art Critiques and Curatorial Narratives</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data modeling</term>
+                    <term>natural language processing</term>
+                    <term>Art history</term>
+                    <term>Galleries and museum studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>OntoExhibit [1] is an ontology designed to model and structure data on art exhibitions as complex cultural ecosystems. Developed within the framework of the Complexhibit Project [2], its key innovation lies in integrating semantic-discursive elements, such as newspaper and magazine reviews, curatorial texts, catalogs, and social media interactions, into a knowledge graph (Rodríguez-Ortega, et al. 2024, Rodríguez Ortega, in press). These elements complement traditional institutional data by embedding external perspectives and contextual narratives, thereby enabling more comprehensive cultural analysis.</p>
+                <p>By incorporating textual and semantic information, OntoExhibit opens pathways for exploring the sociocultural impact of exhibitions. It enables the comparisons between curatorial intent and public reception while facilitating multidimensional analyses. This paper delineates the technological and methodological processes implemented to integrate these elements into the knowledge graph, with a focus on texts from exhibition catalogs and art reviews.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Background</head>
+                <p>The OntoExhibit model, which is aligned with CIDOC-CRM, has evolved from the relational database Expofinder (Rodríguez-Ortega &amp; Cruces-Rodríguez, 2019), expanding to incorporate the discursive dimensions of exhibitions. The ontology’s population with data on art exhibitions recorded in Expofinder since 2016 resulted in a knowledge graph that can be queried through a SPARQL endpoint [3]. This graph contains semantically enriched information related to the socio-institutional structure of the exhibition system, including the actors involved (institutions, artists, curators, galleries) and the relationships they establish through the exhibitions in which they participate.</p>
+                <p>Thus, the primary challenge encountered was the population of the OntoExhibit classes associated with semantic-discursive elements, which were not present in Expofinder. Two key issues were identified: a) the collection of highly dispersed and heterogeneous information distributed across diverse sources and formats, and b) the integration of this information into the knowledge graph. This paper focuses on two linguistic-textual contexts that have been the core of our research: exhibition catalogs and art reviews published in journalistic media. Catalogs are considered authoritative sources that provide curatorial essays and academic insights, while reviews offer external critical evaluations, capturing real-time public and professional reception. Together, they coalesce to provide a multidimensional perspective on exhibitions, encompassing institutional, curatorial, and public discourse.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Technological and Methodological Implementation</head>
+                <p>Our methodology consists of two main phases: (a) extracting data from sources and (b) integrating it into the knowledge graph.</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Phase 1: Data Extraction</head>
+                    <p>Catalog Information</p>
+                    <p>One of the initial objectives undertaken within the framework of the Complexhibit project was the implementation of a natural language processing system for extracting information from exhibition catalogs. The primary goal of this system was to extract information related to exhibitions (e.g., actors, artworks, and spatial-temporal data) to generate part of the OntoExhibit knowledge graph. To this end, a custom supervised deep learning model (Díez-Platas et al., 2024) was implemented to automatically tag relevant data included in the catalogs. In a second phase, the system was employed to process the curatorial and scholarly texts contained in the catalogs. Texts were processed separately for semantic enrichment and potential linkage to external entities. The structured output is stored in JSON format, thereby enabling subsequent transformations. </p>
+                    <p>Art Reviews</p>
+                    <p>For art reviews published in online newspapers and magazines, web scraping tools were employed to extract structured data. The selection process prioritized sources based on their cultural relevance and dedicated art review sections. The extracted metadata includes: source name, title and subtitle, author(s), date of publication, the full text, the image gallery (accompanied by captions and source files), and additional metadata such as the source URL and thematic categories provided by the sources.</p>
+                    <p>NER (Name Entity Recognition) techniques were applied to identify entities such as exhibition titles, artist names, and locations. The identification of qualitative valuations was achieved through the employment of specific terms such as “remarkable,” “mediocre,” or “impactful.”. This enriched data serves as the foundation for establishing links between reviews and their respective exhibitions.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Phase 2: Integration into the Knowledge Graph</head>
+                    <p>To facilitate the integration of the extracted data, a mapping process was employed, whereby entities were aligned to the classes and properties of OntoExhibit. Figs 1 and 2 illustrate a simplified version of the OntoExhibit model, accompanied by examples for the Art Review and Text Catalog classes. </p>
+                    <figure>
+                        <graphic n="1001" width="16.832858333333334cm" height="9.468483333333333cm" url="/tmp/tmphkun4krz/Pictures/b1ff0a4c415613c0c1403431e0e28100.png" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left;">
+                        <hi style="font-size:10pt">Figure 1. OntoExhibit Model Example with the “Art Review” Class. Parent classes are shown in green, while instances are depicted in blue</hi>
+                    </p>
+                    <figure>
+                        <graphic n="1002" width="16.002cm" height="9.001125cm" url="/tmp/tmphkun4krz/Pictures/b1ff0a4c415613c0c1403431e0e28100.png" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left;">
+                        <hi style="font-size:10pt">Figure 2. OntoExhibit Model Example with the “Text Catalog” Class. Parent classes are shown in green, while instances are depicted in blue.</hi>
+                    </p>
+                    <p>The transformation of the structured JSON data into RDF triples was achieved through the use of RML (RED RDF Mapping Language) [4], ensuring adherence to the ontology’s schema. RML was selected for its ability to process heterogeneous data structures, thus surpassing the limitations of traditional R2RML [5]. The RML specifications, along with the JSON data, are processed by an RML engine—in our case, Morph [6]—to generate triples. This triples are then validated and integrated into the knowledge graph by being loaded into the corresponding RDF store. The sequence of steps involved is illustrated in the following diagram (fig. 3):</p>
+                    <figure>
+                        <graphic n="1003" width="16.002cm" height="7.962194444444444cm" url="/tmp/tmphkun4krz/Pictures/b1ff0a4c415613c0c1403431e0e28100.png" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left;">
+                        <hi style="font-size:10pt">Figure 3. Transformation process from JSON to RDF triples. Own elaboration</hi>
+                    </p>
+                    <figure>
+                        <graphic n="1004" width="15.504158333333333cm" height="22.481025cm" url="/tmp/tmphkun4krz/Pictures/b1ff0a4c415613c0c1403431e0e28100.png" rend="inline"/>
+                    </figure>
+                    <p>
+                        <hi style="font-size:10pt">Figure 4. RDF schema</hi>
+                    </p>
+                    <p>The integration process enables cross-referencing between curatorial narratives and critical reviews, offering a comprehensive perspective on each exhibition.</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <hi rend="bold">SPARQL Queries for Analysis</hi>
+                </head>
+                <p>The result is a SPARQL-interrogable knowledge graph that encompasses not only socio-institutional relationships—such as links between galleries, curators, and artists—but also the narratives and evaluations surrounding exhibitions. Once integrated, the knowledge graph supports advanced queries to extract meaningful insights. For instance, it is possible to identify exhibitions with the highest number of published reviews and, consequently, the greatest media impact. Furthermore, it is possible to list reviews related to a specific artist or museum; or to compile all texts associated with an exhibition for comparative analysis, among other possibilities.</p>
+                <figure>
+                    <graphic n="1005" width="13.00286111111111cm" height="14.914877777777777cm" url="/tmp/tmphkun4krz/Pictures/b1ff0a4c415613c0c1403431e0e28100.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left;">
+                    <hi style="font-size:10pt">Figure 5 . RDF schema. Query Example: Comparing Curatorial Narratives and Reviews</hi>
+                </p>
+                <p>For example, the query illustrated in fig. 5 can be used to obtain alignments or discrepancies between curatorial essays and public critiques. It can also be used to identify themes emphasized in reviews but absent in curatorial narratives.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Case Study: Picasso 1906. The Great Transformation</head>
+                <p>During the presentation, the results of a case study based on the exhibition 
+                    <hi rend="italic">Picasso 1906. The Great Transformation</hi> (Museo Reina Sofía, 11-2023—2-2024) will be showcased, employing integrated data from curatorial texts and art reviews. Through SPARQL queries, we can extract information from catalog excerpts that reflect curatorial intent, as well as evaluations from reviews published in the media. This methodological approach enables the comparison of how the exhibition was perceived across different channels and the examination of how the curatorial narrative presented in the «official» catalog aligns with or contrasts against the documented critical reception. This examination identifies points of convergence (e.g., the recognition of Picasso’s artistic transition) and divergence (e.g., differing evaluations of the exhibit’s coherence). The preliminary analysis reveals notable divergences between curatorial narratives and critiques, emphasizing the importance of linking internal and external perspectives to facilitate multidimensional analyses of exhibitions' cultural impact. The analysis further highlights the capacity of the OntoExhibit knowledge graph to effectively bridge institutional and external perspectives. 
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p>OntoExhibit is a semantic framework that integrates textual and structured data to enhance cultural analysis. The ontology not only documents exhibitions comprehensively but also facilitates multidimensional analyses of their sociocultural impact. The potential for future extensions includes the establishment of links to external datasets, thereby enabling more extensive studies across a range of cultural domains. </p>
+                <p>Furthermore, the scalability of the methodology employed enables the expansion of the graph with new dimensions of the semantic-discursive sphere, such as visual contents associated to exhibitions. The methodology's scalability also ensures its applicability to other cultural phenomena, such as theater productions or literary festivals. Consequently, new avenues for semantic-discursive research of cultural productions in the field of Digital Humanities are being opened. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Notes</head>
+                <p>[1] 
+                    <ref target="https://github.com/Complexhibit-Project/OntoExhibit">https://github.com/Complexhibit-Project/OntoExhibit</ref>
+                </p>
+                <p>[2] The Complexhibit project, funded by the Spanish Ministry of Science and Research, is a research framework for analyzing the domain of art exhibitions as complex cultural ecosystems through the application of data-driven methodologies. See: 
+                    <ref target="https://complexhibit.eu">https://complexhibit.eu</ref>
+                    <hi rend="Hyperlink" xml:space="preserve"> </hi>
+                </p>
+                <p>[3] 
+                    <ref target="https://github.com/Complexhibit-Project/sparql">https://github.com/Complexhibit-Project/sparql</ref>
+                </p>
+                <p>[4] 
+                    <ref target="https://rml.io">https://rml.io</ref>
+                </p>
+                <p>[5] 
+                    <ref target="https://www.w3.org/TR/r2rml/">https://www.w3.org/TR/r2rml/</ref>
+                </p>
+                <p>[6] 
+                    <ref target="https://morph-kgc.readthedocs.io/en/stable/">https://morph-kgc.readthedocs.io/en/stable/</ref>
+                </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Díez-Platas, M.ª Luisa</hi>., et al. (2024): “Automatic Labeling of Exhibition Catalogs for Entity Recognition”, in: Karajgikar, Jajwalya/ Andrew Janco / Jessica Otis (eds.): 
+                        <hi rend="italic">Digital Humanities 2024: Book of Abstracts</hi>. VA 2024. 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Rodríguez-Ortega, Nuria</hi> (2024): “Contours of Knowledge: Epistemological Implications of Semantic Models in Art Exhibition Representation”, in: 
+                        <hi rend="italic">Život Umjetnosti</hi> 114, 1: 122-147.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Rodríguez-Ortega, Nuria / Cruces-Rodríguez, Antonio</hi> (2019): “Development of Technological Ecosystems for Cultural Analysis: The Case of Expofinder”, in: 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi> 34, 2: 423-448. 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Rodríguez Ortega, Nuria</hi>, et al. (2024): “
+                        <hi rend="italic">OntoExhibit: An Ontology for Modeling the Field of Art Exhibitions and Its Semantic-Discursive Dimension”</hi>, in: Karajgikar, Jajwalya/ Andrew Janco / Jessica Otis (eds.): 
+                        <hi rend="italic">Digital Humanities 2024: Book of Abstracts</hi>. VA 2024
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

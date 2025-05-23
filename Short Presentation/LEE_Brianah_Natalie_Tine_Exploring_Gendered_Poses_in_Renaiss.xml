@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LEE_Brianah_Natalie_Tine_Exploring_Gendered_Poses_in_Renaiss">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Exploring Gendered Poses in Renaissance Art: A Computational Analysis of Activity and Passivity</title>
+                <author>
+                    <persName>
+                        <surname>Lee</surname>
+                        <forename>Brianah N. T.</forename>
+                    </persName>
+                    <affiliation>Universiteit Utrecht, The Netherlands</affiliation>
+                    <email>brianah.n.t.lee@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Speca</surname>
+                        <forename>Giulia</forename>
+                    </persName>
+                    <affiliation>Universiteit Utrecht, The Netherlands</affiliation>
+                    <email>giuliaspeca@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Tittse</surname>
+                        <forename>Celis</forename>
+                    </persName>
+                    <affiliation>Universiteit Utrecht, The Netherlands</affiliation>
+                    <email>celisft@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Costiner</surname>
+                        <forename>Lisandra</forename>
+                    </persName>
+                    <affiliation>Universiteit Utrecht, The Netherlands</affiliation>
+                    <email>l.costiner@uu.nl</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T14:30:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Gender representation</term>
+                    <term>Pose detection</term>
+                    <term>Renaissance art</term>
+                    <term>Digital art history</term>
+                    <term>Active/passive dichotomy</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>image processing and analysis</term>
+                    <term>Art history</term>
+                    <term>Computer science</term>
+                    <term>Gender and sexuality studies</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">This study examines to what extent Renaissance, Mannerism, and Baroque art reinforce gendered power dynamics through representations of activity and passivity, using computational pose analysis to reveal patterns in visual representation. Grounded in feminist art history and gender theory—from John Berger’s seminal 
+                    <hi rend="italic" style="font-size:10pt">Ways of Seeing</hi> (1972) to Judith Butler’s theory of performative gender (1990)—scholarship has long asserted that Western art systematically constructs men as active, dominant subjects and women as passive, decorative objects. These claims have been supported by identifiable visual tropes: reclining female nudes that signify submission (Berger 1972, Mulvey 1975, Goffman 1979), downward head tilts and averted gazes implying modesty and objectification (Goffman 1979, Berdini 1998, Butkowski and Tajima 2017), and expansive, wide-legged stances connoting male dominance (Uppenkamp 2019, Lacouture 2015, Tom 2015). While such interpretations are well-established in qualitative scholarship, they have rarely been tested quantitatively within the digital art historical field. By applying pose detection algorithms to digitised artworks (Impett &amp; Süsstrunk 2016–2021; Bernasconi 2024; Bernasconi et al. 2023), this study analyses to what extent Early Modern artistic conventions reflect cultural norms of gender. This approach not only bridges a methodological gap in digital art history but also demonstrates to what extent pose functions as gendered rhetoric, perpetuating the active/male and passive/female dichotomy in ways that continue to shape visual culture. 
+                </hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">Using a sample of the WikiArt database, this research includes ca. 13.500 figures from ca. 4.200 artworks created between 1400 and 1750. It explores three pose configurations that have traditionally been understood to convey passivity/activity: leg spread, pose dynamism (inclination angle/reclining/static), and head tilt. The following explains how the selected pose configurations were measured.</hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <figure>
+                <graphic n="1001" width="16.002cm" height="12.696666666666667cm" url="/tmp/tmpb_uodtw8/Pictures/07d07352ec19bb2415ddc94810e5187d.png" rend="inline"/>
+            </figure>
+            <p rend="paragraph" style="text-align: left; ">
+                <hi rend="eop">Figure 1: Albrecht Altdorfer (c. 1512). Crucifixion with Mary and John, (Oil on Panel). Gemäldegalerie Alte Meister. Dresden, Germany. </hi>
+            </p>
+            <figure>
+                <graphic n="1002" width="16.002cm" height="9.835861111111111cm" url="/tmp/tmpb_uodtw8/Pictures/07d07352ec19bb2415ddc94810e5187d.png" rend="inline"/>
+            </figure>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="eop">Figure 2: Titian (1550). </hi>
+                <hi style="font-size:10pt">Venus with the Organ Player. Gemäldegalerie. Berlin, Germany.</hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="scxw259919692" xml:space="preserve">          </hi>
+                <hi rend="wacimagecontainer">
+                    <graphic n="1003" width="11.637127777777778cm" height="13.25473611111111cm" url="/tmp/tmpb_uodtw8/Pictures/07d07352ec19bb2415ddc94810e5187d.png" rend="inline"/>
+                </hi>
+                <hi rend="scxw259919692"> </hi>
+                <lb/>
+                <hi rend="eop">Figure 3: Filippo Lippi, (1457). Herod's Banquet, (Fresco). Prato Cathedral. Prato, Italy.</hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">First, the width of the figure’s leg spread, which is measured as the angle, as shown in Figure 1. </hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">Second, the dynamism of the figures’ pose, measured as the inclination angle of the figure, as shown in Figure 2, which, in this study, resulted in three clusters based on the value of these angles: static [90.0°-71.0°], to dynamic [71.0°-37.8°], and reclining [37.8°-0°]. </hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">Last, the head tilt was calculated by the cosine angle of the dot product of vectors AB and BC (Figure 3). The orientation of the head tilt was transposed from the angle of the head’s centrum and the nose. If the nose is pointing down, the head tilt would have a negative value.</hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;"> </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">
+                    <hi rend="bold" style="font-size:10pt">Dataset</hi>
+                </hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">This study sampled the WikiArt database, a publicly available collection of 250.000 artworks incorporating 100 countries across history, creating a subset of 4.200 pictorial artworks from the Renaissance, Mannerism, and Baroque (1400-1750). This subset includes a range of two-dimensional media, such as paintings, frescos, and drawings. For our analysis, we annotated 13.700 individual figures across a balanced sample of portraiture, religious, historical, and mythological genres. This curated dataset enables systematic comparison of gendered pose conventions during a period when figurative representation was undergoing significant evolution.  </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;"> </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">
+                    <hi rend="bold" style="font-size:10pt">Methodology</hi>
+                </hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">Our dataset was digitally processed with OpenPose. This enclosed CNN-AI identified figure skeletonisations through pose detection, and labelled key points, including: nose, left eye, right eye, left ear, right ear, centre clavicle, left elbow, left wrist, right elbow, right wrist, left hip, right hip, left knee and left ankle, and lastly, right knee and right ankle (as seen in Figure 4).</hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;"> </p>
+            <p rend="paragraph" style="text-align: left; text-align: center;">
+                <hi rend="wacimagecontainer">
+                    <graphic n="1004" width="10.728555555555555cm" height="11.69235cm" url="/tmp/tmpb_uodtw8/Pictures/07d07352ec19bb2415ddc94810e5187d.png" rend="inline"/>
+                </hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; ">
+                <hi rend="eop">Figure 4: Hans Baldung Grien, (circa 1520) Adam and Eve, (oil-on-panel). Galleria degli Uffizi. Firenze, Italia.</hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">We manually annotated the 13.700 figures by gender and added secondary tags. The tag “baby” accounts for distinct physiognomy, while “portrait” reflects standardised poses of the period, particularly in head tilt. The “seated” tag was included due to its unique impact on dynamism and leg spread measurements. Recurring figures, like Jesus and Mary, were tagged for their consistent iconography, which could influence results. </hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">Three regression models were implemented to find the difference between the gendered distributions for leg spread, head tilt, and pose dynamics. The first two are linear regressions with fixed effects on the type of portrait, type of figure, pose dynamics, and production period. The latter utilises a Poisson regression. The models were tuned to fit significantly relevant fixed effects. When the targeted angle does not change over time, then the time element was removed from the regression model to save degrees of freedom. All fixed effects, like special figures and pose categories, were evaluated in this manner, balancing our research question and the best-fitting model (BIC and AIC-based). </hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">
+                    <hi rend="bold" style="font-size:10pt">Preliminary results </hi>
+                </hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">In considering the leg spread of figures, our preliminary results show that women’s knees are a little less spread than men’s within our dataset (
+                    <hi rend="italic" style="font-size:10pt" xml:space="preserve">p = </hi>.0044, 95% CI [0.04 – 3.65]). Seated figures did have a significant increase in spread legs (
+                    <hi rend="italic" style="font-size:10pt">p</hi> = .000, 95% CI [12.35 – 17.03]), and the figures of Jesus had a decrease in leg spread compared to the mean (
+                    <hi rend="italic" style="font-size:10pt">p</hi> = .008, 95% CI [-8.20 – -1.20]). 
+                </hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: center;">
+                <hi rend="normaltextrun"> </hi>
+                <hi rend="wacimagecontainer">
+                    <graphic n="1005" width="16.002cm" height="9.888361111111111cm" url="/tmp/tmpb_uodtw8/Pictures/07d07352ec19bb2415ddc94810e5187d.png" rend="inline"/>
+                </hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: center;">
+                <hi rend="normaltextrun">Figure 5: Leg spread angle distribution</hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">In considering head tilt, our results showed that there is also not a statistically significant difference between women and men in our dataset (
+                    <hi rend="italic" style="font-size:10pt" xml:space="preserve">p = </hi>
+                </hi>
+                <hi rend="tabchar"> </hi>
+                <hi rend="normaltextrun">0.757, 95% CI [-1.12 – 1.54]). </hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: center;">
+                <hi rend="wacimagecontainer">
+                    <graphic n="1006" width="16.002cm" height="9.888361111111111cm" url="/tmp/tmpb_uodtw8/Pictures/07d07352ec19bb2415ddc94810e5187d.png" rend="inline"/>
+                </hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: center;">
+                <hi rend="normaltextrun">Figure 6: Head tilt angles distribution</hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;"> </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">Lastly, the dynamism of the pose showed no significant difference between men and women (
+                    <hi rend="italic" style="font-size:10pt" xml:space="preserve">p = </hi>.905). 
+                </hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: center;">
+                <hi rend="wacimagecontainer">
+                    <graphic n="1007" width="16.002cm" height="9.881305555555555cm" url="/tmp/tmpb_uodtw8/Pictures/07d07352ec19bb2415ddc94810e5187d.png" rend="inline"/>
+                </hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: center;">
+                <hi rend="normaltextrun">Figure 7: Normalised proportional frequency of dynamic poses</hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;"> </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">
+                    <hi rend="bold" style="font-size:10pt">Conclusion</hi>
+                </hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">Preliminary computational analysis reveals no to little statistically significant difference in depicted activity between male and female premodern figures. Male figures appear more frequently in static, vertical poses, suggesting restrained authority rather than dynamic action. The minimal variation in gendered postural markers (head tilt, leg spread) additionally challenges conventional binary narratives, indicating the need to consider genre conventions in their meditation on gendered representations. This ongoing study continues to refine our analytical methods. By leveraging computer vision technologies like OpenPose, this research demonstrates how quantitative pose analysis can both interrogate and complicate art historical theories of gender representation, offering a potentially transformative lens through which to reexamine the relationship between embodied pose and ideological constructs in premodern visual art.</hi>
+                <hi rend="eop"> </hi>
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl rend="paragraph" style="text-align: left; text-align: justify;">
+                        <hi rend="normaltextrun">Bell, Philip / Impett, Leonardo (2021): “The Choreography of the Annunciation through a Computational Eye”, in: 
+                            <hi rend="italic" style="font-size:10pt" xml:space="preserve">Histoire de </hi>
+                            <hi rend="italic" style="font-size:10pt">l’art</hi> 34, 87: 1–6.  
+                        </hi>
+                        <hi rend="eop"> </hi>
+                    </bibl>
+                    <bibl rend="paragraph" style="text-align: left; text-align: justify;">
+                        <hi rend="normaltextrun">Berdini, Paolo (1998): “Women under the Gaze: A Renaissance Genealogy”, in: 
+                            <hi rend="italic" style="font-size:10pt">Art History</hi> 21, 4: 565–590. DOI: (
+                        </hi>
+                        <ref target="https://doi.org/10.1111/1467-8365.00130">
+                            <hi rend="normaltextrun">
+                                <hi rend="underline color(0000FF)" style="font-size:10pt">https://doi.org/10.1111/1467-8365.00130</hi>
+                            </hi>
+                        </ref>
+                        <hi rend="normaltextrun">).  </hi>
+                        <hi rend="eop"> </hi>
+                    </bibl>
+                    <bibl rend="paragraph" style="text-align: left; text-align: justify;">
+                        <hi rend="normaltextrun">Berger, John (2008): 
+                            <hi rend="italic" style="font-size:10pt">Ways of Seeing</hi>. London: Penguin Classics.  
+                        </hi>
+                        <hi rend="eop"> </hi>
+                    </bibl>
+                    <bibl rend="paragraph" style="text-align: left; text-align: justify;">
+                        <hi rend="normaltextrun">Bernasconi, Viola (2024): “Automated Body Pose Estimation on Painting: A Crisis of Uncertainty”, in: Cetinić, Eva / Negueruela del Castillo, Daniel (eds.): 
+                            <hi rend="italic" style="font-size:10pt">From Hype to Reality: Artificial Intelligence in the Study of Art and Culture</hi>. Hertziana Studies in Art History 3: 75–81. DOI: (
+                        </hi>
+                        <ref target="https://doi.org/10.48431/hsah.0309">
+                            <hi rend="normaltextrun">
+                                <hi rend="underline color(0000FF)" style="font-size:10pt">https://doi.org/10.48431/hsah.0309</hi>
+                            </hi>
+                        </ref>
+                        <hi rend="normaltextrun">).  </hi>
+                        <hi rend="eop"> </hi>
+                    </bibl>
+                    <bibl rend="paragraph" style="text-align: left; text-align: justify;">
+                        <hi rend="normaltextrun">Bernasconi, Viola / Cetinić, Eva / Impett, Leonardo (2023): “A Computational Approach to Hand Pose Recognition in Early Modern Paintings”, in: 
+                            <hi rend="italic" style="font-size:10pt">Journal of Imaging</hi> 9, 6: 120. DOI: (
+                        </hi>
+                        <ref target="https://doi.org/10.3390/jimaging9060120">
+                            <hi rend="normaltextrun">
+                                <hi rend="underline color(0000FF)" style="font-size:10pt">https://doi.org/10.3390/jimaging9060120</hi>
+                            </hi>
+                        </ref>
+                        <hi rend="normaltextrun">).  </hi>
+                        <hi rend="eop"> </hi>
+                    </bibl>
+                    <bibl rend="paragraph" style="text-align: left; text-align: justify;">
+                        <hi rend="normaltextrun">Butkowski, Chelsea P. / Tajima, Atsushi (2017): “A Critical Examination of Visualized Femininity: Selective Inheritance and Intensification of Gender Posing from Historical Painting to Contemporary Advertising”, in: 
+                            <hi rend="italic" style="font-size:10pt">Feminist Media Studies</hi> 17, 6: 1037–1055. DOI: (
+                        </hi>
+                        <ref target="https://doi.org/10.1080/14680777.2017.1300830">
+                            <hi rend="normaltextrun">
+                                <hi rend="underline color(0000FF)" style="font-size:10pt">https://doi.org/10.1080/14680777.2017.1300830</hi>
+                            </hi>
+                        </ref>
+                        <hi rend="normaltextrun">).  </hi>
+                        <hi rend="eop"> </hi>
+                    </bibl>
+                    <bibl rend="paragraph" style="text-align: left; text-align: justify;">
+                        <hi rend="normaltextrun">Butler, Judith (1990): 
+                            <hi rend="italic" style="font-size:10pt">Gender Trouble</hi>. New York: Routledge.  
+                        </hi>
+                        <hi rend="eop"> </hi>
+                    </bibl>
+                    <bibl rend="paragraph" style="text-align: left; text-align: justify;">
+                        <hi rend="normaltextrun">Goffman, Erving (1979): 
+                            <hi rend="italic" style="font-size:10pt">Gender Advertisements</hi>. Cambridge, MA: Harvard University Press.  
+                        </hi>
+                        <hi rend="eop"> </hi>
+                    </bibl>
+                    <bibl rend="paragraph" style="text-align: left; text-align: justify;">
+                        <hi rend="normaltextrun">Impett, Leonardo / Süsstrunk, Sabine (2016): “Pose and Pathosformel in Aby Warburg’s Bilderatlas”, in: 
+                            <hi rend="italic" style="font-size:10pt">Computer Vision – ECCV 2016 Workshops: Amsterdam, The Netherlands, October 8–10 and 15–16, 2016, Proceedings, Part I 14</hi>. Cham: Springer International Publishing: 888–902.  
+                        </hi>
+                        <hi rend="eop"> </hi>
+                    </bibl>
+                    <bibl rend="paragraph" style="text-align: left; text-align: justify;">
+                        <hi rend="normaltextrun">Impett, Leonardo (2020): “Analyzing Gesture in Digital Art History”, in: 
+                            <hi rend="italic" style="font-size:10pt">The Routledge Companion to Digital Humanities and Art History</hi>. London: Routledge: 386–407.  
+                        </hi>
+                        <hi rend="eop"> </hi>
+                    </bibl>
+                    <bibl rend="paragraph" style="text-align: left; text-align: justify;">
+                        <hi rend="normaltextrun">Lacouture, Fabien (2016): “‘You Will Be a Man, my Son’: Signs of Masculinity and Virility in Italian Renaissance Paintings of Boys”, in: Averett, Matthew Knox (ed.): 
+                            <hi rend="italic" style="font-size:10pt">The Early Modern Child in Art and History</hi>. London: Routledge.  
+                        </hi>
+                        <hi rend="eop"> </hi>
+                    </bibl>
+                    <bibl rend="paragraph" style="text-align: left; text-align: justify;">
+                        <hi rend="normaltextrun">Mulvey, Laura (1975): “Visual Pleasure and Narrative Cinema”, in: 
+                            <hi rend="italic" style="font-size:10pt">Screen</hi> 16, 3: 6–18. DOI: (
+                        </hi>
+                        <ref target="https://doi.org/10.1093/screen/16.3.6">
+                            <hi rend="normaltextrun">
+                                <hi rend="underline color(0000FF)" style="font-size:10pt">https://doi.org/10.1093/screen/16.3.6</hi>
+                            </hi>
+                        </ref>
+                        <hi rend="normaltextrun">).  </hi>
+                        <hi rend="eop"> </hi>
+                    </bibl>
+                    <bibl rend="paragraph" style="text-align: left; text-align: justify;">
+                        <hi rend="normaltextrun">Schneider, Steffen / Vollmer, Richard / Huber, Ulrich (2023): 
+                            <hi rend="italic" style="font-size:10pt">Poses of People in Art: A Data Set for Human Pose Estimation in Digital Art History (1.1)</hi> [Data set]. Zenodo. DOI: (
+                        </hi>
+                        <ref target="https://doi.org/10.5281/zenodo.7516230">
+                            <hi rend="normaltextrun">
+                                <hi rend="underline color(0000FF)" style="font-size:10pt">https://doi.org/10.5281/zenodo.7516230</hi>
+                            </hi>
+                        </ref>
+                        <hi rend="normaltextrun">).  </hi>
+                        <hi rend="eop"> </hi>
+                    </bibl>
+                    <bibl rend="paragraph" style="text-align: left; text-align: justify;">
+                        <hi rend="normaltextrun">Tom, Lisa (2015): “Princely Portraits of Adolescence in the Habsburg Court of Philip II in the Mid-Sixteenth Century”, in: Averett, Matthew Knox (ed.): 
+                            <hi rend="italic" style="font-size:10pt">The Early Modern Child in Art and History</hi>. London: Routledge.  
+                        </hi>
+                        <hi rend="eop"> </hi>
+                    </bibl>
+                    <bibl rend="paragraph" style="text-align: left; text-align: justify;">
+                        <hi rend="normaltextrun">Uppenkamp, Bettina (2019): “Men and Masculinity in Art and Art History”, in: 
+                            <hi rend="italic" style="font-size:10pt">Routledge International Handbook of Masculinity Studies</hi>. London: Routledge. 
+                        </hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

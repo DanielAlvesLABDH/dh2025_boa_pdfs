@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="IGNATOWICZ_Jan_Knowledge_Graphs_for_Digitized_Manuscripts_in">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Knowledge Graphs for Digitized Manuscripts in Jagiellonian Digital Library Application</title>
+                <author>
+                    <persName>
+                        <surname>Ignatowicz</surname>
+                        <forename>Jan</forename>
+                    </persName>
+                    <affiliation>Jagiellonian University, Poland</affiliation>
+                    <email>jan.ignatowicz@doctoral.uj.edu.pl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Kutt</surname>
+                        <forename>Krzysztof</forename>
+                    </persName>
+                    <affiliation>Jagiellonian University, Poland</affiliation>
+                    <email>krzysztof.kutt@uj.edu.pl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Nalepa</surname>
+                        <forename>Grzegorz J.</forename>
+                    </persName>
+                    <affiliation>Jagiellonian University, Poland</affiliation>
+                    <email>gjn@gjn.re</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-01T09:25:00.0000000Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Digital Humanities</term>
+                    <term>Image Understanding</term>
+                    <term>Computer Vision</term>
+                    <term>Knowledge Graphs</term>
+                    <term>Deep Learning</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>digital libraries creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>linked (open) data</term>
+                    <term>manuscripts description</term>
+                    <term>representation</term>
+                    <term>and analysis</term>
+                    <term>Computer science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">Digitizing cultural heritage collections has become crucial for preservation of historical artifacts and enhancing their availability to the wider public. Galleries, libraries, archives and museums (GLAM institutions) are actively digitizing their holdings and creates extensive digital collections. Those collections are often enriched with metadata describing items but not exactly their contents. The Jagiellonian Digital Library, standing as a good example of such an effort, offers datasets accessible through protocols like OAI-PMH (Lagoze et al., 2006). Despite these improvements, metadata completeness and standardization continue to pose substantial obstacles, limiting the searchability and potential connections between collections. To deal with these challenges, we explore an integrated methodology of computer vision (CV), artificial intelligence (AI), and semantic web technologies to enrich metadata and construct knowledge graphs for digitized manuscripts and incunabula.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Context and Challenges in Digital Cultural Heritage</head>
+                <p style="text-align: left; ">The Jagiellonian Digital Library (Jagiellonian Digital Library, 2025), similar to other institutions, provides digitized collections of manuscripts, incunabula, and other historical artifacts. Although these datasets in majority contain some metadata, their coverage and level of detail differ substantially. Mostly those metadata describe the title, author, creation date, and a few keywords, but they lack detailed information about the physical and visual characteristics of the objects. With having more comprehensive metadata, researchers could explore new and directions, uncovering connections and relationships within broader linked data frameworks.</p>
+                <p style="text-align: left; ">Additionally, while many organizations provide APIs or open-access protocols like OAI-PMH for data retrieval, others lack such capabilities, requiring manual scraping and extraction. This heterogeneity presents another layer of complexity in building interoperable digital archives.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>AI for Metadata Enrichment</head>
+                <p style="text-align: left; ">Our approach focuses on enriching existing metadata for digitized manuscripts and incunabula with usage of retrained CV models to find additional information directly from images. These enhanced metadata sets may serve as the basis for knowledge graphs constructions that represent the relationships and attributes of each artifact.</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Data Preparation and Model Training</head>
+                    <p>The first step consists of preparing a dataset suitable for training and retraining CV models. Existing widely used pre-trained models, such as YOLO (Jocher, 2024), Detectron (Wu, 2019) DeepLabcv3 (Chen, 2017), HRNet (Wang, 2020) and U-Net (Ronneberger, 2015) were tested on selected images from the Jagiellonian Digital Library. However, the unique nature of manuscripts and incunabula, characterized by ornamentations, handwritten texts, and varying degrees of preservation, resulted in these models performing poorly, with detection accuracies falling below acceptable thresholds.</p>
+                    <p rend="Normal" style="text-align: justify;">To propose a solution for this problem, we prepared a small dataset of 100 manually annotated images, that captures elements such as text regions, stamps, seals, and decorative features. With the use of this dataset, we retrained the pre-trained models and eventually achieved considerably accuracies in the object detection task. This exercise demonstrates the feasibility of adapting general-purpose CV models to the domain of historical manuscripts.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Metadata Enrichment via Detected Features</head>
+                    <p>Retrained models were used to analyze digitized manuscripts. They were able to identify key features revealing images' structure and content. The models detected text regions, classified paragraphs and headers, and highlighted decorative elements like ornamentations and illuminated initials. They also located seals, stamps, and marginal notes, what contribute in offering insights into document usage, authorship, and authenticity.</p>
+                    <p>To achieve this, models were trained to recognize specific categories, including paragraphs, stains, stamps, descriptions, signs, signatures, images, ornaments, initials, and headers. Each category reflects a distinct aspect of the manuscripts, from organizing text structure to identifying unique visual elements that vary across creators and historical periods. An example image from the dataset is presented in Figure 1. </p>
+                    <figure>
+                        <graphic n="1001" width="8.72475cm" height="7.3765583333333336cm" url="/tmp/tmpwrzjrob2//media/image.png" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; ">Figure 1: Example image from the created dataset highlights labelled classes: 
+                        <hi rend="italic">stamp</hi>, 
+                        <hi rend="italic">initial</hi>, 
+                        <hi rend="italic">header</hi>, 
+                        <hi rend="italic">ornament</hi>, and 
+                        <hi rend="italic">paragraph</hi>.
+                    </p>
+                    <p style="text-align: left; ">The detected features were added to the metadata, what enriched each document's description. Text sections are now classified by position, size, and type (e.g., paragraph, header, or signature). Stains and signs inform about a manuscript's condition or its history. Such enhanced metadata enables better search, comparison, and connection between artifacts, what supports deeper research and facilitates integration with broader cultural knowledge networks.</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Knowledge Graph Construction</head>
+                <p style="text-align: left; ">With enriched metadata, the next step is to build knowledge graphs that semantically represent each artifact’s attributes and relationships. For a manuscript, this step includes linking detected features (e.g., "Stamp X belongs to section Y"). It connects metadata to catalog entries, and integrates with external resources like DBpedia (Auer et al., 2007) and Wikidata (Vrandević et al. 2014).</p>
+                <p style="text-align: left; ">Ontologies are used for structuring these graphs. Our approach proposes a modular ontology capturing different types of sttributes. There are physical attributes (dimensions, preservation state), visual features (locations, element classes), and provenance (historical context, authorship, and related works). These connected through Linked Data (Berners et al., 2006) principles ontologies enable richer exploration, such as tracking recurring seals or the evolution of decorative styles across collections.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Broader Applications and Future Directions</head>
+                <p style="text-align: left; ">The proposed methodology supports cultural heritage research by enabling advanced searches for similar decorative styles or stamps. Is also facilitates cross-collection analysis through linked knowledge graphs. Presented methodology supports scalability by allowing larger datasets to be processed as models improve. Future work should focus on expanding the annotated dataset, fine-tuning models for specific artifact types, and automation of ontology generation to increase the methodology’s applicability across diverse collections.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p style="text-align: left; ">This work-in-progress highlights an approach to enhance cultural heritage datasets by metadata enrichment. For that this approach combines pretrained computer vision models with semantic knowledge graph construction. By adapting CV models to the unique characteristics of digitized manuscripts and using semantic web technologies, we aim retrieve metadata from images and through that enable richer, more meaningful interactions with digital collections. Although challenges remain, such as expanding datasets and refining ontologies, this interdisciplinary approach proposes advancements in how cultural heritage may be preserved, explored, and understood.</p>
+                <p style="text-align: left; ">This project underscores the potential of AI and semantic technologies in transforming digital cultural heritage, offering new insights and connections that were previously poorly accessible.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Acknowledgments</head>
+                <p style="text-align: left; ">The research has been supported by a grant from the Priority Research Area (DigiWorld) under the Strategic Programme Excellence Initiative at Jagiellonian University. This publication was funded by a flagship project "CHExRISH: Cultural Heritage Exploration and Retrieval with Intelligent Systems at Jagiellonian University" under the Strategic Programme Excellence Initiative at Jagiellonian University.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Auer, S., Bizer, C., Kobilarov, G., Lehmann, J., Cyganiak, R., Ives, Z.: Dbpedia: A nucleus for a web of open data. In: The Semantic Web, 6th International Semantic Web Conference (ISWC). pp. 722–735. Springer (2007). https://doi.org 10.1007/978-3-540-76298-0˙52, https://link.springer.com/chapter/10.1007/978-3-540-76298-0_52</bibl>
+                    <bibl style="text-align: left; ">Berners-Lee, T.: Linked data: Design principles for the web. https://www.w3.org/DesignIssues/LinkedData.html (2006), [Online; accessed 24-April-2025]</bibl>
+                    <bibl style="text-align: left; ">Chen, L.C., Papandreou, G., Schroff, F., Adam, H.: Rethinking atrous convolution for semantic image segmentation. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR) (2017), https://arxiv.org/abs/1706.05587</bibl>
+                    <bibl style="text-align: left; ">Jagiellonian University: Jagiellonian digital library. https://jbc.bj.uj.edu.pl/dlibra (2025), [Online; accessed 24-April-2025]</bibl>
+                    <bibl style="text-align: left; ">Jocher, G., Team, U.: Yolov11: You only look once, version 11. https://github.com/ultralytics/ultralytics (2024) Knowledge Graphs for Digitized Manuscripts in JDL 5, [Online; accessed 24-April-2025]</bibl>
+                    <bibl style="text-align: left; ">Lagoze C., Van de Sompel H., Nelson M., Warner S.: Open Archives Initiative: The open archives initiative protocol for metadata harvesting (oai-pmh). https://www.openarchives.org/OAI/openarchivesprotocol.html (2002), [Online; accessed 24-April-2025]</bibl>
+                    <bibl style="text-align: left; ">Ronneberger, O., Fischer, P., Brox, T.: U-net: Convolutional networks for biomedical image segmentation (2015), https://arxiv.org/abs/1505.04597</bibl>
+                    <bibl style="text-align: left; ">Vrandecić, D., Krotzsch, M.: Wikidata: A free collaborative knowledge base. Communications of the ACM 57(10), 78–85 (2014). https://doi.org/10.1145/2629489, https://dl.acm.org/doi/10.1145/2629489</bibl>
+                    <bibl style="text-align: left; ">Wang, J., Sun, K., Cheng, T., Jiang, B., Deng, C., Zhao, Y., Liu, D., Mu, Y., Tan, M., Wang, X., Liu, W., Xiao, B.: Deep high resolution representation learning for visual recognition. IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) 43(10), 3349–3364 (2020). https://doi.org/10.1109/TPAMI.2020.2983686, https://arxiv.org/abs/1908.07919</bibl>
+                    <bibl style="text-align: left; ">Wu, Y., Kirillov, A., Massa, F., Lo, W.Y., Girshick, R.: Detectron2. https://github.com/facebookresearch/detectron2 (2019) [Online; accessed 24-April-2025] </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

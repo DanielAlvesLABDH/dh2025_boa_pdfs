@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MIYAGAWA_So_Customizing_Omeka_S_for_Linguistic_Linked_Open_D">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Customizing Omeka S for Linguistic Linked Open Data: A Case Study of the NINDA Language Resource Archive</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Miyagawa</surname>
+                        <forename>So</forename>
+                    </persName>
+                    <affiliation>National Institute for Japanese Language and Linguistics (NINJAL), Japan; University of Tsukuba, Japan</affiliation>
+                    <email>miyagawa.so.kb@u.tsukuba.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Wang</surname>
+                        <forename>Yifan</forename>
+                    </persName>
+                    <affiliation>National Institute for Japanese Language and Linguistics (NINJAL), Japan; University of Tokyo, Japan</affiliation>
+                    <email>yf-wang@ninjal.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ito</surname>
+                        <forename>Takanori</forename>
+                    </persName>
+                    <affiliation>Institute of Science Tokyo, Japan</affiliation>
+                    <email>takanoriito0658@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Takada</surname>
+                        <forename>Tomokazu</forename>
+                    </persName>
+                    <affiliation>National Institute for Japanese Language and Linguistics (NINJAL), Japan</affiliation>
+                    <email>ttakada@ninjal.ac.jp</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T09:45:03.955589067</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Omeka S</term>
+                    <term>endangered languages</term>
+                    <term>Japonic</term>
+                    <term>Ryukyuan</term>
+                    <term>linguistic linked open data</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data</term>
+                    <term>object</term>
+                    <term>and artefact preservation</term>
+                    <term>linked (open) data</term>
+                    <term>project design</term>
+                    <term>organization</term>
+                    <term>management</term>
+                    <term>sustainable procedures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>Asian studies</term>
+                    <term>Indigenous studies</term>
+                    <term>Linguistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>This paper explores an innovative adoption of Omeka S (Corporation for Digital Scholarship 2025) —a digital collection management system now widely adopted by digital humanities scholars— to manage linguistic resources. The research focuses on the NINDA or the National Institute for Japanese Language and Linguistics (NINJAL) Digital Archive (National Institute for Japanese Language and Linguistics 2025). This pioneering initiative is exemplary in so far as unexplored capabilities within the linguistic frameworks of Omeka S are concerned. NINDA can handle annotated audio recordings, interlinear glossed texts, lexical databases, language maps, and other complex linguistic materials, thanks to the foundational work done by several DH scholars, really showing the potential for innovation in Omeka S in linguistic resource management.</p>
+            <p>Influenced by digital humanities scholars who advocate integrating technology in humanities studies, NINDA customizes Omeka S to support the creation of Linguistic Linked Open Data (LLOD; Insight Centre for Data Analytics 2025) and implements IIIF (IIIF Consortium 2025). Traditionally used for high-resolution images, IIIF now supports many other multimedia formats, including audio and video recordings of languages. NINDA, in particular, leverages IIIF to offer time-aligned recordings of endangered varieties of Japonic languages, including Okinawan and Yaeyaman. The records are also given synchronized transcriptions and translations to research linguistic subtleties easily.</p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp8mf_clmm/Pictures/aa1bf7a0d2061a727213a35d85d34cd3.png"/>
+                </figure>
+            </p>
+            <p>
+                <hi rend="bold">Figure 1</hi>: Okinawan lexical items on Omeka S
+            </p>
+            <p>The project utilizes OntoLex Lemon to structure lexical data as LOD for seamless integration with linguistic databases globally. This fosters a nurturing atmosphere aligned with FAIR data management principles, Findable: Accessible, Interoperable, and Reusable (Miyagawa, Kato, Zlazli, Carlino, and Machida 2023). A significant execution encompasses digitized dictionaries of the Ryukyuan language, with entries that contain comprehensive metadata, including headwords, phonetic transcriptions, definitions, and illustrative usage examples, all associated with corresponding audio pronunciations preserved in IIIF-compliant formats. This approach allows researchers to investigate lexical entries within the framework of their verbal manifestations, conforming to digital humanities initiatives that emphasize the importance of diverse, multimodal data representations.</p>
+            <p>Another notable example is the use of parallel corpora, such as historic Japanese-Ryukyuan Bible translations, on Omeka S (Miyagawa 2023). Every verse has a corresponding counterpart in multiple languages, each with syntactic and semantic metadata. These resources are delivered via custom templates that facilitate multilingual search and cross-referencing, enable comparative linguistic research, and further the interoperability and accessibility of the DH platform.</p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp8mf_clmm/Pictures/aa1bf7a0d2061a727213a35d85d34cd3.png"/>
+                </figure>
+            </p>
+            <p>
+                <hi rend="bold">Figure 2</hi>: Japanese and Ryukyuan Pre-Modern Bible Translations Parallel Corpus in Omeka S
+            </p>
+            <p>The refashioning of Omeka S also speaks to community access, a fundamental principle for many DH scholars committed to open scholarship. For example, Ainu-language materials, such as folktales, are digitized in interlinear gloss and delivered intuitively to serve researchers and Indigenous communities. Via IIIF, records can be played back as their respective annotations are displayed, making such resources highly accessible and interactive.</p>
+            <p>NINDA makes a compelling case for how Omeka S’s ease of use and component-based design support the incorporation of multimedia listening resources into a single, interoperable archive. The project has overcome various critical challenges identified by DH practitioners, such as adapting Dublin Core metadata for linguistic data and customizing resource templates to handle complex relationships among data types. Bulk-import modules efficiently integrate extensive datasets, addressing scalability concerns pointed out by DH scholars, while RDF-based metadata export ensures interoperability with global repositories. This accessible methodology ensures that researchers and practitioners can navigate the NINDA project with ease and confidence. Using Omeka S, NINDA significantly lowers the technical barriers to establishing linguistic digital archives—a goal aligned with the Digital Humanities community's desire to reduce the entry barriers to digital assets. For example, projects dealing with endangered languages no longer have to develop specific systems. However, they can use Omeka S to create archives that support IIIF for annotated video recordings or OntoLex Lemon for structured lexical data (W3C 2019). This infrastructure presents an efficient and durable solution for documenting and preserving linguistic diversity, thus serving the DH's commitment to preserving cultural heritage through technology.</p>
+            <p>Following digital humanities principles, subsequent research will expand this framework to incorporate advanced annotation systems and integration with linked data repositories. This study demonstrates Omeka S’s potential for linguistic resource management through case studies of Ryukyuan dictionaries and Bible translation corpora. NINDA bridges cultural heritage platforms with linguistic data requirements, emphasizing accessibility, standardization, and community engagement, thus serving as a replicable model for digital humanities collaboration.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="color(#333333)bold">Corporation for Digital Scholarship</hi>
+                        <hi rend="color(#333333)"> </hi>
+                        <hi rend="color(#333333)">(2025):</hi>
+                        <hi rend="color(#333333)"> </hi>
+                        <hi rend="color(#333333)">“</hi>Omeka S”, Omeka &lt;https://omeka.org/s/&gt; [09.05.2025].
+                    </bibl>
+                    <bibl>IIIF Consortium (2025):“International Image International Interoperability Framework”, IIIF &lt;https://iiif.io/&gt; [09.05.2025].</bibl>
+                    <bibl>Insight Centre for Data Analytics (2025):“Linguistic Linked Open Data”, Linguistic Linked Open Data &lt;https://linguistic-lod.org/&gt; [09.05.2025].</bibl>
+                    <bibl>Miyagawa, So (2023): “Omeka S wo mochiita gengo shigen dejitaru aakaibu no koochiku [Construction of Language Resource Digital Archives Using Omeka S]”, in: 
+                        <emph>Nichiry</emph>
+                        <emph>uu</emph>
+                        <emph> shogo no kijutsu hozon kenky</emph>
+                        <emph>uu</emph>
+                        <emph> </emph>
+                        <emph>[Descriptive and Conservation Studies of Japonic Languages]</emph> 1: 43–59. DOI: 10.15084/0002000047.
+                    </bibl>
+                    <bibl>Miyagawa, So / Kato, Kanji / Zlazli, Miho / Carlino, Salvatore / Machida, Seira (2023): “Building Okinawan Lexicon Resource for Language Reclamation/Revitalization and Natural Language Processing Tasks such as Universal Dependencies Treebanking”, in: Ilinykh, Nikolai / Morger, Felix / Dannélls, Dana / Dobnik, Simon / Megyesi, Beáta / Nivre, Joakim (eds.): 
+                        <emph>Proceedings of the Second Workshop on Resources and Representations for Under-Resourced Languages and Domains (RESOURCEFUL-2023)</emph>. Tórshavn, the Faroe Islands: Association for Computational Linguistics, 86–91 &lt;https://aclanthology.org/2023.resourceful-1.12/&gt; [09.05.2025].
+                    </bibl>
+                    <bibl>National Institute for Japanese Language and Linguistics (2025):“NINJAL Digital Archive NINDA”, National Institute for Japanese Language and Linguistics &lt;https://ninda.ninjal.ac.jp/&gt; [09.05.2025].</bibl>
+                    <bibl>W3C (2019): “The OntoLex Lemon Lexicography Module”, W3C &lt;https://www.w3.org/2019/09/lexicog/&gt; [09.05.2025].</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

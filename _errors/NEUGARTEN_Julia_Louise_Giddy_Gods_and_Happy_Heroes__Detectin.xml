@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NEUGARTEN_Julia_Louise_Giddy_Gods_and_Happy_Heroes__Detectin">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Giddy Gods and Happy Heroes: Detecting Character-Emotions in Fanfiction about Greek Myth with Vector Space Models</title>
+                <author>
+                    <persName>
+                        <surname>Neugarten</surname>
+                        <forename>Julia Louise</forename>
+                    </persName>
+                    <affiliation>Radboud University, The Netherlands, The</affiliation>
+                    <email>julia.neugarten@ru.nl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Meijerink</surname>
+                        <forename>Thijs Corneel</forename>
+                    </persName>
+                    <affiliation>Independent Researcher</affiliation>
+                    <email>thijs.meijerink@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T10:29:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>fanfiction</term>
+                    <term>emotion</term>
+                    <term>vector space models</term>
+                    <term>word2vec</term>
+                    <term>antiquity</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data modeling</term>
+                    <term>digital ecologies and digital communities creation management and analysis</term>
+                    <term>electronic literature production and analysis</term>
+                    <term>natural language processing</term>
+                    <term>Cultural studies</term>
+                    <term>Gender and sexuality studies</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>Fanfiction – stories by and for fans, inspired by existing stories, and published online for free – has an important emotional dimension. Fans write fanfiction to express emotions about beloved stories, strengthen emotional ties within the fan community, and explore the inner lives of their favorite characters: “fanfiction is one of the sites where the emotional investments that define fandom are expressed” (Neugarten 2023: 206). Fanfiction has thus been described as “emotional landscapes of reading” (Samutina 2016). </p>
+                <p>Scholars in DH have often analyzed fanfiction (Black 2020), partly because its sheer volume invites distant reading – 
+                    <hi rend="italic">Archive of Our Own</hi>, one of the largest online repositories of English-language fanfiction, currently hosts over 14 million stories – and partly because of the accessibility of born-digital fanfiction for research (Leavenworth 2016). Computational methods have been used to assess fanfiction’s approach to character gender (Milli &amp; Bamman 2016) and selected narrative features, also including the representation of gendered and racialized characters (Vadde &amp; So 2024). Although some scholars have applied digital methods to studying the role of emotions in fanfiction and fan communities, for example by calculating the complexity of fanfiction’s sentiment arcs (Jacobsen et al. 2024) and by applying aspect-based sentiment analysis to reader reception in fanfiction comments (Neugarten et al. 2024), methods from sentiment analysis (SA) still have much to offer when it comes to understanding the intradiegetic emotions of characters in fanfiction.
+                </p>
+                <p>This paper thus combines research questions from fan studies – about how emotion is represented in fanfiction – with DH-methods for SA, which are well-suited to the born-digital, emotionally-inflected, and prolific nature of contemporary fanfiction data. Specifically, we examine the emotions of fictional characters in a dataset of fanfiction about Greek mythology. Using vector space models (VSMs), we detect the emotions most often associated with various fictional characters in fanfiction on a large scale.</p>
+                <p>We ask: </p>
+                <list type="ordered">
+                    <item>What are the associations between fictional characters in fanfiction about Greek myth, and emotions?</item>
+                    <item>Do character-emotion associations differ between character genders?</item>
+                    <item>Do character-emotion associations differ between genres? Here, we focus on the fanfiction-genres angst – “writing which dwells on emotional problems” (Pugh 2005: 242) – and fluff – stories that “lack emotional difficulties” (Neugarten 2023: 207), two of the the most popular genres in the corpus. We hypothesize they differ in their representation of character-emotions because of their emphasis on differing emotional experiences.</item>
+                </list>
+                <p>We focus on characters that previous research (Neugarten 2024) indicated were prevalent in fanfiction about Greek mythology (listed in Appendix A).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Theory</head>
+                <p>Classicists theorize that fictional characters in both Greek mythology and fanfiction are 
+                    <hi rend="italic">accretive</hi>: “
+                    <hi rend="color(212121)" xml:space="preserve">when [a reader] encounters the character in different instantiations, his or her concept of the character gradually </hi>
+                    <hi rend="italic color(212121)" xml:space="preserve">accrues </hi>
+                    <hi rend="color(212121)" xml:space="preserve">traits from some or all of these instantiations” (Johnston 2018: 27). By examining fictional characters’ relationship to emotions on the large scale of the Greek mythology fanfiction community, we map how mythological characters are associated with specific characterizations and emotions in this interpretive community. This method also helps us understand </hi>“how ‘being emotional’ comes to be seen as a characteristic of some bodies and not others” (Ahmed 2014: 4) – although fanfiction deals with fictional and textual representations, not real people.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Data</head>
+                <p>Our dataset contains 5.154 works (±28 million words) of English-language fanfiction from 
+                    <hi rend="italic" xml:space="preserve">Archive of Our Own, </hi>written in the fandom 
+                    <hi rend="italic" xml:space="preserve">Ancient Greek Religion and Lore. </hi>It encompasses all stories published in that fandom from 2008 to December 2022. The fandom revolves around a nebulous set of cultural sources, including texts from Greco-Roman Antiquity, such as 
+                    <hi rend="italic" xml:space="preserve">The Iliad </hi>(Homer 800 BC)
+                    <hi rend="italic" xml:space="preserve">, </hi>and more recent popular-culture adaptations of Greek mythology, such as the novel 
+                    <hi rend="italic" xml:space="preserve">Song of Achilles </hi>(Miller 2017).
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Method</head>
+                <p>We created a VSM of our fanfiction-corpus using word2vec (Mikolov et al. 2013). We decided not to use an existing VSM because fanfiction presents a subcultural domain of language use that may not align with language use in other corpora. Our method is inspired by SentiArt (Jacobs 2018, 2019), an approach to SA that uses a VSM. We proceed from the same basic assumption as SentiArt, namely that the distance (cosine similarity) in the VSM between the vector representing a character, and the vector representing an emotion, encodes the degree of semantic association between that character and that emotion in the corpus. Contrary to Jacobs, who uses these similarity measures in models based on psychological theory (e.g. big-5), we measure the semantic association between selected characters and six basic emotions: sadness, joy, anger, fear, surprise and disgust, as theorized by Paul Ekman (1992). </p>
+                <p>To investigate how character-emotion associations differ between the angst- and fluff-genres, we trained additional VSMs using preprocessed data, where each occurrence of a character was tagged with the genre of its story. We obtained genre-labels from existing metadata (Neugarten &amp; Smeets 2023). These models thus contain two separate Hades-vectors, one representing Hades in fluff-stories and the other representing him in angst-stories. Here, we only included stories tagged with angst 
+                    <hi rend="italic" xml:space="preserve">or </hi>fluff without overlap. We validated the VSMs by comparing the semantic relatedness between word pairs in our models with human judgments. On the WordSim-353 benchmark, all models attain a Spearman’s ρ of ~0.58. 
+                </p>
+                <p>This VSM-based approach cannot distinguish between a character experiencing an emotion and a character arousing that emotion in others. This is a significant limitation that informs our interpretation of results.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results: What are the associations between fictional characters in fanfiction about Greek myth and emotions? </head>
+                <p>To answer this question, we created radar-plots of each character’s similarity to the six emotions. Some of these intuitively make sense. For example, Dionysus (Figure 1, 580 occurrences in the dataset), god of festivity, is most closely associated with joy, as is Aphrodite (Figure 2, 1,163 occurrences), goddess of love. Ares (Figure 3, 821 occurrences), god of war, is most closely associated with anger.</p>
+                <figure>
+                    <figure/>
+                    <figure/>
+                    <figure/>
+                </figure>
+                <p>Other results are surprising. Achilles (Figure 4, 683 occurrences), whose wrath famously set the events of Homer’s 
+                    <hi rend="italic" xml:space="preserve">Iliad </hi>in motion, does not have a particularly strong association to anger in the fanfiction, suggesting that fanfiction may be transforming his emotional profile.
+                </p>
+                <figure/>
+                <p>Demeter (Figure 5, 841 occurrences) has a high cosine similarity to anger – the highest of all characters. This could be because many stories revolve around Hades’ abduction of her daughter, Persephone. Although much fanfiction portrays the Hades/Persephone relationship as happy and romantic, Demeter often disapproves.</p>
+                <figure/>
+                <p>Finally, the plots show that Hades and Persephone (Figure 6, with 
+                    <hi rend="color(212121)">1,743 occurrences</hi> and Figure 7 with 
+                    <hi rend="color(212121)">1,283 occurrences</hi>) are most closely associated with emotions in the VSM –  the blue area of their plots is large compared to others. Thus, these characters are most often associated with emotional contexts, perhaps because of fanfiction’s strong focus on their romance.
+                </p>
+                <figure>
+                    <figure/>
+                    <figure/>
+                </figure>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results: Do character-emotion associations differ between genders?</head>
+                <p>Here, we expanded our character list to include 227 characters (133 men, 94 women) that occurred in the fanfiction. This includes crossover-characters such as Harry Potter and Sherlock Holmes. Figure 8 plots the similarity between specific emotions and gendered character-groups. Gender differences are significant at p&lt;0.05 for joy and sadness.</p>
+                <p>This approach offers an oversimplified operationalization of the gender spectrum as a binary, especially since fanfiction often explores non-binary gender identities. However, because tags indicating non-binary gender identities rarely occurred in the metadata,<ref n="1" target="ftn1"/> we find the simplification permissible here.
+                </p>
+                <p>Figure 8 presents a violin plot of emotion-associations per emotion for character-groups by gender. Statistically significant differences (p&lt;0.05) are highlighted in bold, middle bars represent the mean.</p>
+                <figure/>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results: Do character-emotion associations differ between genres?</head>
+                <p>Because the angst-genre emphasizes emotional turmoil, we hypothesize that characters in angst-stories experience more anger, sadness, fear and disgust, while they experience more joy in fluff. Looking at selected individuals, most characters were positioned closer to joy in the vector space in their fluff-incarnations than in angst. Notable exceptions include Demeter (Figure 9, occurring 39 times in angst and 46 in fluff), who often opposes the Hades/Persephone relationship that is the focus of many fluff stories. In fluff, she is also more affiliated with sadness than joy.</p>
+                <figure/>
+                <p>Hector (Figure 10) is also remarkably distant from joy in fluff – although this is based on only seven stories, compared to 39 occurrences in angst. He is Achilles’ enemy, and may occur as an antagonist in fluff revolving around a Patroclus/Achilles-romance. Finally Icarus (Figure 11), is positioned closest to joy in 21 angst-stories (compared to only 5 fluff-occurrences), presumably because exhilaration precedes his fall in many retellings of his myth.</p>
+                <figure/>
+                <p>In the genre-separated plots for Persephone and Hades (Figures 12 and 13) joy prevails in their fluff-incarnations (94 occurrences for Persephone and 104 for Hades) and sadness, disgust and anger dominate their angst-incarnations (76 for Persephone and 111 for Hades). Remarkably, fear is more closely associated with the fluff-versions of both characters, perhaps because romance-oriented fluff relies on characters’ sense of insecurity or fear of rejection for narrative tension.</p>
+                <figure>
+                    <figure/>
+                    <figure/>
+                </figure>
+                <p>Examining the larger set of characters, 161 of them occurred in fluff-stories and 201 in angst. Statistically significant differences were found between the genres of fluff and angst for all emotions except joy. This is surprising because of fluff’s strong association with happy storylines, and because joy was one of only two emotions significantly related to (female) character gender. However, the finding that angst is significantly more closely related to fear, sadness, disgust and anger, which we consider negative emotions, aligns with our expectations. Figure 14 offers a violin plot of emotion-associations per emotion for character-groups by genre. Statistically significant differences (p&lt;0.05) are highlighted in bold, middle bars represent the mean.</p>
+                <figure/>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p>We find marked differences in selected characters’ association with particular emotions, at the gender-aggregate level for joy and sadness, and at the genre-aggregate level for alle emotions except joy. We also find some interesting patterns in emotion-distribution for characters across the angst- and fluff-genres, and we suspect these are related to the attitude characters take towards the romantic relationship celebrated in fluff. This idea could be explored further by close-reading individual works.</p>
+                <p>To analyze fanfiction about Greek mythology is to study cultural democratization. It means examining how cultural materials associated with Greco-Roman antiquity, an era traditionally associated with high culture and social class (Hall 2007), is being rewritten in contemporary online fan communities, a cultural sphere traditionally associated with low culture (Jensen 1992). This paper thus fits within the conference theme of accessibility, by turning attention to the ways fans are bridging the divide between academic and fannish modes of engagement with the past.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Data Access</head>
+                <p>To protect the privacy of the fanfiction community, the fanfiction-dataset will not be shared. We recommend using Radiolorian’s AO3-Scraper (2022) to collect your own. Code and plots are available on Github: 
+                    <ref target="https://github.com/th555/myth2vec_public">
+                        <hi rend="color(1155CC)">https://github.com/th555/myth2vec_public</hi>
+                    </ref>.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Appendix A: List of 25 most-prevalent characters in the 
+                    <hi rend="italic" xml:space="preserve">MythFic </hi>corpus
+                </head>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Character</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Frequency (total)</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Frequency (fluff)</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Frequency (angst)</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Hades</cell>
+                        <cell style="text-align: left;" rend="DH-Default">1,743</cell>
+                        <cell style="text-align: left;" rend="DH-Default">109</cell>
+                        <cell style="text-align: left;" rend="DH-Default">111</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Persephone</cell>
+                        <cell style="text-align: left;" rend="DH-Default">1,283</cell>
+                        <cell style="text-align: left;" rend="DH-Default">94</cell>
+                        <cell style="text-align: left;" rend="DH-Default">76</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Zeus</cell>
+                        <cell style="text-align: left;" rend="DH-Default">1,780</cell>
+                        <cell style="text-align: left;" rend="DH-Default">78</cell>
+                        <cell style="text-align: left;" rend="DH-Default">107</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Apollo</cell>
+                        <cell style="text-align: left;" rend="DH-Default">1,324</cell>
+                        <cell style="text-align: left;" rend="DH-Default">74</cell>
+                        <cell style="text-align: left;" rend="DH-Default">84</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Aphrodite</cell>
+                        <cell style="text-align: left;" rend="DH-Default">1,163</cell>
+                        <cell style="text-align: left;" rend="DH-Default">69</cell>
+                        <cell style="text-align: left;" rend="DH-Default">63</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Hera</cell>
+                        <cell style="text-align: left;" rend="DH-Default">1,016</cell>
+                        <cell style="text-align: left;" rend="DH-Default">50</cell>
+                        <cell style="text-align: left;" rend="DH-Default">58</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Ares</cell>
+                        <cell style="text-align: left;" rend="DH-Default">821</cell>
+                        <cell style="text-align: left;" rend="DH-Default">45</cell>
+                        <cell style="text-align: left;" rend="DH-Default">49</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Demeter</cell>
+                        <cell style="text-align: left;" rend="DH-Default">841</cell>
+                        <cell style="text-align: left;" rend="DH-Default">46</cell>
+                        <cell style="text-align: left;" rend="DH-Default">39</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Artemis</cell>
+                        <cell style="text-align: left;" rend="DH-Default">890</cell>
+                        <cell style="text-align: left;" rend="DH-Default">55</cell>
+                        <cell style="text-align: left;" rend="DH-Default">45</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Athena</cell>
+                        <cell style="text-align: left;" rend="DH-Default">990</cell>
+                        <cell style="text-align: left;" rend="DH-Default">41</cell>
+                        <cell style="text-align: left;" rend="DH-Default">44</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Achilles</cell>
+                        <cell style="text-align: left;" rend="DH-Default">683</cell>
+                        <cell style="text-align: left;" rend="DH-Default">49</cell>
+                        <cell style="text-align: left;" rend="DH-Default">71</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Hermes</cell>
+                        <cell style="text-align: left;" rend="DH-Default">928</cell>
+                        <cell style="text-align: left;" rend="DH-Default">71</cell>
+                        <cell style="text-align: left;" rend="DH-Default">55</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Patroclus</cell>
+                        <cell style="text-align: left;" rend="DH-Default">442</cell>
+                        <cell style="text-align: left;" rend="DH-Default">36</cell>
+                        <cell style="text-align: left;" rend="DH-Default">54</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Poseidon</cell>
+                        <cell style="text-align: left;" rend="DH-Default">859</cell>
+                        <cell style="text-align: left;" rend="DH-Default">41</cell>
+                        <cell style="text-align: left;" rend="DH-Default">51</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Dionysus</cell>
+                        <cell style="text-align: left;" rend="DH-Default">580</cell>
+                        <cell style="text-align: left;" rend="DH-Default">30</cell>
+                        <cell style="text-align: left;" rend="DH-Default">24</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Helen</cell>
+                        <cell style="text-align: left;" rend="DH-Default">406</cell>
+                        <cell style="text-align: left;" rend="DH-Default">16</cell>
+                        <cell style="text-align: left;" rend="DH-Default">29</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Hephaestus</cell>
+                        <cell style="text-align: left;" rend="DH-Default">512</cell>
+                        <cell style="text-align: left;" rend="DH-Default">29</cell>
+                        <cell style="text-align: left;" rend="DH-Default">26</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Icarus</cell>
+                        <cell style="text-align: left;" rend="DH-Default">231</cell>
+                        <cell style="text-align: left;" rend="DH-Default">5</cell>
+                        <cell style="text-align: left;" rend="DH-Default">21</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Odysseus</cell>
+                        <cell style="text-align: left;" rend="DH-Default">360</cell>
+                        <cell style="text-align: left;" rend="DH-Default">11</cell>
+                        <cell style="text-align: left;" rend="DH-Default">29</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Ariadne</cell>
+                        <cell style="text-align: left;" rend="DH-Default">236</cell>
+                        <cell style="text-align: left;" rend="DH-Default">12</cell>
+                        <cell style="text-align: left;" rend="DH-Default">14</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Hector</cell>
+                        <cell style="text-align: left;" rend="DH-Default">312</cell>
+                        <cell style="text-align: left;" rend="DH-Default">7</cell>
+                        <cell style="text-align: left;" rend="DH-Default">39</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Paris</cell>
+                        <cell style="text-align: left;" rend="DH-Default">363</cell>
+                        <cell style="text-align: left;" rend="DH-Default">17</cell>
+                        <cell style="text-align: left;" rend="DH-Default">34</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Hestia</cell>
+                        <cell style="text-align: left;" rend="DH-Default">419</cell>
+                        <cell style="text-align: left;" rend="DH-Default">19</cell>
+                        <cell style="text-align: left;" rend="DH-Default">20</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Cassandra<ref n="2" target="ftn2"/>
+                        </cell>
+                        <cell style="text-align: left;" rend="DH-Default">199</cell>
+                        <cell style="text-align: left;" rend="DH-Default">2</cell>
+                        <cell style="text-align: left;" rend="DH-Default">11</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Eros</cell>
+                        <cell style="text-align: left;" rend="DH-Default">420</cell>
+                        <cell style="text-align: left;" rend="DH-Default">23</cell>
+                        <cell style="text-align: left;" rend="DH-Default">24</cell>
+                    </row>
+                </table>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>References</head>
+                <p>
+                    <hi rend="bold">Ahmed, Sara</hi> (2014): 
+                    <hi rend="italic">The Cultural Politics of Emotion</hi>. Edinburgh: Edinburgh University Press.
+                </p>
+                <p>
+                    <hi rend="bold">Black, Suzanne R.</hi> (2020): 
+                    <hi rend="bold">
+                        <hi rend="normalweight">“</hi>
+                    </hi>Adding a Digital Dimension to Fan Studies Methodologies
+                    <hi rend="bold">
+                        <hi rend="normalweight" style="font-size:10pt">”</hi>
+                        <hi rend="normalweight" style="font-size:10pt" xml:space="preserve">, in: </hi>
+                    </hi>
+                    <hi rend="italic">Transformative Works and Cultures</hi>, 33. DOI: 10.3983/twc.2020.1725.
+                </p>
+                <p>
+                    <hi rend="bold" xml:space="preserve">Ekman, Paul </hi>(1992): 
+                    <hi rend="bold">
+                        <hi rend="normalweight">“</hi>
+                        <hi rend="normalweight">Are there basic emotions?</hi>
+                        <hi rend="normalweight" style="font-size:10pt">”</hi>
+                        <hi rend="normalweight" style="font-size:10pt" xml:space="preserve"> in: </hi>
+                    </hi>
+                    <hi rend="italic" xml:space="preserve">Psychological Review </hi>99, 3: 550-53. DOI: 10.1037/0033-295X.99.3.550.
+                </p>
+                <p>
+                    <hi rend="bold" xml:space="preserve">Hall, Edith </hi>(2007): 
+                    <hi rend="bold">
+                        <hi rend="normalweight">“Putting the Class into Classical Reception”</hi>
+                        <hi rend="normalweight" xml:space="preserve"> in: Hardwick, Lorna / Stray, Christopher (eds.): </hi>
+                        <hi rend="italic normalweight" xml:space="preserve">A Companion to Classical Receptions. </hi>
+                        <hi rend="normalweight" xml:space="preserve">Oxford: Wiley Blackwell 386-97. DOI: </hi>
+                        <hi rend="normalweight">10.1002/9780470696507.ch29</hi>
+                        <hi rend="normalweight">.</hi>
+                    </hi>
+                </p>
+                <p>
+                    <hi rend="bold">Homer 
+                        <hi rend="normalweight" xml:space="preserve">(800 BC): </hi>
+                        <hi rend="italic normalweight" xml:space="preserve">The </hi>
+                        <hi rend="italic normalweight">Illiad</hi>
+                        <hi rend="italic normalweight" xml:space="preserve">. </hi>
+                        <hi rend="normalweight" xml:space="preserve">Translated by Samuel Butler, </hi>
+                        <hi rend="italic normalweight" xml:space="preserve">The Internet Classics Archive, </hi>
+                    </hi>&lt;
+                    <ref target="https://classics.mit.edu/Homer/iliad.html">https://classics.mit.edu/Homer/iliad.html</ref>&gt; [10.04.2025].
+                </p>
+                <p>
+                    <hi rend="bold" xml:space="preserve">Jacobs, Arthur M. </hi>(2018): “The Gutenberg English Poetry Corpus: Exemplary Quantitative Narrative Analyses”, in: 
+                    <hi rend="italic">Frontiers in Digital Humanities</hi> 5. DOI: 10.3389/fdigh.2018.00005.
+                </p>
+                <p>
+                    <hi rend="bold" xml:space="preserve">Jacobs, Arthur M. </hi>(2019): “Sentiment Analysis for Words and Fiction Characters From the Perspective of Computational (Neuro-)Poetics”, in: 
+                    <hi rend="italic">Frontiers in Robotics and AI</hi> 6. DOI: 10.3389/frobt.2019.00053.
+                </p>
+                <p>
+                    <hi rend="bold" xml:space="preserve">Jacobsen, Mia / Bizzoni, Yuri / Feldkamp Moreira, Pascale / Nielbo, Kristoffer L. </hi>(2024): “Patterns of Quality: Comparing Reader Reception Across Fanfiction and Commercially Published Literature”, in: 
+                    <hi rend="italic" xml:space="preserve">CHR 2024: Computational Humanities Research Conference, </hi>Aarhus, Denmark
+                    <hi rend="italic">,</hi> 718-39. &lt;
+                    <ref target="https://ceur-ws.org/Vol-3834/paper106.pdf">https://ceur-ws.org/Vol-3834/paper106.pdf</ref>&gt; [29.04.2025].
+                </p>
+                <p>
+                    <hi rend="bold">Jensen, Joli</hi> (1992): “Fandom as Pathology: The Consequences of Characterization”, in: Lewis, Lisa A. (ed.): 
+                    <hi rend="italic">The Adoring Audience: Fan Culture and Popular Media</hi>. London and New York: Routledge 9-29. 
+                </p>
+                <p>
+                    <hi rend="bold">Johnston, Sarah Iles 
+                        <hi rend="normalweight" xml:space="preserve">(2018): </hi>
+                        <hi rend="italic normalweight" xml:space="preserve">The Story of Myth. </hi>
+                        <hi rend="normalweight">Cambr</hi>
+                    </hi>idge
+                    <hi rend="bold">
+                        <hi rend="normalweight">: Harvard University Press</hi>
+                    </hi>
+                </p>
+                <p>
+                    <hi rend="bold" xml:space="preserve">Leavenworth, Maria Lindgren </hi>(2016): “Paratextual Navigation as a Research Method: Fan Fiction Archives and Reader Instructions”, in: Griffin, Gabrielle / Hayler, Matt (eds.): 
+                    <hi rend="italic" xml:space="preserve">Research Methods for Reading Digital Data in the Digital Humanities. </hi>Edinburgh: Edinburgh University Press 51-71.
+                </p>
+                <p>
+                    <hi rend="bold">Mikolov, Tomas / Chen, Kai / Corrado, Greg / Dean, Jeffrey</hi> (2013): “Efficient Estimation of Word Representations in Vector Space”, 
+                    <hi rend="italic">arXiv preprint.</hi> arXiv:1301.3781.
+                </p>
+                <p>
+                    <hi rend="bold" xml:space="preserve">Miller, Madeline </hi>(2017): 
+                    <hi rend="italic" xml:space="preserve">The Song of Achilles. </hi>London: Bloomsbury.
+                </p>
+                <p>
+                    <hi rend="bold">Milli, Smitha / Bamman, David
+                        <hi rend="normalweight" xml:space="preserve"> (</hi>
+                        <hi rend="normalweight">2016</hi>
+                        <hi rend="normalweight">): “</hi>
+                    </hi>Beyond Canonical Texts: A Computational Analysis of Fanfiction
+                    <hi rend="bold">
+                        <hi rend="normalweight" xml:space="preserve">”, in: </hi>
+                        <hi rend="italic normalweight">Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing</hi>
+                        <hi rend="normalweight" xml:space="preserve">, </hi>
+                    </hi>Association for Computational Linguistics
+                    <hi rend="bold">
+                        <hi rend="normalweight">: 2</hi>
+                        <hi rend="normalweight">048-53</hi>
+                        <hi rend="normalweight">.</hi>
+                        <hi rend="normalweight" xml:space="preserve"> &lt;</hi>
+                    </hi>
+                    <ref target="https://aclanthology.org/D16-1218.pdf">https://aclanthology.org/D16-1218.pdf</ref>
+                    <hi rend="bold">
+                        <hi rend="normalweight">&gt; [29.04.2025].</hi>
+                    </hi>
+                </p>
+                <p>
+                    <hi rend="bold" xml:space="preserve">Neugarten, Julia </hi>(2023): “Delicious Angst and Tooth-Rotting Fluff: Distant Reading Community Discourses of Emotion in Harry Potter Fanfiction Comments”, in: 
+                    <hi rend="italic" xml:space="preserve">Journal of Fandom Studies </hi>11, 2-3: 205–28. DOI: 10.1386/ jfs_00082_1.
+                </p>
+                <p>
+                    <hi rend="bold" xml:space="preserve">Neugarten, Julia </hi>(2024): “MythFic Metadata: Gendered Power Dynamics in Fanfiction about Greek Myth”, in: 
+                    <hi rend="italic">Digital Humanities Benelux Journal</hi> 6: 133-153. DOI: 10.5281/zenodo.14169050.
+                </p>
+                <p>
+                    <hi rend="bold">Neugarten, Julia / Dejaeghere, Tess / Singh, Pranaydeep / Hemmons, Amanda Robin / Birkholz, Julie M.</hi> (2024): “Catching Feelings: Aspect-Based Sentiment Analysis for Fanfiction Comments about Greek Myth”, in: 
+                    <hi rend="italic">CHR 2024: Computational Humanities Research Conference</hi>, Aarhus, Denmark, 217-31. &lt;https://ceur-ws.org/Vol-3834/paper23.pdf&gt; [29.04.2025].
+                </p>
+                <p>
+                    <hi rend="bold" xml:space="preserve">Neugarten, Julia / Smeets, Roel </hi>(2023): “MythFic Metadata: Exploring Gendered Violence in Fanfiction about Greek Mythology”, 
+                    <hi rend="italic">Radboud Data Repository</hi>. DOI: 10.34973/2MYE-8468.
+                </p>
+                <p>
+                    <hi rend="bold">Pugh, Sheenagh</hi> (2005): 
+                    <hi rend="italic">The Democratic Genre: Fan Fiction in a Literary Context</hi>. Bridgend: Seren.
+                </p>
+                <p>
+                    <hi rend="bold" xml:space="preserve">Radiolorian </hi>(2022): 
+                    <hi rend="italic" xml:space="preserve">AO3 Scraper. </hi>
+                    <ref target="https://github.com/radiolarian/AO3Scraper">https://github.com/radiolarian/AO3Scraper</ref> [29.04.2025].
+                </p>
+                <p>
+                    <hi rend="bold" xml:space="preserve">Samutina, Natalia </hi>(2016): “Emotional Landscapes of Reading: Fan Fiction in the Context of Contemporary Reading Practices”, in: 
+                    <hi rend="italic" xml:space="preserve">International Journal of Cultural Studies </hi>20, 3: 259–69. DOI: 10.1177/1367877916628238.
+                </p>
+                <p>
+                    <hi rend="bold">Vadde, Aarthi / So, Richard Jean</hi> (2024): “Fandom and Fictionality after the Social Web: A Computational Study of AO3”, in: 
+                    <hi rend="italic">MFS Modern Fiction Studies</hi> 70, 1: 1–29. DOI: 10.1353/mfs.2024.a921546.
+                </p>
+            </div>
+        </body>
+    </text>
+</TEI>

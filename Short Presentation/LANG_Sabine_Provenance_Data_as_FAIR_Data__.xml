@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LANG_Sabine_Provenance_Data_as_FAIR_Data__">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Provenance Data as FAIR Data?!</title>
+                <author>
+                    <persName>
+                        <surname>Lang</surname>
+                        <forename>Sabine</forename>
+                    </persName>
+                    <affiliation>Friedrich-Alexander-Universität, Erlangen-Nürnberg, Germany</affiliation>
+                    <email>sab.lang@fau.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-23T12:16:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>provenance data</term>
+                    <term>FAIR</term>
+                    <term>Linked Open Data</term>
+                    <term>WIkidata</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digital access</term>
+                    <term>privacy</term>
+                    <term>and ethics analysis</term>
+                    <term>linked (open) data</term>
+                    <term>meta-criticism (reflections on digital humanities and humanities computing)</term>
+                    <term>metadata standards</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>Art history</term>
+                    <term>Cultural studies</term>
+                    <term>Galleries and museum studies</term>
+                    <term>History</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>In 1998, more than 44 states agreed on eleven non-binding principles for the restitution of Nazi-looted objects – the Washington Principles on Nazi-Confiscated Art (US Department of State 1998) acted and still act as a “legal and moral context” for provenance research (Masurovsky 2020: 138). Provenance research aims to reconstruct the origin and ownership history of objects (Zuschlag 2022: 12-13)
+                    <hi rend="s1" xml:space="preserve"> </hi>by studying archival records, literature and online databases, as well as by examining the object itself (Zuschlag 2022: 84). Especially the second Washington Principle, which states that archives and records should be made accessible to researchers (US Department of State 1998), has increased digitisation efforts and led to the creation of numerous databases.
+                    <hi rend="s1" xml:space="preserve"> </hi>While these databases are invaluable, open resources for provenance research, most, especially older ones, do not meet FAIR standards. The FAIR principles, referring to the findability, accessibility, interoperability and reusability of (meta-)data, were first introduced by Wilkinson et al. (2016).
+                    <hi rend="s1" xml:space="preserve">  </hi>Each letter refers to a core criterion that enables reusability and is associated with additional principles that describe in more detail the measures that can be used to achieve FAIR data (Kailus 2023: 4). In many databases, provenance information is entered in a free text field, resulting in unstructured data (Rother et al. 2022). The (meta-)data is rarely enriched with vocabularies and referenced with a persistent identifier. In addition, few provenance databases allow batch exports of data collections. However, it requires structured and FAIR (meta-)data to enable a quantitative analysis, the linking of datasets and creation of sustainable data. In this paper, I argue for the need for FAIR provenance data and propose a method to create structured and FAIR provenance data that can be achieved by non-experts, namely by using Wikidata. I also critically discuss why FAIR provenance data may not always be the best solution.
+                </p>
+                <p>The use of Wikidata has been widely discussed, e.g. for galleries, libraries, archives and museums (Cook 2017). It has also been used as “a vocabulary resource for promoting the use of linkable concepts” (Thalhath et al. 2020: 336) and connecting object and image databases to the Linked Open Data Web (Schelbert / Müller 2023). In their article, Faraj and Micsik (2019) illustrate the detection and linking of Wikidata with project entities, while simultaneously enriching the data in Wikidata. A systematic review of the use of Wikidata in Digital Humanities projects concluded that most projects used it as a content provider, also highlighting the “significant potential to use it as a platform and technology stack to publish linked data” (Zhao 2023: 871). Another systematic review focused on how and why Wikidata is used in libraries, discussing potentials and limitations and revealing that libraries use Wikidata to increase the global reach and access to their collections (Tharani 2021). In January 2024, the conference 
+                    <hi rend="italic">Provenance Loves Wiki</hi> discussed potential uses and challenges of Wikidata, Wikibase and Wikipedia for provenance research (kuwiki n.d.).
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Ways to produce FAIR provenance data</head>
+                <p>The transformation of unstructured data into structured data is a prerequisite for FAIR data. The structure organises the data systematically, enabling machine-readability, querying of the content and linking with other databases (Rother et al. 2022). Recent works have presented different ways of creating structured provenance data: In 2023, Lynn Rother et al. presented an approach that transformed text-based provenances into a machine-readable form (Rother et al. 2023) using deep learning models to perform Natural Language Processing tasks, namely Sentence Boundary Detection and Span Categorization. The authors showed how this newly structured provenance data can be analysed to address social and economic issues, such as gender differences in the inheritance of an artwork. While this approach allows for efficient production of structured data, it is complex and requires expertise and may therefore influence the decision of e.g. provenance researchers or museum professionals to produce structured data or not. Hence a workflow is needed, which does not require expertise and can be easily integrated into a person’s daily workflow. One solution is to use the free and open knowledge base Wikidata, which already provides a structure into which data can be entered (Wikidata n.d. a). “Integrating research projects with Wikimedia's ecosystem allows research teams to benefit from adhering to FAIR data standards and making the research data consumable in many different formats“ (WikiFAIR n.d.) and languages. Each item has a unique identifier, consisting of the letter Q and a number, with descriptive metadata, creating findable data (Wikidata n.d. b). The content in Wikidata is accessible because it is in the public domain, meaning that it can be legally used or referenced without permission, and it can be retrieved using an open protocol through the unique identifier. The structured data stored in Wikidata can also be exported in standard formats such as RDF or JSON and enriched with links to other authority databases, thus creating interoperable data. And lastly, all data in Wikidata is published with open licences which makes the data reusable by others (WikiFAIR n.d.). </p>
+                <p>I argue that the use of Wikidata or similar knowledge bases should become a constant in projects and should be integrated into university curricula, teaching students to create structured data as they work on projects or final theses. In this way, students learn a skill that is essential for their future careers. This was tested in the winter term 2024/2025 during a seminar on digital provenance research: After introducing the topics of structured data and Wikidata and discussing its potential and limitations for provenance research, students were taught how to enter information into Wikidata. In hands-on sessions, the students created items for persons from the LostLift database (Kleibl / Kiel n.d.), e.g. for “Luise Philippine Alexander-Katz” (Figure 1). The database collects information about Jewish people who were persecuted by the Nazis and whose property was confiscated and often sold. In this way, the students were able to create structured data that can be used to enrich the LostLift database, greatly increasing “the queries that can be performed on it” (Ruby 2020: 98) and making the database FAIRer. Students responded very positively to the hands-on sessions, commenting that this is an important future skill and that they found Wikidata very intuitive to use. However, they also added that they sometimes struggled to decide which property to use to describe which information. In the future I plan to include a session on the properties in Wikidata and which properties can be used to describe what.</p>
+                <p>
+                    <graphic n="1001" width="15.748cm" height="4.959438888888889cm" url="/tmp/tmp4uqgzlzf/Pictures/52b9f7d0b0d031edfa8ed3675d798839.jpg" rend="inline"/> Figure 1: The entry for “Luise Philippine Alexander-Katz” in LostLift (left) and Wikidata (right). Screenshots.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Why FAIR is not always better</head>
+                <p>The potential of FAIR data is undeniable; however, its use in provenance research raises concerns, such as the publication of personal data and racist and sensitive information. The community is therefore discussing the publication of data and the openness of databases (Lang 2023). The transformation of provenance data into structured (and FAIR) data must recognise “the problematic character of different forms of legacy information” (Rother et al. 2022) and potentially requires rethinking aspects of accessibility and reusability in the context of provenance research and/or find strategies to deal with problematic content (Lang 2023). This could include to set up a Wikibase instance which allows to control access to data collections (WikiFAIR n.d.), which is in line with the FAIR principles as long as the conditions and means of access are documented in a way that is interpretable for machines and humans (Kailus 2023: 17).</p>
+                <p>In her article, Theresa Sepp (2023: 368-369) highlights another possible “problem”, namely the complexity of primary sources in provenance research, e.g. the business records of art dealers. She rightly points out that the complexity of these sources can get lost in an often flattened, standardised data structure. As a result, facts might appear simpler and clearer than indicated by the sources. The use of knowledge bases such as Wikidata could therefore lead to a loss of information. To alleviate this problem, the community needs to create templates suitable for recording complex provenance information and discuss the suitability of Wikidata’s properties.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p>In 
+                    <hi rend="italic">Data and Databases in Provenance Research</hi>, Sousa and Moser (2020: 95) have emphasised the potential of connecting data and databases and establishing interactions to support greater access and user participation in data collection and exchange, which also supports the building of worldwide networks. Therefore, the creation of structured provenance data and thus FAIR data has a high priority. Due to the social and political importance of provenance databases, their transformation and the data therein should be prioritised. This requires financial and personnel resources, expertise, adequate technical infrastructure, and time. However, digital provenance research projects are almost always short-term and time-limited, which is in direct conflict with the quest for long-term, standardised solutions (Sepp 2023: 363, 365-366; Kailus 2023: from 67). The use of existing knowledge bases, such as Wikidata, could be an effective (and inexpensive) solution to produce FAIR data and circumvent or at least alleviate the problem of lack of resources.
+                </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Cook, Stacey</hi> (2017): ”The uses of Wikidata for galleries, libraries, archives and museums and its place in the digital humanities”, in: 
+                        <hi rend="italic">Comma</hi> 2017, 2: 117-124. 
+                        <ref target="https://doi.org/10.3828/comma.2017.2.12">https://doi.org/10.3828/comma.2017.2.12</ref>
+                        <hi rend="Hyperlink">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Faraj, Ghazal / Micsik, András</hi> (2019): ”Enriching Wikidata with cultural heritage data from the COURAGE project”, in: 
+                        <hi rend="italic">Garoufallou, Emmanouel / Fallucchi, Francesca / De Luca, Ernesto William (eds.): Metadata and Semantic Research, Research Conference on Metadata and Semantics Research (MTSR)</hi>, Rome, Italy, October 2019, 1057: 407-418. 
+                        <ref target="https://doi.org/10.1007/978-3-030-36599-8_37">https://doi.org/10.1007/978-3-030-36599-8_37</ref>
+                        <hi rend="Hyperlink">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Kailus, Angela</hi> (2023): 
+                        <hi rend="italic">Handreichung für ein FAIRes Management kulturwissenschaftlicher Forschungsdaten.</hi> Version 1.0.1. Zenodo. 
+                        <ref target="https://doi.org/10.5281/zenodo.7716941">https://doi.org/10.5281/zenodo.7716941</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" xml:space="preserve">Kleibl, Kathrin / Kiel, Susanne </hi>(eds.) (n.d.): ”LostLift database, German Maritime Museum - Leibniz Institute for Maritime History”, &lt;
+                        <ref target="https://lostlift.dsm.museum/en">https://lostlift.dsm.museum/en</ref>&gt; [22.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">kuwiki Working Group Art History + Wikipedia</hi> (n.d.): ”Provenance loves Wiki”, &lt;
+                        <ref target="https://de.wikipedia.org/wiki/Wikipedia:Arbeitsgemeinschaft_Kunstwissenschaften_%2B_Wikipedia/Provenance_loves_Wiki/English">https://de.wikipedia.org/wiki/Wikipedia:Arbeitsgemeinschaft_Kunstwissenschaften_%2B_Wikipedia/Provenance_loves_Wiki/English</ref>&gt; [23.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Lang, Sabine</hi> (2023): ”Immer FAIR?! - Problematische Inhalte in den Datenbeständen der Provenienzforschung”, in: 
+                        <hi rend="italic">Derntl</hi>, 
+                        <hi rend="italic">Michael / Gietz, Peter / Helling, Patrick (eds.): FORGE 2023 - Anything Goes?! Forschungsdaten in den Geisteswissenschaften - kritisch betrachtet (FORGE2023)</hi>, Tübingen, Germany, October 2023: 84-91. 
+                        <ref target="https://doi.org/10.5281/zenodo.8386474">https://doi.org/10.5281/zenodo.8386474</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Masurovsky, Marc</hi> (2020): ”The Current State of Nazi-era Provenance Research, and Access to Nazi-Era Research Resources and Archives”, in: Tompkins, Arthur (ed.): 
+                        <hi rend="italic">Provenance Research Today: Principles, Practice, Problems</hi>. London: Lund Humphries 136-150.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Rother, Lynn / Koss, Max / Mariani, Fabio</hi> (2022): ”Taking Care of History: Toward a Politics of Provenance Linked Open Data in Museums”, in: 
+                        <hi rend="italic">Fry, Emily Lew / Canning, Erin: Perspectives on Data</hi>. Chicago: Art Institute of Chicago &lt;
+                        <ref target="https://www.artic.edu/digital-publications/37/perspectives-on-data/25/taking-care-of-history-toward-a-politics-of-provenance-linked-open-data-in-museums">https://www.artic.edu/digital-publications/37/perspectives-on-data/25/taking-care-of-history-toward-a-politics-of-provenance-linked-open-data-in-museums</ref>&gt; [22.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Rother, Lynn / Mariani, Fabio / Koss, Max</hi> (2023): “Hidden value: Provenance as a source for economic and social history”, in:
+                        <hi rend="apple-converted-space"> </hi>
+                        <hi rend="italic">Jahrbuch für Wirtschaftsgeschichte/Economic History Yearbook</hi> 64,1: 111-142. 
+                        <ref target="https://doi.org/10.1515/jbwg-2023-0005">https://doi.org/10.1515/jbwg-2023-0005</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Ruby, Louisa Wood</hi> (2020): ”Provenance Research in a Digital Age”, in: Tompkins, Arthur (ed.): 
+                        <hi rend="italic">Provenance Research Today: Principles, Practice, Problems</hi>. London: Lund Humphries 97-106.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Schelbert, Georg / Müller, Michael</hi> (2023): ”Sammlungsdaten mit Wikidata anreichern und für die Vernetzung öffnen. Konzepte und praktische Erprobungen”, in: 
+                        <hi rend="italic">Trilcke, Peer / Busch, Anna / Helling, Patrick (eds.): DHd 2023 Open Humanities Open Culture. 9. Tagung des Verbands "Digital Humanities im deutschsprachigen Raum" (DHd 2023)</hi>, Trier, Luxemburg
+                        <hi rend="italic">,</hi> March 2023, 278-283, 
+                        <ref target="https://doi.org/10.5281/zenodo.7715472">https://doi.org/10.5281/zenodo.7715472</ref>
+                        <hi rend="Hyperlink">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Sepp, Theresa</hi> (2023): ”Bedingt gute Rahmenbedingungen. Zur digitalen Provenienzforschung”, in: Kunstchronik. Monatsschrift für Kunstwissenschaft 76, 7: 363-370. 
+                        <ref target="https://doi.org/10.11588/kc.2023.7.102131">https://doi.org/10.11588/kc.2023.7.102131</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Sousa, Jason / Moser, Ariane</hi> (2020): ”Data and Databases in Provenance Research”, in: Tompkins, Arthur (ed.): 
+                        <hi rend="italic">Provenance Research Today: Principles, Practice, Problems</hi>. London: Lund Humphries 85-97.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Thalhath, Nishad / Nagamori, Mitsuharu / Sakaguchi, Tetsuo / Sugimoto, Shigeo</hi> (2020): ”Wikidata centric vocabularies and URIs for linking data in semantic web driven digital curation”, in: 
+                        <hi rend="italic">Garoufallou, Emmanouel / Ovalle-Perandones, María-Antonia (eds.): Metadata and Semantic Research, Research Conference on Metadata and Semantics Research (MTSR)</hi>, Madrid, Spain, December 2020, 1355: 336-344. 
+                        <ref target="https://doi.org/10.1007/978-3-030-71903-6_31">https://doi.org/10.1007/978-3-030-71903-6_31</ref>
+                        <hi rend="Hyperlink">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Tharani, Karim</hi> (2021): ”Much more than a mere technology: A systematic review of Wikidata in libraries”, in: 
+                        <hi rend="italic">The Journal of Academic Librarianship</hi> 47, 2: 102326. 
+                        <ref target="https://doi.org/10.1016/j.acalib.2021.102326">https://doi.org/10.1016/j.acalib.2021.102326</ref>
+                        <hi rend="Hyperlink">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">US Department of State, Office of the Special Envoy for Holocaust Issues</hi> (1998): “Washington Conference Principles on Nazi-Confiscated Art”, published on December 3, 1998. &lt;
+                        <ref target="https://www.state.gov/washington-conference-principles-on-nazi-confiscated-art/">https://www.state.gov/washington-conference-principles-on-nazi-confiscated-art/</ref>&gt; [22.04.2025]. 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Wikidata</hi> (n.d. a) &lt;
+                        <ref target="https://www.wikidata.org/wiki/Wikidata:Main_Page">https://www.wikidata.org/wiki/Wikidata:Main_Page</ref>&gt; [22.04.2025]. 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Wikidata</hi> (n.d. b): ”Introduction”, &lt;
+                        <ref target="https://www.wikidata.org/wiki/Wikidata:Introduction">https://www.wikidata.org/wiki/Wikidata:Introduction</ref>&gt; [22.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">WikiFAIR</hi> (n.d.) &lt;
+                        <ref target="https://meta.wikimedia.org/wiki/WikiFAIR">https://meta.wikimedia.org/wiki/WikiFAIR</ref>&gt; [22.04.2025].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Wilkinson, Mark D. et al.</hi> (2016): ”The FAIR Guiding Principles for scientific data management and stewardship”, in: 
+                        <hi rend="italic">Scientific Data</hi> 3, 160018. 
+                        <ref target="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Zhao, Fudie</hi> (2023): “A systematic review of Wikidata in Digital Humanities projects”, in: 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi> 38, 2: 852-874. 
+                        <ref target="https://doi.org/10.1093/llc/fqac083">https://doi.org/10.1093/llc/fqac083</ref>. 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Zuschlag, Christoph</hi> (2022): 
+                        <hi rend="italic">Einführung in die Provenienzforschung: Wie die Herkunft von Kulturgut entschlüsselt wird.</hi> München: C.H. Beck.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

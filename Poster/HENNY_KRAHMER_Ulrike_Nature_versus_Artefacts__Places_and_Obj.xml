@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="HENNY_KRAHMER_Ulrike_Nature_versus_Artefacts__Places_and_Obj">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Nature versus Artefacts: Places and Objects in Nineteenth-Century Novels from Spain and Latin America</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Henny-Krahmer</surname>
+                        <forename>Ulrike</forename>
+                    </persName>
+                    <affiliation>Universität Rostock, Germany</affiliation>
+                    <email>ulrike.henny-krahmer@uni-rostock.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Müller</surname>
+                        <forename>Caroline</forename>
+                    </persName>
+                    <affiliation>Universität Rostock, Germany</affiliation>
+                    <email>caroline.mueller4@uni-rostock.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-10T00:24:46.025517029</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>CLS</term>
+                    <term>narrative space</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>cultural analytics</term>
+                    <term>data modeling</term>
+                    <term>eco-criticism and environmental analysis</term>
+                    <term>Cultural studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>Space, places, and spatial objects have been of interest for literary historical research for a long time, since narrative space is one of the central components of narratological analysis. The general importance for place in literary texts has been emphasized (Lutwack 1984) but there has also been a focus on the relevance of spatial concepts for literary historical periods such as Romanticism or Realism in the nineteenth century (Pape 2009, Mucignat 2013). In addition, narrative space has been analysed in the field of Computational Literary Studies (CLS), where narratological concepts of space have been approached by operationalisable textual features (Schumacher 2023; Henny-Krahmer et al. 2024a, 2024b).</p>
+                <p>Regarding the semantics of narrative space, the contrast between natural places and those created by men, i.e., artificial places or artefacts, is a recurring topic in the research about place in literature, even in computational studies (Grisot and Herrmann 2023) and in the context of eco-critical research (Hall 2014). With this contribution, we take up this state of research by analysing natural and artificial spaces, places, and spatial objects in nineteenth-century novels from Spain and Latin America with a computational approach, thereby producing new research results in the CLS for Spanish texts. We aim to address the following questions: Which kind of places and spatial objects are mentioned more frequently in the texts, natural ones or artefacts? Are there differences between texts from Spain and Latin America? Are there differences between texts from different literary currents? This poster contribution reflects the current state of our ongoing work.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Data and Annotation</head>
+                <p>The overall corpora that we aim to analyse consist of 200 texts, 100 from Spain and 100 from Latin America. The sources of these corpora are ELTeC-spa (Navarro Colorado 2021) and Conha19 (Henny-Krahmer 2021). The texts were published 1840–1920, are chosen to represent ranges of 20 years in a balanced way, and include texts of many different authors. We annotated 20 randomly chosen chapters of 20 novels manually with a category set for natural and artificial places and objects that we defined using the annotation tool CATMA (Gius et al. 2024). There are six categories (CONTAINER-ARTEFACT, CONTAINER-NATURAL, CONTAINER-REGION, CONTAINER-SETTLEMENT, OBJECT-ARTEFACT, OBJECT-NATURAL) exemplified in the sentences in Fig. 1.</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmphc88p3ip/Pictures/edf42f22b18d106794fa471747d80f6c.png"/>
+                    </figure>Figure 1: Example sentences with annotation categories for natural places and artefacts.
+                </p>
+                <p>Two people annotated the 20 chapters and a gold standard annotation was derived from the two annotation layers. The resulting ground truth that forms the basis for training a corresponding model is shown in Fig. 2.</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmphc88p3ip/Pictures/edf42f22b18d106794fa471747d80f6c.png"/>
+                    </figure>Figure 2: Ground truth for natural places and artefacts in Spanish texts.
+                </p>
+                <p>A first observation that we can make from the manually annotated data is that artificial containers and objects are about two times more frequent than natural containers and objects, which is a finding that we did not expect beforehand.</p>
+            </div>
+            <div type="div1">
+                <head>Model Training and Analysis</head>
+                <p>The tool NTEE (Sperfeld et al. 2023) was used to train a model based on a Spanish language model (bert-base-es-cased).<ref n="1" target="ftn1"/> We trained 10 epochs, reaching 0.748 as the highest entity-wise F1 score on the validation set (see the training course in Fig. 3).
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmphc88p3ip/Pictures/edf42f22b18d106794fa471747d80f6c.png"/>
+                    </figure>Figure 3: Training course of the model for recognizing natural places and artefacts.
+                </p>
+                <p>So far, we have used the model to predict the references to places and objects in 195 texts.<ref n="2" target="ftn2"/> The top five artefacts and natural containers and objects mentioned in the texts are shown in Fig. 4.
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmphc88p3ip/Pictures/edf42f22b18d106794fa471747d80f6c.png"/>
+                    </figure>Figure 4: Top five artefacts and natural containers and objects.
+                </p>
+                <p>No significant differences could be found so far between the sub-corpora from Spain and Latin America. Looking at the literary movements, it can be stated that spatial references are more frequent overall in the peak phase of Realism and Naturalism (around 1880–1900) than before and after.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusions and Next Steps</head>
+                <p>By developing guidelines for annotating references to natural places and objects versus artefacts and using them for the annotation of Spanish texts, we found that artificial, man-made places and objects are mentioned more frequently in the novels than natural ones, a result that we did not expect from the outset. It was possible to train a model for recognizing these references to space with an F1 score of around 0.75. We still have to analyse the kinds of mistakes that are made by the model to see if we can improve the annotations and model training in the future. Furthermore, we aim to predict spatial references for all of the 200 novels of the corpus and to conduct further analyses regarding the questions outlined in the introduction.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn1" rend="footnote text" n="1">
+                        .
+                    </note>
+<note xml:id="ftn2" rend="footnote text" n="2">For the five remaining texts, format problems with the predictions still need to be solved.</note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Gius, Evelyn / Meister, Jan Christoph / Meister, </hi>
+                        <hi rend="bold">Malte /</hi>
+                        <hi rend="bold"> </hi>
+                        <hi rend="bold">Petris, </hi>
+                        <hi rend="bold">Marco / Gerstorfer, Dominik / Akazawa, Mari</hi> (2024): 
+                        <hi rend="italic">CATMA 7.</hi> Version 7.1 [Software]. DOI: 
+                        <ref target="https://doi.org/10.5281/zenodo.1470118">10.5281/zenodo.1470118</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Grisot, Giulia / Herrmann, Berenike</hi> (2023): “Examining the representation of landscape and its emotional value in German-Swiss fiction between 1840 and 1940”, in: 
+                        <hi rend="italic">Journal of Cultural Analytics</hi> 8, 1. DOI: 
+                        <ref target="https://doi.org/10.22148/001c.84475">10.22148/001c.84475</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hall, Dewey W.</hi> (2014): 
+                        <hi rend="italic">Romantic naturalists, early environmentalists: an ecocritical study, 1789–1912.</hi> Farnham: Ashgate Publishing.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Henny-Krahmer, Ulrike / Kellner, Nils / </hi>
+                        <hi rend="bold">Lemke,</hi>
+                        <hi rend="bold"> Marc</hi> (2024a): 
+                        <hi rend="italic">CANSpiN.CS1.</hi> Version 1.0.0 [Annotation Guideline]. DOI: 
+                        <ref target="https://doi.org/10.5281/zenodo.12706812">10.5281/zenodo.12706812</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Henny-Krahmer, Ulrike / Kellner, </hi>
+                        <hi rend="bold">Nils</hi>
+                        <hi rend="bold"> / </hi>
+                        <hi rend="bold">Lemke,</hi>
+                        <hi rend="bold"> Marc</hi> (2024b): “Annotating Spatiality in Literary Texts: The Category Set CANSpiN.CS1”, in: 
+                        <hi rend="italic">DH2024: Reinvention &amp; Responsibility, Arlington, Washington, D.C.</hi> DOI: 
+                        <ref target="https://doi.org/10.5281/zenodo.13709642">10.5281/zenodo.13709642</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Henny-Krahmer, Ulrike (ed.)</hi> (2021): 
+                        <hi rend="italic">Corpus de novelas hispanoamericanas del siglo XIX (conha19).</hi> V1.0.1 [Dataset]. DOI: 
+                        <ref target="https://doi.org/10.5281/zenodo.4766987">10.5281/zenodo.4766987</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Lutwack, Leonard</hi> (1984): 
+                        <hi rend="italic">The Role of Place in Literature.</hi> Syracuse, New York: Syracuse University Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Mucignat, Rosa</hi> (2013): 
+                        <hi rend="italic">Realism and Space in the Novel, 1795–1869. Imagined Geographies.</hi> Burlington, VT: Ashgate Publishing.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Navarro Colorado, Borja (ed.)</hi> (2021): ELTeC-spa. V0.9.1 [Dataset]. DOI: 
+                        <ref target="https://doi.org/10.5281/zenodo.4662603">10.5281/zenodo.4662603</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Pape, Walter (ed.)</hi> (2009): 
+                        <hi rend="italic">Raumkonfigurationen in der Romantik.</hi> Tübingen: De Gruyter. DOI: 
+                        <ref target="https://doi.org/10.1515/9783110231014">10.1515/9783110231014</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Schumacher, Mareike</hi> (2023). 
+                        <hi rend="italic">Orte und Räume im Roman. Ein Beitrag zur digitalen Literaturwissenschaft.</hi> Berlin, Heidelberg: J. B. Metzler. DOI: 
+                        <ref target="https://doi.org/10.1007/978-3-662-66035-5">10.1007/978-3-662-66035-5</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Sperfeld, Konrad / Lemke, </hi>
+                        <hi rend="bold">Marc /</hi>
+                        <hi rend="bold"> Zöllner, </hi>
+                        <hi rend="bold">Jochen</hi> (2023): 
+                        <hi rend="italic">TEI Entity Enricher.</hi> Version 1.1.1 [Software] &lt;
+                        <ptr target="https://github.com/NEISSproject/tei_entity_enricher"/>&gt; [09.05.2025].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

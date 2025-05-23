@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VIEIRA_Miguel_Preserving_Access_to_Three_Decades_of_Digital_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Preserving Access to Three Decades of Digital Humanities Research: Infrastructure Modernisation as Sustainability Practice</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Vieira</surname>
+                        <forename>Miguel</forename>
+                    </persName>
+                    <affiliation>King's Digital Lab, King's College London, United Kingdom</affiliation>
+                    <email>jose.m.vieira@kcl.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ciula</surname>
+                        <forename>Arianna</forename>
+                    </persName>
+                    <affiliation>King's Digital Lab, King's College London, United Kingdom</affiliation>
+                    <email>arianna.ciula@kcl.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Hall</surname>
+                        <forename>Elliott</forename>
+                    </persName>
+                    <affiliation>King's Digital Lab, King's College London, United Kingdom</affiliation>
+                    <email>elliott.hall@kcl.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Mellen</surname>
+                        <forename>Pam</forename>
+                    </persName>
+                    <affiliation>King's Digital Lab, King's College London, United Kingdom</affiliation>
+                    <email>pamela.mellen@kcl.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Noël</surname>
+                        <forename>Geoffroy</forename>
+                    </persName>
+                    <affiliation>King's Digital Lab, King's College London, United Kingdom</affiliation>
+                    <email>geoffroy.noel@kcl.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Watts</surname>
+                        <forename>Tim</forename>
+                    </persName>
+                    <affiliation>King's Digital Lab, King's College London, United Kingdom</affiliation>
+                    <email>tim.j.watts@kcl.ac.uk</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-08T16:06:59.524355000</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>access</term>
+                    <term>digital preservation</term>
+                    <term>research infrastructure</term>
+                    <term>sustainability</term>
+                    <term>digital humanities archives</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data</term>
+                    <term>object</term>
+                    <term>and artefact preservation</term>
+                    <term>digital access</term>
+                    <term>privacy</term>
+                    <term>and ethics analysis</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <hi rend="sup">Keywords: access, digital preservation, research infrastructure, sustainability, digital humanities archives, legacy systems</hi>
+            </p>
+            <p>This poster presents a case study of a large-scale infrastructure modernisation project at King's Digital Lab (KDL), where we migrated approximately 85 digital humanities research projects to a new hosting environment. These projects, spanning over thirty years of digital humanities research at King's College London, represent a diverse range of humanities and cultural heritage subjects and methodological approaches, from digital editions and lexicography to prosopography and archaeological datasets.</p>
+            <p>The challenge of maintaining long-term access to digital humanities research outputs is well-documented in our field (Nowviskie, 2014) and often the topic of panels bringing multiple institutions together at this same conference. Building on our lab's established methodological framework and sustainability practices, this project offers practical insights into how technical modernisation can serve digital humanities research preservation and continued access goals. Our digital estate includes projects developed across multiple technological eras of the web, from early Java-based digital editions to modern static-site generators, each presenting unique preservation challenges (Smithies and Ciula 2020; Ciula and Smithies 2023; Digispec pp. 22-28).</p>
+            <p>Building on previous extensive work on archiving and sustainability strategy, a key innovation in our approach was the development of a "static-first" sustainability strategy. For projects where maintaining dynamic infrastructure was no longer feasible, we developed methods to preserve core scholarly functionality through modern static technologies. This included reimplementing search capabilities and other research tools using client-side technologies, ensuring that valuable humanities research, and data, remains accessible while reducing technical overhead.</p>
+            <p>Throughout the migration process, we developed and refined our decision-making framework to determine appropriate preservation strategies for each project. This framework considers multiple factors including research activity status, available resources, technical complexity, and historical value. For actively maintained research projects with sufficient resources, we implemented modern containerisation solutions. Where resource constraints or technical obsolescence made full maintenance unfeasible, we developed innovative approaches to preserve core functionality through static implementations.</p>
+            <p>The poster will visualise:</p>
+            <list type="unordered">
+                <item>Our decision-making framework for determining appropriate preservation strategies</item>
+                <item>Examples of successfully preserved projects across different disciplines</item>
+                <item>The transformation of complex dynamic systems into sustainable static resources</item>
+                <item>Impact on access to research and long-term preservation</item>
+                <item>Cost and sustainability metrics before and after migration</item>
+            </list>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp965oo8dz/Pictures/7049f80ede4031f6d12ff221eaae1988.png"/>
+                </figure>Preservation strategy flowchart
+            </p>
+            <p>Our experience provides valuable insights for other digital humanities centres facing similar sustainability challenges. The project demonstrates how technical modernisation can serve digital humanities research goals, ensuring that valuable scholarly resources remain accessible for future researchers while operating within realistic resource constraints. The methods we developed for assessing and preserving legacy projects, particularly our static-first approach and preservation decision framework, offer practical tools for other institutions managing large digital humanities portfolios.</p>
+            <p>The poster will include QR codes linking to example projects and our technical documentation, allowing attendees to explore both the content we have preserved and the technical approaches we have developed. Through this presentation, we aim to contribute to ongoing discussions about sustainability in digital humanities and share practical strategies, based on research software engineering best practices, for maintaining long-term access to valuable research outputs.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Nowviskie, B.</hi> (2015). "Digital Humanities in the Anthropocene." 
+                        <emph>Digital Scholarship in the Humanities</emph>, Volume 30, Issue suppl_1, December 2015, Pages i4–i15, &lt;
+                        <ptr target="https://doi.org/10.1093/llc/fqv015"/>&gt;[2025-05-08]
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Ciula, A. and Smithies, J.</hi> (2023). "Sustainability and Modelling at King's Digital Lab: Between Tradition and Innovation", in: Nyhan, Rockwell, Sinclair (eds.): *On Making in the Digital Humanities. Essays on the Scholarship of Digital Humanities Development in Honour of John Bradley*. London: University College London Press. &lt;
+                        <ptr target="https://doi.org/10.14324/111.9781800084209"/>&gt;[2025-05-08]
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Smithies, J. and Ciula, A.</hi> (2020). "Humans in the Loop: Epistemology &amp; Method in King's Digital Lab", in: Schuster &amp; Dunn (eds.) *Routledge International handbook of research methods in digital humanities*: 155-172. &lt;
+                        <ptr target="https://doi.org/10.4324/9780429777028-13"/>&gt;[2025-05-08]
+                    </bibl>
+                    <bibl>Digispec: Scoping Future Born-digital Data Services for the Arts and Humanities: Case Reports. Zenodo, 31 Aug. 2022, &lt;
+                        <ref target="https://doi.org/10.5281/zenodo.4716148.">doi:10.5281/zenodo.4716148</ref>&gt;[2025-05-08].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

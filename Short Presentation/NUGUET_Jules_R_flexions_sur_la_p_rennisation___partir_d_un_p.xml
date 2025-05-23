@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NUGUET_Jules_R_flexions_sur_la_p_rennisation___partir_d_un_p">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Réflexions sur la pérennisation à partir d'un prototype dans le projet BibliText</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Nuguet</surname>
+                        <forename>Jules</forename>
+                    </persName>
+                    <affiliation>Université Jean-Monnet-Saint-Étienne, France; HiSoMA - Histoire et Sources des Mondes antiques ,France</affiliation>
+                    <email>jules.nuguet@univ-st-etienne.fr</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-07T09:40:11.826680167</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>sustainability</term>
+                    <term>TEI</term>
+                    <term>pipeline</term>
+                    <term>patristic</term>
+                    <term>interoperability</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>digital publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>electronic literature production and analysis</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>Literary studies</term>
+                    <term>Theology and religious studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Contexte</head>
+                <p>Le projet BibliText s’inscrit dans une longue histoire. Dès 1965, le Centre d’Analyse et de Documentation Patristique (
+                    <ref target="https://theopro.unistra.fr/recherche/laboratoire-ur-4378/histoire-du-christianisme/cadp%7D">CADP</ref>) de Strasbourg a entrepris des relevés de citations bibliques chez les Pères de l’Église. En 2006, ces relevés ont été numérisés et intégrés dans BiblINDEX (Mellerin 2021), une base de 
+                    <ref target="https://www.biblindex.org/en">données relationnelle</ref>, et sont complétés depuis. Toutefois, si le texte source des citations est accessible, le texte contenant les citations ne l’est pas toujours, ce qui a conduit à exprimer le besoin d’un retour direct à la textualité. 
+                </p>
+                <p>Depuis 2023, un autre projet<ref n="1" target="ftn1"/>, porté par la même UMR, cherche à analyser les citations bibliques dans le traité 
+                    <hi rend="italic">Les Noms Hébreux</hi> de Jérôme de Stridon. Ce projet, qui vise à étudier les sources et usages des noms bibliques, rejoint l’objectif de BibliText : constituer une base textuelle interrogeable. 
+                </p>
+                <p>L’ambition de BibliText est donc de réunir les différents corpus utiles aux chercheurs et de les enrichir par des annotations. Dans les sciences de l’Antiquité et les études bibliques, plusieurs bases de données existent, avec des modèles économiques et de partage variés. Cependant, elles ne répondent pas toujours aux besoins du projet. Par exemple, d’un point de vue qualitatif, 
+                    <ref target="https://scaife.perseus.org/%7D">
+                        <hi rend="italic">Perseus</hi>
+                    </ref>ou 
+                    <ref target="https://mlat.uzh.ch/">
+                        <hi rend="italic">Corpus Corporum</hi>
+                    </ref>ne proposent pas un encodage suffisamment détaillé des citations. D’autres bases sont limitées quantitativement, comme 
+                    <hi rend="italic">Patristic Text Archive</hi> (
+                    <ref target="https://pta.bbaw.de/en/">PTA</ref>) qui se concentre uniquement sur certains textes grecs. BibliText se veut une base textuelle multilingue, dédiée spécifiquement à l'étude fine de l'intertextualité biblique dans la littérature patristique, et créant par ses annotations un corpus spécialisé dans les citations bibliques contextualisées.
+                </p>
+                <p>Après une première année de 
+                    <ref target="https://gitlab.huma-num.fr/biblitext/biblitext-webapp/prototype">prototypage</ref>, la nécessité de réfléchir à plus long terme apparaît dans les différentes étapes du travail.
+                </p>
+                <p>Veiller à la durabilité d'un projet passe notamment par une réflexion sur des solutions face aux risques d'obsolescence des 
+                    <ref target="https://doi.org/10.3917/docsi.381.0049">scripts et des visualisations</ref> créés. Si l’on ne peut tout pérenniser, il convient cependant de toujours garder en tête la problématique de la durabilité au moment de développer les outils des projets. C’est sous cet angle que sont ici interrogées les pratiques présentées.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Chaîne de traitement</head>
+                <p>Afin de concevoir un modèle mixte, combinant approches qualitative et quantitative, deux chaînes de traitement distinctes ont été définies :</p>
+                <p> • La chaîne quantitative, dédiée au traitement rétroactif des textes déjà édités, vise à récupérer et enrichir progressivement d'anciennes éditions (récupération de fichiers de travail au sein du laboratoire, de textes issus d'autres corpus en ligne, OCR).</p>
+                <p> • La chaîne qualitative, orientée vers les nouvelles éditions, couvre l’ensemble du processus, de la numérisation des manuscrits (Cretin 2023) à leur collation (Gille-Levenson 2022).</p>
+                <p>La chaîne comprend plusieurs composants, associant des scripts XSLT et, pour certaines tâches, du Python. Compte tenu des progrès de l’intelligence artificielle, notamment utilisée dans la lemmatisation, et de l’évolution des besoins, certains de ces composants sont périssables à long terme.</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpajj9c9aa/Pictures/b7c76b9e3d890476851072243ba7cee4.png"/>
+                        <head>Schéma de l'étape de lemmatisation dans la chaîne de traitement</head>
+                    </figure>
+                </p>
+                <p>Prenons l'exemple de la lemmatisation pour le latin. Entre le modèle 
+                    <ref target="https://doi.org/10.48550/arXiv.2305.04365">LatinCy</ref>et le modèle 
+                    <ref target="https://doi.org/10.5281/zenodo.3883589%7D">Lasla</ref>de l'outil Pie-extended, le traitement des enclitiques diffère, ce qui a un impact lorsqu'une chaîne part d’un fichier déjà structuré en XML. Si le projet souhaite garder structure et lemmatisation, tout en bénéficiant d’une prédiction avec plongement de mots, la chaîne nécessite une tokenisation du fichier XML avant de réintégrer le résultat tabulaire de lemmatisation réalisé sur une transformation en texte brut du fichier source. Si un modèle plus performant ou adéquat à nos problématiques apparaît avec des choix différents, le composant de tokenisation, dépendant du choix du modèle de lemmatisation, devra être réécrit.
+                </p>
+                <p>Peut-on vraiment résoudre ce problème de manière cohérente ? Les choix techniques, comme pour les enclitiques, ne peuvent souvent privilégier à la fois rigueur scientifique et simplicité : ainsi, Pie Extended est plus précis, mais SpaCy, avec sa liste préconfigurée, s'intègre plus facilement.</p>
+                <p>Aujourd'hui, nous disposons de plusieurs leviers d'action pour pérenniser notre composant. Le premier consisterait à établir des normes précises concernant ses périmètres (choix d'entrées, paramètres et sorties), en restant hermétiques aux modèles ne respectant pas ces normes. Le second serait de conserver cet état de travail, sachant que le composant devra être réécrit en cas d'apparition d'une nouvelle méthode plus fiable. Il faut garder à l'esprit qu’une évolution technique de cette pipeline permettant de conserver la structure XML n'est pas aisée. Cela rejoint le principe des endings sur les procédures, à un détail près : on ne parle pas de production d'un site mais de chaîne de traitement pour la production de données. Il convient donc de réfléchir au découpage des composants pour avoir des politiques variées en fonction de l'avancée de l'état de l'art d'une tâche, et permettre l'amélioration de certaines d'entre elles sans engager de chantier sur l'ensemble du processus.</p>
+                <p>Pour la lemmatisation, des alignements entre jeux d’étiquettes offrent des solutions généralisables, à condition d'assurer la compatibilité des entrées et sorties. Une documentation rigoureuse et la limitation des dépendances externes restent essentielles pour garantir la pérennité.</p>
+                <p>Les données échangées entre les étapes demeurent les livrables les plus stables et doivent être publiées et accessibles.</p>
+                <p>À l’issue de ces chaînes, les fichiers produits respectent le schéma TEI et intègrent structuration complète (textuelle, documentaire), citations, interprétations des noms, lemmatisation et identification des entités nommées.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Plateforme de consultation</head>
+                <p>La seconde phase du projet vise à développer une plateforme de publication adaptée aux besoins identifiés. L’interface de programmation (API) Distributed Text Services (
+                    <ref target="https://distributed-text-services.github.io/specifications/">DTS</ref>) a été retenue comme solution pertinente. Cette API repose sur trois types d’entités — les collections, les ressources et les fragments — ainsi que sur trois routes principales. Elle permet d’extraire des fragments de texte pour en récupérer le contenu textuel tout en ciblant la référence dans son contexte, ce qui facilite les analyses approfondies des citations. L’utilisation des collections permet également d’organiser et de segmenter efficacement le corpus.
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpajj9c9aa/Pictures/b7c76b9e3d890476851072243ba7cee4.png"/>
+                        <head>Modélisation simplifiée des entités DTS</head>
+                    </figure>
+                </p>
+                <p>Cependant, les implémentations existantes présentent des limites. Par exemple, l’implémentation MyCapitains (Clerice 2018) n’est plus maintenue et ne respecte pas totalement les normes définies, tandis que TEI Publisher n’offre pas de support pour les fragments. Une solution en phase alpha, nommée DoTS, correspond davantage aux besoins du projet. Cet outil s’appuie sur 
+                    <ref target="https://basex.org/%7D">BaseX</ref>, une base de données spécialisée pour le XML, et utilise les nouvelles balises TEI &lt;
+                    <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-citeStructure.html">citeStructure</ref>&gt; et &lt;
+                    <ref target="ttps://tei-c.org/release/doc/tei-p5-doc/en/html/ref-citeData.html">citeData</ref>&gt; pour définir précisément les fragments. Encoder cette structuration directement dans le fichier TEI offre une forme de pérennité de la donnée, ces balises pouvant être exploitées dans d'autres logiciels et alignées sur des référentiels extérieurs.
+                </p>
+                <p>Actuellement, 
+                    <ref target="https://chartes.github.io/dots_documentation/">DoTS</ref>ne propose pas de visualisation. Pour valoriser le travail scientifique, la création d’une interface est nécessaire. Un premier prototype a ainsi été développé, exploitant les appels API DTS, à l'image de 
+                    <ref target="https://projectmirador.org/%7D">Mirador</ref>pour le protocole IIIF. Ce prototype distingue deux types d’affichages : 
+                </p>
+                <p> • la navigation dans les collections ou fragments ;</p>
+                <p> • la visualisation du document lui-même.</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpajj9c9aa/Pictures/b7c76b9e3d890476851072243ba7cee4.png"/>
+                        <head>Maquettes des différents modes d'affichage des collections envisageables</head>
+                    </figure>
+                </p>
+                <p>Des solutions existantes, comme 
+                    <ref target="https://sourceforge.net/projects/ceteicean/">CETEIcean</ref> ou
+                    <ref target="https://teipublisher.com/exist/apps/tei-publisher-home/index.html">TEI Publisher</ref>, s’appuient sur des composants web. Le choix a été fait de développer des composants spécifiques au service DTS. Actuellement, le prototype permet d'ouvrir plusieurs fenêtres, offrant une visualisation synoptique pour comparer différents objets.
+                </p>
+                <p>Pour renforcer la pérennité, il serait judicieux de pré-générer le contenu de chaque fenêtre. Ainsi, si certaines fonctions des composants devenaient obsolètes, une alternative de navigation non-synoptique pourrait être rapidement mise en place, conformément aux principes des 
+                    <ref target="https://endings.uvic.ca/principles.html">endings</ref>.
+                </p>
+                <p>Pour la visualisation des documents, deux expérimentations ont été réalisées : l'une avec les processing-models des ODD, l'autre avec uniquement des composants web. L'avantage de passer par des 
+                    <ref target="https://www.tei-c.org/release/doc/tei-p5-doc/fr/html/TD.html#TDPMPM">ODD</ref>de la TEI est de pouvoir coupler la documentation à la méthode de transformation, ce qui aide à la pré-génération de ce type de vue. Cependant, sans les composants, les interactions avec les utilisateurs sont limitées. Il y a donc un équilibre à trouver entre dynamisme et pré-génération, tout en offrant aux utilisateurs les possibilités attendues.
+                </p>
+                <p>Enfin, une réflexion en cas de panne de l'API DTS est à mener. L'idéal est de permettre l'exploitation des fragments avec uniquement du JS et du HTML, à l’image de l'outil 
+                    <ref target="https://doi.org/10.5281/zenodo.6329800">Static Search</ref>en exploitant peut-être le format 
+                    <ref target="https://www.w3.org/TR/annotation-model/">Web annotation</ref>pour les fichiers d'indexation. 
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpajj9c9aa/Pictures/b7c76b9e3d890476851072243ba7cee4.png"/>
+                        <head>Scénarios de dégradations de service possibles</head>
+                    </figure>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading">
+                <head>Conclusion</head>
+                <p>Dans toutes les étapes de BibliTEXT, notre préoccupation est de garantir la pérennité des différents composants. Cette démarche vise à limiter l’impact de la maintenance sur le long terme, en anticipant les évolutions et interruptions potentielles de certains outils. Il s'agit également de préserver les travaux réalisés. Outre l’application de bonnes pratiques, comme la documentation pour faciliter la transmission entre acteurs, un modèle économique doit être élaboré afin de transformer le projet ponctuel en une initiative durable et "industrialisable". Réutiliser la chaîne sur de nouveaux corpus et enrichir la plateforme de publication contribue à élargir son usage et sa pertinence. Ainsi, la notion de maintenance et de pérennisation prend une dimension stratégique. Si des modèles nationaux à grande échelle se développent pour les monographies (Dandurand 2022), le besoin de structures dédiées à la gestion des chaînes pour les éditions génétiques ou critiques devient de plus en plus pressant. On remarque d'ailleurs avec HAL, qui possède une stratégie de pérennité (Berthaud et al. 2021), la faible proportion de ce type de documents.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn1" rend="footnote text" n="1">JERome's INterpretations of Hebrew NAmes - ANR-22-CE54-0003</note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Berthaud, Christine / Charnay, Daniel / Fargier, Nathalie (2021)</hi>: “Diffuser et pérenniser le savoir scientifique : 20 ans d’histoire de HAL”, in: 
+                        <emph>Histoire de la recherche contemporaine. La </emph>
+                        <emph>revue du Comité pour l’histoire du CNRS</emph> Tome X, 2: 86 p. 
+                        <ptr target="https://journals.openedition.org/hrc/6330"/> [27.11.2024].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Clérice, Thibault / Almas, Bridget / Munson, Matthew (2018): </hi>“Capitains/Nautilus: 1.0.3”, in: 
+                        <emph>Zenodo</emph>
+                        <ptr target="https://zenodo.org/records/1251558"/> [05.11.2024]. DOI: 10.5281/zenodo.1251558.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Cretin, Sebastien (2023): </hi>“La transcription automatique d’écritures manuscrites : premiers pas à la BnF”, in: 
+                        <emph>Actualités de la conservation</emph> 38: 1. 
+                        <ptr target="https://bnf.hal.science/hal-04318633"/> [05.11.2024].
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Dandurand, Caroline (2022)</hi>: “Préfiguration d’une structuration collective des éditeurs scientifiques publics engagés dans la science ouverte”, in: 
+                        <emph>Comité pour la science ouverte</emph>, rapport, 86 p. 
+                        <ptr target="https://hal-lara.archives-ouvertes.fr/hal-03713434"/> [27.11.2024]. DOI: 10.52949/25.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Gille Levenson, Matthias (2022)</hi>: “TeiCollator : une chaîne de traitement ecdotique semi-automatisée”, in: 
+                        <emph>XXXe Congrès International de Linguistique et Philologie Romane</emph>, La Laguna, Spain, July 2022. 
+                        <ptr target="https://hal.science/hal-03715059"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Mellerin, Laurence (2021)</hi>: “Biblindex: An index of biblical quotations in early Christian literature”, in: 
+                        <emph>The Harp. A Review of Syriac and Oriental Ecumenical Studies</emph> 37: 449. 
+                        <ptr target="https://shs.hal.science/halshs-04188713"/> [05.11.2024].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

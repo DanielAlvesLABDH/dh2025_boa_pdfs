@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="TAMRAZYAN_Hamest_Corpus_Based_SKOS_Development_for_Ukrainian">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Corpus-Based SKOS Development for Ukrainian Epigraphy: A Digital Approach to Preserving Heritage</title>
+                <author>
+                    <persName>
+                        <surname>Tamrazyan</surname>
+                        <forename>Hamest</forename>
+                    </persName>
+                    <affiliation>EPFL/Switzerland, Switzerland</affiliation>
+                    <email>hamest.tamrazyan@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Boros</surname>
+                        <forename>Emanuela</forename>
+                    </persName>
+                    <affiliation>EPFL/Switzerland, Switzerland</affiliation>
+                    <email>emanuela.boros@epfl.ch</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-23T11:17:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>SKOS</term>
+                    <term>cultural studies</term>
+                    <term>digital epigraphy</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>digital archiving</term>
+                    <term>natural language processing</term>
+                    <term>semantic analysis</term>
+                    <term>Cultural studies</term>
+                    <term>Humanities computing</term>
+                    <term>Linguistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">In the digital age, the organization and accessibility of knowledge have become crucial for advancing scholarship and preserving cultural heritage. A corpus-based approach to term extraction, coupled with the development of a simple knowledge organization system (SKOS), is instrumental in structuring domain-specific knowledge, especially in fields with rich historical and linguistic contexts, such as epigraphy.<ref n="1" target="ftn1"/> This approach enables the systematic identification, analysis, and categorization of terms, ensuring that the resulting knowledge systems are not only grounded in authentic, contextually relevant language but also flexible enough to address the evolving needs of modern research.<ref n="2" target="ftn2"/>
+                </p>
+                <p style="text-align: left; ">For languages and cultures underrepresented in the digital domain—such as Ukrainian—it is particularly important to develop methodologies that allow for the creation of SKOS with minimal resource expenditure, whether human, financial, or technical (Wilkinson et al., 2016).<ref n="3" target="ftn3"/> Our research focuses on a corpus-based methodology for developing a SKOS tailored to the specific needs of Ukrainian epigraphy.<ref n="4" target="ftn4"/> By employing this approach, we ensure that the knowledge systems produced are scalable, efficient, and grounded in the rich linguistic and cultural traditions of this region.<ref n="5" target="ftn5"/>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Background and Motivation</head>
+                <p style="text-align: left; ">While Greco-Roman epigraphy has benefited from well-established digital infrastructure such as the EAGLE vocabularies and the FAIR Epigraphy Project, Ukrainian inscriptions lack such resources. In both the EAGLE vocabularies and the FAIR Epigraphy Project, pre-existing digital collections and their associated metadata were crucial starting points. Despite the metadata coming from different formats and standards, these projects managed to update and harmonise them to create unified vocabularies for the field. The projects set a precedent for how diverse and scattered epigraphic data could be brought together under standardised frameworks, enhancing the accessibility, accuracy, and interoperability of this information.</p>
+                <p style="text-align: left; ">The FAIR Epigraphy Project follows the principles of FAIR data (Findable, Accessible, Interoperable, and Reusable) and extends the work done by projects like EAGLE.<ref n="6" target="ftn6"/> This project emphasises not only the creation of structured vocabularies but also the importance of open-access, machine-readable data that can be integrated into global research initiatives. By adhering to FAIR principles, the project ensures that epigraphic data is not siloed in isolated databases but can be linked and utilised in a broader, interdisciplinary context.
+                </p>
+                <p style="text-align: left; ">However, many of these projects focused predominantly on Western classical languages, often excluding or under-representing languages like Ukrainian. This gap has led to the absence of standardised vocabularies or terminologies specifically for Ukrainian epigraphy, limiting access and the ability to integrate it into global digital humanities projects. Our work seeks to address this gap by providing a structured approach to Ukrainian inscriptions.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Corpus-based Approach and SKOS Development</head>
+                <p style="text-align: left; ">The creation of these new SKOS vocabularies is tailored specifically to the underrepresented epigraphic traditions of Ukraine, reflecting their distinctive religious, cultural, and historical contexts. The lack of structured metadata and digital resources necessitated the development of vocabularies from scratch. To address this challenge, we employed a combination of corpus-based approaches and natural language processing (NLP) tools, quantitative and qualitative analysis, and comparative methods of analysis to ensure the unique cultural, historical, and linguistic characteristics of these inscriptions were accurately captured and preserved. The epigraphic corpus served as the foundation for compiling a list of annotated terms, which is subsequently used to train and fine-tune NLP models. After the automated extraction, a manual review is conducted to refine the list of terms. This step involves validating the accuracy and contextual relevance of the extracted terms and ensuring that domain-specific terminology is adequately captured. Through this review, low-frequency but contextually significant terms are identified and added to the term list. Manual review also helps filter out irrelevant or ambiguous terms, improving the overall quality of the extracted vocabulary.</p>
+                <p style="text-align: left; ">Among the NLP methods applied is a named entity recognition tool (NER), which plays an important role in identifying domain-specific terms within the epigraphic corpus. While NER often relies on large corpora to train models, in this study, a representative domain-specific corpus was sufficient to capture the unique patterns and nuances of epigraphic texts, ensuring accurate and contextually relevant results.</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Sampling Criteria</head>
+                    <p style="text-align: left; ">The data collection process for this research is a key aspect of the methodology, and particular attention has been given to the inclusion/exclusion criteria for Ukrainian texts. This selection process ensured that the corpus was representative, balanced, and free from biases. Moreover, it reflects not only the linguistic and cultural realities of Ukrainian epigraphy but also the geopolitical context in which this research takes place. Given the unique challenges and limitations associated with Ukrainian epigraphy, particularly the lack of existing digital collections, the following sampling criteria were established to guide the selection of sources.</p>
+                    <p style="text-align: left; ">Language. All selected sources were published in Ukrainian. This criterion ensured that the corpora reflected the linguistic context of Ukrainian epigraphy and supported the development of SKOS that is culturally and linguistically appropriate. A central consideration in the corpus development was the exclusion of non-Ukrainian sources, which emphasises the importance of cultural and linguistic autonomy in the study of Ukrainian epigraphy. Given the historical dominance of Russia in this area, the decision to focus on Ukrainian-language publications is rooted in the necessity of developing a Ukrainian-centered perspective on epigraphy, which is particularly critical in the current geopolitical climate.</p>
+                    <p style="text-align: left; ">Authorship Diversity. The corpora include works authored by a diverse group of scholars rather than being overly reliant on a single author or institution. Authors from related disciplines such as archaeology, history, linguistics, and cultural studies are also included. This diversity of authorship ensures that the corpora benefit from a wide range of academic perspectives, enriching the resulting SKOS. In dealing with the terminological system, it is essential to recognise that terms are used across the domain, irrespective of their author.</p>
+                    <p style="text-align: left; ">Genre Balancing. Books and monographs were selected for their comprehensive, often long-form analyses of epigraphic heritage. These works tend to provide detailed historical and linguistic contexts, which are vital for understanding the development of terminology in Ukrainian epigraphy. Web sources were incorporated to reflect the broader public and scholarly engagement with epigraphy in digital spaces. These sources provided more immediate, sometimes informal, uses of terminology that might not yet have entered formal academic usage but are important for understanding how terms are applied in contemporary discussions.</p>
+                    <p style="text-align: left; ">Regional and Temporal Coverage. The Ukrainian corpus includes publications dedicated to epigraphic heritage across Ukraine. The corpus includes publications from the second half of the 20th century until 2024, ensuring broad temporal and regional coverage.</p>
+                    <p style="text-align: left; ">Format and Medium. Given the nascent state of digital collections in Ukrainian epigraphy, both digital and non-digital publications were included in the corpus. The combination of digitised texts and newly digital-born content reflects the ongoing transition of Ukrainian epigraphy into the digital age, and this inclusion guarantees that the SKOS remains relevant as the field continues to evolve.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Data Processing and Annotation</head>
+                    <p style="text-align: left; ">Once the texts were collected, they were uploaded into SketchEngine, where further processing steps were applied. Tokenisation, lemmatisation, and part-of-speech tagging were performed to annotate each token with grammatical information, which was essential for accurately identifying nouns and technical terms that were most relevant to the SKOS. Frequency analysis and co-occurrence analysis were applied to establish relationships between broader and narrower terms for the SKOS development.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Identification of Synonymous Terms</head>
+                    <p style="text-align: left; ">After refining the term list, we proceeded to identify synonymous sets. The identification of synonymous terms in this study draws on the principles of distributional semantics, a theory that posits that the meaning of a word is determined by the company it keeps (Jurafsky &amp; Martin, 2025). By leveraging distributional semantics, we ensured that the resulting synonym sets were both linguistically robust and contextually grounded, providing a comprehensive view of semantic relationships within the epigraphic corpus.</p>
+                    <p style="text-align: left; ">The Thesaurus function of Sketch Engine was used to extract semantically related terms based on their distributional behaviour within the corpus (Kilgarriff et al., 2004). To complement the synonym identification process, correlation analysis was also applied to examine the contextual usage patterns of terms. This process allowed us to refine our understanding of the epigraphic domain's unique linguistic features, ensuring that the resulting vocabulary accurately reflects the corpus’s cultural and historical context (McEnery &amp; Hardie, 2012).</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Mapping and Alignment</head>
+                    <p style="text-align: left; ">During the next phase, where relevant, the terms in the SKOS will be aligned with existing vocabularies like the FAIR Epigraphy ontologies using properties such as skos:exactMatch and skos:closeMatch to map terms from our SKOS to terms in other vocabularies, ensuring interoperability between different digital epigraphic resources (Miles &amp; Bechhofer, 2009).</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Validation and Testing</head>
+                    <p style="text-align: left; ">After the initial organisation of terms, the usability and functionality of the SKOS will be tested using the digital corpus of Ukrainian inscriptions, compiled in Ukrainian and English. Based on feedback from users interacting with the SKOS, adjustments will be made to improve accuracy and usability. One of the key advantages of the SKOS is its adaptability, allowing for continuous updates and refinements as new research emerges and user needs evolve.</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusions</head>
+                <p style="text-align: left; ">This project exemplifies a digital humanities approach to cultural heritage preservation, providing a scalable, adaptable, and interoperable framework for documenting, analysing, and promoting Ukrainian epigraphy. By integrating traditional linguistic scholarship with modern digital tools, the project sets a precedent for how underrepresented cultural assets can be effectively documented, analysed, and shared in the digital age.</p>
+                <p style="text-align: left; ">Overall, the corpus-based SKOS development for Ukrainian epigraphy presented in this work provides a critical step toward the preservation and accessibility of this cultural heritage. The project not only supports the academic research community but also contributes to the broader dissemination and recognition of Ukrainian cultural heritage.</p>
+            </div>
+            <div/>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                         Bodel, J. (2001). 
+                            <hi rend="italic">Epigraphic Evidence: Ancient History from Inscriptions</hi>. Routledge.
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                         Hodge, G. (2000). 
+                            <hi rend="italic">Systems of Knowledge Organization for Digital Libraries: Beyond Traditional Authority Files</hi>. Digital Library Federation.
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                         Wilkinson, M. D., et al. (2016). 
+                            <hi rend="italic">The FAIR Guiding Principles for scientific data management and stewardship</hi>. Scientific Data, 3, 160018.
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn4" n="4">
+                         Tamrazyan, H.; Boros, E.; &amp; Kaplan, F. (2024). 
+                            <hi rend="italic">Developing a Standardised Vocabulary for Ukrainian Epigraphy and Expanding Digital Epigraphic Resources</hi>. Presented at the International Conference on Theory and Practice of Digital Libraries, Springer Nature Switzerland Cham, pp. 13–22. 
+                            <ref target="https://doi.org/10.1007/978-3-031-72440-4_2">
+                                <hi rend="underline color(467886)">https://doi.org/10.1007/978-3-031-72440-4_2</hi>
+                            </ref>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn5" n="5">
+                         Sitchinskii, V. (2016). 
+                            <hi rend="italic">Ukrainian Epigraphic Monuments</hi>. Kyiv University Press.
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn6" n="6">
+                        
+                            <hi style="font-size:10pt" xml:space="preserve"> https://inscriptiones.org/</hi>
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Bodel, John P.</hi> (2001): “Epigraphic Evidence: Ancient History from Inscriptions” in: Psychology Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hodge, Gail M.</hi> (2000): “Systems of Knowledge Organization for Digital Libraries: Beyond Traditional Authority Files” in: Digital Library Federation.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Jurafsky, Daniel / Martin, James H.</hi> (2025): “Speech and Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition with Language Models”: in Online manuscript released January 12, 2025. &lt;https://web.stanford.edu/~jurafsky/slp3&gt;.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" xml:space="preserve">Kilgarriff, Adam / Baisa, Vít / Bušta, Jan / Jakubíček, Miloš / Kovář, Vojtěch / Michelfeit, Jan / Rychlý, Pavel / Suchomel, Vít </hi>(2004): “The Sketch Engine” in: Proceedings of the 11th EURALEX International Congress.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" xml:space="preserve">Lafferty, John / McCallum, Andrew / Pereira, Fernando </hi>(2001): “Conditional Random Fields: Probabilistic Models for Segmenting and Labelling Sequence Data” in: Proceedings of ICML.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">McEnery, Tony / Hardie, Andrew</hi> (2012): “Corpus Linguistics: Method, Theory and Practice” in: Cambridge University Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" xml:space="preserve">Miles, Alistair / Bechhofer, Sean </hi>(2009): “SKOS Simple Knowledge Organization System Reference. W3C Recommendation.” &lt;https://www.w3.org/TR/skos-reference/&gt;
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Schreibman, Susan / Siemens, Ray / Unswort, John</hi> (2016): “A New Companion to Digital Humanities” in: John Wiley &amp; Sons.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Sitchinskii, V.</hi> (2016). Ukrainian Epigraphic Monuments. Kyiv University Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Tamrazyan, Hamest / Boros, Emanuela / Kaplan, Frédéric</hi> (2024): “Developing a Standardised Vocabulary for Ukrainian Epigraphy and Expanding Digital Epigraphic Resources” in: International Conference on Theory and Practice of Digital Libraries, Springer Nature Switzerland Cham, pp. 13–22. https://doi.org/10.1007/978-3-031-72440-4_2
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Tamrazyan, Hamest / Hovhannisyan, Gayane</hi> (2023): “Digital Guardianship: Innovative Strategies in Preserving Armenian’s Epigraphic Legacy” in: Heritage, 7, 2296-2312. &lt;https://doi.org/10.3390/heritage7050109&gt;
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Wilkinson, Mark D. / Dumontier, Michel / Aalbersberg, IJsbrand Jan / Appleton, Gabrielle / Axton, Myles / Baak, Arie / Blomberg, Niklas et al.</hi> (2016): “The FAIR Guiding Principles for scientific data management and stewardship” in: Scientific Data, 3, 160018.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

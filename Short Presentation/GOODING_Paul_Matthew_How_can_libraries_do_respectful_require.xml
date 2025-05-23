@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="GOODING_Paul_Matthew_How_can_libraries_do_respectful_require">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>How can libraries do respectful requirements elicitation in an Indigenous Data and AI Context?</title>
+                <author>
+                    <persName>
+                        <surname>Gooding</surname>
+                        <forename>Paul</forename>
+                    </persName>
+                    <affiliation>University of Glasgow, United Kingdom</affiliation>
+                    <email>paul.gooding@glasgow.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Callaghan</surname>
+                        <forename>Samantha</forename>
+                    </persName>
+                    <affiliation>King's College London, United Kingdom</affiliation>
+                    <email>samantha.callaghan@kcl.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Bouich</surname>
+                        <forename>Abdenour</forename>
+                    </persName>
+                    <affiliation>University of Glasgow, United Kingdom</affiliation>
+                    <email>a.nourbouich@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-28T09:43:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Indigenous Data Sovereignty</term>
+                    <term>AI</term>
+                    <term>Machine Learning</term>
+                    <term>Software Development</term>
+                    <term>Libraries</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>digital archiving</term>
+                    <term>digital libraries creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>Computer science</term>
+                    <term>Indigenous studies</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>This paper presents the findings of the AHRC-funded iREAL (Inclusive Requirements Elicitation for AI in Libraries) project, which aimed to develop a model for responsible AI systems development in libraries seeking to include knowledge from Indigenous communities, specifically Aboriginal and Torres Strait Islander communities in Australia. As Indigenous peoples continue to advocate for their rights and wellbeing, including sovereignty over their data 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"RNJbvul9","properties":{"formattedCitation":"(Carroll {\\i{}et al.}, 2020)","plainCitation":"(Carroll et al., 2020)","noteIndex":0},"citationItems":[{"id":8039,"uris":["http://zotero.org/users/416768/items/6SYYWEGR"],"itemData":{"id":8039,"type":"article-journal","container-title":"Data Science Journal","DOI":"10.5334/dsj-2020-043","ISSN":"1683-1470","language":"en","license":"http://creativecommons.org/licenses/by/4.0","page":"43","source":"DOI.org (Crossref)","title":"The CARE Principles for Indigenous Data Governance","volume":"19","author":[{"family":"Carroll","given":"Stephanie Russo"},{"family":"Garba","given":"Ibrahim"},{"family":"Figueroa-Rodríguez","given":"Oscar L."},{"family":"Holbrook","given":"Jarita"},{"family":"Lovett","given":"Raymond"},{"family":"Materechera","given":"Simeon"},{"family":"Parsons","given":"Mark"},{"family":"Raseroka","given":"Kay"},{"family":"Rodriguez-Lonebear","given":"Desi"},{"family":"Rowe","given":"Robyn"},{"family":"Sara","given":"Rodrigo"},{"family":"Walker","given":"Jennifer D."},{"family":"Anderson","given":"Jane"},{"family":"Hudson","given":"Maui"}],"issued":{"date-parts":[["2020",11,4]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(Carroll 
+                    <hi rend="italic">et al.</hi>, 2020), how should Research Technology Professionals (RTPs) elicit requirements for AI/Machine Learning projects incorporating Indigenous data in library collections?
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Research Context</head>
+                <p>Globally, libraries hold collections extracted from Indigenous communities, often collected under colonial missions. However, there is a tension between the current trajectory of AI development as a Western rationalist endeavour, and the multiple ways of knowing within Indigenous Knowledge systems 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"5BygDxDP","properties":{"formattedCitation":"(Lewis, Whaanga and Yolg\\uc0\\u246{}rmez, 2024)","plainCitation":"(Lewis, Whaanga and Yolgörmez, 2024)","noteIndex":0},"citationItems":[{"id":8040,"uris":["http://zotero.org/users/416768/items/CVIIA9TD"],"itemData":{"id":8040,"type":"article-journal","abstract":"The current trajectory of artificial intelligence development suffers from fundamental epistemological shortcomings, resulting in the systematic operationalization of bias against non-white, non-male, and non-Western peoples. We argue that these failings are, in part, the result of certain Western rationalist epistemologies that exclude many ways of knowing about the world, and therefore they cannot provide a sufficient foundation on which to adequately, robustly, and humanely conceptualize intelligence. We present a new research agenda, Abundant Intelligences, an Indigenous-led, Indigenous-majority international, interdisciplinary research program that imagines anew how to conceptualize and design artificial intelligence (AI) based on Indigenous knowledge (IK) systems. Abundant Intelligences draws on the rich plurality of Indigenous knowledge systems, bringing together diverse sets of thought, culture, and protocol together. We show IK systems provide one way to rebuild AI’s epistemological foundations and transform these tools’ current role in reinforcing colonial practices of exclusion, extraction, manipulation, and eradication into engines of abundance that enable us to care better for ourselves, our communities, and our world. Our proposition is to fully engage with AI to explore how different conceptions of intelligence could be embodied in these technologies. In this paper, we present the tenets of the research program in detail, account for our methodological approach, describe the impact and limitations, and conclude on a discussion of the implications of the program.","container-title":"AI & SOCIETY","DOI":"10.1007/s00146-024-02099-4","ISSN":"1435-5655","journalAbbreviation":"AI & Soc","language":"en","source":"Springer Link","title":"Abundant intelligences: placing AI within Indigenous knowledge frameworks","title-short":"Abundant intelligences","URL":"https://doi.org/10.1007/s00146-024-02099-4","author":[{"family":"Lewis","given":"Jason Edward"},{"family":"Whaanga","given":"Hēmi"},{"family":"Yolgörmez","given":"Ceyda"}],"accessed":{"date-parts":[["2024",12,6]]},"issued":{"date-parts":[["2024",10,19]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(Lewis, Whaanga and Yolgörmez, 2024). While Indigenous researchers have proposed guidelines for Indigenous Data Governance (IDGov) 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"vreejaOX","properties":{"formattedCitation":"(Maiam nayri Wingara, 2018)","plainCitation":"(Maiam nayri Wingara, 2018)","noteIndex":0},"citationItems":[{"id":7408,"uris":["http://zotero.org/groups/5514906/items/DHVLM5Y8"],"itemData":{"id":7408,"type":"paper-conference","event-place":"Canberra, ACT","event-title":"Indigenous Data Sovereignty Summit","publisher-place":"Canberra, ACT","title":"Indigenous Data Sovereignty Communique","URL":"https://static1.squarespace.com/static/5b3043afb40b9d20411f3512/t/63ed934fe861fa061ebb9202/1676514134724/Communique-Indigenous-Data-Sovereignty-Summit.pdf","author":[{"family":"Maiam nayri Wingara","given":""}],"accessed":{"date-parts":[["2024",12,6]]},"issued":{"date-parts":[["2018"]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(Maiam nayri Wingara, 2018)that can support and promote Indigenous Data Sovereignty (IDSov) 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"rKzXPPya","properties":{"formattedCitation":"(Cummins {\\i{}et al.}, 2023)","plainCitation":"(Cummins et al., 2023)","noteIndex":0},"citationItems":[{"id":8042,"uris":["http://zotero.org/users/416768/items/2H37GQVL"],"itemData":{"id":8042,"type":"article-journal","abstract":"This article provides foundational definitions connected to Indigenous Peoples' data in relation to information institutions, specifically libraries and archives. The authors explain the relationship between Indigenous Data Sovereignty (IDSov) and Indigenous Data Governance (IDGov) before moving into a general overview of norms and principles related to enhancing IDSov and implementing IDGov and finishing with the CARE Principles for Indigenous Data Governance (Collective Benefit, Authority to Control, Responsibility, and Ethics). This article also provides examples of the application and implementation of the CARE Principles in libraries and archives, including Community-Driven Archives, Indigenous Librarianship, Local Contexts Labels and Notices in Libraries, and Language Materials. This article concludes with recommendations for applying the CARE Principles in information institutions. The purpose of the article's information is to provide foundational article, definitions, resources, and perspectives for information institutions and professionals, specifically librarians and archivists, to support IDSov and apply and use IDGov principles from Indigenous Peoples' viewpoints. The authors' intention is to show the importance of this work in communities, not just in information institutions. This article also highlights the importance of Indigenous librarianship when operationalizing IDGov. This article acknowledges the work being done in various information institutions to de-silo information practices and incorporate Indigenous Peoples' perspectives.","container-title":"Library Trends","ISSN":"1559-0682","issue":"1","note":"publisher: Johns Hopkins University Press","page":"13-47","source":"Project MUSE","title":"Enhancing Stewardship of Indigenous Peoples' Data, Information, and Knowledges in Libraries and Archives through Indigenous Data Governance","volume":"72","author":[{"family":"Cummins","given":"Jewel"},{"family":"Soto","given":"Alexander"},{"family":"Anderson","given":"Jane"},{"family":"Gosart","given":"Ulia"},{"family":"Ward","given":"Alexander"},{"family":"Carroll","given":"Stephanie Russo"}],"issued":{"date-parts":[["2023"]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(Cummins 
+                    <hi rend="italic">et al.</hi>, 2023), there has been little attempt to understand how such principles might inform AI systems development and critique within libraries.
+                </p>
+                <p>iREAL therefore aimed to develop guidance on responsible AI systems development in libraries that embeds Indigenous rights and perspectives into the principles of “respect for human autonomy, prevention of harm, fairness and explicability” that are the ethical basis of trustworthy AI 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"4iYRviIi","properties":{"formattedCitation":"(High Level Expert Group on Artificial Intelligence, 2019)","plainCitation":"(High Level Expert Group on Artificial Intelligence, 2019)","noteIndex":0},"citationItems":[{"id":163,"uris":["http://zotero.org/users/416768/items/AU59A84E"],"itemData":{"id":163,"type":"report","abstract":"On 8 April 2019, the High-Level Expert Group on AI presented Ethics Guidelines for Trustworthy Artificial Intelligence. This followed the publication of the guidelines' first draft in December 2018 on which more than 500 comments were received through an open consultation.","language":"en","publisher":"European Commission","title":"Ethics guidelines for trustworthy AI | Shaping Europe’s digital future","URL":"https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai","author":[{"family":"High Level Expert Group on Artificial Intelligence","given":""}],"accessed":{"date-parts":[["2023",8,1]]},"issued":{"date-parts":[["2019",4,8]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(High Level Expert Group on Artificial Intelligence, 2019). The project brought together Indigenous and non-Indigenous researchers from the University of Glasgow, King’s College London, and University of Technology Sydney, to address two key objectives that will be covered in this presentation:
+                </p>
+                <list type="ordered">
+                    <item>Understanding the application of Indigenous rights and IDGov to library AI systems in Australia and the United Kingdom.</item>
+                    <item>Propose a preliminary model for inclusive requirements elicitation in library AI system assessment or development.</item>
+                </list>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methodology</head>
+                <p>We utilised a workshop-based approach, inviting researchers, library practitioners and RTPs to analyse how responsible AI systems might be critiqued and created including the knowledge and data of Indigenous communities. Our methodology drew on three key texts: Linda Tuhiwai Smith’s 
+                    <hi rend="italic">Decolonizing Methodologies: Research and Indigenous Peoples</hi>
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"YhUWiOf7","properties":{"formattedCitation":"(2021)","plainCitation":"(2021)","noteIndex":0},"citationItems":[{"id":146,"uris":["http://zotero.org/users/416768/items/MUWIH8IG"],"itemData":{"id":146,"type":"book","collection-number":"Book, Whole","edition":"Third","event-place":"London [England]","ISBN":"978-1-350-22528-2","language":"English","publisher":"Zed Books","publisher-place":"London [England]","source":"Summon 2 (glasgow.summon.serialssolutions.com)","title":"Decolonizing methodologies: research and indigenous peoples","title-short":"Decolonizing methodologies","URL":"https://go.exlibris.link/3mCYPx1s","author":[{"family":"Smith","given":"Linda Tuhiwai"}],"accessed":{"date-parts":[["2023",8,30]]},"issued":{"date-parts":[["2021"]]}},"label":"page","suppress-author":true}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(2021), which encourages project participants to be proactive and interested workers for change to address structural and cultural reform; the 
+                    <hi rend="italic" xml:space="preserve">Indigenous Archives Collective Position Statement on the Right to Reply to Indigenous Knowledges and Information Held in Archives </hi>
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"y2Z0KdMz","properties":{"formattedCitation":"(2021)","plainCitation":"(2021)","noteIndex":0},"citationItems":[{"id":145,"uris":["http://zotero.org/users/416768/items/STIDIC6E"],"itemData":{"id":145,"type":"report","abstract":"The Indigenous Archives Collective asserts the rights of Indigenous peoples to challenge and respond to their information and knowledges contained in archival records held in Galleries, Libraries, …","language":"en","title":"Indigenous Archives Collective Position Statement on the Right of Reply to Indigenous Knowledges and Information held in archives","URL":"https://indigenousarchives.net/indigenous-archives-collective-position-statement-on-the-right-of-reply-to-indigenous-knowledges-and-information-held-in-archives/","author":[{"family":"Indigenous Archives Collective","given":""}],"accessed":{"date-parts":[["2023",8,30]]},"issued":{"date-parts":[["2021",8,9]]}},"label":"page","suppress-author":true}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(2021), which emphasises a “participatory model that repositions record ‘subjects’, individuals and communities as record ‘agents’ and participants in the act of record creation”; and the Maiam nayri Wingara Collective Principles of IDSov 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"CWZQslz2","properties":{"formattedCitation":"(2018)","plainCitation":"(2018)","noteIndex":0},"citationItems":[{"id":7408,"uris":["http://zotero.org/groups/5514906/items/DHVLM5Y8"],"itemData":{"id":7408,"type":"paper-conference","event-place":"Canberra, ACT","event-title":"Indigenous Data Sovereignty Summit","publisher-place":"Canberra, ACT","title":"Indigenous Data Sovereignty Communique","URL":"https://static1.squarespace.com/static/5b3043afb40b9d20411f3512/t/63ed934fe861fa061ebb9202/1676514134724/Communique-Indigenous-Data-Sovereignty-Summit.pdf","author":[{"family":"Maiam nayri Wingara","given":""}],"accessed":{"date-parts":[["2024",12,6]]},"issued":{"date-parts":[["2018"]]}},"label":"page","suppress-author":true}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(2018) that refer to the right of Indigenous peoples to autonomously decide what, how and why Indigenous data are collected, accessed and used. 
+                </p>
+                <p>The first workshop, at the National Library of Australia, was attended by approximately 35 researchers and library practitioners from a majority Indigenous Australian background. Taking place over a day, a series of Yarning sessions encouraged participants to address contexts and challenges relating to AI development in the Australian context. These findings formed the basis of planning for workshop 2, which took place at King’s College London with approximately 20 attendees. Led by King’s Digital Lab, it explored the legacies and challenges of applying AI to Indigenous datasets. In advance, KDL prepared a dashboard that applied a Large Language Model to historical records about New South Wales Aboriginal Schools 1876-1979, from Museums of History New South Wales. These records were converted to JSON and Markdown, and AI/ML models for metadata extraction were then applied. Finally, a prototype dashboard was produced which showcased the results including basic topic modelling, named entity recognition, and mapping. Figure 1 below shows the dashboard mapping interface. This dashboard formed the basis of a critical investigation into the outputs of the LLM. Groups collaboratively investigated the dashboard, before reverting to larger Yarning circles to discuss their findings. The workshop finished with a requirements elicitation session, that drew together the day’s findings into a focused discussion on notional priorities for future development. This was done via a MoSCoW (Must-Have, Should-Have, Could-Have, Won’t Have) prioritisation exercise.</p>
+                <figure>
+                    <graphic n="1001" width="16.002cm" height="9.918347222222222cm" url="/tmp/tmpssekqo05/Pictures/d6fc6ff6fe170bd4edfcf0bfbd01a14c.png" rend="inline"/>
+                    <head>Screenshot of the iREAL dashboard, used for Workshop 2</head>
+                </figure>
+                <p>Finally, in workshop 3, which was online with a smaller group of 15 attendees from the previous two workshops, we undertook a critical investigation of how Retrieval Augmented Generation (RAG) worked on the same dataset. This final workshop finished with discussion of the gaps in our discussion, and identified issues and challenges associated with Requirements Elicitation. </p>
+                <p>We encountered significant time pressures due to the six-month duration of the project. This had a significant effect on our relationship building, in selecting a dataset, and in planning engagement activities. However, it also led to the development of an effective reflective approach to analysing our research findings. As well as analysing contributions from workshop participants, the project team also shared short written reflections about each workshop. This became an emergent intra-project information sharing technique that is evocative of auto-ethnographic practices: an “autobiographical genre of writing and research that displays multiple layers of consciousness, connecting the personal to the cultural” 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"dBEnrQkg","properties":{"formattedCitation":"(Bochner and Ellis, 2016, p. 65)","plainCitation":"(Bochner and Ellis, 2016, p. 65)","noteIndex":0},"citationItems":[{"id":8044,"uris":["http://zotero.org/users/416768/items/WHB9VIEL"],"itemData":{"id":8044,"type":"book","abstract":"This comprehensive text is the first to introduce evocative autoethnography as a methodology and a way of life in the human sciences. Using numerous examples","event-place":"New York","ISBN":"978-1-315-54541-7","note":"DOI: 10.4324/9781315545417","number-of-pages":"332","publisher":"Routledge","publisher-place":"New York","title":"Evocative Autoethnography: Writing Lives and Telling Stories","title-short":"Evocative Autoethnography","author":[{"family":"Bochner","given":"Arthur"},{"family":"Ellis","given":"Carolyn"}],"issued":{"date-parts":[["2016",3,21]]}},"locator":"65","label":"page"}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(Bochner and Ellis, 2016, p. 65). These reflections form the basis of our findings and inform the subsequent recommendations that will be outlined in the presentation.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Findings</head>
+                <p>A key learning outcome for the team was the importance of developing a suitable cultural interface, where “the intersections of different Knowledges, systems, concerns and priorities will converge to inform and develop new practices in this area” 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"CHXiuYSw","properties":{"formattedCitation":"(Nakata, 2002)","plainCitation":"(Nakata, 2002)","noteIndex":0},"citationItems":[{"id":7992,"uris":["http://zotero.org/users/416768/items/BXIJU3VD"],"itemData":{"id":7992,"type":"article-journal","container-title":"IFLA Journal","issue":"5-6","title":"Indigenous Knowledge and the Cultural Interface: Underlying Issues at the Intersection of Knowledge and Information Systems","volume":"28","author":[{"family":"Nakata","given":"Martin"}],"issued":{"date-parts":[["2002"]]}}}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(Nakata, 2002). The development of a respectful requirements elicitation process therefore must focus on how it navigates different Knowledge Structures, priorities, systems and concerns in order to develop effective cross-cultural spaces for investigating AI usage within libraries. The question of who is in the room was key. This operated on two levels: first, to ensure that communities were adequately represented in discussions; and second, in response to concerns from participants about the importance of understanding the contexts in which this work takes place. Many problems identified with the Workshop 2 dashboard, for instance, were found to originate in a lack of knowledge of the histories, politics and cultures that produced the datasets and technologies that were under critique. 
+                </p>
+                <p>Indigenous relationality – an acknowledgment of the multiple and complex relationships that humans have with each other and the natural world – was a common theme. This encompassed a variety of challenges: the need to engage with communities in their own places and spaces; the question of whether AI should be used in certain contexts, given its environmental impact; the desire among participants to actively dismantle colonial practices; This the need for an awareness of Indigenous concerns and imperatives in the AI space, and how these relate to the collections and practices of libraries; the need for transparency at all levels in selecting methodologies, datasets, and AI technologies; and the moments in which the Right to Reply is invited or signposted. Importantly, it was evident from our attempt to utilise Indigenous methodologies such as Yarning in very different cultural contexts, that a degree of understanding of the social and cultural roots of the methods being adopted was necessary and that context was a key driver for how to engage with communities. </p>
+                <p>This was summarised neatly by participant calls for a “Slow AI” approach in the sector – not one built upon inaction, but upon knowledge exchange and reflection to address key concerns and seek pathways of mutual benefit to institutions, RTPs and Indigenous communities alike. Furthermore, the deployment of relational methods is highly context specific and thus challenges the cultural hegemony of many existing AI practices. Any sectoral response must therefore be simultaneously localised and built upon global foundations of Indigenous leadership, and Indigenous Data Governance.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Discussion and Conclusion</head>
+                <p>From these findings have emerged a set of recommendations that can support RTPs to undertake respectful AI systems development for Indigenous knowledges in libraries. In addition to supporting the adoption of existing frameworks for IDSov and IDGov, our recommendations emerge from the key workshop themes of relationality, relationship-building, and Indigenous representation. As such, the recommendations we will outline in our presentation include: allowing time, and creating inclusive spaces for, relationship building among project teams and within communities; integrating RTPs into leadership roles, teams and processes; developing and adapting RTP practices for the Indigenous contexts in which this work will take place; engaging early with data and use cases, exploring their formats and possible outputs, and drawing on team knowledge domain expertise; foregrounding transparency by explaining why datasets and AI models are selected, sharing process documentation, owning mistakes and learning from failures; and strongly aligning RTP practices towards collaborative change, interventions and advocacy for Indigenous rights.</p>
+                <p>This paper aims to make a significant contribution to our understanding of Responsible AI practices for RTPs and libraries, by intervening in development practices relating to the collections and knowledges of Indigenous communities. While grounded in the specific nationhood of Aboriginal and Torres Strait Islander peoples, the presentation therefore has wider significance for those facing similar challenges in their own localised contexts. </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl rend="Bibliography">
+                        <?biblio ADDIN ZOTERO_BIBL {"uncited":[],"omitted":[],"custom":[]} CSL_BIBLIOGRAPHY?>
+                        <hi rend="bold">Bochner, Arthur and Ellis, Carolyn</hi> (2016): 
+                        <hi rend="italic">Evocative Autoethnography: Writing Lives and Telling Stories</hi>. New York: Routledge.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <hi rend="bold">Carroll, Stephanie Russo</hi>
+                        <hi rend="italic bold">et al.</hi> (2020): "The CARE Principles for Indigenous Data Governance", in: 
+                        <hi rend="italic">Data Science Journal</hi> 19, 43: 1-12 &lt;https://doi.org/10.5334/dsj-2020-043&gt; [28.04.2025].
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <hi rend="bold">Cummins, Jewel</hi>
+                        <hi rend="italic bold">et al</hi>
+                        <hi rend="italic">.</hi> (2023): "Enhancing Stewardship of Indigenous Peoples’ Data, Information, and Knowledges in Libraries and Archives through Indigenous Data Governance", in: 
+                        <hi rend="italic">Library Trends</hi> 72, 1: 13–47.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <hi rend="bold">High Level Expert Group on Artificial Intelligence</hi> (2019): 
+                        <hi rend="italic">Ethics guidelines for trustworthy AI | Shaping Europe’s digital future</hi>. European Commission &lt;https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai&gt; [28.04.2025].
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <hi rend="bold">Indigenous Archives Collective</hi> (2021): 
+                        <hi rend="italic">Indigenous Archives Collective Position Statement on the Right of Reply to Indigenous Knowledges and Information held in archives</hi>. &lt;https://indigenousarchives.net/indigenous-archives-collective-position-statement-on-the-right-of-reply-to-indigenous-knowledges-and-information-held-in-archives&gt; [28.04.2025].
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <hi rend="bold">Lewis, Jason Edward, Whaanga, Hēmi and Yolgörmez, Ceyda</hi> (2024): "Abundant intelligences: placing AI within Indigenous knowledge frameworks", in: 
+                        <hi rend="italic">AI &amp; SOCIETY</hi> &lt;https://doi.org/10.1007/s00146-024-02099-4&gt; [28.04.2025].
+                    </bibl>
+                    <bibl rend="Bibliography" style="text-align: left;">
+                        <hi rend="bold">Maiam nayri Wingara</hi> (2018): "Indigenous Data Sovereignty Communique", in: 
+                        <hi rend="italic">Indigenous Data Sovereignty Summit</hi>, Canberra, ACT &lt;https://static1.squarespace.com/static/5b3043afb40b9d20411f3512/t/63ed934fe861fa061ebb9202/1676514134724/Communique-Indigenous-Data-Sovereignty-Summit.pdf&gt; [28.04.2025].
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <hi rend="bold">Nakata, Martin</hi> (2002): "Indigenous Knowledge and the Cultural Interface: Underlying Issues at the Intersection of Knowledge and Information Systems", in: 
+                        <hi rend="italic">IFLA Journal</hi>, 28, 5-6.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <hi rend="bold">Smith, Linda Tuhiwai</hi> (2021): 
+                        <hi rend="italic">Decolonizing Methodologies: Research and Indigenous Peoples</hi>. London: Zed Books.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

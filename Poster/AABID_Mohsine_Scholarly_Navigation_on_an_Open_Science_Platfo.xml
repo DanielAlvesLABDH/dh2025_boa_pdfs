@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="AABID_Mohsine_Scholarly_Navigation_on_an_Open_Science_Platfo">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Scholarly Navigation on an Open Science Platform: A Computational Study of OpenEdition’s Server Logs</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Aabid</surname>
+                        <forename>Mohsine</forename>
+                    </persName>
+                    <affiliation>OpenEdition (CNRS / AMU), France; Laboratoire d'informatique et des Systèmes (LIS), France</affiliation>
+                    <email>mohsine.aabid@openedition.org</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Dumas Primbault</surname>
+                        <forename>Simon</forename>
+                    </persName>
+                    <affiliation>OpenEdition (CNRS / AMU), France</affiliation>
+                    <email>simon.dumas-primbault@openedition.org</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Bellot</surname>
+                        <forename>Patrice</forename>
+                    </persName>
+                    <affiliation>Laboratoire d'informatique et des Systèmes (LIS), France</affiliation>
+                    <email>patrice.bellot@lis-lab.fr</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T16:10:00.518401754</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>User Behavior Modeling</term>
+                    <term>Data Mining</term>
+                    <term>Digital Libraries</term>
+                    <term>Log Analysis</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>user experience design and analysis</term>
+                    <term>Computer science</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <anchor xml:id="id_docs-internal-guid-d6a5a494-7fff-a957-0e19-e5b8c6e49a40"/>Studying how users navigate open access content provides insights into their documentary habits and the ways knowledge is circulated. This study focuses on OpenEdition, a French public infrastructure that develops and maintains four platforms dedicated to open scholarly communication in the humanities and social sciences: Journals, for scientific journals; Books, offering electronic books; Hypothèses, for scientific blogging; and Calenda, for scientific events.
+            </p>
+            <p>Positioned at the intersection of digital humanities and data science, this study comparatively analyses server logs from October 2023 and October 2024—a month typically marked by peak annual activity. We analyze user behavior across Journals, Books, Hypothèses, Calenda, and Search (search engine). By leveraging these server logs, this work seeks to uncover patterns in how users navigate and engage with open access content.<ref n="1" target="ftn0"/>
+            </p>
+            <p>
+                <hi rend="color(#000000)">In this study, we present three types of analysis, beginning with </hi>
+                <hi rend="color(#000000)bold">Transition Analysis</hi>
+                <hi rend="color(#000000)">.Transition Analysis explores how users transition across different platforms and publishers. Using the navigation sessions, we construct a </hi>
+                <hi rend="color(#000000)bold">transition matrix</hi>
+                <hi rend="color(#000000)"> </hi>
+                <hi rend="color(#000000)">to quantify the probability of moving from one platform to another. While the matrix offers a global overview of user transitions, it does not capture variations in transition patterns across individual sessions. To address this limitation, we apply an </hi>
+                <hi rend="color(#000000)bold">Expectation-Maximization (EM)</hi>
+                <hi rend="color(#000000)"> </hi>
+                <hi rend="color(#000000)">algorithm to cluster sessions based on their transition behaviors, modeling them as </hi>
+                <hi rend="color(#000000)bold">Markov Chains </hi>
+                <hi rend="color(#000000)">(e.g., sessions following a pattern like “Books, Books, Books” exhibit distinct navigation behaviours compared to sessions such as “Books, Journals, Calenda,” and should therefore be grouped into differently.).</hi>
+                <hi rend="color(#000000)"> </hi>
+            </p>
+            <p>
+                <hi rend="color(#000000)">The second analysis focuses on identifying groups of websites (journals and book collections) frequently accessed together within the same session, suggesting shared user interests. In the absence of explicit user profiles or feedback, we adopt a session-based approach to infer implicit user preferences. First, we construct a </hi>
+                <hi rend="color(#000000)bold">co-occurrence matrix</hi>
+                <hi rend="color(#000000)"> </hi>
+                <hi rend="color(#000000)">to quantify how often pairs of editor websites appear together within sessions. By multiplying this matrix with its transpose and normalizing the result, we derive a </hi>
+                <hi rend="color(#000000)bold">cosine similarity matrix</hi>
+                <hi rend="color(#000000)">, which measures the degree of similarity between pairs of websites. Finally, we apply </hi>
+                <hi rend="color(#000000)bold">clustering</hi>
+                <hi rend="color(#000000)"> </hi>
+                <hi rend="color(#000000)">to group websites with high similarity scores, revealing clusters that cater to similar user interests. We then attempted to interpret the identified user groups using metadata related to the websites they visited (e.g. publication language, publisher country, disciplines etc…)</hi>
+            </p>
+            <p>
+                <hi rend="color(#000000)">The third analysis replicates a previous study </hi>
+                <hi rend="color(#000000)">(</hi>
+                <anchor xml:id="id_docs-internal-guid-8fc7d13d-7fff-0556-984f-9cfb120db0af"/>
+                <hi rend="color(#000000)">Kaabachi, Bayrem</hi>
+                <hi rend="color(#000000)">/ </hi>
+                <anchor xml:id="id_docs-internal-guid-b32ea0ed-7fff-5058-05a3-e6cbbb478463"/>
+                <hi rend="color(#000000)">Simon Dumas Primbault</hi>
+                <hi rend="color(#000000)"> </hi>
+                <anchor xml:id="id_docs-internal-guid-f9169758-7fff-5f40-0558-38d077ca65d8"/>
+                <hi rend="color(#000000)italic">2023</hi>
+                <hi rend="color(#000000)">)</hi>
+                <hi rend="color(#000000)"> but applies it to journals and book collections websites to investigate user navigation topology. Each session is treated as a sentence, and websites are considered as words. </hi>
+                <hi rend="color(#000000)bold">Word2Vec</hi>
+                <hi rend="color(#000000)"> </hi>
+                <hi rend="color(#000000)">is employed to create numerical representations of these websites, and </hi>
+                <hi rend="color(#000000)bold">UMAP</hi>
+                <hi rend="color(#000000)"> </hi>
+                <hi rend="color(#000000)">is utilized to reduce dimensionality. This dimensionality reduction aims to optimize computational efficiency and focus on relevant features. Then sessions are modeled as Vietoris complexes, with topological patterns analyzed via birth-death diagrams we construct a topological representation via entropy (this representation contains information about the topology of the followed path during navigation), followed by </hi>
+                <hi rend="color(#000000)bold">DBSCAN</hi>
+                <hi rend="color(#000000)"> </hi>
+                <hi rend="color(#000000)">clustering to identify user profiles.</hi>
+            </p>
+            <p>The complementarity of these three strands of preliminary analysis of user navigation across OpenEdition platforms reveal distinct patterns of engagement and platform interaction. </p>
+            <list type="unordered">
+                <item>Transition analysis indicates a lack of cross-platform navigation, with users predominantly remaining within a single platform or website during sessions, punctuated by occasional transitions, especially toward journal content. </item>
+                <item>Expectation Maximization modeling further refines this observation, identifying two principal session profiles: a dominant group (approximately two-thirds of sessions) exhibiting platform-centric behavior, and a secondary group (around one-third) engaging in more fluid, cross-platform navigation. </item>
+                <item>Complementary co-occurrence clustering highlights the emergence of a consistent cluster of Latin American websites, suggesting a regionally specific pattern of interest or user engagement. </item>
+                <item>Finally, topological modeling delineates seven distinct navigation profiles, encompassing behaviors from mono-publisher visits to complex, serendipitous session paths. </item>
+            </list>
+            <p>Taken together, these findings highlight the diversity of user interactions with open access scholarly resources and provide valuable insights for informing platform design and enhancing user engagement—particularly in areas such as cross-platform recommendation systems, content discoverability, and the optimization of search functionalities. Future research will build on these results by incorporating action-based metrics to more precisely identify the factors that foster sustained user engagement, ultimately contributing to the improvement of both platform design and user experience.</p>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn0" rend="footnote text" n="1">
+                    <anchor xml:id="id_docs-internal-guid-641710e4-7fff-898a-4092-653230dbaceb"/>
+                    <hi rend="color(#000000)">Analyzing these logs is challenging due to their inherent incompleteness and biases (e.g., determining when a session ends, the absence of user IDs, or the use of shared devices). To address these challenges, we developed a method to extract and group user actions into </hi>
+                    <hi rend="color(#000000)italic">navigation</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)italic">sessions</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">using rules and statistical techniques.</hi>
+                </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <anchor xml:id="id_docs-internal-guid-40904d13-7fff-4b19-f776-3a3321c3aac7"/>
+                        <hi rend="color(#000000)bold">Kaabachi, Bayrem /</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)bold">Simon, Dumas Primbault </hi>
+                        <hi rend="color(#000000)">(2023):</hi>
+                        <hi rend="color(#000000)bold">“</hi>
+                        <hi rend="color(#000000)">A Topological Data Analysis of Navigation Paths within Digital Libraries”. </hi>
+                        <hi rend="color(#000000)italic">CEUR Workshop Proceedings, Computational Humanities Research 2023</hi>
+                        <hi rend="color(#000000)">, vol. 3558, 2023, pp. 111–134. Available at:</hi>
+                        <ref target="https://infoscience.epfl.ch/handle/20.500.14299/202404">
+                            <hi rend="color(#000000)bold"> </hi>
+                            <hi rend="color(#1155cc)underline">https://infoscience.epfl.ch/handle/20.500.14299/202404</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <anchor xml:id="id_docs-internal-guid-0998117e-7fff-e820-9ae2-5366127e710f"/>
+                        <hi rend="color(#000000)bold">Nouvellet, Adrien </hi>
+                        <hi rend="color(#000000)bold">et al</hi>
+                        <hi rend="color(#000000)">. </hi>
+                        <hi rend="color(#000000)">(2017):“</hi>
+                        <hi rend="color(#000000)">Analyse des traces d'usage de Gallica”. Research Report, Télécom ParisTech; Bibliothèque nationale de France. Available at:</hi>
+                        <ref target="https://hal.science/hal-01709264">
+                            <hi rend="color(#1155cc)underline">https://hal.science/hal-01709264</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <anchor xml:id="id_docs-internal-guid-9e638511-7fff-8ad2-93ce-7aed1f4aec9b"/>
+                        <hi rend="color(#000000)bold">Romain, Deveaud</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2019):</hi>
+                        <hi rend="color(#000000)">“Modalités d’accès au savoir ouvert sur les plateformes </hi>
+                        <hi rend="color(#000000)">d’OpenEdition”.</hi>
+                    </bibl>
+                    <bibl>
+                        <anchor xml:id="id_docs-internal-guid-6b02184f-7fff-8277-3a55-28a3a038fb55"/>
+                        <hi rend="color(#000000)bold">Sarwar, Badrul </hi>
+                        <hi rend="color(#000000)bold">et al</hi>
+                        <hi rend="color(#000000)bold">.</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(2001</hi>
+                        <hi rend="color(#000000)">):</hi>
+                        <hi rend="color(#000000)">"Item-based collaborative filtering recommendation algorithms." In </hi>
+                        <hi rend="color(#000000)italic">Proceedings of the 10th International Conference on World Wide Web (WWW '01)</hi>
+                        <hi rend="color(#000000)">, Association for Computing Machinery, New York, NY, USA, 2001, pp. 285–295. Available at:</hi>
+                        <ref target="https://doi.org/10.1145/371920.372071">
+                            <hi rend="color(#000000)bold"> </hi>
+                            <hi rend="color(#1155cc)underline">https://doi.org/10.1145/371920.372071</hi>
+                        </ref>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <anchor xml:id="id_docs-internal-guid-7b0abac2-7fff-1900-5b6d-be0027838359"/>
+                        <hi rend="color(#000000)bold">Tettoni, Anne-Laure / Simon, Dumas Primbault</hi>
+                        <hi rend="color(#000000)">. </hi>
+                        <hi rend="color(#000000)">(2024):</hi>
+                        <hi rend="color(#000000)">"Discoverability in a Digital Library: A Study of 'Rabbit Holes' within Gallica's Corpus." In </hi>
+                        <hi rend="color(#000000)italic">Proceedings of the Computational Humanities Research Conference 2024</hi>
+                        <hi rend="color(#000000)">. CEUR, 2024. Available at: </hi>
+                        <ptr target="https://ceur-ws.org/Vol-3834/paper78.pdf"/>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

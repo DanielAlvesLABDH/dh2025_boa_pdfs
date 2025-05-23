@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="_E_A_Artjoms_The_Unnatural_Language_of_Poetic_Meters__Or_Why">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">The Unnatural Language of Poetic Meters, Or Why You Should Be Afraid of Counting Words</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Šeļa</surname>
+                        <forename>Artjoms</forename>
+                    </persName>
+                    <affiliation>Institute of Czech Literature (Czech Academy of Sciences), Czech Republic</affiliation>
+                    <email>sela@ucl.cas.cz</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Haider</surname>
+                        <forename>Thomas</forename>
+                    </persName>
+                    <affiliation>University of Passau, Germany</affiliation>
+                    <email>thomas.haider@uni-passau.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Plecháč</surname>
+                        <forename>Petr</forename>
+                    </persName>
+                    <affiliation>Institute of Czech Literature (Czech Academy of Sciences), Czech Republic</affiliation>
+                    <email>plechac@ucl.cas.cz</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-21T12:54:42.595286103</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>poetic meters</term>
+                    <term>systematicity</term>
+                    <term>classification</term>
+                    <term>corpus bias</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>text mining and analysis</term>
+                    <term>Linguistics</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="id_docs-internal-guid-61dd8020-7fff-0285-e2fc-7111aac5d745"/>Introduction
+                </head>
+                <p>
+                    <hi rend="color(#000000)">The influence of poetic form on natural language is well-known. It has been examined as the "linguistics of verse" within structuralist metrics (Gasparov / Skulatcheva 2005; Gasparov / Tarlinskaja 2008), following Roman Jakobson's integration of poetics into linguistics (Jakobson 2010 [1960]; Hanson 2012). Similarly, the recognition that the recurrence of formulas in sung epics is conditioned by metrical positions formed a core component of Oral-Formulaic Theory (Lord 1960), prompting modern investigations into the interface between meter and language (see Frog 2021 for a review). Studies reveal how line division, caesura placement, and recurring rhythmic and rhyming patterns alter the flow of language by imposing constraints that modify the usual calculations for prosody, morphology, and syntax, shaping language into (somewhat) arbitrary forms. In this sense, poetic form renders natural language </hi>
+                    <hi rend="color(#000000)italic">un</hi>
+                    <hi rend="color(#000000)">-natural—a transformation that is, after all, one of poetry’s primary aims: to craft markedly unordinary speech.</hi>
+                </p>
+                <p>What is less often discussed are the consequences that the poetic form has at the level of a corpus, particularly in the context of quantitative and computational analysis. Different meters, line lengths, and stanzaic forms impose recurring patterns on a language already dense with structured relationships. Under metrical constraints, everything becomes confounded: the accentual classes of words, the rhythmic preferences of various parts of speech, and the syntactic gravity within poetic lines.  In this paper we show how quickly these regularities accumulate into strong statistical signals and become a major source of linguistic variation, which remains largely unaccounted for in computational literary studies. Specifically, we demonstrate through a supervised classification of Czech, German, and Russian poetic texts that metrical forms easily manifest in seemingly unrelated and surface-level feature distributions. </p>
+                <p>Consider, for example, metrical poetry in Czech. Czech has fixed initial word stress, and implementing various prosodic patterns relies on alternating words of different lengths and padding lines with unstressed monosyllables, typically function words. Because of the fixed initial stress, it is relatively straightforward to begin a trochaic line, where stress is expected on odd counted syllables. However, starting an iambic line requires unstressed, prosodically weak monosyllables to appear at the very beginning. The weakest monosyllabic words are typically function words: articles, conjunctions, and prepositions. Since Czech does not have articles, conjunctions become the weakest class of words  stress-wise. Poetic lines frequently begin with coordinating conjunctions like ‘and’, as this provides an easy way to form an independent clause and establish a connection between lines. By our calculations, 65% of all occurrences of ‘a’ (‘and’) in Czech iambic pentameter fall on the first syllable of a line. Consequently, it is unsurprising that conjunction frequencies increase in iambic lines compared to trochaic ones  (Červenka 2006: 34–35).</p>
+                <p>In a corpus, these dependencies accumulate to a terrifying degree. The frequency of the conjunction ‘a’ alone is sufficient to distinguish iambs from trochees, even in relatively small samples (Figure 1a). The effect cascades through other levels of linguistic abstraction, influencing the frequencies of parts of speech and the general distributions of word lengths. Quite remarkably, the proportions of monosyllabic and disyllabic words can easily differentiate samples from all four major metrical forms in Czech: iambs, trochees, dactyls, and amphibrachs (Figure 1b).</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp94enq1c1/Pictures/66280e330fa3d24b13afeab6a1a51832.png"/>
+                        <head>
+                            <hi rend="bold">a. </hi>Stacked dot plot showing distribution of Czech ‘a’ across samples; 
+                            <hi rend="bold">b. </hi>Scatter plot showing relationships between frequencies of monosyllabic and disyllabic words. 60 independent random samples of 100 lines for each meterwere used.
+                        </head>
+                    </figure>
+                </p>
+                <p>The analysis we present here explores the intuition outlined above: the entanglement between metrical form and linguistic features that are not directly derived from prosody, yet are still shaped by the gravity of a metrical template. These range from simple function words, to sequences of morphological features and word lengths. We ask how well we can recognize metrical form with surface-level features and at what sample size the signal becomes strong enough to worry. What we find, however, leads us to a different question: is there anything at all that can escape the grasp of a meter?</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Data &amp; Methods</head>
+                <p>
+                    <hi rend="italic">Data</hi>. We analyze three poetry corpora with extensive metrical annotations: Czech, German, and Russian, all part of the multilingual collection PoeTree (Plecháč et al. 2024)<ref n="1" target="ftn1"/>. We filter the corpora to include poets born in the 19th century and the most common recognized meters, each with at least 5,000 lines. Metrical annotations at the line level include both the foot type (e.g., iamb, trochee) and the specific metrical form (e.g., tetrameter, pentameter). Table 1 provides a summary of the data. For details on metrical form see (Šeļa et al. 2022).
+                </p>
+                <p>Table 1. Corpus summary after filtering.</p>
+                <table rend="frame" xml:id="Table1">
+                    <row>
+                        <cell/>
+                        <cell rend="start color(#000000)">Czech</cell>
+                        <cell rend="start color(#000000)">German</cell>
+                        <cell rend="start color(#000000)">Russian</cell>
+                    </row>
+                    <row>
+                        <cell rend="start color(#000000)"># lines</cell>
+                        <cell rend="end color(#000000)">2M</cell>
+                        <cell rend="end color(#000000)">538k</cell>
+                        <cell rend="end color(#000000)">660k</cell>
+                    </row>
+                    <row>
+                        <cell rend="start color(#000000)"># foot types</cell>
+                        <cell rend="end color(#000000)">4</cell>
+                        <cell rend="end color(#000000)">3</cell>
+                        <cell rend="end color(#000000)">5</cell>
+                    </row>
+                    <row>
+                        <cell rend="start color(#000000)"># metrical forms</cell>
+                        <cell rend="end color(#000000)">16</cell>
+                        <cell rend="end color(#000000)">8</cell>
+                        <cell rend="end color(#000000)">17</cell>
+                    </row>
+                </table>
+                <p>
+                    <hi rend="italic">Features.</hi> Drawing on the systematic linguistic effects discussed above, we construct four feature sets:
+                </p>
+                <list type="ordered">
+                    <item>Most frequent words (MFW): The 100 most frequent words, roughly corresponding to function words.</item>
+                    <item>Part of speech tags (POS). Morphological tagging was done with TreeTagger, despite PoeTree currently using UDpipe for uniform multilingual annotation. The reason for this is that prosodic annotation for three languages is not yet aligned with UDpipe output.</item>
+                    <item>Word lengths in syllables (SYL): The number of syllables in each word.</item>
+                    <item>POS + SYL combination: A fusion of POS tags and syllable counts into a single token. “Once upon a midnight dreary” becomes "ADV_1 ADP_2 DET_1 NOUN_2 ADJ_2".</item>
+                </list>
+                <p>Each feature set is represented twice: as unigrams and rolling bigrams to indirectly capture local syntactic connectivity. Bigram features with long tails (MFW and POS+SYL) are capped at the 200 most frequent features.</p>
+                <p>
+                    <hi rend="italic">Classification.</hi> We design two main classification tasks:
+                </p>
+                <list type="ordered">
+                    <item>Foot type recognition: A simpler task involving 3–5 classes across corpora.</item>
+                    <item>Metrical form recognition: A more complex task involving 8–17 classes; now the classifier needs to also distinguish samples of the same meter, but of different line length, e.g. iambic pentameter from iambic tetrameter.</item>
+                </list>
+                <p>We use Random Forests (RF) as the classification algorithm due to its efficiency and robustness in handling feature vectors of varying nature and length. RF employs bootstrapping for both features and samples during training, providing an internal estimation of prediction error on unseen data (“out-of-bag” classification), which we use to report final accuracy.</p>
+                <p>For each feature set, we take 5 independent samples of 
+                    <hi rend="italic">N</hi> random lines per meter/class, with 
+                    <hi rend="italic">N</hi> ranging from 25 to 1,000 lines. This reflects our filtering that ensured each class had a minimum of 5,000 lines. Each classification setup is repeated 100 times with new random samples, and average accuracies for each 
+                    <hi rend="italic">N</hi> are reported.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results</head>
+                <p>The main result, illustrated in Figure 2, is clear: all features, even the weakest performers, reveal meter to some extent. With sufficiently large samples, many features achieve perfect or near-perfect predictions. Even in the challenging task of distinguishing between metrical forms performance remains surprisingly high. This finding confirms that the same prosodic pattern, when implemented in lines of different lengths, produces distinct morpho-syntactic affordances and linguistic profiles, since a line generally gravitates to form a complete clause, or a syntactic period.</p>
+                <p>As expected, word lengths in Czech—being the feature most closely tied to prosodic regulation—are the strongest predictor of foot type, demonstrating high efficiency even in small samples (~0.95 mean accuracy for N = 100). Generally, our setups exceed random baselines even with the smallest, highly restrictive values of N, corresponding to sample sizes as small as single lyrical poems (Shelya / Sobchuk 2017).
+                    <figure>
+                        <graphic url="/tmp/tmp94enq1c1/Pictures/66280e330fa3d24b13afeab6a1a51832.png"/>
+                        <head>Results of the RF classification. Horizontal dotted lines correspond to random baselines for each language.</head>
+                    </figure>
+                </p>
+                <p>In German and Russian, languages without fixed stress, sequential information (e.g., bigrams) becomes more critical, capturing patterns of phrasal stress and systematic relationships between morphology and stress placement (Gasparov / Skulatcheva 2005; Nenonkova et al. 2007; Haider 2021: 3721). While the performance curves for German and Russian do not appear as dramatic as those for Czech, this is a very strong performance: all but one feature in German reach &gt; .90 accuracy in foot recognition, while Russian slightly outperforms Czech when it comes to classification by metrical forms.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Discussion</head>
+                <p>We have shown the consequences of simple repetition of a rule, a tendency, a pattern in a corpus. The exceptionally high classification accuracy tells us that all metrical forms organize language in their own ways, making form a major source of pervasive linguistic variation that influences even the simplest measurements we take. This result might be considered in optimistic light by those who are interested in automated recognition of meters, opening the way for the use of non-prosodic features that nonetheless reflect prosody. For literary and historical research, however, our results mean that form is a dangerous confound; not accounting for it will surely lead to measurement errors. How critical these errors can be, remains to be seen, it likely will differ across individual cases. However it is clear that we should adjust approaches that rely on corpus-wide calculations and direct comparisons of formally heterogenous poetry data (e.g. Kao / Jurafsky 2015, Walsh et al. 2024). Even if we are not looking at meters, they are staring at us.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn1" rend="footnote text" n="1">Data and code are avaliable: https://github.com/perechen/meter-and-language</note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Červenka, </hi>
+                        <hi rend="bold">Miroslav</hi> (2006): 
+                        <hi rend="italic">Kapitoly o Českém Verši</hi> [Chapters on Czech Verse]. Praha: Carolinum.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Frog, </hi>
+                        <hi rend="bold">Mr</hi> (2021): “Metrical Entanglement: The Interface of Language and Meter”, in: Frog, Mr / Grünthal, Satu / Kalio, Kati / Niemi, Jarko (eds), Versification. Studia Fennica Litteraria. Finland: Suomalaisen Kirjallisuuden Seura, pp. 249–93. DOI: 10.21435/sflit.12.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Gasparov, </hi>
+                        <hi rend="bold">Mikhail</hi>
+                        <hi rend="bold"> / </hi>
+                        <hi rend="bold">Tarlinskaja, </hi>
+                        <hi rend="bold">Marina</hi>
+                        <hi rend="bold"> </hi>(2008): “The Linguistics of Verse” in: 
+                        <hi rend="italic">The Slavic and East European Journal </hi> 52, 3: 198–207. DOI: 10.2307/20459662.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Gasparov, </hi>
+                        <hi rend="bold">Mikhail </hi>
+                        <hi rend="bold">/ Skulatcheva, Tatiana</hi> (2005): 
+                        <hi rend="italic">Stat’i o Lingvistike Stikha</hi> [Essays on the Linguistics of Verse]. Moscow: Iazyki Slavianskoi Kulʹtury.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Haider, </hi>
+                        <hi rend="bold">Thomas</hi> (2021): “Metrical Tagging in the Wild: Building and Annotating Poetry Corpora with Rhythmic Features” in: 
+                        <hi rend="italic">Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics: Main Volume. EACL 2021. </hi>Online: Association for Computational Linguistics, 3715–25. DOI: 10.18653/v1/2021.eacl-main.325.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hanson, </hi>
+                        <hi rend="bold">Kristin</hi> (2012). “Linguistics and Poetics” in: 
+                        <hi rend="italic">Princeton Encyclopedia of Poetry and Poetics</hi>, 803–9.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Jakobson, </hi>
+                        <hi rend="bold">Roman</hi> (2010): “Linguistics and Poetics” in: 
+                        <hi rend="italic">Volume III Poetry of Grammar and Grammar of Poetry</hi>. Berlin, Boston: De Gruyter Mouton: 18–51. DOI: 10.1515/9783110802122.18.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Kao, </hi>
+                        <hi rend="bold">Justine</hi>
+                        <hi rend="bold"> /</hi>
+                        <hi rend="bold"> Jurafsky, </hi>
+                        <hi rend="bold">Dan</hi> (2015): “A Computational Analysis of Poetic Style: Imagism and Its Influence on Modern Professional and Amateur Poetry” in: 
+                        <hi rend="italic">Linguistic Issues in Language Technology,</hi> 12. DOI: 10.33011/lilt.v12i.1377.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Lord, </hi>
+                        <hi rend="bold">Albert</hi> (1960). 
+                        <hi rend="italic">The Singer of Tales</hi>. Cambridge, MA: Harvard University Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Nenkova, </hi>
+                        <hi rend="bold">Ani</hi>
+                        <hi rend="bold"> / Brenier, Jason / Kothari, Anubha / Calhoun, Sasha / </hi>
+                        <hi rend="bold">Whitton, Laura / Beaver, David / Jurafsky, Dan</hi> (2007): “To Memorize or to Predict: Prominence Labeling in Conversational Speech” in: Sidner, Candance / Schultz, Tanja / Stone, Matthew / Zhai, Cheng Xiang (eds), 
+                        <hi rend="italic">Human Language Technologies 2007: The Conference of the North American Chapter of the Association for Computational Linguistics; Proceedings of the Main Conference. NAACL-HLT 2007.</hi> Rochester, New York: Association for Computational Linguistics: 9–16.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Plecháč, </hi>
+                        <hi rend="bold">Petr </hi>
+                        <hi rend="bold"> / Cinková, Silvie / Kolár, Robert / Šeļa, Artjoms / De Sisto, Mirella / Nugues, Lara / Haider, Thomas / Kočnik, Neža</hi> (2024): “PoeTree: Poetry Treebanks in Czech, English, French, German, Hungarian, Italian, Portuguese, Russian, Slovenian and Spanish” in: 
+                        <hi rend="italic">Research Data Journal for the Humanities and Social Sciences</hi>, 1: 1–17. DOI: 10.1163/24523666-bja10044.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Šeļa, </hi>
+                        <hi rend="bold">Artjoms</hi>
+                        <hi rend="bold"> / </hi>
+                        <hi rend="bold">Plecháč, </hi>
+                        <hi rend="bold">Petr</hi>
+                        <hi rend="bold"> / </hi>
+                        <hi rend="bold">Lassche, </hi>
+                        <hi rend="bold">Alie</hi> (2022). “Semantics of European Poetry Is Shaped by Conservative Forces: The Relationship between Poetic Meter and Meaning in Accentual-Syllabic Verse” in 
+                        <hi rend="italic">PLOS ONE </hi>17, 4. DOI: 10.1371/journal.pone.0266556.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Shelya, </hi>
+                        <hi rend="bold">Artjom / </hi>
+                        <hi rend="bold">Sobchuk, </hi>
+                        <hi rend="bold">Oleg</hi>
+                        <hi rend="bold"> </hi>(2017). “The Shortest Species: How the Length of Russian Poetry Changed (1750–1921)” in: 
+                        <hi rend="italic">Studia Metrica et Poetica</hi> 4,1: 66–84. DOI: 10.12697/smp.2017.4.1.03.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Walsh, </hi>
+                        <hi rend="bold">Melanie</hi>
+                        <hi rend="bold"> /</hi>
+                        <hi rend="bold"> Preus, </hi>
+                        <hi rend="bold">Anna</hi>
+                        <hi rend="bold"> /</hi>
+                        <hi rend="bold"> Gronski, Elizabeth</hi> (2024). “Does ChatGPT Have a Poetic Style?” in: 
+                        <hi rend="italic">CHR 2024. Computational Humanities Research Conference.</hi> Aarhus, Denmark: 1201–19.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

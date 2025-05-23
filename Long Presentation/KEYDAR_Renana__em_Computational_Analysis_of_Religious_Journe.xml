@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KEYDAR_Renana__em_Computational_Analysis_of_Religious_Journe">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">&lt;em&gt;Computational Analysis of Religious Journeys in Holocaust Testimonies&lt;/em&gt;</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Shizgal</surname>
+                        <forename>Esther</forename>
+                    </persName>
+                    <affiliation>The Hebrew University of Jerusalem, Israel</affiliation>
+                    <email>esther.shizgal@mail.huji.ac.il</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Keydar</surname>
+                        <forename>Renana</forename>
+                    </persName>
+                    <affiliation>The Hebrew University of Jerusalem, Israel</affiliation>
+                    <email>renana.keydar@mail.huji.ac.il</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-22T11:35:24.192548453</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Computational Narrative Analysis; Machine Learning; Large Language Models</term>
+                    <term>Holocaust Testimonies;</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>natural language processing</term>
+                    <term>text mining and analysis</term>
+                    <term>Computer science</term>
+                    <term>History</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="id_docs-internal-guid-aa905521-7fff-1985-41d6-f0b25254550e"/>Introduction
+                </head>
+                <p>
+                    <anchor xml:id="id_docs-internal-guid-67a025aa-7fff-7c4c-43e6-849da5ca47d0"/>This work analyzes character development by capturing both their religious behaviors and belief systems. Leveraging LLMs, we reveal various trends in the evolution of religious trajectories extracted from Holocaust testimonies, each telling the story of an individual and covering a wide range of times and places in the narrator’s life.
+                </p>
+                <p>Religious observance and belief systems evolve over time, often reflected in inconsistencies between the two. As Chaves (2010: 1-14) observes, "Ideas and practices exist as bits and pieces that come and go as situations change, producing many inconsistencies and discrepancies... Religious ideas, values, and practices generally are not congruent."</p>
+                <p>Changes in religiosity are particularly relevant when discussing Holocaust testimonies, which follow survivors' experiences in extreme conditions expected to influence both their religious beliefs and practices.</p>
+                <p>Prior work has examined religious trajectories, with Ingersoll-Dayton et al. (2002: 
+                    <hi rend="color(#000000)">51-70</hi>) analyzing patterns of change and stability in religiosity over the life course, and McCullough et al. (2005: 78-89) studying religious trajectories among immigrant populations. More recently, Exline et al. (2022) discussed the religious and spiritual struggles of college students distancing from religion, including conflicts and intellectual questioning about God’s existence.
+                </p>
+                <p>We build upon these foundations, focusing on the protagonist's religious practices and belief systems. Using NLP methods, we analyze religious trajectories across the entire dataset, rather than focusing on individual cases. Our approach aims to uncover common patterns on a broad scale, providing insights into how religiosity evolves throughout the life course under challenging circumstances.</p>
+                <p>Our research contributes to a deeper understanding of character evolution within narratives, highlighting the potential of machine learning techniques in studying thematic trajectories.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Data</head>
+                <p>We analyze a dataset of 1,000 Holocaust survivor testimony transcripts archived by the Shoah Foundation (https://sfi.usc.edu/) This data is invaluable for the study and remembrance of the Holocaust, particularly as the number of surviving witnesses diminishes. Applying NLP technology to analyze these testimonies offers the potential to extract valuable insights from the vast number of testimonies, instead of relying on small-scale, manual studies.</p>
+                <p>The volunteers who recorded the interviews were guided to discuss specific themes -- including religious belief and activity, creating a common narrative structure within the dataset that facilitates comparison of the various trajectories, as demonstrated by the distribution of religious content throughout the testimonies (Figure 1).</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpnz_efv0h/Pictures/53f3894560bd2bdf54148d74789dec61.jpg"/>
+                    </figure>
+                </p>
+                <p>Figure 1: Distribution of all religious content, the distributions that we based the baselines on are according to each label separately.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="id_docs-internal-guid-00309432-7fff-31c3-39dd-9f3b5bb9a9d0"/>Method
+                </head>
+                <p>The testimony transcripts lack a structured format, therefore our first step is segmentation, resulting in a large dataset of 1-4 sentences per segment.</p>
+                <p>Extracting the religious trajectory of a given segmented testimony consists of two annotation tasks, followed by prompting and training LLMs for classification. The main steps are: (1) filter religious content, (2) identify practices and beliefs, and (3) measure the valence and intensity of the protagonist's expressed attitude toward religion. See Figure 2.</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpnz_efv0h/Pictures/53f3894560bd2bdf54148d74789dec61.jpg"/>
+                    </figure>
+                </p>
+                <p>Figure 2: The general pipeline for identifying the religious trajectories from a set of Holocaust survivor testimonies: (1) Segmentation: segment the testimonies, beginning with question-answer pairs and then merging and dividing them so that the majority length is 50-100 words; (2) Filtration: train and run a classifier to filter all segments containing religious content; (3) Categorization: use LLMs to identify the protagonist's valence of religious practice and/or beliefs in a given segment; (4) Clustering: cluster the resulting trajectories to identify common patterns of evolution of religiosity in the testimony dataset.</p>
+                <p>After segmenting the data, we randomly sample and annotate approximately 4000 segments. The trajectories are constructed from all religious content segments from the narrator's perspective. The first annotation assignment is for capturing descriptions of Jewish religious practices and beliefs. This is designed as a binary classification task, where annotators are instructed to classify all segments that describe any Jewish religious practices or beliefs of the protagonist, or indicate their absence.</p>
+                <p>This complex annotation task involves knowledge of history and the Jewish religion. Many segments are ambiguous, rely upon the context, or require an understanding of the context. Therefore, there may be a lack of consensus among annotators regarding the exact classification of a given segment.</p>
+                <p>To enhance the accuracy and quality of the annotations, we recruit multiple annotators. Each annotator is assigned a different set of segments, with an overlap of over 800 segments that are annotated by at least two annotators to measure inter-annotator agreement (IAA). We evaluate this using Krippendorff's alpha on the pairwise data, obtaining an average score of 0.74, indicating a substantial level of agreement.</p>
+                <p>The second annotation task is multi-label and consists of identifying the class of each sample and determining the speaker's valence toward the specific class. Each segment in the trajectory is categorized by its content -- practice, belief, or both. The segments are further categorized by their valence toward the specific practice or belief described. Specifically, we map each sample to one or more of these classes or mark it as falsely recognized religious content. An example of the annotation process is illustrated in Figure 3.</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpnz_efv0h/Pictures/53f3894560bd2bdf54148d74789dec61.jpg"/>
+                    </figure>
+                </p>
+                <p>Figure 3: An annotation example from the platform we provided the annotators with to identify the survivor’s valence of religious practice and belief in each segment.</p>
+                <p>To construct the dataset for this task, we use the religious content classifier to select positive predictions together with samples retrieved by prompting GPT-4o (https://platform.openai.com/docs/models/gpt-4o, version gpt-4o-2024-05-13) to identify samples that belong to the minority classes. This approach helps balance the dataset by increasing the number of examples in under represented classes, ensuring both positive and negative instances are well-represented. The resulting dataset is the one provided to the annotators.</p>
+                <p>Krippendorff's alpha score for this task is 0.44, indicating moderate agreement and highlighting the challenges of this classification task.</p>
+                <p>For the religious content filtration task, we fine-tune a RoBERTa classifier (Liu et al., 2019) on the annotated data. Evaluation on a test set yields an accuracy and F1 score of 95%.</p>
+                <p>For the second classification task, we fine-tune LoRA adapters for Mistral-7B-instruct on data from the second annotation task and compare their performance with GPT-4o. Model selection is based on F1 scores across different classes. For both models, the F1 scores range from 0.51 to 0.57 across the various classes. The comparable performance of the two models on our test data leads us to select Mistral-7B for generating the trajectories. Considering the complicated annotation process and the inter-annotator agreement, these moderate F1 scores are unsurprising.</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>
+                        <anchor xml:id="id_docs-internal-guid-f3855852-7fff-4ca6-09a7-8f6ed1f51141"/>Trajectory Clustering
+                    </head>
+                    <p>
+                        <anchor xml:id="id_docs-internal-guid-01d97eba-7fff-c300-bab1-c84ecfb307a2"/>After extracting the trajectories, we cluster them according to a structure-based taxonomy and unsupervised methods. We expect to recognize a few main clusters, each representing a distinct trajectory prototype.
+                    </p>
+                    <div type="div3" rend="DH-Heading3">
+                        <head>Structure-Based Taxonomy</head>
+                        <p>We divide the trajectories into classes based on their valence and structure: constant positive/negative, ascending/descending, and oscillating, and according to the level of coverage relative to the testimony storyline. </p>
+                        <p>For this analysis, each trajectory is preprocessed by filtering out neutral values and compressing consecutive identical values into a single instance. For example, [-1,1,0,1,1] is reduced to [-1,1]. The coverage level is defined as the proportion of the testimony storyline spanned by the trajectory.</p>
+                    </div>
+                    <div type="div3" rend="DH-Heading3">
+                        <head>Hierarchical Clustering</head>
+                        <p>For hierarchical clustering, we use Dynamic Time Warping (Berndt and Clifford, 1994) with multiple window sizes to measure the distances between the trajectories, and then run Agglomerative (Zepeda-Mendoza and Resendis-Antonio, 2013) and HDBSCAN clustering (McInnes et al., 2017).</p>
+                    </div>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results</head>
+                <p>We run the fine-tuned Mistral-7B model on the full dataset, producing 1,000 trajectories. As we are not aware of any directly comparable reference for the trajectories, we evaluate the predictions against two reliable proxies by quantifying the distances between reference and predicted sequences. Comparing the total distances to multiple baseline trajectories shows that the predicted trajectories align more closely with the references than any tested baseline.</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Clustering</head>
+                    <p>Among the trajectories extracted by the pipeline, 68% contain at least two points for both practice and belief. The taxonomy reveals that, for the belief aspect, more than half (63%) share a constant positive shape, 14% oscillate, and the rest are distributed among constant negative (11%), descending (6%), and ascending (5%). For the positive trajectories, 80% cover a substantial portion of the plot, whereas negative trajectories are sparser, 59% covering up to two-thirds of the narrative. Practice trajectories have two large structures, 65% oscillate and 30% follow a constant-active pattern. 96% of the two main structures have high coverage levels.</p>
+                    <p>When comparing the trends according to the two aspects, the two trends that we recognize, covering 61% of the intersection, all have a constant-positive belief structure, while the practice valence varies: 37% oscillate and 24% have a constant-active structure.</p>
+                    <p>For hierarchical clustering, HDBSCAN points out clusters with fair separation that are similar to structure-based ones.</p>
+                    <p>
+                        <figure>
+                            <graphic url="/tmp/tmpnz_efv0h/Pictures/53f3894560bd2bdf54148d74789dec61.jpg"/>
+                        </figure>
+                    </p>
+                    <p>Figure 4: Religious Trajectory structure distributions, from left to right: 65% of the practice trajectories have an oscillating structure and 30% are constant-active. The belief trajectories have a similar distribution, with the majority sharing a constant-positive structure (63%) and the rest distributed among oscillating (14%), constant-negative (11%), descending (6%), and ascending (5%). For the intersection of the two aspects, the two large groups cover 61% of the intersection, all have a constant-positive belief structure, while the practice valence varies: 37% oscillate and 24% have a constant-active structure.</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="id_docs-internal-guid-13ee87d7-7fff-f4f0-d20c-f8f3eabe4a19"/>
+                    <hi rend="color(#000000)">Conclusion</hi>
+                </head>
+                <p>Our findings highlight various patterns of evolution in religiosity; most present a constant disposition toward religion. We believe these findings encourage further research on utilizing LLMs to capture character development and thematic trajectories. Our study offers valuable material for historical and sociological research.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Berndt, Donald J. / Clifford, James </hi>
+                        <hi rend="color(#000000)">(1994): “Using dynamic time warping to find patterns in time series”, in: </hi>
+                        <hi rend="color(#000000)">Proceedings of the 3rd International Conference on Knowledge Discovery and Data Mining (AAAIWS'94)</hi>
+                        <hi rend="color(#000000)italic">. </hi>
+                        <hi rend="color(#000000)">AAAI Press:</hi>
+                        <hi rend="color(#000000)italic"> 359-370</hi>
+                        <hi rend="color(#000000)italic"> </hi>
+                        <hi rend="color(#000000)">&lt;</hi>
+                        <ptr target="https://cdn.aaai.org/Workshops/1994/WS-94-03/WS94-03-031.pdf"/>
+                        <hi rend="color(#000000)">&gt; [</hi>
+                        <hi rend="color(#000000)">22.04.2025</hi>
+                        <hi rend="color(#000000)">]</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Chaves, Mark </hi>
+                        <hi rend="color(#000000)">(2010): </hi>
+                        <hi rend="color(#000000)">“SSSR Presidential Address Rain Dances in the Dry Season: Overcoming the Religious Congruence Fallacy”, in: </hi>
+                        <hi rend="color(#000000)italic">Journal for the Scientific Study of Religion</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">49: 1-14 </hi>
+                        <hi rend="color(#000000)">&lt;</hi>
+                        <ptr target="https://onlinelibrary.wiley.com/doi/10.1111/j.1468-5906.2009.01489.x"/>
+                        <hi rend="color(#000000)">&gt; [</hi>
+                        <hi rend="color(#000000)">22.04.2025</hi>
+                        <hi rend="color(#000000)">]</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Exline, Julie J. / Van Tongeren, Daryl R. / Bradley, David F. / Wilt, Joshua Adam / Stauner, Nick / Pargament, Kenneth I / DeWall, C Nathan</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(202</hi>
+                        <hi rend="color(#000000)">2</hi>
+                        <hi rend="color(#000000)">): “Pulling away from religion: Religious/spiritual struggles and religious disengagement among college students”, in: </hi>
+                        <hi rend="color(#000000)italic">Psychology of Religion and Spirituality </hi>
+                        <hi rend="color(#000000)">14, </hi>
+                        <hi rend="color(#000000)">3:</hi>
+                        <hi rend="color(#000000)"> 300-311 </hi>
+                        <hi rend="color(#000000)">&lt;</hi>
+                        <ptr target="https://psycnet.apa.org/record/2020-61554-001"/>
+                        <hi rend="color(#000000)">&gt; </hi>
+                        <hi rend="color(#000000)">[</hi>
+                        <hi rend="color(#000000)">22.04.2025</hi>
+                        <hi rend="color(#000000)">]</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Ingersoll-Dayton, Berit / Krause, Neal / Morgan, David L </hi>
+                        <hi rend="color(#000000)">(2002): “Religious Trajectories and Transitions Over the Life Course”, in: </hi>
+                        <hi rend="color(#000000)italic">The International Journal of Aging and Human Development</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">2002, </hi>
+                        <hi rend="color(#000000)">55:</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">51-70 </hi>
+                        <hi rend="color(#000000)">&lt;</hi>
+                        <ptr target="https://pubmed.ncbi.nlm.nih.gov/12400725/"/>
+                        <hi rend="color(#000000)">&gt; </hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">[</hi>
+                        <hi rend="color(#000000)">22.04.2025</hi>
+                        <hi rend="color(#000000)">]</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Liu, Yinhan / Ott, Myle / Goyal, Naman / Du, Jingfei / Joshi, Mandar / Chen, Danqi / Levy, Omer / Lewis, Mike / Zettlemoyer, Luke / Stoyanov, Veselin </hi>
+                        <hi rend="color(#000000)">(2019): “RoBERTa: A robustly optimized BERT pretraining approach”, </hi>
+                        <hi rend="color(#000000)">in: </hi>
+                        <hi rend="color(#000000)italic">ArXiv</hi>
+                        <hi rend="color(#000000)">, </hi>
+                        <hi rend="color(#000000)">abs/1907.11692 &lt;</hi>
+                        <ptr target="https://arxiv.org/abs/1907.11692"/>
+                        <hi rend="color(#000000)">&gt; [22.04.2025]</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">McCullough, Michael E. / Enders, Craig K. / Brion, Sharon </hi>
+                        <hi rend="color(#000000)">(2005): “The varieties of religious development in adulthood: a longitudinal investigation of religion and rational choice”, in: </hi>
+                        <hi rend="color(#000000)italic">Journal of </hi>
+                        <hi rend="color(#000000)italic">P</hi>
+                        <hi rend="color(#000000)italic">ersonality and </hi>
+                        <hi rend="color(#000000)italic">S</hi>
+                        <hi rend="color(#000000)italic">ocial </hi>
+                        <hi rend="color(#000000)italic">P</hi>
+                        <hi rend="color(#000000)italic">sychology</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">89 1: 78-89 </hi>
+                        <hi rend="color(#000000)">&lt;</hi>
+                        <ptr target="https://doi.org/10.1037/0022-3514.89.1.78"/>
+                        <hi rend="color(#000000)">&gt; </hi>
+                        <hi rend="color(#000000)">[22.04.2025]</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">McInnes, Leland / Healy, John / Astels, S.</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(2017): “HDBSCAN: Hierarchical density based clustering” in </hi>
+                        <hi rend="color(#000000)italic">Journal of Open Source Software </hi>
+                        <hi rend="color(#000000)">2: 205 </hi>
+                        <hi rend="color(#000000)">&lt;</hi>
+                        <ptr target="https://joss.theoj.org/papers/10.21105/joss.00205"/>
+                        <hi rend="color(#000000)">&gt; [</hi>
+                        <hi rend="color(#000000)">22.04.2025]</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Zepeda-Mendoza, Marie Lisandra / Resendis-Antonio, Osbaldo </hi>
+                        <hi rend="color(#000000)">(2013): “Hierarchical agglomerative clustering”, in: </hi>
+                        <hi rend="color(#000000)italic">Encyclopedia of Systems Biology,</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">Springer, New York, NY</hi>
+                        <hi rend="color(#000000)"> 886-887 </hi>
+                        <hi rend="color(#000000)">&lt;</hi>
+                        <ptr target="https://doi.org/10.1007/978-1-4419-9863-7_1371"/>
+                        <hi rend="color(#000000)">&gt; </hi>
+                        <hi rend="color(#000000)">[</hi>
+                        <hi rend="color(#000000)">22.04.2025]</hi>
+                        <hi rend="color(#000000)"> </hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

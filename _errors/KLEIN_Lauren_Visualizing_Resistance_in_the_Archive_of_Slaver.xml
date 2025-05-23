@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KLEIN_Lauren_Visualizing_Resistance_in_the_Archive_of_Slaver">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Visualizing Resistance in the Archive of Slavery</title>
+                <author>
+                    <persName>
+                        <surname>Adams</surname>
+                        <forename>Marguerite</forename>
+                    </persName>
+                    <affiliation>Emory University, United States of America</affiliation>
+                    <email>marguerite.adams@emory.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Li</surname>
+                        <forename>Shiyao</forename>
+                    </persName>
+                    <affiliation>Emory University, United States of America</affiliation>
+                    <email>shiyao.li@emory.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Sharma</surname>
+                        <forename>Tanvi</forename>
+                    </persName>
+                    <affiliation>Emory University, United States of America</affiliation>
+                    <email>chronictanvi@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Varner</surname>
+                        <forename>Jay</forename>
+                    </persName>
+                    <affiliation>Emory University, United States of America</affiliation>
+                    <email>jay.varner@emory.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Klein</surname>
+                        <forename>Lauren</forename>
+                    </persName>
+                    <affiliation>Emory University, United States of America</affiliation>
+                    <email>lauren.klein@emory.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-05T13:17:00.0000000Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>data visualization</term>
+                    <term>historical data</term>
+                    <term>archival theory</term>
+                    <term>Black studies</term>
+                    <term>design process</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>spatial &amp; spatio-temporal analysis</term>
+                    <term>modeling and visualization</term>
+                    <term>African and African American Studies</term>
+                    <term>History</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">The power of data visualization is generally attributed to its ability to reveal otherwise imperceptible patterns in complex datasets, enhancing and extending human cognition (Cleveland / McGill 1984), (Kosslyn 1989), (Card et al. 1999). Much of this power derives from a process of abstraction (Shneiderman 1996), (Munzner 2015), (Hullman 2023). However, this reliance on abstraction necessarily comes at the expense of context and specificity, presenting a challenge when details matter for the significance of the visualization and the insights it is intended to produce. In this paper, we explore this challenge in its most profound instantiation: a visualization of the Trans-Atlantic Slave Trade (TAST) Database, which contains over 36,000 individual records of slaving voyages. We discuss how our project team grappled with the tension between abstraction and specificity, and how we relied upon theories from the humanities about historical trauma and the limits of recovery to guide our work. We conclude by offering a set of questions that can help guide future visualization work with sensitive data.</p>
+            <figure>
+                <graphic n="1001" width="16.007294444444444cm" height="6.932083333333333cm" url="/tmp/tmpynzjjctk//media/image5.png" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 1: A screenshot of the main component of the project team’s visualization of the TAST dataset.</p>
+            <div type="div1" rend="DH-Heading1">
+                <head> Prior Work</head>
+                <p style="text-align: left; text-align: left;">Both in its own time and today, scholars, journalists, and activists have attempted to visualize the data of the slave trade. The goal of the first such visualization, “Plan of an African Slave Ship’s Lower Deck with Negroes in the Proportion of Only One to a Ton” (Figure 2) was to compel its viewers to join the abolitionist cause. It did so in full awareness of the affective power that its imagery would command. A contemporary visualization, “The Atlantic Slave Trade in Two Minutes” (Figure 3), was designed to “give sense of the scale of the trans-Atlantic slave trade across time, as well as the flow of transport and eventual destinations.” It was nonetheless roundly criticized by scholars of slavery for the god’s eye view that it adopted (Khan / Bouie 2021). Reflecting on the successes and failures of these visualizations reinforced the importance of our looking to scholars of the archive of slavery as our guides.
+                    <lb/>
+                    <graphic n="1002" width="16.007294444444444cm" height="6.535208333333333cm" url="/tmp/tmpynzjjctk//media/image5.png" rend="inline"/>
+                    <graphic n="1003" width="16.007294444444444cm" height="10.00125cm" url="/tmp/tmpynzjjctk//media/image5.png" rend="inline"/>
+                    <lb/>Figure 2 (top): Plymouth Committee of the British Society of Friends, “Plan of an African Slave-Ship’s Lower Deck with Negroes in the Proportion of Only One to a Ton,” ca. 1789. © British Yearly Meeting.
+                    <lb/>Figure 3 (bottom): A screenshot of “The Atlantic Slave Trade in Two Minutes,” which also visualizes data from the TAST Database.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Theoretical Guides</head>
+                <p style="text-align: left; ">For Jessica Marie Johnson, data itself “is the evidence of terror, and the idea of data as fundamental and objective information. . . obscures rather than reveals the scene of the crime” (Johnson 2018). While the goals of the creators of the TAST database are far different than the enslavers whose actions produced the original data, it is important to frame any project involving the data of slavery with a consideration of the theories that confront the dangers of restaging the original violence the archive of slavery holds. In this regard, we drew from Saidiya Hartman’s groundbreaking work, Scenes of Subjection (1997), which exposed the range of harms of reengaging with the archive of slavery. We also attuned ourselves to what Michel-Rolph Trouillot has characterized as archival “silence” (Trouillot 2015). Our goal here was twofold: first, to hold space for what would forever remain unknowable; and second, to remind ourselves that, while unknowable, other unrecorded stories must exist nonetheless. Finally, we took inspiration from the kinship between Édouard Glissant’s “right to opacity” and Kevin Quashie’s theorization of the politics of race and representation as thwarting other “quieter” forms of resistance (Glissant 1997), (Quashie 2012). Rejecting the premise that any transparent view of data from the archive of slavery is possible, we came to realize that a visualization that was intended to honor the lives beyond the data would require a strategy of visualizing just how much the data cannot show. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Data Selection</head>
+                <p style="text-align: left; ">The current version of the TAST database, released in 2019, contains data on 36,079 trans-Atlantic voyages. Each record consists of 293 variables. We focused on variables that could provide a basic picture of each voyage: start date, end date, and the total number of individuals who “embarked” and “disembarked” on each voyage. We also included the “resistance” variable, as it seemed analogous to the kind of archival silence that might indicate an unrecorded story.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head> Design Process</head>
+                <p>
+                    <graphic n="1004" width="9.607cm" height="13.361461111111112cm" url="/tmp/tmpynzjjctk//media/image5.png" rend="inline"/>
+                    <lb/>
+                    <graphic n="1005" width="16.007294444444444cm" height="6.932083333333333cm" url="/tmp/tmpynzjjctk//media/image5.png" rend="inline"/>Figure 4 (top): One of the fifteen maps of the Mississippi River created by cartographer and geologist Dr. Harold N. Fisk in 1944. Courtesy of the US Army Corps of Engineers.
+                </p>
+                <p style="text-align: left; ">Figure 5 (bottom): The project team’s initial design concept, adapting the color palette of the Fisk diagram to a stream graph form.
+                    <lb/>
+                    <lb/>We employed a reflective approach in our design process (Fleck / Fitzpatrick 2010), (Schön 2017). Because our primary motivation was to visualize the TAST data in a way that honored the lives of the enslaved, our design concept departed from an observation about the lived experience of the Middle Passage: that the captives did not experience time as linear while in the hold of the ship (Spillers 1987), (Hartman 2002), (Sharpe 2016), (King 2019). Drawing visual inspiration from Romi Morrison’s analysis of Harold Fisk’s 1944 alluvial pattern of the Mississippi River (Figure 4), we began with an idea to use bends and turns to symbolize the non-linearity of the Middle Passage (Morrison 2022). Our initial design (Figure 5) adapted the color palette of the Fisk diagram to a stream graph form, furthering the water metaphor. However, we quickly realized that our vision would not align with the realities of the dataset. We then turned to Martin Wattenberg and Fernanda Viegas’s 2012 Wind Map (Figure 6), which spatially represents individual records within a large dataset. For our adaptation of this design (Figure 7), we also used a thin stroke to represent each voyage. Voyages with documented acts of resistance were indicated by a spinning yellow star, in reference to the North Star that served as a guide to those escaping slavery along the Underground Railroad. While this design conveyed the immense scale of the data, we felt the visualization was too beautiful for a dataset documenting such trauma. There was also too much visual similarity between our visualization and the actual ocean; if we were to enact our claim of honoring the people behind the data, we could not map these data on a site resembling where their lives were violently, fundamentally changed
+                </p>
+                <figure>
+                    <graphic n="1006" width="16.007294444444444cm" height="8.995833333333334cm" url="/tmp/tmpynzjjctk//media/image5.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 6 (top): Fernanda Viégas and Martin Wattenberg, Wind Map (2012). Screenshot from the project website. </p>
+                <p style="text-align: left; ">Figure 7 (bottom): A prototype of our second design concept intended to emphasize the scale of the Trade while not abstracting the individual lives represented in the data. Interactive demo at: 
+                    <ref target="http://shiyaol.github.io/conceptual_map/index.html">http://shiyaol.github.io/conceptual_map/index.html</ref>
+                </p>
+                <p style="text-align: left; ">For our final design, we rotated the orientation of the visualization to ensure that the viewer could not interpret the voyages as being plotted on a map. We also returned to ideas from the Fisk diagram, representing each voyage as a curved line, with the width of each river, or “bind,” determined by the number of people on that voyage. The duration of each voyage is conveyed through amplitude; thus, the binds symbolizing longer voyages are expressed by wider curves.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head> Interactive Components and Descriptive Apparatus</head>
+                <p style="text-align: left; ">We had three goals for the visualization’s interactive components and descriptive apparatus: first, to explain to the viewer how to interpret the visualization; second, to remind the viewer of the lives behind the data; and third, to underscore the point that while the TAST database and our visualization can show us certain things about the slave trade, there are other things it can never reveal.</p>
+                <p style="text-align: left; ">Addressing the first goal was straightforward: we embedded the visualization in a scrollytell interface, which allowed us to provide an overview of the visualization and its data (Seyser / Zeiller 2018). To address the second goal, we introduced the story of Olaudah Equiano, who survived the Middle Passage and wrote about his experience in his Narrative. We also drew from Equiano’s writing to question the idea of resistance; after showing how many forms of resistance go unrepresented in the data, we then plotted all of the voyages in color, implying that there were acts of resistance aboard each ship, even if they were not counted as such (Figure 10). Our final image does not distinguish between voyages with documented acts of resistance and those without (Figure 1).</p>
+                <figure>
+                    <graphic n="1007" width="16.007294444444444cm" height="11.350625cm" url="/tmp/tmpynzjjctk//media/image5.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 10: A visualization of the voyages with documented acts of resistance (top), and all of the voyages within the ten-year period (1756-1766) during which Equiano was enslaved (bottom).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion: Framing Questions for Future Visualization Design</head>
+                <p style="text-align: left; ">To engage ethically with violent, traumatic, or otherwise sensitive data requires 1) a precise accounting of the scholars’ aims of engaging with this data; 2) a careful examination of the scholars’ subject positions with respect to the subject matter as well as when making decisions about the appropriateness of their methods; and 3) a full consideration of the impact of making this evidence (or narrative or analysis of same) visible to a broad public, one that includes readers/viewers with and without personal connections to the data (Klein 2013), (Johnson 2018), (D’Ignazio / Klein 2020). By way of conclusion, we offer the following questions to guide future visualization work of this nature:</p>
+                <list type="unordered">
+                    <item>What are we abstracting when we visualize our data?</item>
+                    <item>What context and/or detail is being abstracted away?</item>
+                    <item>Who are the people behind the data?</item>
+                    <item>Who is authorized to tell their stories?</item>
+                    <item>How can we honor the lives these data represent?</item>
+                </list>
+            </div>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ALGEE_HEWITT_Mark_Andrew_Castle_at_the_Crossroads__A_Machine">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Castle at the Crossroads: A Machine Learning Approach to Generic Mixture in the Nineteenth-Century Gothic Novel</title>
+                <author>
+                    <persName>
+                        <surname>Algee-Hewitt</surname>
+                        <forename>Mark Andrew</forename>
+                    </persName>
+                    <affiliation>Stanford University, United States of America</affiliation>
+                    <email>malgeehe@stanford.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Monaco</surname>
+                        <forename>Jessica</forename>
+                    </persName>
+                    <affiliation>Stanford University, United States of America</affiliation>
+                    <email>jmmonaco@stanford.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-09T20:53:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>genre studies</term>
+                    <term>machine learning</term>
+                    <term>nineteenth-century novels</term>
+                    <term>cultural analytics</term>
+                    <term>literary criticism</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>attribution studies and stylometric analysis</term>
+                    <term>cultural analytics</term>
+                    <term>text mining and analysis</term>
+                    <term>Book and print history</term>
+                    <term>Literary studies</term>
+                    <term>Media studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">By the late twentieth century, genre, in literary study, had transformed from a descriptive taxonomy of different kinds of writing to an evolving mixture of tropes and conventions whose boundaries shift and reform across time (eg Cohen 1986, Derrida 1980). Computational approaches to literature, however, still frequently lean towards treating genre as a strong classificatory system whose boundaries can be denoted within the rows of a spreadsheet (Allison et. al. 2011, Jockers 2013, Schöch 2017, Sobchuk and Šeļa 2024). Although partly due to the nature of the data structures in which we store information related to individual books, this approach to genre perhaps owes more to the wealth of classification methods available to computational literary models: given a classificatory system to arrange literature, our impulse as digital humanists has been to use computational methods to either replicate our system of genre classification, or to introduce a different, yet equally taxonomic system based solely on endogamous textual features.</p>
+                <p style="text-align: left; ">Our project draws on contemporary literary theories of genre in order to model individual novels as heterogeneous mixtures of styles and conventions from pre-existing generic modes. Building on a recent trend in the field to use machine learning to complicate our picture of genre (Elliot 2017, Underwood 2018, Piper 2018, Tello 2021, King 2021, Algee-Hewitt et. al. 2023), we introduce a new approach to modeling genre, one that takes seriously the literary theoretical understanding of genre as a set of contingent categories whose mixture and remixture over time creates contingent similarities rather than discrete categories. The nineteenth-century English Gothic novel is an ideal case study for this project. Not only is the emergence of the genre in 1764 well understood, its subsequent transformations over the nineteenth century and its hybridity with other kinds of writing, such as sensation fiction, detective novels, thrillers, and satires has been long documented. Our project asks how, given the understanding of the Gothic as a mixture of pre-existing generic writing, we can use a computationally-based modeling approach to decompose this mixture and resurrect the specific generic investments of a single novel.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Corpus</head>
+                <p style="text-align: left; ">Drawing on our expert knowledge of nineteenth-century Gothic writing and its adjacent genres, we selected nine different novelistic genres whose styles and conventions are mixed into the Gothic novel across the nineteenth century. We then gathered samples of these genres from the Chadwyck Healey corpus of nineteenth-century Literature and the British Library corpus of nineteenth-century fiction. We selected our samples based on the literary scholarship on each of these genres, adding novels listed by primary critics of each. We collected novels of nine different novelistic genres apart from the Gothic: 35 courtship novels (Green 1991, Yeazell 1991); 57 distant-historical novels, which we define as novels taking place in the ancient and medieval periods; 94 recent-historical novels, which we define as taking place in the late Early Modern through eighteenth century periods (Lukács 1955); 46 novels of manners (Michie 2011, Macheski 2012); 28 national tales (Trumpener 1997); 38 realist novels (Watt 1957, Barthes 1968, Woloch 2003, Greiner 2013); 53 works of sea fiction (Cohen 2010); 45 works of sensation fiction (Pykett 1994); and 94 silver fork novels (Hughes 1992, Wagner 2009, Copeland 2012). For our comparative Gothic corpus, we selected 35 Gothic novels, published between 1764 (The Castle of Otranto) and 1897 (Dracula). The Gothic novel offers the ideal test case for our theory, as the authors associated with the genre theorized its development themselves as a mixture of heterogeneous genres (Garber 1974).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Method</head>
+                <p style="text-align: left; ">The key insight of our method is that we train a model to recognize genre in the Gothic novel without including Gothic texts as part of our training data. Instead, we classify sections of our corpus of Gothic novels using a classifier trained on our corpora of contemporaneous genres. We divide the texts in our comparative corpus into passages of about 500 words (as we respected sentence boundaries in dividing our texts, we selected the number of complete sentences the most closely approximated 500 words). We then fine-tune a BERT based classification model to differentiate between the genres in our comparison corpus. A withheld test set of passages reveals that our model is working reasonable well at differentiating our comparative genres (Figure 1).</p>
+                <figure>
+                    <graphic n="1001" width="16.002cm" height="12.802305555555556cm" url="/tmp/tmpbjj70elq/Pictures/a066657f2d672d2e557bc4d81c22dc19.jpg" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 1: Confusion plot of BERT model classification of our comparative genres. Overall success rate is 60% compared to chance at 11%. Although this seems low for some classification tasks, our overall approach to genre relies on the fact that even these comparative genres are themselves mixtures of multiple types, hence the difficulties in classifying these genres reflect ambiguities in the underlying data rather than any flaws in our model. For the purposes of our experiment, it is important to note that the majority of passages in each genre classifies into the correct category.</p>
+                <p style="text-align: left; ">We then use this model to classify passages of the same length in our Gothic corpus. As classifying any given passage as “Gothic” is not an option given the training of the model, our method instead returns individual passages classified into one of our comparative genre categories. We can then aggregate the passages for each novel to calculate the specific mixture that defines it. Using this method, we can not only see the makeup of different novels in our corpus, but we can identify historical patterns in the similarities of the mixtures. Does the Gothic novel of the 1790s rely on a particular combination of genre “borrowings” and does this change as the Gothic evolves over time? Given the transformation of the Gothic as a genre in and of itself, as the set of recognizable tropes that define it change periodically from the late eighteenth to the twentieth century (Sedgwick 1980, Groom 2012), our project is particularly adept at uncovering the minutia of these changes.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results</head>
+                <p style="text-align: left; ">Visualizing our mixture results as a series of aligned radial plots of individual novels allows us to graphically display the similarities and differences of the mixtures that characterize novels in our Gothic corpus. For example, the plot of Dracula (figure 2), reveals its strong investment in realism, recent historical fiction, novels of manners, and sensation fiction (with an important component of sea fiction for the passages describing the doomed voyage of the Demeter).</p>
+                <figure>
+                    <graphic n="1002" width="6.3264611111111115cm" height="6.079786111111111cm" url="/tmp/tmpbjj70elq/Pictures/a066657f2d672d2e557bc4d81c22dc19.jpg" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 2: Plot of generic mixture in Dracula by Bram Stoker. The individual radial areas indicated the percentage of the novel classified into each comparative genre by our model. </p>
+                <p style="text-align: left; ">Contrast this late nineteenth-century novel with the early work of Radcliffe from the 1790s (figure 3).</p>
+                <figure>
+                    <graphic n="1003" width="16.002cm" height="5.603875cm" url="/tmp/tmpbjj70elq/Pictures/a066657f2d672d2e557bc4d81c22dc19.jpg" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 3: Radial plots showing the generic mixture of three Ann Radcliffe novels: The Mysteries of Udolpho (1794); The Italian (1797) and The Romance of the Forest (1791).</p>
+                <p style="text-align: left; ">Radcliffe’s novels evidence a strong investment in the recent historical novel (this is, perhaps, unsurprising, given that many of her novels are set one or two hundred years before Radcliffe’s own time). Also notable is the strong presence of the Silver Fork novel in each, a trend that correlates with Radcliffe’s focus on wealthy, sometimes aristocratic, property-inheriting families and their respective Gothic heroines.</p>
+                <p style="text-align: left; ">Overall, the results of our modeling experiment reveal both individual facets of the novels in our corpus that align well with their critical reception, as well as strong overall trends in the shifting nature of the Gothic over the century. Our project dives deeply into individual novels, linking passages with specific classifications to their contents, and, at the same time, explores these trends at the scale of the century, including an overall fall of investment in the recent historical novel (post Radcliffe), a mid-century bump in the inclusion of distant historical fiction into the Gothic, and a surprising increase in the number of passages classified as realism. The last, we hypothesize, is related to the transformation of the Gothic from a standalone genre, to itself a series of tropes that can be included into other kinds of writing in order to establish the mood of a particular scene.</p>
+                <p style="text-align: left; ">Our project offers a new way of understanding genre computationally, not as a set of classifications into which writing can be neatly slotted, but instead an evolving set of relationships between kinds of writing, in which subjects and styles blend into new forms at the scale of the passage. This not only offers important insight into a genre such as the Gothic, providing an accounting of the specific investments of the novels in other genre categories, but also offers a reinterpretation of genre history, particularly within the digital humanities.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Algee-Hewitt, Mark / Mendelman, Lisa / Mukamal, Anna / Terry, Kendra.</hi> (2023): “Modeling Therapy as Discourse in Twentieth-Century American Literature.” in 
+                        <hi rend="italic">American Literary History</hi>. 35.3: 1235-1258.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Allison, Sarah / Heuser, Ryan / Jockers, Matthew / Moretti, Franco / Witmore, Michael. </hi>(2011): “Quantitative Formalism: An Experiment.” 
+                        <hi rend="italic">Pamphlets of the Stanford Literary Lab</hi> 1.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Barthes, Roland</hi>. (1986): “The Reality Effect.” in 
+                        <hi rend="italic">The Rustle of Language, by Roland Barthes</hi>, trans by Richard Howard, New York: Farrar, Straus, and Giroux, 141–148.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Cohen, Margaret</hi> (2010): 
+                        <hi rend="italic">The Novel and the Sea</hi>. Princeton: Princeton University Press. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Cohen, Ralph</hi>. (1986): “History and Genre.” In 
+                        <hi rend="italic">New Literary History</hi> 17.2: 203–218.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Copeland, Edward</hi>. (2012
+                        <hi rend="italic">): The Silver Fork Novel: Fashionable Fiction in the Age of Reform.</hi> Cambridge: Cambridge University Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Derrida, Jacques</hi>. (1980): “The Law of Genre.” Translated by Avital Ronell. In 
+                        <hi rend="italic">Critical Inquiry</hi> 7.1: 55–81.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Elliott, Jack</hi>. (2017): “Whose Genre Sequencing.” In 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi> 32.1: 65- 79.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Garber, Frederick</hi>. (1974): “Meaning and Mode in Gothic Fiction.” in 
+                        <hi rend="italic">Studies in Eighteenth-Century Culture</hi> 3: 155–169.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Gilbert, Pamela K.</hi> (2011): “Introduction.” In 
+                        <hi rend="italic">A Companion to Sensation Fiction</hi>, edited by Pamela K. Gilbert. Malden: Wiley-Blackwell:1–10.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Green, Katherine Sobba</hi>. (1991): 
+                        <hi rend="italic">The Courtship Novel, 1740–1820: A Feminized Genre</hi>. Lexington: The University Press of Kentucky.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Greiner, Rae</hi>. (2013): 
+                        <hi rend="italic">Sympathetic Realism in Nineteenth-Century British Fiction</hi>. Baltimore: Johns Hopkins University Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Groom, Nick</hi>. (2012): 
+                        <hi rend="italic">The Gothic: A Very Short Introduction</hi>. Oxford: Oxford University Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Hughes, Winifred</hi>. (1992): “Silver Fork Writers and Readers: Social Contexts of a Bestseller.” in 
+                        <hi rend="italic">NOVEL: A Forum on Fiction</hi> 25.3: 328–347.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kerr, Matthew P. M</hi>. (2022): 
+                        <hi rend="italic">The Victorian Novel and the Problems of Marine Language: All at Sea</hi>. Oxford: Oxford University Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">King, Rachael Scarborough</hi>. (2021): “The Scale of Genre.” In 
+                        <hi rend="italic">New Literary History</hi> 52.2: 261-284.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Jockers, Matthew</hi>. (2013): 
+                        <hi rend="italic">Macroanalysis: Digital Methods and Literary History</hi>. Urbana-Champaign: the University of Illinois Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Lukács, Georg</hi>. (1983): 
+                        <hi rend="italic">The Historical Novel.</hi> Translated by Hannah Mitchell and Stanley Mitchell. Lincoln: University of Nebraska Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Macheski, Cecilia</hi>. (2012): “The Novel of Manners.” 
+                        <hi rend="italic">In Edith Wharton in Context</hi>, edited by Laura Rattray. Cambridge: Cambridge University Press: 344–352.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Mangam, Andrew</hi>. (2013): “Introduction.” In 
+                        <hi rend="italic">The Cambridge Companion to Sensation Fiction</hi>, edited by Andrew Mangam. Cambridge: Cambridge University Press: 1–6.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Michie, Elsie B.</hi> (2012): 
+                        <hi rend="italic">The Vulgar Question of Money: Heiresses, Materialism, and the Novel of Manners from Jane Austen to Henry James.</hi> Baltimore: Johns Hopkins University Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Mighall, Robert</hi>. (1999): 
+                        <hi rend="italic">A Geography of Victorian Gothic Fiction: Mapping History’s Nightmares</hi>. Oxford: Oxford University Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Peck, John</hi>. (2001): 
+                        <hi rend="italic">Maritime Fiction: Sailors and the Sea in British and American Novels, 1719–1917</hi>. New York: Palgrave.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Piper, Andrew</hi>. (2018): 
+                        <hi rend="italic">Enumerations: Data and Literary Study</hi>. Chicago: University of Chicago Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Pykett, Lyn</hi>. (1994): 
+                        <hi rend="italic">The Sensation Novel from The Woman in White to The Moonstone.</hi> Liverpool: Liverpool University Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Sedgwick, Eve Kosofsky</hi>. (1980): 
+                        <hi rend="italic">The Coherence of Gothic Conventions</hi>. New York: Arno Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Schöch, Christof</hi>. (2017): “Topic Modeling Genre: An Exploration of French Classical and Enlightenment Drama.” In 
+                        <hi rend="italic">Digital Humanities Quarterly</hi> 11.2.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Sobchuk, Oleg / Šeļa, Artjoms</hi>. (2024): “Computational thematics: Comparing Algorithms for clustering the genres of literary fiction.” In 
+                        <hi rend="italic" xml:space="preserve">Humanities and Social Sciences Communications </hi>11.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Tello, José Calvo</hi>. (2021): 
+                        <hi rend="italic">The Novel in the Spanish Silver Age: A Digital Analysis of Genre Using Machine Learning.</hi> Bielefeld: Bielefeld University Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Trumpener, Katie</hi>. (1997): 
+                        <hi rend="italic">Bardic Nationalism: The Romantic Novel and the British Empire</hi>. Princeton: Princeton University Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Underwood, Ted</hi>. (2018): 
+                        <hi rend="italic">Distant Horizons: Digital Evidence and Literary Change</hi>. Chicago: University of Chicago Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Wagner, Tamara S</hi>. (2009): “From Satirized Silver Cutlery to the Allure of the Anti-Domestic” in 
+                        <hi rend="italic">Nineteenth-Century Women’s Writing: Silver-Fork Fiction and Its Literary Legacies</hi>. Women’s Writing 16.2: 181–190.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Watt, Ian</hi>. (1957): 
+                        <hi rend="italic">The Rise of the Novel: Studies in Defoe, Richardson, and Fielding</hi>. University of California Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Woloch, Alex</hi>. (2003): 
+                        <hi rend="italic">The One vs. the Many</hi>. Princeton: Princeton University Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Yeazell, Ruth Bernard</hi>. (1991): 
+                        <hi rend="italic">Fictions of Modesty: Women and Courtship in the English Novel</hi>. Chicago: The University of Chicago Press.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

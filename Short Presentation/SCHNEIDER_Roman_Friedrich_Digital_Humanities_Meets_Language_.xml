@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SCHNEIDER_Roman_Friedrich_Digital_Humanities_Meets_Language_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Digital Humanities Meets Language Technology: Empirical Insights from a Broadly Stratified Media Resource</title>
+                <author>
+                    <persName>
+                        <surname>Schneider</surname>
+                        <forename>Roman Friedrich</forename>
+                    </persName>
+                    <affiliation>Leibniz Institute for the German Language, Germany</affiliation>
+                    <email>schneider@ids-mannheim.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Corpora</term>
+                    <term>Spoken &amp; written language</term>
+                    <term>Linguistic features</term>
+                    <term>Empirical studies</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>natural language processing</term>
+                    <term>Communication studies</term>
+                    <term>Linguistics</term>
+                    <term>Media studies</term>
+                    <term>Statistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Spoken and written language collections constitute the fundamental data basis for applied and theoretical research at the intersection of digital humanities and 
+                <hi style="font-size:12pt">other</hi> disciplines that describe human communication (Hinrichs et al. 2019). W
+                <hi style="font-size:12pt">ritten texts and speech resources</hi> are mostly curated and searched independently, since the requirements for data preparation, annotation and query options differ considerably (Schmidt 2014). 
+            </p>
+            <p>We overcome this separation and use an innovatively stratified collection of authentic German language from diverse communicative contexts and media: COrLiCo (Corpus for the Oral-Literate Continuum). It comprises 120 million tokens, capturing language use from informal interactions to formal discourse. At one end, representations of conceptual immediacy include transcripts of face-to-face conversations and showcase spontaneous, unplanned speech. At the other end, representations of conceptual distance feature highly formal texts, such as scientific articles and legal documents, reflecting carefully structured language. Between these extremes, the collection includes text types that blend oral and literate features, such as yellow press newspapers, lifestyle magazines, plenary protocols, interviews, and popular literature. Modern digital forms like WhatsApp messages, Twitter posts, and YouTube comments represent spontaneous, informal writing. Additional data include emails, football live commentaries, podcast transcripts, and even song lyrics, offering examples of hybrid text types that mix spoken and written characteristics. </p>
+            <p>These diverse sources and the balanced structure of the COrLiCo collection allows for statistically valid comparisons. We make the whole dataset available to the scientific community in derived formats, such as bag of words, and word n-grams (Schöch et al. 2020). To highlight potential empirical pitfalls, we take a brief look at the phenomenon of dispersion, which refers to how evenly a phenomenon is distributed (see e.g. Gries 2020). Uneven distribution can undermine the generalizability of empirical results; we show some illustrative examples.</p>
+            <p>We assume that the compiled collection sufficiently represents both conceptual poles, i.e. 'language of immediacy' and 'language of distance' (Koch &amp; Oesterreicher 2012). We train a probabilistic machine learning model representing this dichotomy by defining a featureset that reflects traditional linguistic assumptions (Broll &amp; Schneider 2023). The set includes both universal attributes, such as word length, and language-specific features, such as German particles, while also incorporating other well-established linguistic characteristics. To avoid overly relying on any single theoretical model, we draw on features from various linguistic levels, including grammar, lexicon, and pragmatics. Given the size of the collection, automated featureset processing is essentia, so we focus on identifying complex patterns that can be captured using natural language processing (NLP) tools. We limit our analysis to shallow annotations, such as part-of-speech tagging and lemmatization, which have relatively low error rates. To minimize theoretical bias and susceptibility to errors, we exclude deeper annotations, such as syntactic dependencies or morphological structures, and avoid features that cannot be consistently operationalized across all text sources.</p>
+            <p>When applying the developed classification model on the very different 
+                <hi style="font-size:12pt">parts of</hi> COrLiCo, we observe some intriguing findings: Upon closer inspection, certain text types that incorporate verbatim quotes — such as novels and lifestyle magazines — include large portions of colloquial language with typical oral characteristics, which affects the overall classification within the multidimensional oral-literate continuum. Conversely, it is somewhat unexpected that sources like web pages or Wikipedia talk pages, and even a large proportion of orally delivered speeches do not represent language of immediacy as may intuitively anticipated.
+            </p>
+            <p>A case study illustrating subsequent work concludes the presentation. We examine the word class of discourse 
+                <hi style="font-size:12pt">markers</hi>, that are extremely noteworthy from a communicative perspective, and characteristic of spoken discourse in German. Without altering the truth value of a proposition, discourse markers (= discourse particles; see eg. Diewald 2015) convey expectations and evaluations of the interlocutors regarding the expressed content. Identifying them is complicated by the fact that they are often polysemous, meaning they have homographic counterparts in other word classes, making it difficult to distinguish them from other subcategories of particles, adverbs, adjectives, connectors, etc., without extensive contextual analysis. Given this challenge, we present two machine learning approaches for identifying selected discourse particles. The COrLiCo dataset turns out to be particularly suitable for this task, as it incorporates texts that exhibit features from both immediacy/orality and distance/literacy. Our automatic particle detection is modeled as a sequence labeling binary classification task. Initially, we manually annotate part of the dataset at token level, documenting interrater reliability. These annotated data serve as the training, testing, and validation sets for various machine learning models. We present empirical results together with the trained models.
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Broll, Sarah / Schneider, Roman (2023): “Empirische Verortung konzeptioneller Nähe/Mündlichkeit inner- und außerhalb schriftsprachlicher Korpora”. In: 
+                        <hi rend="italic">Journal for Language Technology and Computational Linguistics</hi>, 36, 1: 113–150. DOI: 10.21248/jlcl.36.2023.240
+                    </bibl>
+                    <bibl style="text-align: left; ">Diewald, Gabriele (2015): “Modal Particles in Different Communicative Types”. In: 
+                        <hi rend="italic">Constructions and Frames</hi>, 7: 218–257.
+                    </bibl>
+                    <bibl style="text-align: left; ">Gries, Stefan Th. (2020): “Analyzing dispersion”. In: Paquot, Magali / Gries, Stefan Th (eds
+                        <hi rend="italic">.)</hi>:
+                        <hi rend="italic" xml:space="preserve"> A practical handbook of corpus linguistics</hi>, Berlin: Springer, 99–118.
+                    </bibl>
+                    <bibl style="text-align: left; ">Hinrichs, Erhard / Kübler, Sandra / Trippel, Thorsten (2019): “Language technology for digital humanities: introduction to the special issue”. In; 
+                        <hi rend="italic">Language Resources &amp; Evaluation</hi>, 53: 559–563.
+                    </bibl>
+                    <bibl style="text-align: left; ">Koch, Peter / Oesterreicher, Wulf (2012): “Language of immediacy – Language of distance: Orality and literacy from the perspective of language theory and linguistic history”. In: Lange, Claudia / Weber, Beatrix / Wolf, Göran (eds.): 
+                        <hi rend="italic">Communicative spaces: Variation, contact, and change</hi>, Frankfurt: Peter Lang, 441–473.
+                    </bibl>
+                    <bibl style="text-align: left; ">Schöch, Christof / Döhl, Frédéric / Rettinger, Achim / Gius, Evelyn / Trilcke, Peer / Leinen, Peter / Jannidis, Fotis/ Hinzmann, Maria / Röpke, Jörg (2020): “Abgeleitete Textformate: Text und Data Mining mit urheberrechtlich geschützten Textbeständen”. In: 
+                        <hi rend="italic">Zeitschrift für digitale Geisteswissenschaften</hi>, 5. DOI: 10.17175/2020_006
+                    </bibl>
+                    <bibl style="text-align: left; ">Schmidt, Thomas (2014): “The Database for Spoken German – DGD2”. In: 
+                        <hi rend="italic">Proceedings of the 9th International Conference on Language Resources and Evaluation (LREC)</hi>, Reykjavik: ELRA, 1451–1457.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

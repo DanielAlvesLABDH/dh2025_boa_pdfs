@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ALRAHABI_Motasem_Du_rep_rage___l_analyse___un_mod_le_NER_pou">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Du repérage à l’analyse : un modèle NER pour l’analyse des entités nommées dans les textes littéraires </title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>MAUREL</surname>
+                        <forename>Perrine</forename>
+                    </persName>
+                    <affiliation>Sorbonne Université</affiliation>
+                    <email>perrine-maurel@sorbonne-universite.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>AMALVY</surname>
+                        <forename>Arthur</forename>
+                    </persName>
+                    <affiliation>Université d’Avignon</affiliation>
+                    <email>arthur.amalvy@univ-avignon.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>LABATUT</surname>
+                        <forename>Vincent</forename>
+                    </persName>
+                    <affiliation>Université d’Avignon</affiliation>
+                    <email>vincent.labatut@univ-avignon.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>ALRAHABI</surname>
+                        <forename>Motasem</forename>
+                    </persName>
+                    <affiliation>Sorbonne Université</affiliation>
+                    <email>motasem.alrahabi@sorbonne-universite.fr</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T08:29:05.792970304</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>entités nommées</term>
+                    <term>documents longs</term>
+                    <term>guide d’annotation</term>
+                    <term>textes littéraires</term>
+                    <term>fine-tuning</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>natural language processing</term>
+                    <term>Humanities computing</term>
+                    <term>Linguistics</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Reconnaissance d’entités nommées</head>
+                <p>
+                    <anchor xml:id="id_docs-internal-guid-fd4351c0-7fff-1c6d-7095-5507cb43c987"/>La reconnaissance d’entités nommées (REN) en littérature, issue du Traitement Automatique des Langues naturelles (TAL), doit tenir compte de la complexité des textes : ambiguïté, richesse stylistique et entités fictives ou symboliques. La REN utilise des méthodes basées sur des règles ou l’apprentissage automatique. Les modèles profonds, notamment les Transformers comme BERT (Devlin 
+                    <hi rend="italic">et al.</hi>, 2019), CamemBERT (Martin 
+                    <hi rend="italic">et al</hi>., 2020) et FlauBERT (Le 
+                    <hi rend="italic">et al</hi>., 2020), améliorent la prise en compte du contexte et des spécificités linguistiques, mais nécessitent de grands corpus annotés. 
+                </p>
+                <p>Certains travaux ont exploré les entités nommées dans les textes littéraires. Bamman, Popat et Shen (2019) annotent des extraits de romans en anglais (environ 2 000 mots). Dekker 
+                    <hi rend="italic">et al.</hi> (2019) analysent des chapitres de romans classiques et modernes en anglais, se concentrant sur des extraits de 300 phrases. Frontini 
+                    <hi rend="italic">et al.</hi> (2021) étudient des passages de 400 mots pour chaque langue du corpus ELTeC. Kababgi 
+                    <hi rend="italic">et al.</hi> (2024) se penchent sur 9 062 phrases issues de six romans suisses allemands, ciblant les entités spatiales non-nommées. Ces corpus sont partiellement annotés, généralement sur des extraits plutôt que sur des textes complets, ce qui limite leur exploitation en prenant en compte la longueur considérable de ces textes.
+                </p>
+                <p>Afin de pallier cette limitation, nous constituons un corpus de romans en français que nous annotons intégralement en entités nommées. Nous démontrons son utilité en développant un nouveau modèle neuronal optimisé pour la REN en contexte littéraire, particulièrement pour les textes longs.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Corpus proposé</head>
+                <p>Notre étude se concentre sur sept romans français des XIXe et début XXe siècles, sélectionnés pour leur richesse narrative et représentativité littéraire. Ces œuvres, issues de 
+                    <ref target="https://fr.wikisource.org/wiki/Wikisource:Accueil">Wikisource</ref>, totalisent 1 320 734 tokens et illustrent une narration mêlant intrigue et description, typique du roman du XIXe siècle. Le tableau suivant contient la liste de ces romans avec, pour chacun, son auteur, année de publication, et nombre de tokens.
+                </p>
+                <table rend="frame" xml:id="Tableau1">
+                    <row>
+                        <cell rend="center">Roman</cell>
+                        <cell rend="center">Auteur</cell>
+                        <cell rend="center">Année de publication</cell>
+                        <cell rend="center">Nombre de tokens</cell>
+                    </row>
+                    <row>
+                        <cell rend="center italic">Les Trois Mousquetaires</cell>
+                        <cell rend="center">Alexandre Dumas</cell>
+                        <cell rend="center">1849</cell>
+                        <cell rend="center">294 989</cell>
+                    </row>
+                    <row>
+                        <cell rend="center italic">Le Rouge et le Noir</cell>
+                        <cell rend="center">Stendhal</cell>
+                        <cell rend="center">1854</cell>
+                        <cell rend="center">216 445</cell>
+                    </row>
+                    <row>
+                        <cell rend="center italic">Eugénie Grandet</cell>
+                        <cell rend="center">Honoré de Balzac</cell>
+                        <cell rend="center">1855</cell>
+                        <cell rend="center">80 659</cell>
+                    </row>
+                    <row>
+                        <cell rend="center italic">Germinal</cell>
+                        <cell rend="center">Émile Zola</cell>
+                        <cell rend="center">1885</cell>
+                        <cell rend="center">220 273</cell>
+                    </row>
+                    <row>
+                        <cell rend="center italic">Bel-Ami</cell>
+                        <cell rend="center">Guy de Maupassant</cell>
+                        <cell rend="center">1901</cell>
+                        <cell rend="center">138 156</cell>
+                    </row>
+                    <row>
+                        <cell rend="center italic">Notre-Dame de Paris</cell>
+                        <cell rend="center">Victor Hugo</cell>
+                        <cell rend="center">1904</cell>
+                        <cell rend="center">221 351</cell>
+                    </row>
+                    <row>
+                        <cell rend="center italic">Madame Bovary</cell>
+                        <cell rend="center">Gustave Flaubert</cell>
+                        <cell rend="center">1910</cell>
+                        <cell rend="center">148 861</cell>
+                    </row>
+                </table>
+                <p>Les travaux de Sims et Bamman (2020) et d’autres chercheurs (Amalvy 
+                    <hi rend="italic">et al.</hi>, 2023; Tay et al., 2021; Labatut et Bost, 2019) soulignent les défis de l’annotation des entités nommées (EN) dans les longs textes littéraires, liés à la complexité narrative et à la résolution des coréférences. La prose littéraire, plus complexe que la prose journalistique, exige des modèles adaptés pour garantir cohérence et précision dans des tâches comme la détection de personnages et la modélisation de l’intrigue.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Processus d’annotation</head>
+                <p>Nous nous sommes basés sur le guide du projet 
+                    <ref target="https://www.universalner.org/guidelines/">UniversalNER</ref> (Mayhew 
+                    <hi rend="italic">et al.</hi>, 2024) pour l’annotation des entités nommées (EN), réalisée en trois phases :
+                </p>
+                <list type="unordered">
+                    <item>Phase exploratoire : annotation initiale d’un échantillon de textes, avec trois catégories (PER, LOC, ORG), menée par deux annotateurs par phrase. Les instructions clés sont : annoter la mention continue la plus large d’une entité nommée ; exclure les entités imbriquées et les chaînes de coréférences ; et inclure les descripteurs accompagnant les entités.</item>
+                    <item>Phase de concertation : ajustement du guide pour inclure les noms communs capitalisés (ex. "le Patron"), titres nobiliaires (ex. "Sa Majesté le roi Charles X"), déterminants (ex. "la maire"), et une nouvelle catégorie MISC pour les entités ambiguës ou indéfinies.</item>
+                    <item>Phase finale : application du guide révisé au corpus complet avec double annotation pour assurer la cohérence.</item>
+                </list>
+                <p>Le processus a impliqué un coordinateur et trois annotateurs. Le tableau suivant indique le nombre de mentions d’entités apparaissant dans chaque roman du corpus, par type d’entité. 
+                    <ref target="https://github.com/obtic-sorbonne/7-romans">Le corpus produit</ref> est publiquement accessible en ligne.
+                </p>
+                <table rend="frame" xml:id="Tableau2">
+                    <row>
+                        <cell rend="center">Roman</cell>
+                        <cell rend="center">Personnages</cell>
+                        <cell rend="center">Lieux</cell>
+                        <cell rend="center">Organisations</cell>
+                        <cell rend="center">Divers</cell>
+                    </row>
+                    <row>
+                        <cell rend="center italic">Les Trois Mousquetaires</cell>
+                        <cell rend="center">8583</cell>
+                        <cell rend="center">962</cell>
+                        <cell rend="center">45</cell>
+                        <cell rend="center">255</cell>
+                    </row>
+                    <row>
+                        <cell rend="center italic">Le Rouge et le Noir</cell>
+                        <cell rend="center">4351</cell>
+                        <cell rend="center">806</cell>
+                        <cell rend="center">39</cell>
+                        <cell rend="center">78</cell>
+                    </row>
+                    <row>
+                        <cell rend="center italic">Eugénie Grandet</cell>
+                        <cell rend="center">1389</cell>
+                        <cell rend="center">187</cell>
+                        <cell rend="center">13</cell>
+                        <cell rend="center">34</cell>
+                    </row>
+                    <row>
+                        <cell rend="center italic">Germinal</cell>
+                        <cell rend="center">3439</cell>
+                        <cell rend="center">838</cell>
+                        <cell rend="center">195</cell>
+                        <cell rend="center">40</cell>
+                    </row>
+                    <row>
+                        <cell rend="center italic">Bel-Ami</cell>
+                        <cell rend="center">1773</cell>
+                        <cell rend="center">400</cell>
+                        <cell rend="center">25</cell>
+                        <cell rend="center">46</cell>
+                    </row>
+                    <row>
+                        <cell rend="center italic">Notre-Dame de Paris</cell>
+                        <cell rend="center">3631</cell>
+                        <cell rend="center">1409</cell>
+                        <cell rend="center">17</cell>
+                        <cell rend="center">94</cell>
+                    </row>
+                    <row>
+                        <cell rend="center italic">Madame Bovary</cell>
+                        <cell rend="center">2004</cell>
+                        <cell rend="center">403</cell>
+                        <cell rend="center">11</cell>
+                        <cell rend="center">70</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">Total</cell>
+                        <cell rend="center">25170</cell>
+                        <cell rend="center">5005</cell>
+                        <cell rend="center">345</cell>
+                        <cell rend="center">617</cell>
+                    </row>
+                </table>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Accord inter-annotateurs</head>
+                <p>L’accord inter-annotateurs, mesuré par le F1-score (96,78) et le Kappa de Cohen (93,35), montre une excellente fiabilité des annotations. Le tableau qui suit indique l’accord inter-annotateurs par type d’entité.</p>
+                <table rend="frame" xml:id="Tableau3">
+                    <row>
+                        <cell rend="center">Classe</cell>
+                        <cell rend="center">F1-score</cell>
+                        <cell rend="center">Kappa</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">PER</cell>
+                        <cell rend="center">97,89</cell>
+                        <cell rend="center">93,71</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">LOC</cell>
+                        <cell rend="center">87,25</cell>
+                        <cell rend="center">75,57</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">ORG</cell>
+                        <cell rend="center">95,30</cell>
+                        <cell rend="center">86,45</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">MISC</cell>
+                        <cell rend="center">75,70</cell>
+                        <cell rend="center">47,70</cell>
+                    </row>
+                </table>
+                <p>Bien que l’accord global soit excellent, la classe MISC semble poser davantage de difficultés, un point que nous discutons dans la section suivante.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="id_docs-internal-guid-d310b5bd-7fff-734e-f59a-432e0c643974"/>Difficultés rencontrées
+                </head>
+                <p>L’annotation des EN dans les textes littéraires a posé plusieurs défis liés à la diversité des catégories, des styles et des contextes. Deux types de désaccords ont été identifiés. Les désaccords "résolvables" résultent d’oublis, d’incertitudes ou d’erreurs d’interprétation corrigibles, comme l’annotation erronée de "La Planète" en LOC au lieu d’ORG. Le second type concerne les désaccords de fond, non résolus car trop complexes ou ambigus, concernent souvent la catégorie MISC, introduite lors de la deuxième phase pour traiter ces cas spécifiques. Voici quelques exemples :</p>
+                <list type="unordered">
+                    <item>L’énoncé "Elle s’empara d’un prie-Dieu et s’agenouilla" illustre un désaccord de fond : "prie-Dieu" peut désigner un objet (MISC) ou faire référence au divin, rendant la catégorisation ambiguë. Ce cas complexe n’a pas été tranché.</item>
+                    <item>La catégorie MISC, définie par les notions d’"indéfini" et d’"ambigu", varie selon l’interprétation des annotateurs, comme dans le cas de "l’affaire Morel", où l’hésitation porte sur son annotation en MISC ou en PER (pour "Morel" uniquement).</item>
+                    <item>L’inclusion ou l’exclusion de certains syntagmes dans les EN, comme "Français" ou "huguenots", soulève des questionnements, la capitalisation reflétant souvent des conventions typographiques plutôt qu’une intention emphatique de l’auteur.</item>
+                    <item>Les variations stylistiques entre auteurs, comme Hugo et Dumas, ont influencé l’annotation, ces derniers utilisant fréquemment des noms communs pour désigner des personnages. Dans Notre-Dame de Paris, seules 28 % des mentions d’Esmeralda utilisent des noms propres, contre 45 % pour "l’égyptienne" et 26 % pour "la bohémienne".</item>
+                    <item>Citons enfin un exemple intéressant, celui d’une référence intertextuelle dans Madame Bovary qui a influencé l’annotation : Flaubert mentionne "la Sachette" de Notre-Dame de Paris. Bien que ce nom commun ne représente que 16 % des mentions de Paquette, sa capitalisation et son emploi ultérieur justifient son inclusion dans le guide d’annotation.</item>
+                </list>
+                <p>Ces cas reflètent la complexité de l’annotation des EN en littérature, exigeant des ajustements constants pour allier rigueur méthodologique et spécificités contextuelles.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="id_docs-internal-guid-dd72f3d5-7fff-d7dd-16b1-20121149b360"/>
+                    <hi rend="bold">Entrainement d’un nouveau modèle</hi>
+                </head>
+                <p>Nous mettons à profit notre corpus en entraînant un modèle de REN sur celui-ci. Nous nous basons sur deux modèles CamemBERT pré-entrainés (Martin 
+                    <hi rend="italic">et al.</hi>, 2020) : l’un basé sur CamemBERT-base (100 millions de paramètres), l’autre sur CamemBERT-large (335 millions de paramètres). Nous leur ajoutons une couche neuronale de classification, et formalisons la tâche de REN comme une tâche de classification de tokens en nous basant sur le format BIO (Ramshaw et Marcus, 1995). Nous ajustons finement nos modèles sur notre corpus complet durant trois cycles d’apprentissage avec un taux d’apprentissage de 2×10
+                    <hi rend="sup">-5</hi> et un dropout de 0,1 (Devlin 
+                    <hi rend="italic">et al.</hi>, 2019). Pendant l’entraînement et l’inférence, le modèle prédit les entités présentes dans chaque exemple sans contexte supplémentaire. Ce modèle est disponible en ligne.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="id_docs-internal-guid-a4f5d820-7fff-03e0-d073-7c76684a4cfb"/>
+                    <hi rend="bold">Évaluation</hi>
+                </head>
+                <p>Afin d’évaluer la performance de notre modèle, nous procédons par validation croisée en 7 blocs : nous produisons 7 modèles différents, chacun entraîné sur un ensemble unique de 6 livres et évalué sur le livre restant. Nous utilisons la librairie 
+                    <ref target="https://github.com/chakki-works/seqeval">seqeval</ref> en mode "défaut" pour mesurer la performance en termes de Précision, Rappel et F1-score. Le tableau suivant indique les résultats obtenus.
+                </p>
+                <table rend="frame" xml:id="Tableau4">
+                    <row>
+                        <cell rend="center">Roman</cell>
+                        <cell rend="center">F1-score</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">Le Rouge et le Noir</cell>
+                        <cell rend="center">91,85</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">Madame Bovary</cell>
+                        <cell rend="center">91,55</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">Bel-Ami</cell>
+                        <cell rend="center">91,27</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">Germinal</cell>
+                        <cell rend="center">89,93</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">Eugénie Grandet</cell>
+                        <cell rend="center">85,69</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">Notre-Dame de Paris</cell>
+                        <cell rend="center">78,66</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">Les Trois Mousquetaires</cell>
+                        <cell rend="center">66,33</cell>
+                    </row>
+                </table>
+                <p>Dans l’ensemble, la performance est cohérente avec les résultats obtenus précédemment par CamemBERT sur d’autres corpus français, comme sur le French Treebank (Martin et al., 2020). Deux romans semblent cependant poser plus de difficultés : "Notre-Dame de Paris" et "Les Trois Mousquetaires". Nous avons analysé manuellement les résultats et observé que le modèle rencontre des difficultés importantes à reconnaître certaines entités comme le personnage principal D’Artagnan. Cela reflète la difficulté déjà mentionnée concernant l’usage de noms communs comme substituts pour désigner certains personnages, ainsi que les observations précédentes de Dekker et al. (2019). Ces résultats sous-estiment probablement les performances du modèle final, entraîné sur l’intégralité du corpus.</p>
+                <p>Compte tenu du manque de jeux de données littéraires en français, ce modèle constitue une contribution pour la communauté en permettant une bonne performance d’inférence sur ce type de textes.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="id_docs-internal-guid-9b1a60a8-7fff-f6f5-4783-78bbab943454"/>
+                    <hi rend="bold">Conclusion et perspectives </hi>
+                </head>
+                <p>Le corpus de textes littéraires, entièrement annoté, constitue une ressource essentielle développée dans cette étude. S’appuyant sur ce gold standard, nous avons également conçu un modèle de NER adapté, produisant des résultats précis malgré les défis stylistiques propres à ces œuvres.</p>
+                <p>Pour l’avenir, l’amélioration de la résolution des coréférences et l’adaptation à d’autres périodes ou langues offriront des perspectives prometteuses. Le modèle pourra également être appliqué à l’analyse des réseaux narratifs et aux outils pédagogiques en humanités numériques.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <hi rend="bold">Remerciements</hi>
+                </head>
+                <p>Nous remercions Una Faller et Romaric Parnasse qui ont participé à l’annotation du corpus. </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <anchor xml:id="id_docs-internal-guid-60ea62bf-7fff-9137-f5ea-33ed3afeaa8c"/>Alrahabi, M., Brando, C., Frontini, F., Provenier, A., Jalabert, R., Bordry, M., Koskas, C., &amp; Gawley, J. (2024). "Guide d’annotation manuelle d’entités nommées dans des corpus littéraires" (version 2).
+                    </bibl>
+                    <bibl>Amalvy, A., Labatut, V., &amp; Dufour, R. (2023). "The Role of Global and Local Context in Named Entity Recognition". In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers) (pp. 714–722). Toronto, Canada: ACL. </bibl>
+                    <bibl>Bamman, D., Popat, S., &amp; Shen, S. (2019). "An Annotated Dataset of Literary Entities". In Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long and Short Papers) (pp. 2138–2144).</bibl>
+                    <bibl>Dekker, N., Kuhn, T., &amp; van Erp, M. (2019). "Evaluating Named Entity Recognition Tools for Extracting Social Networks from Novels". PeerJ Computer Science, 5, e189. </bibl>
+                    <bibl>Devlin, J., Chang, M.-W., Lee, K., &amp; Toutanova, K. (2019). "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding". In Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long and Short Papers) (pp. 4171–4186).</bibl>
+                    <bibl>Frontini, F., Brando, C., Byszuk, J., Galleron, I., Santos, D., &amp; Stanković, R. (2020). "Named Entity Recognition for Distant Reading in ELTeC." In Proceedings of the CLARIN Annual Conference 2020. Virtual Event, France.</bibl>
+                    <bibl>Kababgi, D., Grisot, G., Pennino, F., &amp; Herrmann, B. (2024). "Recognising Non-Named Spatial Entities in Literary Texts: A Novel Spatial Entities Classifier." In Proceedings of the Computational Humanities Research Conference 2024 (CHR 2024) (pp. 472–481). Aarhus, Denmark.</bibl>
+                    <bibl>Labatut, V., &amp; Bost, X. (2019). "Extraction and Analysis of Fictional Character Networks: A Survey". ACM Computing Surveys, 52(5), 89.
+                        <ref target="https://arxiv.org/pdf/1907.02704"> </ref>
+                    </bibl>
+                    <bibl>Le, H., Vauquier, T., Antoine, J.-Y., Colin, I., Emeriau, M., &amp; Schwab, D. (2020). "FlauBERT: Unsupervised Language Model Pre-training for French". In Proceedings of the 12th International Conference on Language Resources and Evaluation (LREC).</bibl>
+                    <bibl>Martin, L., Muller, B., Suárez, P. J. O., Dupont, Y., Romary, L., de la Clergerie, É., Seddah, D., &amp; Sagot, B. (2020). "CamemBERT: A Tasty French Language Model". In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics (pp. 7203–7219).</bibl>
+                    <bibl>Mayhew, S., Blevins, T., Liu, S., Šuppa, M., Gonen, H., Imperial, J. M., Karlsson, B., Lin, P., Ljubešić, N., Miranda, L. J., Plank, B., Riabi, A., &amp; Pinter, Y. (2024). "Universal NER: A Gold-Standard Multilingual Named Entity Recognition Benchmark". In Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers) (pp. 4322–4337).</bibl>
+                    <bibl>Ramshaw, L., &amp; Marcus, M. (1995). "Text Chunking Using Transformation-Based Learning". In Third Workshop on Very Large Corpora.
+                        <ref target="https://aclanthology.org/W95-0107"> </ref>
+                    </bibl>
+                    <bibl>Sims, M., &amp; Bamman, D. (2020). "Measuring Information Propagation in Literary Social Networks". In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP) (pp. 642–652).</bibl>
+                    <bibl>Tay, Y., Dehghani, M., Abnar, S., Shen, Y., Bahri, D., Pham, P., Rao, J., Yang, L., Ruder, S., &amp; Metzler, D. (2021). "Long Range Arena: A Benchmark for Efficient Transformers". In Proceedings of the International Conference on Learning Representations.</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

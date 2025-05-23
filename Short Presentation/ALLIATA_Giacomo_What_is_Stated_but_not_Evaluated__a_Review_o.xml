@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ALLIATA_Giacomo_What_is_Stated_but_not_Evaluated__a_Review_o">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>What is Stated but not Evaluated: a Review of Common Objectives and their Evaluation for CH Data Interfaces</title>
+                <author>
+                    <persName>
+                        <surname>Ding</surname>
+                        <forename>Xinyi</forename>
+                    </persName>
+                    <affiliation>EPFL, Switzerland</affiliation>
+                    <email>xinyi.ding@epfl.ch</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Alliata</surname>
+                        <forename>Giacomo</forename>
+                    </persName>
+                    <affiliation>EPFL, Switzerland</affiliation>
+                    <email>giacomo.alliata@epfl.ch</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Yang</surname>
+                        <forename>Yuchen</forename>
+                    </persName>
+                    <affiliation>EPFL, Switzerland</affiliation>
+                    <email>yuchen.yang@epfl.ch</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Kenderdine</surname>
+                        <forename>Sarah</forename>
+                    </persName>
+                    <affiliation>EPFL, Switzerland</affiliation>
+                    <email>sarah.kenderdine@epfl.ch</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-08T06:59:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Digital Interfaces</term>
+                    <term>Evaluation Framework</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>user experience design and analysis</term>
+                    <term>Galleries and museum studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>INTRODUCTION</head>
+                <p style="text-align: left; ">With advances in digital technologies and the digitization of archives, GLAM institutions (Galleries, Libraries, Archives, and Museums) are exploring innovative digital interfaces to make cultural heritage (CH) collections more accessible and engaging. These interfaces offer richer, browsable, and exploratory experiences beyond traditional search systems (Whitelaw, 2015; Ruecker et al., 2011).</p>
+                <p style="text-align: left; ">Evaluating such interfaces is essential to ensure they meet user needs and evolving expectations. However, our review found a lack of a systematic, domain-specific evaluation framework for the innovative CH interfaces, with clear evaluation objectives and assessment criteria. Current evaluations often rely on individual design goals and conventional methods, such as the System Usability Scale (Brooke, 1996) and User Experience Questionnaire (Schrepp et al., 2017). Evaluation for traditional systems, like digital libraries, primarily focus on user interaction and task-oriented functionality (Li et al., 2019). These approaches are insufficient for evaluating the special features of innovative CH interfaces, in particular when those are addressed to diverse audiences.</p>
+                <p style="text-align: left; ">This empirical study addresses a gap in the systematic investigation of evaluation purposes specific to CH archival interfaces. Through a case-based analysis, we review existing interfaces, identify their common design objectives, and propose a theoretical evaluation framework. This framework aims to guide future design and evaluation efforts, offering a structured perspective for developing new evaluation metrics and methods tailored to CH interfaces.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>METHODS AND RESULTS</head>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Case Selection</head>
+                    <p style="text-align: left; ">Cases were sourced from academic journals (e.g., ACM Journal on Computing and Cultural Heritage, DHQ, IEEE Transactions), GLAM institutions (e.g., German National Library), artist portfolios, award-winning projects (e.g., DH Awards), and targeted keyword searches online. To ensure relevance, the following selection criteria were applied:</p>
+                    <list type="unordered">
+                        <item>
+                            <hi rend="bold">Archival Cultural Heritage Datasets</hi>: Interfaces must use archival CH datasets, including diverse formats such as text, images, videos, audio, or 3D models, based on the Europeana Data Model (EDM) as categorized by Windhager et al. (2019). Interfaces focusing on a single object or place are excluded.
+                        </item>
+                        <item>
+                            <hi rend="bold">Diverse User Focus</hi>: Interfaces should target a diverse audience, excluding interfaces specifically built for expert users only.
+                        </item>
+                        <item>
+                            <hi rend="bold">Interactive Digital Interfaces</hi>: Interfaces must involve digital platforms such as web-based systems, AR, VR or MR, and be interactive.
+                        </item>
+                        <item>
+                            <hi rend="bold">Documented Details</hi>: Cases must have sufficient documentation for analysis through academic papers or official descriptions, including an evaluation.
+                        </item>
+                        <item>
+                            <hi rend="bold">Release Date</hi>: Interfaces released no earlier than 2015 were prioritized.
+                        </item>
+                    </list>
+                    <p style="text-align: left; ">Based on relevance to our criteria and keyword matches, a total of 20 cases were collected for analysis. Figure 1 shows the case distribution over time on the left, indicating slightly more cases after 2019, while on the right it indicates a strong majority of web interfaces. Finally, among the data types, 1 case includes audio, 13 cases include images, 13 cases include text, and 6 cases include 3D models. Hybrid datasets are common, accounting for 12 cases.</p>
+                    <figure>
+                        <graphic n="1001" width="9.034430555555556cm" height="6.773333333333333cm" url="/tmp/tmp32frmm4h/Pictures/84666bab6899fa4cffe9af0849232a89.png" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; ">
+                        <hi style="font-size:10pt" xml:space="preserve">Figure </hi>
+                        <hi style="font-size:10pt">1</hi>
+                        <hi style="font-size:10pt">: Distribution of the reviewed cases by year.</hi>
+                    </p>
+                    <figure>
+                        <graphic n="1002" width="13.116383333333333cm" height="7.866944444444444cm" url="/tmp/tmp32frmm4h/Pictures/84666bab6899fa4cffe9af0849232a89.png" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; ">
+                        <hi style="font-size:10pt" xml:space="preserve">Figure </hi>
+                        <hi style="font-size:10pt">2</hi>
+                        <hi style="font-size:10pt">: Distribution of the reviewed cases by interface type.</hi>
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Common Objectives and Comparison with Evaluation</head>
+                    <p style="text-align: left; ">Through a review of relevant literature and case descriptions, we identified development objectives and derived a set of common goals. This study reflects real-world needs and practices, with common objectives representing shared priorities and providing a basis for generalization. We identified highly frequent objectives, selecting those occurring at least 10 times, as shown in Figure 2:</p>
+                    <list type="unordered">
+                        <item>
+                            <hi rend="bold">Engagement</hi> refers to users' interest and involvement with the interface.
+                        </item>
+                        <item>
+                            <hi rend="bold">Diverse Audience Suitability</hi> measures how well an interface serves users with diverse backgrounds and expertise levels.
+                        </item>
+                        <item>
+                            <hi rend="bold">Usability</hi> focuses on the ease of use of the interface.
+                        </item>
+                        <item>
+                            <hi rend="bold">Exploratory &amp; Discovery Enhancement</hi> highlights features and design approaches that encourage free exploration to foster unexpected and serendipitous discoveries.
+                        </item>
+                        <item>
+                            <hi rend="bold">Contextualization and Enrichment</hi> enhances the depth and relevance of archival resources by embedding them in rich contexts, narratives, and connections.
+                        </item>
+                        <item>
+                            <hi rend="bold">Understanding &amp; Insight Enhancement</hi> focuses on helping users derive meaningful insights and reflections from archival resources.
+                        </item>
+                    </list>
+                    <figure>
+                        <graphic n="1003" width="15.962305555555556cm" height="16.545277777777777cm" url="/tmp/tmp32frmm4h/Pictures/84666bab6899fa4cffe9af0849232a89.png" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; ">
+                        <hi style="font-size:10pt" xml:space="preserve">Figure </hi>
+                        <hi style="font-size:10pt">3</hi>
+                        <hi style="font-size:10pt">: Common objectives for each reviewed case.</hi>
+                    </p>
+                    <p style="text-align: left; ">Subsequently, we reviewed for each of the 20 cases which of the six common objectives had been evaluated. An objective could therefore have been stated and evaluated, stated but not evaluated, not stated but evaluated, and neither stated nor evaluated. As one would expect, we see in Figure 3 that Engagement and Usability are evaluated in most cases. We were pleased to find that Understanding &amp; Insight Enhancement is also well-covered. However, all dimensions in our evaluation framework include cases where objectives are stated but not evaluated, with Contextualization and Enrichment being particularly under-evaluated. This highlights the importance of a systematic framework to assess the key features of innovative CH interfaces.</p>
+                    <figure>
+                        <graphic n="1004" width="16.403019444444446cm" height="4.991805555555556cm" url="/tmp/tmp32frmm4h/Pictures/84666bab6899fa4cffe9af0849232a89.png" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; ">
+                        <hi style="font-size:10pt" xml:space="preserve">Figure </hi>
+                        <hi style="font-size:10pt">4</hi>
+                        <hi style="font-size:10pt">: Comparison between Common Objectives and Evaluation (percentages sum to 100 for each column).</hi>
+                    </p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>SUMMARY</head>
+                <p style="text-align: left; ">This study examines the evaluation of innovative CH interfaces, addressing the lack of a systematic framework for assessing their unique features. Through a case-based analysis of 20 evaluated interfaces, we identified six key evaluation dimensions: Engagement, Diverse Audience Suitability, Usability, Exploratory &amp; Discovery Enhancement, Contextualization &amp; Enrichment, Understanding &amp; Insight Enhancement. Findings show that current evaluations focus primarily on the dimensions of Engagement, Usability and Understanding &amp; Insight Enhancement, while those of Exploratory &amp; Discovery Enhancement and Contextualization and Enrichment are often overlooked. This underscores the need for a structured framework to better support meaningful interaction with CH.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Whitelaw, M. (2015). Generous interfaces for digital cultural collections. Digital humanities quarterly, 9(1), 1-16.</bibl>
+                    <bibl style="text-align: left; ">Ruecker, S., Radzikowska, M., &amp; Sinclair, S. (2011). Visual Interface Design for Digital Cultural Heritage: A Guide to Rich-Prospect Browsing (1st ed.). </bibl>
+                    <bibl style="text-align: left; ">Brooke, J. (1996). SUS-A quick and dirty usability scale. Usability evaluation in industry, 189(194), 4-7.</bibl>
+                    <bibl style="text-align: left; ">Schrepp, M.; Hinderks, A. &amp; Thomaschewski, J. (2017). Construction of a benchmark for the User Experience Questionnaire (UEQ). International Journal of Interactive Multimedia and Artificial Intelligence, Vol. 4, No. 4, pp. 40-44.</bibl>
+                    <bibl style="text-align: left; ">Li, Y., &amp; Liu, C. (2019). Information resource, interface, and tasks as user interaction components for digital library evaluation. Information Processing &amp; Management, 56(3), 704-720.</bibl>
+                    <bibl style="text-align: left; ">F. Windhager et al., "Visualization of Cultural Heritage Collection Data: State of the Art and Future Challenges," in IEEE Transactions on Visualization and Computer Graphics, vol. 25, no. 6, pp. 2311-2330, 1 June 2019, doi: 10.1109/TVCG.2018.2830759.</bibl>
+                    <bibl style="text-align: left; ">Glinka, K., Pietsch, C., &amp; Dörk, M. (2017). Past Visions and Reconciling Views: Visualizing Time, Texture and Themes in Cultural Collections. DHQ: Digital Humanities Quarterly, (2).</bibl>
+                    <bibl style="text-align: left; ">Coburn, John. "I don’t know what I’m looking for: Better understanding public usage and behaviours with Tyne &amp; Wear Archives &amp; Museums online collections." MW2016: Museums and the Web 2016. Published January 29, 2016. Consulted December 4, 2024.</bibl>
+                    <bibl style="text-align: left; ">Hinrichs, U., Forlini, S., &amp; Moynihan, B. (2015). Speculative practices: Utilizing infovis to explore untapped literary collections. IEEE transactions on visualization and computer graphics, 22(1), 429-438.</bibl>
+                    <bibl style="text-align: left; ">Damiano, R., Lombardo, V., &amp; Lieto, A. (2015, June). Visual metaphors for semantic cultural heritage. In 2015 7th International Conference on Intelligent Technologies for Interactive Entertainment (INTETAIN) (pp. 100-109). IEEE.</bibl>
+                    <bibl style="text-align: left; ">Kräutli, F., &amp; Boyd Davis, S. (2015). Revealing cultural collections over time.</bibl>
+                    <bibl style="text-align: left; ">Bludau, M. J., Dörk, M., &amp; Heidmann, F. (2021). Relational perspectives as situated visualizations of art collections. Digital Scholarship in the Humanities, 36(Supplement_2), ii17-ii29.</bibl>
+                    <bibl style="text-align: left; ">Gortana, F., von Tenspolde, F., Guhlmann, D., &amp; Dörk, M. (2018). Off the grid: Visualizing a numismatic collection as dynamic piles and streams. Open Library of Humanities, 4(2), 1-25.</bibl>
+                    <bibl style="text-align: left; ">Herseni, J., Brüggemann, V., Dittrich, K., Dörk, M., Rauenbusch, J., &amp; Thomet, F. (2018). Die bibliografischen </bibl>
+                    <bibl style="text-align: left; ">Daten der Deutschen Nationalbibliothek entfalten. Dialog mit Bibliotheken, 1, 11-16.</bibl>
+                    <bibl style="text-align: left; ">Bludau, M. J., Brüggemann, V., Busch, A., &amp; Dörk, M. (2020, June). Reading Traces: Scalable exploration in elastic visualizations of cultural heritage data. In Computer Graphics Forum (Vol. 39, No. 3, pp. 77-87).</bibl>
+                    <bibl style="text-align: left; ">McCurdy, N., Lein, J., Coles, K., &amp; Meyer, M. (2015). Poemage: Visualizing the sonic topology of a poem. IEEE transactions on visualization and computer graphics, 22(1), 439-448.</bibl>
+                    <bibl style="text-align: left; ">Bollini, L. (2021). MilanoAttraverso. Telling the Story of Social Inclusion of Milan Through Digitised Archives Linked to Historical Cartography. In Computational Science and Its Applications–ICCSA 2021: 21st International Conference, Cagliari, Italy, September 13–16, 2021, Proceedings, Part V 21 (pp. 475-488). Springer International Publishing.</bibl>
+                    <bibl style="text-align: left; ">Casanova-Salas, P., Sevilla, J., Coma, I., Morillo, P., Gaitán, M., &amp; Portalés, C. (2024). Enhancing Accessibility and Navigation of Heritage Collections Through Interactive Spatiotemporal Maps. ACM Journal on Computing and Cultural Heritage, 17(3), 1-21.</bibl>
+                    <bibl style="text-align: left; ">Junginger, P., Ostendorf, D., Vissirini, B. A., Voloshina, A., Hausmann, T., Kreiseler, S., &amp; Dörk, M. (2020). The close-up cloud: visualizing details of image collections in dynamic overviews. International Journal for Digital Art History, (5), 6-2.</bibl>
+                    <bibl style="text-align: left; ">Brüggemann, V., Bludau, M. J., Pietsch, C., &amp; Dörk, M. (2022). Von der Wolke zum Pfad: Visuelle und assoziative Exploration zweier kultureller Sammlungen. In DHd2022: Kulturen des digitalen Gedächtnisses (pp. 1-5).</bibl>
+                    <bibl style="text-align: left; ">Millard, D. E., Packer, H., Howard, Y., &amp; Hargood, C. (2020). The balance of attention: The challenges of creating locative cultural storytelling experiences. Journal on Computing and Cultural Heritage (JOCCH), 13(4), 1-24.</bibl>
+                    <bibl style="text-align: left; ">Chiang, K. C., Weng, C., Rathinasabapathi, A., Chen, H., &amp; Su, J. H. (2023). Augmented reality supported learning for cultural heritage of Taiwan in on-site and off-site environments: The case of a Daxi old street. ACM Journal on Computing and Cultural Heritage, 16(3), 1-17.</bibl>
+                    <bibl style="text-align: left; ">Yi, J. H., &amp; Kim, H. S. (2021). User experience research, experience design, and evaluation methods for museum mixed reality experience. Journal on Computing and Cultural Heritage (JOCCH), 14(4), 1-28.</bibl>
+                    <bibl style="text-align: left; ">Kocaturk, T., Mazza, D., McKinnon, M., &amp; Kaljevic, S. (2023). GDOM: An Immersive Experience of Intangible Heritage through Spatial Storytelling. ACM Journal on Computing and Cultural Heritage, 15(4), 1-18.</bibl>
+                    <bibl style="text-align: left; ">Raheb, K. E., Stergiou, M., Katifori, A., &amp; Ioannidis, Y. (2021). Moving in the cube: a motion-based playful experience for introducing Labanotation to beginners. Journal on Computing and Cultural Heritage (JOCCH), 14(2), 1-26.</bibl>
+                    <bibl style="text-align: left; ">Ch’ng, E., Cai, S., Feng, P., &amp; Cheng, D. (2023). Social augmented reality: communicating via cultural heritage. ACM Journal on Computing and Cultural Heritage, 16(2), 1-26</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VAN_ZAANEN_Menno_In_depth_analysis_of_social_networks_of_tra">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">In-depth analysis of social networks of translations of literary narratives</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>van Zaanen</surname>
+                        <forename>Menno</forename>
+                    </persName>
+                    <affiliation>South African Centre for Digital Language Resources, South Africa</affiliation>
+                    <email>menno.vanzaanen@nwu.ac.za</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-22T08:58:39.240346209</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>social networks</term>
+                    <term>translations</term>
+                    <term>named entity recognition</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>electronic literature production and analysis</term>
+                    <term>natural language processing</term>
+                    <term>Linguistics</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>The field of literary linguistics investigates the relationship between linguistics and literature (see e.g., 
+                <hi rend="background-color(#ffffff)">Mahlberg / Wiegand (2022))</hi>. Here we consider characters and their interactions. They are important elements in narratives as the character’s actions drive the plot. As such, when analyzing narratives, it is useful to have an objective representation of the characters and their relations. Social networks, consisting of nodes that represent the characters and edges that depict the relations between the characters, are such representations. Social networks can be created manually, but with the availability of natural language processing tools, this can also be done automatically. Such an approach falls within the idea of distant reading (Moretti 2000) which enables analysis of long or many narratives. First, a named entity recognizer (NER), which identifies the names of characters, is applied to the narrative. Next, their relations are identified, typically through character co-occurrence. If two characters co-occur in a small context, such as a sentence, they are assumed to have some sort of relation to each other. Frequency information of character occurrence and character co-occurrence can provide information on character importance and relation strength.
+            </p>
+            <p>Previous work (
+                <hi rend="background-color(#ffffff)">Chmarzyńska et al. 2024a, b)</hi> analyzed the similarities between the social network representations of a narrative translated in different languages. (Henceforth we call the original and the translations of the narrative, “language versions”.) The social networks were created based on the frequency of the named entities (NEs) (to find the main characters) and relations based on NE co-occurrence per sentence. As the language versions tell the same story, the social networks were expected to be the same or at least very similar. The social networks of the English original, and the Dutch, German, and Polish translations of Oscar Wilde’s 
+                <hi rend="italic">The Picture of Dorian Gray</hi>, however, were not isomorphic and even displayed drastically different structures.
+            </p>
+            <p>There may be several reasons why the social networks of the language versions are different. First, languages may have different preferences for sentence length which may influence NE co-occurrence counts. Second, the quality of the NER may influence the identification of NEs. Third, there may be differences in how languages prefer using names (e.g., personal pronouns versus NE or first versus last name).</p>
+            <p>First, we investigate the potential influence of sentence length, which may influence identification of relations. Language variants only show minor variations in the number of sentences (6548 (English), 5712 (Dutch), 6515 (German), 6536 (Polish)) and, similarly, the number of tokens per sentence is quite comparable (15.00 (English), 13.77 (Dutch), 14.93 (German), 11.98 (Polish)). Although the Dutch and Polish sentences are somewhat shorter, these results are relatively small. It is unlikely that differences in sentence length have a large influence on the shape of the social network.</p>
+            <p>Second, we investigate the quality of the NEs. When looking at the total number of identified NEs (1154 (English), 1102 (Dutch), 1940 (German), 1498 (Polish)), we see that more NEs are identified in German. The German version also has the most unique NEs (228 (English), 383 (Dutch), 549 (German), 371 (Polish)). As this may indicate a lower quality NER, we look (in close reading fashion) at the list of unique NEs, which shows that many identified German NEs are regular nouns and not real NEs. After applying the same frequency threshold that was used to create the social networks (at least ten occurrences), a few incorrect German (e.g., Du (you), Mann (man), Komm (come)) and Dutch (e.g., ben (am), Waarom (why), hebt (have)) NEs are still left. All remaining Polish and English NEs are correct, but Polish NEs sometimes show inflection (e.g., Dorian Gray versus Doriana Graya and Henryk versus Henryka versus Henryku). The incorrect NEs in German and Dutch and the inflected NEs in Polish explain some of the structural differences between the social networks. To resolve this, improved NER and NE normalization (for Polish) is required.</p>
+            <p>Note that further investigation into the quality of NER output shows interesting results. If we search for occurrences of “Dorian” (one of the main characters in the narrative) that are not recognized as a NE, we find that this happens regularly: 220 (English), 48 (Dutch), 19 (German), and 142 (Polish). (We allow for additional letters following the name, so this takes Polish inflection and genitive forms in German and Dutch into account.) This further illustrates the need for improved NER quality.</p>
+            <p>Third, we investigate differences in use of names versus pronouns in the different languages. As we cannot rely on the quality of the NER, we directly search for “Dorian” (taking inflection into account). We find 415 (English), 377 (Dutch), 417 (German), and 422 (Polish) occurrences. When counting “Dorian Gray” (again taking inflection into account), we find 152 (English), 133 (Dutch), 145 (German), and 152 (Polish) occurrences, which again shows very small differences (mostly for Dutch). This suggests that there are only very small differences with respect to the preference of the use of names and pronouns (although Dutch may have a slight preference for pronouns). Note that if we look at the difference between the occurrences of “Gray” and “Dorian Gray”, this is mostly consistent between all languages (48 for English and German, 44 for Dutch, and 46 for Polish), showing essentially no differences in the use of first name versus first and last name.</p>
+            <p>To summarize, we investigated what drives the differences in social networks of a narrative in different languages. We expected that there would be differences in language preference (with respect to sentence length and the use of names). Although some language aspects influence the identification of NEs, such as genitive forms in German and Dutch and more complex inflection in Polish, the results showed that the quality of the NER has the largest impact. In fact, even in the English version of the narrative, many occurrences of the character names are not automatically identified. This was unexpected as NER is often considered a solved task (Marrero et al. 2013). When relying on the automatic creation of social networks of narratives, special attention should be given to the quality of the NER output.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="background-color(#ffffff)">Chmarzyńska, </hi>
+                        <hi rend="background-color(#ffffff)">Aleksandra</hi>
+                        <hi rend="background-color(#ffffff)"> / Komosa, </hi>
+                        <hi rend="background-color(#ffffff)">Jan</hi>
+                        <hi rend="background-color(#ffffff)"> / Potrykus, </hi>
+                        <hi rend="background-color(#ffffff)">Anna</hi>
+                        <hi rend="background-color(#ffffff)"> / Os, </hi>
+                        <hi rend="background-color(#ffffff)">Stanisław</hi>
+                        <hi rend="background-color(#ffffff)"> / Raca, </hi>
+                        <hi rend="background-color(#ffffff)">Katarzyna</hi>
+                        <hi rend="background-color(#ffffff)"> / Wąs, </hi>
+                        <hi rend="background-color(#ffffff)">Thomasz</hi>
+                        <hi rend="background-color(#ffffff)"> / Rudnicka, </hi>
+                        <hi rend="background-color(#ffffff)">Karolina</hi>
+                        <hi rend="background-color(#ffffff)"> / van Zaanen, </hi>
+                        <hi rend="background-color(#ffffff)">Menno</hi>
+                        <hi rend="background-color(#ffffff)"> (2024a). </hi>
+                        <hi rend="background-color(#ffffff)italic">Social network analysis in multilingual literary works</hi>
+                        <hi rend="background-color(#ffffff)">. Association for Computers and the Humanities (ACH).</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="background-color(#ffffff)">Chmarzyńska, </hi>
+                        <hi rend="background-color(#ffffff)">Aleksandra</hi>
+                        <hi rend="background-color(#ffffff)"> / Potrykus, </hi>
+                        <hi rend="background-color(#ffffff)">Anna</hi>
+                        <hi rend="background-color(#ffffff)"> / Komosa, </hi>
+                        <hi rend="background-color(#ffffff)">Jan </hi>
+                        <hi rend="background-color(#ffffff)">/ Os, </hi>
+                        <hi rend="background-color(#ffffff)">Stanisław</hi>
+                        <hi rend="background-color(#ffffff)"> / Raca, </hi>
+                        <hi rend="background-color(#ffffff)">Katarzyna</hi>
+                        <hi rend="background-color(#ffffff)"> / Wąs, </hi>
+                        <hi rend="background-color(#ffffff)">Thomasz</hi>
+                        <hi rend="background-color(#ffffff)"> / Rudnicka, </hi>
+                        <hi rend="background-color(#ffffff)">Karolina</hi>
+                        <hi rend="background-color(#ffffff)"> / van Zaanen, </hi>
+                        <hi rend="background-color(#ffffff)">Menno</hi>
+                        <hi rend="background-color(#ffffff)"> (2024b). </hi>
+                        <hi rend="background-color(#ffffff)italic">Comparative computational analysis of the character relationships in translations using named entity recogniti</hi>on. IV Kongres Młodej Nauki, 2024, 11-07-2024 - 13-07-2024, Gdańsk, Polska. Retrieved
+                        <hi rend="background-color(#ffffff)">from: </hi>
+                        <ptr target="https://repozytorium.bg.ug.edu.pl/info/report/UOG9eea479ba1c749778f18a1b874ba1f7e/"/>
+                        <hi rend="background-color(#ffffff)"> </hi>
+                        <hi rend="background-color(#ffffff)">[22.04.2025]</hi>
+                        <hi rend="background-color(#ffffff)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="background-color(#ffffff)">Mahlberg, </hi>
+                        <hi rend="background-color(#ffffff)">Michaela</hi>
+                        <hi rend="background-color(#ffffff)"> /</hi>
+                        <hi rend="background-color(#ffffff)"> Wiegand, </hi>
+                        <hi rend="background-color(#ffffff)">Viola</hi>
+                        <hi rend="background-color(#ffffff)"> (2022). Exploring narrative fiction: corpora and digital humanities projects. In O’Keeffe, </hi>
+                        <hi rend="background-color(#ffffff)">Anne /</hi>
+                        <hi rend="background-color(#ffffff)"> McCarthy, </hi>
+                        <hi rend="background-color(#ffffff)">Michael J.</hi>
+                        <hi rend="background-color(#ffffff)"> (Eds.), </hi>
+                        <hi rend="background-color(#ffffff)italic">The Routledge Handbook of Corpus Linguistics</hi>
+                        <hi rend="background-color(#ffffff)"> (2nd ed., pp. 532–546). Routledge. </hi>
+                        <hi rend="background-color(#ffffff)">DOI: </hi>
+                        <ref target="https://doi.org/10.4324/9780367076399-37">
+                            <hi rend="background-color(#ffffff)">10.4324/9780367076399-37</hi>
+                        </ref>
+                        <hi rend="background-color(#ffffff)"> </hi>
+                        <hi rend="background-color(#ffffff)">[22.04.2025]</hi>
+                        <hi rend="background-color(#ffffff)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="background-color(#ffffff)">Marrero, </hi>
+                        <hi rend="background-color(#ffffff)">Mónica</hi>
+                        <hi rend="background-color(#ffffff)"> /</hi>
+                        <hi rend="background-color(#ffffff)"> Urbano, </hi>
+                        <hi rend="background-color(#ffffff)">Julián</hi>
+                        <hi rend="background-color(#ffffff)"> /</hi>
+                        <hi rend="background-color(#ffffff)"> Sánchez-Cuadrado, </hi>
+                        <hi rend="background-color(#ffffff)">Sonia</hi>
+                        <hi rend="background-color(#ffffff)"> /</hi>
+                        <hi rend="background-color(#ffffff)"> Morato, </hi>
+                        <hi rend="background-color(#ffffff)">Jorge</hi>
+                        <hi rend="background-color(#ffffff)"> / </hi>
+                        <hi rend="background-color(#ffffff)">Gómez-Berbís, </hi>
+                        <hi rend="background-color(#ffffff)">Juan</hi>
+                        <hi rend="background-color(#ffffff)"> </hi>
+                        <hi rend="background-color(#ffffff)">Miguel</hi>
+                        <hi rend="background-color(#ffffff)"> (2013). Named entity recognition: fallacies, challenges and opportunities. </hi>
+                        <hi rend="background-color(#ffffff)italic">Computer Standards &amp; Interfaces</hi>
+                        <hi rend="background-color(#ffffff)">, </hi>
+                        <hi rend="background-color(#ffffff)italic">35</hi>
+                        <hi rend="background-color(#ffffff)">(5), 482-489.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="background-color(#ffffff)">Moretti, </hi>
+                        <hi rend="background-color(#ffffff)">Franco</hi>
+                        <hi rend="background-color(#ffffff)"> (2000). Conjectures on World Literature. </hi>
+                        <hi rend="background-color(#ffffff)italic">New Left Review,</hi>
+                        <hi rend="background-color(#ffffff)"> 1, 54-68.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

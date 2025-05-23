@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="D_RING_Marten_Impresso_Datalab_Hackathon__Programmatic_Acces">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Impresso Datalab Hackathon. Programmatic Access and Annotation Services for Multilingual and Multimodal Historical Media Collections</title>
+                <author>
+                    <persName>
+                        <surname>Düring</surname>
+                        <forename>Marten</forename>
+                    </persName>
+                    <affiliation>Luxembourg Centre for Contemporary and Digital History, Luxembourg</affiliation>
+                    <email>marten.during@uni.lu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Mello</surname>
+                        <forename>Caio</forename>
+                    </persName>
+                    <affiliation>Luxembourg Centre for Contemporary and Digital History, Luxembourg</affiliation>
+                    <email>caio.mello@uni.lu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Guido</surname>
+                        <forename>Daniele</forename>
+                    </persName>
+                    <affiliation>Luxembourg Centre for Contemporary and Digital History, Luxembourg</affiliation>
+                    <email>daniele.guido@uni.lu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ehrmann</surname>
+                        <forename>Maud</forename>
+                    </persName>
+                    <affiliation>École Polytechnique Fédérale de Lausanne, Switzerland</affiliation>
+                    <email>maud.ehrmann@epfl.ch</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Beelen</surname>
+                        <forename>Kaspar</forename>
+                    </persName>
+                    <affiliation>School of Advanced Study, University of London, United Kingdom</affiliation>
+                    <email>kaspar.beelen@sas.ac.uk</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-07T15:25:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Mini-conference</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>cultural analytics</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>History</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: justify;">Large-scale collections of cultural heritage data have long  been in demand for computational humanities research. Access to them, however, remains limited. A number of factors can explain this: legal restrictions tie access to institutional or national affiliations, institutional silos are hard to overcome; different standards for data representation and variable data quality limit their utility for users. </p>
+                <p style="text-align: justify;">
+                    <hi style="font-size:10pt">Humanities research practices are commonly characterised by iterative workflows that draw on diverse  multilingual sources and modalities (e.g. text, image, audio, video, objects) which are processed to address question-specific needs (Blanke / Hedges 2013). This stands in contrast with the typically rather static and homogeneous cultural heritage collections (</hi>
+                    <ref target="https://www.zotero.org/google-docs/?UzTeNR">Hoekstra / Koolen</ref>
+                    <hi style="font-size:10pt" xml:space="preserve"> 2019). In recent years, research under the umbrella term “computational humanities” has successfully opened up such collections for specific humanities research questions,  by adopting a variety of methods from fields such as statistics and natural language processing (</hi>
+                    <ref target="https://www.zotero.org/google-docs/?siEPPV">Karsdorp </ref>
+                    <hi style="font-size:10pt">et al. 2021; ). To better support  researchers and their evolving research practices, cultural heritage institutions are in parallel actively experimenting with data labs to offer access to tools and datasets (Candela et al. 2015).</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Scope</head>
+                <p style="text-align: justify;">Against this background, the proposed workshop will explore novel opportunities for the analysis and exploration of digital cultural heritage collections which arise through 1) programmatic access to large multilingual and multimodal data collections, 2) the availability of large language and vision models (such as LLama3.3 or OpenCLIP) for their processing and enrichment, and 3) semantic linking of such data across languages and modalities based on vector representations. </p>
+                <p style="text-align: justify;">
+                    <hi style="font-size:10pt">The Impresso Datalab brings together all three opportunities in the form of a platform that provides access to a growing corpus of historical newspaper and radio collections, models for the semantic indexation of external research documents, e.g. for named entity recognition, press agency detection, and finally the ability to link and align external research data (text and image) to the Impresso corpus on the basis of vector representations.</hi>
+                </p>
+                <p style="text-align: justify;">During the workshop, participants will experiment in small groups with the linking of external research datasets across modalities, languages, and time periods. These experiments will involve reusing and adapting  existing notebooks as well as creating new ones tailored to the objectives of the group.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>About the Impresso Datalab</head>
+                <p style="text-align: justify;">
+                    <hi style="font-size:10pt" xml:space="preserve">The hackathon is organised by the interdisciplinary research project Impresso Media Monitoring of the Past — </hi>
+                    <hi rend="italic" style="font-size:10pt">Beyond Borders</hi>
+                    <hi style="font-size:10pt" xml:space="preserve"> which leverages an unprecedented corpus of newspaper and radio archives and uses machine learning to pursue a paradigm shift in the processing, semantic enrichment, representation, exploration and study of historical media across modalities, time, languages, and national borders.</hi>
+                    <lb/>
+                    <lb/>
+                </p>
+                <p style="text-align: justify;">The Impresso Datalab enables custom analyses of the Impresso corpus and the semantic indexation of external document collections also with the help of models created by the project. Access to data and models is facilitated via the Impresso Public API, a dedicated Python library and via HuggingFace. To keep the learning curve manageable, the Datalab includes Jupyter notebooks for documentation and templates to kickstart computational analysis, visualisation and enrichment. Its design and development is driven by five objectives:</p>
+                <list type="unordered">
+                    <item>Complement generic data exploration via the Impresso Web App with objective-driven analysis and enrichment of datasets for specific research and teaching use cases.</item>
+                    <item>Enable the semantic enrichment of historical documents external to the Impresso corpus using models generated by the Impresso project.</item>
+                    <item>Facilitate the linking of external research data with the Impresso corpus on the level of semantic enrichments.</item>
+                    <item>Reflect changing research practices which rely on executable notebooks for the documentation and reproduction of data-driven research.</item>
+                    <item>Offer accessible educational resources and notebook templates to researchers at any level of coding proficiency.</item>
+                </list>
+                <p style="text-align: justify;">Overall, the Datalab supports researchers who are confronted with digitised collections with variable depth of annotation and seek to overcome the limitations of off-the-shelf graphical user interfaces. The Impresso project works with a consortium of partnering libraries and archives on the grounds of legal agreements which respect diverse copyright regulations.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Agenda </head>
+                <p>The hackathon strives to approximate real-world usage scenarios by working with participant-provided datasets which will be requested from participants beforehand. To reflect the time-constraints of a one-day hackathon, we may preprocess the data (format conversion, OCR, article segmentation etc) to allow more time for analysis during the event. </p>
+                <p>During the workshop, participants will be split into four groups and work with an Impresso team member to define guiding research objectives, semantically enrich textual document datasets, and link them to the Impresso corpus. The event will be structured as follows:</p>
+                <p>
+                    <hi style="font-size:10pt">09.00 - 09.15</hi>
+                    <hi rend="apple-tab-span"> </hi>
+                    <hi style="font-size:10pt">Welcome, introduction round and setup.</hi>
+                </p>
+                <p>
+                    <hi style="font-size:10pt">09.15 - 09.45</hi>
+                    <hi rend="apple-tab-span"> </hi>
+                    <hi style="font-size:10pt">Overview and demo of the Impresso Datalab and Q&amp;A with participants</hi>
+                </p>
+                <p>
+                    <hi style="font-size:10pt">09.45 - 10.15</hi>
+                    <hi rend="apple-tab-span"> </hi>
+                    <hi style="font-size:10pt">Presentation of research datasets and group formation</hi>
+                </p>
+                <p>
+                    <hi style="font-size:10pt">10.15 - 10.30</hi>
+                    <hi rend="apple-tab-span"> </hi>
+                    <hi style="font-size:10pt">Break</hi>
+                </p>
+                <p>
+                    <hi style="font-size:10pt">10.30 - 11.30</hi>
+                    <hi rend="apple-tab-span"> </hi>
+                    <hi style="font-size:10pt">Work in groups: Define objectives</hi>
+                </p>
+                <p>
+                    <hi style="font-size:10pt">12.30 - 13.30</hi>
+                    <hi rend="apple-tab-span"> </hi>
+                    <hi style="font-size:10pt">Lunch</hi>
+                </p>
+                <p>
+                    <hi style="font-size:10pt">13.30 - 13.45</hi>
+                    <hi rend="apple-tab-span"> </hi>
+                    <hi style="font-size:10pt">Updates from groups and Q&amp;A</hi>
+                </p>
+                <p>
+                    <hi style="font-size:10pt">13.40 - 15.30</hi>
+                    <hi rend="apple-tab-span"> </hi>
+                    <hi style="font-size:10pt">Work in groups: Experimentation with Datalab notebooks</hi>
+                </p>
+                <p>
+                    <hi style="font-size:10pt">15.30 - 15.45</hi>
+                    <hi rend="apple-tab-span"> </hi>
+                    <hi style="font-size:10pt">Break</hi>
+                </p>
+                <p>
+                    <hi style="font-size:10pt">15.45 - 17.10</hi>
+                    <hi rend="apple-tab-span"> </hi>
+                    <hi style="font-size:10pt">Work in groups: Experimentation with Datalab notebooks</hi>
+                </p>
+                <p>
+                    <hi style="font-size:10pt">17.10 - 17.30</hi>
+                    <hi rend="apple-tab-span"> </hi>
+                    <hi style="font-size:10pt">Results presentation</hi>
+                </p>
+                <p>We invite all members of the DH community. Coding experience is an asset but not a requirement to participate. Participants need to bring a laptop. The number of participants is limited to 20.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Output</head>
+                <p style="text-align: justify;">Neither data, tools nor methods are ever perfect. The outputs of the workshop will therefore include first of all case-study specific notebooks and lessons learned for the linkability of external datasets with Impresso’s corpus. Beyond these concrete outputs, the workshop will offer experience-based insights into a number of open questions: How can cultural heritage data labs best support researchers in the age of LLMs and generative AI tools? What research scenarios can be realised with vector representations of diverse research datasets? To what extent do such approaches support humanities research workflows commonly characterised by the synthesis of diverse data sources? Finally, to what extent does the Impresso Datalab effectively support such research workflows? What are the remaining gaps and what are future prospects for filling them? </p>
+                <p style="text-align: justify;">
+                    <hi style="font-size:10pt">The results from the workshop will be documented at the group-level in the form of notebooks and GitHub issues to keep track of problems and ideas for enhancements, and at the level of individual participants through informal exchanges during the event and a post-event survey.</hi>
+                </p>
+            </div>
+        </body>
+    </text>
+</TEI>

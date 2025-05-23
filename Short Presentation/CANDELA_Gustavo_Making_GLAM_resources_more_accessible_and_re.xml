@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="CANDELA_Gustavo_Making_GLAM_resources_more_accessible_and_re">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Making GLAM resources more accessible and reusable: a FAIR case study on European Literary Bibliography</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Candela</surname>
+                        <forename>Gustavo</forename>
+                    </persName>
+                    <affiliation>University of Alicante, Spain</affiliation>
+                    <email>gcandela@ua.es</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Rosiński</surname>
+                        <forename>Cezary</forename>
+                    </persName>
+                    <affiliation>Institute of Literary Research of the Polish Academy of Sciences</affiliation>
+                    <email>cezary.rosinski@ibl.waw.pl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Margraf</surname>
+                        <forename>Arkadiusz</forename>
+                    </persName>
+                    <affiliation>Institute of Bioorganic Chemistry of the Polish Academy of Sciences</affiliation>
+                    <email>margraf@man.poznan.pl</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-15T11:22:45.125996135</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Data Publishing Framework</term>
+                    <term>Collections as Data</term>
+                    <term>Linked Open Data (LOD)</term>
+                    <term>European Literary Bibliography (ELB)</term>
+                    <term>GLAM Institutions</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>bibliographic analysis</term>
+                    <term>data modeling</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>linked (open) data</term>
+                    <term>Cultural studies</term>
+                    <term>Humanities computing</term>
+                    <term>Library &amp; information science</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <anchor xml:id="id_docs-internal-guid-fa141a8a-7fff-6638-fc0a-c5c282daf092"/>GLAM institutions (Galleries, Libraries, Archives, and Museums) host rich resources made available in the form of digital collections. Bibliographic databases, in particular, represent collections of references on specific topics, which can be leveraged to apply digital humanities (DH) methods. Approaches such as "Collections as Data", "Labs" and the FAIR principles promote the publication of digital collections that support computational access (Padilla et al. 2019, Wilkinson et al. 2016). Jupyter Notebooks have emerged as a powerful tool to provide reproducible code (Candela et al.
+                <hi rend="color(#000000)"> </hi>
+                <hi rend="color(#000000)">2023</hi>
+                <hi rend="color(#000000)">)</hi>.
+            </p>
+            <p>
+                <anchor xml:id="id_docs-internal-guid-35271bf8-7fff-1572-8fb5-5bdf8b47fe0d"/>The European Literary Bibliography (ELB) is a project of the Czech Literary Bibliography (Institute of Czech Literature, Czech Academy of Sciences) and Polish Literary Bibliography (Institute for Literary Research, Polish Academy of Sciences), which was realised in 2020. It is ultimately intended to be an infrastructure for open literary bibliographic data at the European level that is currently scattered in many places. It holds resources from several European providers (Czech, Polish, Finnish, and Spanish). It contains over 4.5 million bibliographic records, information on over 140,000 people, as well as 15,000 places.
+            </p>
+            <p>
+                <hi rend="color(#000000)">This work presents a reproducible framework for publishing and reusing digital collections based on literary bibliographies provided by GLAM institutions, adapting them for computational use as "Collections as Data," and focusing on the ELB. It also describes the infrastructure used and DH research scenarios demonstrating how outcomes can be reused for various purposes. The main contributions of this work include: i) a framework for publishing and reusing "Collections as Data" based on bibliographic metadata; ii) a selection of DH research scenarios and examples of use to illustrate how data can be explored and reused; and iii) a code repository with reproducible examples based on Jupyter Notebooks.</hi>
+                <hi rend="color(#000000)"> </hi>
+                <hi rend="color(#000000)">This work is the result of an ATRIUM Transnational Access Scheme Grant in collaboration with the University of Alicante, Polish Literary Bibliography and the Poznań Supercomputing and Networking Center (PSNC).</hi>
+            </p>
+            <p>A reproducible framework to publish and reuse bibliographic metadata as Collections as data (
+                <hi rend="color(#000000)">Candela </hi>
+                <hi rend="color(#000000)">et al. </hi>
+                <hi rend="color(#000000)">2025</hi>
+                <hi rend="color(#000000)">)</hi> is presented below. Figure 1 shows the steps included in the framework.
+            </p>
+            <p>
+                <anchor type="bookmark-start" xml:id="id_docs-internal-guid-9beea4cd-7fff-0625-4c56-1941300e1a41"/>
+                <figure>
+                    <graphic url="/tmp/tmpuwvixy4f/Pictures/2390f9152a3c49087cd2e4a8929f2c0d.png"/>
+                </figure>
+                <ptr type="bookmark-end" target="#id_docs-internal-guid-9beea4cd-7fff-0625-4c56-1941300e1a41"/>Figure 1: Reproducible framework for publishing and reusing collections as data.
+            </p>
+            <p>
+                <anchor xml:id="id_docs-internal-guid-c56a9792-7fff-1774-7b16-dcb8407ea9b2"/>
+                <hi rend="color(#000000)italic">Data extraction</hi>
+                <hi rend="color(#000000)"> </hi>
+                <hi rend="color(#000000)">refers to the selection of data relevant to a specific topic, such as an author, organization, or theme. GLAM institutions provide digital collections under open licenses through various means, such as "Labs", usage examples, and prototypes. Data may be available as dump files, APIs, or research repositories.</hi>
+            </p>
+            <p>
+                <anchor xml:id="id_docs-internal-guid-964c4fb2-7fff-2e12-ab95-f1c1fe5ee73b"/>Data modelling aims at ensuring machine-readable bibliographic metadata, using ontologies and vocabularies. In this work, Schema.org was employed due to its broad community adoption. The transformation and enrichment step refers to transforming the data into Linked Open Data (LOD) using RDF to describe metadata as triples. Metadata enrichment can leverage repositories such as Wikidata and VIAF.
+            </p>
+            <p>The data quality step ensures the high quality of the generated RDF data. ShEx schemas can be used to measure RDF data quality, enabling schema definition and validation. Once transformed into RDF and assessed, the data can be published to support reuse. Accompanying documentation should include aspects such as provenance, licensing, content, and potential reuse. Finally, the datasets can be reused in various ways, such as implementing prototypes, creating Jupyter notebook collections, or supporting research scenarios defined by DH scholars.</p>
+            <p>To apply the framework to the ELB, datasets were extracted for notable authors and institutions, including Adam Mickiewicz, Miguel de Cervantes, and selected data from the National Library of Spain. The implementation was carried out through a reproducible Jupyter Notebook collection. The PSNC infrastructure was used to ensure the project's long-term sustainability as well as the use of cloud computing resources. Research scenarios were defined to illustrate the scientific reuse of GLAM data, including:</p>
+            <list type="unordered">
+                <item>
+                    <anchor xml:id="id_docs-internal-guid-06bf63b9-7fff-548e-11e1-e59b84bf94ae"/>
+                    <hi rend="bold">Comparative analysis of provincial vampire novels in Spain</hi>: Examining the presence of vampires in Spanish novels, with a focus on centre-periphery dynamics, and visibility of smaller localities, in combination with the CARE principles (
+                    <hi rend="color(#000000)">Ca</hi>
+                    <hi rend="color(#000000)">rroll</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">et al.</hi>
+                    <hi rend="color(#000000)"> 202</hi>
+                    <hi rend="color(#000000)">0</hi>
+                    <hi rend="color(#000000)">)</hi>. While Spanish novels and vampires can be searched in subjects and titles, external repositories can be used to identify small towns using the property number of inhabitants in Wikidata.
+                </item>
+                <item>
+                    <hi rend="bold">Republican writers who emigrated during the Spanish Civil War</hi>: Combining bibliographic data with Wikidata resources to explore previously unavailable data types, such as citizenship, affiliations, detention locations, conflicts, and military units. This enables additional axes of reflection to be formed to analyse the data.
+                </item>
+                <item>
+                    <hi rend="bold">Geographical distribution of publications about Spanish writers</hi>: Analyzing the geographical distribution of academic texts about Spanish writers to identify trends and classify popular and forgotten authors. Literary authors as the subject of scholarly texts and the place of publication of the texts are required.
+                </item>
+            </list>
+            <p>Additional examples of use could be based on Large Language Models (LLM): i) to explore automated cataloguing and classification in particular metadata fields such as subjects; ii) to implement conversational agents to provide a more usable search interface; and iii) to use text to knowledge graphs methods to unlock insights from raw text.</p>
+            <p>Limitations of the proposed research include data scope restricted to ELB datasets. Moreover, supplementary ontologies may be added besides Schema.org, a test domain in the URI pattern was used and enrichment processes should be expanded. Quality assessment is limited to ShEx schemas. This proposal is also challenging in terms of handling large datasets on personal computers. GLAM-provided data often have limitations in expression and completeness to meet researchers' needs. Multifaceted data use and external resource integration, such as federated SPARQL queries, are essential.</p>
+            <p>This work advances the publishing of digital collections in computationally usable forms. The framework can be adapted for various repositories to streamline data transformation and enrichment also for purposes other than literary studies. Currently, the software in Python and Jupyter Notebook is prepared for the needs of the Digital Musicology Centre at the University of Wrocław in cooperation with the PSNC, which will use this approach to analyse and study collections of music metadata and data.</p>
+            <p>Future research directions include incorporating additional ontologies and external repositories for metadata description and enrichment, and applying and adapting the framework to other domains.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Candela, G., Chambers, S. </hi>
+                        <hi rend="bold">and</hi>
+                        <hi rend="bold"> Sherratt, T.</hi> (2023): An approach to assess the quality of Jupyter projects published by GLAM institutions. J. Assoc. Inf. Sci. Technol. 74(13): 1550-1564. DOI: 10.1002/asi.24835
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Candela, G., Rosiński, C., </hi>
+                        <hi rend="color(#000000)bold">and</hi>
+                        <hi rend="color(#000000)bold"> Margraf, A.</hi>
+                        <hi rend="color(#000000)"> (2024): A reproducible framework to publish and reuse Collections as data: the case of the European Literary Bibliography. </hi>
+                        <hi rend="color(#000000)">DOI</hi>
+                        <ref target="https://doi.org/10.5281/zenodo.14106707">
+                            <hi rend="color(#000000)"> </hi>
+                        </ref>
+                        <hi rend="color(#000000)">10.5281/zenodo.14106707</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Carroll, S.R., Garba, I., Figueroa-Rodríguez, O.L., Holbrook, J., Lovett, R., Materechera, S., Parsons, M., Raseroka, K., Rodriguez-Lonebear, D., Rowe, R., Sara, R., Walker, J.D., Anderson, J. and Hudson, M.</hi>
+                        <hi rend="color(#000000)"> (2020): ‘The CARE Principles for Indigenous Data Governance’, </hi>
+                        <hi rend="color(#000000)italic">Data Science Journal</hi>
+                        <hi rend="color(#000000)">, 19(1), p. 43. </hi>
+                        <hi rend="color(#000000)">DOI</hi>
+                        <hi rend="color(#000000)">: 10.5334/dsj-2020-043</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Padilla, T., Allen, L., Frost, H., Potvin, S., Russey Roke, E., &amp; Varner, S.</hi>
+                        <hi rend="color(#000000)"> (2019): Final Report --- Always Already Computational: Collections as Data (Versión 1). Zenodo.</hi>
+                        <ref target="https://doi.org/10.5281/zenodo.3152935">
+                            <hi rend="color(#000000)"> </hi>
+                        </ref>
+                        <ref target="https://doi.org/10.5281/zenodo.3152935">
+                            <hi rend="color(#000000)">DOI: </hi>
+                        </ref>
+                        <hi rend="color(#000000)">10.5281/zenodo.3152935</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Wilkinson MD, Dumontier M, Aalbersberg IJ, Appleton G, Axton M, Baak A, Blomberg N, Boiten JW, da Silva Santos LB, Bourne PE, Bouwman J, Brookes AJ, Clark T, Crosas M, Dillo I, Dumon O, Edmunds S, Evelo CT, Finkers R, Gonzalez-Beltran A, Gray AJ, Groth P, Goble C, Grethe JS, Heringa J, 't Hoen PA, Hooft R, Kuhn T, Kok R, Kok J, Lusher SJ, Martone ME, Mons A, Packer AL, Persson B, Rocca-Serra P, Roos M, van Schaik R, Sansone SA, Schultes E, Sengstag T, Slater T, Strawn G, Swertz MA, Thompson M, van der Lei J, van Mulligen E, Velterop J, Waagmeester A, Wittenburg P, Wolstencroft K, Zhao J, Mons B. </hi>
+                        <hi rend="color(#000000)">(</hi>
+                        <hi rend="color(#000000)">2016</hi>
+                        <hi rend="color(#000000)">)</hi>
+                        <hi rend="color(#000000)bold">:</hi>
+                        <hi rend="color(#000000)"> The FAIR Guiding Principles for scientific data management and stewardship. Sci Data. Mar 15;3:160018. </hi>
+                        <hi rend="color(#000000)">DOI</hi>
+                        <hi rend="color(#000000)">: 10.1038/sdata.2016.18</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

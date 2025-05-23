@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="POIBEAU_Thierry_Automated_Annotation_Transfer_from_English_t">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Automated Annotation Transfer from English to French (Annotation Transfer as a Way to Speed-up the Production of Training Corpora)</title>
+                <author>
+                    <persName>
+                        <surname>Novikov</surname>
+                        <forename>Margo</forename>
+                    </persName>
+                    <affiliation>ENS-PSL &amp; CNRS &amp; U. Sorbonne nouvelle, France; UCLA, USA</affiliation>
+                    <email>margosha.novikova@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Poibeau</surname>
+                        <forename>Thierry</forename>
+                    </persName>
+                    <affiliation>ENS-PSL &amp; CNRS &amp; U. Sorbonne nouvelle, France</affiliation>
+                    <email>thierry.poibeau@ens.psl.eu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Mélanie-Becquet</surname>
+                        <forename>Frédérique</forename>
+                    </persName>
+                    <affiliation>ENS-PSL &amp; CNRS &amp; U. Sorbonne nouvelle, France</affiliation>
+                    <email>frederique.melanie@ens.psl.eu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T23:13:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Parallel Corpus; Annotation Transfer; Annotation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>natural language processing</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>Computer science</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">The French BookNLP project (Mélanie-Becquet 
+                    <hi rend="italic">et al</hi>., 2024) aims to build a robust NLP pipeline tailored for the comprehensive analysis of 19th- and 20th-century French literary corpora. This effort aligns with the Multilingual BookNLP project (Bamman 
+                    <hi rend="italic">et al</hi>., 2020), which updates the original pipeline (Bamman 
+                    <hi rend="italic">et al</hi>., 2014) and extends its capabilities to additional languages (but does not include French). The primary challenge for this type of project is obtaining sufficient high-quality annotated data to develop effective tools, since data annotation is a complex, time-consuming, and costly process. 
+                </p>
+                <p style="text-align: left; ">In this context, annotation transfer –although not be a universal solution–, can contribute to creating relevant training corpora at a lower cost (see Zhao et al., 2024 for a general overview). A key corpus in this direction is the “Dialogism Novel”<ref n="1" target="ftn1"/> project, which annotated characters in 28 English novels (Vishnubhotla et al., 2022). We tried to find French translations of these novels available online (noting potential copyright issues). We then aligned the English and French texts to create a parallel corpus, and finally tried to transfer character annotations from the English texts to their French counterparts. The paper details these different steps, as well as the result obtained. 
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>A Brief State of the Art</head>
+                <p style="text-align: left; ">The field of text alignment and parallel corpora has a rich history, marked by significant advancements over the past few decades. One of the foundational works in this domain is the algorithm introduced by Gale and Church (1993), which utilized statistical methods based on sentence length and word correlation to align bilingual text. This method provided a robust and efficient framework that became a cornerstone for subsequent research and applications. </p>
+                <p style="text-align: left; ">During the late 1990s and early 2000s, the surge in interest in statistical machine translation (SMT) led to a proliferation of alignment software tools. These tools were designed to extract and align parallel texts from multilingual data (e.g. BleuAlign<ref n="2" target="ftn2"/> (Sennrich and Volk, 2010); LFAligner<ref n="3" target="ftn3"/>; MKAlign<ref n="4" target="ftn4"/>; or Hunalign<ref n="5" target="ftn5"/> (Varga 
+                    <hi rend="italic">et al</hi>., 2005)), providing critical resources for the development of SMT systems. The emphasis during this period was on leveraging probabilistic models and heuristic techniques to address challenges such as differing sentence structures and idiomatic expressions across languages.
+                </p>
+                <p style="text-align: left; ">More advanced approaches leverage neural networks and multilingual embeddings (Artetxe &amp; Schwenk, 2019), which align texts in a shared semantic space. These techniques are essential for applications like machine translation and cross-lingual transfer learning, enabling robust language resource development for both high- and low-resource languages. However, the previous generation of systems, which are more portable and less resource-intensive, are still efficient and seemed sufficient in our case. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Transferring Annotations</head>
+                <p style="text-align: left; ">This section outlines the complete process of transferring annotations from a source language to a target language.</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Searching for Texts</head>
+                    <p style="text-align: left; ">The first step was to search for annotated texts with corresponding French translations. Using the "Dialogism Novel" project (Vishnubhotla et al., 2022; (https://www.adamhammond.com /pdnc/), which includes annotations for 28 English novels, we sought corresponding French translations online. The list is available in Annex 1. Only one of them has yet to be translated and made available in French; 17 of them are translated and copyright-free and available on the web (for the most important part on 
+                        <ref target="http://www.wikidata.org">
+                            <hi rend="underline color(1155CC)">www.wikidata.org</hi>
+                        </ref>), in gray in Annex 1. Our experiments so far have been conducted on 9 of the 17 available novels. See Annex 1 for details.
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Aligning Texts at the Sentence Level</head>
+                    <p style="text-align: left; ">After locating the texts, alignment at the sentence level was necessary to enable a precise transfer of linguistic annotations between languages. Several algorithms and tools can be used to create a parallel corpus. Even if the most common case is one sentence in the target corresponding to a sentence inn the source language, a sentence in the source language can occasionally give rise to several sentences in the target language, and vice versa (Figure 1). </p>
+                    <figure>
+                        <graphic n="1001" width="16.002cm" height="7.891638888888889cm" url="/tmp/tmpi4ktkvun/Pictures/ff6bd135e910c57053ef90d8f735dc82.jpg" rend="inline"/>
+                    </figure>
+                    <p rend="Style1" style="text-align: center; ">
+                        <hi rend="bold">Figure 1:</hi> Sentence alignment can be complex (
+                        <hi rend="italic">m-n</hi> cases)
+                    </p>
+                    <p style="text-align: left; ">Among traditional tools, BleuAlign, LFAligner, MKAlign, and Hunalign (Varga 
+                        <hi rend="italic">et al</hi>., 2005) were reviewed. Hunalign was selected due to its simplicity, ease of setup, and non-blackboxing controllability whilst also delivering reasonably accurate results. Before running Hunalign, preprocessing the texts was essential. This included using NLTK (Bird 
+                        <hi rend="italic">et al</hi>., 2019) for sentence segmentation, achieving higher precision than paragraph-based segmentation, as suggested in previous literature. 
+                    </p>
+                    <p style="text-align: left; ">While Hunalign performed well in most cases, it struggled with certain alignments (see figure 2), These issues highlighted the need for more advanced solutions.</p>
+                    <figure>
+                        <graphic n="1002" width="15.275525cm" height="5.2034722222222225cm" url="/tmp/tmpi4ktkvun/Pictures/ff6bd135e910c57053ef90d8f735dc82.jpg" rend="inline"/>
+                    </figure>
+                    <p style="text-align: center;">
+                        <hi rend="bold" style="font-size:10pt">Figure 2.</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> Some issues in sentence alignment</hi>
+                    </p>
+                    <p style="text-align: left; ">To refine alignment further, Google’s Gemini LLM was employed (Gemini Team Google, 2023). The reason for selecting the Gemini API was due to its simplicity of use and high accuracy in handling complex language nuances and its responsiveness to tailored prompts, which are essential for precise alignment and annotation transfer. </p>
+                    <p style="text-align: left; ">Each pair of Hunalign’s English-French alignments was passed to Gemini, which outputted either “aligned” or “unaligned.” For unaligned pairs, problematic chunks were extracted with surrounding sentences for context and passed to Gemini to realign. This process reduced alignment errors from 37% (562 out of 1525 lines) to 4% (56 out of 1525 lines). Because the Gemini API has a limit, intermediate results were saved to a CSV file after each batch.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Incorporating Annotations in a Unique File</head>
+                    <p style="text-align: left; ">Before trying to transfer annotations to French, the alignments and original English annotations were merged in the table representing the parallel corpus, such that for each English entity start and end indexes were between the start and end English phrase indexes, resulting in a table similar to the one in fig. 5. </p>
+                    <figure>
+                        <graphic n="1003" width="16.002cm" height="6.658680555555556cm" url="/tmp/tmpi4ktkvun/Pictures/ff6bd135e910c57053ef90d8f735dc82.jpg" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Figure 3: </hi>the aligned corpus with English annotations integrated
+                    </p>
+                    <p style="text-align: left; ">It is important to note that the outputs of both Hunalign and Gemini required cleaning to ensure usability. Hunalign frequently inserted special characters into the text (e.g., sequences like ~~~), while Gemini occasionally introduced short, extraneous text segments due to hallucinations. These issues were addressed through a cleansing process detailed in Annex 2.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Transferring Annotations</head>
+                    <p style="text-align: left; ">English annotations in the "Dialogism Novel" corpus include pronouns, proper nouns, selected descriptions (e.g., “the butcher”), and other phrases such as “her sister.” Most proper nouns have corresponding noun phrases in the target language (
+                        <hi rend="italic">Alice</hi> → 
+                        <hi rend="italic">Alice</hi>), but other expressions are more problematic. Google Translate was employed for non-directly corresponding entities. “Alice” remained “Alice,” but “the caterpillar” became “la chenille,” and “her sister” translated to “sa sœur,” etc. 
+                    </p>
+                    <p style="text-align: left; ">As for pronouns, mapping began with creating a bilingual dictionary (e.g., “my” → “mon|ma|mes”), which was used to locate all occurrences of English pronouns in the French sentences, ensuring equal counts in both languages. Since both English and French are SVO (subject-verb-object word order) and generally have a very similar ordering of words, the code assumes that if there are two similar pronouns in a sentence, the first English pronoun corresponds to the first French pronoun and so do the second ones (which is of course a simplification, but proved efficient in practice). Pronouns were transferred one-to-one, otherwise the French text remained empty to avoid introducing errors.</p>
+                    <p style="text-align: left; ">For unaligned pronouns, Gemini was employed to determine the most accurate French equivalent within the context of the text. The prompt was specifically designed to prioritize precision, instructing Gemini to align pronouns only when a confident match could be established. To validate these outputs, the suggested French substrings were checked against the original text, ensuring their presence and accuracy. This process effectively reduced errors and mitigated overly creative interpretations by Gemini, where occasional hallucinations or mismatches could occur. To further enhance reliability, constraints were applied to the input data, and results were systematically verified using automated text searches.</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Assessing the Method</head>
+                <p style="text-align: left; ">At this stage, we have developed a method capable of transferring annotations from English to French, resulting in high-quality corpora. This resource is invaluable for training models and has enabled the creation of a repository of comprehensively annotated novels—a resource that has not previously existed for French. An example extract from the resulting corpus is presented in Figure 4. </p>
+                <figure>
+                    <graphic n="1004" width="10.688402777777778cm" height="6.305594444444444cm" url="/tmp/tmpi4ktkvun/Pictures/ff6bd135e910c57053ef90d8f735dc82.jpg" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">
+                    <hi rend="bold" xml:space="preserve">Figure 4: </hi>An example of successfully aligned text and annotations
+                </p>
+                <p style="text-align: left; ">Note, however, that while the transfer between languages is relatively accurate, some entities may not be annotated in either the source or (more importantly) in the target language due to non-correspondence between the two languages or to other factors. Therefore, a phase of manual verification and correction remains essential following the automatic process.</p>
+                <p style="text-align: left; ">Although no dedicated test corpus is available for our case, we conducted a manual evaluation to assess the effectiveness of the approach. Using a non-Gemini approach based on dictionaries, translations, and groupings, 1765 pronouns out of 3309 (53%) were successfully transferred. Combining this method with the enhanced Gemini-based approach resulted in the transfer of 2717 pronouns (82%). This substantial improvement highlights the efficacy of integrating traditional methods with advanced LLM techniques for challenging linguistic tasks. The remaining cases (18% of the pronouns) correspond to cases where there is no equivalent in the target language, or to cases that were too difficult to resolve automatically. </p>
+                <p style="text-align: left; ">As noted above, our experiments have so far been conducted on 9 of the 17 available novels. We plan to work on the remaining novels after completing a more detailed error analysis, in order to improve the method as much as possible.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Format and Availability of the Corpus</head>
+                <p style="text-align: left; ">All the texts used in this experiment are copyright-free. The annotated corpus, along with the code developed for this experiment, is available online on GitHub at https://github.com/lattice-8094/Proppagate. The corpora are annotated using a standard XML format, ensuring they can be easily reused in various contexts, more specifically to train parser for French. It will be the first resource with whole books fully annotated for coreference in French. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion </head>
+                <p style="text-align: left; ">This paper presents a method for transferring entity annotations in literary corpora from a source language to a target language. By integrating a simple Python module with a large language model (LLM), the proposed pipeline is both customizable and transparent, marking a significant shift away from traditional “black-box” approaches. The alignment process within this framework has achieved near-perfect accuracy, highlighting the robustness of the methodology. Looking forward, this enhanced pipeline is expected to improve character detection in literary texts, particularly through the application of refined contextual reduction techniques. Additionally, adapting the modules to other languages is a future direction under consideration.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Annexes </head>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Annex 1. List of text from the "Dialogism Novel" project and available translations (for the original list, see: 
+                        <ref target="https://www.adamhammond.com/pdnc/">https://www.adamhammond.com/pdnc/</ref>)
+                    </head>
+                    <p style="text-align: left; ">In grey: novels for which we have a translation in French and which are copyright free and directly usable. </p>
+                    <figure>
+                        <graphic n="1005" width="15.134166666666667cm" height="25.200680555555557cm" url="/tmp/tmpi4ktkvun/Pictures/ff6bd135e910c57053ef90d8f735dc82.jpg" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; ">So far, we have successfully transferred the annotations for 9 of the 17 novels: 
+                        <hi rend="italic">Northanger Abbey</hi>, 
+                        <hi rend="italic">Age of Innocence</hi>, 
+                        <hi rend="italic">Dorian Gray</hi>, 
+                        <hi rend="italic">Emma</hi>, 
+                        <hi rend="italic">The Gambler</hi>, 
+                        <hi rend="italic">Invisible Man</hi>, 
+                        <hi rend="italic">Persuasion</hi>, 
+                        <hi rend="italic">Pride and Prejudice</hi>, 
+                        <hi rend="italic">The Man Who Was Thursday</hi>. The quality of the transfer process varies depending on the novel. We are currently conducting an error analysis to better understand the strengths and limitations of our method. 
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Annex 2 : Details on the post-processing techniques applied after utilizing Hunalign and Gemini for sentence alignment</head>
+                    <p style="text-align: left; ">Both Hunalign and Gemini presented distinct challenges in their text processing workflows due to their differing methods of handling text segmentation. Hunalign divides text into sequences based on line breaks, often removing \n characters and inserting random markers such as ~~~ (see fig.5). This preprocessing, while effective in most cases, can disrupt alignment when the segmentation does not respect natural sentence boundaries or introduces artificial splits.</p>
+                    <figure>
+                        <graphic n="1006" width="16.002cm" height="5.649736111111111cm" url="/tmp/tmpi4ktkvun/Pictures/ff6bd135e910c57053ef90d8f735dc82.jpg" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Figure 5: </hi>Examples of Hunalign spurious insertions in the text
+                    </p>
+                    <p style="text-align: left; ">Gemini, on the other hand, occasionally alters sentences by adding or removing words, leading to hallucinated alignments or changes in phrasing. For example, the model might generate a response like “No direct equivalent in text” even when prompted to use the specific output “None” for non-aligned cases. These variations make it difficult to maintain the original token indexes of the source text (both English and French) and hinder token-level alignment. </p>
+                    <figure>
+                        <graphic n="1007" width="16.002cm" height="2.3054027777777777cm" url="/tmp/tmpi4ktkvun/Pictures/ff6bd135e910c57053ef90d8f735dc82.jpg" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; ">Words in red correspond to the original text, while words in green correspond to the adjusted Gemini text (note that this is an extreme example, and things remained manageable overall). </p>
+                </div>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                        
+                            <ref target="https://github.com/Priya22/project-dialogism-novel-corpus/tree/master/data">
+                                <hi rend="underline color(1155CC)">https://github.com/Priya22/project-dialogism-novel-corpus/tree/master/data</hi>
+                            </ref>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                        
+                            <ref target="https://github.com/rsennrich/Bleualign">https://github.com/rsennrich/Bleualign</ref>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                        
+                            <ref target="https://github.com/kindlychung/af-aligner/">https://github.com/kindlychung/af-aligner/</ref>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn4" n="4">
+                        
+                            <ref target="https://shs.hal.science/halshs-00553950/">https://shs.hal.science/halshs-00553950/</ref>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn5" n="5">
+                        
+                            <ref target="https://github.com/danielvarga/hunalign">https://github.com/danielvarga/hunalign</ref>
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Artetxe, Mikel / Schwenk, Holger (2019): Massively Multilingual Sentence Embeddings for Zero-Shot Cross-Lingual Transfer and Beyond. 
+                        <hi rend="italic">Transactions of the Association for Computational Linguistics</hi>, 7:597–610.
+                    </bibl>
+                    <bibl style="text-align: left; ">Bamman, David / Lewke, Olivia / Mansoor, Anya (2020): An Annotated Dataset of Coreference in English Literature. In 
+                        <hi rend="italic">Proceedings of the Twelfth Language Resources and Evaluation Conference</hi>, pages 44–54, Marseille, France. European Language Resources Association.
+                    </bibl>
+                    <bibl style="text-align: left; ">Bamman, David / Underwood, Ted / Smith, Noah (2014): A Bayesian Mixed Effects Model of Literary Character. In 
+                        <hi rend="italic">Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics</hi> (Volume 1: Long Papers), pages 370–379, Baltimore, Maryland. Association for Computational Linguistics.
+                    </bibl>
+                    <bibl style="text-align: left; ">Bird, Steven / Klein Ewan / Loper, Edward (2019): Natural Language Processing with Python, distributed with the Natural Language Toolkit [http://nltk.org/], Version 3.0,</bibl>
+                    <bibl style="text-align: left; ">Doval, Irene / Sánchez Nieto, Maria Teresa (2019): Parallel corpora in focus An account of current achievements and challenges, In book: 
+                        <hi rend="italic" xml:space="preserve">Parallel Corpora for Contrastive and Translation Studies, </hi>pp.1-15. 
+                    </bibl>
+                    <bibl style="text-align: left; ">Fleury, Serge / Zimina, Maria (2007): Exploring Translation Corpora with MkAlign. Translation Journal, 2007. </bibl>
+                    <bibl style="text-align: left; ">Gale, William A. / Church, Kenneth W. (1993): A Program for Aligning Sentences in Bilingual Corpora. 
+                        <hi rend="italic">Computational Linguistics</hi>, 19(1):75–102.
+                    </bibl>
+                    <bibl style="text-align: left; ">Gemini Team Google (2023): Gemini: A Family of Highly Capable Multimodal Models. arXiv:2312.11805. </bibl>
+                    <bibl style="text-align: left; ">Mélanie-Becquet, Frédérique ./ Barré, Jean / Seminck, Olga / Plancq, Clément / Naguib, Marco / Pastor, Martial / Poibeau, Thierry (2024): “BookNLP-fr, the French Versant of BookNLP. A Tailored Pipeline for 19th and 20th Century French Literature”, 
+                        <hi rend="italic">Journal of Computational Literary Studies</hi> 3(1), 1-34. doi: 
+                        <ref target="https://doi.org/10.48694/jcls.3924">https://doi.org/10.48694/jcls.3924</ref>.
+                    </bibl>
+                    <bibl style="text-align: left; ">Sennrich, Rico / Volk, Martin (2010): MT-based Sentence Alignment for OCR-generated Parallel Texts. In Proceedings of the 9th Conference of the Association for Machine Translation in the Americas: Research Papers, Denver, Colorado, USA. Association for Machine Translation in the Americas.</bibl>
+                    <bibl style="text-align: left; ">Varga, Dániel / Halácsy, Péter / Kornai, András / Nagy, Viktor / Németh, László / Trón, Viktor (2005): Parallel corpora for medium density languages In In book: Recent Advances in Natural Language Processing IV (pp.247-258). DOI:
+                        <ref target="http://dx.doi.org/10.1075/cilt.292.32var">10.1075/cilt.292.32var</ref>. 
+                    </bibl>
+                    <bibl style="text-align: left; ">Vishnubhotla, Krishnapriya / Hammond, Adam / Hirst, Graeme (2022): The Project Dialogism Novel Corpus: A Dataset for Quotation Attribution in Literary Texts. In Proceedings of the Thirteenth Language Resources and Evaluation Conference, pages 5838–5848, Marseille, France. European Language Resources Association.</bibl>
+                    <bibl style="text-align: left; ">Zhao, Xiang / Zeng, Weixin / Tang, Jiuyang (2024): 
+                        <hi rend="italic">Entity Alignment: Concepts, Recent Advances and Novel Approaches</hi>. Springer (Big data management series): Berlin. 
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

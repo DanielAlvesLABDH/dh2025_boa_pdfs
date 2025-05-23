@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ROMERO_FERRON_Barbara_Empowering_Peripheral_Voices__Data_Sov">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Empowering Peripheral Voices: Data Sovereignty and Low-Tech Solutions for Art Galleries Data Preservation</title>
+                <author>
+                    <persName>
+                        <surname>Rodríguez Ortega</surname>
+                        <forename>Nuria</forename>
+                    </persName>
+                    <affiliation>University of Malaga</affiliation>
+                    <email>nro@uma.es</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Romero Ferrón</surname>
+                        <forename>Bárbara</forename>
+                    </persName>
+                    <affiliation>Leuphana University</affiliation>
+                    <email>barbara.romero_ferron@leuphana.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Salvachúa</surname>
+                        <forename>Martín</forename>
+                    </persName>
+                    <affiliation>University of Malaga</affiliation>
+                    <email>martinjs@uma.es</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T16:04:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>exhibition data</term>
+                    <term>art galleries</term>
+                    <term>linked open data</term>
+                    <term>public digital humanities</term>
+                    <term>digital art history</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data</term>
+                    <term>object</term>
+                    <term>and artefact preservation</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>digital art production and analysis</term>
+                    <term>linked (open) data</term>
+                    <term>Art history</term>
+                    <term>Galleries and museum studies</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Introduction</p>
+            <p>
+                <hi style="font-family:Arial Narrow" xml:space="preserve">Exhibition data plays a vital role in understanding and sustaining cultural ecosystems, serving as a foundation for historical analysis, policy development, and community engagement. However, a critical challenge persists: the scarcity of structured exhibition data (Romero Ferrón &amp; Rodríguez Ortega, 2024; see reports [1]), particularly in peripheral exhibition spaces such as medium-to-small galleries, which limits our ability to capture and preserve their contributions. In response to this challenge, the Complexhibit Project [2] —former the Exhibitium Project—launched a collaborative effort in 2017 involving gallerists based in Andalusia, southern Spain.  The purpose of this paper is to present the strategies and low-tech, accessible solutions developed through this initiative for data preservation and sharing. </hi>
+            </p>
+            <p>
+                <hi rend="bold" style="font-family:Arial Narrow">Context and Background</hi>
+            </p>
+            <p>
+                <hi style="font-family:Arial Narrow" xml:space="preserve">Galleries hold a unique position in the cultural ecosystem, maintaining a closer and often more intricate relationship with the art market. They showcase art and often facilitate its sale. Like museums, galleries are the results of the operationalisation of various types of cultural spaces, with no singular size or prototype. Their structure and function are shaped by economic support and interests, ranging from small spaces that are community-owned and aim for a cultural impact in the community to commercial galleries, some of them renowned and big with power and influence in the art market and cultural ecosystem. Between these two examples lies a broad spectrum of gallery models, each shaped by their access to resources and historical contexts. </hi>
+            </p>
+            <p>
+                <hi style="font-family:Arial Narrow">As important players in the cultural ecosystem, galleries are crucial objects of study in the field of Art History. Yet, these spaces are typically owned by individuals, collectives, or families, and when smaller, non-institutionalized galleries close, we lose not only their activity and information but also a vital part of the art ecosystem. This vulnerability is especially evident among small-to-medium sized galleries that lack the resources for comprehensive data management systems. These spaces often rely on ad hoc cataloguing methods, such as spreadsheets, which are neither standardized nor reusable in most of the cases. Some galleries record the information on websites based on WordPress, while others lack digital records altogether, relying instead on paper documents stored in physical archives. This situation poses a significant challenge, as the inability to preserve the records of these actors leads to the erosion of cultural diversity and the loss of invaluable historical narratives. Without these data points, the broader understanding of the art ecosystem, particularly its peripheral dynamics, becomes fragmented and incomplete (e.g. artists who do not exhibit in “significant” or “big” institutions).</hi>
+            </p>
+            <p>
+                <hi style="font-family:Arial Narrow" xml:space="preserve">The transient nature of many galleries —frequently ceasing operations within a few decades—further exacerbates the problem. We have observed how galleries vanished, particularly after the COVID-19 pandemic or due to the retirement of their owners, leaving no trace of their records or activities.  This scenario underscores the urgent need for intervention to preserve their contributions to cultural landscape. Nevertheless, this situation is not unfamiliar. In fact, major institutions have been acquiring gallery archives for preservation and digitization. However, these acquisition processes can be controversial, particularly when they target specific geopolitical contexts in the Global South, potentially giving rise to new forms of cultural appropriation and colonial practices. Additionally, some galleries may not consider their documentation valuable enough to donate, and even if they do, not all public libraries, archives, or university libraries have the capacity to process these kinds of donations. This gap not only affects the preservation of cultural heritage but also limits academic and policy-driven efforts to support peripheral galleries and their artists. </hi>
+            </p>
+            <p>
+                <hi rend="bold" style="font-family:Arial Narrow" xml:space="preserve">Emerging Challenges. </hi>
+                <hi style="font-family:Arial Narrow">An issue in the digital age is the growing dominance of oligopolies and monopolies in data management. Globally, many museums depend on proprietary collection management systems like Adlib, The Museum System, or PastPerfect. Similarly, libraries face challenges posed by centralised monopolies such as OCLC while broader reliance on entities like Google compounds concerns around data control and accessibility. These proprietary systems are not only expensive but also restrict data openness and accessibility. Moreover, the proliferation of platform economies exacerbates this issue. Platforms like Arfact.Net, Mutual Arts, Arsty, or ArteInformado dominate the exhibition data ecosystem, accumulating vast amounts of cultural information. While they offer visibility to small galleries, they often do so at the expense of data sovereignty. These platforms commodify cultural data, extracting it from gallerists and leveraging it for profit, often without equitable reciprocation. This dynamic raises concerns about data privatization and the centralization of knowledge in a few corporate entities, posing challenges to cultural memory preservation. For small galleries, this reliance often translates into reduced agency over their own information and heightened dependency on external platforms, which prioritize profit over preservation.</hi>
+            </p>
+            <p>
+                <hi rend="bold" style="font-family:Arial Narrow">Technological and Methodological Interventions</hi>
+                <hi style="font-family:Arial Narrow" xml:space="preserve">. Recognizing these challenges, the Complexhibit Project aimed to address these systemic gaps. Over nearly a decade, we developed a robust framework for exhibition data, transitioning from a relational database (Rodríguez Ortega &amp; Cruces Rodríguez, 2019) to an ontological model (OntoExhibit) aligned with CIDOC-CRM and based on RDF standards (Rodríguez Ortega et al. 2024) [3]. This shift enabled the creation of a graph database with a SPARQL endpoint, significantly enriching our ability to capture and analyse the complexity of exhibition information. </hi>
+            </p>
+            <p>
+                <hi style="font-family:Arial Narrow" xml:space="preserve">However, after ten years of monitoring and studying the cultural landscape (primarily in Spain and, more specifically, in the Andalusian region), we recognised the need to address broader systemic challenges within the cultural ecosystem, particularly the aforementioned scarcity of structure data in galleries. To face this problem, diverse actions based on collaborative attempts with gallerists were implemented. In 2017 we launched a data literacy initiative with small galleries in Málaga (Spain) to understand their needs and challenges, which has been sustained over the years. Workshops and surveys revealed significant challenges faced by participants. The key takeaway from these interactions was twofold: first, most participants were unaware of how to improve the accessibility and shareability of their information; second, they lacked the resources to employ third-party solutions for data management. These insights highlighted the need for accessible, open-source tools and strategies tailored to the specific constraints of smaller cultural spaces. As a result, these sessions not only identified gaps but also led to practical outcomes, such as increased awareness of data management principles and the design of accessible, open-source tools. </hi>
+            </p>
+            <p>
+                <hi style="font-family:Arial Narrow" xml:space="preserve">Building on this knowledge, and aiming not only to analyze the problem but also to provide a solution, we developed a user-friendly data registration mechanism to tackle the challenge of normalizing and preserving data contributed by gallerists. This mechanism has been designed to feed the knowledge graph conceptualized in our project. Built with HTML, CSS, and JavaScript, this platform allows gallerists to input exhibition data easily. The interface was intentionally designed to prioritize simplicity and accessibility, incorporating feedback from stakeholders during usability testing sessions. Gallerists highlighted the need of clear navigation and minimal technical complexity, which directly influenced the design decisions to ensure the platform could be effectively used without specialized training. For example, stakeholders suggested simplifying navigation menus, which led to a streamlined interface with clearly labeled categories and minimal reliance on technical jargon. </hi>
+            </p>
+            <p>
+                <hi style="font-family:Arial Narrow" xml:space="preserve">The process extends beyond data collection. A script, developed in Python with the FastAPI framework, was implemented to automatically convert the information entered by gallerists into semantic triples compatible with RDF standards. By enriching the data with semantic annotations, our mechanism not only ensures interoperability and seamless integration into the knowledge graph but also enhances the potential for data reuse and deeper analysis. Moreover, the proposed solution allows gallerists to digitize and structure their information efficiently, requiring neither advanced technical expertise nor significant resources.  </hi>
+            </p>
+            <p>
+                <hi style="font-family:Arial Narrow" xml:space="preserve">By enabling the transformation of disparate datasets into a structured, standardized, and semantically enriched format, our mechanism not only facilitates the preservation of valuable cultural records but also empowers smaller cultural spaces to manage their information autonomously. This approach, that we envision as a form of decolonial practice (McCracken &amp; Hogan-Stacey, 2023; Douglas et al., 2019), ultimately strengthens the broader cultural ecosystem, promoting sustainability and inclusivity in the digital age. This approach also ensures greater autonomy and resilience for cultural institutions in the face of growing digital monopolies (Given et al., 2023) while contributing to open science and FAIR data (Joyeux-Prunel, 2024). </hi>
+            </p>
+            <p>
+                <hi style="font-family:Arial Narrow">In the presentation, we will provide a detailed analysis of the outcomes from our data literacy program conducted with small and medium-sized galleries. Furthermore, we will demonstrate the effectiveness of the application developed to streamline RDF data collection, allowing non-expert users to directly and automatically integrate information into a knowledge graph.</hi>
+            </p>
+            <p>
+                <hi rend="bold" style="font-family:Arial Narrow">Conclusion</hi>
+                <hi style="font-family:Arial Narrow" xml:space="preserve">. The preservation of gallery data is essential for understanding and sustaining the cultural ecosystem. Our efforts highlight the importance of collaborative, data-driven approaches in addressing the challenges faced by small-to-medium sized galleries. By prioritizing data sovereignty and leveraging low-tech solutions, we aim to preserve the cultural heritage of peripheral exhibition spaces while fostering a more equitable and resilient digital landscape. Moving forward, we aim to expand our partnerships and refine our methodologies, ensuring that the contributions of these spaces are recognized and preserved for future generations. </hi>
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold" style="font-family:Arial Narrow" xml:space="preserve">[1] </hi>
+                        <hi style="font-family:Arial Narrow" xml:space="preserve">¿Cuál ha sido la dinámica expositiva en términos de volumen y evolución desde el año 2000 hasta la actualidad?, 2023. See: </hi>
+                        <ref target="https://andalexproject.iarthislab.eu/documentaci%C3%B3n/pildoras-estadisticas-1/">
+                            <hi rend="underline color(1155CC)" style="font-family:Arial Narrow">https://andalexproject.iarthislab.eu/documentaci%C3%B3n/pildoras-estadisticas-1/</hi>
+                        </ref>
+                        <hi style="font-family:Arial Narrow" xml:space="preserve"> [accessed: Dec. 7, 2024].</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-family:Arial Narrow" xml:space="preserve">[2] </hi>
+                        <hi style="font-family:Arial Narrow" xml:space="preserve">The Complexhibit project, funded by the Spanish Ministry of Science and Research, is a research framework for analyzing the domain of art exhibitions as complex cultural ecosystems through the application of data-driven methodologies. See: </hi>
+                        <ref target="https://complexhibit.eu">
+                            <hi rend="underline color(0000FF)" style="font-family:Arial Narrow">https://complexhibit.eu</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" style="font-family:Arial Narrow">[3]</hi>
+                        <hi style="font-family:Arial Narrow" xml:space="preserve"> See: </hi>
+                        <ref target="https://github.com/Complexhibit-Project/OntoExhibit">
+                            <hi rend="underline color(0000FF)" style="font-family:Arial Narrow">https://github.com/Complexhibit-Project/OntoExhibit</hi>
+                        </ref>
+                        <hi style="font-family:Arial Narrow" xml:space="preserve"> [accessed: Dec. 7, 2024]. </hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="background(white)" style="font-family:Arial Narrow">Douglas, J., Bak, G., McLellan, E., Van Hooland, S., &amp; Frogner, R. (2018). Decolonizing archival description: Can linked data help?.</hi>
+                        <hi rend="italic background(white)" style="font-family:Arial Narrow">Proceedings of the Association for Information Science and Technology</hi>
+                        <hi rend="background(white)" style="font-family:Arial Narrow" xml:space="preserve">, </hi>
+                        <hi rend="italic background(white)" style="font-family:Arial Narrow">55</hi>
+                        <hi rend="background(white)" style="font-family:Arial Narrow">(1), 669-672.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="background(white)" style="font-family:Arial Narrow">Given, L. M., Polkinghorne, S., &amp; Cattlin, J. (2024). Structural elements and spheres of expertise: Creating a healthy ecosystem for cultural data initiatives. Journal of the Association for Information Science and Technology, 75(10), 1070-1086.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-family:Arial Narrow" xml:space="preserve">McCracken, K., &amp; Hogan-Stacey, S.-S. (2023). </hi>
+                        <hi rend="italic" style="font-family:Arial Narrow">Decolonial archival futures</hi>
+                        <hi style="font-family:Arial Narrow">. Chicago: ALA Neal-Schuman.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-family:Arial Narrow">Joyeux-Prunel, B. (2024). Digital humanities in the era of digital reproducibility: towards a fairest and post-computational framework. International Journal of Digital Humanities, 6(1), 23-43.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-family:Arial Narrow" xml:space="preserve">Romero Ferron, B., &amp; Rodríguez Ortega, N. (2024, June 5). Exhibition Data, Public Art Institutions, and Data Governance. DH Benelux 2024, Leuven, Belgium. Zenodo. </hi>
+                        <ref target="https://doi.org/10.5281/zenodo.11484527">
+                            <hi rend="underline color(1155CC)" style="font-family:Arial Narrow">https://doi.org/10.5281/zenodo.11484527</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-family:Arial Narrow" xml:space="preserve">Rodríguez Ortega, Nuria y Cruces Rodríguez, Antonio. «Development of Technological Ecosystems for Cultural Analysis: The Case of Expofinder System and Art Exhibitions», </hi>
+                        <hi rend="italic" style="font-family:Arial Narrow" xml:space="preserve">Digital Scholarship in the Humanities, </hi>
+                        <hi style="font-family:Arial Narrow" xml:space="preserve">34, n. 2, pp. 423-448.  fqy018, Oxford University Press, 2019, ISSN: 2055-768X (online), DOI: </hi>
+                        <ref target="https://doi.org/10.1093/llc/fqy018">
+                            <hi style="font-family:Arial Narrow">https://doi.org/10.1093/llc/fqy018</hi>
+                        </ref>
+                        <hi style="font-family:Arial Narrow">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-family:Arial Narrow" xml:space="preserve">Rodríguez Ortega, Nuria, Roldán García, M.ª Mar, Platas Díez, M.ª Luisa, Salvachúa, Martín. «OntoExhibit: An Ontology for Modeling the Field of Art Exhibitions and Its Semantic-Discursive Dimension», in Karajgikar, Jajwalya/ Andrew Janco / Jessica Otis (eds.). </hi>
+                        <hi rend="italic" style="font-family:Arial Narrow">Digital Humanities 2024: Book of Abstracts</hi>
+                        <hi style="font-family:Arial Narrow" xml:space="preserve">. VA 2024, pp.  DOI: </hi>
+                        <hi rend="color(1154CC)" style="font-family:Arial Narrow">10.5281/zenodo.13761079</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

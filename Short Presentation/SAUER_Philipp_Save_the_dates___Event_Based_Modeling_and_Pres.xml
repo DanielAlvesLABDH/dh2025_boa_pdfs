@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SAUER_Philipp_Save_the_dates___Event_Based_Modeling_and_Pres">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Save the dates - Event-Based Modeling and Preserving Cultural Heritage of Dance in the German Democratic Republic </title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Sauer</surname>
+                        <forename>Philipp</forename>
+                    </persName>
+                    <affiliation>Sächsische Akademie der Wissenschaften, Germany</affiliation>
+                    <email>sauer@saw-leipzig.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Gruß</surname>
+                        <forename>Melanie</forename>
+                    </persName>
+                    <affiliation>Universität Leipzig, Germany</affiliation>
+                    <email>melanie.gruss@uni-leipzig.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Helm</surname>
+                        <forename>Caroline</forename>
+                    </persName>
+                    <affiliation>Universität Leipzig, Germany</affiliation>
+                    <email>c.helm@tanzarchiv-leipzig.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Kretschmer</surname>
+                        <forename>Uwe</forename>
+                    </persName>
+                    <affiliation>Sächsische Akademie der Wissenschaften, Germany</affiliation>
+                    <email>kretschmer@saw-leipzig.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Naether</surname>
+                        <forename>Franziska</forename>
+                    </persName>
+                    <affiliation>Sächsische Akademie der Wissenschaften, Germany</affiliation>
+                    <email>naether@saw-leipzig.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Primavesi</surname>
+                        <forename>Patrick</forename>
+                    </persName>
+                    <affiliation>Universität Leipzig, Germany</affiliation>
+                    <email>primavesi@uni-leipzig.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-15T13:55:27.587290853</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Data modelling</term>
+                    <term>Contemporary witnesses</term>
+                    <term>Archive</term>
+                    <term>History of Dance</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data modeling</term>
+                    <term>digital archiving</term>
+                    <term>linked (open) data</term>
+                    <term>Humanities computing</term>
+                    <term>Performance Studies: Dance</term>
+                    <term>Theatre</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1">
+                <head>Introduction: Modern Dance in the Cultural Heritage of Eastern Germany </head>
+                <p>Modern Dance in Germany has been recognized by UNESCO as part of the world’s intangible cultural heritage in 2022 (see Deutsche Unesco Kommission 2022). The division of Germany from 1948 to 1989 saw the development of unique dance practices in Eastern Germany, shaped by the political, social, and cultural conditions of the former German Democratic Republic (GDR) in parallel with the Western part of the country. In this paper, we present a pilot project exploring the role dance studies and digital methods can play in preserving this legacy. We give some insights into our methods and discuss our efforts to include citizen and practitioners knowledge.</p>
+            </div>
+            <div type="div1">
+                <head>Our Project: Mapping the Tanzarchiv Leipzig and Other Sources</head>
+                <p>Modelling of performing arts metadata remains achallenging task. (see e.g. Bellini et al. 2015, Weiberg 2020) Our project is carried out in collaboration between the University of Leipzig and the Saxon Academy of Sciences, focusing on the exploration and cataloging of the archival holdings of the Tanzarchiv Leipzig. Founded in 1957 by Kurt Petermann, the Tanzarchiv Leipzig became the most important documentation and research center for dance in the GDR. It holds extensive archival materials, including photographs, posters, performance records and letters.</p>
+                <p>Influenced by already existing data models for the performing arts (e.g. Bonora et al. 2021, Cifuentes et al. 2022, Estermann/Schneeberger 2017, Tietz/Sack 2024, Thull 2015), we now try to develop a data model that is event-based (meaning it understands a work of the performing arts as something realized in material events) and centered around the sources. This model should bring together archival materials with performance dates, productions, institutions and individual persons. Based on the developing model, we create a knowledge graph linked with standardized sources like Integrated Authority File (GND) and Wikidata, providing a well-structured and searchable resource for scholars and practitioners. A small-scale database is developed initially with a select number of exemplary cases, in preparation for a larger-scale project.</p>
+            </div>
+            <div type="div1">
+                <head>What is Cultural Heritage in the Performing Arts?</head>
+                <p>When we speak of cultural heritage of dance in the GDR, we’re engaged in a very broad topic, including but not limited to the diversity of dance practices from ballet to folk dance, a network of personal and institutional relationships, the development of dance productions and their mutual influences and the individual experience of dance makers and practitioners. </p>
+                <p>To map this field, we methodically collect materials around certain exemplary productions and go through them in detail, entering highly granulated information into the knowledge graph about individual biographies, institutional affiliations, creative influences into productions and participations in events. All these pieces of information are linked to their sources, making the archive browsable in a web based research environment while at the same time putting together information about individuals, institutions, productions, events, places and roles. While we can’t discuss the model here in greater scope, we published a more detailed discussion and some insights into our technical infrastructure at the DACH-conference for Digital Humanities and invite everyone interested to read it for more detailed information (see Sauer et al. 2025).</p>
+            </div>
+            <div type="div1">
+                <head>Official Sources and Experiential Knowledge: Engaging with Contemporary Witnesses</head>
+                <p>The official documents and materials found in the archive grant a diverse and rich, yet limited insight into the GDR’s world of dance. The materials housed within the archive were created within the system of the GDR government and thus reflect specific ideological perspectives. As symbolic communication through a generally understandable and emotional “language” of movement, dance in particular is also open to appropriation and ideological appropriation. Dance historiography served to shape the identity of the respective political system. (see Gruß 2020, Primavesi 2021, Giersdorf 2014) To broaden and enrich the state-sanctioned narratives represented in the archive, we must incorporate practical and experiential knowledge. (see Normann 2012, Walsdorf 2010)</p>
+                <p>For photographs or videos found in the archive, comprehensive metadata are rare and who the individuals caught on tape actually are may in many cases only be visible to people that were involved in the materials creation. In order to better understand and analyze the material, we also engage with contemporary witnesses — dancers, choreographers, and other figures who were active in dance during the GDR era.</p>
+                <p>Including these perspectives is crucial for filling gaps in the archive and providing valuable contextual information about the materials. Through engaging with contemporary witnesses, the project has seen a rapid expansion of the materials being processed. Our interview partners are eagerly sharing personal collections, contributing to a growing body of stocks and sources. As part of the pilot, we're trying to develop workflows that allow for meaningful participation, enabling contemporary witnesses to annotate their own materials and contribute to the knowledge graph in ways that are both simple and effective. Without such collaboration, this knowledge risks being lost in the near future. </p>
+            </div>
+            <div type="div1">
+                <head>Conclusion: The Role of Participatory Methods in Preserving Dance Heritage </head>
+                <p>Many scholars and strategy papers in the last years have highlighted the growing importance of participatory methods in research in general (e.g. Bonn et al. 2016, Hedges/Dunn 2017) or for preservation of cultural heritage in particular (Ridge 2018). The pilot phase of our project encountered this as well. While we were planning to conduct a limited number of 20 to 30 interviews, we did not anticipate the scope of additional material and information that would arise from these.</p>
+                <p>Our pilot project has already taught us some key lessons. For cataloging and understanding the archive, a fitting data model on its own will remain limited. By incorporating the voices of contemporary witnesses, we can enrich the materials and gain a more comprehensive and nuanced view of dance in the former GDR. To exploit the full potential of engaging with former practitioners, we must also be able to include their private archives and their knowledge about those materials into our systems. </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Bellini, Pierfrancesco / Nesi, Paolo</hi> (2015) ‘Modeling performing arts metadata and relationships in content service for institutions’, 
+                        <hi rend="italic">Multimedia Systems</hi>, 21(5), pp. 427–449. Available at: 
+                        <ptr target="https://doi.org/10.1007/s00530-014-0366-0"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Bonn, Aletta / Richter, Anett / Vohland, Kathrin / Pettibone, Lisa / Brandt, Miriam, / Feldmann, Reinart / Göbel, Claudia </hi>
+                        <hi rend="bold italic">et al.</hi>
+                        <hi rend="bold"> (eds)</hi> (2016) 
+                        <hi rend="italic">Grünbuch Citizen Science Strategie 2020 für Deutschland</hi>. Berlin: Projekt ‘Bürger schaffen Wissen - Wissen schafft Bürger’ (GEWISS).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Bonora, Paolo / Ossicini, Charlotte / Raffa, Giuseppe</hi> (2006) ‘From Relational Metadata Standards to CRM Ontology: a Case Study in Performing Arts’. Available at: 
+                        <ptr target="https://doi.org/10.13140/RG.2.1.3139.1848"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Bonora, Paolo / Pompilio, Angelo</hi> (2021) ‘Corago in LOD : The debut of an Opera repository into the Linked Data arena’, 
+                        <hi rend="italic">JLIS</hi> [Preprint], (2). Available at: 
+                        <ptr target="https://doi.org/10.4403/jlis.it-12699"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Cifuentes, Blanca Gómez / </hi>
+                        <hi rend="bold">Freire,</hi>
+                        <hi rend="bold"> Carlos Fernández / del Bosque González, Isabel / Murga Castro, Idoia</hi> (2022) ‘Researching Spanish Dance in Time and Space: A GIS for La Argentina’s Ballets Espagnols’, 
+                        <hi rend="italic">Digital Humanities Quarterly</hi>, 16(3). Available at: 
+                        <ptr target="https://www.digitalhumanities.org/dhq/vol/16/3/000625/000625.html"/> (Accessed: 12 November 2024).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Deutsche UNESCO-Kommission</hi> (2022) 
+                        <hi rend="italic">Moderner Tanz in UNESCO-Liste des Immateriellen Kulturerbes aufgenommen</hi>. Available at: 
+                        <ptr target="https://www.unesco.de/kultur-und-natur/immaterielles-kulturerbe/immaterielles-kulturerbe-weltweit/moderner-tanz-unesco"/> (Accessed: 19 November 2024).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Estermann, Beat / Schneeberger, Christian</hi> (2017) ‘Data Model for the Swiss Performing Arts Platform’. Available at: 
+                        <ptr target="https://www.bfh.ch/dam/jcr:78a5e853-3c03-4ed8-8e28-86e2791a5829/SPA_Data_Model_v0-51_20170926.pdf"/> (Accessed: 25 March 2025).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Giersdorf, Jens Richard</hi> (2014) 
+                        <hi rend="italic">Volkseigene Körper: Ostdeutscher Tanz seit 1945</hi>. Bielefeld: Transcript (Tanz Scripte, 34).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Gruß, Melanie</hi> (2020) ‘(Re)Produzierte Bewegung. Techniken der Archivierung von Tanz bei Kurt Petermann’, in Dreckmann, Kathrin / Butte, Maren / Vomberg, Elfi (eds) 
+                        <hi rend="italic">Technologien des Performativen: das Theater und seine Techniken</hi>. Bielefeld: transcript (Theater, Band 137), pp. 115–125.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hedges, Mark / Dunn, Stuart E.</hi> (2018) 
+                        <hi rend="italic">Academic crowdsourcing in the humanities: crowds, communities and co-production</hi>. Cambridge, MA Kidlington, OX5: Elsevier, Chandos Publishing (Chandos information professional series).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Primavesi, Patrick</hi> (2021) ‘„Heute tanzen alle jungen Leute …“ Spitzentanz, Staatliches Dorfensemble und der Lipsi im Wettstreit der Systeme’, 
+                        <hi rend="italic">Politik &amp; Kultur</hi>, (10), p. 26.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Ridge, Mia (ed.)</hi> (2017) 
+                        <hi rend="italic">Crowdsourcing our cultural heritage</hi>. First issued in paperback. London New York: Routledge, Taylor &amp; Francis Group (Digital research in the arts and humanities).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Sauer, Philipp / </hi>
+                        <hi rend="bold">Gruß, Melanie / Helm, Caroline / Primavesi, Patrick / Kretschmer, Uwe / Naether, Franziska</hi> (2025) ‘Work(s) in progress – Datenmodellierung zum Kulturerbe Tanz in der DDR als Prozess’. Available at: 
+                        <ptr target="https://doi.org/10.5281/ZENODO.14943024"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Thull, Bernhard</hi> (2015) ‘Linked Data im digitalen Tanzarchiv der Pina Bausch Foundation’, in Ege, Börteçin / Humm, Bernhard / Reibold, Anatol (eds) 
+                        <hi rend="italic">Corporate Semantic Web: wie </hi>
+                        <hi rend="italic">semantische Anwendungen in Unternehmen Nutzen stiften</hi>. Berlin/Heidelberg (X.media.press), pp. 259–275.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Tietz, Tabea / Sack, Harald</hi> (2024) ‘Towards Linked Stage Graph 2.0 - a Knowledge Graph based Research Resource for the Performing Arts’. Zenodo, 21 February. Available at: 
+                        <ptr target="https://doi.org/10.5281/zenodo.10698238"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Walsdorf, Hanna</hi> (2010) 
+                        <hi rend="italic">Bewegte Propaganda: politische Instrumentalisierung von Volkstanz in den deutschen Diktaturen</hi>. Königshausen &amp; Neumann.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Weiberg, Birk </hi>(2020) ‘Modeling Performing Arts: On the Representations of Agency." Arti dello Spettacolo/Performing Arts 6.6 (2020): 50-56.’, 
+                        <hi rend="italic">Arti dello Spettacolo/Performing Arts</hi>, 6(6), pp. 50–56.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

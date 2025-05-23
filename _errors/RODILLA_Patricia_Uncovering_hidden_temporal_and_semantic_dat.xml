@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="RODILLA_Patricia_Uncovering_hidden_temporal_and_semantic_dat">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Uncovering hidden temporal and semantic dataset’s bias in hate speech: A Study of MetaHate's Diachronic and Lexical Variability</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Martin-Rodilla</surname>
+                        <forename>Patricia</forename>
+                    </persName>
+                    <affiliation>Spanish National Research Council (CSIC), Spain</affiliation>
+                    <email>p.m.rodilla@iegps.csic.es</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Piot</surname>
+                        <forename>Paloma</forename>
+                    </persName>
+                    <affiliation>Information Retrieval Lab, University of A Coruña (Spain)</affiliation>
+                    <email>paloma.piot@udc.es</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T08:29:05.792970304</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>bias</term>
+                    <term>datasets</term>
+                    <term>hate speech</term>
+                    <term>lexical diversity</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digital access</term>
+                    <term>privacy</term>
+                    <term>and ethics analysis</term>
+                    <term>meta-criticism (reflections on digital humanities and humanities computing)</term>
+                    <term>social media analysis and methods</term>
+                    <term>Computer science</term>
+                    <term>Linguistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>INTRODUCTION AND MOTIVATION</head>
+                <p>The Digital Humanities are enabling a scaling-up in humanities research, allowing for the study of cultural, historical, and social phenomena through large datasets created across different contexts. However, this shift brings challenges, as the way these datasets are constructed and the methodologies used can perpetuate biases (Hawkins 2022).</p>
+                <p>In order to bring to light in a practical way the bias in digital humanities datasets, recent studies (Ortolja-Baird / Nyhan 2022) seek to make explicit the biases that often remain hidden in the processes of data collection and analysis. We also aim to open a broader discussion on the need to adopt critical and conscious approaches in the use of large datasets in humanistic research questions.</p>
+                <p>This paper analyses 13 datasets from the largest meta-collection of hate speech datasets (MetaHate: 
+                    <hi rend="color(#0462c1)">https://irlab.org/metahate.html</hi>). We investigate how inherent sample and label biases affect the identification and representation of hate speech across different contexts. Utilizing established methodologies for bias analysis (Wich et al. 2022), we focus on temporal and semantic biases.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>BIAS ANALYSIS METHODOLOGY</head>
+                <p>The research on identifying and measuring bias in datasets is rapidly advancing (Ferrara 2023) alongside the growth of artificial intelligence applications (Schwartz et al. 2022). Frameworks are proposed for humanistic datasets (Rane 2023), including those focusing on textual and hate speech biases (Raza 2024). This study references the first two levels of the Wich’s framework (Meta and Semantic) (Wich et al. 2022). Levels 3 and 4 address biases in applied research and are considered for future exploration. Additionally, the results are illustrated with specific visualizations using Python libraries (MatplotLib 
+                    <ptr target="https://matplotlib.org/"/>, Seaborn 
+                    <ptr target="https://seaborn.pydata.org/"/>) and the Variationist tool (Ramponi et al. 2024), which effectively explores and visualizes variation and bias in textual data.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>TEMPORAL BIAS ANALYSIS</head>
+                <p>At the meta level of the Wich’s framework, three aspects are considered: class variability, temporal aspects, and author distribution. Since variability in sources and authorship has been previously analysed (Piot et al. 2024), we focus on the MetaHate temporal analysis. Notably, 
+                    <hi rend="bold">only 13 MetaHate datasets provide temporal information </hi>on the original social media posts. In addition, we have also identified the different methodological strategies employed for each temporal dataset building process, organized in 8 categories (A to H: A: Random sample; B: Terminological close list based on frequency; C: Terminological close list based on polarity; D: Terminological close list based on semantics (keywords, hashtags…); E: Expanded terminology (Lexicons, etc.); F: Community-based sampling (i.e., selected subreddits, selected media elements); G: Possible haters profiles content; H: unexplained), as shown in 
+                    <hi rend="italic">Table 1.</hi>
+                </p>
+                <p>
+                    <anchor xml:id="id__Ref195006389"/>
+                    <hi rend="italic">Table 1. MetaHate subset of datasets with original post's production date available</hi>
+                </p>
+                <table rend="frame" xml:id="Tabla1">
+                    <row>
+                        <cell rend="center">MetaHate Dataset</cell>
+                        <cell>
+                            <p rend="center">Content</p>
+                            <p rend="center">Production</p>
+                            <p rend="center">Year</p>
+                        </cell>
+                        <cell>
+                            <p rend="center">Source</p>
+                            <p rend="center"> </p>
+                        </cell>
+                        <cell>
+                            <p rend="center">Dataset</p>
+                            <p rend="center">Construction</p>
+                            <p rend="center">Strategy</p>
+                        </cell>
+                    </row>
+                    <row>
+                        <cell rend="center">ENCASE 2018</cell>
+                        <cell rend="center">2017</cell>
+                        <cell rend="center">Twitter</cell>
+                        <cell rend="center">C</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">Hate Speech A/B 2016</cell>
+                        <cell rend="center">2015</cell>
+                        <cell rend="center">Twitter</cell>
+                        <cell rend="center">B</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">Hateval 2019</cell>
+                        <cell rend="center">2018</cell>
+                        <cell rend="center">Twitter</cell>
+                        <cell rend="center">G</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">MeTooMA 2020</cell>
+                        <cell rend="center">2018</cell>
+                        <cell rend="center">Twitter</cell>
+                        <cell rend="center">E</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">BullyDetect 2018</cell>
+                        <cell rend="center">2015</cell>
+                        <cell rend="center">Reddit</cell>
+                        <cell rend="center">H</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">Multiclass Hate Speech 2022</cell>
+                        <cell rend="center">2020-2021</cell>
+                        <cell rend="center">Twitter</cell>
+                        <cell rend="center">D</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">Measuring Hate Speech</cell>
+                        <cell rend="center">2019</cell>
+                        <cell rend="center">Twitter, Reddit, YouTube</cell>
+                        <cell rend="center">A</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">HateXplain 2020</cell>
+                        <cell rend="center">2019-2020</cell>
+                        <cell rend="center">Twitter</cell>
+                        <cell rend="center">E</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">CAD 2021</cell>
+                        <cell rend="center">2019</cell>
+                        <cell rend="center">Reddit</cell>
+                        <cell rend="center">F</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">The Gab Hate Corpus 2022</cell>
+                        <cell rend="center">2018</cell>
+                        <cell rend="center">Gab</cell>
+                        <cell rend="center">A</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">Intervene Hate 2019</cell>
+                        <cell rend="center">2018</cell>
+                        <cell rend="center">Gab</cell>
+                        <cell rend="center">F</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">Hate Online News Media 2018</cell>
+                        <cell rend="center">2017</cell>
+                        <cell rend="center">Facebook, YouTube</cell>
+                        <cell rend="center">F</cell>
+                    </row>
+                    <row>
+                        <cell rend="center">Hate Speech Data 2017</cell>
+                        <cell rend="center">2014-2015</cell>
+                        <cell rend="center">Whisper</cell>
+                        <cell rend="center">E</cell>
+                    </row>
+                </table>
+                <p> </p>
+                <p>
+                    <hi rend="italic">Table 1</hi> shows that accurate post’s production date is only for a small one third of the total percentage (13 of 36 datasets, 352.654 posts out of 1.226.202 total posts) of the metacollection, allowing temporal bias analysis only within this subset. Despite this limitation, the available data shows a homogeneous distribution over the years, helping reduce sample bias in this subset. The next section will explore how temporal aspects relate to semantic analysis, uncovering hidden biases in hate speech.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>SEMANTIC BIAS ANALYSIS</head>
+                <p>The semantic level focuses on analyzing class similarities within and across datasets, and the topics they cover. Initial studies on topic modelling have been published in the collection [9], but a deeper analysis is needed, addressing three aspects:</p>
+                <p>Semantic representativeness: We examine 
+                    <hi rend="italic">Table 1</hi> datasets by computing the bigrams pointwise mutual information metric (PMI), which highlights strongly representative terms for both hate and non-hate labels. The results, illustrated in Figure 1 and Figure 2, display the thematic trends in the terms with the highest representation across datasets. While focusing on specific topics—such as metoo, COVID-19, and racial slurs—can refine detection and response systems, it reveals weaknesses in dataset creation strategies and potential bias towards certain content types, as seen in 
+                    <hi rend="italic">Figure 3</hi>. For instance, hate content tends to concentrate on subtypes, like racism, which could hinder efforts to identify other hate speech forms against underrepresented groups.
+                </p>
+                <p>The temporal component also significantly influences PMI values, (i.e. see COVID-19 prevalence during the pandemic). This underscores the need to identify potential temporal biases and their semantic connections, highlighting how these biases can affect detection and filtering systems' effectiveness and fairness.</p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpyyutl2ek/Pictures/fa56a5f9d4b8a4d7f4597255136b7b9c.png"/>
+                    </figure>
+                </p>
+                <p>
+                    <anchor xml:id="id__Ref195006634"/>
+                    <hi rend="italic">Figure 1.</hi>
+                    <hi rend="italic">PMI analysis of 50 top hate bigrams with Variationist tool</hi>
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpyyutl2ek/Pictures/fa56a5f9d4b8a4d7f4597255136b7b9c.png"/>
+                    </figure>
+                </p>
+                <p>
+                    <anchor xml:id="id__Ref195006643"/>
+                    <hi rend="italic">Figure 2. PMI analysis of 50 top non-hate bigrams with Variationist tool</hi>
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpyyutl2ek/Pictures/fa56a5f9d4b8a4d7f4597255136b7b9c.png"/>
+                    </figure>
+                </p>
+                <p>
+                    <anchor xml:id="id__Ref195007300"/>
+                    <hi rend="italic">Figure 3. Top 10 PMI bigrams by dataset</hi>
+                </p>
+                <p>
+                    <hi rend="bold">Lexical variability and data dispersion: </hi>To enhance the analysis of semantic bias, we expanded beyond dataset topics to include lexical variability aspects using metrics from Variationist tool. We computed two metrics—Type Token Ratio (TTR) as a logarithmic curve and MaaS Index (Maas 1972) —ensuring that results were not influenced by datasets' varying lengths.
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpyyutl2ek/Pictures/fa56a5f9d4b8a4d7f4597255136b7b9c.png"/>
+                    </figure>
+                </p>
+                <p>
+                    <anchor xml:id="id__Ref195007753"/>
+                    <hi rend="italic">Figure 4. Standard deviation TTR values by dataset building strategy</hi>
+                </p>
+                <p>According to the obtained lexical variability values, our study indicates that the MetaHate temporal subset reinforces studies showing hate-labeled sets present greater lexical variability than non-hate ones, contrary to initial researcher intuition (Gevers et al. 2022). In addition, 
+                    <hi rend="italic">Figure 4</hi> and 
+                    <hi rend="italic">Figure 5</hi> show TTR metric and MaaS Index values and how some creation strategies can influence lexical variability. This line of work is of interest to select the best dataset construction strategies ensuring better thematic representation and lexical variability in future hate speech datasets.
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpyyutl2ek/Pictures/fa56a5f9d4b8a4d7f4597255136b7b9c.png"/>
+                    </figure>
+                    <hi rend="italic">Figure 5. Standard deviation MaaS index values by dataset building strategy</hi>
+                </p>
+                <p>When analysing lexical data dispersion across datasets, certain trends emerge. Although no initial differences in variability were found between datasets, examining dispersion over time reveals a trend towards lower dispersion, with recent datasets showing a narrower and longer standard deviation curve. The most dispersed data for both hate and non-hate contexts occurred around 2015-2017, while the least dispersed data was seen in 2020-2021, suggesting reduced lexical variability in newer datasets.</p>
+                <p>The standard deviation of hate lexical variability is represented for both TTR (
+                    <hi rend="italic">Figure 6</hi>) and MaaS (
+                    <hi rend="italic">Figure 7</hi>) over time, showing a notable drop in dispersion in 2020 and 2021 data. This warrants further investigation, as practices like reusing previous linguistic resources for current datasets or focusing on specific contemporary topics may decrease lexical diversity. This identified trend could signify a bias in MetaHate from a semantic perspective, particularly in resources containing data from 2019 onward.
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpyyutl2ek/Pictures/fa56a5f9d4b8a4d7f4597255136b7b9c.png"/>
+                    </figure>
+                </p>
+                <p>
+                    <anchor xml:id="id__Ref195009361"/>
+                    <hi rend="italic">Figure 6. Standard deviation curves of MetaHate datasets analyzed in HATE lexical variability TTR metric. Different hate datasets are displayed in colors</hi>
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpyyutl2ek/Pictures/fa56a5f9d4b8a4d7f4597255136b7b9c.png"/>
+                    </figure> 
+                </p>
+                <p>
+                    <anchor xml:id="id__Ref195009225"/>
+                    <hi rend="italic">Figure 7. Standard deviation curves of MetaHate datasets analyzed in HATE lexical variability MaaS Index. Different hate datasets are displayed in colors</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>CONCLUSIONS AND FUTURE WORK</head>
+                <p>This paper explores temporal and semantic biases in the largest meta-collection of hate speech datasets, highlighting issues like lack of information on the temporality of content and significant semantic biases, such as topical centrality and reduced lexical diversity. Future work will focus on exploring deeper levels of these issues within MetaHate and applying methodologies to digital humanities metacollections. </p>
+                <p>The paper serves as both a methodological and practical example of how digital humanities should critically analyze dataset biases. By examining various datasets, the study underscores the need for greater transparency in data collection to enhance understanding of online hate. This approach not only deepens hate speech analysis but also sets an example for future research in digital humanities, advocating for studies that are more inclusive, rigorous, and ethically sound across different contexts.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>Ferrara, Emilio (2023) ‘Fairness and Bias in Artificial Intelligence: A Brief Survey of Sources, Impacts, and Mitigation Strategies’, 
+                        <emph>Sci.</emph>, 6, p. 3.
+                    </bibl>
+                    <bibl>Gevers, Ine, Markov, Ilia and Daelemans, Walter (2022) ‘Linguistic analysis of toxic language on social media’, in 
+                        <emph>Computational Linguistics in the Netherlands</emph>, 12, pp. 33–48.
+                    </bibl>
+                    <bibl>Hawkins, Ashleigh (2022) ‘Archives, linked data and the digital humanities: increasing access to digitised and born-digital archives via the semantic web’, 
+                        <emph>Archival Science</emph>, 22(3), pp. 319–344.
+                    </bibl>
+                    <bibl>Maas, Heintz-Dieter (1972) ‘Über den Zusammenhang zwischen Wortschatzumfang und Länge eines Textes’, 
+                        <emph>Zeitschrift für Literaturwissenschaft und Linguistik</emph>, 2(8), pp. 73–96.
+                    </bibl>
+                    <bibl>Ortolja-Baird, Alexandra and Nyhan, Julianne (2022) ‘Encoding the haunting of an object catalogue: on the potential of digital technologies to perpetuate or subvert the silence and bias of the early-modern archive’, 
+                        <emph>Digital Scholarship in the Humanities</emph>, 37(3), pp. 844–867.
+                    </bibl>
+                    <bibl>Piot, Paloma, Martín-Rodilla, Patricia and Parapar, Javier (2024) ‘Metahate: A dataset for unifying efforts on hate speech detection’, in 
+                        <emph>Proceedings of the International AAAI Conference on Web and Social Media</emph>, 18, pp. 2025–2039.
+                    </bibl>
+                    <bibl>Ramponi, Alan, Casula, Camilla and Menini, Stefano (2024) ‘Variationist: Exploring Multifaceted Variation and Bias in Written Language Data’, in 
+                        <emph>Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 3: System Demonstrations)</emph>, pp. 346–354.
+                    </bibl>
+                    <bibl>Rane, Nitin (2023) 
+                        <emph>Role and Challenges of ChatGPT and Similar Generative Artificial Intelligence in Arts and Humanities</emph>. Available at: 
+                        <ptr target="http://dx.doi.org/10.2139/ssrn.4603208"/>(Accessed: 8 April 2025).
+                    </bibl>
+                    <bibl>Raza, Shaina, Garg, Muskan, Reji, Deepak John, Bashir, Syed Raza and Ding, Chen (2024) ‘Nbias: A natural language processing framework for BIAS identification in text’, 
+                        <emph>Expert Systems with Applications</emph>, 237, p. 121542.
+                    </bibl>
+                    <bibl>Schwartz, Reva, Vassilev, Apostol, Greene, Kristen, Perine, Lori, Burt, Andrew and Hall, Patrick (2022) 
+                        <emph>Towards a standard for identifying and managing bias in artificial intelligence</emph>. Vol. 3. Gaithersburg: US Department of Commerce, National Institute of Standards and Technology.
+                    </bibl>
+                    <bibl>Wich, Maximilian, Eder, Tobias, Al Kuwatly, Hala and Groh, Georg (2022) ‘Bias and comparison framework for abusive language datasets’, 
+                        <emph>AI and Ethics</emph>, 2(1), pp. 79–101.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

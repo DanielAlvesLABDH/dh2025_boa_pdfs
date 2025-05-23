@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="GORDIN_Shai_Breaking_the_Unicode_Barrier_with_Niv_Louie__Adv">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Breaking the Unicode Barrier with Niv Louie: Advancing Digital Accessibility through Innovative Screen Reading and Braille Translation Technologies</title>
+                <author>
+                    <persName>
+                        <surname>Yeater</surname>
+                        <forename>Matthew</forename>
+                    </persName>
+                    <affiliation>Department of the Land of Israel Studies and Archaeology, Ariel University, Israel</affiliation>
+                    <email>Yeshurun.Matityah@msmail.ariel.ac.il</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Sáenz Santos</surname>
+                        <forename>Luis D.</forename>
+                    </persName>
+                    <affiliation>Institute for the Languages and Cultures of the Near East, University of Jena, Germany</affiliation>
+                    <email>luis.daniel.saenz.santos@uni-jena.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Gordin</surname>
+                        <forename>Shai</forename>
+                    </persName>
+                    <affiliation>Department of the Land of Israel Studies and Archaeology, Ariel University, Israel</affiliation>
+                    <email>shaigo@ariel.ac.il</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Digital Accessibility Technologies</term>
+                    <term>Unicode Character Recognition</term>
+                    <term>Assistive Technologies Integration</term>
+                    <term>Print-Disabled Academic Access</term>
+                    <term>Open-source</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>curricular and pedagogical development and analysis</term>
+                    <term>digital access</term>
+                    <term>privacy</term>
+                    <term>and ethics analysis</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>Computer science</term>
+                    <term>Disability and differently-abled studies</term>
+                    <term>Education/ pedagogy</term>
+                    <term>Linguistics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>The proliferation of digital information and the ubiquity of Unicode encoding have fundamentally transformed the landscape of textual data dissemination, fostering unprecedented access and dissemination across diverse disciplines, including linguistics, philology, medicine, and the sciences. However, this technological advancement has concurrently illuminated persistent barriers to accessibility for print-disabled individuals, particularly those who are blind or visually impaired. Standard assistive technologies, such as screen readers and Braille translation software, frequently encounter limitations in interpreting and representing a broad spectrum of Unicode characters, especially specialized symbols and linguistic characters, due to insufficient or incompatible Unicode support by either braille or speech. Most screen readers do not read many Unicode symbols, and most Unicode symbols have not had braille assigned to them. This shortcoming not only marginalizes a portion of the global scholarly and professional community but also constrains educational and research opportunities for individuals with print disabilities. (Schlesinger, 2013; Stunell, 2020) Addressing this critical gap necessitates innovative solutions that democratize the customization and extension of assistive technologies, empowering users and educators to tailor content in accordance with linguistic, scientific, or pedagogical requirements.</p>
+                <p>The present work outlined in this abstract introduces "
+                    <ref target="https://nivlouie.com/">Niv Louie</ref>", an open-source, modular software platform designed to facilitate the integration of Unicode characters into assistive technology ecosystems, primarily through compatibility with 
+                    <ref target="https://www.nvaccess.org/">NVDA</ref> —an open-source, Windows-based screen reader— and 
+                    <ref target="https://liblouis.io/">Lib Louis</ref>, a widely adopted Braille translation software which publishes braille tables utilized by nearly every OS accessibility software, third party screen readers, and digital braille devices. 
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>What is Niv Louie?</head>
+                <p>The core innovation of Niv Louie resides in its capacity to enable users—irrespective of their programming expertise—to generate, validate, and deploy custom character mappings, Braille tables, and language extensions from a csv file via an intuitive graphical user interface (GUI). This interface, built upon the NiceGUI framework, streamlines complex workflows such as CSV parsing, error detection, extension building, and document conversion, thereby democratizing access to assistive technology customization.</p>
+                <p>One of the central contributions of Niv Louie is its facilitation of the creation of custom NVDA extensions—additional modules that augment the screen reader’s capabilities to interpret and audibly articulate specialized Unicode characters—thus expanding linguistic and technical accessibility. Concurrently, the platform enables the development of bespoke Braille translation tables compatible with Lib Louis, fostering inclusivity across tactile and auditory modalities. Furthermore, Niv Louie supports the generation of digital Braille documents, a feature that synthesizes textual content, potentially comprising multiple languages and symbols, into braille-ready formats suitable for embossing or tactile display devices.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Niv Louie Architecture</head>
+                <p>The technical architecture of Niv Louie exemplifies a sophisticated integration of Python-based modules that perform critical functions, including CSV data processing, validation, and filtering, as well as the automated generation of NVDA add-ons and Lib Louis-compatible Braille tables. The application’s modular design ensures extensibility and scalability, allowing future enhancements such as expanded language support, automated error correction, and deeper integration with other assistive tools. The CSV files serve as the central data repository, encapsulating Unicode symbols, hexadecimal codes, character names, and user-defined Braille representations (see Figure 1), which are then meticulously validated through rigorous error-checking procedures, such as detection of duplicate entries, invalid Unicode sequences, and inconsistent Braille formats. This allows inexperienced users to successfully utilize Niv Louie to obtain access to the desired material by whichever avenue they prefer.</p>
+                <p>The GUI component, designed via 
+                    <ref target="https://nicegui.io/">NiceGUI</ref>, encapsulates complex technical processes within an accessible interface, thus obviating the necessity for advanced programming skills among end-users (see Figure 2). Through project management modules, users can create, modify, and delete projects, upload and process CSV files, and configure language and Braille properties. The extension builder module allows for the definition of character-to-speech mappings, while the Braille table and test builder facilitate the validation of translation accuracy and compatibility. The document builder further extends utility by converting standard textual documents into braille formats, accommodating multi-language and multi-symbol content seamlessly.
+                </p>
+                <p>The underpinning data processing pipeline leverages the pandas library for efficient handling and validation of CSV data, ensuring data integrity and consistency. Error detection algorithms identify common issues such as missing, malformed, or duplicate entries, thereby maintaining high standards of data quality essential for reliable assistive technology performance. The application’s output modules generate standardized files—such as NVDA add-on packages, Lib Louis table files, and braille documents—that are directly deployable within existing assistive technology workflows.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Present and Future of Niv Louie</head>
+                <p>Niv Louie embodies a paradigm shift in accessibility practice by empowering end-users and educators to actively participate in the customization of assistive tools. By obviating the dependency on specialized programming knowledge, Niv Louie fosters a more inclusive approach to assistive technology development, aligning with contemporary principles of user-centered design and participatory innovation. If a user has the ability to create a spread sheet, then they can make any Unicode character instantly accessible by braille or speech. Moreover, its open-source nature ensures broad accessibility, fostering collaborative improvement and adaptation within the global community of developers, researchers, and end-users.</p>
+                <p>In addition to its immediate utility, Niv Louie seeks to influence future avenues of research, including the integration of machine learning algorithms for predictive error correction, the development of multilingual and multiscript support, and the incorporation of cloud-based deployment models for real-time collaborative editing. Its architecture exemplifies a flexible, extensible framework that can be adapted to emerging assistive technologies and accessibility standards in reference to Unicode.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p>In conclusion, Niv Louie works to enhance accessibility in digital domain, bridging the gap between Unicode’s vast potential and its practical utilization by assistive technologies. By providing a user-friendly, customizable, and open-source platform, it empowers a diverse array of stakeholders—educators, researchers, and individuals with print disabilities—to tailor and enhance their access to digital content, thereby promoting inclusive education, research, and professional participation. Its innovative integration of GUI-driven workflows, rigorous data validation, and seamless interoperability with existing assistive software exemplifies a holistic approach to addressing a complex, multifaceted challenge. As digital content continues to proliferate and diversify, tools like Niv Louie will assist in ensuring that technological progress translates into genuine inclusivity and equal opportunity for all who needs access to digital print material.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Figures:</head>
+                <figure>
+                    <graphic n="1001" width="16.002cm" height="11.405305555555556cm" url="/tmp/tmpwux6sp32/Pictures/8caaef908b22f58f31dd5a4c8c26d02a.png" rend="inline"/>
+                </figure>
+                <p>
+                    <hi style="font-size:10pt">Figure {1} Example of the CSV file for Akkadian.</hi>
+                </p>
+                <figure>
+                    <graphic n="1002" width="16.002cm" height="12.864041666666667cm" url="/tmp/tmpwux6sp32/Pictures/8caaef908b22f58f31dd5a4c8c26d02a.png" rend="inline"/>
+                </figure>
+                <p>Figure {2} Niv Louie Home Screen.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Schlesinger, Lisa</hi> (2019): “The Social Model's Case for Inclusion: ‘Motivating Factor' and 'But For' Standards of Proof Under the Americans with Disabilities Act and the Impact of the Social Model of Disability on Employees with Disabilities”, in: 
+                        <hi rend="italic">Cardozo Law Review</hi>, 35: 2115-2145.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Skrzetuska, Ewa</hi> (2019): “Refleksja nauczyciela podstawq dzialaii wlaczajgcych w eduka-cji”, in: 
+                        <hi rend="italic">Kwartalnik Pedagogiczny</hi> 64: 106-118. 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Stunell, Kari</hi> (2020): “Supporting Student-Teachers in the Multicultural Classroom,” in: 
+                        <hi rend="italic">European Journal of Teacher Education</hi> 44(1): 1-17.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

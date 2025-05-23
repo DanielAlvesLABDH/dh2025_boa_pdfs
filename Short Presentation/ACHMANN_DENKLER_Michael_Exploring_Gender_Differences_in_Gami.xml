@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ACHMANN_DENKLER_Michael_Exploring_Gender_Differences_in_Gami">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Exploring Gender Differences in Gaming Culture: A Comparative Analysis of Male and Female Streamers’ Live Chat Interactions on Twitch.tv</title>
+                <author>
+                    <persName>
+                        <surname>Pfältzer</surname>
+                        <forename>Greta</forename>
+                    </persName>
+                    <affiliation>University of Regensburg, Germany</affiliation>
+                    <email>greta@pfaeltzer.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Achmann-Denkler</surname>
+                        <forename>Michael</forename>
+                    </persName>
+                    <affiliation>University of Regensburg, Germany</affiliation>
+                    <email>michael.achmann@informatik.uni-regensburg.de</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Wolff</surname>
+                        <forename>Christian</forename>
+                    </persName>
+                    <affiliation>University of Regensburg, Germany</affiliation>
+                    <email>christian.wolff@informatik.uni-regensburg.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Twitch.tv</term>
+                    <term>Gendered Communication</term>
+                    <term>Topic Modeling</term>
+                    <term>Gaming Community</term>
+                    <term>Social Media Analysis</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>natural language processing</term>
+                    <term>social media analysis and methods</term>
+                    <term>text mining and analysis</term>
+                    <term>Computer science</term>
+                    <term>Games studies</term>
+                    <term>Gender and sexuality studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div xml:id="introduction" type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>In online gaming communities, aggressive behavior is often normalized through harassment and insults, with women disproportionately targeted by negative interactions (Hilvert-Bruce and Neill 2020; Kuznekoff and Rose 2013). This dynamic is also evident on Twitch.tv, where prior research in English-speaking contexts has shown that female streamers are more likely to receive objectifying or emotionally charged messages. In contrast, male streamers attract gameplay-focused comments (Nakandala et al. 2017). Such patterns reflect “gendered communication,” defined as content that reinforces gender disparities.</p>
+                <p>Despite these findings, little is known about how gendered communication unfolds in non-English gaming communities. This study addresses that gap by analyzing chat messages from German-speaking Twitch channels through a combination of computational topic modeling and exploratory qualitative analysis. By focusing on a non-English Twitch community, this study broadens the empirical basis for understanding gendered communication in digital gaming spaces.</p>
+            </div>
+            <div xml:id="methods" type="div1" rend="DH-Heading1">
+                <head>Methods</head>
+                <p>To empirically explore gendered communication on Twitch, this study focused on German-speaking creators in the gaming category, excluding those who primarily streamed non-gaming content. A manual review of the top 250 German-speaking streamers identified 16 female streamers meeting these criteria. Sixteen male streamers with similar average viewer counts were selected to ensure a balanced dataset.</p>
+                <p style="text-align: left;">Chat messages were collected using Chat-Downloader, a Python-based tool available on GitHub (xenova n.d.). Data was gathered prospectively over one week, from May 27 to June 2, 2024, during peak streaming hours (4 p.m. to 11 p.m.), resulting in a dataset of 368,464 chat messages across 96 streams.</p>
+                <p>Qualitative content analysis was employed, an inductive method that allows for exploratory and theory-building research (Döring and Bortz 2016). To complement this, the topic modeling algorithm BERTopic was chosen for its suitability to process short-form content (Egger and Yu 2022). Preprocessing removed empty, non-text messages and those under four words, reducing the dataset to 45% of its original size. Text normalization was applied using the 
+                    <hi rend="Verbatim_Char">cleantext</hi> library. After embedding and clustering, stop words were filtered with NLTK’s German stop word list. The initial model generated 5,603 topics. By iteratively adjusting HDBSCAN’s 
+                    <hi rend="Verbatim_Char">min_cluster_size</hi> parameter, the cluster size of 25 was identified as optimal, delivering a range of interpretable topics—the final model produced 862 topics, grouping 84,498 messages while leaving 58,483 as outliers.
+                </p>
+                <p>The 862 topics were manually reviewed and categorized into 14 broader themes for analysis, providing a comprehensive framework to explore gendered communication dynamics on Twitch.</p>
+            </div>
+            <div xml:id="results" type="div1" rend="DH-Heading1">
+                <head>Results</head>
+                <p>The data reveals that the most common theme across all chats is ‘Social Interactions and Personalities’ comprising 24.4% of the messages, emphasizing the community-oriented nature of Twitch chats (cf. Figure 1). Other noteworthy categories include ‘Games and Gameplay’ (19.77%), ‘Generated Messages’ (15.30%), ‘Emotes’ (12.27%), and ‘Emotions and Opinions’ (10.09%). A striking difference emerges when comparing the gender distribution of these topics. In male streamers’ chats, ‘Games and Gameplay’ dominates (27.11%), highlighting their focus on gaming-related content. This is followed by ‘Social Interactions and Personalities’ (23.71%), ‘Generated Messages’ (19.25%), ‘Emotions and Opinions’ (8.69%), and ‘Emotes’ (8.18%). In contrast, female streamers’ chats place more emphasis on community engagement, with ‘Social Interactions and Personalities’ accounting for 25.21% of messages. The use of ‘Emotes’ (17.00%) is notably higher, while ‘Emotions and Opinions’ are also more frequent (11.71%), suggesting discussions around emotional and mental health topics. Messages about ‘Games and Gameplay’ make up only 11.28%, indicating a reduced focus on gaming compared to male streamers. Figure 
+                    <ref target="#fig:distribution">1</ref> highlights these differences between genders in the distribution of topics. Other minor categories also vary by gender. For example, ‘Food and Drinks’ (4.34%) and ‘Appearance and Health’ (4.16%) are more common in female streamers’ chats, while ‘Technology’ (3.55%) appears more frequently in male streamers’ chats. Although BERTopic identified topics related to sexuality and gender, the number of messages was negligible, and further analysis did not reveal findings of objectification or harassment in the chats of male and female streamers. Overall, female streamers’ chats exhibit greater diversity, covering a broader range of interests, and male streamers’ chats are more heavily centered on gaming. These findings underscore that gender shapes communication on Twitch.
+                </p>
+                <figure>
+                    <anchor xml:id="discussion"/>
+                    <graphic n="1001" width="14.328994444444444cm" height="9.727658333333334cm" url="/tmp/tmpsf3kxnn5/Pictures/8763fd9f6e9413a7aaa42023f0c06b8c.png" rend="inline"/>
+                    <head>
+                        <anchor xml:id="Ref196904314"/>Figure Percentage Distribution of Topics by Gender
+                    </head>
+                </figure>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Discussion</head>
+                <p>The results presented above point to patterns of gendered communication: Male streamers’ chats focused primarily on ‘Games and Gameplay,’ while chats in female-led streams evoked ‘Social Interactions and Personalities’ and expressive content like ‘Emotes.’ This highlights how digital spaces reflect societal norms, with female channels fostering social and emotional interactions. Male channels prioritize gaming aspects.</p>
+                <p>In contrast to prior research, we did not observe significant objectification or harassment. This may point to a behavioral shift in Twitch communities, cultural differences in German-speaking contexts, or the effectiveness of moderation tools and community guidelines. However, these explanations remain speculative and require further study.</p>
+                <p>During the data collection process, it was observed that female streamers often broadcast a wider range of streaming categories, such as “Just Chatting” or “Arts and Crafts,” compared to male streamers. This content diversity likely influences the topics discussed in chats, suggesting that chat dynamics may not solely be shaped by gender. This underscores the complexity of digital spaces and highlights the need for future research.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion, Future Work and Limitations</head>
+                <p>This study examined how gender influences communication patterns in German-speaking Twitch chats by combining computational topic modeling with qualitative analysis. The use of BERTopic enabled the identification of overarching themes in a large dataset of live chat messages, offering insights into how gender shapes discourse in gaming communities.</p>
+                <p>The results show that chats in female-led streams focus more on emotional and social engagement, while male streamers’ chats are centered on gaming content. Unlike prior studies, we found no significant evidence of objectification or harassment. This may reflect cultural differences, evolving community norms, or effective moderation practices.</p>
+                <p>However, several limitations must be acknowledged. The topic model was not formally evaluated, and a single coder conducted the annotation. The study also excluded non-binary streamers, the gender of chat participants, and the visual and narrative context of the streams themselves. Additionally, a substantial portion of messages remained unclustered, suggesting that further refinement of the method is needed.</p>
+                <p>Future research should address these limitations by incorporating diverse gender identities, multilingual comparisons, and richer contextual data to enhance understanding. Expanding the analysis beyond the binary framework will help create a more inclusive understanding of communication in live-streaming environments.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-doering_forschungsmethoden_2016"/>
+                        <anchor xml:id="refs"/>Döring, Nicola, and Jürgen Bortz. 2016. 
+                        <hi rend="italic">Forschungsmethoden Und Evaluation in Den Sozial- Und Humanwissenschaften</hi>. Berlin, Heidelberg: Springer. doi:
+                        <ref target="https://doi.org/10.1007/978-3-642-41089-5">10.1007/978-3-642-41089-5</ref>.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-egger_topic_2022"/>Egger, Roman, and Joanne Yu. 2022. “A Topic Modeling Comparison Between LDA, NMF, Top2Vec9, and BERTopic to Demystify Twitter Posts.” 
+                        <hi rend="italic">Frontiers in Sociology</hi> 7. doi:
+                        <ref target="https://doi.org/10.3389/fsoc.2022.886498">10.3389/fsoc.2022.886498</ref>.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-hilvert-bruce_im_2020"/>xenova. 
+                        <hi rend="italic">chat-downloader: A Simple Tool Used to Retrieve Chat Messages from Livestreams, Videos, Clips and Past Broadcasts. No Authentication Needed!</hi> GitHub. Accessed April 30, 2025. https://github.com/xenova/chat-downloader.
+                    </bibl>
+                    <bibl rend="Bibliography">Hilvert-Bruce, Zorah, and James T. Neill. 2020. “I’m Just Trolling: The Role of Normative Beliefs in Aggressive Behaviour in Online Gaming.” 
+                        <hi rend="italic">Computers in Human Behavior</hi> 102 (January): 303–11. doi:
+                        <ref target="https://doi.org/10.1016/j.chb.2019.09.003">10.1016/j.chb.2019.09.003</ref>.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-Kuznekoff_communication_2013"/>Kuznekoff, Jeffrey H., and Lindsey M. Rose. 2013. “Communication in Multiplayer Gaming: Examining Player Responses to Gender Cues.” 
+                        <hi rend="italic">New Media &amp; Society</hi> 15 (4): 541–56. doi:
+                        <ref target="https://doi.org/10.1177/1461444812458271">10.1177/1461444812458271</ref>.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-nakandala_gendered_2017"/>Nakandala, Supun, Giovanni Ciampaglia, Norman Su, and Yong-Yeol Ahn. 2017. “Gendered Conversation in a Social Game-Streaming Platform.” 
+                        <hi rend="italic">Proceedings of the International AAAI Conference on Web and Social Media</hi> 11 (1): 162–71. doi:
+                        <ref target="https://doi.org/10.1609/icwsm.v11i1.14885">10.1609/icwsm.v11i1.14885</ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

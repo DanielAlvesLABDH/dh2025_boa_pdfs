@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KANG_Jiying_Exploring_Pan_ecologicalness__A_Distant_Reading_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Exploring Pan-ecologicalness: A Distant Reading of Ecological Discourse in 20th Century US Novel</title>
+                <author>
+                    <persName>
+                        <surname>Kang</surname>
+                        <forename>Jiying</forename>
+                    </persName>
+                    <affiliation>Department of Chinese Language and Literature, Tsinghua University, China</affiliation>
+                    <email>kangjy21@mails.tsinghua.edu.cn</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Zhao</surname>
+                        <forename>Wei</forename>
+                    </persName>
+                    <affiliation>Institute of Literature, Chinese Academy of Social Sciences, China</affiliation>
+                    <email>xiye1002@163.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Han</surname>
+                        <forename>Yufeng</forename>
+                    </persName>
+                    <affiliation>Department of Chinese Language and Literature, Tsinghua University, China</affiliation>
+                    <email>hanyf21@mails.tsinghua.edu.cn</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-30T09:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>genre</term>
+                    <term>ecocriticism</term>
+                    <term>computational criticism</term>
+                    <term>distant reading</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>eco-criticism and environmental analysis</term>
+                    <term>Cultural studies</term>
+                    <term>Humanities computing</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Critics have long been interested in consolidation and reception of literary genres. When it comes to 20th century, a distinguishing pattern is the “diffusion” of genres (Wolfe, 2001: 8), and sometimes even goes beyond boundaries of fictional writing. As Fredric Jameson suggested, the interaction between literary criticism and writing is one of the key elements in shaping 20th century world literature. In this study, we aim to pin down this literary pattern through quantitative study of ecoliterature to better understand what, where and how the concept of genre circulates.</p>
+            <p>Although depicting nature has been a tradition throughout literary history, nature writing has never been regarded as an individual genre until the 1970s. The prevalence of environmental classics such as Silent Spring and increasingly influential postwar environmental movement resulted in the emergence of a new critical practice --ecocriticism. And ecocriticism, in turn, played a significant role in ecofiction’s genre consolidation. However, the definition is so loose (Buell, 2011) that the boundary of genre becomes hard to determine. We would like to design a set of experiments to make the most out of this blurriness, not only pinning down the relation between ecocriticism, ecofiction and its filiation, but also visualizing diffusion of 20th century genres on a large-scale basis.</p>
+            <list type="unordered">
+                <item>Methodology</item>
+            </list>
+            <p>Genre theorists have reached a consensus that genres share “family resemblances” constituted by a set of overlappping features that changes overtime (Kincaid, 2003). Since this study mainly focuses on relation and chronological changes of ecological discourse through 20th century, we decided to harness a microscopic but semantically-sensitive feature that preserved long-term stability -- lexicon. The experiment consists of two parts.</p>
+            <figure>
+                <graphic n="1001" width="14.308666666666667cm" height="7.667625cm" url="/tmp/tmpldngbfxn/Pictures/e08aefc858536a75fd411536dee5556d.jpeg" rend="inline"/>
+            </figure>
+            <p>
+                <hi rend="bold" style="font-family:Arial Bold">Figure 1.</hi>
+            </p>
+            <p>Methodology procedures</p>
+            <p>The first part constructed an ecological word cohort through genre-specified corpora to explore the relation between ecological discourse and control group genres. It should be noted that the study is not aimed at genre identification, but at measuring the strengths of boundaries between them. So we started the analysis on a set of clearly-categorized texts that best represent features and style of a particular genre. The corpora is constituted of 5 parts, with 2 experimental groups (ecocriticism and ecofiction), 2 related control groups (science fiction and gothic) and 1 uncorrelated control group (war writing). We then calculated word TF-IDF in this 12,350,000-word corpora to sort out the most important 489 vocabularies in ecological corpora that distinguish them from other genres in the collection of texts. The word cohort is brought back to individual corpus to secure its TF-IDF sequence as representation of ecological discourse within different genres. A Pearson Correlation test was conducted between these TF-IDF sequences to see how ecological discourse performed in different genres and how they relate to each other. This process already underpinned diffusion of ecological discourse among ecocriticism, ecofiction and related genres on lexical level, which we defined as “pan-ecologicalness”.</p>
+            <p>To better understand what constitutes “pan-ecologicalness” and how it entered 20th century US novel, we conducted the second experiment. We first constructed a formula to measure “pan-ecologicalness” of individual novel based on frequency and richness of ecological word cohort (So, 2019), and visualized changes in 6759 20th century US novels. </p>
+            <figure>
+                <graphic n="1002" width="14.848416666666667cm" height="1.4975416666666668cm" url="/tmp/tmpldngbfxn/Pictures/e08aefc858536a75fd411536dee5556d.jpeg" rend="inline"/>
+            </figure>
+            <p>
+                <hi rend="bold" style="font-family:Arial Bold" xml:space="preserve">Figure 2. </hi>
+            </p>
+            <p>“Ecologicalness” formula</p>
+            <p>We then picked out outlier texts, and dug deep into their vocabularies, paragraphs, props, plot devices and themes through scalable reading to produce a more comprehensive picture of 20th century ecological discourse as a social or cultural milieu. </p>
+            <list type="unordered">
+                <item>Results</item>
+            </list>
+            <p>The result of correlation test (See Figure 2) clearly showcases a high degree of textual coherence between ecocriticism, ecofiction and their filiation. Ecofiction not only bears the highest level of correlation with ecocriticism (0.270) among all four genres, but the correlation was so strong that it even transcends correlations between novelistic genres such as Gothic and war writing (0.237 and 0.220). Such findings suggest that there is a blurry family resemblance -- the so-called “pan-ecologicalness”-- shared among ecocriticism, ecofiction, science fiction and Gothic that can be defined verbally.</p>
+            <figure>
+                <graphic n="1003" width="12.57123611111111cm" height="11.608152777777779cm" url="/tmp/tmpldngbfxn/Pictures/e08aefc858536a75fd411536dee5556d.jpeg" rend="inline"/>
+            </figure>
+            <p>
+                <hi rend="bold" style="font-family:Arial Bold" xml:space="preserve">Figure 3. </hi>
+            </p>
+            <p>Correlations among ecocriticism articles, ecofiction, science fiction, gothic and war writing</p>
+            <p>We decided to go further and underline the words that caused diffusion. So we collected top 50 TF-IDF ecological words within each corpus and bracketed into different categories based on their occurrences (Chen, 2020) (See Figure 3). Not only did ecological discourse shares referent of nature and natural scenery such as “nature,” “landscape,” “wilderness,” “forest,” “planet,” “wood,” (yellow-highlighted), but it also evokes aspects of domestic life using words like “society,” “material,” “global,” “town,” (blue-highlighted). This is understandable because it is not until post-Enlightenment stage that we started the anthropocentric allegation that mankind holds the dominant power of causing earth’s geological change (Buell, 2011), which means that human society was regarded as part of nature beforehand. And it is reflected in a set of words that describes human-nature relation -- “relationship,” “system,” “consciousness,” (green-highlighted). Moreover, “woman,” “child,” “poor,” “god,” (purple-highlighted) suggest that ecological discourse is also entwined with gender, hierarchical and religious construct.</p>
+            <figure>
+                <graphic n="1004" width="12.677069444444445cm" height="6.988527777777778cm" url="/tmp/tmpldngbfxn/Pictures/e08aefc858536a75fd411536dee5556d.jpeg" rend="inline"/>
+            </figure>
+            <p>
+                <hi rend="bold" style="font-family:Arial Bold" xml:space="preserve">Figure 4. </hi>
+            </p>
+            <p>
+                <hi rend="italic normalweight" style="font-family:Arial Italic">Top 50 TF-IDF words in each subgenre</hi>
+            </p>
+            <p>We then conducted the experiment on 20th century US novel corpus, and drew out scatter points and variance of its Pan-ecologicalness. </p>
+            <figure>
+                <graphic n="1005" width="11.39825cm" height="8.549569444444444cm" url="/tmp/tmpldngbfxn/Pictures/e08aefc858536a75fd411536dee5556d.jpeg" rend="inline"/>
+            </figure>
+            <p>Figure 5. </p>
+            <p>
+                <hi rend="italic normalweight" style="font-family:Arial Italic">Pan-ecologicalness scatter points, overall fitting trend and boundaries of deviation in 20th century US novels</hi>
+            </p>
+            <figure>
+                <graphic n="1006" width="11.428236111111111cm" height="8.5725cm" url="/tmp/tmpldngbfxn/Pictures/e08aefc858536a75fd411536dee5556d.jpeg" rend="inline"/>
+            </figure>
+            <p>Figure 6. </p>
+            <p>Variance of Pan-ecologicalness of 20th century US novels</p>
+            <p>Both figures show a gradual aggregation toward the median, suggesting that although the number of novels increased over the period, ecological discourse became a widely-accepted phenomenon in novelistic writing and showed a gradual consolidation in genre stability. This means that there may be a feature set that constitutes family resemblance within Pan-ecologicalness bracket.</p>
+            <p>It is also noteworthy that the number of novels exceeding boundary of 3-sigma algorithm (the orange period) rose dramatically after 1970 in Figure 5. These outliers all have exceptionally high Pan-ecologicalness, and hold answer to how ecocriticism influenced fictional writing in the last 30 years of the period. </p>
+            <p>But we’re also well aware that genre is a complex social construct that goes beyond linguistic features that bag-of-words model describes. So we implemented “scalable reading” to maximize our model’s legibility, ensuring that the word cohort and formula are capable of identifying underlying factors that cause and explain the phenomenon of “Pan-ecologicalness”. We gradually reduced the word cohort based on TF-IDF, and found that correlation between ecocriticism and science fiction dipped down when the number of words decreased to 362 and ecocriticism became solely correlated with ecofiction at 139. The 139 words are considered as the core of ecological discourse, which we used to measure “ecologicalness” of 20th century US novels. We then compare sequences of Pan-ecologicalness and ecologicalness, and drew 3-dimensional chronological scatter plot that highlights texts with difference within 10 and Pan-ecologicalness within 200 (see Figure 7 and Table 1).</p>
+            <figure>
+                <graphic n="1007" width="10.563930555555556cm" height="7.522986111111111cm" url="/tmp/tmpldngbfxn/Pictures/e08aefc858536a75fd411536dee5556d.jpeg" rend="inline"/>
+            </figure>
+            <p>Figure 7. </p>
+            <p>
+                <hi rend="italic normalweight" style="font-family:Arial Italic">Chronological difference in ranking of Pan-ecologicalness and Ecologicalness of 20th century US novel</hi>
+            </p>
+            <table rend="rules">
+                <row>
+                    <cell style="text-align: center;">
+                        <anchor xml:id="Hlk179733023"/>No.
+                    </cell>
+                    <cell style="text-align: center;">Title</cell>
+                    <cell style="text-align: center;">Author</cell>
+                    <cell style="text-align: center;">Year</cell>
+                    <cell style="text-align: center;">Pan-ecologicalness</cell>
+                    <cell style="text-align: center;">Pan-ecologicalness ranking</cell>
+                    <cell style="text-align: center;">Ecologicalness ranking</cell>
+                    <cell style="text-align: center;">Difference in ranking (absolute value)</cell>
+                    <cell style="text-align: center;">Genre tag</cell>
+                </row>
+                <row>
+                    <cell style="text-align: center;">1</cell>
+                    <cell style="text-align: left;">
+                        <hi style="font-size:9pt">The Flute of the Gods</hi>
+                    </cell>
+                    <cell style="text-align: left;">Marah Ellis Ryan</cell>
+                    <cell style="text-align: center;">1909</cell>
+                    <cell style="text-align: center;">
+                        <hi style="font-size:9pt">17.904</hi>
+                    </cell>
+                    <cell style="text-align: center;">3</cell>
+                    <cell style="text-align: center;">2</cell>
+                    <cell style="text-align: center;">1</cell>
+                    <cell style="text-align: left;">Historical</cell>
+                </row>
+                <row>
+                    <cell style="text-align: center;">2</cell>
+                    <cell style="text-align: left;">
+                        <hi style="font-size:9pt">The Peace Chief</hi>
+                    </cell>
+                    <cell style="text-align: left;">Robert J. Conley</cell>
+                    <cell style="text-align: center;">1998</cell>
+                    <cell style="text-align: center;">
+                        <hi style="font-size:9pt">16.598</hi>
+                    </cell>
+                    <cell style="text-align: center;">12</cell>
+                    <cell style="text-align: center;">14</cell>
+                    <cell style="text-align: center;">2</cell>
+                    <cell style="text-align: left;">Historical</cell>
+                </row>
+                <row>
+                    <cell style="text-align: center;">3</cell>
+                    <cell style="text-align: left;">
+                        <hi style="font-size:9pt">Macrolife</hi>
+                    </cell>
+                    <cell style="text-align: left;">
+                        <list type="unordered">
+                            <item>Geogre Zebrowski</item>
+                        </list>
+                    </cell>
+                    <cell style="text-align: center;">1979</cell>
+                    <cell style="text-align: center;">16.763</cell>
+                    <cell style="text-align: center;">10</cell>
+                    <cell style="text-align: center;">18</cell>
+                    <cell style="text-align: center;">
+                        <list type="unordered">
+                            <item>8</item>
+                        </list>
+                    </cell>
+                    <cell style="text-align: left;">Science Fiction</cell>
+                </row>
+                <row>
+                    <cell style="text-align: center;">4</cell>
+                    <cell style="text-align: left;">The Troika incident</cell>
+                    <cell style="text-align: left;">James Cooke Brown</cell>
+                    <cell style="text-align: center;">1970</cell>
+                    <cell style="text-align: center;">15.906</cell>
+                    <cell style="text-align: center;">30</cell>
+                    <cell style="text-align: center;">21</cell>
+                    <cell style="text-align: center;">9</cell>
+                    <cell style="text-align: left;">Science Fiction</cell>
+                </row>
+                <row>
+                    <cell style="text-align: center;">5</cell>
+                    <cell style="text-align: left;">Fools Crow</cell>
+                    <cell style="text-align: left;">James Welch</cell>
+                    <cell style="text-align: center;">1986</cell>
+                    <cell style="text-align: center;">16.499</cell>
+                    <cell style="text-align: center;">14</cell>
+                    <cell style="text-align: center;">23</cell>
+                    <cell style="text-align: center;">9</cell>
+                    <cell style="text-align: left;">Westerns, Historical</cell>
+                </row>
+                <row>
+                    <cell style="text-align: center;">6</cell>
+                    <cell style="text-align: left;">Where the Road Goes</cell>
+                    <cell style="text-align: left;">
+                        <anchor xml:id="OLE_LINK2"/>Joanne Greenberg
+                    </cell>
+                    <cell style="text-align: center;">1998</cell>
+                    <cell style="text-align: center;">16.307</cell>
+                    <cell style="text-align: center;">19</cell>
+                    <cell style="text-align: center;">24</cell>
+                    <cell style="text-align: center;">5</cell>
+                    <cell style="text-align: left;">
+                        <p style="text-align: left;">
+                            <hi style="font-size:9pt">Domestic,</hi>
+                        </p>
+                        <p style="text-align: left;">Ecofiction</p>
+                    </cell>
+                </row>
+                <row>
+                    <cell style="text-align: center;">7</cell>
+                    <cell style="text-align: left;">Ozymandias</cell>
+                    <cell style="text-align: left;">Thomas F. Monteleone</cell>
+                    <cell style="text-align: center;">1981</cell>
+                    <cell style="text-align: center;">15.386</cell>
+                    <cell style="text-align: center;">50</cell>
+                    <cell style="text-align: center;">58</cell>
+                    <cell style="text-align: center;">8</cell>
+                    <cell style="text-align: left;">Science Fiction</cell>
+                </row>
+                <row>
+                    <cell style="text-align: center;">8</cell>
+                    <cell style="text-align: left;">The Memory of Old Jack</cell>
+                    <cell style="text-align: left;">Wendell Berry</cell>
+                    <cell style="text-align: center;">1974</cell>
+                    <cell style="text-align: center;">14.965</cell>
+                    <cell style="text-align: center;">76</cell>
+                    <cell style="text-align: center;">73</cell>
+                    <cell style="text-align: center;">3</cell>
+                    <cell style="text-align: left;">Ecofiction</cell>
+                </row>
+                <row>
+                    <cell style="text-align: center;">9</cell>
+                    <cell style="text-align: left;">
+                        <anchor xml:id="OLE_LINK265"/>Waterlily
+                    </cell>
+                    <cell style="text-align: left;">Ella Dora Deloria</cell>
+                    <cell style="text-align: center;">1988</cell>
+                    <cell style="text-align: center;">14.771</cell>
+                    <cell style="text-align: center;">95</cell>
+                    <cell style="text-align: center;">94</cell>
+                    <cell style="text-align: center;">1</cell>
+                    <cell style="text-align: left;">Historical</cell>
+                </row>
+                <row>
+                    <cell style="text-align: center;">10</cell>
+                    <cell style="text-align: left;">The Girl from Montana</cell>
+                    <cell style="text-align: left;">Grace Livingston Hill</cell>
+                    <cell style="text-align: center;">1908</cell>
+                    <cell style="text-align: center;">13.964</cell>
+                    <cell style="text-align: center;">197</cell>
+                    <cell style="text-align: center;">193</cell>
+                    <cell style="text-align: center;">4</cell>
+                    <cell style="text-align: left;">Religious, Westerns, Romance</cell>
+                </row>
+            </table>
+            <p>Table 1. </p>
+            <p>Novels with Difference less than 10 and Pan-ecologicalness ranking less than 200</p>
+            <p>There is a distinct pattern of generational rhythm in Figure 7 (especially around 1970), but here we would like to focus on the 10 deviation texts whose ecologicalness are the stablest. We are surprised to see that Western Historical novels takes up a large proportion of 20th century ecological discourse. Such relation has not been duly noted in ecocriticism, the only plausible hypothesis of which lies within social critique of post-colonialism. So we scrutinized 2 novels written before and after 1970 to figure out how such relation works and what influence literary criticism exerts in these held-out examples.</p>
+            <p>Through scrutinizing word cloud and highest Pan-ecologicalness paragraphs, we found that ecological discourse was innately entwined with aboriginal literature even before ecocriticism came into place. What we perceive as environmentally-damaging industries were transmitted from Euro-American regions into marginalized colonies throughout 19th and 20th century, but little attention has been paid to this kind of “slow violence” since it takes a relatively long time for pollution to take effect compared to social or economic changes (Nixon, 2011: 17). Moreover, the idea of “land” and “territory” are at the core of these novels as a replica of Indian Recession to Reservation in American history, another neglected link between ecological discourse and what Said referred to as “geographical violence of American Imperialism” (Said, 1993: 77). And it is also noted that novels after 1970 are more closely connected with sociocultural background, which is the result of intervene of literary criticism. </p>
+            <p>Another filiation genre that displays tremendous stability is science fiction. Since the number of science fiction novels is relatively small in Table 1, we zoomed in using quantitative methods to magnify the correlation. We measured “ecologicalness” of 20th century US novel using a word cohort solely relative to ecofiction, and displayed ranking difference of the two measurements with genre tags based on relativity to ecofiction (see Figure 8 and 9).</p>
+            <figure>
+                <graphic n="1008" width="12.973402777777778cm" height="6.5493194444444445cm" url="/tmp/tmpldngbfxn/Pictures/e08aefc858536a75fd411536dee5556d.jpeg" rend="inline"/>
+            </figure>
+            <p>
+                <hi rend="bold" style="font-family:Arial Bold" xml:space="preserve">Figure 8. </hi>
+            </p>
+            <p>Ecologicalness of 20th century US Novel (with genre tags based on relativity to ecofiction)</p>
+            <figure>
+                <graphic n="1009" width="11.710458333333333cm" height="8.60248611111111cm" url="/tmp/tmpldngbfxn/Pictures/e08aefc858536a75fd411536dee5556d.jpeg" rend="inline"/>
+            </figure>
+            <p>
+                <hi rend="bold" style="font-family:Arial Bold" xml:space="preserve">Figure 9. </hi>
+            </p>
+            <p>Ranking difference between Pan-ecologicalness and ecologicalness of 20th century US Novel (with genre tags based on relativity to ecofiction)</p>
+            <p>Since the word cohort have already evacuated elements that may constitute “Pan-ecologicalness”, the prominence of science fiction is monumental. This is especially true in the case of novels after 1970, where ecologicalness shows an upward trend. Through close reading of the most ecologically-stable Xenogenesis trilogy, we found that the concept of “human” lies at the core of sci-fi ecological discourse. Humans have learned to define their identity through discrepancy with animals cyborgs, and all kinds of inhuman creatures that are bracketed into “otherness” (Hall, 2013: 22). What lies behind genocide is the anthropocentric allegation of mankind’s dominant role on earth, and thus, indifference towards their suffering. Science fiction even go so far as to pinpoint the underlying logic of colonialism behind gene editing by creating discrepancy between social hierarchies, which again suggests that ecological discourse is a social and cultural milieu beyond literary and aesthetic comprehension. </p>
+            <p>This study analyzed reception of ecological discourse in 20th century US novel through computational criticism. It is noted that ecological criticism, writing and filiation genres share a lexical family resemblance defined as “Pan-ecologicalness”, and such diffusion was visualized through scalable reading of two genres whose ecologicalness is exceptionally stable. What is more, we would like to implement ecological discourse as a held-out example of genre changes throughout 20th century. What we define as “genre” is actually a social and historical construct constituted by a mutable set of texts linked in different ways (Underwood, 2016). The discovery of “Pan-ecologicalness” may shed light on the underlying factors that cause and explain the phenomenon of genre diffusion.</p>
+            <list type="unordered">
+                <item>
+                    <hi rend="bold" style="font-size:11pt">Acknowledgement*</hi>
+                </item>
+            </list>
+            <p>The authors are very grateful to Professor Hoyt Long at the Textual Optics Lab of the University of Chicago who encourages us to proceed this research and authorizes the access to The US Novel Corpus.</p>
+            <p>
+                <hi rend="bold" style="font-family:Arial Bold">Buell, Lawrence</hi> (2011): “Ecocriticism: some emerging trends”, in: 
+                <hi rend="italic" style="font-family:Arial Italic">Qui Parle</hi> 19, 2: 87-115.
+            </p>
+            <p>
+                <hi rend="bold" style="font-family:Arial Bold">Chen, Song</hi> (2020): “Writing for Local Government Schools: Authors and Themes in Song-dynasty School Inscriptions”, in: 
+                <hi rend="italic" style="font-family:Arial Italic">Journal of Chinese History</hi> 4, 2: 305-346. 
+            </p>
+            <p>
+                <hi rend="bold" style="font-family:Arial Bold">Hall, Henry Somers</hi> (2013): 
+                <hi rend="italic" style="font-family:Arial Italic">Deleuze’s Difference and Repetition</hi>. Edinburgh: Edinburgh University Press.
+            </p>
+            <p>
+                <hi rend="bold" style="font-family:Arial Bold">Kincaid, Paul</hi> (2003): “On the Origins of Genre”, in: 
+                <hi rend="italic" style="font-family:Arial Italic">Extrapolation</hi> 44, 4: 409-419.
+            </p>
+            <p>
+                <hi rend="bold" style="font-family:Arial Bold">Nixon, Rob</hi> (2011): 
+                <hi rend="italic" style="font-family:Arial Italic">Slow Violence and the Environmentalism of the Poor</hi>. Cambridge, MA: Harvard University Press.
+            </p>
+            <p>
+                <hi rend="bold" style="font-family:Arial Bold">Sinykin, Daniel/ So, Richard Jean/ Young, Jessica</hi> (2019): “Economics, Race and the Postwar US Novel: A Quantitative Literary History”, in: 
+                <hi rend="italic" style="font-family:Arial Italic">American Literary History</hi> 31, 4: 775-804.
+            </p>
+            <p>
+                <hi rend="bold" style="font-family:Arial Bold">Underwood, Ted</hi> (2016): “The Life Cycles of Genres”, in: 
+                <hi rend="italic" style="font-family:Arial Italic">Cultural Analytics</hi> 1-25 &lt;
+                <ref target="HYPERLINK">https://culturalanalytics.org/article/11061.pdf &gt; [26.11.2023].</ref>
+            </p>
+            <p>
+                <hi rend="bold" style="font-family:Arial Bold">Wolfe, Gary K</hi> (2001): 
+                <hi rend="italic" style="font-family:Arial Italic">Evaporating Genres: Essays on Fantastic Literature</hi>. Middletown: Wesleyan University Press.
+            </p>
+            <p>
+                <hi rend="bold" style="font-family:Arial Bold">Said, Edward W</hi> (1993): 
+                <hi rend="italic" style="font-family:Arial Italic">Culture and Imperialism</hi>. New York: Vintage Books.
+            </p>
+        </body>
+    </text>
+</TEI>

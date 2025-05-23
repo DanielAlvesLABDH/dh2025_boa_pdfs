@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LEBLANC_Zoe_Programming_Pedagogies__Exploring_GitHub_as_a_Pl">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Programming Pedagogies: Exploring GitHub as a Platform for Coding Training in DH</title>
+                <author>
+                    <persName>
+                        <surname>Monroe</surname>
+                        <forename>Owen</forename>
+                    </persName>
+                    <affiliation>University of Illinois Urbana-Champaign, United States of America</affiliation>
+                    <email>omonroe2@illinois.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>LeBlanc</surname>
+                        <forename>Zoe</forename>
+                    </persName>
+                    <affiliation>University of Illinois Urbana-Champaign, United States of America</affiliation>
+                    <email>zleblanc@illinois.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-07T22:26:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Pedagogy</term>
+                    <term>GitHub</term>
+                    <term>Coding Literacy</term>
+                    <term>Digital Trace Data</term>
+                    <term>Histories of DH</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>curricular and pedagogical development and analysis</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>network analysis and graphs theory and application</term>
+                    <term>social media analysis and methods</term>
+                    <term>Computer science</term>
+                    <term>Cultural studies</term>
+                    <term>Humanities computing</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>The question of who codes in Digital Humanities has been as perennial, if not as prominent, as the question of defining the field. Recently, Quinn Dombrowski addressed this topic directly, asking, “Beyond the tired “hack/yack” axis that was once deployed as a shorthand for praxis vs. theory (often in contexts that privileged the former), how important—specifically—is coding for being a skilled digital humanist, loosely and broadly defined?” (Dombrowski, 2022). While Dombrowski persuasively argues for the importance of workflows in DH training, the broader question has only started to be addressed by the field, moving from earlier debates over who is in or out towards a more nuanced exploration of coding practices in DH (Ramsay, 2016). This shift is partly reflected in the emergence of the DH Tech community, which have advocated for greater scholarly attention to coding practices (Damerow, 2024). Furthermore, a recent survey of coding literacy in DH revealed an ongoing disconnect: while many of the 400 respondents ranked coding literacy as important, few felt positive about their training, leading the survey’s authors to pose, “whether there is currently a gap in academic curricula regarding digital humanities? And if so, would enhancing code literacy fill this gap?” (Bleeker et al. 2021). While such questions extend beyond the scope of any one project, this poster proposes to explore these debates through an investigation of GitHub as a pedagogical platform in DH.</p>
+            <figure>
+                <graphic n="1001" width="12.628947222222223cm" height="5.939088888888889cm" url="/tmp/tmpua8qfxq0/Pictures/1a959ee2d1c0661e07c543087df6f349.png" rend="inline"/>
+            </figure>
+            <p rend="p1" style="text-align: left; ">
+                <hi rend="s1">
+                    <hi rend="bold" style="font-size:11pt">Figure 1.</hi>
+                </hi>
+                <hi style="font-size:11pt" xml:space="preserve"> A search for “syllabus” in English returns nearly 8,000 GitHub repositories, indicating the platform’s role in hosting pedagogical materials.</hi>
+            </p>
+            <p>With over a hundred million users and a billion repositories, GitHub has become the dominant platform for collaborative coding and software versioning since its release in 2008. Given its prevalence, as well as its free usage for educational and open-source projects, GitHub occupies a unique position in coding pedagogy, functioning both as a competency for students to learn and a platform to facilitate their training. While it is well known that few programs explicitly teach topics like git or GitHub (Missing Semester, 2024), what remains less clear is how this platform actually functions as a pedagogical space for both sharing open educational materials and providing students with a hands-on, collaborative environment to engage with coding practices. For fields like DH, where gaps around coding pedagogy persist, we believe that platforms like GitHub may have an even greater influence, as many scholars and students rely on open-source materials for self-teaching these skills. To start uncovering these patterns, our poster represents a preliminary data-driven analysis of pedagogical activities on GitHub, specifically within the broad umbrella of DH.</p>
+            <figure>
+                <graphic n="1002" width="16.51cm" height="10.336388888888889cm" url="/tmp/tmpua8qfxq0/Pictures/1a959ee2d1c0661e07c543087df6f349.png" rend="inline"/>
+            </figure>
+            <p>
+                <hi style="font-size:10pt">Figure 2. Topic modeling with BERTopic reveals clusters of pedagogically focused repositories within the DH GitHub dataset.</hi>
+            </p>
+            <p>Building from the 
+                <hi rend="italic">Coding DH Project</hi>, this research uses a custom data collection pipeline to surface and analyze pedagogical materials on GitHub (LeBlanc, 2024). Our poster will present this pipeline for identifying relevant repositories and pedagogical content, focusing on how these materials are distributed and categorized across subfields of DH, such as digital history, cultural analytics, and computational humanities, as well as adjacent fields like computational social science. Through this comparison, we aim to answer fundamental questions: What are the most popular pedagogical materials for the field? Have these remained consistent over time? What sorts of skills do they teach? We also seek to explore less obvious but equally important questions: Can GitHub data reveal bottlenecks in DH coding pedagogy? Are there discernible signals around what constitutes successful pedagogical models? Building on previous work, such as the recent coding literacy survey, can we identify whether different subfields, or linguistic and geographical communities are providing more robust support for their students? By examining these questions, we hope to further the growing research on how DH as a field navigates the challenges of teaching coding across diverse contexts, with a focus on how digital trace data can inform these questions. We will also share details on how we maintain user’s privacy, which we believe is paramount given the politics and privilege surrounding who gets to code and whose work is visible. 
+            </p>
+            <p>Though coding has been part of DH from the outset, we believe that this study is urgently needed given the rise of LLMs. GitHub represents many of the tensions of our AI moment: while some users have left the platform over concerns about their code being used to train models like GitHub Copilot, preliminary research also shows how these AI tools are profoundly transforming coding practices (Hoffmann et al. 2024). These dynamics present both opportunities and challenges for the DH community. On one hand, they offer a chance to address the gaps in coding literacy through more accessible tools and workflows. On the other hand, they expose the risks of consolidating power in corporations like Microsoft, which owns GitHub, and the dangers of over-reliance on proprietary platforms for training and preservation (Mackenzie, 2018; Escamilla et al. 2022). By situating our analysis within these broader debates, we aim to contribute to a more nuanced understanding of the opportunities and limitations of GitHub as a pedagogical platform in DH. Our findings, while preliminary, underscore the importance of critically engaging with the platforms and technologies that shape coding education in the field, particularly as automation and AI continue to redefine programming pedagogies.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl rend="p1" style="text-align: left; ">
+                        <hi rend="s1">
+                            <hi rend="bold">Dombrowski, Quinn (2022):</hi>
+                        </hi> “Does Coding Matter for Doing Digital Humanities”, in: O’Sullivan, James (ed.): 
+                        <hi rend="italic">The Bloomsbury Handbook to the Digital Humanities</hi>. London: Bloomsbury Academic, 138. 
+                        <ref target="https://purl.stanford.edu/ck442sc7933">https://purl.stanford.edu/ck442sc7933</ref> [07.05.2025].
+                    </bibl>
+                    <bibl rend="p1" style="text-align: left; ">
+                        <hi rend="s1">
+                            <hi rend="bold">Ramsay, Stephen (2016):</hi>
+                        </hi> “Who’s In and Who’s Out”, in: Terras, Melissa M. / Nyhan, Julianne / Vanhoutte, Edward (eds.): 
+                        <hi rend="italic">Defining Digital Humanities: A Reader</hi>. London: Routledge. 
+                        <ref target="https://search.credoreference.com/books/Qm9va1R5cGU6NTU3OA==">https://search.credoreference.com/books/Qm9va1R5cGU6NTU3OA==</ref> [07.05.2025].
+                    </bibl>
+                    <bibl rend="p1" style="text-align: left; ">
+                        <hi rend="s1">
+                            <hi rend="bold" xml:space="preserve">Damerow, Julia / Bleeker, Elli / </hi>
+                            <hi rend="bold">Ilovan</hi>
+                            <hi rend="bold">, Ioana / Nyhan, Julianne / van Zundert, Joris (2024):</hi>
+                        </hi> “Code Review in Digital Humanities”, in: 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi>, September 30, 2024, fqae052. DOI: 
+                        <ref target="https://doi.org/10.1093/llc/fqae052">https://doi.org/10.1093/llc/fqae052</ref>.
+                    </bibl>
+                    <bibl rend="p1" style="text-align: left; ">
+                        <hi rend="s1">
+                            <hi rend="bold" xml:space="preserve">Bleeker, Elli / </hi>
+                            <hi rend="bold">Ilovan</hi>
+                            <hi rend="bold">, Ioana / Nyhan, Julianne / van Zundert, Joris / Damerow, Julia (2021):</hi>
+                        </hi> “A Game of Persistence, Self-Doubt, and Curiosity: Surveying Code Literacy in Digital Humanities”, in: 
+                        <hi rend="italic">DH Benelux Conference Proceedings</hi> 4 (2021). 
+                        <ref target="https://works.hcommons.org/records/b3tht-zek39">https://works.hcommons.org/records/b3tht-zek39</ref>
+                    </bibl>
+                    <bibl rend="p1" style="text-align: left; ">
+                        <hi rend="s1">
+                            <hi rend="bold">Missing Semester (2024):</hi>
+                        </hi>
+                        <hi rend="italic">The Missing Semester of Your CS Education</hi>. 
+                        <ref target="https://missing.csail.mit.edu/">https://missing.csail.mit.edu/</ref> [08.12.2024].
+                    </bibl>
+                    <bibl rend="p1" style="text-align: left; ">
+                        <hi rend="s1">
+                            <hi rend="bold">LeBlanc, Zoe (20</hi>
+                            <hi rend="bold">2</hi>
+                            <hi rend="bold">4</hi>
+                            <hi rend="bold">):</hi>
+                        </hi>
+                        <hi rend="italic">The Coding DH Project</hi>. 
+                        <ref target="https://codingdh.github.io/">https://codingdh.github.io/</ref> [07.08.2024].
+                    </bibl>
+                    <bibl rend="p1" style="text-align: left; ">
+                        <hi rend="s1">
+                            <hi rend="bold">Hoffmann, Manuel / Kurz, Christoph / Luckner, Fabian / Roth, Felix / Schmitz, Ludwig (2024):</hi>
+                        </hi> “Generative AI and the Nature of Work”, 
+                        <hi rend="italic">SSRN Scholarly Paper</hi>, Social Science Research Network, Rochester, NY, October 27, 2024. DOI: 
+                        <ref target="https://doi.org/10.2139/ssrn.5007084">https://doi.org/10.2139/ssrn.5007084</ref>.
+                    </bibl>
+                    <bibl rend="p1" style="text-align: left; ">
+                        <hi rend="s1">
+                            <hi rend="bold">Mackenzie, Adrian (2018):</hi>
+                        </hi> “48 Million Configurations and Counting: Platform Numbers and Their Capitalization”, in: 
+                        <hi rend="italic">Journal of Cultural Economy</hi> 11, 1: 36–53. DOI: 
+                        <ref target="https://doi.org/10.1080/17530350.2017.1393443">https://doi.org/10.1080/17530350.2017.1393443</ref>.
+                    </bibl>
+                    <bibl rend="p1" style="text-align: left; ">
+                        <hi rend="s1">
+                            <hi rend="bold">Escamilla, Emily / Dodds, Peter Sheridan / Gallos, Lazaros / Alshaabi, Tarek / Danforth, Christopher M. (2022):</hi>
+                        </hi> “The Rise of GitHub in Scholarly Publications”, 
+                        <hi rend="italic">arXiv preprint</hi>, August 9, 2022. DOI: 
+                        <ref target="https://doi.org/10.48550/arXiv.2208.04895">https://doi.org/10.48550/arXiv.2208.04895</ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

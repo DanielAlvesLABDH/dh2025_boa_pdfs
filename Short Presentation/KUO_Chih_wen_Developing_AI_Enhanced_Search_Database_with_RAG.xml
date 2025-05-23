@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KUO_Chih_wen_Developing_AI_Enhanced_Search_Database_with_RAG">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Developing AI-Enhanced Search Database with RAG: A Case Study of the &lt;em&gt;Collection of Historical Archives of Sino-Russian Relations&lt;/em&gt;</title>
+                <author>
+                    <persName>
+                        <surname>Kuo</surname>
+                        <forename>Chih-wen</forename>
+                    </persName>
+                    <affiliation>Department of Applied History, National Chiayi University, Taiwan</affiliation>
+                    <email>ziwenkuo@mail.ncyu.edu.tw</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Lai</surname>
+                        <forename>Hui-min</forename>
+                    </persName>
+                    <affiliation>Institute of Modern History, Academia Sinica, Taiwan</affiliation>
+                    <email>mhlhm@gate.sinica.edu.tw</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Chu</surname>
+                        <forename>Pingyi</forename>
+                    </persName>
+                    <affiliation>Institute of History and Philology, Academia Sinica, Taiwan</affiliation>
+                    <email>kaihsin@asihp.net</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Lee</surname>
+                        <forename>Yu-chung</forename>
+                    </persName>
+                    <affiliation>Institute of History, National Tsing Hua University, Taiwan</affiliation>
+                    <email>yclee@mx.nthu.edu.tw</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Archival Research</term>
+                    <term>Artificial Intelligence</term>
+                    <term>Sino-Russian Relations</term>
+                    <term>Retrieval Augmented Generation</term>
+                    <term>Metadata Integration</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>digital archiving</term>
+                    <term>metadata standards</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>Asian studies</term>
+                    <term>History</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>The mastery of archival research remains central to the methodological practice of historians. Archives provide the primary source materials essential for reconstructing and interpreting historical events, contexts, and relationships. Traditionally, historians relied on keyword-based search methods to navigate large collections of documents. These methods required precise queries, such as specific names, dates, or places, to retrieve relevant information. However, the emergence of artificial intelligence (AI) in recent years has transformed archival research methodologies. AI-enhanced databases, equipped with advanced search capabilities, allow researchers to perform not only precise keyword searches but also flexible thematic searches. These thematic searches enable users to retrieve documents based on broader topics or concepts, which are unattainable with traditional databases.</p>
+            <p>AI-enhanced databases leverage technologies such as Large Language Models (LLMs) and Retrieval Augmented Generation (RAG). LLMs excel in natural language processing but often demonstrate limitations, including bias, when applied to specialized domains. RAG mitigates this by first consulting external knowledge sources before employing LLMs to generate responses in specialized contexts. The effectiveness of RAG in providing accurate answers and retrieving domain-specific information depends significantly on the quality of its external knowledge sources, which form the authoritative knowledge base for RAG. This study introduces an innovative approach to enhance RAG-based searches by integrating metadata into the external knowledge sources, thereby improving retrieval precision.</p>
+            <p>The 
+                <hi rend="italic">Collection of Historical Archives on Sino-Russian Relations</hi> (
+                <hi rend="italic">CHASRR</hi>) serves as the case study in this study. Published in 2023, the 
+                <hi rend="italic">CHASRR</hi> is an extensive compilation of 19 volumes documenting over 250 years of interactions between China and Russia during the pre-modern era. These interactions spanned political, economic, military, diplomatic, and religious spheres, providing invaluable insights into Sino-Russian relations. The 
+                <hi rend="italic">CHASRR</hi> contains 7,647 documents, totaling approximately 11.4 million words, covering the years 1653 to 1911. These materials originate from key archival sources, including the Manchu archives of the Qing Interior Office, the Heilongjiang General's Office, and Russian archives from the Military Organizations Office. The Department of Manchu at the First Historical Archives of China dedicated 22 years to translating these documents into Chinese, ensuring accessibility to researchers. The collection also includes Russian translations of original Russian documents and cinnabar-approved files from the Qing imperial court and the Office of the General Manager of State Affairs.
+            </p>
+            <p>The 
+                <hi rend="italic">CHASRR</hi> includes documentation on events such as the Sino-Russian border conflicts (1652-1689), the Treaty of Nerchinsk, and subsequent Sino-Russian diplomatic interactions. It contains records related to the dispatch and reception of diplomatic envoys, travel routes, accommodation logistics, food supply, etiquette systems, and the exchange of state letters and gifts. Additionally, it details the establishment of embassies and consulates. Border-related materials are particularly prominent, including correspondence on border negotiations, treaties, survey records, and accounts of local administrative actions. Despite its rich historical content, the 
+                <hi rend="italic">CHASRR</hi> has not been widely disseminated, nor has a corresponding database been developed for academic use. The study addresses this gap by leveraging Generative AI to construct a database for 
+                <hi rend="italic">CHASRR</hi>, enabling researchers to efficiently retrieve documents related to Sino-Russian relations.
+            </p>
+            <p>The study employs a multi-step process to develop the database. First, the textual content of 
+                <hi rend="italic">CHASRR</hi> is converted into structured data formats (e.g. JSON). Using Generative AI’s token classification functionality, the study extracts key entities such as names of individuals, locations, and objects from each document, with all extractions subject to meticulous verification. Subsequently, the summarization capabilities of Generative AI are employed to generate concise document summaries and identify corresponding subject keywords. This information, combined with the catalogued data, is used to create comprehensive metadata for 
+                <hi rend="italic">CHASRR</hi>, encompassing attributes such as volume, date, title, names, locations, objects, summaries, and subject keywords. This metadata, integrated with the structured data from 
+                <hi rend="italic">CHASRR</hi>, constitutes the external knowledge source for the RAG framework. Topic-based searches are facilitated by semantic similarity calculations using word vectors, enabling the retrieval of documents that align with user-provided thematic keywords. This AI-enhanced database represents a significant advancement in historical research, offering scholars a powerful tool to explore archival materials more effectively and comprehensively. Please refer to Figure 1 for the database construction process.
+            </p>
+            <figure>
+                <graphic n="1001" width="14.640277777777778cm" height="4.526138888888889cm" url="/tmp/tmpj2p8s591/Pictures/0e9c5bfb26f904a4b517d933e9db09fb.png" rend="inline"/>
+            </figure>
+            <p style="text-align: center;">Figure 1: Database Construction Process</p>
+            <p>The broader implications of this study extend beyond the research of Sino-Russian relations, demonstrating the potential of Generative AI and RAG technologies to revolutionize archival research. The methodology developed in this study can be adapted to other historical archives, enabling the construction of AI-enhanced databases across diverse fields of historical inquiry. Simplifying access to thematic searches and summarizing complex archival materials, this approach can also empower non-specialists and historians in adjacent fields to explore and analyze historical data without requiring extensive domain-specific expertise. By improving the accessibility and usability of archival materials, this approach has the potential to transform how historians conduct research, facilitating deeper insights into complex historical phenomena.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Gao, Yunfan / Xiong, Yun / Gao, Xinyu / Jia, Kangxiang / Pan, Jinliu / Bi, Yuxi / Dai, Yi / Sun, Jiawei / Wang, Meng / Wang, Haofen</hi> (2024): “Retrieval-Augmented Generation for Large Language Models: A Survey”, in: 
+                        <hi rend="italic">arXiv:2312.10997v5</hi> &lt;
+                        <ref target="https://doi.org/10.48550/arXiv.2312.10997">https://doi.org/10.48550/arXiv.2312.10997</ref>&gt; [15.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Gaur, Manas / Gunaratna, Kalpa / Srinivasan, Vijay / Jin, Hongxia</hi> (2021): “ISEEQ: Information Seeking Question Generation using Dynamic Meta-Information Retrieval and Knowledge Graphs”, in: 
+                        <hi rend="italic">arXiv:2112.07622v1</hi> &lt;
+                        <ref target="https://doi.org/10.48550/arXiv.2112.07622">https://doi.org/10.48550/arXiv.2112.07622</ref>&gt; [15.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Lewis, Patrick / Perez, Ethan / Piktus, Aleksandra / Petroni, Fabio / Karpukhin, Vladimir / Goyal, Naman / Küttler, Heinrich / Lewis, Mike / Yih, Wen-tau / Rocktäschel, Tim / Riedel, Sebastian / Kiela, Douwe</hi> (2021): “Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks”, in: 
+                        <hi rend="italic">arXiv:2005.11401v4</hi> &lt;
+                        <ref target="https://doi.org/10.48550/arXiv.2005.11401">https://doi.org/10.48550/arXiv.2005.11401</ref>&gt; [15.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Singh, Mayank / Kumar, Abhijeet / Donaparthi, Sasidhar / Karambelkar, Gayatri</hi> (2025): “Leveraging Retrieval Augmented Generative LLMs For Automated Metadata Description Generation to Enhance Data Catalogs”, in: 
+                        <hi rend="italic">arXiv:2503.09003v1</hi> &lt;
+                        <ref target="https://doi.org/10.48550/arXiv.2503.09003">https://doi.org/10.48550/arXiv.2503.09003</ref>&gt; [15.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Zhao, Penghao / Zhang, Hailin / Yu, Qinhan / Wang, Zhengren / Geng, Yunteng / Fu, Fangcheng / Yang, Ling / Zhang, Wentao / Jiang, Jie / Cui, Bin</hi> (2024): “Retrieval-Augmented Generation for AI-Generated Content: A Survey”, in: 
+                        <hi rend="italic">arXiv:2402.19473v6</hi> &lt;
+                        <ref target="https://doi.org/10.48550/arXiv.2402.19473">https://doi.org/10.48550/arXiv.2402.19473</ref>&gt; [15.04.2025].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

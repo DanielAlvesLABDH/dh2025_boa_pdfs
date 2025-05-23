@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ARNOLD_Taylor_keylog_js__An_Open_Source_Pedagogical_Tool_for">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>keylog.js: An Open Source Pedagogical Tool for DH and Data Studies</title>
+                <author>
+                    <persName>
+                        <surname>ARNOLD</surname>
+                        <forename>Taylor</forename>
+                    </persName>
+                    <affiliation>University of Richmond, United States of America</affiliation>
+                    <email>tarnold2@richmond.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-20T08:53:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>critical data studies</term>
+                    <term>privacy</term>
+                    <term>pedagogical tool</term>
+                    <term>open-source software</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>curricular and pedagogical development and analysis</term>
+                    <term>open access methods</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>user experience design and analysis</term>
+                    <term>Communication studies</term>
+                    <term>Informatics</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Questions about the ethics, privacy, and accessibility of technologies and algorithms are central to digital humanities and data studies (DIgnazio and Klein 2020; Jobin, Ienca, and Vayena 2019). The software keylog.js provides a pedagogical tool for studying one such technology through a process of hands-on critical making and doing (Péron, Moody, and Karasic 2022; Ratto 2011).</p>
+            <p>Keystroke logging, or keylogging, involves recording the time and identity of the keys a user presses on a keyboard (Deckert 2021; Pawan 2023). Frequently run without a user’s consent, malicious applications of keylogging include stealing private login credentials and other personal data (Rai et al. 2022). Through the analysis of relatively short samples, it is possible to use keylogging information as a method for tracking and surveillance across websites without a user’s knowledge or consent (Elelegwu et al. 2024; Nyang, Mohaisen, and Kang 2014; Stefan, Shu, and Yao 2012). However, not all applications of keylogging are pernicious. Keylogging data is an essential and comparatively unobtrusive source for academic applications in linguistics, psychology, cognitive science, medicine, and human-computer interaction (Ballier et al. 2024; Berninger 2012; Braund et al. 2023; Conijn et al. 2021; Sullivan and Lindgren 2006). The power and simplicity of keylogging techniques make them an excellent topic for building awareness of the ethical and social aspects of existing and emerging technologies.</p>
+            <p>keylog.js is a minimal javascript-based tool that provides privacy-focused, client-side keylogging software served through a static website (Arnold 2024). No programming knowledge is needed to use the software. The static website and all of the code are hosted on an open GitHub repository. A screenshot of the tool is shown in Figure 1. The software records every keystroke and mouse click inside of the text entry box. However, importantly, the data never leaves a user’s local computer and never includes anything done outside of the text entry box. Users can save a dataset of their keylogs prduced by the software formatted as a CSV file that any standard spreadsheet software or programming language can open. An example of the data produced is shown in Figure 2.</p>
+            <p>The keylog.js software can be applied in a classroom setting as follows. First, students are directed to the static website that hosts the tool. Students are asked to read the disclaimer on the website and given the chance to raise any questions or concerns. Next, students proceed to enter text in the tool in response to a prompt. The goal is to select a prompt that does not appear to contain personal information, such as: “describe the objects on the right-side of the room” or “provide directions for a visitor to go from our classroom to the main library.” After responding to the prompt, students are asked to save and open their data in a spreadsheet program. Once everyone is finished, we have a class discussion centered around questions that ask us to reflect on the kinds of information contained in the output and the potential consequences of a third party generating a similar dataset using our data on another website. A set of sample questions are given in the Appendix.</p>
+            <p>The activity aims to demonstrate the ease at which an invasive picture of one’s activity can be built using a short script running in the browser. Keylogging is particularly interesting for a class discussion because it raises questions regarding legal issues, state-sponsored surveillance, and concerns about capitalistic logic while offering potential positive outcomes such as a medical diagnostic tool (Shukla, Shukla, and Patel 2023; Singh et al. 2023). This range of issues requires students to think deeply and critically about the role of technology and AI in their lives, which requires careful consideration of positive and negative outcomes and how to balance them (Benatti, Gooding, and Sillence 2021). Allowing students to generate and interrogate their keylog data through the privacy-focused keylog.js software adds an important extra dimension to the discussion while helping empower students to ask better questions about the various closed-source software and platforms that they interact with daily.</p>
+            <p>The above activity can and has been done with students without programming or technical prerequisites. Additionally, keylog.js offers applications in courses that have a computational component. The resulting dataset is quite complex and can be used to study a variety of important concepts, such as window functions and date-time objects (Wickham, Çetinkaya-Rundel, and Grolemund 2023). Threading a dataset used in a privacy- and ethics-centered activity throughout the semester reinforces that these topics are a fundamental and pervasive aspect of data science praxis that should always be at the forefront of any computational application (Bile Hassan et al. 2021; Saltz, Dewar, and Heckman 2018).</p>
+            <p>Finally, the software’s code follows best practices for open-source software (Barker et al. 2022; Del Pico, Gelpi, and Capella-Gutiérrez 2024; Wilkinson et al. 2016). It is released under a permissive license (MIT), contains a contributor code of conduct, guidelines for contributors, and was built with no external dependences or build tools to minimize security vulnerabilities.</p>
+            <figure>
+                <graphic n="1001" width="16.002cm" height="11.867444444444445cm" url="/tmp/tmpgsdd8yks/Pictures/cc5315de6016ef4e6ada2b781dba2067.png" rend="inline"/>
+            </figure>
+            <p>Figure 1. Screenshot of the keylog.js web interface, shown after typing some text and downloading the results.</p>
+            <figure>
+                <graphic n="1002" width="16.002cm" height="7.658805555555555cm" url="/tmp/tmpgsdd8yks/Pictures/cc5315de6016ef4e6ada2b781dba2067.png" rend="inline"/>
+            </figure>
+            <p>Figure 2. The first few rows of the output from the keylog.js tool as shown in Excel. The rows in the image show the process of typing the first six characters—“Here i”—from Figure 1.</p>
+            <list type="unordered">
+                <item>
+                    <graphic n="1003" width="16.002cm" height="9.995958333333334cm" url="/tmp/tmpgsdd8yks/Pictures/cc5315de6016ef4e6ada2b781dba2067.png" rend="inline"/>
+                </item>
+                <item>Figure 3. Screenshot of the project’s public source code on GitHub. The site can be visted at https://github.com/taylor-arnold/keylog.js.</item>
+            </list>
+            <p>Below are example discussion questions used when applying the 
+                <hi rend="bold">keylog.js</hi> software in digital humanities, data studies, and data science courses. After these relatively generic questions, we proceed to connect these topics to the specific readings that we have covered in the course.
+            </p>
+            <list type="unordered">
+                <item>Would you find it invasive to publically share the data produced by the tool of your response? If so, what aspects would you be concerned about?</item>
+                <item>Did you ever use the backspace in your response? Look and see how that was shown in the data, noting that the erased text still exists in the results. Does this change your response to the question above?</item>
+                <item>If we collected all of this data across the class, we could sort everyone along dimensions such as slowest typer, most erasures, most long pauses, etc. Does this change any of your responses above?</item>
+                <item>What are some potential applications of keylogging? Try to think of some that might be malicious and some that might be benevolent.</item>
+                <item>What guidelines and/or guardrails would you recommend to someone applying keylogging in a research application? Or, should we avoid the technique altogether?</item>
+            </list>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-arnold_2024_14092712"/>
+                        <anchor xml:id="refs"/>Arnold, Taylor. 2024. “Keylog.js: An Open Source Pedagogical Tool.” Zenodo. 
+                        <ref target="https://doi.org/10.5281/zenodo.14092712">https://doi.org/10.5281/zenodo.14092712</ref>.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-ballier2024whisper"/>Ballier, Nicolas, Taylor Arnold, Adrien Méli, Tori Thurston, and Jean-Baptiste Yunès. 2024. “Whisper for L2 Speech Scoring.” 
+                        <hi rend="italic">International Journal of Speech Technology</hi>, 1–12.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-barker2022introducing"/>Barker, Michelle, Neil P Chue Hong, Daniel S Katz, Anna-Lena Lamprecht, Carlos Martinez-Ortiz, Fotis Psomopoulos, Jennifer Harrow, et al. 2022. “Introducing the FAIR Principles for Research Software.” 
+                        <hi rend="italic">Scientific Data</hi> 9 (1): 622.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-benatti2021learning"/>Benatti, Francesca, Paul Gooding, and Matthew Sillence. 2021. “Learning Digital Humanities in a Community of Practice: The DEAR Model of Postgraduate Research Training.” 
+                        <hi rend="italic">Digital Humanities Quarterly</hi> 15 (3). 
+                        <ref target="http://digitalhumanities.org/dhq/vol/15/3/000570/000570.html">http://digitalhumanities.org/dhq/vol/15/3/000570/000570.html</ref>.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-Berninger2012"/>Berninger, V. W., ed. 2012. 
+                        <hi rend="italic">Past, Present, and Future Contributions of Cognitive Writing Research to Cognitive Psychology</hi>. New York/Sussex: Taylor &amp; Francis.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-bile2021data"/>Bile Hassan, Ismail, Thanaa Ghanem, David Jacobson, Simon Jin, Katherine Johnson, Dalia Sulieman, and Wei Wei. 2021. “Data Science Curriculum Design: A Case Study.” In 
+                        <hi rend="italic">Proceedings of the 52nd ACM Technical Symposium on Computer Science Education</hi>, 529–34.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-Braund2023"/>Braund, Taylor A, Bridianne O’Dea, Debopriyo Bal, Kate Maston, Mark Larsen, Aliza Werner-Seidler, Gabriel Tillman, and Helen Christensen. 2023. “Associations Between Smartphone Keystroke Metadata and Mental Health Symptoms in Adolescents: Findings from the Future Proofing Study.” 
+                        <hi rend="italic">JMIR Mental Health</hi> 10 (May): e44986. 
+                        <ref target="https://doi.org/10.2196/44986">https://doi.org/10.2196/44986</ref>.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-Conijn2021"/>Conijn, Rianne, Christine Cook, Menno van Zaanen, and Luuk Van Waes. 2021. “Early Prediction of Writing Quality Using Keystroke Logging.” 
+                        <hi rend="italic">International Journal of Artificial Intelligence in Education</hi> 32 (4): 835–66. 
+                        <ref target="https://doi.org/10.1007/s40593-021-00268-w">https://doi.org/10.1007/s40593-021-00268-w</ref>.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-deckert2021neurocognition"/>Deckert, Mikołaj. 2021. “The Neurocognition of Translation and Interpreting: By Adolfo m. Garcı́a, Amsterdam, John Benjamins, 2019, 268 Pp., ISBN 9789027203397 (Hardbound, EUR 95.00/USD 143.00), ISBN 9789027262356 (e-Book, EUR 95.00/USD 143.00).” Taylor &amp; Francis.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-del2024fairsoft"/>Del Pico, Eva Martı́n, Josep Lluis Gelpi, and Salvador Capella-Gutiérrez. 2024. “FAIRsoft—a Practical Implementation of FAIR Principles for Research Software.” 
+                        <hi rend="italic">Bioinformatics</hi> 40 (8).
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-dignazio2020data"/>DIgnazio, Catherine, and Lauren F. Klein. 2020. 
+                        <hi rend="italic">Data Feminism</hi>. The MIT Press. 
+                        <ref target="https://doi.org/10.7551/mitpress/11805.001.0001">https://doi.org/10.7551/mitpress/11805.001.0001</ref>.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-elelegwu2024novel"/>Elelegwu, Damilola, Lei Chen, Yiming Ji, and Jongyeop Kim. 2024. “A Novel Approach to Detecting and Mitigating Keyloggers.” In 
+                        <hi rend="italic">SoutheastCon 2024</hi>, 1583–90. IEEE.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-jobin2019global"/>Jobin, Anna, Marcello Ienca, and Effy Vayena. 2019. “The Global Landscape of AI Ethics Guidelines.” 
+                        <hi rend="italic">Nature Machine Intelligence</hi> 1 (9): 389–99. 
+                        <ref target="https://doi.org/10.1038/s4225601900882">https://doi.org/10.1038/s4225601900882</ref>.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-Nyang2014"/>Nyang, DaeHun, Aziz Mohaisen, and Jeonil Kang. 2014. “Keylogging-Resistant Visual Authentication Protocols.” 
+                        <hi rend="italic">IEEE Transactions on Mobile Computing</hi> 13 (11): 2566–79. 
+                        <ref target="https://doi.org/10.1109/TMC.2014.2307331">https://doi.org/10.1109/TMC.2014.2307331</ref>.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-pawan2023beyond"/>Pawan, V. 2023. “Beyond Traditional Keyloggers: Developing and Detecting Advanced Keystroke Monitoring Systems.” In 
+                        <hi rend="italic">2023 7th International Conference on Computation System and Information Technology for Sustainable Solutions (CSITSS)</hi>, 1–6. IEEE.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-péron2022stitching"/>Péron, Mélanie, Meaghan Moody, and Vickie Karasic. 2022. “Stitching the Fragmented: Feminist Maker Pedagogy and Immersive Technologies for Cultural Learning.” 
+                        <hi rend="italic">Digital Humanities Quarterly</hi> 16 (2). 
+                        <ref target="http://digitalhumanities.org/dhq/vol/16/2/000614/000614.html">http://digitalhumanities.org/dhq/vol/16/2/000614/000614.html</ref>.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-Rai2022"/>Rai, Swarnima, Vaaruni Choubey, Suryansh, and Puneet Garg. 2022. “A Systematic Review of Encryption and Keylogging for Computer System Security.” In 
+                        <hi rend="italic">2022 Fifth International Conference on Computational Intelligence and Communication Technologies (CCICT)</hi>, 157–63. IEEE. 
+                        <ref target="https://doi.org/10.1109/CCiCT56684.2022.00039">https://doi.org/10.1109/CCiCT56684.2022.00039</ref>.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-ratto2011critical"/>Ratto, Matt. 2011. “Critical Making: Conceptual and Material Studies in Technology and Social Life.” 
+                        <hi rend="italic">The Information Society</hi> 27 (4): 252–60. 
+                        <ref target="https://doi.org/10.1080/01972243.2011.583819">https://doi.org/10.1080/01972243.2011.583819</ref>.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-saltz2018key"/>Saltz, Jeffrey S, Neil I Dewar, and Robert Heckman. 2018. “Key Concepts for a Data Science Ethics Curriculum.” In 
+                        <hi rend="italic">Proceedings of the 49th ACM Technical Symposium on Computer Science Education</hi>, 952–57.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-shukla2023examining"/>Shukla, Viraj, Yatin Shukla, and Anil Patel. 2023. “Examining the Ethical Implications and Technical Capabilities of Key-Logger Software.” In 
+                        <hi rend="italic">2023 3rd International Conference on Innovative Mechanisms for Industry Applications (ICIMIA)</hi>, 474–77. IEEE.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-singh2023keylogger"/>Singh, Nongmeikapam Thoiba, Aditya Shukla, Ajay Nagar, Kartavya Arya, Ashwani Tiwari, and Yash Varun. 2023. “Keylogger Development: Technical Aspects, Ethical Considerations, and Mitigation Strategies.” In 
+                        <hi rend="italic">2023 International Conference on Energy, Materials and Communication Engineering (ICEMCE)</hi>, 1–5. IEEE.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-Stefan2012"/>Stefan, Deian, Xiaokui Shu, and Danfeng Daphne Yao. 2012. “Robustness of Keystroke-Dynamics Based Biometrics Against Synthetic Forgeries.” 
+                        <hi rend="italic">Computers &amp; Security</hi> 31 (1): 109–21.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-Sullivan2006"/>Sullivan, K. P. H., and E. Lindgren, eds. 2006. 
+                        <hi rend="italic">Studies in Writing: Vol. 18. Computer Key-Stroke Logging and Writing: Methods and Applications</hi>. Oxford: Elsevier.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-wickham2023r"/>Wickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. 
+                        <hi rend="italic">R for Data Science</hi>. O’Reilly.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-wilkinson2016fair"/>Wilkinson, Mark D., Michel Dumontier, IJsbrand Jan Aalbersberg, Gabrielle Appleton, Myles Axton, Arie Baak, Niklas Blomberg, et al. 2016. “The FAIR Guiding Principles for Scientific Data Management and Stewardship.” 
+                        <hi rend="italic">Scientific Data</hi> 3 (1). 
+                        <ref target="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

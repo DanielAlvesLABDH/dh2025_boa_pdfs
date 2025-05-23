@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ROSI_SKI_Cezary_Exploration_of_Research_Impact_through_IMeTo">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Exploration of Research Impact through IMeTo. Supporting Societal Technology Transfer</title>
+                <author>
+                    <persName>
+                        <surname>Rosiński</surname>
+                        <forename>Cezary</forename>
+                    </persName>
+                    <affiliation>The Institute of Literary Research of the Polish Academy of Sciences</affiliation>
+                    <email>cezary.rosinski@ibl.waw.pl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Wołczuk</surname>
+                        <forename>Nikodem</forename>
+                    </persName>
+                    <affiliation>The Institute of Literary Research of the Polish Academy of Sciences</affiliation>
+                    <email>nikodem.wolczuk@ibl.waw.pl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Hubar-Kołodziejczyk</surname>
+                        <forename>Patryk</forename>
+                    </persName>
+                    <affiliation>Faculty of Journalism, Information and Bibliology, University of Warsaw</affiliation>
+                    <email>p.hubar@uw.edu.pl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Perliński</surname>
+                        <forename>Dariusz</forename>
+                    </persName>
+                    <affiliation>The Institute of Literary Research of the Polish Academy of Sciences</affiliation>
+                    <email>dariusz.perlinski@ibl.waw.pl</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-23T12:38:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Impact assessment</term>
+                    <term>Knowledge transfer</term>
+                    <term>Research evaluation</term>
+                    <term>Artificial intelligence</term>
+                    <term>Social sciences and humanities</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>data modeling</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>public humanities collaborations and methods</term>
+                    <term>Cultural studies</term>
+                    <term>Humanities computing</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">IMeTo (Impact Measurement Tool) is the Institute of Literary Research of the Polish Academy of Sciences (IBL PAN) pilot initiative within the GRAPHIA project. IMeTo aims to 
+                <hi rend="bold">measure the impact of scientific activities</hi>, considering both scientific publications and activities defined by research assessment criteria in a given national context. IMeTo is designed to serve as a tool to assist managers of scientific institutions and teams to evaluate and shape the output of scientific organisations.
+            </p>
+            <p style="text-align: left; ">GRAPHIA, funded by the European Union through the Horizon Europe programme, aims to strengthen the European Research Area by developing a knowledge graph for the humanities and social sciences, enhanced by advanced AI and LLM-based services, while modernising the next generation of SSH research and innovation. The resulting graph integrates distributed data, using existing infrastructures and data resources such as the EHRI Collection Graph, E-RIHS DIGILAB KG, RESILIENCE ReIReSearch, CNRS KG Matilda, OpenCitations, Open Research Knowledge Graph and GESIS Knowledge Graph. The project involves 20 partners from 10 countries, including five participants in the European Strategy Forum on Research Infrastructures (ESFRI), underlining its importance for the European Research Area.</p>
+            <p style="text-align: left; ">IMeTo focuses on 
+                <hi rend="bold">knowledge and technology transfer in the humanities and social sciences</hi>, enabling researchers to more effectively communicate the results of their work and its societal impact. Knowledge and technology transfers are complex processes involving dissemination towards society and business to facilitate commercialisation or wider application. In the context of IMeTo, this transfer focuses on supporting researchers in demonstrating their studies' societal and economic impact. The tool will use pre-defined general and user-defined specific criteria to facilitate the assessment and presentation of the impact of scientific research. In addition, IMeTo will measure the effectiveness and success rate of disseminating research results to a wide audience, thereby enhancing inclusivity in science and promoting community engagement.
+            </p>
+            <p style="text-align: left; ">A key feature of IMeTo is the use of artificial intelligence (AI) and machine learning (ML) to automate impact assessment, as the tool is intended to help with processing large volumes of data (i.e. departments/universities/institutes' yearly output). To this end, the tool will integrate an open language model (LLM), such as Llama, Mistral or PLLuM, with fine-tuning capabilities. The role of the model will be to 
+                <hi rend="bold">classify information in input documents and generate proposed impact descriptions</hi> using a hybrid language model approach:
+            </p>
+            <list type="unordered">
+                <item>
+                    <hi rend="bold">Analytical model</hi>: Extracts key information from documents by assigning relevant labels from typologies to the input data.
+                </item>
+                <item>
+                    <hi rend="bold">Generative model</hi>: Generates impact descriptions based on the extracted information and assigned labels, producing coherent and well-formulated texts that take into account the relationships between different typology elements.
+                </item>
+            </list>
+            <p style="text-align: left; ">The development of IMeTo includes the annotation of existing scientific impact descriptions. This involves the creation of a set of typologies that reflect the specific characteristics of impact and allow the extraction of key impact description elements as labels, such as scientific activity, impact beneficiaries and intended use of research results.</p>
+            <p style="text-align: left; ">The annotated data will come from the POL-on integrated network of information on science and higher education in Poland. The database contains descriptions prepared by higher education and research institutions detailing the relationship between research results or development activities (or artistic endeavours) and their impact on the economy, public administration, health care, culture, environmental protection, national security or other social progress factors. These descriptions are used to assess the quality of scientific activities of institutions in Poland.</p>
+            <p style="text-align: left; ">IMeTo may be implemented as a plugin for Current Research Information Systems (CRIS) or as a standalone application capable of working with local datasets in various formats (e.g., txt, pdf). In addition, the IMeTo application will have an API that will allow researchers, research institutions, funding agencies and evaluators of scientific activities to access its functionalities.</p>
+            <p style="text-align: left; ">IMeTo is a tool that specifically addresses the challenge of better understanding how SSH can be more accessible to the wider society (Reale et al. 2018). 
+                <hi rend="bold">Improving the impact of SSH on society</hi> depends on obtaining relevant and comprehensive data about how the research influences the public, and currently, as research shows (Wróblewska 2021, Wróblewska et al. 2024), this process needs to be data-driven. IMeTo will serve as a tool that can assist with analysing research output to maximise the impact potential of SSH institutions.
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Reale, Emanuela / Avramov, Dragana / Canhial, Kubra / Donovan, Claire / Flecha, Ramon / Holm, Poul / Larkin, Charles / Lepori, Benedetto / et al.</hi> (2018): "A review of literature on evaluating the scientific, social and political impact of social sciences and humanities research", in: 
+                        <hi rend="italic">Research Evaluation</hi> 27, 4: 298–308. DOI:10.1093/reseval/rvx025.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Wróblewska, Marta Natalia</hi> (2021): "Research impact evaluation and academic discourse", in: 
+                        <hi rend="italic">Humanities and Social Sciences Communications</hi> 8, 1: 1–12. DOI:10.1057/s41599-021-00727-8.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Wróblewska, Marta Natalia / Balaban, Corina / Derrick, Gemma / Benneworth, Paul</hi> (2024): "The conflict of impact for early career researchers planning for a future in the academy", in: 
+                        <hi rend="italic">Research Evaluation</hi> 33. DOI: 10.1093/reseval/rvad024.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

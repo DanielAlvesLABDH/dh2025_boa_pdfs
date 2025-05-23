@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="YANG_Guang_Oracle_Bone_Reassembly_Based_on_Diffusion_Model">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Oracle Bone Reassembly Based on Diffusion Model</title>
+                <author>
+                    <persName>
+                        <surname>Yang</surname>
+                        <forename>Guang</forename>
+                    </persName>
+                    <affiliation>BNU-HKBU United International College, China, People's Republic of</affiliation>
+                    <email>gyangak@connect.ust.hk</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>oracle bones</term>
+                    <term>cultural heritage restoration</term>
+                    <term>diffusion model</term>
+                    <term>computer vision</term>
+                    <term>machine learning</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>image processing and analysis</term>
+                    <term>Archaeology</term>
+                    <term>Asian studies</term>
+                    <term>Computer science</term>
+                    <term>Philology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Oracle bones were primarily cattle scapulae and tortoise plastrons, as well as other animal bones, used for divination during the late Shang dynasty (ca. 1200–1045 B.C.) in ancient China. The inscriptions on them, which represent the earliest known form of the Chinese writing system, provide invaluable insights into early Chinese language and history. Since their rediscovery in 1899, over 150,000 oracle bones have been excavated (Jiang 2019: 191). However, many of them have become fragmented due to various factors, including the divination process, natural deterioration, and human handling. Therefore, reassembling digital images of these fragments significantly contributes to reconstructing the original inscriptions and advancing our understanding of ancient Chinese civilisation.</head>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Traditionally, this reassembly task was performed manually by scholars, which was both labour-intensive and time-consuming. Given the visual nature of the task, it is particularly amenable to computer vision techniques. In recent years, computer-assisted methods have emerged for this task. However, the existing methods rely on either basic computer visualisation techniques or traditional image processing, with no integration of machine learning, resulting in limited sophistication and low efficiency.</head>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>To address this issue, we propose a novel approach based on Diffusion Models, a class of generative deep learning architectures that have demonstrated remarkable performance in computer vision tasks in recent years. Although their potential application to archaeology and cultural heritage studies has been acknowledged in the computer science literature, few studies have thoroughly explored this domain. Specifically, this paper adopts the method of Denoising Diffusion Probabilistic Models (Ho et al. 2020).</head>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>The dataset used in this study consists of images cropped from published books featuring oracle bone rubbings. Firstly, we introduce a numerical interpretation of fragment data incorporating features, such as location, rotation, and edges. We regard the fragmented oracle bones as poses with noise, then the reassembly process aims to denoise. In the training process, we add Gaussian noise incrementally to the fragment data, and then train a neural network to reverse the process and obtain the initial pose. During the reverse diffusion process, the model reconstructs the original poses of the oracle bones. Furthermore, we add additional weight on the feature points at the edges of the oracle bones to optimise the model’s performance.</head>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>We tested our model on oracle bones that had previously been reassembled by scholars, confirming our model’s ability to rediscover the matches. Experimental results showed that our method significantly improved the efficiency over prior methods, such as feature-point matching method and some methods based on object detection. We also applied our model to a large, general dataset of oracle bones, where its new discoveries still require validation by human experts.</head>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>The limitation of our model is that we primarily focus on the visual shape of the oracle bone fragments and inscriptions, while disregarding the semantic meaning of the inscriptions and the divination marks, which may affect the reliability of the results. Therefore, it is necessary for human experts to examine the reassemblies to ensure their correctness.</head>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Our research offers a promising computational approach to assist scholars in reassembling oracle bone fragments. By enabling accurate and large-scale reconstruction of oracle bone inscriptions, it supports the decipherment of the inscriptions and the classification and periodisation of oracle bones. We anticipate that this approach will make a substantial contribution to the interdisciplinary study of artificial intelligence, archaeology and early Chinese history, and foster new methods in this emerging field.</head>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Fujikawa, Yoshiyuki / Li, Hengyi / Yue, Xuebin / Aravinda, C. V. / Prabhu, G. Amar / Meng, Lin</hi> (2022): “Recognition of oracle bone inscriptions by using two deep learning models”, in: International Journal of Digital Humanities. DOI: 10.1007/s42803-022-00044-9.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Ho, Jonathan / Jain, Ajay / Abbeel, Pieter</hi> (2020): “Denoising diffusion probabilistic models”, in: Advances in Neural Information Processing Systems 33: 6840–6851.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Jiang, Yubin</hi> (2019): “The Amount of Oracle Bones and Characters on Oracle Bone Inscriptions of the Shang &amp; Zhou Dynasty: Retrospect of the Fundamental Collecting and Collating During 120 Years and Prospect of the Study of Bone Inscriptions”, in: Chinese Linguistics and Sinology: 190–192.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Oracle Bone Inscription AI Collaborative Platform</hi>. https://www.jgwlbq.org.cn/home [14.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Yue, Xuebin / Wang, Ziming / Ishibashi, Ryuto / Kaneko, Hayata / Meng, Lin</hi> (2024): “An unsupervised automatic organization method for Professor Shirakawa’s hand-notated documents of oracle bone inscriptions”, in: International Journal on Document Analysis and Recognition. DOI: 10.1007/s10032-024-00463-0.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">ZhuiHeLab</hi>, a database of oracle bone fragment reassemblies. http://www.fdgwz.org.cn/ZhuiHeLab/Home [14.04.2025].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MICHIELIN_Lucia_Is_Open_Data_Really_Open__The_Hansard_Parlia">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Is Open Data Really Open? The Hansard Parliamentary Data Case Study</title>
+                <author>
+                    <persName>
+                        <surname>Michielin</surname>
+                        <forename>Lucia</forename>
+                    </persName>
+                    <affiliation>University of Edinburgh, United Kingdom</affiliation>
+                    <email>lucia.michielin@ed.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Witte</surname>
+                        <forename>Jessica</forename>
+                    </persName>
+                    <affiliation>University of Edinburgh, United Kingdom</affiliation>
+                    <email>jessica.witte@ed.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Fordyce</surname>
+                        <forename>Kenneth</forename>
+                    </persName>
+                    <affiliation>University of Edinburgh, United Kingdom</affiliation>
+                    <email>kfordyce@exseed.ed.ac.uk</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-14T10:15:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>accessibility</term>
+                    <term>web scraping</term>
+                    <term>open access</term>
+                    <term>data acquisition</term>
+                    <term>corpus linguistics</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digital access</term>
+                    <term>privacy</term>
+                    <term>and ethics analysis</term>
+                    <term>information retrieval and querying algorithms and methods</term>
+                    <term>open access methods</term>
+                    <term>project design</term>
+                    <term>organization</term>
+                    <term>management</term>
+                    <term>Communication studies</term>
+                    <term>Education/ pedagogy</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">Over the past two decades, a series of socio-political events have led to the increased displacement of people. The global financial crisis in 2008, regime changes across North Africa and the Middle East, the Coronavirus pandemic, and wars in Europe and the Middle East have threatened the livelihoods of people around the world, in some cases forcing them to flee their homes. This has led to increased political rhetoric about immigration, including a rise in right-wing and populist parties that often characterise immigrants and asylum seekers as a threat to society (see e.g.  </hi>
+                <ref target="https://fpif.org/europes_dilemma_immigration_and_the_arab_spring/)">
+                    <hi rend="normaltextrun">
+                        <hi rend="underline color(467886)" style="font-family:Source Sans Pro;font-size:11pt">https://fpif.org/europes_dilemma_immigration_and_the_arab_spring/)</hi>
+                    </hi>
+                </ref>
+                <hi rend="normaltextrun"> .</hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">This project examines how political discourse around immigration and asylum in the UK has changed since 2007. First, a dataset of all parliamentary debates on immigration that took place in the UK House of Commons from 1 January 2007 to 31 December 2024 was collected. These debates were stored as a corpus. Then, each debate was tagged to include relevant metadata including the speaker’s identity, the speaker’s political party, and whether the speaker was debating on behalf of the government. Finally, using an interdisciplinary quantitative-qualitative methodology that employs corpus linguistics and critical discourse analysis, the project closely examined shifts in the words and phrases used by politicians in debates about immigration and asylum during this time period. </hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">This paper centres on a data acquisition challenge that emerged during the initial phase of the project as a case study of what, we argue, is an ethical use of web scraping for interdisciplinary digital research. Using a semi-automatic web scraping process, we extracted a collection of parliamentary transcripts from the </hi>
+                <ref target="https://www.parliament.uk/about/how/publications/hansard/">
+                    <hi rend="normaltextrun">
+                        <hi rend="underline color(467886)" style="font-family:Source Sans Pro;font-size:11pt">Hansard database</hi>
+                    </hi>
+                </ref>
+                <hi rend="normaltextrun">, which contains all full-text debates and speeches from the UK’s House of Commons and House of Lords.</hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">It hardly needs saying that full access to parliamentary data is essential for ensuring full accountability and transparency in a democracy. Moreover, open access to this information enables researchers to carry out precise and reliable analyses of the language and content of political debates (Taylor 2022). However, open data is not always made available to researchers in an easy-to-access format. In such cases, questions surrounding the legal and ethical challenges of certain data acquisition methods can present a significant barrier.</hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">In the UK, parliamentary debates are </hi>
+                <ref target="https://www.parliament.uk/visiting/visiting-and-tours/watch-committees-and-debates/debates/">
+                    <hi rend="normaltextrun">
+                        <hi rend="underline color(467886)" style="font-family:Source Sans Pro;font-size:11pt">open to the public and free to attend</hi>
+                    </hi>
+                </ref>
+                <hi rend="normaltextrun">.  Transcribed versions of speeches and debates are similarly accessible, stored on the Hansard database.  Hansard readers can search for full-text debates and download a .txt version of each record. Additionally, </hi>
+                <ref target="https://commonslibrary.parliament.uk/data-tools-and-resources/">
+                    <hi rend="normaltextrun">
+                        <hi rend="underline color(467886)" style="font-family:Source Sans Pro;font-size:11pt">aggregated datasets</hi>
+                    </hi>
+                </ref>
+                <hi rend="normaltextrun"> about parliamentary activities are shared with the public. These materials are subject to the </hi>
+                <ref target="https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/">
+                    <hi rend="normaltextrun">
+                        <hi rend="underline color(467886)" style="font-family:Source Sans Pro;font-size:11pt" xml:space="preserve">Open Parliament </hi>
+                        <hi rend="underline color(467886)" style="font-family:Source Sans Pro;font-size:11pt">Licence</hi>
+                    </hi>
+                </ref>
+                <hi rend="normaltextrun">, which explicitly encourages the public to ‘use and re-use' the data. Despite the open principles of the Hansard database and the Open Parliament Licence, researchers hoping to extract information from the site face several challenges. First, the site architecture requires users to click through each record individually, which can be prohibitively time-consuming.  Second, like many websites, Hansard uses </hi>
+                <ref target="https://www.cloudflare.com/en-gb/">
+                    <hi rend="normaltextrun">
+                        <hi rend="underline color(467886)" style="font-family:Source Sans Pro;font-size:11pt">Cloudflare</hi>
+                    </hi>
+                </ref>
+                <hi rend="normaltextrun">, a software designed to detect and mitigate automated interactions that may be indicative of attacks. Therefore, data extraction methods such as web scraping and crawling are blocked. Third, while the UK Parliament provides an application programming interface (API) allowing access to most parliamentary data,</hi>
+                <hi rend="superscript">1</hi>
+                <hi rend="normaltextrun"> the API does not yet have a search function for whole transcripts of debates and speeches. Users working with the UK Parliament’s API are therefore limited to extracting metadata, such as the dates and houses of debates, and a subset of each transcript. </hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">For these reasons, we had to develop a different approach to extracting the parliamentary speeches and metadata for creating our corpus. First, using the Hansard database’s Search API, we generated a list of all relevant debates via a keyword search for immigration-related terms in the Hansard database. Then, we extracted their corresponding web addresses and other metadata including the date of each debate and the unique identification numbers of the speakers who participated. This dataset was then imported in OpenRefine, an open-source software for cleaning and wrangling data. Using OpenRefine, we fetched the full-text transcript of each debate. We then reprocessed the dataset with R to extract all the pertinent HTML Tags into a tabular form. Finally, we cleaned the data further in OpenRefine. </hi>
+                <hi rend="eop"> </hi>
+            </p>
+            <p rend="paragraph" style="text-align: left; text-align: justify;">
+                <hi rend="normaltextrun">This paper presents a real-world example of web scraping for interdisciplinary research as a case study not only of the practical implementations of these methods, but also of how researchers might navigate similar challenges in their own work. We also comment upon the role of web scraping in ensuring a more open and equitable research environment, where data is treated not as a commodity but, where possible, is made accessible in accordance with FAIR principles. </hi>
+                <hi rend="eop"> </hi>
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="normaltextrun">
+                            <hi rend="bold" style="font-family:Source Sans Pro">Taylor, C.</hi> (2022). ‘
+                            <hi rend="color(222222)" style="font-family:Source Sans Pro" xml:space="preserve">Corpus linguistics in the study of political discourse: recent </hi>
+                            <hi rend="color(222222)" style="font-family:Source Sans Pro">directions’</hi>
+                            <hi rend="color(222222)" style="font-family:Source Sans Pro" xml:space="preserve">. </hi>
+                            <hi rend="italic color(222222)" style="font-family:Source Sans Pro">The Routledge handbook of corpus linguistics</hi>
+                            <hi rend="color(222222)" style="font-family:Source Sans Pro">, 602-614</hi>
+                        </hi>
+                        <hi rend="eop">
+                            <hi rend="color(222222)" style="font-family:Source Sans Pro"> </hi>
+                        </hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

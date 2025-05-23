@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PIERAZZO_Elena_What_do_you_do_with_8_thousand_billion_varian">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>What do you do with 8 thousand billion variants? Toward structural and quantitative philology</title>
+                <author>
+                    <persName>
+                        <surname>Pierazzo</surname>
+                        <forename>Elena</forename>
+                    </persName>
+                    <affiliation>University of Tours, France</affiliation>
+                    <email>elena.pierazzo@univ-tours.fr</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T09:32:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>textual scholarship</term>
+                    <term>stemmatology</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>scholarly editing and editions development</term>
+                    <term>analysis</term>
+                    <term>and methods</term>
+                    <term>Book and print history</term>
+                    <term>Literary studies</term>
+                    <term>Philology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>The paper will present the first mounting of a new philological method tackling the issues of managing too many variant readings. The traditional philological method of stemmatology is based on transmission errors: an editor uses them as a guide to reconstruct lost originals (Trovato, 2014). These errors are normally found by collating word by word from the texts found in a given work's witnesses (manuscripts or print). These operations have recently been subjected to a methodological revamp thanks to the arrival of powerful tools for ATR, alignment and stemmatology; however, these prove unusable on their own when dealing with fluid traditions and large datasets, and new methods must be envisaged.</p>
+            <p>The case study that allows us to exemplify the problem and the possible solution is offered by 
+                <hi rend="italic">Il Capitolo dei Frati</hi>, a poem by the Jesuit Sebastiano Chiesa, written after the 1650s in which he satirises the chapter of Franciscan friars, which took place in 1645 in Modena. The work was a best seller at the time: we have located over 250 manuscripts written between 1670 and 1854, but we suspect the existence of over one thousand copies. Practically, every monastery and convent of any religious order in Italy and beyond had at least one copy, if not more: we find copies in London, Paris, Madrid, Dresden, Philadelphia, Harvard and Toronto, for instance. We have directly examined 140 copies, and a collation by 
+                <hi rend="italic">loci critici</hi> has demonstrated that we are dealing with a large variety of text types. To choose our 
+                <hi rend="italic">loci</hi>, we have adopted the Andrist and Maniaci (2021) structural textual segmentation, which subdivides text into blocks of content (BlockCont) and chooses the liminal section of each of them as our loci. For our preliminary collation, we therefore considered the incipit, the incipit of the so-called 
+                <hi rend="italic">Argomento</hi> (i.e. a stanza providing an abstract of each canto), as well as the explicit (last verse) of each canto. For each 
+                <hi rend="italic">locus</hi>, we have determined a certain number of types that we call “canonical versions” and noted aside the smaller variants of the canonical form. For instance, there are two canonical versions of the incipit of the Canto Sesto: (1) “Già è scorso il tempo e già venuta è l’ora”, and (2) “Chi chiama in suo favor Sant’Agostino”, each of them may have local variations. The poem presents itself in a varying number of cantos, 10, 12, 14, 15 or 16, each of which presents different incipits and different lengths. The following table summarises all the canonical version types we have considered for each 
+                <hi rend="italic">locus</hi>. We used the 16
+                <hi rend="superscript">-</hi>canto versions (C1, C2, C3, etc.) as our reference. 
+            </p>
+            <figure>
+                <graphic n="1001" width="15.628055555555555cm" height="3.2808333333333333cm" url="/tmp/tmp9f0n_gqc/Pictures/af0e25d4b1c7f39fb63d5338176414e9.png" rend="inline"/>
+                <head>Figure . Canonical types for the Capitolo dei Frati</head>
+            </figure>
+            <p>The last row presents all possible combinations of incipits and explicits for each canto. Once all the options are combined, we find that we can have up to 8,255,648,563,200 possible combinations. However, these combinations also need to be multiplied by the distinctive lengths for each Canto. Canto 1, for instance, can have 27 different lengths, ranging between 54 stanzas and 150, which means it can have between 432 and 1200 verses. If we multiply these lengths (27) by the possible combinations of incipit/explicit/arguments for C1 (12), we find that we have 324 possible versions only for Canto 1. Furthermore, these numbers still need to account for displacements and reordering of the ottavas, which occur very often. At present, of the 140 witnesses examined, we have found 136 different text types of C1, and only two witnesses are virtually identical for the full poem.</p>
+            <p>When a tradition is so fluid, collating the text and looking for mistakes or similarities is meaningless because the texts are so diverse on a substantial level that one cannot apply any of the collation or even quantitative approaches on a word or letter level (van Zundert 2020, Hyytiäinen 2023). To handle what we call 
+                <hi rend="italic">modern mouvance</hi>, within the project PRIMA (https://prima.hypotheses.org/), we have elaborated a computational workflow that allows us to cluster versions and then choose the most representative one for each cluster. Since the concept of error is meaningless, we have decided to focus on similarity of features and then apply quantitative analysis to them, similar to what is now being tested for quantitative codicology (Maniaci 2021). We define features as observable and measurable facts about the text or codex. For this experiment, we have considered textual, paratextual, and codicological features.
+            </p>
+            <p>In the first category, for instance, we included the incipit and explicit of each canto and the number of stanzas each includes. In the paratextual category, we considered the title, running titles, indices, and the presence of texts like addresses to the readers. For the codicological features, we considered format, ruling methods, layout, etc. All this data has been structured and stored within a relational database. We transform each manuscript into a row of a structured table, where every Canto is represented by its features. The data are normalised in order to be recognised by the processed. We then mined the data of each separately, according to the three distinct categories, and noted the clusters that emerged. We use Scipy (
+                <ref target="https://scipy.org/">https://scipy.org/</ref>) and Scikit learn (
+                <ref target="https://scikit-learn.org/stable/index.html">https://scikit-learn.org/stable/index.html</ref>) to handle the data and create a significant representation. The optimal number of clusters is defined by the distance between the separation of each cluster. First, the groups are represented with a dendrogram and a decision tree, which allows us to see on what features the algorithm is based. Then, the clusters are shown on a 3d plot, and we finally, for each cluster, take the manuscript which has the best meaning distance to the other, closest to the middle of the cluster. This “average manuscript” will be considered as the reference copy of each cluster. This operation is necessary to sort out at least some of the tradition's noise, allowing us to focus on a more manageable number of versions and readings. 
+            </p>
+            <p>Editing of the chosen versions will follow what has become the usual workflow: reference copies will be transcribed using ATR tools (eScriptorium: Stokes et al., 2021), aligned against each other using Passim (Smith, 2015-), and encoded in TEI before being published using TEIPublisher. </p>
+            <p>Within the PRIMA project, we will also test it against other works of the 17th and 18th centuries, characterised by the same high rate of internal variation and fluidity. The latter emerges as one defining characteristic of literary, popular texts transmitted by manuscripts of all periods, as the untreatable traditions of Medieval texts such as the Roman de la Rose or Fleur, Parsifal, Fleur et Blanchefleur suggest. Therefore, this workflow and this method may have wide methodological implications and potential for all traditions featuring such a high level of variants.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Andrist, Patrick / Maniaci, Marilena</hi> (2021). "The Codex Content", in: Quenzer, Jörg B. B. (ed.), 
+                        <hi rend="italic">Exploring Written Artefacts</hi>. Berlin: De Gruyter: 369–394.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Maniaci, Marilena</hi> (2021): 
+                        <hi rend="italic">Trends in Statistical Codicology</hi>. Berlin: De Gruyter.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold color(2A2A2A)">Hyytiäinen, Pasi</hi>
+                        <hi rend="color(2A2A2A)" xml:space="preserve"> (2023). “A new method in establishing quantitative relationships between manuscripts of the New Testament”, in:  </hi>
+                        <hi rend="italic">
+                            <hi rend="color(2A2A2A)">Digital Scholarship in the Humanities</hi>
+                        </hi>
+                        <hi rend="color(2A2A2A)" xml:space="preserve"> 38, 1: 151–166, </hi>
+                        <ref target="https://doi.org/10.1093/llc/fqac030">
+                            <hi rend="color(006FB7)">https://doi.org/10.1093/llc/fqac030</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Stokes, Peter A. / Benjamin Kiessling / Daniel Stökl Ben Ezra / Robin Tissot / El Hassane Gargem</hi> (2021). “The eScriptorium VRE for Manuscript Cultures”, 
+                        <hi rend="italic">Classics@Journal</hi>, 18, 
+                        <ref target="https://classics-at.chs.harvard.edu/classics18-stokes-kiessling-stokl-ben-ezra-tissot-gargem/">https://classics-at.chs.harvard.edu/classics18-stokes-kiessling-stokl-ben-ezra-tissot-gargem/</ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Trovato, Paolo</hi> (2014). 
+                        <hi rend="italic">Everything You Always Wanted to Know about Lachmann's Method</hi>. Padova: libreriauniversitaria.it Edizioni. 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Smith, David (2015-)</hi>. Passim: 
+                        <ref target="https://github.com/dasmiq/passim">https://github.com/dasmiq/passim</ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">van Zundert, Joris</hi> (2020) (ed.). “Computational methods and tools”. In: Roelli, Philipp, (ed.), 
+                        <hi rend="italic">Handbook of Stemmatology: History, Methodology, Digital Approaches</hi>, Berlin: De Gruyter: 292–356.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LUBIN_Jonah_An_OIE_Pipeline_for_the_Identification_and_Produ">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">An OIE Pipeline for the Identification and Production of Missing Biographical Knowledge</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Lubin</surname>
+                        <forename>Jonah</forename>
+                    </persName>
+                    <affiliation>Harvard University, United States of America</affiliation>
+                    <email>jonah_lubin@g.harvard.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Stranisci</surname>
+                        <forename>Marco Antonio</forename>
+                    </persName>
+                    <affiliation>University of Turin, Italy</affiliation>
+                    <email>marcoantonio.stranisci@unito.it</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T11:58:58.331838852</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>yiddish</term>
+                    <term>computational linguistics</term>
+                    <term>open information extraction</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>data modeling</term>
+                    <term>linked (open) data</term>
+                    <term>Computer science</term>
+                    <term>Linguistics</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Experts in minority-language literatures often find that important, even central figures in their traditions are not to be found in online repositories of knowledge (cf. Hube et al., 2017). In other words, there is often a wide gap between the corpora of biographical information important to the study of marginalized literatures, and the corpus of biographical data readily accessible online, whether in unstructured (e.g. Wikipedia) or structured form (e.g. Wikidata).</p>
+            <p>This experienced absence remains difficult to quantify. Sometimes, a few of the very-most famous, outward-facing figures from a certain marginalized tradition will appear in central knowledge-repositories, while coverage of important figures, who are less well known to the outside world, will be completely absent. Scholars have begun to plot these absences (cf. Zhang et al. 2021; Callahan et al. 2011). If we are to improve the standing of marginalized knowledge on the internet, then our first problem is to determine the marginalization of that knowledge quantitatively. </p>
+            <p>Were the gaps of the coverage on a platform (e.g. Wikidata) to be quantitatively determined, it would then make sense to close those gaps. Unfortunately, the knowledge gaps concerning marginalized communities do not only manifest as the absence of items (to use Wikidata’s terminology), but missing properties. A key example is migration. The biographies of writers in non-hegemonic literatures are full of movements from and to various locations, and these movements are classified in nuanced terms (e.g. flight, emigration, relocation) (Stranisci et al., 2023). Wikidata properties, in their current form, cannot capture these nuanced movements. The way hegemonic information is modeled does not necessarily fit the internal structure of marginalized knowledge. </p>
+            <p>In this paper, we address these issues by introducing a novel framework for measuring the presence of quantitative and qualitative gaps in Wikidata concerning potentially underrepresented writers. We have built an Open Information Extraction (IE) pipeline which, given a biography, detects all the events related to its entity target (Stranisci et al.
+                <hi rend="italic">, </hi>2023) and extracts them in the form of triples organized according to a Semantic Model of facts about writers (Stranisci et al., 2021). Such a pipeline enables the comparison between the knowledge that is encoded in authoritative and widely adopted resources like Wikidata and the knowledge that can be found in external independent sources. Our approach focuses on two research questions:
+            </p>
+            <p>- RQ1: given a literary archive, what is the actual number of its entities that are properly mapped to Wikidata?</p>
+            <p>- RQ2: what types of automatically extracted biographical knowledge are actually alignable with the properties present in Wikidata’s Semantic Model?</p>
+            <p>As an initial case study for our pipeline, we selected the 
+                <hi rend="italic">Leksikon Fun Der Nayer Yidisher Literatur </hi>(“The Lexicon of Modern Yiddish/Jewish Literature”), a biographical lexicon of Yiddish literary figures (Fogel, 2024). The Leksikon (as we will refer to it from now on) was translated into English by Josh Fogel and made freely available on the internet, first as a Blogspot blog, and now on the website for the Congress of Jewish Culture. In October of 2023, we scraped the Blogspot version of the site, and downloaded 5,807 biographies. 
+            </p>
+            <p>In order to assess the representation of these figures on the internet, we used to our advantage a limitation of Sapienza NLP’s Relik, a tool focused on entity linking and relation extraction (Orlando et al., 2024). Relik’s entity linking, like its relation extraction, relies on a Wikipedia knowledge base. This means that it will identify entities that have a corresponding, dedicated Wikipedia entry. Although this is a serious limitation of the model, it allows us to produce a benchmark for the representation of these figures on Wikipedia, by measuring the number of biographical entries which cannot be linked to Wikipedia articles.</p>
+            <p>In order to do this, we used sections of the Leksikon’s biographies as input, and recorded Relik’s potential matches for English Wikipedia articles. We then used fuzzy matching to pare down the many, often irrelevant potential matches. Finally, we manually evaluated the remaining candidates in order to remove false positives. In the case of the biographical entries from the Leksikon, we were able to identify 117 Wikipedia articles from the 5,807 total biographies.<ref n="1" target="ftn0"/> This indicates a serious knowledge gap on Wikipedia, which should be addressed (RQ1).
+            </p>
+            <p>Not only that, our findings show that a high number of biographical events extracted from biographies do not have a correspondence in the taxonomy of Wikidata properties (RQ2). For instance, Wikidata is not suited to encode biographical migration events and to express fine-grained roles that are related to the publishing industry. </p>
+            <p>Our contribution is not limited to the analysis of gaps, though. We will release two resources aimed at enhancing the Digital Humanities research on this issue:</p>
+            <p>- a Python library for the extraction of biographical triples from biographies;</p>
+            <p>- the Yiddish Writers Knowledge Graph: a knowledge base of 
+                <hi rend="italic">n</hi> biographical triples about Yiddish writers;
+            </p>
+            <p>- the Yiddish Writers Dataset: a corpus of 1100 sentences about Yiddish writers annotated for the extraction of biographical triples. </p>
+            <p>With the publication of these resources, we hope to improve not only the available body of structured data pertaining to Yiddish literature, but also to provide a general resource for the production of structured biographical data for authors in other non-hegemonic literatures.</p>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn0" rend="footnote text" n="1">Among the 117 people from the Leksikon was Sholem Asch, who became a crossover hit in translation. Among the many missing are the novelists Oyzer Bloshteyn and Israel Rabon.</note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Callahan, Ewa S.</hi>
+                        <hi rend="color(#000000)bold"> / Herring, </hi>
+                        <hi rend="color(#000000)bold">Susan </hi>
+                        <hi rend="color(#000000)bold">C.</hi>
+                        <hi rend="color(#000000)"> (2011) ‘Cultural bias in Wikipedia content on famous persons’, </hi>
+                        <hi rend="color(#000000)italic">Journal of the American Society for Information Science and Technology</hi>
+                        <hi rend="color(#000000)">, 62(10), pp. 1899–1915. Available at: </hi>
+                        <ptr target="https://doi.org/10.1002/asi.21577"/>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Fogel, </hi>
+                        <hi rend="bold">Joshua</hi> (tran.) (2024) 
+                        <hi rend="italic">Leksikon Fun Der Nayer Yidisher Literatur</hi>. Available at: 
+                        <ptr target="https://congressforjewishculture.org/lexicon"/> (Accessed: 8 December 2024).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Graells-Garrido, </hi>
+                        <hi rend="bold">Eduardo / </hi>
+                        <hi rend="bold">Lalmas, </hi>
+                        <hi rend="bold">Mounia / </hi>
+                        <hi rend="bold">Menczer, F</hi>
+                        <hi rend="bold">ilippo</hi> (2015) ‘First Women, Second Sex: Gender Bias in Wikipedia’. Available at: 
+                        <ptr target="https://doi.org/10.1145/2700171.2791036"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hecht, B</hi>
+                        <hi rend="bold">rent</hi>
+                        <hi rend="bold"> / Gergle, </hi>
+                        <hi rend="bold">Darren</hi> (2009) ‘Measuring self-focus bias in community-maintained knowledge repositories’, in 
+                        <hi rend="italic">Proceedings of the fourth international conference on Communities and technologies</hi>. New York, NY, USA: Association for Computing Machinery (C&amp;amp;T ’09), pp. 11–20. Available at: 
+                        <ptr target="https://doi.org/10.1145/1556460.1556463"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hube, C</hi>
+                        <hi rend="bold">hristoph /</hi>
+                        <hi rend="bold"> Fischer, </hi>
+                        <hi rend="bold">Frank /</hi>
+                        <hi rend="bold"> Jäschke, </hi>
+                        <hi rend="bold">Robert /</hi>
+                        <hi rend="bold"> Lauer, </hi>
+                        <hi rend="bold">Gerhard / </hi>
+                        <hi rend="bold">Thomsen, </hi>
+                        <hi rend="bold">Mads </hi>
+                        <hi rend="bold">R.</hi> (2017) ‘World Literature According to Wikipedia: Introduction to a DBpedia-Based Framework’. arXiv. Available at: 
+                        <ptr target="https://doi.org/10.48550/arXiv.1701.00991"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Ilievski, </hi>
+                        <hi rend="bold">Filip / </hi>
+                        <hi rend="bold">Szekely, </hi>
+                        <hi rend="bold">Pedro</hi>
+                        <hi rend="bold"> and Schwabe, </hi>
+                        <hi rend="bold">Daniel</hi> (2020) ‘Commonsense Knowledge in Wikidata’. arXiv. Available at: 
+                        <ptr target="https://doi.org/10.48550/arXiv.2008.08114"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Orlando, </hi>
+                        <hi rend="bold">Riccardo /</hi>
+                        <hi rend="bold"> Huguet Cabot, </hi>
+                        <hi rend="bold">Pere</hi>
+                        <hi rend="bold">-Lluís /</hi>
+                        <hi rend="bold"> Barba, E</hi>
+                        <hi rend="bold">doardo</hi>
+                        <hi rend="bold"> / Navigli, </hi>
+                        <hi rend="bold">Roberto</hi> (2024) ‘Retrieve, Read and LinK: Fast and Accurate Entity Linking and Relation Extraction on an Academic Budget’, in 
+                        <hi rend="italic">Findings of the Association for Computational Linguistics: ACL 2024</hi>. Bangkok, Thailand: Association for Computational Linguistics.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Stranisci, </hi>
+                        <hi rend="bold">Marco</hi>
+                        <hi rend="bold"> </hi>
+                        <hi rend="bold">A. / Bernasconi, </hi>
+                        <hi rend="bold">Eleonora</hi>
+                        <hi rend="bold">, Patti, </hi>
+                        <hi rend="bold">Viviana /</hi>
+                        <hi rend="bold"> Ferilli, </hi>
+                        <hi rend="bold">Stefano /</hi>
+                        <hi rend="bold"> Ceriani, </hi>
+                        <hi rend="bold">Miguel</hi>
+                        <hi rend="bold"> / Damiano, </hi>
+                        <hi rend="bold">Rossana</hi> (2023) ‘The World Literature Knowledge Graph’, in T.R. Payne, V. Presutti, G. Qi, M. Poveda-Villalón, G. Stoilos, L. Hollink, Z. Kaoudi, G. Cheng, and J. Li (eds) 
+                        <hi rend="italic">The Semantic Web – ISWC 2023</hi>. Cham: Springer Nature Switzerland, pp. 435–452. Available at: 
+                        <ptr target="https://doi.org/10.1007/978-3-031-47243-5_24"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Stranisci, </hi>
+                        <hi rend="bold">Marco</hi>
+                        <hi rend="bold"> </hi>
+                        <hi rend="bold">A. / Damiano, </hi>
+                        <hi rend="bold">Rossana</hi>
+                        <hi rend="bold"> / </hi>
+                        <hi rend="bold">Mensa, </hi>
+                        <hi rend="bold">Enrico</hi>
+                        <hi rend="bold"> /</hi>
+                        <hi rend="bold"> Patti, </hi>
+                        <hi rend="bold">Viviana</hi>
+                        <hi rend="bold"> /</hi>
+                        <hi rend="bold"> Radicioni, </hi>
+                        <hi rend="bold">Daniele</hi>
+                        <hi rend="bold"> / </hi>
+                        <hi rend="bold">Caselli, </hi>
+                        <hi rend="bold">Tommaso</hi> (2023) ‘WikiBio: a Semantic Resource for the Intersectional Analysis of Biographical Events’, in A. Rogers, J. Boyd-Graber, and N. Okazaki (eds) 
+                        <hi rend="italic">Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)</hi>. 
+                        <hi rend="italic">ACL 2023</hi>, Toronto, Canada: Association for Computational Linguistics, pp. 12370–12384. Available at: 
+                        <ptr target="https://doi.org/10.18653/v1/2023.acl-long.691"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Stranisci, </hi>
+                        <hi rend="bold">Marco </hi>
+                        <hi rend="bold">A. / Patti, </hi>
+                        <hi rend="bold">Viviana</hi>
+                        <hi rend="bold"> / Damiano, </hi>
+                        <hi rend="bold">Rossana</hi> (2021) ‘Representing the Under-Represented: a Dataset of Post-Colonial, and Migrant Writers’, 
+                        <hi rend="italic">OASIcs, Volume 93, LDK 2021</hi>, 93, p. 7:1-7:14. Available at: 
+                        <ptr target="https://doi.org/10.4230/OASICS.LDK.2021.7"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Zhang, </hi>
+                        <hi rend="bold">Charles</hi>
+                        <hi rend="bold"> </hi>
+                        <hi rend="bold">C. / Terveen, </hi>
+                        <hi rend="bold">Loren</hi>
+                        <hi rend="bold"> </hi>(2021) ‘Quantifying the Gap: A Case Study of Wikidata Gender Disparities’, in 
+                        <hi rend="italic">Proceedings of the 17th International Symposium on Open Collaboration</hi>. New York, NY, USA: Association for Computing Machinery (OpenSym ’21), pp. 1–12. Available at: 
+                        <ptr target="https://doi.org/10.1145/3479986.3479992"/>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

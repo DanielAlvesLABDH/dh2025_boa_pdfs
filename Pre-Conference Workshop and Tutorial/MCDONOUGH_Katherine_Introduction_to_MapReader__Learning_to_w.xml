@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MCDONOUGH_Katherine_Introduction_to_MapReader__Learning_to_w">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Introduction to MapReader: Learning to work with maps as data (Workshop)</title>
+                <author>
+                    <persName>
+                        <surname>McDonough</surname>
+                        <forename>Katherine</forename>
+                    </persName>
+                    <affiliation>Lancaster University, United Kingdom; The Alan Turing Institute, United Kingdon</affiliation>
+                    <email>kmcdono2@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Beelen</surname>
+                        <forename>Kaspar</forename>
+                    </persName>
+                    <affiliation>School of Advanced Study, University of London, United Kingdom</affiliation>
+                    <email>kaspar.beelen@sas.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Wilson</surname>
+                        <forename>Daniel</forename>
+                    </persName>
+                    <affiliation>The Alan Turing Institute, United Kingdon</affiliation>
+                    <email>dwilson@turing.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Wood</surname>
+                        <forename>Rosie</forename>
+                    </persName>
+                    <affiliation>The Alan Turing Institute, United Kingdon</affiliation>
+                    <email>rwood@turing.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Westerling</surname>
+                        <forename>Kalle</forename>
+                    </persName>
+                    <affiliation>The Alan Turing Institute, United Kingdon</affiliation>
+                    <email>kwesterling@turing.ac.uk</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-07T20:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Pre-Conference Workshop and Tutorial</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>maps</term>
+                    <term>computer vision</term>
+                    <term>cartography</term>
+                    <term>text spotting</term>
+                    <term>historical data</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>image processing and analysis</term>
+                    <term>open access methods</term>
+                    <term>spatial &amp; spatio-temporal analysis</term>
+                    <term>modeling and visualization</term>
+                    <term>Geography and geo-humanities</term>
+                    <term>History</term>
+                    <term>History of science</term>
+                    <term>Environmental</term>
+                    <term>ocean</term>
+                    <term>and waterway studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>MapReader is an open software library that was designed to enable humanities research with big digitised map collections (Hosseini 2022, McDonough 2024). The winner of the 2023 Roy Rosenzweig Prize for Innovation in Digital History from the American Historical Association, MapReader was developed first within the Living with Machines project at The Alan Turing Institute. In addition to using MapReader for novel historical research (Rhodes et al. 2024), the team behind MapReader has focused on providing documentation, training, and other opportunities to get involved with MapReader research and development (Wood 2024). </p>
+            <p>MapReader performs two tasks:</p>
+            <list type="ordered">
+                <item>
+                    <hi rend="bold">Patch classification</hi> allows users to identify concepts of visual interest on maps, and then to define queries for predicting whether those concepts are present on hundreds or thousands of individual sheets. The power of this approach is its flexibility for any number of spatially-driven research questions.
+                </item>
+                <item>
+                    <hi rend="bold">Text spotting</hi> makes it possible to create a structured dataset of all text on a map image. MapReader implements models made available during the 2024 MapText competition (Li et al. 2024).
+                </item>
+            </list>
+            <p>During this half-day workshop, participants will:</p>
+            <list type="unordered">
+                <item>Hear about the research and theoretical motivations behind MapReader, and how it fits in a growing ecosystem of computer vision tools for humanities research;</item>
+                <item>Test both MapReader tasks with sample data using Google colab notebooks;</item>
+                <item>Review the basics of computer vision and machine learning as applied to computational maps research;</item>
+                <item>Discuss how to apply MapReader to one’s own map images;</item>
+                <item>Reflect on the opportunities for using “automatic” methods for analysing maps in humanistic research;</item>
+                <item>Learn about the opportunities and challenges of maintaining open source research software and how to get involved in the future of MapReader.</item>
+            </list>
+            <p>
+                <hi rend="bold">Workshop Material Creators and Instructors.</hi>
+            </p>
+            <p>Katherine McDonough is a Lecturer in Digital Humanities at Lancaster University and leads the MapReader project as part of a broader research agenda in creating new approaches to working with digitised map collections as primary sources in the historical and interdisciplinary research. Daniel Wilson is a Turing Research Fellow at The Alan Turing Institute (London). Kaspar Beelen is Technical Lead, Digital Humanities at the School of Advanced Study, University of London. Both have collaborated on the design of and research applications with MapReader since its inception. Rosie Wood is a Data Scientist at The Alan Turing Institute and is the lead developer for MapReader. Kalle Westerling is a former Research Application Manager at The Alan Turing Institute and provided development and community support for MapReader. </p>
+            <p>
+                <hi rend="bold">Audience and Applications.</hi>
+            </p>
+            <p>This workshop aims to bring together up to 30 humanities researchers, librarians, and others with an interest in using digitised historical map collections as primary sources for digitally-inflected research. We especially welcome DH conference attendees who do not have previous experience with Machine Learning or Computer Vision. We are happy to accept participants directly through conference registration, welcoming the first 30 who confirm their interest and availability. In previous MapReader workshops (https://www.turing.ac.uk/events/autumn-dataculture-workshop), we have found between 25-30 people to be a good number with 5 instructors/helpers in the room. In 2003-24, this team has delivered a number of in-person MapReader workshops as part of the Data/Culture project at the Turing and we would bring this collective experience with us to DH in Lisbon. All notebooks, code, and documentation will be openly available at 
+                <ref target="https://github.com/maps-as-data/dh2025workshop">https://github.com/maps-as-data/dh2025workshop</ref> for participants during and after the workshop.
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left;">Li, Zekun / Lin, Yijun / Chiang, Yao-Yi / Weinman, Jerod / Tual, Solenn / Chazalon, Joseph / Perret, Julien / Duménieu, Bertrand / Abadie, Nathalie (2024): “ICDAR 2024 Competition on Historical Map Text Detection, Recognition, and Linking” in: Barney Smith, E.H. / Liwicki, M. / Peng, L. (eds.) 
+                        <hi rend="italic">Document Analysis and Recognition - ICDAR 2024. ICDAR 2024. Lecture Notes in Computer Science</hi>, vol 14809. Springer, Cham. DOI: 10.1007/978-3-031-70552-6_22.
+                    </bibl>
+                    <bibl style="text-align: left;">McDonough, Katherine (2024): “Maps as Data”, in: Johnson, Jessica Marie / Mimno, David / Tilton, Lauren (eds.): 
+                        <hi rend="italic">Debates in DH: Computational Humanities.</hi> Minneapolis: University of Minnesota Press. 
+                    </bibl>
+                    <bibl style="text-align: left;">Hosseini, Kasra / Beelen, Kaspar / Wilson, Daniel C.S. / McDonough, Katherine (2022): “MapReader: A Computer Vision Pipeline for the Semantic Exploration of Maps at Scale”, in: 
+                        <hi rend="italic">GeoHumanities '22: Proceedings of the 6th ACM SIGSPATIAL International Workshop on Geospatial Humanities</hi>: 8-19. DOI: 10.1145/3557919.3565812.
+                    </bibl>
+                    <bibl style="text-align: left;">Rhodes, Joshua / Lawrence, Jon / Beelen, Kaspar / McDonough, Katherine / Wilson, Daniel C.S. (2024): “Beyond the Tracks: re-connecting people, places and stations in the history of late-Victorian railways”, in: Ahnert, Ruth / Griffin, Emma / Lawrence, Jon / The Living with Machiens Team (eds.): 
+                        <hi rend="italic">Living with Machines: Computational Histories in the Age of Industry</hi>. London: University of London Press, 
+                        <ref target="https://read.uolpress.co.uk/read/beyond-the-tracks/section/38e50234-ecbc-46c4-b390-c2f23e77c2ce">https://re</ref>
+                        <ref target="https://read.uolpress.co.uk/read/beyond-the-tracks/section/38e50234-ecbc-46c4-b390-c2f23e77c2ce">a</ref>
+                        <ref target="https://read.uolpress.co.uk/read/beyond-the-tracks/section/38e50234-ecbc-46c4-b390-c2f23e77c2ce">d.uolpress.co.uk/read/beyond-the-tracks/section/38e50234-ecbc-46c4-b390-c2f23e77c2ce</ref>. 
+                    </bibl>
+                    <bibl style="text-align: left;">Wood, Rosie / Hosseini, Kasra / Westerling, Kalle / Smith, Andrew / Beelen, Kaspar /Daniel C.S. Wilson / McDonough, Katherine (2024): “MapReader: Open Software for the Visual Analysis of Maps,” 
+                        <hi rend="italic">Journal of Open Source Software</hi> 9, 101, 6434, DOI: 10.21105/joss.06434.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

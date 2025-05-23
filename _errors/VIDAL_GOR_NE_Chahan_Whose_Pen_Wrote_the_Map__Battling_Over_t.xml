@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VIDAL_GOR_NE_Chahan_Whose_Pen_Wrote_the_Map__Battling_Over_t">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Whose Pen Wrote the Map? Battling Over the Armenian Medieval Text &lt;em&gt;Ashkharhatsuyts&lt;/em&gt; with Stylometry</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Camps</surname>
+                        <forename>Jean-Baptiste</forename>
+                    </persName>
+                    <affiliation>École nationale des chartes - Université PSL, France</affiliation>
+                    <email>jean-baptiste.camps@chartes.psl.eu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Vidal-Gorène</surname>
+                        <forename>Chahan</forename>
+                    </persName>
+                    <affiliation>École nationale des chartes - Université PSL, France</affiliation>
+                    <email>chahan.vidal-gorene@chartes.psl.eu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-09T15:29:11.630389932</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Stylometry</term>
+                    <term>Medieval authorship analysis</term>
+                    <term>Armenian historiography</term>
+                    <term>Anania Shirakatsi</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>attribution studies and stylometric analysis</term>
+                    <term>History</term>
+                    <term>Literary studies</term>
+                    <term>Philology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor type="bookmark-start" xml:id="id_introduction"/>Introduction
+                    <ptr type="bookmark-end" target="#id_introduction"/>
+                </head>
+                <p>The Armenian geographical treatise 
+                    <hi rend="italic">Ashkharhatsuyts</hi> (Աշխարհացոյց) is as a distinctive source of information on the geography and history of the Caucasus and the Sassanid Empire prior to the Arab conquests, and includes an extensive section describing Europe, Africa, and Asia, which appears to draw influence from the Geography of Pappus of Alexandria (Hewsen 1971) or other Oriental sources derivated from it (Cowe 1997).
+                </p>
+                <p>Its authorship has been a topic of scholarly debate. Initially, the work was ascribed to Movses Khorenatsi, a 5th-century historian. This attribution was challenged in the late 19th century, with Anania Shirakatsi, a 7th-century scholar, proposed as the more probable author (Hewsen and others 1992). Support for Shirakatsi’s authorship is grounded in several arguments. The 
+                    <hi rend="italic">Ashkharhatsuyts</hi> references geopolitical entities and events pertinent to the early 7th century, aligning with Anania Shirakatsi’s era. Additionally, the treatise exhibits scientific methodologies and stylistic elements characteristic of Shirakatsi’s known works, particularly in its systematic approach to geographical description and incorporation of astronomical knowledge, Anania being mainly known for his works in mathematics (notably weights and measures), as well as for his treatise on cosmology. Furthermore, early manuscripts of the 
+                    <hi rend="italic">Ashkharhatsuyts</hi> do not explicitly attribute the work to Movses Khorenatsi, leaving room for alternative authorship theories. Conversely, arguments favoring Khorenatsi’s authorship include historical tradition and some medieval sources that have linked the 
+                    <hi rend="italic">Ashkharhatsuyts</hi> to Movses Khorenatsi, reflecting a longstanding acceptance of his authorship. Proponents also contend that specific narrative elements and literary styles within the text exhibit similarities to Khorenatsi’s historiographical approach. Furthermore, the ongoing debate regarding the precise period of Khorenatsi’s activity (some attribute him to the 7th century, T’op’ch’yan 2006)) allows for the possibility of his timeline aligning with the composition date of 
+                    <hi rend="italic">Ashkharhatsuyts</hi>.
+                </p>
+                <p>Although the prevailing scholarly consensus attributes the 
+                    <hi rend="italic">Ashkharhatsuyts</hi> to Anania Shirakatsi, no comprehensive stylometric analysis has been conducted until now, leaving the debate open. In fact, as far as we are aware, very little computational analysis of classical Armenian texts has ever been performed, if any. Proponents of Movses Khorenatsi’s authorship continue to cite traditional attribution and literary parallels, highlighting the complexity of resolving this historiographical question.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor type="bookmark-start" xml:id="id_materials-and-methods"/>Materials and Methods
+                    <ptr type="bookmark-end" target="#id_materials-and-methods"/>
+                </head>
+                <p>To address this question, we constructed a corpus (Table 1) comprising texts from the two candidates, as well as two contemporaneous authors included as distractors: Eghishe, a 5th-6th-centuries author renowned for his historical work 
+                    <hi rend="italic">History of Vardan</hi> and various exegetical writings, and Ghazar Parpetsi, a historiographer active during the 5th centuries. For each author, we selected all texts authenticated in the 
+                    <hi rend="italic">Matenabgirk’ Hayoc’</hi> (Collective, n.d.), with the exclusion of those subject to attribution debates. We used either the digitised versions available on Digilib<ref n="1" target="ftn1"/>, or employed OCR technology using the Calfa software for Armenian. All texts were standardised to ensure consistency, which included the removal of editorial annotations, of intonation marks, of punctuation, and of titles introduced by editors, and standardisation of ligatured forms (և եւ) and of the classical orthography between editions (e.g. թե թէ).
+                </p>
+                <p>
+                    <hi rend="bold">Table 1.</hi> Corpus of texts used for authorship analysis, with the two candidates (Movses Khorenatsi and Anania Shirakatsi) and two distractors (Eghishe and Ghazar Parpetsi). From Matenagirk’ Hayoc’.
+                </p>
+                <table rend="frame" xml:id="Table1">
+                    <row role="label">
+                        <cell rend="bold">Title</cell>
+                        <cell rend="center bold">Genre</cell>
+                        <cell rend="center bold">Century</cell>
+                        <cell rend="center bold">Word Count</cell>
+                    </row>
+                    <row>
+                        <cell/>
+                        <cell/>
+                        <cell/>
+                        <cell/>
+                    </row>
+                    <row>
+                        <cell>Canons</cell>
+                        <cell rend="center">Religious</cell>
+                        <cell rend="center">5th c.</cell>
+                        <cell rend="center">1,197</cell>
+                    </row>
+                    <row>
+                        <cell>History of Vardan</cell>
+                        <cell rend="center">History</cell>
+                        <cell rend="center">5th c.</cell>
+                        <cell rend="center">39,656</cell>
+                    </row>
+                    <row>
+                        <cell>Commentary on Genesis (later fragments)</cell>
+                        <cell rend="center">Religious</cell>
+                        <cell rend="center">5th-7th c.</cell>
+                        <cell rend="center">36,007</cell>
+                    </row>
+                    <row>
+                        <cell/>
+                        <cell/>
+                        <cell/>
+                        <cell/>
+                    </row>
+                    <row>
+                        <cell>History of Armenia</cell>
+                        <cell rend="center">History</cell>
+                        <cell rend="center">5th c.</cell>
+                        <cell rend="center">59,029</cell>
+                    </row>
+                    <row>
+                        <cell>Letters</cell>
+                        <cell rend="center">Epistography</cell>
+                        <cell rend="center">5th c.</cell>
+                        <cell rend="center">5,277</cell>
+                    </row>
+                    <row>
+                        <cell/>
+                        <cell/>
+                        <cell/>
+                        <cell/>
+                    </row>
+                    <row>
+                        <cell>History of Armenia</cell>
+                        <cell rend="center">History</cell>
+                        <cell rend="center">5th-8th c.</cell>
+                        <cell rend="center">15,648</cell>
+                    </row>
+                    <row>
+                        <cell>History of Rhipsime and Her Companions</cell>
+                        <cell rend="center">Hagiography</cell>
+                        <cell rend="center">7th-10th c.</cell>
+                        <cell rend="center">6,701</cell>
+                    </row>
+                    <row>
+                        <cell>Letter to Sahag</cell>
+                        <cell rend="center">Epistography</cell>
+                        <cell rend="center">7th c.</cell>
+                        <cell rend="center">3,663</cell>
+                    </row>
+                    <row>
+                        <cell/>
+                        <cell/>
+                        <cell/>
+                        <cell/>
+                    </row>
+                    <row>
+                        <cell>Xostac’eal</cell>
+                        <cell rend="center">Religious</cell>
+                        <cell rend="center">7th c.</cell>
+                        <cell rend="center">11,866</cell>
+                    </row>
+                    <row>
+                        <cell>Signs of the Zodiac</cell>
+                        <cell rend="center">Cosmology</cell>
+                        <cell rend="center">7th c.</cell>
+                        <cell rend="center">3,686</cell>
+                    </row>
+                    <row>
+                        <cell>On the Manifestation of Our Lord</cell>
+                        <cell rend="center">Religious</cell>
+                        <cell rend="center">7th c.</cell>
+                        <cell rend="center">3,080</cell>
+                    </row>
+                    <row>
+                        <cell>About Easter</cell>
+                        <cell rend="center">Science</cell>
+                        <cell rend="center">7th c.</cell>
+                        <cell rend="center">2,986</cell>
+                    </row>
+                    <row>
+                        <cell>On Questions and Answers</cell>
+                        <cell rend="center">Science</cell>
+                        <cell rend="center">7th c.</cell>
+                        <cell rend="center">1,593</cell>
+                    </row>
+                    <row>
+                        <cell>About Calendars</cell>
+                        <cell rend="center">Science</cell>
+                        <cell rend="center">7th c.</cell>
+                        <cell rend="center">1,139</cell>
+                    </row>
+                    <row>
+                        <cell>About our Nature State</cell>
+                        <cell rend="center">Philosophy</cell>
+                        <cell rend="center">7th c.</cell>
+                        <cell rend="center">1,016</cell>
+                    </row>
+                    <row>
+                        <cell>Book of Arithmetic</cell>
+                        <cell rend="center">Science</cell>
+                        <cell rend="center">7th c.</cell>
+                        <cell rend="center">799</cell>
+                    </row>
+                </table>
+                <p>This corpus is relatively imbalanced. In particular, the two main candidates are problematic: only another single text is attributed to Movses with certainty (
+                    <hi rend="italic">History of Armenia</hi>), while two others (
+                    <hi rend="italic">History of Rhipsime and Her Companion</hi>, 
+                    <hi rend="italic">Letter to Sahag</hi>) are usually attributed to him, without an absolute consensus because of uncertainties related to their date (see Appendix, Figure 4). Although there are 8 texts for Anania, most of them are very short (even below 1000 words). To compensate for the imbalance, we use a sampling technique: we take 10,000 samples of 1,000 word tokens for each text, by using random sampling with replacement; then, we randomly select among them 10,000 total samples by author. We compare this method to selecting slices of 1,000 consecutive words in the texts, a method more intuitive but probably less efficient (Eder 2015).
+                </p>
+                <p>On each sample, we compute the frequencies of the function words, idiolectal features that were chosen to avoid thematic attractions. From there, we train linear SVM models. For cross-validation, we use group-k-fold cross-validation, a very demanding choice for the model, but potentially more informative, as all the samples from each given text are iteratively removed from train and used as validation. This avoids measuring the ability of the model to detect parts of the same text, but instead measures its capacity to identify authorship. Current scores are shown in Table 2.</p>
+                <p>Overall accuracy (0.61 with sampling) remains relatively low, and performance is unequal between candidates, reflecting the difficulty of the task and the limited amount of training material. In the detailed analysis of attribution errors, frequent use of consecrated liturgical formulas, such as “now and forever,” emerges as a factor contributing to stylistic overlaps between authors and reducing distinctiveness. Last but not least, some uncertainties cannot be completely ruled out regarding the actual attribution of some of the training material (see below).</p>
+                <p>
+                    <hi rend="bold">Table 2. </hi>SVM training scores, using group-k-fold cross validation, 1000 words samples, on subsequent (left) or random (right) samples
+                </p>
+                <table rend="frame" xml:id="Table2">
+                    <row role="label">
+                        <cell/>
+                        <cell rend="end">prec</cell>
+                        <cell rend="end">rec</cell>
+                        <cell rend="end">f1</cell>
+                        <cell rend="end">support</cell>
+                        <cell rend="end">prec</cell>
+                        <cell rend="end">rec</cell>
+                        <cell rend="end">f1</cell>
+                        <cell rend="end">support</cell>
+                    </row>
+                    <row>
+                        <cell rend="end">Anania-Shirakatsi</cell>
+                        <cell rend="end">0.25</cell>
+                        <cell rend="end">0.64</cell>
+                        <cell rend="end">0.36</cell>
+                        <cell rend="end">22</cell>
+                        <cell rend="end">0.51</cell>
+                        <cell rend="end">0.47</cell>
+                        <cell rend="end">0.49</cell>
+                        <cell rend="end">10,000</cell>
+                    </row>
+                    <row>
+                        <cell rend="end">Eghishe</cell>
+                        <cell rend="end">0.70</cell>
+                        <cell rend="end">0.58</cell>
+                        <cell rend="end">0.64</cell>
+                        <cell rend="end">130</cell>
+                        <cell rend="end">0.49</cell>
+                        <cell rend="end">0.67</cell>
+                        <cell rend="end">0.56</cell>
+                        <cell rend="end">10,000</cell>
+                    </row>
+                    <row>
+                        <cell rend="end">Ghazar-Parpetsi</cell>
+                        <cell rend="end">0.66</cell>
+                        <cell rend="end">0.56</cell>
+                        <cell rend="end">0.60</cell>
+                        <cell rend="end">63</cell>
+                        <cell rend="end">0.68</cell>
+                        <cell rend="end">0.61</cell>
+                        <cell rend="end">0.64</cell>
+                        <cell rend="end">10,000</cell>
+                    </row>
+                    <row>
+                        <cell rend="end">Movses-Khorenatsi</cell>
+                        <cell rend="end">0.43</cell>
+                        <cell rend="end">0.42</cell>
+                        <cell rend="end">0.43</cell>
+                        <cell rend="end">24</cell>
+                        <cell rend="end">0.88</cell>
+                        <cell rend="end">0.71</cell>
+                        <cell rend="end">0.78</cell>
+                        <cell rend="end">10,000</cell>
+                    </row>
+                    <row>
+                        <cell rend="end">accuracy</cell>
+                        <cell/>
+                        <cell/>
+                        <cell rend="end">0.56</cell>
+                        <cell rend="end">239</cell>
+                        <cell/>
+                        <cell/>
+                        <cell rend="end">0.61</cell>
+                        <cell rend="end">40,000</cell>
+                    </row>
+                    <row>
+                        <cell rend="end">macro-avg</cell>
+                        <cell rend="end">0.51</cell>
+                        <cell rend="end">0.55</cell>
+                        <cell rend="end">0.51</cell>
+                        <cell rend="end">239</cell>
+                        <cell rend="end">0.64</cell>
+                        <cell rend="end">0.61</cell>
+                        <cell rend="end">0.62</cell>
+                        <cell rend="end">40,000</cell>
+                    </row>
+                    <row>
+                        <cell rend="end">weighted-avg</cell>
+                        <cell rend="end">0.62</cell>
+                        <cell rend="end">0.56</cell>
+                        <cell rend="end">0.58</cell>
+                        <cell rend="end">239</cell>
+                        <cell rend="end">0.64</cell>
+                        <cell rend="end">0.61</cell>
+                        <cell rend="end">0.62</cell>
+                        <cell rend="end">40,000</cell>
+                    </row>
+                </table>
+                <p>The coefficients for the two primary candidates (Figure 1) reveal significant differences in linguistic habits. According to our corpus, Anania Shirakatsi predominantly employs temporal adverbs such as արդ (/ard/, 
+                    <hi rend="italic">now</hi>) and յորժամ (/yoržam/, 
+                    <hi rend="italic">when</hi>), conjuctive adverbs like այսպէս (/aysbēs/, 
+                    <hi rend="italic">so</hi>) and նոյնպէս (/noynbēs/, 
+                    <hi rend="italic">likewise</hi>), and markers for subordinate clauses. In contrast, Movses Khorenatsi demonstrates a preference for a diverse range of common pre/postpositions (ի /i/, յետ /yet/) and personal or anaphoric pronouns in the genitive (նորա /nora/, սորա /sora/). This divergence highlights stylistic influences: Anania’s language likely reflects the syntactic and grammatical patterns characteristic of the Hellenizing school, likely influenced by his reliance on Greek sources (Muradyan 2014). In contrast, Movses’ style aligns more closely with traditional Armenian sentence constructions. The use of pronouns in Movses Khorenatsi’s works also reflects his predilection for historiography, with its focus on narrative accounts and the frequent referencing of individuals or events. This distinguishes his style from that of Anania Shirakatsi, whose works are often influenced by translated philosophocal or scientific texts<ref n="2" target="ftn2"/>.
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpxs9f14p7/Pictures/150c04e26a2643ce332f76a23b38b1af.png"/>
+                    </figure>
+                    <figure>
+                        <graphic url="/tmp/tmpxs9f14p7/Pictures/150c04e26a2643ce332f76a23b38b1af.png"/>
+                    </figure>
+                </p>
+                <p>
+                    <hi rend="bold">Figure </hi>
+                    <hi rend="bold">1.</hi>
+                    <hi rend="italic">Coefficients of the models for the two main candidates</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor type="bookmark-start" xml:id="id_results-and-discussion"/>Results and discussion
+                    <ptr type="bookmark-end" target="#id_results-and-discussion"/>
+                </head>
+                <p>Current results (Figure 2 and appendix, Figure 4) consistently attribute the 
+                    <hi rend="italic">Ashkharhatsuyts</hi> to Anania Shirakatsi, regardless of the sampling method used (sequential or random). However, there is some uncertainty surrounding the attribution of the first 1000 words, which appear likely to belong to Anania but are also contested by the distractors. This segment corresponds to Book 1 and the introduction to Book 2 of the 
+                    <hi rend="italic">Ashkharhatsuyts</hi>, while the remainder of the text focuses on descriptions of Europe, Africa, and Asia. These latter sections, influenced by the 
+                    <hi rend="italic">Geography</hi> of Pappus of Alexandria, are likely translations from Greek, aligning with Anania’s known reliance on Hellenizing sources. This distinction between the introductory and descriptive sections suggests the possibility of varying stylistic influences within the text.
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpxs9f14p7/Pictures/150c04e26a2643ce332f76a23b38b1af.png"/>
+                    </figure>
+                    <figure>
+                        <graphic url="/tmp/tmpxs9f14p7/Pictures/150c04e26a2643ce332f76a23b38b1af.png"/>
+                    </figure>
+                </p>
+                <p>
+                    <hi rend="bold">Figure 2.</hi>
+                    <hi rend="italic">Results of the rolling SVM analysis on the target text, with sequential (top) and random (bottom) sampling – window 1000 words, step 100 words</hi>
+                </p>
+                <p>In addition to the clear attribution of the 
+                    <hi rend="italic">Ashkharhatsuyts</hi> to Anania Shirakatsi, it is noteworthy that Movses Khorenatsi does not outperform one of the distractors, Ghazar Parpetsi. This outcome strongly suggests that Movses Khorenatsi can be definitively ruled out as a candidate for the authorship of this work. These results lead to two key hypotheses at this stage:
+                </p>
+                <div type="div2">
+                    <div type="div3" rend="DH-Heading3">
+                        <head>
+                            <anchor type="bookmark-start" xml:id="id_attribution-of-the-first-1000-words"/>Attribution of the first 1000 words
+                            <ptr type="bookmark-end" target="#id_attribution-of-the-first-1000-words"/>
+                        </head>
+                        <p>While a style specific to Anania Shirakatsi cannot be excluded in these initial passages, it is equally plausible that they represent a compilation or adaptation of various texts distinct from the rest of the 
+                            <hi rend="italic">Ashkharhatsuyts</hi>. This possibility warrants further investigation into the stylistic and thematic coherence of these segments.
+                        </p>
+                    </div>
+                    <div type="div3" rend="DH-Heading3">
+                        <head>
+                            <anchor type="bookmark-start" xml:id="id_attribution-of-the-rest-of-the-text"/>Attribution of the rest of the text
+                            <ptr type="bookmark-end" target="#id_attribution-of-the-rest-of-the-text"/>
+                        </head>
+                        <p>The strong attribution to Anania Shirakatsi from this point onward raises important questions. Given that these sections are inspired by Greek sources, and Anania’s corpus is characterized by translation work, this alignment may reflect a bias inherent in the dataset rather than a distinct stylistic signature. To address this, it would be necessary to include a distractor from the Hellenizing school for comparison, allowing for verification of whether Anania’s style is uniquely identifiable within this tradition.</p>
+                    </div>
+                    <div type="div3" rend="DH-Heading3">
+                        <head>
+                            <anchor type="bookmark-start" xml:id="id_unexpected-result-on-eghishe-commentary-on-genesis"/>Unexpected result on Eghishe, 
+                            <hi rend="italic">Commentary on Genesis</hi>:
+                            <ptr type="bookmark-end" target="#id_unexpected-result-on-eghishe-commentary-on-genesis"/>
+                        </head>
+                        <p>In addition to the findings regarding the 
+                            <hi rend="italic">Ashkharhatsuyts</hi>, an unexpected result has emerged. During training, the SVM model consistently attributes the 
+                            <hi rend="italic">Commentary on Genesis</hi>, traditionally ascribed to Eghishe, to Anania Shirakatsi, with occasional attributions to Movses Khorenatsi (see Appendix, Figure 3). This raises intriguing questions about the authorship of this text and highlights the need for further investigation, between alternative possible attributions or the impact of the quotations of Genesis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor type="bookmark-start" xml:id="id_conclusion"/>Conclusion
+                    <ptr type="bookmark-end" target="#id_conclusion"/>
+                </head>
+                <p>Stylometric analysis of the 
+                    <hi rend="italic">Ashkharhatsuyts</hi> rules out Movses Khorenatsi and confirms a clear attribution to Anania Shirakatsi, consistent across sampling methods. However, the introductory passages exhibit stylistic ambiguities that may reflect compilations or external influences. The results suggest that the Greek-influenced sections align well with Anania’s known reliance on Hellenizing traditions but raise questions about potential biases in the dataset. Future research should incorporate additional Hellenizing distractors and refine methods to isolate distinctive stylistic features of Anania within this broader tradition.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor type="bookmark-start" xml:id="id_appendix"/>Appendix
+                    <ptr type="bookmark-end" target="#id_appendix"/>
+                </head>
+                <p>
+                    <hi rend="bold">Table 3.</hi> Training scores without the dubious 
+                    <hi rend="italic">Commentary on Genesis</hi>
+                </p>
+                <table rend="frame" xml:id="Table3">
+                    <row role="label">
+                        <cell/>
+                        <cell rend="end">precision</cell>
+                        <cell rend="end">recall</cell>
+                        <cell rend="end">f1-score</cell>
+                        <cell rend="end">support</cell>
+                    </row>
+                    <row>
+                        <cell rend="end">Anania-Shirakatsi</cell>
+                        <cell rend="end">0.70</cell>
+                        <cell rend="end">0.59</cell>
+                        <cell rend="end">0.64</cell>
+                        <cell rend="end">10000</cell>
+                    </row>
+                    <row>
+                        <cell rend="end">Eghishe</cell>
+                        <cell rend="end">0.61</cell>
+                        <cell rend="end">0.92</cell>
+                        <cell rend="end">0.73</cell>
+                        <cell rend="end">10000</cell>
+                    </row>
+                    <row>
+                        <cell rend="end">Ghazar-Parpetsi</cell>
+                        <cell rend="end">0.68</cell>
+                        <cell rend="end">0.59</cell>
+                        <cell rend="end">0.63</cell>
+                        <cell rend="end">10000</cell>
+                    </row>
+                    <row>
+                        <cell rend="end">Movses-Khorenatsi</cell>
+                        <cell rend="end">0.91</cell>
+                        <cell rend="end">0.70</cell>
+                        <cell rend="end">0.79</cell>
+                        <cell rend="end">10000</cell>
+                    </row>
+                    <row>
+                        <cell rend="end">accuracy</cell>
+                        <cell/>
+                        <cell/>
+                        <cell rend="end">0.70</cell>
+                        <cell rend="end">40000</cell>
+                    </row>
+                    <row>
+                        <cell rend="end">macro-avg</cell>
+                        <cell rend="end">0.72</cell>
+                        <cell rend="end">0.70</cell>
+                        <cell rend="end">0.70</cell>
+                        <cell rend="end">40000</cell>
+                    </row>
+                    <row>
+                        <cell rend="end">weighted-avg</cell>
+                        <cell rend="end">0.72</cell>
+                        <cell rend="end">0.70</cell>
+                        <cell rend="end">0.70</cell>
+                        <cell rend="end">40000</cell>
+                    </row>
+                </table>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpxs9f14p7/Pictures/150c04e26a2643ce332f76a23b38b1af.png"/>
+                    </figure>
+                </p>
+                <p>
+                    <hi rend="bold">Figure 3. </hi>Rolling analysis of the 
+                    <hi rend="italic">Commentary on Genesis</hi> traditionally attributed to Eghishe
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmpxs9f14p7/Pictures/150c04e26a2643ce332f76a23b38b1af.png"/>
+                    </figure>
+                    <hi rend="bold">Figure 4. </hi>Main analysis, repeated with only the most certain text of Movses in training (
+                    <hi rend="italic">History of Armenia</hi>) (rolling SVM analysis, random sampling – window 1000 words, step 100 words)
+                </p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note xml:id="ftn1" rend="footnote text" n="1">Digital Library of Armenian Literature: https://digilib.aua.am</note>
+<note xml:id="ftn2" rend="footnote text" n="2">The analysis, when repeated with pronouns excluded, produced the same general attribution results for the target text. The training results were comparable but showed a slight decline in performance, indicating that while pronouns contribute to the model’s accuracy, their removal does not significantly alter the overall conclusions.</note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Collective.</hi> n.d. 
+                        <hi rend="italic">Matenagirk’ Hayoc’</hi>. Matenadaran.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Cowe, S Peter.</hi> 1997. “The Geography of Ananias of Sirak (Ashkarhatsuyts), The Long and the Short Recensions: Introduction, Translation and Commentary.” 
+                        <hi rend="italic">The Journal of the American Oriental Society</hi> 117 (2): 379–81.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Eder, Maciej.</hi> 2015. “Does Size Matter? Authorship Attribution, Small Samples, Big Problem.” 
+                        <hi rend="italic">Digital Scholarship in the Humanities</hi> 30 (2): 167–82.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hewsen, Robert H.</hi> 1971. “The geography of Pappus of Alexandria: a translation of the Armenian fragments.” 
+                        <hi rend="italic">Isis</hi> 62 (2): 186–207.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hewsen, Robert H, and others.</hi> 1992. 
+                        <hi rend="italic">The geography of Ananias of Širak:(Ašxarhacʿoycʿ); the long and the short recensions</hi>. Reichert.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Muradyan, Gohar. 2014.</hi> “The Hellenizing School.” In 
+                        <hi rend="italic">Armenian Philology in the Modern Era</hi>, 321–48. Brill.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">T’op’ch’yan, Aram.</hi> 2006. 
+                        <hi rend="italic">The Problem of the Greek Sources of Movsēs Xorenacʻi’s History of Armenia</hi>. Vol. HUAS 7. Peeters.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

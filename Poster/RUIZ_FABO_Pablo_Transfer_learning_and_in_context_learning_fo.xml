@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="RUIZ_FABO_Pablo_Transfer_learning_and_in_context_learning_fo">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Transfer learning and in-context learning for stage direction classification in French</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Ruiz Fabo</surname>
+                        <forename>Pablo</forename>
+                    </persName>
+                    <affiliation>Université de Strasbourg, France; Universidade de Santiago de Compostela, Spain</affiliation>
+                    <email>ruizfabo@unistra.fr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Schneider</surname>
+                        <forename>Alexia</forename>
+                    </persName>
+                    <affiliation>Université de Montréal, Canada</affiliation>
+                    <email>alexia.schneider@umontreal.ca</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T08:29:05.792970304</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>stage directions</term>
+                    <term>classification</term>
+                    <term>fine-tuning</term>
+                    <term>LLM</term>
+                    <term>prompting</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>artificial intelligence and machine learning</term>
+                    <term>natural language processing</term>
+                    <term>text mining and analysis</term>
+                    <term>Linguistics</term>
+                    <term>Literary studies</term>
+                    <term>Performance Studies: Dance</term>
+                    <term>Theatre</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p>Stage directions provide information complementing character speech, e.g. about performance or decoration, and can sometimes be independent from performance, targeting readers (Pfister 1988). They have been little studied using computational means (Dennerlein 2016, Maximova / Fischer 2019, Pagel et al. 2021). However, their automatic annotation on a large scale is useful, as they can give clues about genre stylistics and dramatic structure and technique. </p>
+                <p>This poster follows up on our previous work on stage direction classification in French via fine-tuning pre-trained language models and prompting large language models (LLM) (Schneider / Ruiz 2024). We expand the range of models, hyperparameters and prompts tested. Both paradigms provide useful results. We undertook a new qualitative analysis of LLM results, showing limits in our reference annotations, and how LLMs can help identify them.  </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Stage direction typology</head>
+                <p>The literature proposes several typologies, reviewed by Galleron (2021). Ours  (see Schneider 2024 for details) includes 13 types (Table 1). We mapped 87 types appearing at least 50 times in FreDraCor’s original annotation (Fischer et al. 2021, cf. Fièvre 2007) to our 13 types. Our types are intended to be useful for literary analysis and for testing classification models, as they represent different degrees of challenge for automatic classification; some categories are characterized by a clear vocabulary, some are more ambiguous. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Fine-tuning experiments (transfer learning)</head>
+                <p>
+                    <hi rend="color(#000000)">Our earlier work fine-tuned several models, gradually reducing the number of examples to assess model efficiency. French monolingual models </hi>
+                    <ref target="https://huggingface.co/camembert-base">
+                        <hi rend="color(#1155cc)">camembert-base</hi>
+                    </ref>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">(Martin et al. 2020) and </hi>
+                    <ref target="https://huggingface.co/cmarkea/distilcamembert-base">
+                        <hi rend="color(#1155cc)">distilcamembert-base</hi>
+                    </ref>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">(Delestre / Amar 2022) outperformed multilingual BERT (Devlin et al. 2019). We now test FlauBERT (French monolingual), whose </hi>
+                    <hi rend="color(#000000)">base</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">model outperforms CamemBERT’s in certain domains (Le et al. 2020). We obtained better results than with CamemBERT, but only when fine-tuning on at least ca. 3,000 examples. We also tested </hi>
+                    <ref target="https://huggingface.co/FacebookAI/xlm-roberta-base">
+                        <hi rend="color(#1155cc)">xlm-roberta-base</hi>
+                    </ref>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">(Conneau et al. 2020), a more recent multilingual model, but could not outperform multilingual BERT. Decreasing learning rate or increasing batch size did not </hi>
+                    <hi rend="color(#000000)">improve results. Thus, while it was relevant to fine-tune more recent models for comparison, CamemBERT models remain the best for the task according to our experiments, given their more stable performance when training data is reduced (Table 2 and Figure 1).</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Prompting (in-context learning)</head>
+                <p>
+                    <hi rend="color(#000000)">In (Ruiz / Schneider 2024), we tested </hi>
+                    <ref target="https://platform.openai.com/docs/models/gpt-4o">
+                        <hi rend="color(#1155cc)">gpt4o</hi>
+                    </ref>
+                    <hi rend="color(#000000)">, </hi>
+                    <ref target="https://platform.openai.com/docs/models/gpt-4o-mini">
+                        <hi rend="color(#1155cc)">gpt4o-mini</hi>
+                    </ref>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">and </hi>
+                    <ref target="https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct">
+                        <hi rend="color(#1155cc)">llama-3.1-8B</hi>
+                    </ref>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">with zero-shot and few-shot prompting; examples are always in French and we compared results with the rest of the prompt in English or in French. Here we additionally test </hi>
+                    <ref target="https://docs.mistral.ai/getting-started/models/models_overview/">
+                        <hi rend="color(#1155cc)">mistral-large</hi>
+                    </ref>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">and </hi>
+                    <ref target="https://docs.mistral.ai/getting-started/models/models_overview/">
+                        <hi rend="color(#1155cc)">mistral-small</hi>
+                    </ref>
+                    <hi rend="color(#000000)">.</hi>
+                    <hi rend="color(#000000)"> </hi>
+                    <hi rend="color(#000000)">Our original prompts included only one stage direction to classify; the rest of the prompt (category definitions, plus examples in few-shot mode) was repeated for each stage direction, which consumes many tokens. We now tested how many stage directions to classify we can include in a prompt without decreasing result quality. As Table 3 shows, results remained stable when classifying 75 stage directions with a single prompt. We should note however that with many stage directions in the same prompt, it is occasionally impossible to recover the category for a test-item from the model response, as the model may make formatting errors. We made our client and evaluation scripts more robust to handle this, and the huge savings (Table 5) in tokens (&gt;90%) and response time (40-80%) outweigh this issue.</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Qualitative analysis</head>
+                <p>The prompt asked the model to generate an explanation for each classification, and we used this to assist qualitative analysis, noticing several patterns:</p>
+                <list type="unordered">
+                    <item>cases counted as LLM errors but that are due to inconsistencies in our reference annotations, e.g. cases of a character interacting with an object sometimes tagged as type 
+                        <hi rend="italic">action</hi> but sometimes as type 
+                        <hi rend="italic">object</hi> in the reference, whereas the model correctly assigns an 
+                        <hi rend="italic">object</hi> category. These cases suggest that LLM output can be used to refine our reference annotations.
+                    </item>
+                    <item>LLM errors that stem from incomplete treatment of some nuances by the model, e.g. stage directions related to non-verbal emotion expression like laughing or crying tagged by the model as a general 
+                        <hi rend="italic">action</hi> rather than a 
+                        <hi rend="italic">delivery</hi> stage direction. Such cases suggest the limits of prompting.
+                    </item>
+                </list>
+                <p>Our analyses suggest that fine-tuning excels at learning nuanced decision boundaries and will get a better F1 score (up to 0.09 higher than in-context learning, see Tables 2-4) even with a conceptually flawed typology. Conversely, prompting, with the more limited knowledge about the typology derived from the context given to it, may draw our attention to such flaws and may be used to help improve; bad performance for a category may indicate reference annotation errors and explanations generated by the LLM can help detect error patterns.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p>The results have practical value regarding stage direction classification via fine-tuning or prompting, and inform next steps regarding an automatic annotation task useful for stylistic and genre analysis.</p>
+                <p>Once we refine the methods whereby we produce our reference categories, it should be possible to improve classification results and go beyond a classification task. For instance, it could be tested whether LLMs identify characters participating in the event represented by the stage direction (cf. Galleron 2021). Applying a solid annotation schema would be required before producing reference data to evaluate stage direction classification and related tasks multilingually.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Code and data availability</head>
+                <p>
+                    <hi rend="color(#000000)">Publicly available at </hi>
+                    <ptr target="https://github.com/pruizf/d25-llm-stdir"/>
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp87iwlcfq/Pictures/d77c49667fa38e681a2c2dbadffb5924.jpg"/>
+                    </figure>Table 1. Stage direction typology. Details in Schneider (2024), Schneider / Ruiz (2024).
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp87iwlcfq/Pictures/d77c49667fa38e681a2c2dbadffb5924.jpg"/>
+                    </figure>Table 2. Fine-tuning pre-trained language models. Macro-F1 score (average over 5 runs) when fine-tuning with a gradually decreasing number of examples, testing always on 2,923 examples. Classical machine learning methods are shown as baseline. Best model score at each proportion of examples is bolded. Models marked with (+) were added in this study.
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp87iwlcfq/Pictures/d77c49667fa38e681a2c2dbadffb5924.jpg"/>
+                    </figure>Figure 1. Fine-tuning results as training set is reduced. Models with (+) in the legend were added in this study.
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp87iwlcfq/Pictures/d77c49667fa38e681a2c2dbadffb5924.jpg"/>
+                    </figure>Table 3. Prompting results with a single stage direction to classify in the prompt vs. 75 stage directions, in zero-shot or few-shot mode (20 examples per class). Best results per mode bolded. Examples are always in French; fr and en are the language in the rest of the prompt.
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp87iwlcfq/Pictures/d77c49667fa38e681a2c2dbadffb5924.jpg"/>
+                    </figure>Table 4. Per category results for the best performing models under fine-tuning (transfer learning) and prompting (in-context-learning). Fine-tuning was done with 100% of the available examples (9,352 training + 2,338 validation). N: testset size for each category.
+                </p>
+                <p>
+                    <figure>
+                        <graphic url="/tmp/tmp87iwlcfq/Pictures/d77c49667fa38e681a2c2dbadffb5924.jpg"/>
+                    </figure>Table 5. Token count and response times with French prompts, classifying a single stage direction per prompt vs. 75 stage directions per prompt. Token and response time savings in the latter setup provided. Column lost stg dir is the number of cases where, given formatting errors, the category for a stage direction cannot be recovered from the model response.
+                </p>
+                <p>Acknowledgements</p>
+                <p>This work received financial support from the Xunta de Galicia - Consellería de Educación, Ciencia, Universidades e Formación (Centro de investigación de Galicia accreditation 2024-2027 ED431G-2023/04 and the European Union (European Regional Development Fund - ERDF). Alexia Schneider is supported by SSHRC within project Revue 3.0: Écrire, Transmettre, Découvrir</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Conneau, A. / Khandelwal, K. / Goyal, N. / Chaudhary, V. / Wenzek, G. / Guzmán, F. / Grave, E. / Ott, M. / Zettlemoyer, L. / Stoyanov, V.</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(2020). Unsupervised Cross-lingual Representation Learning at Scale. </hi>
+                        <hi rend="color(#000000)italic">Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</hi>
+                        <hi rend="color(#000000)">, 8440–8451.</hi>
+                        <ref target="https://doi.org/10.18653/v1/2020.acl-main.747">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#000080)underline">https://doi.org/10.18653/v1/2020.acl-main.747</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Delestre, C. / Amar, A.</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(2022). DistilCamemBERT: Une distillation du modèle français CamemBERT. </hi>
+                        <hi rend="color(#000000)italic">CAp (Conférence Sur l’Apprentissage Automatique)</hi>
+                        <hi rend="color(#000000)">.</hi>
+                        <ref target="https://hal.science/hal-03674695">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#000080)underline">https://hal.science/hal-03674695</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Dennerlein, K.</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(2016). </hi>
+                        <hi rend="color(#000000)italic">Automatic recognition of configurations in plays – Training a Machine Learning Algorithm</hi>
+                        <hi rend="color(#000000)">.</hi>
+                        <ref target="https://comedy.hypotheses.org/category/digitally-assisted-analysis-of-drama">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#000080)underline">https://comedy.hypotheses.org/category/digitally-assisted-analysis-of-drama</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Devlin, J. / Chang, M.-W. / Lee, K. / Toutanova, K.</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(2019). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. </hi>
+                        <hi rend="color(#000000)italic">Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)</hi>
+                        <hi rend="color(#000000)">, 4171–4186.</hi>
+                        <ref target="https://doi.org/10.18653/v1/N19-1423">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#000080)underline">https://doi.org/10.18653/v1/N19-1423</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Fièvre, P. (2007).</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)italic">Théâtre Classique</hi>
+                        <hi rend="color(#000000)">.</hi>
+                        <ref target="https://www.theatre-classique.fr/">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#000080)underline">https://www.theatre-classique.fr</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Fischer, F. / Milling, C. / Göbel, M.</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(2021). </hi>
+                        <hi rend="color(#000000)italic">FreDraCor (French Drama Corpus, TEI P5): A TEI P5 Version of Paul Fièvre’s “Théâtre Classique” Corpus.</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">DraCor.</hi>
+                        <ref target="https://github.com/dracor-org/fredracor">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#000080)underline">https://github.com/dracor-org/fredracor</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Galleron, I.</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(2021). Pour un balisage sémantique des textes de théâtre: Le cas des didascalies. </hi>
+                        <hi rend="color(#000000)italic">Sens public</hi>
+                        <hi rend="color(#000000)">, 1–23.</hi>
+                        <ref target="https://doi.org/10.7202/1089589ar">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#000080)underline">https://doi.org/10.7202/1089589ar</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Le, H. / Vial, L. / Frej, J. / Segonne, V. / Coavoux, M. / Lecouteux, B. / Allauzen, A., / Crabbé, B. / Besacier, L. / Schwab, D.</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(2020). </hi>
+                        <hi rend="color(#000000)italic">FlauBERT: Unsupervised Language Model Pre-training for French</hi>
+                        <hi rend="color(#000000)">. </hi>
+                        <hi rend="color(#000000)italic">LREC 2020</hi>
+                        <hi rend="color(#000000)">.</hi>
+                        <ref target="https://doi.org/10.48550/arXiv.1912.05372">
+                            <hi rend="color(#000000)"> </hi>
+                        </ref>
+                        <ptr target="https://doi.org/10.48550/arXiv.1912.05372"/>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Martin, L. / Muller, B. / Suárez, P. J. O. / Dupont, Y. / Romary, L. / de la Clergerie, É. V. / Seddah, D. / Sagot, B.</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(2020). CamemBERT: A Tasty French Language Model. </hi>
+                        <hi rend="color(#000000)italic">Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</hi>
+                        <hi rend="color(#000000)">, 7203–7219.</hi>
+                        <ref target="https://doi.org/10.18653/v1/2020.acl-main.645">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#000080)underline">https://doi.org/10.18653/v1/2020.acl-main.645</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Maximova, D. / Fischer, F.</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(2019). Using Machine Learning for the Automated Classification of Stage Directions in TEI-Encoded Drama Corpora. </hi>
+                        <hi rend="color(#000000)italic">TEI Conference</hi>
+                        <hi rend="color(#000000)">, 123.</hi>
+                        <ref target="https://graz-2019.tei-c.org/files/BoATEI2019.pdf#page=123">
+                            <hi rend="color(#000000)"> </hi>
+                        </ref>
+                        <ptr target="https://graz-2019.tei-c.org/files/BoATEI2019.pdf#page=123"/>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Pagel, J. / Sihag, N. / Reiter, N.</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(2021). Predicting Structural Elements in German Drama. </hi>
+                        <hi rend="color(#000000)italic">Proceedings of the Second Conference on Computational Humanities Research (CHR2021)</hi>
+                        <hi rend="color(#000000)">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Pfister, M.</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(1988). </hi>
+                        <hi rend="color(#000000)italic">The Theory and Analysis of Drama</hi>
+                        <hi rend="color(#000000)">. Cambridge University Press.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Ruiz Fabo, P. / Schneider, A.</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(2024). Vers une classification automatique de didascalies en français avec des grands modèles de langue. ARIANE Consortium 2024 seminar: L’impact des larges modèles de langue et des agents conversationnels sur les études du texte. Aubervilliers.</hi>
+                        <ref target="https://doi.org/10.5281/zenodo.14301375">
+                            <hi rend="color(#000000)"> </hi>
+                            <hi rend="color(#000080)underline">https://doi.org/10.5281/zenodo.14301375</hi>
+                        </ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend="color(#000000)bold">Schneider, A.</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">(2024). </hi>
+                        <hi rend="color(#000000)italic">Analyse computationnelle de textes de théâtre français: Classification automatique du type de didascalies</hi>
+                        <hi rend="color(#000000)"> </hi>
+                        <hi rend="color(#000000)">[MA Thesis, Université de Strasbourg].</hi>
+                        <ref target="https://doi.org/10.34847/nkl.3ecb73zp">
+                            <hi rend="color(#000000)"> </hi>
+                        </ref>
+                        <ptr target="https://doi.org/10.34847/nkl.3ecb73zp"/>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Schneider, A. / Ruiz Fabo, P.</hi> (2024). Stage Direction Classification in French Theater: Transfer Learning Experiments. In Y. Bizzoni, S. Degaetano-Ortlieb, A. Kazantseva, &amp; S. Szpakowicz (Eds.), 
+                        <hi rend="italic">Proceedings of the 8th Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature (LaTeCH-CLfL 2024)</hi> (pp. 278–286). Association for Computational Linguistics. 
+                        <ptr target="https://aclanthology.org/2024.latechclfl-1.28"/>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

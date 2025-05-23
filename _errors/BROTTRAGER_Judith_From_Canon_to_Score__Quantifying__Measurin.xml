@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BROTTRAGER_Judith_From_Canon_to_Score__Quantifying__Measurin">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>From Canon to Score: Quantifying, Measuring, and Comparing Canonisation</title>
+                <author>
+                    <persName>
+                        <surname>Brottrager</surname>
+                        <forename>Judith</forename>
+                    </persName>
+                    <affiliation>TU Darmstadt, Germany</affiliation>
+                    <email>judith.brottrager@tu-darmstadt.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-06T08:21:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>computational literary studies</term>
+                    <term>canon</term>
+                    <term>literary history</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>cultural analytics</term>
+                    <term>data modeling</term>
+                    <term>natural language processing</term>
+                    <term>Cultural studies</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">The concept of canonicity has long been central to computational literary studies (CLS). Since computational approaches to literature have always aimed to "look beyond the canon" (Moretti 2013, 48)—a task Moretti argued would be impossible with close reading alone—various methods have emerged in recent years to define and explore the ‘beyond’ and the ‘forgotten,’ often in comparison with the canon. Just as theories of canon and canonicity vary (e.g. Bloom 1994; Herrmann 2007; Assmann 2008; Hölter 1997; Winko 2002), so too do the operationalisations employed, differing significantly in how texts are distinguished based on their canonical status. While some operationalisations use related concepts, such as prestige, to avoid the conceptual vagueness and implied dichotomy of the term canon (Verboord 2003; Porter 2018; Algee-Hewitt et al. 2016), binary classifications, dividing texts into the canon and the non-canon based on their inclusion in one or multiple lists, remain prevalent (Algee-Hewitt et al. 2016; Calvo Tello 2021; Barré, Camps, and Poibeau 2023; Feldkamp et al. 2024; Wu et al. 2024).</p>
+            <p style="text-align: left; ">In many cases, binary classifications offer a helpful and robust operationalisation for analysis, as they produce two clearly defined groups of texts based on transparent criteria—whether a text is mentioned in the source or not. These groups can then be easily and directly compared: According to Algee-Hewitt et al. (2016), the canon is generally less redundant, sets trends (Feldkamp et al. 2024; Barré 2024), and is, as Wu et al. (2024) demonstrate, more perplexing to large language models. By dividing the literary field into the canon and the 
+                <hi rend="italic">ex negativo</hi> non-canon, binary classifications reveal broad structures and trends in literary history.
+            </p>
+            <p style="text-align: left; ">While binary classifications have proven successful in modelling canonicity, scalable measures have also demonstrated their ability to generate more nuanced insights into literary historical tendencies. Scales and measures of canonisation, such as Algee-Hewitt et al.'s projection of the British novelistic field (2016, 4) and Porter’s ratio of popularity and prestige (2018, 3), go beyond general trends or binary oppositions: They reveal both micro- and macro-structures of literary recognition by analysing the relationships between measures. These structures can ultimately be used to divide the data into groups—as is the case with Algee Hewitt et al.'s three regions of canonicity—but this additional step of categorisation comes later. Scales and projected measures, along with their relationships, provide the foundation for analysis before categorisation is applied.</p>
+            <p style="text-align: left; ">This contribution proposes quantifying canonisation—the degree to which a text has been canonised—as a numerical score bounded by defined limits, ranging from non-canonised at one extreme to highly canonised at the other. The bounded scale ensures that canonisation scores are both comparable across literary systems and traditions and meaningful in interpretation. Exemplary comparative analyses between English and German literary corpora will demonstrate how the score can be used to group texts into cohorts of canonisation.<ref n="1" target="ftn1"/>
+            </p>
+            <div type="div1" rend="DH-Heading1">
+                <head>Canon and Corpus</head>
+                <p style="text-align: left; ">For the comparative framework of this study, two corpora were compiled following the balanced, multiple-authority-based corpus compilation strategy proposed by Algee-Hewitt and McGurl (2015). Rather than combining diverse sources such as best-of lists, bestseller lists, and expert-curated collections from postcolonial, multi-ethnic, and feminist literature, literary histories and companions were used as proxies for different ‘canons’. These sources capture varying tiers of canonisation, ranging from the normative to the extended academic canon. A selection of 27 English and 29 German literary histories was chosen as the basis for the corpus compilation. To identify and extract relevant titles, a fine-tuned Named Entity Recognition (NER) model was employed, augmented by a disambiguation pipeline that leveraged entity-fishing and fuzzy matching. This approach resulted in the creation of a corpus consisting of 680 English and 572 German prose texts (see Brottrager 2024).</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="Hlk197417917"/>Quantifying and Measuring Canonisation
+                </head>
+                <p style="text-align: left; ">Metadata on indicators of institutional evaluative acts (Heydebrand and Winko 1996, 222)—i.e., canonisation processes—were collected for these corpus texts, including: (1) the existence of complete works of the author, (2) the availability of student editions, and (3) the frequency of detailed discussions in literary histories, measured by the number of title mentions in the literary histories and companions used in the corpus compilation. These proxies represent aspects of canonisation, ensuring either the physical availability of texts or their cultural accessibility through integration into literary historical discourse.<ref n="2" target="ftn2"/>
+                </p>
+                <p style="text-align: left; ">Table 1: Indicators of canonisation processes used for the canonisation score.</p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: center;">Indicator</cell>
+                        <cell style="text-align: center;">Source</cell>
+                        <cell style="text-align: center;">Values</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: center;">Complete/collected works</cell>
+                        <cell style="text-align: center;">National bibliographies</cell>
+                        <cell style="text-align: center;">0/1</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: center;">Student editions</cell>
+                        <cell style="text-align: center;">Series catalogues</cell>
+                        <cell style="text-align: center;">0/1</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: center;">Inclusion in literary history</cell>
+                        <cell style="text-align: center;">Literary histories &amp; companions</cell>
+                        <cell style="text-align: center;">
+                            <hi style="font-size:10pt">[0,∞]</hi>
+                        </cell>
+                    </row>
+                </table>
+                <p style="text-align: left; ">To aggregate these indicators into a numerical score, a logistic regression model was trained, using data from titles expected to have either high or low canonisation scores: For the definition of the maximum of the canonisation score, university reading lists were used; texts appearing on at least three lists receive a maximum score of 1. Titles appearing only once in all literary histories and companions used for the corpus compilation were used to define the lower end of the scale.</p>
+                <figure>
+                    <graphic n="1001" width="9.99948611111111cm" height="9.99948611111111cm" url="/tmp/tmpcd_jhgme/Pictures/ba858e17eb8adbebf15d3b75dd9fa20f.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 1: Distribution of canonisation scores across both corpora.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Tradition and Legacy</head>
+                <p style="text-align: left; ">After generating the canonisation scores, the collected and scored texts were used to generate doc2vec embeddings (five models per corpus, 100 dimensions, window size of 5, minimum count of 5), along with rolling 10-year averages across the entire corpus range (1688-1914). These averages, which represent the mean position of all titles published in a given year within the embedding space, facilitated the calculation of similarities between individual texts and all yearly centroids. This process allows for determining whether a text is more similar to works published before, during, or after its own publication. The results of this analysis, shown in Figure 2, categorise the texts according to their canonisation score into four cohorts: high (0.75-1.0), mid-high (0.5-0.75), mid-low (0.25-0.5), and low (below 0.25).</p>
+                <p style="text-align: left; ">Across all canonisation score cohorts in both corpora, there is a general trend of less similarity to texts published earlier and more similarity to those published later. However, some differences emerge. First, while highly canonised texts are, compared to the other cohorts, most similar to texts published after them—suggesting that they act as stylistic and thematic role models for later works—the gap between the high and mid-high cohorts in the English corpus is less pronounced. English texts with mid-range canonisation scores exhibit similar diachronic similarity patterns to their highly canonised counterparts. Second, German texts with the lowest canonisation scores surpass mid-range and, at times, even high-range texts in terms of similarity to works published before them: Non-canonised German texts are, one could argue, closer to their literary historical predecessors, while highly canonised texts become these predecessors for later generations.</p>
+                <figure>
+                    <graphic n="1002" width="15.980833333333333cm" height="10.646833333333333cm" url="/tmp/tmpcd_jhgme/Pictures/ba858e17eb8adbebf15d3b75dd9fa20f.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 2: Similarity of canonisation score cohorts to yearly centroids before, at, and after the time of publication.<ref n="3" target="ftn3"/>
+                </p>
+                <p style="text-align: left; ">These preliminary results show how a numerical canonisation score can provide differentiated insights in CLS experiments: By comparing cohorts of texts based on their canonisation scores, more specific patterns emerge. Moreover, since the scores are comparable across corpora, they facilitate comparative analyses: The influence of mid-range canonised texts on future literary production appears to differ between English and German literary history. Ultimately, however, highly canonised works in both corpora seem to have a clear, recognisable after-effect—a legacy.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                     Code and data are available at https://github.com/jbrottrager/from-canon-to-score.
+                </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                         See Brottrager et al. 
+                            <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {"citationID":"LceoHTw2","properties":{"formattedCitation":"(2021)","plainCitation":"(2021)","noteIndex":1},"citationItems":[{"id":3741,"uris":["http://zotero.org/users/6111325/items/GKTRYT3K"],"itemData":{"id":3741,"type":"paper-conference","container-title":"Proceedings of the Conference on Computational Humanities Research 2021","event-place":"Amsterdam","event-title":"CHR 2021","page":"195-205","publisher":"CEUR Workshop Proceedings","publisher-place":"Amsterdam","title":"Predicting Canonization: Comparing Canonization Scores Based on Text-Extrinsic and -Intrinsic Features","URL":"http://ceur-ws.org/Vol-2989/short_paper21.pdf","author":[{"family":"Brottrager","given":"Judith"},{"family":"Stahl","given":"Annina"},{"family":"Arslan","given":"Arda"}],"issued":{"date-parts":[["2021"]]},"citation-key":"brottrager_predictingcanonizationcomparing_2021"},"label":"page","suppress-author":true}],"schema":"https://github.com/citation-style-language/schema/raw/master/csl-citation.json"}?>(2021) for a previous iteration of the canonisation score.
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                         See Barré (2024) for similar visualisations. 
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Algee-Hewitt, Mark, Sarah Allison, Marissa Gemma, Ryan Heuser, Franco Moretti, and Hannah Walser. 2016. ‘Canon/Archive. Large-Scale Dynamics in the Literary Field’. Pamphlets of the Stanford Literary Lab, no. 11. https://litlab.stanford.edu/LiteraryLabPamphlet11.pdf.</bibl>
+                    <bibl style="text-align: left; ">Algee-Hewitt, Mark, and Mark McGurl. 2015. ‘Between Canon and Corpus: Six Perspectives on 20th-Century Novels’. Pamphlets of the Stanford Literary Lab, no. 8. https://litlab.stanford.edu/LiteraryLabPamphlet8.pdf.</bibl>
+                    <bibl style="text-align: left; ">Assmann, Aleida. 2008. ‘Canon and Archive’. In Cultural Memory Studies: An International and Interdisciplinary Handbook, edited by Astrid Erll, Ansgar Nünning, and Sara B. Young, 97–107. Media and Cultural Memory ; Medien Und Kulturelle Erinnerung 8. Berlin; New York, NY: Walter de Gruyter.</bibl>
+                    <bibl style="text-align: left; ">Barré, Jean. 2024. ‘Latent Structures of Intertextuality in French Fiction’. In Proceedings of the Computational Humanities Research Conference 2024, 21–26. Aarhus. https://arxiv.org/abs/2410.17759.</bibl>
+                    <bibl style="text-align: left; ">Barré, Jean, Jean-Baptiste Camps, and Thierry Poibeau. 2023. ‘Operationalizing Canonicity: A Quantitative Study of French 19th and 20th Century Literature’. Journal of Cultural Analytics 8 (1). https://doi.org/10.22148/001c.88113.</bibl>
+                    <bibl style="text-align: left; ">Bloom, Harold. 1994. The Western Canon: The Books and School of the Ages. 1. ed. New York, NY: Harcourt Brace.</bibl>
+                    <bibl style="text-align: left; ">Brottrager, Judith. 2024. ‘Echoes Unveiled: Quantifying Literary Historical Scholarship with Word Embeddings’. In DH2024 Book of Abstracts. Washington, D.C., USA.</bibl>
+                    <bibl style="text-align: left; ">Brottrager, Judith, Annina Stahl, and Arda Arslan. 2021. ‘Predicting Canonization: Comparing Canonization Scores Based on Text-Extrinsic and -Intrinsic Features’. In Proceedings of the Conference on Computational Humanities Research 2021, 195–205. Amsterdam: CEUR Workshop Proceedings. http://ceur-ws.org/Vol-2989/short_paper21.pdf.</bibl>
+                    <bibl style="text-align: left; ">Calvo Tello, José. 2021. The Novel in the Spanish Silver Age: A Digital Analysis of Genre Using Machine Learning. Bielefeld University Press. https://doi.org/10.1515/9783839459256.</bibl>
+                    <bibl style="text-align: left; ">Feldkamp, Pascale, Alie Lassche, Jan Kostkan, Márton Kardos, Kenneth Enevoldsen, Katrine Baunvig, and Kristoffer Nielbo. 2024. ‘Canonical Status and Literary Influence: A Comparative Study of Danish Novels from the Modern Breakthrough (1870–1900)’. In Proceedings of the 4th International Conference on Natural Language Processing for Digital Humanities, edited by Mika Hämäläinen, Emily Öhman, So Miyagawa, Khalid Alnajjar, and Yuri Bizzoni, 140–55. Miami, USA: Association for Computational Linguistics. https://aclanthology.org/2024.nlp4dh-1.14.</bibl>
+                    <bibl style="text-align: left; ">Herrmann, Leonard. 2007. ‘Kanon als System: Kanondebatte und Kanonmodelle in der Literaturwissenschaft’. In Die Bildung des Kanons: Textuelle Faktoren, kulturelle Funktionen, ethische Praxis, edited by Lothar Ehrlich, Judith Schildt, and Benjamin Specht. Köln; Weimar; Wien: Böhlau.</bibl>
+                    <bibl style="text-align: left; ">Heydebrand, Renate von, and Simone Winko. 1996. Einführung in die Wertung von Literatur: Systematik - Geschichte - Legitimation. UTB für Wissenschaft Uni-Taschenbücher 1953. Paderborn: Schöningh.</bibl>
+                    <bibl style="text-align: left; ">Hölter, Achim. 1997. ‘Kanon Als Text’. In Kanon Und Theorie, edited by Maria Moog-Grünewald, 21–39. Neues Forum Für Allgemeine Und Vergleichende Literaturwissenschaft, Bd. 3. Heidelberg: Winter.</bibl>
+                    <bibl style="text-align: left; ">Porter, J.D. 2018. ‘Popularity/Prestige’. Pamphlets of the Stanford Literary Lab, no. 17. https://litlab.stanford.edu/LiteraryLabPamphlet17.pdf.</bibl>
+                    <bibl style="text-align: left; ">Verboord, Marc. 2003. ‘Classification of Authors by Literary Prestige’. Poetics 31 (3–4): 259–81. https://doi.org/10.1016/S0304-422X(03)00037-8.</bibl>
+                    <bibl style="text-align: left; ">Winko, Simone. 2002. ‘Literatur-Kanon Als Invisible Hand-Phänomen’. In Text + Kritik. Literarische Kanonbildung, 9–24. Edition text+kritik.</bibl>
+                    <bibl style="text-align: left; ">Wu, Yaru, Pascale Feldkamp Moreira, Kristoffer L. Nielbo, and Yuri Bizzoni. 2024. ‘Perplexing Canon: A Study on GPT-Based Perplexity for Canonical and Non-Canonical Literary Works’. In Proceedings of LaTeCH-CLfL 2024, 172–84. Association for Computational Linguistics.</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

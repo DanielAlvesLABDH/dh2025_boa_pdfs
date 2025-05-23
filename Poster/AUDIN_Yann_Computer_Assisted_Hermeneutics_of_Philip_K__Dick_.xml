@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="AUDIN_Yann_Computer_Assisted_Hermeneutics_of_Philip_K__Dick_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Computer-Assisted Hermeneutics of Philip K. Dick's Corpus: Constructing a Personal Knowledge Base with SpaCy and &lt;em&gt;Obsidian&lt;/em&gt; for Literary Analysis</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Audin</surname>
+                        <forename>Yann</forename>
+                    </persName>
+                    <affiliation>Université de Montréal, Canada</affiliation>
+                    <email>yann.audin@umontreal.ca</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T08:29:05.792970304</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Computational Literary Studies</term>
+                    <term>Literature</term>
+                    <term>Science-fiction</term>
+                    <term>Augmented Corpus</term>
+                    <term>Knowledge Database</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>bibliographic analysis</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>natural language processing</term>
+                    <term>text mining and analysis</term>
+                    <term>Humanities computing</term>
+                    <term>Literary studies</term>
+                    <term>Media studies</term>
+                    <term>Theology and religious studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Objectives</head>
+                <p>This project seeks to explore computer-assisted hermeneutics in Philip K. Dick’s science-fiction short stories, novels, and journals, as well as in his Gnostic influences. The project involves developing a Python library that bridges raw textual data and metadata with the Obsidian text editor to automatically generate a knowledge base using hyperlinks, indexes, knowledge graphs, context, information and timelines. More globally, the project aims to become a reusable model for computer-assisted hermeneutics, grounded in robust theoretical principles.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Philip K. Dick</head>
+                <p>Philip K. Dick (1928 - 1982) is widely recognised as one of the most influential and important science-fiction authors of the 20th century. Dick was celebrated by fans and critics alike, and received multiple awards including a Hugo (1962, The Man in the High Castle) ; his work is still being adapted to the cinema forty years after his death. Despite literary successes and ongoing popularity, he faced constant financial difficulties and wrote prolifically to support himself and his relatives. He used (and abused) amphetamines to sustain the rhythm at which he wrote to make up for low rate of pay from science-fiction magazines. Two years after he attempted suicide while travelling in Canada, he had a religious experience in 1974 that informed his writing for the last eight years of his life. After meeting a woman wearing the Christian ichthys symbol, he started to hallucinate a pink beam of light and visions of early Christians. The effects lasted for weeks and Dick documented his experience and thoughts in journals he called “2-3-74” (referring to February and March 1974), excerpts of which were later published in The Exegesis of Philip K. Dick (edited by Pamela Jackson and Jonathan Lethem). Even before the event, Dick was well versed in Gnostic theology and early Church history.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Objectives</head>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Phases of the Project</head>
+                    <p>The project is structured onto three phases : the first (and current) phase centres around Dick’s short stories and The Exegesis : we developed a metadata schema, tested various libraries for Named Entity Recognition, and evaluated tools for text and data visualisation. In the second part of the project, Philip K. Dick’s novels and letters will be added to the corpus and analysed. A third and final phase will see the inclusion of Gnostic gospels and texts. The approach should be theorised and generalised for application to other literary corpora. Each stage of the process includes a hybrid analysis combining close and distant reading.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>The Philip K. Dick Corpus</head>
+                    <p>Philip K. Dick’s bibliography includes 35 published novels, 10 posthumously released novels and 121 short stories, although the exact count varies because of classification debates. His letters were collected in 6 volumes and parts of his journal were published in 2011. The project is currently testing hermeneutic and computational methods on Dick’s short stories and the Exegesis. We have gathered 115 of his short stories, comprising a total of 769 816 words (or 4 382 718 characters) – an average of 6 694,05 words per text.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Research Questions</head>
+                    <p>This project is informed by two aspects of Philip K. Dick’s writing : he named some of his characters after people he knew or even himself (for instance, in Mr Spaceship, What the Dead Men Say and A Terran Odyssey), and included important concepts and stories from Gnostic texts in his writing. Hence, this project aims to answer two questions of literary and historical interest : </p>
+                    <p>1. How do recurring names in Philip K. Dick’s science-fiction and nonfiction works reflect connections between his personal life, own mythology and literary output ?</p>
+                    <list type="ordered">
+                        <item>How does Gnostic theology interact with Dick’s science-fiction and journals ?</item>
+                    </list>
+                    <p>We investigate Philip K. Dick’s work by cross-referencing his journals, letters and biographical data with his literary texts using automatically generated indexes, timelines, knowledge graphs, hyperlinks and networks. A particular point of interest is his self-constructed mythology, and the effect of the religious experience described in “2-3-74” on his life and work.</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methodology</head>
+                <p>The project follows an iterative process applied to each phase of the corpus development :</p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Corpus preparation</head>
+                    <p>The texts are saved as .txt files and the metadata are structured in a json file using multiple sources for accuracy.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Development of a Python-based software</head>
+                    <p>The library interfaces between raw textual data and 
+                        <hi rend="italic">Obsidian</hi>. The project aims at being reusable and extendable beyond the suggested corpus. 
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Database generation</head>
+                    <p>Using a dictionary of Gnostic terms and Named Entity Recognition with SpaCy, a database of words of interest and their specific occurrences in the corpus is created. </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Conversion to Markdown for Obsidian</head>
+                    <p>The cleaned texts are augmented with markdown hyperlinks that lead to virtual index cards of names and Gnostic concepts. Timelines and networks are automatically generated in an 
+                        <hi rend="italic">Obsidian</hi>-readable format. 
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Mixed-method analysis</head>
+                    <p>The enhanced corpus is studied through assisted close reading and distant reading within the literary knowledge base using 
+                        <hi rend="italic">Obsidian</hi>.
+                    </p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Implication</head>
+                <p>This project takes full advantage of ready-made and custom-made tools to create a framework for computational literary studies. It preserves the humanistic values of the hermeneutic process, while leveraging digital media and algorithmic tools. More specifically, the method showcases how classical Natural Language Processing can be used to meaningfully augment literary corpora which are usually considered too large for traditional literary analysis. It serves as a model to combine close and distant reading to better understand the interplay of an author’s literary production, influences and personal mythology.</p>
+                <p>
+                    <lb/>This presentation will introduce Philip K. Dick’s corpus and outline our methodology from a theoretical and technical perspective. We will present the knowledge graphs and knowledge base, as well as the results for the first phase of the project
+                </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>References </bibl>
+                    <bibl>
+                        <hi rend="bold">Balzer, W., / Eleftheriadis, A. / Kurzawe, D.</hi> (2018). Digital Humanities and Hermeneutics. 
+                        <hi rend="italic">Philosophical Inquiry</hi>, 
+                        <hi rend="bold">42</hi>(3–4), pp. 103–19. 10.5840/philinquiry2018423/415.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Bode, Katherine</hi> (2023). What’s the Matter with Computational Literary Studies? 
+                        <hi rend="italic">Critical Inquiry</hi>, 
+                        <hi rend="bold">49</hi>(4), pp. 507–29.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Bories, Anne-Sophie / Fabo, P. R. / Plecháč, P.</hi> (2022). The Polite Revolution of Computational Literary Studies. 
+                        <hi rend="italic">Stylistics in Poetry, Prose, and Drama</hi>, p. 1.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Eve, Martin P.</hi> (2019). 
+                        <hi rend="italic">Close Reading with Computers: Textual Scholarship, Computational Formalism, and David Mitchell’s Cloud Atlas</hi>. Stanford University Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Eve, M.artinP.</hi> (2022). 
+                        <hi rend="italic">The Digital Humanities and Literary Studies</hi>. Oxford University Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Fish, Stanley</hi> (2012). Mind Your P’s and B’s: The Digital Humanities and Interpretation. 
+                        <hi rend="italic">Opinionator</hi>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hayles, N. Katherine</hi> (2008). How We Think: The Transforming Power of Digital Humanities. In 
+                        <hi rend="italic">Keynote for the Mellon Seminar</hi>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Herrmann, J. Berenike / Jacobs, Arthur M. / Piper, Andrew</hi> (2021). Computational Stylistics. 
+                        <hi rend="italic">Handbook of Empirical Literary Studies</hi>, pp. 451–86.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Ingvarsson, Jonas</hi> (2021). 
+                        <hi rend="italic">Towards a Digital Epistemology: Aesthetics and Modes of Thought in Early Modernity and the Present Age</hi>. Springer Nature.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Jockers, Matthew L.</hi> (2013). 
+                        <hi rend="italic">Macroanalysis</hi>. University of Illinois Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Kleymann, Rabea / Stange, Jan-Erik</hi> (2021). Towards Hermeneutic Visualization in Digital Literary Studies. 
+                        <hi rend="italic">Digital Humanities Quarterly</hi>, 
+                        <hi rend="bold">15</hi>(2).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">McCarty, Willard</hi> (2013). Knowing…: Modeling in Literary Studies1. 
+                        <hi rend="italic">A Companion to Digital Literary Studies</hi>, pp. 389–401.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Moretti, Franco</hi> (2013). 
+                        <hi rend="italic">Distant Reading</hi>. Verso Books.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Moretti, Franco</hi> (2005). 
+                        <hi rend="italic">Graphs, Maps, Trees: Abstract Models for a Literary History</hi>. Verso.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Piper, Andrew</hi> (2019). 
+                        <hi rend="italic">Enumerations: Data and Literary Study</hi>. University of Chicago Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Piper, Andrew</hi> (2017). Think Small: On Literary Modeling. 
+                        <hi rend="italic">PMLA</hi>, 
+                        <hi rend="bold">132</hi>(3), pp. 651–8.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Rhody, Lisa M.</hi> (2012). Topic Modeling and Figurative Language. 
+                        <hi rend="italic">Journal of Digital Humanities</hi>, 
+                        <hi rend="bold">2</hi>(1).http://journalofdigitalhumanities.org/2-1/topic-modeling-and-figurative-language-by-lisa-m-rhody.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Rockwell, Geoffrey / Sinclair, Stéfan</hi> (2022). 
+                        <hi rend="italic">Hermeneutica: Computer-Assisted Interpretation in the Humanities</hi>. Mit Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Siemens, Raymond G.</hi> (2002). A New Computer-Assisted Literary Criticism? 
+                        <hi rend="italic">Computers and the Humanities</hi>, 
+                        <hi rend="bold">36</hi>(3), pp. 259–67.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Sutton, Rich</hi> (2019). The Bitter Lesson. http://www.incompleteideas.net/IncIdeas/BitterLesson.html.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Underwood, Ted</hi> (2017). A Genealogy of Distant Reading. 
+                        <hi rend="italic">Digital Humanities Quarterly</hi>, 
+                        <hi rend="bold">11</hi>(2).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Van Zundert, Joris J.</hi> (2015). Screwmeneutics and Hermenumericals: The Computationality of Hermeneutics. 
+                        <hi rend="italic">A New Companion to Digital Humanities</hi>, pp. 331–47.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

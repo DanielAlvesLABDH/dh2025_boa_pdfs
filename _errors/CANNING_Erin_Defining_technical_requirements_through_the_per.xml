@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="CANNING_Erin_Defining_technical_requirements_through_the_per">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Defining technical requirements through the perspective of an ethics of care: what kinds of computational support fit the needs of museum-based critical cataloguing practitioners?</title>
+                <author>
+                    <persName>
+                        <surname>Canning</surname>
+                        <forename>Erin</forename>
+                    </persName>
+                    <affiliation>University of Oxford, United Kingdom</affiliation>
+                    <email>erin.canning@wolfson.ox.ac.uk</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-26T16:04:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>critical cataloguing</term>
+                    <term>reparative cataloguing</term>
+                    <term>knowledge graph</term>
+                    <term>interview</term>
+                    <term>ethics of care</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>ethnographic analysis</term>
+                    <term>linked (open) data</term>
+                    <term>metadata standards</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>Feminist studies</term>
+                    <term>Galleries and museum studies</term>
+                    <term>Humanities computing</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">Museum catalogue records contain evidence of the colonial histories of museums, such as through the presence of harmful and offensive language, colonial naming practices, euphemisms, clichés, and more. In response to a growing recognition of this issue, a practice of “critical cataloguing” has emerged: “a social justice-oriented style of radical cataloging that places an emphasis on radical empathy, outreach work, and recognizes the importance of information maintenance and care” (Watson 2020). Many activities can fall under this heading, and those focused on identifying and addressing problematic terminology in catalogue records and object metadata are often named as “reparative cataloguing” under this broader critical cataloguing umbrella (Kempton 2022; Luke and Mizota 2024). When engaging in reparative cataloguing, critical cataloguing practitioners review existing collections metadata and take actions to remediate the record. However, this is no simple matter of find-and-replace: practitioners face numerous barriers in this work, ranging from needing to locate or create lists of problematic—or potentially problematic—language to look for, through to making decisions about what actions to take and who should be involved in what ways. Reparative cataloguing is complex and context-dependent, and critical cataloguing practitioners in individual institutions are seeking to define best practices that work for their unique situations while often informally sharing tactics in support of collective efforts. There is little domain-wide guidance for museums on how to engage in this work or even in defining what all constitutes “problematic terminology” (Chew 2022; Cress 2021; Dalal-Clayton and Rutherford 2022; Lawther 2021; Muñoz 2021; Rutherford 2022; Werling and Radio 2024). What has emerged, however, is a recognition of the difficulty of this work and a core consensus that any work taking place under the umbrella heading of critical cataloguing must center not on data but on people, as it is about examining and unsettling entrenched systems of power (Frick and Proffitt 2022). After all, metadata does not come from nowhere: what appears in the data is only evidence of larger contexts in which cataloguing takes place.</p>
+            <p style="text-align: left; ">In examining the current state of reparative cataloguing practices, it does appear that there is an opportunity to address some of the identified pain points through computational intervention. It is at this place where computational techniques meet reparative cataloguing that the AHRC-funded D.Phil. studentship project, “Application of computational approaches in addressing problematic terminology within V&amp;A Museum catalogues”, seeks to situate itself. This project, co-supervised by the University of Oxford (Oxford e-Research Centre, Department of Engineering Science) and the Victoria and Albert Museum, seeks to identify how computational methods can support the work of reparative cataloguers working in museums or with museum data. I argue that any computational intervention in this space requires a critical approach, since doing otherwise risks repeating and reinforcing inherited power relations, which then would work against the larger goals of critical cataloguing. The risks of machine learning and artificial intelligence introducing new bias, as well as amplifying existing bias in datasets on which they are trained, are extensively documented (Bender et al. 2021; Crawford and Paglen 2019). Mordell (2019), Cordell (2020), and Frick &amp; Proffitt (2022), amongst others, have argued that without a critical approach, computational projects that seek to intervene in the catalogue metadata space—not even just the critical cataloguing space, but the museum data space in general—are capable of working against the commitments of inclusivity and representation that museums have made to their communities. As these commitments are particularly relevant for critical cataloguing, this is a significant concern. How, then, can computers be used to engage with the core concerns of critical cataloguing—or do they have a place in this work at all?</p>
+            <p style="text-align: left; ">In this paper, I seek to engage with this question by discussing the results of a series of semi-structured interviews conducted with critical cataloguing practitioners who are either based in museums or work with museum data as part of their practice, and which took place as part of the “Application of computational approaches in addressing problematic terminology within V&amp;A Museum catalogues” project. 24 individuals from the United Kingdom, Canada, and the United States were interviewed between December 2023 and July 2024 about their critical cataloguing practices, motivations, and goals. What emerged from this research was not only a clearer picture of the critical cataloguing practices taking place in museums today, but also an articulation of how personal senses of values and responsibility drive individuals in this work. I will discuss the findings of these interviews using Caswell and Cifor’s (2016) concept of radical empathy and an ethics of care in the archive space in order to highlight the ways in which critical cataloguers decide on actions to take in response to feelings of personal and professional responsibility. I will then use this framing to extend these findings to technological requirements for computational intervention in the critical cataloguing space. I will show how this qualitative research, and the analysis of the interviews from a lens of feminist theory, has driven the development of requirements for a potential computational support tool in this area of work: a knowledge graph of reparative cataloguing guidelines and workflows, along with the exploration of knowledge graph embedding models to help practitioners locate and sort through records in need of remediation. Ultimately, I argue that a theory-driven approach is required when considering computational methods in critical cataloguing in order to meet the needs of critical cataloguing practitioners, as these core needs are based in concepts of values and ethics.</p>
+            <p style="text-align: left; ">Acknowledgements: This research is taking place as part of the AHRC-funded Collaborative Doctoral Partner-ship scheme grant AH/X004775/1.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Bender, Emily / Gebru, Timnit / McMillan-Major, Angelina / Shmitchell, Shmargaret</hi> (2021): “On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 
+                        <hi style="font-family:Apple Color Emoji">🦜</hi>”, In 
+                        <hi rend="italic">Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency</hi>, 610–23. Virtual Event Canada: ACM. DOI: 10.1145/3442188.3445922.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Caswell, Michelle / Cifor, Marika</hi> (2016): “From Human Rights to Feminist Ethics: Radical Empathy in the Archives”, In 
+                        <hi rend="italic">Archivaria</hi> 81, May: 23–43.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Chew, Carissa</hi> (2022): “Inclusive Terminology for the Heritage Sector”, In 
+                        <hi rend="italic">ARLIS UK &amp; Ireland Cat &amp; Class ethics series, Friday May 27 2022</hi> (presentation) &lt;https://www.youtube.com/watch?v=bb2hMcKz_aY&gt;.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Cordell, Ryan</hi> (2020): 
+                        <hi rend="italic">Machine Learning + Libraries A Report on the State of the Field</hi>. Washington DC: Library of Congress Labs. 
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Crawford, Kate / Paglen, Trevor</hi> (2019): 
+                        <hi rend="italic">Excavating AI: The Politics of Images in Machine Learning Training Sets</hi>. &lt;https://excavating.ai&gt;.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Cress, Laurier</hi> (2021): “An Intern’s Investigation on Decolonizing Archival Descriptions and Legacy Metadata”, In 
+                        <hi rend="italic" xml:space="preserve">Bitstreams: The Duke University Libraries Digital Collections Blog </hi>(blog) &lt;https://blogs.library.duke.edu/bitstreams/2021/03/25/an-interns-investigation-on-decolonizing-archival-descriptions-and-legacy-metadata/&gt;.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Dalal-Clayton, Anjalie / Rutherford, Ananda</hi> (2022): “Against a New Orthodoxy: Decolonised ‘Objectivity’ in the Cataloguing and Description of Artworks”, In 
+                        <hi rend="italic">Paul Mellon Centre Photographic Archive</hi> (blog) &lt;https://photoarchive.paul-mellon-centre.ac.uk/groups/against-a-new-orthodoxy&gt;.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Frick, Rachel / Proffitt, Merrilee</hi> (2022): 
+                        <hi rend="italic">Reimagine Descriptive Workflows: A Community-Informed Agenda for Reparative and Inclusive Descriptive Practice</hi>. Dublin: OCLC Research. DOI: 10.25333/wd4b-bs51.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kempton, Alia</hi> (2022): 
+                        <hi rend="italic">A Case Study: Reparative Description in Archival Settings</hi>. Master’s thesis, University of North Carolina at Chapel Hill.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Lawther, Kathleen</hi> (2021): “Decolonising the Database (Part 1)”, In 
+                        <hi rend="italic">Acid Free Blog</hi> (blog) &lt;http://acidfreeblog.com/documentation/decolonising-the-database/&gt;.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Luke, Stephanie / Mizota, Sharon</hi> (2024): “Instituting a Framework for Reparative Description”, In 
+                        <hi rend="italic">Archival Science</hi> 24: 481-508.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Mordell, Devon</hi> (2019): “Critical Questions for Archives as (Big) Data”, In 
+                        <hi rend="italic">Archivaria</hi> 87: 140–61.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Muñoz, Grace</hi> (2021): “Reframing Reparative Description Initiatives through Critical Race Theory and Black Feminism”, In 
+                        <hi rend="italic">Descriptive Notes</hi> (blog) &lt;https://saadescription.wordpress.com/2021/04/22/reframing-reparative-description-initiatives-through-critical-race-theory-and-black-feminism/&gt;.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Rutherford, Ananda</hi> (2022): “Provisional Semantics, Projects and Positionality”, In 
+                        <hi rend="italic">ARLIS Cat &amp; Class ethics series, 10 June 2022</hi> (presentation) &lt;https://www.youtube.com/watch?v=tjTyi_WViSI&gt;.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Watson, B.M.</hi> (2020): “‘There Was Sex but No Sexuality*:’ Critical Cataloging and the Classification of Asexuality in LCSH”, In 
+                        <hi rend="italic">Cataloging &amp; Classification Quarterly</hi> 58, 6: 547–65.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Werling, Sarah / Radio, Erik</hi> (2024): “Comparing Critical Cataloging Procedures and Developing Local Policies in the Context of Digital Library Metadata”, In 
+                        <hi rend="italic" xml:space="preserve">Journal of Library Metadata </hi>25, 1: 33-55.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

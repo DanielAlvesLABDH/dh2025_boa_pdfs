@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LI_Jiayi_Exploring_the_Technical_Knowledge_Interaction_of_Gl">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Exploring the Technical Knowledge Interaction of Global Digital Humanities: Three-decade Evidence from Bibliometric-based perspectives</title>
+                <author>
+                    <persName>
+                        <surname>Li</surname>
+                        <forename>Jiayi</forename>
+                    </persName>
+                    <affiliation>Renmin University of China, China</affiliation>
+                    <email>2022201079@ruc.edu.cn</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Yan</surname>
+                        <forename>Chengxi</forename>
+                    </persName>
+                    <affiliation>Renmin University of China, China</affiliation>
+                    <email>20218113@ruc.edu.cn</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Zeng</surname>
+                        <forename>Yurong</forename>
+                    </persName>
+                    <affiliation>Renmin University of China, China</affiliation>
+                    <email>2022201115@ruc.edu.cn</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Fang</surname>
+                        <forename>Zhichao</forename>
+                    </persName>
+                    <affiliation>Renmin University of China, China</affiliation>
+                    <email>fzc0225@163.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Wang</surname>
+                        <forename>Huiru</forename>
+                    </persName>
+                    <affiliation>Renmin University of China, China</affiliation>
+                    <email>abcwhr2016@163.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Digital humanities</term>
+                    <term>Bibliometric analysis</term>
+                    <term>Topic modeling</term>
+                    <term>Network Analysis</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>public humanities collaborations and methods</term>
+                    <term>text mining and analysis</term>
+                    <term>Informatics</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">
+                    <hi rend="bold" xml:space="preserve">Digital Humanities (DH) </hi>is an interdisciplinary field that integrates computational methods with humanities scholarship to investigate innovative topics. Each academic discipline follows a unique developmental path shaped by the topics researchers investigate and the methods they employ. With the help of bibliometric analysis, most of previous studies have examined DH across multiple dimensions such as research hotspots, co-author networks, and institutional rankings. However, these studies have often been limited in their ability to provide deep insights into the current state of technological advancements and topic development in DH. As a result, their conclusions tend to remain superficial or lack interpretability in understanding how methods and topics interrelate in the field.
+                </p>
+                <p style="text-align: left; ">To address this gap, this study introduced a new concept of 
+                    <hi rend="bold">Topic-Method Composition (TMC)</hi>, which refers to a hybrid knowledge structure generated by the co-occurrence of specific research topics and the corresponding method. Especially by analyzing the interaction between TMCs, we can see more clearly the intersection and integration of digital technology and humanistic subjects in DH. Moreover, this study developed a TMC-based workflow combining bibliometric analysis, topic modeling, and network analysis to analyze the development characteristics and patterns of research disciplines. By applying this workflow to large-scale bibliometric data, it enables a detailed view of the knowledge structures, providing a tool adaptable to other fields.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Research Methodology</head>
+                <p style="text-align: left; ">The methodology comprised three sequential analytical phases. First, we used topic keyword-based search method to collect DH-related documents from three different bibliometric databases (Web of Science, Crossref, and Dimension), applying rigorous data cleaning procedures to create a consolidated research corpus. The publication year was set between 1992 and 2022, which yielded a final dataset of 4,381 qualified articles for analysis. </p>
+                <p style="text-align: left; ">Second, we developed specialized recognition models and optimization algorithms to accurately extract knowledge elements from the corpus. For method elements, we used the two-stage recognition algorithm (Li / Yan 2023) denoted as LLMRule-based. To be specific, a large language model (LLM) like ChatGPT performed preliminary method entity extraction, followed by rule-based standardization using an evolving domain dictionary. Let 
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <mi mathvariant="normal" xmlns="http://www.w3.org/1998/Math/MathML">i</mi>
+                        </mml:math>
+                    </formula> represent a method element, we calculated the number of documents that has used such method (i.e. 
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <msub xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mrow>
+                                    <mi mathvariant="normal">D</mi>
+                                </mrow>
+                                <mrow>
+                                    <mi mathvariant="normal">i</mi>
+                                </mrow>
+                            </msub>
+                        </mml:math>
+                    </formula>). And for topic elements, we used the state-of-the-art model Bertopic (Grootendorst 2022), which utilized contextual embeddings and clustering techniques to uncover nuanced topic structures. Model performance was optimized through cluster numbers, and two experts were invited to validate high-scoring terms and ensure interpretable topic labels. Hence for a certain topic 
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <mi mathvariant="normal" xmlns="http://www.w3.org/1998/Math/MathML">j</mi>
+                        </mml:math>
+                    </formula>, we can obtain the total number 
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <msub xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mrow>
+                                    <mi mathvariant="normal">D</mi>
+                                </mrow>
+                                <mrow>
+                                    <mi mathvariant="normal">j</mi>
+                                </mrow>
+                            </msub>
+                        </mml:math>
+                    </formula> of documents it has, as the formula (1). 
+                </p>
+                <p style="text-align: left; ">Finally, we were able to automatically generate TMCs and construct a network of these compositions. The TMCs were represented as a global topic-method bipartite graph, where co-occurrence relationships mapped the associations between topics and methods. The normalized edge weights reflected to what extent this method was utilized in the given topic. Assuming 
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <msub xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mrow>
+                                    <mi mathvariant="normal">D</mi>
+                                </mrow>
+                                <mrow>
+                                    <mi mathvariant="normal">i</mi>
+                                    <mo>,</mo>
+                                    <mi mathvariant="normal">j</mi>
+                                </mrow>
+                            </msub>
+                        </mml:math>
+                    </formula> as number of co-occurring documents for a method 
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <mi mathvariant="normal" xmlns="http://www.w3.org/1998/Math/MathML">i</mi>
+                        </mml:math>
+                    </formula> and topic 
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <mi mathvariant="normal" xmlns="http://www.w3.org/1998/Math/MathML">j</mi>
+                        </mml:math>
+                    </formula>, 
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <msub xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mrow>
+                                    <mi mathvariant="normal">C</mi>
+                                </mrow>
+                                <mrow>
+                                    <mi mathvariant="normal">i</mi>
+                                    <mo>,</mo>
+                                    <mi mathvariant="normal">j</mi>
+                                </mrow>
+                            </msub>
+                        </mml:math>
+                    </formula> as the interactive intensity between them, we used truncation strategies to preserve the pair link when 
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <msub xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mrow>
+                                    <mi mathvariant="normal">C</mi>
+                                </mrow>
+                                <mrow>
+                                    <mi mathvariant="normal">i</mi>
+                                    <mo>,</mo>
+                                    <mi mathvariant="normal">j</mi>
+                                </mrow>
+                            </msub>
+                        </mml:math>
+                    </formula> is above a certain parameter 
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <mi mathvariant="normal" xmlns="http://www.w3.org/1998/Math/MathML">σ</mi>
+                        </mml:math>
+                    </formula>. Through two to three rounds of threshold adjustments along with expert validation, optimal results were achieved at 
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <mi mathvariant="normal" xmlns="http://www.w3.org/1998/Math/MathML">σ</mi>
+                            <mo xmlns="http://www.w3.org/1998/Math/MathML">=</mo>
+                            <mn xmlns="http://www.w3.org/1998/Math/MathML">0.001</mn>
+                        </mml:math>
+                    </formula>. The relationship of TMC 
+                    <formula>
+                        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                            <msub xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mrow>
+                                    <mi mathvariant="normal">R</mi>
+                                </mrow>
+                                <mrow>
+                                    <mi mathvariant="normal">i</mi>
+                                    <mo>,</mo>
+                                    <mi mathvariant="normal">j</mi>
+                                </mrow>
+                            </msub>
+                        </mml:math>
+                    </formula> can be measured as the formula (2). 
+                </p>
+                <figure>
+                    <graphic n="1001" width="6.034263888888889cm" height="3.069166666666667cm" url="/tmp/tmpygo7kvjw/Pictures/7da104272028f3963ff816251541ee73.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 1. Formulas used in this study</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Experiment</head>
+                <p style="text-align: left; ">To evaluate our LLMRule-based algorithm, we randomly extracted 800 DH papers and compared two unsupervised approaches: LLM-based (using GPT-3.5-Turbo with instructional prompts) and Rule-based (employing an expert-curated dictionary with method synonyms and morphological variants). As shown in Table 1, LLMRule-based outperformed both baselines, demonstrating the superior integration of LLM capabilities and domain-specific method knowledge.</p>
+                <p style="text-align: left; ">Table 1. Comparative evaluation for method recognition approaches</p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Approach</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Precision (%)</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Recall (%)</cell>
+                        <cell style="text-align: left;" rend="DH-Default">F1 (%)</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">LLM-based</cell>
+                        <cell style="text-align: left;" rend="DH-Default">20.62</cell>
+                        <cell style="text-align: left;" rend="DH-Default">11.98</cell>
+                        <cell style="text-align: left;" rend="DH-Default">15.15</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">Rule-based</cell>
+                        <cell style="text-align: left;" rend="DH-Default">18.28</cell>
+                        <cell style="text-align: left;" rend="DH-Default">33.95</cell>
+                        <cell style="text-align: left;" rend="DH-Default">23.77</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">LLMRule-based</cell>
+                        <cell style="text-align: left;" rend="DH-Default">43.69</cell>
+                        <cell style="text-align: left;" rend="DH-Default">26.14</cell>
+                        <cell style="text-align: left;" rend="DH-Default">32.71</cell>
+                    </row>
+                </table>
+                <p style="text-align: left; ">Next, to ensure the interpretability and relevance of the generated topics for Bertopic, we employed perplexity (Kobayashi 2014) and coherence value (Zhang et al. 2022) metrics, which are widely used for the assessment of the quality of topic models. Ultimately, optimal performance occurred at 38 topics, where perplexity minimized and coherence maximized. And expert evaluation confirmed these topics were both statistically robust and conceptually meaningful. </p>
+                <p style="text-align: left; ">Like typical bibliometric networks, the TMC network consisted of nodes (topics/methods) and edges representing shared elements between TMCs. When two TMCs shared a topic or method, they were connected. Then we employed two analytical approaches: (1) frequency analysis to identify prevalent TMCs, and (2) modularity-based community detection (Newman 2004) to reveal clustered knowledge interactions between topics and methods. </p>
+                <figure>
+                    <graphic n="1002" width="13.962944444444444cm" height="9.246305555555555cm" url="/tmp/tmpygo7kvjw/Pictures/7da104272028f3963ff816251541ee73.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 2. Top 35 TMCs by popularity</p>
+                <figure>
+                    <graphic n="1003" width="13.6525cm" height="9.214555555555556cm" url="/tmp/tmpygo7kvjw/Pictures/7da104272028f3963ff816251541ee73.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 3. TMC network visualization</p>
+                <p style="text-align: left; ">The findings underscore the interdisciplinary nature of DH, highlighting how computational methods—such as text mining, natural language processing, data visualization, and GIS—complement traditional humanities approaches like linguistic analysis, cultural heritage studies, and literary criticism. By analysing this TMC network, we identified 9 key research paradigms in DH through network clustering, revealing the diverse ways in which DH topics intersect with computational methods. These communities, derived from network clustering, highlight the diversity of research approaches within DH. For instance, some communities focus on linguistic and computational techniques (e.g., text mining, n-grams), while others emphasize the use of digital tools in cultural heritage studies or spatial analysis in archaeology. These communities reflect how DH research spans across a wide array of methodologies and topics, demonstrating the multidimensional and interdisciplinary nature of the field. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p style="text-align: left; ">The TMC framework provides a comprehensive approach to understanding the structure of DH research, offering valuable tools for identifying research gaps, improving topic-method alignment, and fostering collaboration within the field. Furthermore, the workflow is not limited to DH alone; it can be applied to other academic disciplines to explore the relationships between research topics and methods in a variety of fields. This makes the methodology highly versatile and applicable for a wide range of interdisciplinary studies.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Acknowledgement</head>
+                <p style="text-align: left; ">The study is supported and funded by the National Natural Science Foundation of China (No. 72204258). The corresponding author is Chengxi Yan (ORCID: 0000-0003-1128-550X, Email: 20218113@ruc.edu.cn). </p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Grootendorst, Maarten</hi> (2022): BERTopic: Neural Topic Modeling with a Class-Based TF-IDF Procedure, in: 
+                        <hi rend="italic">arXiv</hi> preprint 
+                        <hi rend="italic">arXiv</hi>:2203.05794.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kobayashi, Hayato</hi> (2014): “Perplexity on Reduced Corpora”, in: 
+                        <hi rend="italic">Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)</hi>: 797–806.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Li, Shaojian / Yan, Chengxi</hi> (2023): “Characterizing Emerging Technologies of Global Digital Humanities Using Scientific Method Entities”, in: 
+                        <hi rend="italic">EEKE/AII@JCDL</hi>: 33–40.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Newman, Mark E. J.</hi> (2004): “Fast Algorithm for Detecting Community Structure in Networks”, in: 
+                        <hi rend="italic">Physical Review E—Statistical, Nonlinear, and Soft Matter Physics</hi> 69, 6: 066133.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Zhang, Zihan / Fang, Meng / Chen, Ling / Namazi-Rad, Mohammad-Reza</hi> (2022): “Is Neural Topic Modelling Better than Clustering? An Empirical Study on Clustering with Contextual Embeddings for Topics”, in: 
+                        <hi rend="italic">arXiv</hi> preprint 
+                        <hi rend="italic">arXiv</hi>:2204.09874.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

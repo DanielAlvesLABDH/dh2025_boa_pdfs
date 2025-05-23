@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KATZOFF_Binyamin_Computational_Methods_for_Authorship_Attrib">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Computational Methods for Authorship Attribution Using Citation Networks: A Case Study of a Rabbinic 14&lt;sup&gt;th&lt;/sup&gt; century Talmudic Commentary</title>
+                <author>
+                    <persName>
+                        <surname>Katzoff</surname>
+                        <forename>Binyamin</forename>
+                    </persName>
+                    <affiliation>bar-Ilan University, Israel</affiliation>
+                    <email>Binyamin.Katzoff@biu.ac.il</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Zhitomirsky-Geffet</surname>
+                        <forename>Maayan</forename>
+                    </persName>
+                    <affiliation>bar-Ilan University, Israel</affiliation>
+                    <email>maayan.zhitomirsky-geffet@biu.ac.il</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Schler</surname>
+                        <forename>Jonathan</forename>
+                    </persName>
+                    <affiliation>Holon Institute of Technology, Israel</affiliation>
+                    <email>schler@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ben-Gigi</surname>
+                        <forename>Nati</forename>
+                    </persName>
+                    <affiliation>bar-Ilan University, Israel</affiliation>
+                    <email>nati.bengigi@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-21T15:25:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>citation networks</term>
+                    <term>citation profile</term>
+                    <term>authorship attribution</term>
+                    <term>intellectual affiliations</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>attribution studies and stylometric analysis</term>
+                    <term>bibliographic analysis</term>
+                    <term>network analysis and graphs theory and application</term>
+                    <term>Book and print history</term>
+                    <term>Theology and religious studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>One of the great puzzles in the study of medieval commentary on the Babylonian Talmud concerns the commentary of R. Yom Tov of Seville (the “Ritva”) on Tractate Bava Metzia. For this tractate, we seemingly have two commentaries attributed to the Ritva. One is referred to as “the commentary attributed to the Ritva” (*HaPerush HaMeyuchas LaRitva*), while the other is usually called “the Novellae of the Ritva” (*Hiddushei HaRitva*). These commentaries are recognizably different, raising questions about whether the Ritva was the author of both and regarding the relationship between the two works. While the Ritva's authentic writings are generally well established, the authorship of this attributed commentary, printed in Amsterdam in 1729, remains uncertain. </p>
+            <p>This study introduces a computational approach to address this longstanding question by analyzing citation networks to identify writing patterns associated with medieval Jewish legal literature. The methodology involves constructing "citation profiles"—mathematical representations of how frequently an author references other sages. By employing mathematical algorithms, these profiles are compared across a large corpus of halachic texts dating from the 11th to 15th centuries CE. The study includes over 120 known authors and approximately a quarter of a million citations extracted from their works using AI tools capable of identifying references in rabbinic Hebrew with high accuracy. </p>
+            <p>Unlike traditional authorship verification methods, which focus on stylistic features such as word choice and syntax, this approach leverages the unique characteristics of halachic texts, which are rich in references. Citation profiling provides a novel means to uncover relationships between authors that extend beyond individual authorship. For example, it can reveal connections between authors who shared the same library, belonged to the same scholarly tradition, or were students of one another. These insights, tied to the intellectual contexts of the texts, are not feasible with classic stylistic methods. This innovative use of citation data offers a powerful alternative for exploring intellectual affiliations and the broader networks of influence within a corpus.</p>
+            <p>The analysis demonstrates the effectiveness of citation profiling in identifying intellectual and geographical affiliations. For example, a comparison of the Ramban’s citation profile—Ramban being one of the most important rabbis in 13th-century Spain—with those of other sages reveals that the most similar profiles belong to his students or their disciples, such as the Ritva, Rabbi Kreskas Vidal, and the Rashba. This finding highlights how citation networks can reflect shared intellectual traditions and learning environments. The technique was applied to examine the commentary attributed to the Ritva, revealing that its citation profile does not align closely with the Ritva's known works. Instead, it suggests alternative attributions, including a strong mathematical similarity to the works of Rabbi Shem Tov ibn Gaon, a prominent student of the Rashba. </p>
+            <p>The study’s results further underscore the broader potential of citation network analysis in the humanities. By uncovering relationships between authors and their intellectual milieus, this approach provides a powerful tool for exploring the dynamics of medieval rabbinic scholarship. Linking citation patterns with historical and intellectual contexts not only enhances our understanding of individual texts but also sheds light on the broader networks of influence and tradition that shaped Jewish legal thought during the medieval period. </p>
+            <p>This methodology is not limited to Jewish texts and can be broadly applied to other corpora containing extensive references. Citation network analysis, as presented in this study, provides a versatile framework for examining authorship and intellectual affiliations in any collection of texts with sufficient inter-referential density. Whether analyzing classical literature, legal documents, or academic writings, the approach can reveal hidden patterns and relationships within diverse intellectual traditions. By abstracting the concept of citation profiles and employing scalable computational tools, this method offers a powerful means to investigate authorship and influence across a wide range of disciplines and historical contexts. </p>
+            <p>This research contributes both a resolution to a long-debated issue and a framework for future studies in computational philology. By presenting this methodology and its implications for authorship attribution, this study invites further applications of these techniques to other unresolved questions in the field.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Ben-Gigi, Nati / Zhitomirsky-Geffet, Maayan / Katzoff, Binyamin / Schler, Jonathan</hi> (2024): “Citation Network Analysis for Viewpoint Plurality Assessment of Historical Corpora: The Case of the Medieval Rabbinic Literature”, in: 
+                        <hi rend="italic">PLOS ONE</hi> 19: 1-26
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold" xml:space="preserve">Ben-Gigi, Nati / Zhitomirsky-Geffet, Maayan / Schler, Jonathan / Katzoff, Binyamin </hi>(2025): “Automatic construction of the citation network from the medieval Jewish Responsa literature”, in: 
+                        <hi rend="italic">Journal on Computing and Cultural Heritage</hi> 18, 2: 1-18 
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="AGATA_Teru_Extracting_Information_from_Differences_in_Comics">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Extracting Information from Differences in Comics of Multi-Language Editions: Focusing on Dialogues, Onomatopoeia, and Annotations</title>
+                <author>
+                    <persName>
+                        <surname>Agata</surname>
+                        <forename>Teru</forename>
+                    </persName>
+                    <affiliation>Asia University, Japan</affiliation>
+                    <email>agata@asia-u.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Agata</surname>
+                        <forename>Mari</forename>
+                    </persName>
+                    <affiliation>Keio University, Japan</affiliation>
+                    <email>agatamari@keio.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Hashizume</surname>
+                        <forename>Akiko</forename>
+                    </persName>
+                    <affiliation>Jissen Women's University, Japan</affiliation>
+                    <email>hashizume-akiko@jissen.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Eto</surname>
+                        <forename>Masaki</forename>
+                    </persName>
+                    <affiliation>Gakushuin Women’s College, Japan</affiliation>
+                    <email>masaki.eto@gakushuin.ac.jp</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Otani</surname>
+                        <forename>Yasuharu</forename>
+                    </persName>
+                    <affiliation>Aoyama Gakuin University, Japan</affiliation>
+                    <email>y_otani@ccs.aoyama.ac.jp</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-13T07:13:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Manga</term>
+                    <term>Comics</term>
+                    <term>Translation</term>
+                    <term>Onomatopoeia</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>image processing and analysis</term>
+                    <term>text mining and analysis</term>
+                    <term>Library &amp; information science</term>
+                    <term>Literary studies</term>
+                    <term>Translation studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p rend="AbsHead" style="font-weight: bold; ">Abstract</p>
+            <p rend="Abstract" style="text-align: justify; ">This paper proposes a novel method for extracting various text from manga—not only text in speech bubbles, but also onomatopoeia and annotation—by identifying differential regions across multiple language versions of the same page. Unlike traditional methods relying on layout recognition, our approach directly leverages image-level differences to extract relevant regions. A preliminary experiment on a small dataset of manga titles demonstrates the effectiveness of our method, achieving high accuracy in extracting speech bubbles, onomatopoeia, and annotations. However, limitations arise in cases involving complex layouts or significant language-specific variations. Future work will focus on addressing these limitations and improving the robustness of the method.</p>
+            <p rend="Head1" style="font-weight: bold; ">
+                <hi rend="Label">1</hi> Background and purpose
+            </p>
+            <p rend="AckPara" style="text-align: justify; ">Research on text extraction from manga, Japanese-style comics, has been mainly conducted to enable search and text-based analysis, similar to traditional books. While manga often have text written in speech bubbles within panels, text can also be placed in the form of onomatopoeia or annotations. In this paper, "annotations" refer to any text other than speech bubbles and onomatopoeia, including narration and text outside the panels. Such annotations are often added specifically in translated versions to explain cultural differences. Challenges in text extraction arise from merged panels, text overflowing from speech bubbles or panels, and handwritten onomatopoeia superimposed on illustrations. Previous research on text extraction from manga, particularly from speech bubbles and onomatopoeia, has relied on the prior recognition of panel and speech bubble layouts[1][2].</p>
+            <p rend="AckPara" style="text-align: justify; ">While text extraction from manga speech bubbles has achieved a certain level of accuracy, extracting text from regions that are integrated with illustrations, such as onomatopoeia and annotations, remains a highly challenging task. Given the frequent use of onomatopoeia in Japanese manga, it is considered a crucial element of the medium. When translating manga, the decision of whether to retain Japanese onomatopoeia, add translated onomatopoeia, or replace them varies across countries, eras, and works. Therefore, the approach taken to handling onomatopoeia can provide insights into how Japanese manga is received as translated works. </p>
+            <p rend="AckPara" style="text-align: justify; ">This paper proposes a novel method that leverages the differences between multiple language versions of the same manga to extract various text from manga—not only text in speech bubbles, but also onomatopoeia and annotations—without requiring explicit layout recognition. Given that the text content has been modified in the translated version, we suggested this method.</p>
+            <p rend="AckPara" style="text-align: justify; ">We report on preliminary experiments conducted using a representative manga published in 2020.</p>
+            <p rend="Head2" style="font-weight: bold; ">
+                <hi rend="Label">2 Methods</hi>
+            </p>
+            <p rend="Para">In a preliminary experiment, the target manga works were selected from the top-selling titles in 2020 (based on “Annual Report on Japanese Publishing Indicators 2021”) that met the following conditions as listed in Table 1: 1) both Japanese and English versions exist, 2) digital version are available, 3) images of the same page are available. </p>
+            <p rend="Para">The target page was set to the first color-less page of the first volume that contains speech bubbles.</p>
+            <p rend="Para">Datasets like Manga109[3] were not used because they are exclusively in Japanese, making it impossible to apply our proposed method.</p>
+            <p rend="Para">The procedure for identifying the regions of speech bubbles, onomatopoeia, and annotations is as follows:</p>
+            <list type="ordered">
+                <item>Identify regions (contours) where there are differences between the two language images.</item>
+                <item>Merge nearby small regions.</item>
+                <item>Identify the bounding rectangular regions.</item>
+                <item>Merge overlapping regions.</item>
+                <item>Extract elliptical regions with margins.</item>
+            </list>
+            <p rend="Para">The reason for step 3 is to identify the entire region of the text. Even for letters in different languages like English and Japanese, there are overlapping parts, and the differential regions do not always correspond to the shape of the letters. Step 4 is to expand the regions recognized on a letter-by-letter basis into a group of lines. Step 5 is performed because, empirically, speech bubbles and annotations are often elliptical. </p>
+            <p rend="Para">Figure 1 shows, from left to right, the original Japanese manga 
+                <hi rend="italic">Give My Regards to Black Jack</hi>, its English translation, followed by the extracted regions from each in Step 5. This manga was included in this paper as an illustrative example, separate from the main experimental dataset described in the next section, in accordance with the author’s publicly stated policy permitting secondary use.
+            </p>
+            <figure>
+                <graphic n="1001" width="15.944563888888888cm" height="5.795933333333333cm" url="/tmp/tmpscbbj3sy/Pictures/cc991bb312b4e813091ffe8cb82eafe4.png" rend="inline"/>
+            </figure>
+            <p rend="Para" style="text-align: center;">Figure 1. Example of Extraction from 
+                <hi rend="italic">Give My Regards to Black Jack</hi>
+            </p>
+            <p rend="Para" style="text-align: center;">(Images were used with permission under a secondary-use-free license provided by the author, Shūhō Satō)</p>
+            <p rend="Head2" style="font-weight: bold; ">
+                <hi rend="Label">3 Results</hi>
+            </p>
+            <p rend="Para">We conducted a pilot experiment on 11 manga works, manually verifying the extracted regions. The results of the evaluation for speech bubble extraction, onomatopoeia extraction, annotation extraction, and noise inclusion are shown in the Table 1. For speech bubble extraction and other categories, we rated the results as "Excellent" if they were completely correct, "Good" if they were almost correct, and "N/A" if the corresponding part did not originally exist. Noise indicates how much extraneous information was included in the extracted region.</p>
+            <p rend="Para" style="text-align: justify;">Overall, speech bubbles were identified with high accuracy. Additionally, we were able to accurately identify onomatopoeia and annotation regions that are difficult to extract using layout-based methods, especially those integrated with images. However, since the method does not recognize layout, there was case where the differential region was expanded and connected, resulting in increased noise for onomatopoeia with significantly different layouts between English and Japanese (e.g.,
+                <hi rend="italic" xml:space="preserve"> One Piece</hi>). Moreover, in cases where the original Japanese onomatopoeia remained and a translated language onomatopoeia was added, the Japanese onomatopoeia could not be detected because there was no difference (e.g., 
+                <hi rend="italic">Don't Call it Mystery)</hi>. For example, in Figure 1, the onomatopoeia in the lower-right section of the Japanese manga was not extracted, whereas the added English onomatopoeia was successfully detected.
+            </p>
+            <p rend="Para" style="text-align: center;">Table 1. Result of Text Extraction from Translated Manga</p>
+            <table rend="rules">
+                <row>
+                    <cell style="text-align: center;" rend="Para">
+                        <hi rend="bold">Title in English</hi>
+                    </cell>
+                    <cell style="text-align: center;" rend="Para">
+                        <hi rend="bold">Text in speech bubble</hi>
+                    </cell>
+                    <cell style="text-align: center;" rend="Para">
+                        <hi rend="bold">Onomatopoeia</hi>
+                    </cell>
+                    <cell style="text-align: center;" rend="Para">
+                        <hi rend="bold">Annotation</hi>
+                    </cell>
+                    <cell style="text-align: center;" rend="Para">
+                        <hi rend="bold">Noise</hi>
+                    </cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="normalweight">Demon Slayer: Kimetsu no Yaiba</hi>
+                    </cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">None</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold">One Piece</hi>
+                    </cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">Good</cell>
+                    <cell style="text-align: center;">Many</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold">Spy x Family</hi>
+                    </cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">Some</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold">Jujutsu Kaisen</hi>
+                    </cell>
+                    <cell style="text-align: center;">Good</cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">None</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold">The Promised Neverland</hi>
+                    </cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">None</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold">The Quintessential Quintuplets</hi>
+                    </cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">None</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold">Waiting For Spring</hi>
+                    </cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">Good</cell>
+                    <cell style="text-align: center;">Some</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold">Honey Lemon Soda</hi>
+                    </cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">N/A</cell>
+                    <cell style="text-align: center;">N/A</cell>
+                    <cell style="text-align: center;">None</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold">Don't Call it Mystery</hi>
+                    </cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">Good</cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">None</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="normalweight">Toilet-bound Hanako-kun</hi>
+                    </cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">Good</cell>
+                    <cell style="text-align: center;">Good</cell>
+                    <cell style="text-align: center;">None</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;">
+                        <hi rend="bold">Space Brothers</hi>
+                    </cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">Excellent</cell>
+                    <cell style="text-align: center;">None</cell>
+                </row>
+            </table>
+            <p rend="Head2" style="font-weight: bold; ">
+                <hi rend="Label">4 Conclusion</hi>
+            </p>
+            <p rend="Para" style="text-align: justify;">This study proposes a method for extracting speech bubbles, onomatopoeia, and annotations by identifying differential regions in the same page of multiple language versions of the same work and conducts a preliminary experiment. The experiment demonstrated that speech bubbles, onomatopoeia, and annotations could be extracted with high accuracy. However, the limitations of relying on differential regions of images in multiple languages were clarified.</p>
+            <p rend="Head2" style="font-weight: bold; ">ACKNOWLEDGMENTS</p>
+            <p rend="AckHead" style="font-weight: bold; ">
+                <hi rend="normalweight" style="font-size:9pt">This work was partially supported by JSPS KAKENHI Grant Number JP18K11996.</hi>
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl rend="Bib_entry">[1] Hartel, R., &amp; Dunst, A. (2021). An ocr pipeline and semantic text analysis for comics. In 
+                        <hi rend="italic">Pattern Recognition. ICPR International Workshops and Challenges: Virtual Event, January 10–15, 2021, Proceedings, Part VI</hi> (pp. 213-222). Springer International Publishing.
+                    </bibl>
+                    <bibl rend="Bib_entry">[2] Rigaud, C., Burie, J. C., &amp; Ogier, J. M. (2017). Text-independent speech balloon segmentation for comics and manga. In 
+                        <hi rend="italic">Graphic Recognition. Current Trends and Challenges: 11th International Workshop, GREC 2015, Nancy, France, August 22–23, 2015, Revised Selected Papers 11</hi> (pp. 133-147). Springer International Publishing.
+                    </bibl>
+                    <bibl rend="Bib_entry">[3] Aizawa, K., Fujimoto, A., Otsubo, A., Ogawa, T., Matsui, Y., Tsubota, K., &amp; Ikuta, H. (2020). Building a manga dataset “manga109” with annotations for multimedia applications. 
+                        <hi rend="italic">IEEE multimedia</hi>, 
+                        <hi rend="italic">27</hi>(2), 8-18.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

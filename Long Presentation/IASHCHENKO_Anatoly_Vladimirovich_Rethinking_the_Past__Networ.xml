@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="IASHCHENKO_Anatoly_Vladimirovich_Rethinking_the_Past__Networ">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Rethinking the Past: Network Modeling and Audio Spectral Analysis in the Study of Memory and Identity of the Visegrad Group</title>
+                <author>
+                    <persName>
+                        <surname>Iashchenko</surname>
+                        <forename>Anatolii</forename>
+                    </persName>
+                    <affiliation>Sapienza University of Rome, Italy</affiliation>
+                    <email>anatolii.iashchenko@uniroma1.it</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-08T20:26:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Collective memory</term>
+                    <term>national identity</term>
+                    <term>Visegrad Group</term>
+                    <term>digital humanities</term>
+                    <term>audio spectral analysis</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>digital libraries creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>music and sound digitization</term>
+                    <term>encoding</term>
+                    <term>and analysis</term>
+                    <term>natural language processing</term>
+                    <term>network analysis and graphs theory and application</term>
+                    <term>Cultural studies</term>
+                    <term>History</term>
+                    <term>Humanities computing</term>
+                    <term>Central/Eastern European Studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <hi rend="bold" style="font-size:12pt">Historical background of the Visegrad Group</hi>
+            </p>
+            <p>The collapse of the communist regimes in 1989 was a watershed moment for the Visegrad Group countries, as mass protests and civil movements such as Poland's Solidarity and Czechoslovakia's Velvet Revolution changed the political landscapes. Subsequent democratization and European Union (EU) integration efforts culminated in these countries joining NATO and the EU by 2004. These changes required a revision of national identities and historical narratives, given the shared experiences of Nazi and Soviet totalitarianism.</p>
+            <p>
+                <hi style="font-size:12pt">A historiographical approach to the Visegrad Group emphasizes overcoming collective trauma. Processes such as lustration, public dialogue, and transitional justice contributed to the reconfiguration of collective memory, serving as mechanisms for confronting past abuses [Halbwachs, M. 1992] and forging a cohesive identity consistent with European democratic values. Nevertheless, divergent interpretations of this shared past have emerged, exemplified by Hungary's contentious position within EU policy on Russian aggression against Ukraine, emphasizing the dynamic nature of memory politics.</hi>
+            </p>
+            <p>
+                <hi style="font-size:12pt">The research design is based on the integration of digital humanities, emotion analysis, and spectral analysis to explore the formation of collective memory and national identity in the countries of the Visegrad Group (Czech Republic, Hungary, Poland, and Slovakia). The research involves the analysis of big data such as archival documents, social media, interviews, and audiovisual materials, using textual analysis, network modeling, and visualization techniques. Emotional analyses reveal affective aspects of memory through the study of the emotional content of texts, speeches, and oral memories, while spectral analyses of audio materials reveal tonal and frequency characteristics that convey emotional nuances. This interdisciplinary approach provides a multilevel perspective, combining macro-analyses of historical and cultural trends with micro-analyses of individual experiences to reveal the interconnections between past, present, and identity formation processes.</hi>
+            </p>
+            <p>The source base of the research includes about four thousand audio and video recordings of interviews with participants of the Velvet Revolutions, politicians, educators, doctors, representatives of security agencies, and students, covering the period from 1984 to 2024. The main body of data was extracted from such archives and collections as Memory of Nation, Memorial (Poland, Czech Republic, Hungary), Institute for the Study of Totalitarian Regimes (Czech Republic), Institute of National Memory (Poland), and others. Some of the interviews were collected by the author of the study. This volume of data, as well as their diversity across age groups and countries, provides an opportunity to trace the transformation of key patterns of collective memory, to determine the time frame of changes, and, in some cases, to identify specific events that have had the most significant impact on the perception of the past by contemporary generations.</p>
+            <p>Methodological innovations in memory research</p>
+            <p>The digital humanities serve as a transformative field for analyzing and visualizing complex aspects of memory. Using computational tools, this approach facilitates the integration and interpretation of vast amounts of data, including texts, images, and audiovisual material.</p>
+            <p>The methodological framework used in this study combines traditional historiographical methods with advanced tools from the digital humanities, offering a multidimensional approach to the study of collective memory and national identity. </p>
+            <p>During the development of the methodology, the analysis algorithm went from the conceptual model of the algorithm to the creation of Python code for each tool and the subsequent integration of the stages within a single program. The method of building a network model of collective memory based on audio spectral analysis allows us to identify tonal and emotional patterns in oral testimonies, establish links between key events and narratives, and visualize the structure and dynamics of memory transmission across generations.</p>
+            <p>
+                <hi style="font-size:12pt">The audio analysis methodology described in the study includes several key steps that allow spectral analysis to be used to build network models of collective memory. The analysis begins with preprocessing the audio files, where the Fast Fourier Transform (FFT) and Short-Time Fourier Transform (STFT) are used to decompose the signal into frequency components. These tools, available in the Python Libros library, allow time and frequency characteristics to be visualized as spectrograms. Voice frequency analysis algorithms, such as the Mel-Frequency Cepstral Coefficients (MFCC) definition, are used to extract emotional fluctuations, which helps to identify tonal and emotional changes in speech.</hi>
+            </p>
+            <p>
+                <hi style="font-size:12pt">The second step involves transcribing recordings using speech-to-text algorithms from libraries such as Google Speech Recognition or AssemblyAI. The transcribed texts are encoded using the spectral characteristics of the audio, which allows us to associate frequency variations with emotional states extracted using the nltk and textblob libraries for emotional text analysis. The resulting data is used to identify key patterns, such as emotional tension or calmness, and their correlation with the historical events being described.</hi>
+            </p>
+            <p>
+                <hi style="font-size:12pt">A separate analysis of the emotional and semantic colouring of the interview text was used to compare the topical patterns obtained from the analysis of sound features alone.</hi>
+            </p>
+            <p>
+                <hi style="font-size:12pt">Emotional analysis of the text was implemented using deep learning models based on the BERT architecture [Devlin J. 2018] and its specialised multi-lingual analogues such as XLM-Roberta and Hubert. For each language, the most appropriate pre-trained model optimised for the texts of the respective language was selected. For example, the allegro/herbert-base-cased model trained on Polish language data was used to analyse Polish texts, while the SZTAKI-HLT/hubert-base-uncased model was chosen for Hungarian texts. The choice of specialised models improved the accuracy of the emotional colouration of the text compared to the use of a single multi-lingual model.</hi>
+            </p>
+            <figure>
+                <graphic n="1001" width="16.002cm" height="12.479513888888889cm" url="/tmp/tmp_r1mfjji/Pictures/db75ed494a934c82a6de6e79fcfefc7c.png" rend="inline"/>
+            </figure>
+            <p>Figure 1 : Part of the code of the software solution for performing spectral and cluster analysis of audio interviews.</p>
+            <p>
+                <hi style="font-size:12pt">Each fragment of transcribed text was linked to timecodes, enabling subsequent analyses of emotional outbursts taking into account the time of utterance.</hi>
+            </p>
+            <figure>
+                <graphic n="1002" width="16.002cm" height="6.175375cm" url="/tmp/tmp_r1mfjji/Pictures/db75ed494a934c82a6de6e79fcfefc7c.png" rend="inline"/>
+            </figure>
+            <p>Figure 2 : Visualization of the audio file analysis, showing changes in harmonic (blue) and percussive (orange) components over time. This method highlights various acoustic features of the audio signal, contributing to a more accurate analysis of the emotional and rhetorical characteristics of speech. Harmonic components may be associated with the melody and intonation of the voice, while percussive components indicate sharp sounds or accents in the speech.</p>
+            <p>
+                <hi style="font-size:12pt">Approbation of the analysis of emotionally coloured memory on the test sample showed that emotions such as fear, pride and grief play [Krizhevsky, A., Sutskever, I., &amp; Hinton, G. E. 2012] a role in the process of formation and maintenance of national identity. Emotions, for example, are often associated with the aftermath of collective traumas such as war or natural disasters. These events of deep religiosity follow in collective memory and can reinforce a sense of community and national unity among those who experienced these events. [Iashchenko, Iuliia; Iashchenko, Anatolii. 2024]</hi>
+            </p>
+            <p>
+                <hi style="font-size:12pt">The emotion of grief often accompanies collective mornings, such as tragic events that result in the loss of humanity. These events can reinforce a sense of national mourning and community, building a collective identity through the shared participation of grief. Grief can also stimulate a process of memorialisation, where events and individuals associated with the loss become symbols of national memory.</hi>
+            </p>
+            <figure>
+                <graphic n="1003" width="16.002cm" height="6.7945cm" url="/tmp/tmp_r1mfjji/Pictures/db75ed494a934c82a6de6e79fcfefc7c.png" rend="inline"/>
+            </figure>
+            <p>Figure 3 : Model of the distribution of similar audio spectral features across clusters.</p>
+            <p>The isolation of factors that enhance memory perception and transmission has shown that several factors play a key role in this process. Firstly, the emotional intensity of the event itself determines how strongly it will be anchored in collective memory. Second, social and cultural mechanisms such as memorial events, holidays, films, and literature facilitate the transmission of these memories across generations. These mechanisms not only preserve the memory of events but also interpret them in contemporary national identity, enhancing or altering their meaning.</p>
+            <p>
+                <hi style="font-size:12pt" xml:space="preserve">In the final stage, network models are built using the NetworkX library to visualize the relationships between spectral characteristics, emotional states, and key events described in the interviews. </hi>
+            </p>
+            <p>
+                <hi style="font-size:12pt">In the context of the Visegrad Group, these methods contribute to a deeper understanding of the complex interrelationship between historical events, cultural narratives, and the formation of national identity as perceived across generations. The focus on intergenerational perceptions and the possibility of building models differentiated by generations and territories opens up the possibility of taking a new look at the formation of sociocultural narratives of modernity.</hi>
+            </p>
+            <p>Conclusion</p>
+            <p>The research has shown that the formation of collective memory and national identity in the Visegrad Group countries is a complex and multifaceted process conditioned by historical, social, and cultural factors. The use of innovative methodologies, including digital humanities, and spectral and emotional analyses, allowed for a deeper understanding of the role of key events, such as the revolutions of 1989 and integration into the European Union, in the formation of national identity.</p>
+            <p>The emotional component of memory identified in this research emphasizes the significance of affective experiences in the transmission of collective identity across generations. Network models of memory built based on spectral analysis revealed stable interrelationships between historical events and emotional states, which confirms the need for an interdisciplinary approach to the study of memory.</p>
+            <p style="text-align: left; text-align: justify;">The results obtained not only deepen the understanding of the complex nature of collective memory in the countries of the Visegrad Group but also open new perspectives for applying the developed methodologies to studies of collective identity in other regions. Further work in this area may include a more detailed analysis of generational differences and their impact on national narratives, which will contribute to the development of memory theory and cultural anthropology.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">. Assmann, J. (2011). Cultural memory and early civilization: Writing, remembrance, and political imagination. Cambridge University Press.</bibl>
+                    <bibl style="text-align: left; ">2. Levy, D., &amp; Sznaider, N. (2006). The Holocaust and memory in the global age. Temple University Press.</bibl>
+                    <bibl style="text-align: left; ">3. Halbwachs, M. (1992). On Collective Memory (University of Chicago.). Chicago IL.</bibl>
+                    <bibl style="text-align: left; ">4. Devlin, J., Chang, M. W., Lee, K., &amp; Toutanova, K. (2019, June). Bert: Pre-training of deep bidirectional transformers for language understanding. In 
+                        <hi rend="italic">Proceedings of the 2019 conference of the North American chapter of the association for computational linguistics: human language technologies, volume 1 (long and short papers)</hi> (pp. 4171-4186).
+                    </bibl>
+                    <bibl style="text-align: left; ">5. Krizhevsky, A., Sutskever, I., &amp; Hinton, G. E. (2012). "ImageNet Classification with Deep Convolutional Neural Networks". Advances in Neural Information Processing Systems, 25, 1097-1105.</bibl>
+                    <bibl style="text-align: left; ">6. Iashchenko, I., &amp; Iashchenko, A. (2024). Topic Modeling as a Way of Unlocking the Informational Potential of Oral History Sources in Studying the History of Ethnic Cleansing in the USSR: algorithm development and approbation of the program code. In The Book of Abstracts for the Alliance of Digital Humanities Organizations (ADHO) annual conference in Arlington, VA, hosted by George Mason University.</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

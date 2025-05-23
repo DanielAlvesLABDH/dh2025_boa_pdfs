@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BARRETT_Paul_Digital_John_Norton__Teyoninhokarawen">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Digital John Norton, Teyoninhokarawen</title>
+                <author>
+                    <persName>
+                        <surname>Barrett</surname>
+                        <forename>Paul</forename>
+                    </persName>
+                    <affiliation>University of Guelph, Canada</affiliation>
+                    <email>barrettp@uoguelph.ca</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-07T19:48:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Indigenous literature</term>
+                    <term>named entity recognition</term>
+                    <term>topic modelling</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>manuscripts description</term>
+                    <term>representation</term>
+                    <term>and analysis</term>
+                    <term>natural language processing</term>
+                    <term>semantic analysis</term>
+                    <term>text mining and analysis</term>
+                    <term>Indigenous studies</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <hi style="font-size:12pt" xml:space="preserve">John Norton, also known as Teyoninhokarawen, is an important, if little-known, historical figure in Canadian and Indigenous histories and literatures. Norton was a mixed Indigenous and Scottish explorer, soldier, Chief, and writer born in 1770 to a Cherokee father and a Scottish mother. After spending his youth in England and Scotland, Norton migrated to Canada where he worked as a fur trader, teacher, and “protegé” (Taylor 359) to Joseph Brant, and served as an advocate for the Haudenosaunee and Mohawks of the Grand River. Norton was connected to the Cherokee nation by birth and was made a member of the Haudenosaunee community of the Grand River in 1799 as a “pine tree Chief” (Benn </hi>
+                <hi rend="italic" style="font-size:12pt" xml:space="preserve">Mohawk </hi>
+                <hi style="font-size:12pt">38). His mixed Indigenous and European heritages enabled him to act as an interpreter of European colonial law for the Haudenosaunee and make him a significant and compelling figure for understanding European and Indigenous interactions at the time.</hi>
+            </p>
+            <p>
+                <hi style="font-size:12pt" xml:space="preserve">In addition to his role as a public figure, Norton wrote two journals throughout his life. The first journal details his travels in the Americas, his participation in the British-American War of 1812, and includes a lengthy history of Haudenosaunee-European contact. This journal is an important, early account of Indigenous-settler relations, Indigenous responses to the conditions of colonialism, and social practices and customs of numerous communities. </hi>
+            </p>
+            <p>
+                <hi style="font-size:12pt">Norton’s second journal was thought lost until it was acquired by Library and Archives Canada in May 2024. This acquisition is a rare and significant find of a rich historical text that promises to reframe scholarly understanding of Canadian and Indigenous literatures. Norton’s journal therefore offers researchers an important opportunity to understand Indigenous-settler relations and Indigenous writing in the Americas in the early nineteenth-century in new ways. Norton is unique for his mixed heritage, his association with multiple Indigenous nations, and his status as an Indigenous chronicler of European society. The new journal is a syncretic account of European and Indigenous nations and serves as a “contact zone” (Pratt) between Indigenous and European histories.</hi>
+            </p>
+            <p>
+                <hi style="font-size:12pt">For the past 7 months, I have been working with a research team comprised of DH and Haudenonsaunee scholars, on this second journal. We are using digital humanities methods in order to decode the journal, frame it within appropriate historical and cultural contexts, and identify the salient features of the text. In this paper I will discuss the approaches we have used to work with Norton’s journal and the challenges that an Indigenous text presents to established digital humanities methodologies, including OCR, topic modelling, GIS mapping, and natural language processing. Furthermore, this paper discusses the challenges of bringing digital humanities to bear on a text shaped by, and embodying, Indigenous epistemologies. I argue that these challenges present an opportunity for rethinking DH methods as they are reframed by Indigenous knowledge.</hi>
+            </p>
+            <p>
+                <hi style="font-size:12pt">The paper draws on Marie Battiste’s argument that</hi>
+                <hi rend="background(white)" style="font-size:12pt">“Indigenous knowledge comprises the complex set of technologies developed and sustained by Indigenous civilizations” that are “oral and symbolic” and “transmitted through the structure of Indigenous languages.” I argue that these forms of memory, knowledge, and cultural resistance, embodied in Indigenous literature, require revised digital humanities methodologies. DH methods have largely been based on European and Western forms of reading, cultural transmission, and knowledge that require revision when grappling with texts outside of a European or Western tradition.</hi>
+            </p>
+            <p>
+                <hi rend="background(white)" style="font-size:12pt" xml:space="preserve">I will discuss, for example, the difficulty of transcribing Norton’s journal using OCR methods. Machine learning methods for transcribing handwritten texts have not proven effective on Norton’s journal, in part, because they are trained on European texts with European names and phrases. Automated transcription services are far more effective on the sections of the journal that deal with Norton’s European travels than the sections where Norton uses Haudenosaunee language, terms, and placenames. Manual transcription is far more effective than the automated transcription services. </hi>
+            </p>
+            <p>
+                <hi rend="background(white)" style="font-size:12pt">I will also discuss the challenges of using NLTK software (via tidytext and the nltk Python libraries) to engage in named entity recognition in Norton’s writing. The named entities in Norton’s journal are a complex collection of both Indigenous and settler names for people, places, and historical events. In some cases, Norton switches between Haudenosaunee and European names for the same thing. His journal thus represents a complex and syncretic vision of the world that attempts to depict the moments of contact between cultures as well as the differences between them. NLTK methods have helped identify some of this complexity, but miss a great deal of the named entities in Norton’s text. As such, our research team has developed bespoke methods for identifying named entities in the journal.</hi>
+            </p>
+            <p>
+                <hi rend="background(white)" style="font-size:12pt">Mapping Norton’s journal also challenges expectations of GIS methods because his Indigenous vision of the land does not accord with the stable boundaries and singular modes of knowing encoded in GIS technology. When Norton describes, for instance, Iroquoia, the traditional land of the Iroquois in what is now upper New York state, he uses approximate geographic markers based on oral traditions. Precisely mapping the space of Iroquioa proves impossible using established GIS methods and requires a combination of narrative and visualization that challenges DH mapping methods. Norton’s journal also describes the struggle over land rights for the Haudeonsaunee in Upper Canada (concerning the Haldimand grant and the area along the Grand River in present-day Ontario) and he employs a combination of descriptions of land markers and oral tradition to make his case. I will discuss the limits of attempting to use DH methods to map Norton’s understanding of land.</hi>
+            </p>
+            <p>
+                <hi rend="background(white)" style="font-size:12pt" xml:space="preserve">The difficulties of using DH methods to understand Norton’s journals are not trivial and represent significant challenges for DH scholarship as it attempts to work with texts outside of a Western, European tradition. </hi>
+                <hi style="font-size:12pt">Given that</hi>
+                <hi rend="background(white)" style="font-size:12pt">Norton’s journal aligns with</hi>
+                <hi style="font-size:12pt">Warren Cariou’s argument that Indigenous writing is “writ</hi>
+                <hi rend="background(white)" style="font-size:12pt">ten against forgetting, against the obliterating narratives of conquest and progress” (325) that have attempted to erase Indigenous histories and presences</hi>
+                <hi style="font-size:12pt" xml:space="preserve">, I argue it is incumbent for DH research to seriously grapple with these difficulties. </hi>
+            </p>
+            <p>
+                <hi style="font-size:12pt">Our approach to digitization, therefore, moves beyond mere ‘application’ of digital methods to humanities research to work “at the gap between humanities research questions and digital humanities development” in order to allow “the research process to change in concert with the production of new modes of engaging in research” (Brown 218). This accords with research team member, Rick Monture’s, argument that</hi>
+                <hi rend="background(white)" style="font-size:12pt" xml:space="preserve">“while Haudenosaunee thought—in both oral and written form—is an expression of ‘intellectual sovereignty’ and our unique cultural identity, it is also very much concerned with developing and sustaining a respectful dialogue with others in the world” (xv). Our project has evolved to adapt DH methods in order to recognize the “intellectual sovereignty” of Haudeonsaunee thought embodied in Norton’s journal while also developing a “respectful dialogue” between DH methods and Haudenosaunee epistemology. </hi>
+            </p>
+            <p>
+                <hi rend="background(white)" style="font-size:12pt" xml:space="preserve">Our research team has expanded to not merely work with Haudeonsaunee scholars but to make Haudeonsaunee intellectual practices the basis for our reading and DH work. In doing so we have been required to adjust DH methodologies to Indigenous forms of knowledge in a manner that has enriched our research. In the conclusion of the paper, I will discuss how we have adapted Haudenosaunee principles, specifically the principle of two-row thinking, in order to identify the important points of contact and difference between forms of knowledge. I will argue that this is not just a key component of our research but a critical way in which DH </hi>
+                <hi style="font-size:12pt" xml:space="preserve">researchers can push our scholarship beyond the boundaries of Eurocentric thinking. </hi>
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi style="font-size:12pt">Battiste, Marie. “Indigenous Knowledge and Pedagogy in First Nations Education: A Literature Review with Recommendations.” Prepared for the National Working Group on Education and the Minister of Indian Affairs, Indian and Northern Affairs Canada. October 31, 2002.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:12pt" xml:space="preserve">Benn, Carl. </hi>
+                        <hi rend="italic" style="font-size:12pt">A Mohawk Memoir from the War of 1812: John Norton—Teyoninhokarawen</hi>
+                        <hi style="font-size:12pt" xml:space="preserve">. University of Toronto Press, 2019. </hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:12pt" xml:space="preserve">Brown, Susan. “Don’t Mind the Gap: Evolving Digital Modes of Scholarly Production across the Digital-Humanities Divide.” </hi>
+                        <hi rend="italic" style="font-size:12pt" xml:space="preserve">The Culture of the Humanities, </hi>
+                        <hi style="font-size:12pt">edited by Daniel Coleman and Smaro Kamboureli, University of Alberta Press, 2011, pp. 203-31.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:12pt" xml:space="preserve">Cariou, Warren. “Going to Canada.” </hi>
+                        <hi rend="italic" style="font-size:12pt">Manitowapow: Aboriginal Writings from the Land of Water</hi>
+                        <hi style="font-size:12pt">. Edited by Warren Cariou, Niigaanwewidam James Sinclair, HighWater Press, 2011, pp: 320 – 27.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:12pt" xml:space="preserve">Monture, Rick. </hi>
+                        <hi rend="italic" style="font-size:12pt" xml:space="preserve">We Share Our Matters: Two Centuries of Writing and Resistance at Six Nations of the Grand River. </hi>
+                        <hi style="font-size:12pt">University of Manitoba Press, 2014.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi style="font-size:12pt" xml:space="preserve">Taylor, Alan. </hi>
+                        <hi rend="italic" style="font-size:12pt">The Divided Ground: Indians Settlers and the Northern Borderland of the American Revolution</hi>
+                        <hi style="font-size:12pt">. Alfred A. Knopf, 2006.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BISHOP_David_Serial_Fiction__Mapping_the_Literary_Landscape_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Serial Fiction: Mapping the Literary Landscape in the C19 United States</title>
+                <author>
+                    <persName>
+                        <surname>Bishop</surname>
+                        <forename>David</forename>
+                    </persName>
+                    <affiliation>University of Illinois Urbana Champaign, United States of America</affiliation>
+                    <email>Davidrb3@illinois.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Fiction</term>
+                    <term>Digital Humanities</term>
+                    <term>Newspapers</term>
+                    <term>C19</term>
+                    <term>Seriality</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>network analysis and graphs theory and application</term>
+                    <term>text mining and analysis</term>
+                    <term>Book and print history</term>
+                    <term>Computer science</term>
+                    <term>Humanities computing</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <hi rend="normalweight" style="font-size:10pt">The nineteenth century in America witnessed a transformative period in literature marked by the proliferation of popular periodicals and the serialization of fiction. Using data from the Library of Congress' historical newspaper archive, Chronicling America, I will identify a network of widely-distributed authors of American serialized fiction in the nineteenth century. My research explores serialization’s impact on literary expression and reader engagement. </hi>
+                </head>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <hi rend="normalweight" style="font-size:10pt" xml:space="preserve">This project contributes to scholarship at the intersection of fiction, newspapers, seriality, and digital humanities, drawing on frameworks like Ryan Cordell and David Smith’s </hi>
+                    <hi rend="italic normalweight" style="font-size:10pt">Viral Texts: Mapping Networks of Reprinting in 19th-Century Newspapers and Magazines</hi>
+                    <hi rend="normalweight" style="font-size:10pt">. Additionally, I build on Christopher Looby’s argument that “the material circumstances of a text’s publication, circulation, and reception impinge consequentially upon attempts at critical understanding” (Looby 2004: 181), and Katherine Bode, who emphasizes that constructing a dataset for digital archive research can serve as an “extended historical argument in and of itself” (Bode 3: 2018). The dataset I have gathered, consisting of half a million digitized pages from U.S. newspapers (1800-1899) sourced from Chronicling America’s database, serves as the first phase of my argument.</hi>
+                </head>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <hi rend="normalweight" style="font-size:10pt">To isolate serial fiction from other newspaper content, I developed a python-based text analysis workflow that identifies formal features distinct to these serialized works such as chapter headings and author attribution. By leveraging these formal features I extract relevant text, creating a dataset of serialized newspaper fiction. To analyze authorial prominence, for example, I identify high-frequency bigrams (author names) within close proximity to the term “CHAPTER.” This approach allows me to map a network of newspaper serial fiction, uncovering patterns of printing and reprinting across publishers, dialogue between authors, and insights into contemporary readers' preferences and engagement.</hi>
+                </head>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <hi rend="normalweight" style="font-size:10pt" xml:space="preserve">Preliminary findings suggest that significant authors and works, such as Harriet Beecher Stowe’s </hi>
+                    <hi rend="italic normalweight" style="font-size:10pt">Uncle Tom’s Cabin</hi>
+                    <hi rend="normalweight" style="font-size:10pt">–published serially in 1852 in</hi>
+                    <ref target="https://en.wikipedia.org/wiki/The_National_Era">
+                        <hi rend="italic normalweight" style="font-size:10pt">The National Era</hi>
+                    </ref>
+                    <hi rend="normalweight" style="font-size:10pt">, an abolitionist periodical, and later by John P. Jewett and Company in Novel form–are surprisingly underrepresented in American newspapers. This well-known author appears infrequently, and only as “Mrs. Stowe.” Given that much literature was imported from the UK during America’s nascent years, my suspicion that British authors would dominate the list was confirmed, with H. Rider Haggard appearing over 500 times and others like Hugh Conway with several hundred instances. Most importantly, my work is focused on the recovery of then-popular but now-forgotten fiction writers, as well as developing a theory of unfinished fiction and abandoned serial runs.</hi>
+                </head>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <hi rend="normalweight" style="font-size:10pt">This poster presentation offers a revised understanding of the 19th-century U.S. literary landscape, providing a more robust and historically-situated "canon" of important serial works, which allow me to theorize the role of seriality in more nuanced and medium-specific ways than previous critics. By employing machine learning tools such as network analysis, I aim to recover the most popular and widely read authors and novels of that era from systematic disregard, and to challenge traditional interpretations centered on canonical texts. Ultimately, this research sets out to redefine the narratives surrounding authorship and readership in 19th-century America. The findings underscore the importance of considering the material and social contexts in which literature circulates, prompting a reevaluation of how we understand literary history and its relationship to broader societal trends.</hi>
+                </head>
+                <figure>
+                    <graphic n="1001" width="16.002cm" height="9.607372222222223cm" url="/tmp/tmpmmwiva05/Pictures/27478e57f28693ed787cff9233ab3649.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">Figure 1: Author Network (zoomed out)
+                    <graphic n="1002" width="16.002cm" height="9.607902777777777cm" url="/tmp/tmpmmwiva05/Pictures/27478e57f28693ed787cff9233ab3649.png" rend="inline"/>
+                </p>
+                <p style="text-align: left; ">Figure 2: Author Network (zoomed in)</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Bode, Katherine</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2018):</hi>
+                        <hi rend="italic" style="font-size:10pt">A World of Fiction: Digital Collections and the Future of Literary History</hi>
+                        <hi style="font-size:10pt">. University of Michigan Press.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Looby, Christopher</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2004): “Southworth and Seriality”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt">Nineteenth-Century Literature 59</hi>
+                        <hi style="font-size:10pt">, 2: 179–211.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Cordell, Ryan / Smith, David</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024):</hi>
+                        <hi rend="italic" style="font-size:10pt">Viral Texts: Mapping Networks of Reprinting in 19th-Century Newspapers and Magazines</hi>
+                        <hi style="font-size:10pt">&lt;</hi>
+                        <ref target="http://viraltexts.org">
+                            <hi style="font-size:10pt">http://viraltexts.org</hi>
+                        </ref>
+                        <hi style="font-size:10pt">&gt;.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

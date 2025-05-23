@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="BOCCHI_Maria_Francesca_Enriching_Cultural_Heritage_through_S">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Enriching Cultural Heritage through Semantic Annotation: A Review of Methods, Tools, and Collaborative Spaces</title>
+                <author>
+                    <persName>
+                        <surname>Bocchi</surname>
+                        <forename>Maria Francesca</forename>
+                    </persName>
+                    <affiliation>University of Bologna, Italy</affiliation>
+                    <email>maria.bocchi4@unibo.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Pedretti</surname>
+                        <forename>Carlo Teo</forename>
+                    </persName>
+                    <affiliation>University La Sapienza of Rome, Italy</affiliation>
+                    <email>carloteo.pedretti@uniroma1.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Vitali</surname>
+                        <forename>Fabio</forename>
+                    </persName>
+                    <affiliation>University of Bologna, Italy</affiliation>
+                    <email>fabio.vitali@unibo.it</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T14:18:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Semantic Annotation</term>
+                    <term>Digital Humanities</term>
+                    <term>Cultural Heritage</term>
+                    <term>Linked Open Data</term>
+                    <term>Annotation Frameworks</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>annotation structures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>metadata standards</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>user experience design and analysis</term>
+                    <term>Art history</term>
+                    <term>Computer science</term>
+                    <term>Library &amp; information science</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">This paper presents a comprehensive review of semantic annotation practices within Digital Humanities (DH) projects. As the demand for enriched, interoperable cultural data increases, semantic annotation and Linked Open Data (LOD) have become central in connecting heritage materials across digital platforms. Focusing on DH projects as the unit of analysis, we examine current methodologies, tools, and frameworks for annotation, emphasizing their role in research workflows. We propose a multidimensional classification schema to support scholars and institutions in evaluating, comparing, and adopting annotation strategies. The paper concludes with recommendations for fostering shared frameworks and advancing semantic practices in DH.</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>What is an Annotation?</head>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">Annotations in the humanities and cultural heritage fields have been recognized as a "scholarly primitive" (Unsworth 2000). The digital paradigm introduces significant differences in the production, management, and use of annotations. Within the DH domain, annotations have evolved to become increasingly employed as essential "tools for research" and are emerging as valuable research data in their own right (Walkowski 2016). The purposes of annotation vary widely based on factors such as the nature of the annotated object and user requirements, encompassing everything from informal commentary to structured relationships between resources.</hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt" xml:space="preserve">From a general point of view, annotating is the act of associating information together (Sanderson et al. 2013). An annotation is typically structured into three components (Boot 2009): (1) the </hi>
+                    <hi rend="italic" style="font-size:10pt">annotatum</hi>
+                    <hi style="font-size:10pt" xml:space="preserve">, or target, the object being annotated; (2) the </hi>
+                    <hi rend="italic" style="font-size:10pt">annotans</hi>
+                    <hi style="font-size:10pt" xml:space="preserve">, or body, which constitutes the content of the annotation; and (3) the </hi>
+                    <hi rend="italic" style="font-size:10pt">annotator</hi>
+                    <hi style="font-size:10pt">, who establishes the connection between body and target. </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt" xml:space="preserve">In the context of the Semantic Web, the term </hi>
+                    <hi rend="italic" style="font-size:10pt">semantic annotation</hi>
+                    <hi style="font-size:10pt" xml:space="preserve"> varies in meaning depending on the field of application (Sharma/Jain 2021). In linguistics, it involves tagging text with metadata to capture linguistic features, often using automated techniques (e.g., part-of-speech tagging). In digital scholarly practices, the term has been associated with the expression </hi>
+                    <hi rend="italic" style="font-size:10pt">scholarly annotation</hi>
+                    <hi style="font-size:10pt" xml:space="preserve"> (Pedretti et al. 2024), shifting the focus from annotation intended as metadata (Agosti 2004) to annotation as a hermeneutical process conducted by scholars (Bradley 2012). In this paper, we define </hi>
+                    <hi rend="italic" style="font-size:10pt">semantic annotation</hi>
+                    <hi style="font-size:10pt" xml:space="preserve"> as the practice of using URIs to identify entities and their relationships, forming RDF triples unambiguous for machines (Di Donato et al. 2013). This definition draws a clear boundary from analogic annotations expressed in natural language—often described in the literature as “ontological” versus “informal” annotations (Oren et al. 2006)—yet it also invites critical reflection on what is meant by “semantics” in annotation practices. While the use of URIs is central to the principles of LOD, it may fall short of capturing the interpretive dimension emphasized in DH scholarship. Furthermore, digital technologies have significantly expanded the range of contexts in which annotations are used, highlighting the need for more nuanced reflection on the tools and methodologies adopted within the DH community (Walkowski 2016). Despite these complexities, the URI-based definition offers a functional basis for analyzing DH projects that employ semantic technologies.</hi>
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Methodology</head>
+                <p style="text-align: left; ">Our survey examined annotation projects across various types of digitized data, including text, multimedia, and 3D objects. Projects were selected with a particular interest in the role of end users. As a result, systematic annotation relying solely on machine-learning techniques was excluded. Instead, the focus was on projects where annotations are created manually or under human supervision in cases where semi-automatic methods are employed. </p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">For the selection process, we adopted a multifocal approach (Windhager 2019) by identifying domain-specific journals and conference databases, which were queried using predefined keywords to retrieve relevant publications. An empirical approach was then employed, exploring references and related projects cited within the retrieved works. </hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt" xml:space="preserve">Regarding the domain of interest, our focus primarily encompassed the area of DH, including fields such as Digital Scholarship, Digital Libraries, Digital Art History, Applied Computing to Arts and Humanities, and Digital Cultural Heritage. Additionally, we considered the practice of annotation within the Semantic Web. Relevant journals included </hi>
+                    <hi rend="italic" style="font-size:10pt">Digital Humanities Quarterly</hi>
+                    <hi style="font-size:10pt" xml:space="preserve"> (DHQ), </hi>
+                    <hi rend="italic" style="font-size:10pt">Journal on Computing and Cultural Heritage</hi>
+                    <hi style="font-size:10pt" xml:space="preserve"> (JOCCH), and </hi>
+                    <hi rend="italic" style="font-size:10pt">Digital Scholarship in the Humanities</hi>
+                    <hi style="font-size:10pt" xml:space="preserve"> (DSH). Furthermore, we explored results from scholarly organizations in the DH field, such as the International Image Interoperability Framework</hi><ref n="1" target="ftn1"/>
+                    <hi style="font-size:10pt" xml:space="preserve"> (IIIF) Community, which is particularly active in advancing digital image annotation as a central task.</hi>
+                </p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">The final dataset</hi><ref n="2" target="ftn2"/>
+                    <hi style="font-size:10pt" xml:space="preserve"> comprised 30 projects, of which 17 have an associated research paper. Additionally, 8 projects were described in research papers but lacked an implemented prototype. The remaining 5 projects consisted of web-based applications or prototypes without any associated research publication.</hi>
+                </p>
+                <div type="div2" rend="DH-Heading2">
+                    <head>A Classification Schema for Annotation Systems</head>
+                    <p style="text-align: left; ">To investigate DH projects that implement semantic annotations, we developed a multidimensional classification with a focus on productive processes (i.e. tools, activities, and users) as means for generating new data. The resulting schema (Figure 1) offers a structured yet flexible foundation for further discussion and refinement.</p>
+                    <p style="text-align: left; ">
+                        <hi style="font-size:10pt" xml:space="preserve">Ranging from structural aspects of annotation itself, up to the analysis of the end users of annotation tools, the schema follows three main axes: </hi>
+                        <hi rend="italic" style="font-size:10pt">data</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">, </hi>
+                        <hi rend="italic" style="font-size:10pt">tasks</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> and </hi>
+                        <hi rend="italic" style="font-size:10pt">users</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (Windhager 2019). </hi>
+                    </p>
+                    <p style="text-align: left; ">Additional dimensions beyond the classification schema include discoverability, interoperability, and reusability of annotation data, along with considerations of data storage, provider reliability, licensing, and security. Crucial aspects like uncertainty, provenance, and versioning are also vital for ensuring the transparency, reliability, and long-term usability of semantic annotations.</p>
+                    <figure>
+                        <graphic n="1001" width="15.692255555555555cm" height="6.614583333333333cm" url="/tmp/tmpkz1e2wre/Pictures/64dbc74d0f9fec5f3e83bd32438b5531.png" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; text-align: center;">Figure 1. Multidimensional Classification Schema for Annotation Systems</p>
+                    <div type="div3" rend="DH-Heading3">
+                        <head>Data</head>
+                        <p style="text-align: left; ">
+                            <hi style="font-size:10pt">Data refers both to the structure or format of the annotated entity (i.e., text, image, etc.) and the formal conceptualization of the annotation itself (i.e., metadata, vocabularies and ontologies). In particular, annotations can be classified into formal or structured (machine-readable), informal or unstructured (human-readable), and ontological (both human- and machine-readable) (Oren et al. 2006). For this study, we adopted a dichotomy that distinguishes between annotations based on generic metadata, which may include both informal and formal elements, and those grounded in ontologies, which are explicitly structured to support semantic reasoning.</hi>
+                        </p>
+                        <p style="text-align: left; ">Finally, the production of annotations involves processes and techniques that span a spectrum from manual control to full automation. Annotations can be created manually, as in the interpretative work of a domain expert; semi-automatically, with computational tools aiding the process but requiring human validation or refinement; and automatically, with algorithms or machine learning models.</p>
+                    </div>
+                    <div type="div3" rend="DH-Heading3">
+                        <head>Tasks </head>
+                        <p style="text-align: left; ">
+                            <hi style="font-size:10pt">Annotation purposes can be related to descriptive activities (i.e., providing contextual information), analytical activities (i.e., adding insights or interpretations) and relational activities (i.e., linking elements or entities). For categorization, we derived some concepts from the classification proposed by the Taxonomy of Digital Research Activities in the Humanities</hi><ref n="3" target="ftn3"/>
+                            <hi style="font-size:10pt" xml:space="preserve"> (TADIRAH). In particular, we selected </hi>
+                            <hi rend="italic" style="font-size:10pt">tagging</hi>
+                            <hi style="font-size:10pt" xml:space="preserve">, </hi>
+                            <hi rend="italic" style="font-size:10pt">commenting</hi>
+                            <hi style="font-size:10pt" xml:space="preserve">, </hi>
+                            <hi rend="italic" style="font-size:10pt">transcribing/translating</hi>
+                            <hi style="font-size:10pt" xml:space="preserve">, </hi>
+                            <hi rend="italic" style="font-size:10pt">associating</hi>
+                            <hi style="font-size:10pt" xml:space="preserve">, and </hi>
+                            <hi rend="italic" style="font-size:10pt">highlighting</hi>
+                            <hi style="font-size:10pt">.</hi>
+                        </p>
+                        <p style="text-align: left; ">
+                            <hi style="font-size:10pt">On the other hand, tools are frameworks or applications employed to facilitate the annotation process. These tools provide the technical means for creating, managing, and linking annotations to data, often tailored to the needs of a project. Tools can be standardized, such as Mirador</hi><ref n="4" target="ftn4"/>
+                            <hi style="font-size:10pt">, which leverages the IIIF for annotating image-based resources, or custom-built, designed for unique requirements. The choice of tool significantly impacts the interoperability and scalability of the annotation workflow, making it a critical consideration in semantic annotation projects.</hi>
+                        </p>
+                    </div>
+                    <div type="div3" rend="DH-Heading3">
+                        <head>Users </head>
+                        <p style="text-align: left; ">From a user need perspective, we analysed annotation systems by intended audience (Chiang 2010): private (e.g., individual researchers), collaborative (e.g., research groups), or meant to be public. In the first case, the annotation system should support the creation of private annotations or allow a user to publish them in a later stage. A collaborative annotation system should support an environment in which different users can operate on the same target annotation. Lastly, public annotations are visible to everyone and can be interacted with to a certain extent.</p>
+                        <p style="text-align: left; ">The target users for semantic annotation in the DH range from domain experts, such as humanities scholars, to casual users seeking meaningful insights. Between these extremes are curation managers, who facilitate data enrichment, and special-purpose users, who employ annotation tools for didactic purposes. For casual users, who may lack extensive knowledge of the data, accessible interfaces and workflows remain essential.</p>
+                    </div>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Results</head>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">Our analysis</hi><ref n="5" target="ftn5"/>
+                    <hi style="font-size:10pt" xml:space="preserve">of target, purposes, and audience categories (Figure 2) shows that most annotation tools prioritize commenting, with no support for highlighting. This suggests a general preference for interpretive and descriptive uses of annotations. </hi>
+                </p>
+                <figure>
+                    <graphic n="1002" width="15.677397222222222cm" height="8.202083333333333cm" url="/tmp/tmpkz1e2wre/Pictures/64dbc74d0f9fec5f3e83bd32438b5531.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; text-align: center;">Figure 2. Visualization of Target, Purposes and Audience within Annotation Projects.</p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">Recent trends</hi><ref n="6" target="ftn6"/>
+                    <hi style="font-size:10pt" xml:space="preserve"> indicate an increasing adoption of Mirador and the Web Annotation Data Model (WADM), reflecting a shift toward standardized, reusable solutions. In contrast, ontology-based models remain less common, likely due to the complexity of implementing a full semantic stack (Figure 3).</hi>
+                </p>
+                <figure>
+                    <graphic n="1003" width="7.77875cm" height="9.68336388888889cm" url="/tmp/tmpkz1e2wre/Pictures/64dbc74d0f9fec5f3e83bd32438b5531.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; text-align: center;">Figure 3. Visualisation of Tools, Metadata and Ontology used within Annotation Projects.</p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">A partial correlation was observed between the application domain</hi><ref n="7" target="ftn7"/>
+                    <hi style="font-size:10pt" xml:space="preserve"> and the choice of technologies (Figure 4). Projects focused on art history and image annotation tend to adopt visual and IIIF-compliant tools (e.g., Mirador), whereas text-oriented projects (e.g., philology or history) often employ custom-developed frameworks.</hi>
+                </p>
+                <figure>
+                    <graphic n="1004" width="15.410297222222223cm" height="9.242777777777778cm" url="/tmp/tmpkz1e2wre/Pictures/64dbc74d0f9fec5f3e83bd32438b5531.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; text-align: center;">Figure 4. Visualisation of Tools, Metadata and Ontology adopted by different Domains.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusions</head>
+                <p style="text-align: left; ">By explicitly organizing the multidimensional aspects of annotation practices, the classification schema could help facilitate both theoretical reflection on current trends and informed decision-making for project planning within the DH community, particularly for scholars, project designers, and tool developers who need to compare, evaluate, or select annotation systems based on specific features.</p>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">Overall, we analyzed a dataset of 30 projects, finding that only 33% included a user study. Evaluation is often absent, raising concerns about validation and usability, highlighting the need for a stronger emphasis on evaluation in DH projects.</hi>
+                </p>
+                <p style="text-align: left; ">Information visualization remains underexplored, leading to oversimplified presentations of annotations. Additionally, limited attention to provenance in formal models for annotation leaves annotations subject to varying degrees of epistemic and ontological uncertainty. </p>
+                <p style="text-align: left; ">In conclusion, thoughtful design and standardized workflows are essential to enhance the robustness and usability of semantic annotation practices in the DH.</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                        
+                            <ref target="https://iiif.io/">
+                                <hi style="font-size:10pt">https://iiif.io/</hi>
+                            </ref>
+                            <hi style="font-size:10pt">.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                        
+                            <hi style="font-size:10pt" xml:space="preserve">For further details, the dataset and additional materials are accessible at the following links: </hi>
+                            <ref target="https://github.com/friendlynihilist/sem-annotation-survey">
+                                <hi style="font-size:10pt">https://github.com/friendlynihilist/sem-annotation-survey</hi>
+                            </ref>
+                            <hi style="font-size:10pt" xml:space="preserve"> and </hi>
+                            <ref target="https://doi.org/10.5281/zenodo.14316772">
+                                <hi style="font-size:10pt">https://doi.org/10.5281/zenodo.14316772</hi>
+                            </ref>
+                            <hi style="font-size:10pt">.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                                
+                                    <ref target="https://vocabs.dariah.eu/tadirah/en/page/annotating">
+                                        <hi style="font-size:10pt">https://vocabs.dariah.eu/tadirah/en/page/annotating</hi>
+                                    </ref>
+                                
+                            </note>
+<note rend="footnote text" xml:id="ftn4" n="4">
+                                
+                                    <hi style="font-size:10pt"> </hi>
+                                    <ref target="https://projectmirador.org/">
+                                        <hi style="font-size:10pt">https://projectmirador.org/</hi>
+                                    </ref>
+                                
+                            </note>
+<note rend="footnote text" xml:id="ftn5" n="5">
+                        
+                            <hi style="font-size:10pt" xml:space="preserve"> In-depth visualizations resulting from the dataset analysis are accessible at the following link: </hi>
+                            <ref target="https://friendlynihilist.github.io/sem-annotation-survey/">
+                                <hi style="font-size:10pt">https://friendlynihilist.github.io/sem-annotation-survey/</hi>
+                            </ref>
+                            <hi style="font-size:10pt">.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn6" n="6">
+                        
+                            <hi style="font-size:10pt">Identifying precise temporal trends is challenging due to the often unclear lifecycle of DH projects, making it difficult to distinguish between discontinued, inactive, or ongoing initiatives. For visualizations see</hi>
+                            <ref target="https://friendlynihilist.github.io/sem-annotation-survey/">
+                                <hi style="font-size:10pt">https://friendlynihilist.github.io/sem-annotation-survey/</hi>
+                            </ref>
+                            <hi style="font-size:10pt">.</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn7" n="7">
+                        
+                            <hi style="font-size:10pt" xml:space="preserve"> Given the small size of the dataset, the domains’ identification was based on a close analysis of the documentation provided. As the dataset expands, we plan to introduce automated methods such as keywords extraction from publications abstracts to support domain classification at scale.</hi>
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Agosti, Maristella / Ferro, Nicola / Frommholz, Ingo / Thiel, Ulrich</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2004):  “Annotations in Digital Libraries and Collaboratories – Facets, Models and Usage”, in: Heery, Rachel / Lyon, Liz (eds): </hi>
+                        <hi rend="italic" style="font-size:10pt">Research and Advanced Technology for Digital Libraries. ECDL 2004. Lecture Notes in Computer Science</hi>
+                        <hi style="font-size:10pt">, 3232. Berlin/Heidelberg: Springer 244–255. DOI: 10.1007/978-3-540-30230-8_23.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Boot, Peter</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2009): </hi>
+                        <hi rend="italic" style="font-size:10pt">Mesotext: Digitised Emblems, Modelled Annotations and Humanities Scholarship</hi>
+                        <hi style="font-size:10pt">. PhD thesis, Utrecht University &lt;https://dspace.library.uu.nl/bitstream/handle/1874/36539/boot.pdf&gt; [30.04.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Bradley, John</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2012): “Towards a Richer Sense of Digital Annotation: Moving Beyond a ‘Media’ Orientation of the Annotation of Digital Objects”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt">Digital Humanities Quarterly</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 6, 2 &lt;https://www.digitalhumanities.org/dhq/vol/6/2/000121/000121.html&gt; [30.04.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Chiang, Chia-Ning</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2010): </hi>
+                        <hi rend="italic" style="font-size:10pt">A multi-dimensional approach to the study of online annotation</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">. PhD thesis, University of British Columbia. DOI: 10.14288/1.0071066. </hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Di Donato, Francesca / Morbidoni, Christian / Fonda, Simone / Piccioli, Alessio / Grassi, Marco / Nucci, Michele</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2013): “Semantic Annotation with Pundit: A Case Study and a Practical Demonstration”, in:</hi>
+                        <hi rend="italic" style="font-size:10pt">Proceedings of the 1st International Workshop on Collaborative Annotations in Shared Environment: Metadata, Vocabularies and Techniques in the Digital Humanities (DH-CASE‘13)</hi>
+                        <hi style="font-size:10pt">, Florence, IT, September 2013: 1–4. DOI: 10.1145/2517978.2517995.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt" xml:space="preserve">Oren, Eyal / Moller, Knud Hinnerk / Scerri, Simon / Handschuh, Siegfried / Sintek, Michael </hi>
+                        <hi style="font-size:10pt" xml:space="preserve">(2006): </hi>
+                        <hi rend="italic" style="font-size:10pt">What Are Semantic Annotations?</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> &lt;</hi>
+                        <ref target="https://www.siegfried-handschuh.net/pub/2006/whatissemannot2006.pdf">
+                            <hi style="font-size:10pt">https://www.siegfried-handschuh.net/pub/2006/whatissemannot2006.pdf</hi>
+                        </ref>
+                        <hi style="font-size:10pt">&gt; [30.04.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Pedretti, Carlo Teo / Bocchi, Maria Francesca / Tomasi, Francesca / Vitali, Fabio</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2024):  “What Do We Annotate When We Annotate? Towards a Multi-Level Approach to Semantic Annotations”, in:</hi>
+                        <hi rend="italic" style="font-size:10pt">Knowledge Graphs in the Age of Language Models and Neuro-Symbolic AI</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">. Amsterdam: IOS Press 370–385. DOI: </hi>
+                        <ref target="https://doi.org/10.3233/SSW240030">
+                            <hi style="font-size:10pt">10.3233/SSW240030</hi>
+                        </ref>
+                        <hi style="font-size:10pt">.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Sanderson, Robert / Ciccarese, Paolo / Sompel, Herbert Van de</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2013): “Designing the W3C Open Annotation Data Model”, in:</hi>
+                        <hi rend="italic" style="font-size:10pt">Proceedings of the 5th Annual ACM Web Science Conference (WebSci ’13)</hi>
+                        <hi style="font-size:10pt" xml:space="preserve">, Paris, FR, May 2013: 366–375. DOI: </hi>
+                        <ref target="https://doi.org/10.1145/2464464.2464474">
+                            <hi style="font-size:10pt">10.1145/2464464.2464474</hi>
+                        </ref>
+                        <hi style="font-size:10pt">.</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Sharma, Sumit / Jain, Sarika</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2021): “Comprehensive Study of Semantic Annotation: Variant and Praxis”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt">Advances in Computational Intelligence, Its Concepts Applications (ACI 2021)</hi>
+                        <hi style="font-size:10pt">, New Delhi, IN, February 2021: 102–116 &lt;</hi>
+                        <ref target="https://ceur-ws.org/Vol-2823/Paper13.pdf">
+                            <hi style="font-size:10pt">https://ceur-ws.org/Vol-2823/Paper13.pdf</hi>
+                        </ref>
+                        <hi style="font-size:10pt">&gt; [30.04.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Unsworth, John</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2000): “Scholarly Primitives: What Methods Do Humanities Researchers Have in Common, and How Might Our Tools Reflect This”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt">Symposium on Humanities Computing: Formal Methods, Experimental Practice</hi>
+                        <hi style="font-size:10pt">, King’s College, London &lt;</hi>
+                        <ref target="https://people.brandeis.edu/~unsworth/Kings.5-00/primitives.html">
+                            <hi style="font-size:10pt">https://people.brandeis.edu/~unsworth/Kings.5-00/primitives.html</hi>
+                        </ref>
+                        <hi style="font-size:10pt">&gt; [30.04.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Walkowski, Niels-Oliver</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2016): “The Landscape of Digital Annotation and Its Meaning”, in:</hi>
+                        <hi rend="italic" style="font-size:10pt">Conference on Language Technologies &amp; Digital Humanities</hi>
+                        <hi style="font-size:10pt">, Ljubljana, SLO &lt;</hi>
+                        <ref target="https://www.sdjt.si/wp/wp-content/uploads/2016/09/JTDH-2016_Walkowski_The-Landscape-of-Digital-Annotation.pdf">
+                            <hi style="font-size:10pt">https://www.sdjt.si/wp/wp-content/uploads/2016/09/JTDH-2016_Walkowski_The-Landscape-of-Digital-Annotation.pdf</hi>
+                        </ref>
+                        <hi style="font-size:10pt">&gt; [30.04.2025].</hi>
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" style="font-size:10pt">Windhager, Florian / Federico, Paolo / Schreder, Gunther / Glinka, Katrin / Dork, Marian / Miksch, Silvia / Mayr, Eva</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> (2019): “Visualization of Cultural Heritage Collection Data: State of the Art and Future Challenges”, in: </hi>
+                        <hi rend="italic" style="font-size:10pt">IEEE Transactions on Visualization and Computer Graphics</hi>
+                        <hi style="font-size:10pt" xml:space="preserve"> 25, 6: 2311–2330. DOI: </hi>
+                        <ref target="https://doi.org/10.1109/TVCG.2018.2830759">
+                            <hi style="font-size:10pt">10.1109/TVCG.2018.2830759</hi>
+                        </ref>
+                        <hi style="font-size:10pt">.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

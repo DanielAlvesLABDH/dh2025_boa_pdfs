@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="RIDGE_Mia_Radically_inclusive_software_development_for_digit">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Radically inclusive software development for digital cultural heritage</title>
+                <author>
+                    <persName>
+                        <surname>Ridge</surname>
+                        <forename>Mia</forename>
+                    </persName>
+                    <affiliation>British Library, United Kingdom</affiliation>
+                    <email>mia.ridge@bl.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Okorodudu</surname>
+                        <forename>Lanie</forename>
+                    </persName>
+                    <affiliation>British Library, United Kingdom</affiliation>
+                    <email>lanie.okorodudu@bl.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Akhter</surname>
+                        <forename>Saira</forename>
+                    </persName>
+                    <affiliation>British Library, United Kingdom</affiliation>
+                    <email>saira.akhter@bl.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Misson</surname>
+                        <forename>James</forename>
+                    </persName>
+                    <affiliation>British Library, United Kingdom</affiliation>
+                    <email>James.Misson@bl.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Burnand</surname>
+                        <forename>Erin</forename>
+                    </persName>
+                    <affiliation>British Library, United Kingdom</affiliation>
+                    <email>Erin.Burnand@bl.uk</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T15:02:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>open source software</term>
+                    <term>collaboration</term>
+                    <term>collective action</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>Interface design</term>
+                    <term>development</term>
+                    <term>and analysis</term>
+                    <term>open access methods</term>
+                    <term>project design</term>
+                    <term>organization</term>
+                    <term>management</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>Design studies</term>
+                    <term>Galleries and museum studies</term>
+                    <term>Informatics</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>The Universal Viewer (UV, https://universalviewer.io) software is designed to display digital image, 3D, sound and moving image files along with associated metadata and access rights for cultural heritage collections. In supporting the display of digitised and digital collections with free software with features designed for cultural heritage collections, the UV helped democratise access to collections and knowledge. The UV is part of a wider constellation of software that implements the International Image Interoperability Format (IIIF, https://iiif.io), a set of open standards and APIs for delivering high-quality digital objects online. IIIF, and the UV, are designed to meet both audience and institutional needs, with features such as deep zoom, download, authentication methods for restricted items, and ensuring that images and AV content can be embedded in other sites with their metadata.</p>
+            <p>The UV has been an open source product almost since inception (Irving, 2019; Silverton, 2022), and has been widely used by museums, archives and libraries around the world. As open source software, institutions can adapt it for their needs, and have sometimes collaborated to discuss and build shared features. However, as with many long-term software projects with multiple stakeholders advocating for different features in different contexts, the code and user interface had grown complex over time.</p>
+            <p>The UV Steering Group (Irving, 2019; Universal Viewer, 2024) set the strategic direction and shared roadmap, and could allocate funds to support development. However, progress could be slow. The creation of a dedicated UV Product Team at the British Library in 2023 (Ridge et al., 2024) provided the resources to review and refresh the source code, improve the user experience and meet changing user needs. But more than that - it became an opportunity to rethink how people with different skills and interests could contribute to open source software.</p>
+            <div type="div1" rend="DH-Heading1">
+                <head>Community sprints: an Accessibility sprint case study </head>
+                <p>Collaborative community sprints are a big part of UV’s recent progress. These focused, time-limited sessions bring together developers, testers and non-technical contributors to tackle important challenges. Community sprints mean the project can make progress on shared issues, while allowing staff at institutions without the resources to develop their own software to contribute to the wider project. Community sprints also help participants learn or deepen skills in writing, refactoring and testing code, writing user stories, managing issues and working with Agile methods. This can be particularly important for developing the skills of staff in cultural heritage institutions.</p>
+                <p>A recent important example is the Accessibility Sprint, where accessibility experts helped identify issues and suggested practical fixes (Okorodudu and Akhter, 2024). These fixes were implemented and tested by staff and volunteers at a range of institutions, collaborating through video calls and GitHub issues. This led to major improvements like better keyboard navigation, improved screen reader compatibility for accessible text and metadata, and clearer font sizing for users with low vision.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Enabling work: management and communications</head>
+                <p>The UV has a large and diverse range of global stakeholders who add incredible value through their expertise and different perspectives. However, coordinating work across different institutions and timezones can be challenging. It is crucial to have well-documented procedures and policies in place, so the UV Steering Group ran an admin sprint where issues such as roles and responsibilities, decisions on communication channels and workflows were addressed. The goal was to make it easier for newcomers to quickly familiarise themselves with the code, learn how to contribute effectively, and know where to seek help, enabling collaboration by making participation more straightforward.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Focus on UX - for users and for developers</head>
+                <p>Our current focus is improving the usability of the UV - but changing the interface for widely-used software must be managed carefully. We collaborated with a user experience (UX) expert who is also passionate about improving open source software to identify key usability issues and potential solutions (Ridge and Jenson, 2024). To help UV stakeholders engage with this process, we shared videos where he identified critical issues and proposed solutions, and sought feedback from UV contributors. This work is ongoing.</p>
+                <p>The UV community is also undertaking a 'DEVeloper EXperience' (DevEx) sprint to improve documentation, update tools and manage code dependencies.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Looking ahead - how can you get involved?</head>
+                <p>The UV team is working hard to make the software better for everyone. Building a strong, diverse community of contributors is vital for the long-term sustainability of this key infrastructure for digital heritage. Through sprints, presentations and workshops, we’re bringing people from around the world together to help shape UV around the needs of cultural heritage collections, institutions and users. We hope that our DH2025 presentation will inspire digital humanities practitioners to join our quest.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Irving, Alanna.</hi> (2019). 
+                        <hi rend="italic">Solving Open Source Funding by Giving Sponsors a Seat at the Table</hi>. 
+                        <hi rend="italic">Open Collective</hi>. https://blog.opencollective.com/universal-viewer/ (accessed 5 December 2024).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Okorodudu, Lanie / Akhter, Saira.</hi> (2024). 
+                        <hi rend="italic">Working Together: The UV Community Sprint Experience</hi>. 
+                        <hi rend="italic">British Library Digital Scholarship blog</hi>. https://blogs.bl.uk/digital-scholarship/2024/11/working-together-the-community-sprint-experience-.html (accessed 30 April 2025).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Ridge, Mia / Burnand, Erin / Okorodudu, Lanie / Misson, James / Akhter, Saira</hi> (2024). 
+                        <hi rend="italic">Meet Our New Universal Viewer Product Team</hi>. 
+                        <hi rend="italic">British Library Digital Scholarship blog</hi>. https://blogs.bl.uk/digital-scholarship/2024/05/meet-our-new-universal-viewer-product-team.html (accessed 30 April 2025).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Ridge, Mia / Jenson, Scott.</hi> (2024). 
+                        <hi rend="italic">Collaborating to Improve Usability: The Universal Viewer Project</hi>. 
+                        <hi rend="italic">British Library Digital Scholarship blog</hi>. https://blogs.bl.uk/digital-scholarship/2024/11/collaborating-to-improve-usability-the-universal-viewer-project.html (accessed 22 November 2024).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Silverton, Ed.</hi> (2022). 
+                        <hi rend="italic">About the Universal Viewer</hi>. 
+                        <hi rend="italic">GitHub</hi>. https://github.com/UniversalViewer/universalviewer/wiki/About (accessed 7 December 2024).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Universal Viewer</hi> (2024). 
+                        <hi rend="italic">The Universal Viewer Steering Group</hi>. 
+                        <hi rend="italic">GitHub</hi>. https://github.com/UniversalViewer/universalviewer/wiki/Steering-Group (accessed 7 December 2024).
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

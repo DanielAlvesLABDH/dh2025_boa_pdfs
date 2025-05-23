@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VAN_DE_POL_Aron_Marcellus_Interpretable_Computer_Vision__Mul">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Interpretable Computer Vision: Multiple Instance Learning for Colonial Korean Print</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>van de Pol</surname>
+                        <forename>Aron Marcellus</forename>
+                    </persName>
+                    <affiliation>Leiden University</affiliation>
+                    <email>a.m.van.de.pol@hum.leidenuniv.nl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Prokic</surname>
+                        <forename>Jelena</forename>
+                    </persName>
+                    <affiliation>Leiden University</affiliation>
+                    <email>j.prokic@hum.leidenuniv.nl</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Mol</surname>
+                        <forename>Angus</forename>
+                    </persName>
+                    <affiliation>Leiden University</affiliation>
+                    <email>a.a.a.mol@hum.leidenuniv.nl</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T16:28:27.644751000</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Computer Vision</term>
+                    <term>Colonial Korea</term>
+                    <term>Print Culture</term>
+                    <term>Interpretable AI</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>cultural analytics</term>
+                    <term>image processing and analysis</term>
+                    <term>Asian studies</term>
+                    <term>Book and print history</term>
+                    <term>History</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>This research explores how neural networks, and particularly Multiple Instance Learning, can help scholars discover and understand visual features in historical materials. Using colonial Korean printshops as our case study, we show how this method can reveal distinctive visual features in historical printed materials. While Distant Viewing (Arnold / Tilton 2023) has shown how computer vision can analyze visual materials at scale, interpreting what these models learn remains challenging. Although deep learning models achieve impressive classification accuracy, understanding which visual features they use to make these classifications is complex and often unclear. This limits their utility for humanities research, where understanding material and production practices is as crucial as classification accuracy - we need to know not just what was printed, but how it was materially produced and why certain visual choices were made.</p>
+            <p>Colonial Korean printshops of the 1920s present an ideal case study for developing interpretable neural network approaches to visual analysis. During this formative period, when Korean typography and print design were being standardized, print activity grew despite significant economic constraints (Ryu 2015). The high cost of mechanical printing equipment and a relatively small market meant printshops typically operated with limited typefaces and resources. Yet even within these constraints, major printshops produced visually distinct outputs through subtle variations in typographic practices from character spacing and stroke weights to the specific rendering of letter components. While scholars have identified some of these distinctions through close examination of individual texts, systematically analyzing such subtle typographic features across thousands of pages has proven challenging (De Fremery 2011; De Fremery 2014). Our study uses neural networks to discover and analyze these specific visual features that characterize each printshop’s typographic style.</p>
+            <p>To systematically analyze printshop-specific visual features, we used a corpus of printed materials from each facility. Through the digitization efforts of Hyundam Mun’go archives (Hyundam Mun’go Foundation 2021) we identified the four most productive printshops of colonial Korea and collected their surviving output. The dataset comprises 66,277 page images, distributed across these facilities as shown in Table 1. This distribution reflects the varying scales of operation and digitization – from Taedong Inswaeso’s dominant 42.07% share of the analyzed pages to Chosŏn Inswae Chusik Hoeisa’s more modest 9.21%. These differences in production volume make our dataset particularly interesting: despite varying scales of operation and digitization, could these printshops maintain consistent visual styles?And can our computational approach detect these styles regardless of a facility’s output volume?</p>
+            <table rend="frame" xml:id="Table1">
+                <row>
+                    <cell>Printshop</cell>
+                    <cell>Printshop (Korean)</cell>
+                    <cell>Pages</cell>
+                    <cell>Percentage</cell>
+                </row>
+                <row>
+                    <cell>Taedong Inswaeso</cell>
+                    <cell><hi rend="Chinese">大東印刷所</hi></cell>
+                    <cell>27,882</cell>
+                    <cell>42.07%</cell>
+                </row>
+                <row>
+                    <cell>Hansŏng Toso Chusik Hoeisa</cell>
+                    <cell><hi rend="Chinese">漢城圖書 株式會社</hi></cell>
+                    <cell>19,244</cell>
+                    <cell>29.04%</cell>
+                </row>
+                <row>
+                    <cell>Sinmungwan</cell>
+                    <cell><hi rend="Chinese">新文館</hi></cell>
+                    <cell>13,050</cell>
+                    <cell>19.69%</cell>
+                </row>
+                <row>
+                    <cell>Chosŏn Inswae Chusik Hoeisa</cell>
+                    <cell><hi rend="Chinese">朝鮮印刷株式會社</hi></cell>
+                    <cell>6,101</cell>
+                    <cell>9.21%</cell>
+                </row>
+                <row>
+                    <cell>Total</cell>
+                    <cell/>
+                    <cell>66,277</cell>
+                    <cell>100%</cell>
+                </row>
+            </table>
+            <p>In this study, we tested three different approaches to printshop classification, building on recent work in computational analysis of historical print (Seuret et al., 2019; Im et al., 2022). Initial experiments used a ConvNext Base architecture for full-page analysis, following successful applications of pre-trained architectures to historical font classification. This approach achieved 84% accuracy (F1=0.80) in classifying printshop origins. However, Grad-CAM (Selvaraju et al., 2020) visualizations revealed the model primarily focused on page margins rather than typographic content can unreliable feature that could be affected by scanning or preservation conditions.</p>
+            <p>To address this limitation, we adopted the approach from Seuret et al., 2019 of training on random page cutouts, forcing the model to look beyond margins. A Swin S3 Base-224 model (Liu et al., 2021) achieved the highest performance (96.3% accuracy, F1=0.96), visual inspection revealed the model relied on seemingly random or uninterpretable features. This highlighted our core challenge: how to develop models that not only classify accurately but reveal meaningful visual patterns that can inform humanities research. 
+                <figure>
+                    <graphic url="/tmp/tmp6xmtgs0b/Pictures/4a6fe0bf37ca812da47547a7874b200a.png"/>
+                    <head>Figure 1: Two examples of full page images that were correctly identified and their Grad-CAM rollout.</head>
+                </figure>
+            </p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp6xmtgs0b/Pictures/4a6fe0bf37ca812da47547a7874b200a.png"/>
+                    <head>Figure 2: Two examples of random page cutouts that were correctly identified with their Grad-CAM rollout.</head>
+                </figure>
+            </p>
+            <p>Multiple Instance Learning (MIL) proved most suitable for our task, achieving 92% accuracy (F1=0.92). Originally developed for medical image analysis to help both classify and locate malignant parts of cells such as tumors in diagnostic images, MIL’s dual focus on accuracy and interpretable localization directly parallels our needs in humanities research. We adapted an attribute-driven attention-based MIL model (Cai et al. 2024) that processes each page as a “bag of instances” - acknowledging that not all parts of an image are equally informative. The model’s architecture incorporates two specialized constraints that enhance interpretability. A spatial attribute constraint enforces consistency by encouraging similar attribute scores for adjacent patches that share visual features. This helps maintain coherent attention patterns across regions with similar typographic or layout characteristics. The attribute ranking constraint ensures features receive higher scores only when they are truly distinctive of a particular printshop rather than common across all facilities. This helps the model focus on elements that meaningfully distinguish one printshop from another, rather than generic features of printed pages. Together, these constraints allow us to not only achieve accurate classification but also understand which visual elements (e.g. typographical) separate each printshop’s output.</p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmp6xmtgs0b/Pictures/4a6fe0bf37ca812da47547a7874b200a.png"/>
+                    <head>Figure 3: Multi Instance Learning pipeline.</head>
+                </figure>
+            </p>
+            <p>Through visualization of the model’s attention patterns, we discover that it primarily focuses on Korean type elements. While the model identifies various distinguishing features, a clear pattern emerges around frequently occurring grammatical particles (josa <hi rend="Korean">조사</hi>) such as ŭi (<hi rend="Korean">의</hi>) and e (<hi rend="Korean">에</hi>), with particular attention to components like the consonant Iŭng (<hi rend="Korean">ㅇ</hi>). This focus on common elements follows a compelling logic: to consistently identify a printshop’s output, the model learns to recognize and differentiate elements that have a high probability of appearing on any given page. The model’s attention to these frequently occurring elements reveals an important insight about computational analysis of historical print: reliable identification depends on examining the most common rather than the most distinctive elements. Each printshop developed subtle but consistent variations in how they rendered these fundamental components of Korean text, variations that become detectable through computational analysis. This approach of using MIL to discover distinguishing features could prove valuable across many domains of visual analysis. </p>
+            <p>This study demonstrates that Multiple Instance Learning can bridge the gap between computational efficiency and interpretability in digital humanities research. While originally developed for medical imaging, MIL’s emphasis on interpretability makes it particularly valuable for humanities scholars who need to understand model decisions. Our approach offers a template for analyzing other forms of historical visual materials where scholars need to both identify and understand patterns at scale. The success in discovering meaningful typographic features suggests applications beyond print history to other domains where visual distinctions may be subtle but historically significant. </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Arnold, T</hi>
+                        <hi rend="bold">aylor</hi>
+                        <hi rend="bold">. / Tilton, L</hi>
+                        <hi rend="bold">auren</hi>
+                        <hi rend="bold">.</hi> (2023). 
+                        <hi rend="italic">Distant Viewing: Computational Exploration of Digital Images</hi>. 1st Edition. Cambridge: MIT Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Cai, L</hi>
+                        <hi rend="bold">inghan</hi>
+                        <hi rend="bold">. et al.</hi> (2024). (arXiv:2404.00351)
+                        <ptr target="http://arxiv.org/abs/2404.00351"/> (accessed 27 September 2024).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">De Fremery, P</hi>
+                        <hi rend="bold">eter Wayne.</hi> (2011). 
+                        <hi rend="italic">How Poetry Mattered in 1920s Korea</hi>. [Doctoral Dissertation Thesis]. Cambridge: Harvard University.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">De Fremery, P</hi>
+                        <hi rend="bold">eter Wayne.</hi> (2014). Printshops, Pressmen, and the Poetic Page in Colonial Korea. 
+                        <hi rend="italic">Cross-Currents: East Asian History and Culture Review</hi>, 
+                        <hi rend="bold">3</hi>(1), pp. 185–229.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Hyundam Mun’go Foundation</hi> (2021). Hyundam Mun’go Collection.[Archive]
+                        <ptr target="http://www.adanmungo.org/eng/sub01b.php"/> (accessed 4 June 2024).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Im, C</hi>
+                        <hi rend="bold">hangjong</hi>
+                        <hi rend="bold">. et al.</hi> (2022). Deep Learning for Historical Books: Classification of Printing Technology for Digitized Images. 
+                        <hi rend="italic">Multimedia Tools and Applications</hi>, 
+                        <hi rend="bold">81</hi>(4), pp. 5867–88. 
+                        <ref target="https://doi.org/10.1007/s11042-021-11754-7">10.1007/s11042-021-11754-7</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Liu, Z</hi>
+                        <hi rend="bold">e</hi>
+                        <hi rend="bold">. et al.</hi> (2021). (arXiv:2103.14030) 
+                        <ref target="https://doi.org/10.48550/arXiv.2103.14030">10.48550/arXiv.2103.14030</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Ryu, H</hi>
+                        <hi rend="bold">y</hi>
+                        <hi rend="bold">ŏnguk</hi>
+                        <hi rend="bold">.</hi> (2015). 
+                        <hi rend="italic">Han’gŭl hwalcha ŭi t’ansaeng : 1820-1944 </hi><hi rend="Korean">한글 활자의 탄생
+  </hi>                      <hi rend="italic">: 1820-1945 [The Birth of Han’gul Type 1820-1945]</hi>. Seoul: Hongsi.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Selvaraju, R</hi>
+                        <hi rend="bold">amprasaath</hi>
+                        <hi rend="bold"> R. et al.</hi> (2020). Grad-CAM: Visual Explanations from Deep Networks via Gradient-Based Localization. 
+                        <hi rend="italic">International Journal of Computer Vision</hi>, 
+                        <hi rend="bold">128</hi>(2), pp. 336–59. 
+                        <ref target="https://doi.org/10.1007/s11263-019-01228-7">10.1007/s11263-019-01228-7</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Seuret, M</hi>
+                        <hi rend="bold">athias</hi>
+                        <hi rend="bold">. et al.</hi> (2019). Dataset of Pages from Early Printed Books with Multiple Font Groups. In 
+                        <hi rend="italic">Proceedings of the 5th International Workshop on Historical Document Imaging and Processing</hi>. HIP ’19. New York, NY, USA: Association for Computing Machinery, pp. 1–6. 
+                        <ref target="https://doi.org/10.1145/3352631.3352640">10.1145/3352631.3352640</ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

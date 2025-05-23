@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="TILTON_Lauren_Digital_Documerica__Picturing_the_Environment_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Digital Documerica: Picturing the Environment in 1970s America</title>
+                <author>
+                    <persName>
+                        <surname>Arnold</surname>
+                        <forename>Taylor</forename>
+                    </persName>
+                    <affiliation>University of Richmond, United States of America</affiliation>
+                    <email>tarnold2@richmond.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Lazar</surname>
+                        <forename>Mia</forename>
+                    </persName>
+                    <affiliation>University of Richmond, United States of America</affiliation>
+                    <email>miajlazar@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Tilton</surname>
+                        <forename>Lauren</forename>
+                    </persName>
+                    <affiliation>University of Richmond, United States of America</affiliation>
+                    <email>ltilton@richmond.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-20T09:27:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>digital project</term>
+                    <term>documentary photography</term>
+                    <term>recommender system</term>
+                    <term>environment</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>eco-criticism and environmental analysis</term>
+                    <term>image processing and analysis</term>
+                    <term>public humanities collaborations and methods</term>
+                    <term>user experience design and analysis</term>
+                    <term>Design studies</term>
+                    <term>History</term>
+                    <term>Environmental</term>
+                    <term>ocean</term>
+                    <term>and waterway studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">This poster introduces the project Digital Documerica, a digital public project offering a search and discovery interface, interactive visualizations, and additional media resources to broaden the reach and access of a collection of nearly 16,000 documentary environmental photographs from the 1970s. Digital Documerica is available at https://digitaldocumerica.org/. The source code and all associated data are available under an MIT license from https://github.com/distant-viewing/digdocumerica/. The project engages with recent research and methods in the digital and public humanities to produce a generous interface that links together many different dimensions of the collection (Arnold et al. 2017, 2020; Brennan 2016; Caldwell et al. 2008; Wingo, Heppler, and Schadewald 2020; Whitelaw 2015). Additionally, the project experiments and evaluates ways to integrate recent advances in AI research, such as multimodial LLMs, into search and discovery interfaces (Arnold and Tilton 2024a, 2024b; Visual Media Workshop at the University of Pittsburgh, n.d.).</p>
+            <p style="text-align: left; ">The United States Environmental Protection Agency (EPA) emerged in 1970 to implement policies that would support efforts to improve the health of the environment and American citizens (Kline 2007; Sellars 1997; Shubinski 2009). Within a year of the EPA’s founding, the agency started a documentary photography project (Documerica) to record the current state of the environment and the improvements brought by new policies (Balaschak 2021; Environmental Protection Agency, Office of the Administrator, n.d.; Shahi 2023). Documerica’s director, Gifford Hampshire, aimed to create a visual “baseline” of photographs that the EPA could compare to future photographs to determine their environmental policies’ effectiveness (Bustard and Potter 2013). Photographers set out to capture environmental issues such as oil slicks in waterways, urban smog, and landfills near residential areas. Photographs offered visual evidence of the work that the nation needed to do to realize its new environmental goals (Perkins 2022; Simmons 2009; Stanfield 1980). Hampshire intended for the photographers to return in a few years and document cleaner water, clearer air, and better living conditions. By the time the project finished in 1976, the Documerica collection encompassed over 21,000 photographs taken by over 100 contract photographers in all 50 states and Puerto Rico (Peralta 1981).</p>
+            <p style="text-align: left; ">Digital Documerica provides an interface to the nearly 16,000 public-domain Documerica photographs digitized and published by the U.S. National Archives (NARA). Despite collection’s digital availability and its important connections to present conversations around environmental policy, Documerica is not as widely known or discussed as other documentary photography collection, particularly outside of academic publications (Taylor 2014). Our project builds awareness for the collection by creating meaningful conversations around these photographs and showing the state of the nation’s environment in the 1970s, discussing how photographs shaped environmental policy, and connecting the images to environmental issues today (Cox and Tilton 2019). We open new modes of search and discovery that greatly extend the limited metadata currently available on the NARA site. Additional new research is also included alongside the collection, including a color correction algorithm that significantly improves the aesthetic qualities of the collection (Arnold and Tilton 2024a).</p>
+            <p style="text-align: left; ">Landing on the first page of Digital Documerica, visitors are given a brief historical context and invited to explore the different entry points to the photographs (Figure 1). Visitors can choose to select a random photograph, select based on metadata, or start by looking at the collection as classified by 56 clusters (Figure 4). Descriptions of the clusters are given in Table 1 and 2. Clustering was done using dimensionality reduction from the terms used in automatically generated captions. Clicking on any thumbnail from a cluster shows a randomly selected photograph from the topic. This photograph is displayed on a dedicated page that includes archival metadata and automatically generated information (Figure 5). The latter includes a caption that was auto-generated from a multimodal large language model. There is also a set of 16 images that have the most similar captions, allowing visitors to explore the collection along thematic and stylistic dimensions. A link to the authoritative NARA collection is given on each page for visitors who want to learn more about the physical archive. In addition to the photographs and visualization tools for exploring them, users can also listen to a set of original oral histories that will feature photographers and EPA administrators (Figure 7). The interviews provide context to the conditions that shaped which subjects were documented, the challenges of a large-scale photography project, and the work has been given to the long-term preservation of the collection. Visitors can then watch documentary vignettes highlighting and further contextualizing the environment’s relationship to health, inequality, and everyday life.</p>
+            <p style="text-align: left; ">As we think about the role of the climate and environment in our daily lives, the longer history of environmentalism and the condition of the United States in the 1970s provides an opportunity to understand the role of environmental agencies and policies in addressing our relationship to our natural world (Azoulay 2008; Hale 2019; Raiford 2011; Sandweiss 2002). The Digital Documerica project offers an powerful tool for exploring and placing these initiatives in context with current environmental efforts and research in documentary photography.</p>
+            <figure>
+                <graphic n="1001" width="16.002cm" height="9.0805cm" url="/tmp/tmpe9w_d1se/Pictures/3946db7545d0eb6d558fa9aeb5c1470e.jpg" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 1. Screenshot of the landing page for the Digital Documerica public project. The project is currently hosted and publicly available at https://digitaldocumerica.org.</p>
+            <p style="text-align: left; ">
+                <graphic n="1002" width="16.002cm" height="9.0805cm" url="/tmp/tmpe9w_d1se/Pictures/3946db7545d0eb6d558fa9aeb5c1470e.jpg" rend="inline"/>Figure 2. Screenshot of the default search page with all of the photographs initially available.
+            </p>
+            <figure>
+                <graphic n="1003" width="16.002cm" height="9.0805cm" url="/tmp/tmpe9w_d1se/Pictures/3946db7545d0eb6d558fa9aeb5c1470e.jpg" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 3. Screenshot of the search page when looking for the term horse beach. A total of 8 results are returned.</p>
+            <figure>
+                <graphic n="1004" width="16.002cm" height="9.0805cm" url="/tmp/tmpe9w_d1se/Pictures/3946db7545d0eb6d558fa9aeb5c1470e.jpg" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 4. Screenshot of the cluster visualization page. Each block is a specific choosen image from one of the 56 clusters. Hovering over an image shows the tags that identify the given cluster. Clicking on an image brings up a dedicated page for the given image. Hovering over the question mark provides a textual description of the method used to generate the clusters.</p>
+            <figure>
+                <graphic n="1005" width="16.002cm" height="9.0805cm" url="/tmp/tmpe9w_d1se/Pictures/3946db7545d0eb6d558fa9aeb5c1470e.jpg" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 5. Example page dedicated to a specific photograph. Archival metadata is shown first, followed by AI-generated data. Descriptions about the methods used are given when users hover over the question mark icons. Clicking on one of the recommended photos in the bottom left loads a new photo page for the selected photograph.</p>
+            <figure>
+                <graphic n="1006" width="16.002cm" height="9.0805cm" url="/tmp/tmpe9w_d1se/Pictures/3946db7545d0eb6d558fa9aeb5c1470e.jpg" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 6. Example of the clusters detected using the automatically generated captions. Clicking on a cluster opens a search page that shows all of the images from a given cluster.</p>
+            <figure>
+                <graphic n="1007" width="16.002cm" height="9.0805cm" url="/tmp/tmpe9w_d1se/Pictures/3946db7545d0eb6d558fa9aeb5c1470e.jpg" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 7. Example of a media element on the website. Here, we have a video essay that we produced detailing the work of Documerica photographer Bill Kuykendall.</p>
+            <figure>
+                <graphic n="1008" width="16.002cm" height="15.51163888888889cm" url="/tmp/tmpe9w_d1se/Pictures/3946db7545d0eb6d558fa9aeb5c1470e.jpg" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 8. The first set of 28 clusters in the collection according to text-based analysis of the</p>
+            <p style="text-align: left; ">automatically generated captions. Example images from each can be seen in the screenshot</p>
+            <p style="text-align: left; ">shown in Figure 4.</p>
+            <figure>
+                <graphic n="1009" width="16.002cm" height="14.855472222222222cm" url="/tmp/tmpe9w_d1se/Pictures/3946db7545d0eb6d558fa9aeb5c1470e.jpg" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">Figure 9. The second set of 28 clusters in the collection according to text-based analysis of the automatically generated captions. Example images from each can be seen in the screenshot shown in Figure 4.</p>
+            <p style="text-align: left; ">Appendix</p>
+            <p>Below is the automatically generated captions for the following image in using the OpenAI API (Arnold and Tilton 2024b). The collection of captions for the images serve as the basis for the clustering and recommendation systems built into the site (Arnold and Tilton 2024b).</p>
+            <figure>
+                <graphic n="10010" width="16.002cm" height="10.756194444444445cm" url="/tmp/tmpe9w_d1se/Pictures/3946db7545d0eb6d558fa9aeb5c1470e.jpg" rend="inline"/>
+            </figure>
+            <p>
+                <hi rend="italic">English Caption</hi>: This photograph portrays a scene inside a subway car, capturing a diverse group of passengers engaged in various activities. The interior of the car features rows of seats on either side, occupied by passengers, and advertisements displayed above the windows. The subway car has a metallic finish both inside and outside, with details characteristic of a typical older model subway, such as fluorescent lighting and handles for standing passengers. Most passengers are shown seated, facing the camera; a few are standing. Many are engrossed in reading newspapers or books, which seems to be a popular activity among them. The passengers display a range of attire from casual to semi-formal, reflective perhaps of different professions or personal styles. This attire, in combination with the various hairstyles and accessories, suggests the image may be from the 1970s or 1980s. There is a sense of quiet engagement, as the passengers mainly keep to themselves, engaged in their reading or lost in thought. The atmosphere conveys a typical public transit environment where each person is absorbed in their own world, amidst the shared space of the subway car. The individuals vary in appearance, including men and women of different ages and possibly different backgrounds, reflecting an urban, multicultural setting. Some details that speak to the era include the style of clothes, such as leather jackets and wide collars, and the physical styles of the subway car itself. Overall, the composition of the photograph captures a slice of urban life, showing how people coexist and share public spaces while engaged in personal activities, set against the backdrop of a city’s public transit system.
+            </p>
+            <p>
+                <hi rend="italic">Spanish Caption</hi>: Esta fotografía muestra el interior de un vagón de metro, probablemente en una ciudad grande como Nueva York durante la década de 1970. La imagen captura una escena cotidiana con pasajeros sentados y de pie dentro del vagón. Hay dos filas de asientos alineados a cada lado del vagón, con un pasillo en el centro que permite el movimiento. Los pasajeros, de diversas edades y orígenes, están mayormente inmersos en actividades tranquilas: muchos leen periódicos, revistas o libros. Las personas están vestidas con ropa típica de la época, como chaquetas de cuero, abrigos, camisas estampadas y pantalones de diferentes colores y estilos. Algunos están de pie, sosteniéndose de las barras y asas fijadas al techo para mantener el equilibrio. Se observa una diversidad étnica entre los pasajeros, lo cual refleja quizás la población urbana de esa época. El vagón está equipado con barras metálicas, asas y una serie de anuncios colocados en la parte superior de las ventanas y paredes. La iluminación parece amarillenta, posiblemente debido a las luces fluorescentes o al desgaste de la fotografía con el tiempo. Hay una atmósfera de quietud, con los pasajeros enfocados en sus propios asuntos, lo que crea una impresión de calma y rutina en un ambiente público. En el fondo, se pueden ver puertas y ventanas, así como un ventilador fijado en el techo en el centro del vagón. Esta escena documenta la realidad cotidiana y atemporal del transporte público urbano, capturando los detalles de las interacciones humanas y los hábitos de viaje de los pasajeros.
+            </p>
+            <p>
+                <hi rend="italic">French Caption</hi>: Cette photographie montre l’intérieur d’une rame de métro, probablement dans une ville animée comme New York dans les années 1970. L’image présente une scène quotidienne avec des passagers assis et debout dans le wagon. Il y a deux rangées de sièges alignés de chaque côté de la rame, avec un espace libre au centre pour permettre la circulation. Les passagers, d’apparence variée et de différents âges, sont principalement absorbés par des activités calmes : beaucoup lisent des journaux, des magazines ou des livres. Les passagers sont vêtus de vêtements typiques de l’époque, avec des vestes en cuir, des manteaux, des chemises à motifs et des pantalons de différentes couleurs et styles. Certains sont debout, tenant les barres et les poignées fixées au plafond pour se stabiliser. On remarque une certaine diversité ethnique parmi les passagers, reflétant peut-être la population urbaine de cette période. Le wagon lui-même est équipé de barres métalliques, de poignées et d’une série de publicités alignées en haut des fenêtres et des murs. La lumière semble jaunie, ce qui pourrait être dû à l’éclairage fluorescent ou simplement à l’âge de la photo. Il y a une atmosphère d’immobilité, avec des passagers concentrés sur leur propre monde, créant une impression de calme et de routine dans un environnement public. À l’arrière-plan, des portes et fenêtres sont visibles, ainsi qu’un ventilateur fixé au plafond au centre de la rame. Cette scène documente une réalité quotidienne et intemporelle des transports en commun urbains, capturant les détails des interactions humaines et des habitudes de voyage des passagers.
+            </p>
+            <p>
+                <hi rend="italic">Chinese Caption</hi>: <hi rend="Chinese">这张照片展示了地铁车厢的内部场景，可能是在</hi>20<hi rend="Chinese">世纪</hi>70<hi rend="Chinese">年代的纽约等大城市中拍摄的。图片捕捉了日常的情景，车厢内有坐着和站着的乘客。两排座位沿车厢两侧排列，中间有一个过道方便乘客通行。乘客们年龄和背景各异，大部分都安静地进行自己的活动，许多人在阅读报纸、杂志或书籍。人们穿着典型的年代服装，比如皮夹克、大衣、有图案的衬衫和各种颜色和款式的裤子。一些人站着，手握车顶的扶杆和吊环来保持平衡。乘客中可以看到明显的种族多样性，可能反映了当时的城市人口构成。车厢内配有金属扶杆、吊环，上方墙壁和窗户上方排列着一排广告。灯光显得有些发黄，这可能是因为荧光灯的光源，也可能是因为照片本身的年代感。整体氛围宁静，乘客们都沉浸在自己的世界中，营造出一种公共环境中的平静与日常感。 在背景中，可以看到车门和窗户，车厢中央的天花板上装有一个风扇。这个场景记录了城市公共交通中日常而永恒的现实，捕捉了人们在旅途中的人际互动和习惯。
+ </hi>           </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-arnold2020visualizing"/>
+                        <anchor xml:id="refs"/>Arnold, Taylor, Nathaniel Ayers, Justin Madron, Robert Nelson, and Lauren Tilton. 2020. “Visualizing a Large Spatiotemporal Collection of Historic Photography with a Generous Interface.” In 
+                        <hi rend="italic">2020 IEEE 5th Workshop on Visualization for the Digital Humanities (VIS4DH)</hi>, 3035. 
+                        <ref target="https://doi.org/10.1109/VIS4DH51463.2020.00010">https://doi.org/10.1109/VIS4DH51463.2020.00010</ref>.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-arnold2017uncovering"/>Arnold, Taylor, Stacey Maples, Lauren Tilton, and Laura Wexler. 2017. “Uncovering Latent Metadata in the FSAOWI Photographic Archive.” 
+                        <hi rend="italic">Digital Humanities Quarterly</hi> 11 (2). 
+                        <ref target="http://digitalhumanities.org/dhq/vol/11/2/000299/000299.html">http://digitalhumanities.org/dhq/vol/11/2/000299/000299.html</ref>.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-arnold2024docu"/>Arnold, Taylor, and Lauren Tilton. 2024a. “Automated Image Color Mapping for a Historic Photographic Collection.” In 
+                        <hi rend="italic">CHR 2024: Computational Humanities Research Conference</hi>. CEUR Workshop Proceedings.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-arnold2024explainable"/>———. 2024b. “Explainable Search and Discovery of Visual Cultural Heritage Collections with Multimodal Large Language Models.” In 
+                        <hi rend="italic">CHR 2024: Computational Humanities Research Conference</hi>. CEUR Workshop Proceedings.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-azoulay2008"/>Azoulay, Ariella. 2008. 
+                        <hi rend="italic">The Civil Contract of Photography</hi>. New York: Zone Books.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-balaschak2021"/>Balaschak, Chris. 2021. 
+                        <hi rend="italic">The Image of Environmental Harm in American Social Documentary Photography</hi>. New York: Routledge.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-brennan2016"/>Brennan, Sheila A. 2016. “Public, First.” In 
+                        <hi rend="italic">Debates in the Digital Humanities 2016</hi>, 384–89. Minneapolis: University of Minnesota Press.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-bustard2013"/>Bustard, Bruce, and Lee Ann Potter. 2013. “Searching for the Seventies: Photographs from the Environmental Protection Agency’s DOCUMERICA Project.” 
+                        <hi rend="italic">Social Education</hi> 77 (2): 52–56.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-caldwell2008web"/>Caldwell, Ben, Michael Cooper, Loretta Guarino Reid, Gregg Vanderheiden, Wendy Chisholm, John Slatin, and Jason White. 2008. “Web Content Accessibility Guidelines (WCAG) 2.0.” 
+                        <hi rend="italic">WWW Consortium (W3C)</hi> 290 (1-34): 5–12.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-cox2019"/>Cox, Jordana, and Lauren Tilton. 2019. “The Digital Public Humanities: Giving New Arguments and New Ways to Argue.” 
+                        <hi rend="italic">Review of Communication</hi> 19 (2): 127–46.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-epa1977"/>Environmental Protection Agency, Office of the Administrator. n.d. “Photographers’ Correspondence and Assignments, 1972-1977; Records of the Environmental Protection Agency 1944-2006, Record Group 412.” National Archives at College Park, College Park, Maryland.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-hale2019"/>Hale, Grace Elizabeth. 2019. “Signs of Return: Photography as History in the u.s. South.” 
+                        <hi rend="italic">Southern Cultures</hi> 25 (1): 12–41.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-kline2007"/>Kline, Benjamin. 2007. 
+                        <hi rend="italic">First Along the River: A Brief History of the u.s. Environmental Movement</hi>. 3rd ed. Lanham: Rowman &amp; Littlefield.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-peralta1981"/>Peralta, Nancy Allen. 1981. “A Comparison of Two Government Sponsored Documentary Photography Projects: FSA 1935-1942 and Documerica 1970-1974.” Master’s thesis, California State University.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-perkins2022"/>Perkins, Tracy E. 2022. 
+                        <hi rend="italic">Evolution of a Movement: Four Decades of California Environmental Justice Activism</hi>. Oakland: University of California Press.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-raiford2011"/>Raiford, Leigh. 2011. 
+                        <hi rend="italic">Imprisoned in a Luminous Glare: Photography and the African American Freedom Struggle</hi>. Chapel Hill: The University of North Carolina Press.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-sandweiss2002"/>Sandweiss, Martha. 2002. 
+                        <hi rend="italic">Print the Legend: Photography and the American West</hi>. New Haven: Yale University Press.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-sellars1997"/>Sellars, Richard West. 1997. 
+                        <hi rend="italic">Preserving Nature in the National Parks: A History</hi>. New Haven: Yale University Press.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-shahi2023"/>Shahi, Kimia. 2023. “Images, Information, and the Infrastructure of EPA’s Project Documerica.” London, UK.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-shubinski2009"/>Shubinski, Barbara. 2009. “From FSA to EPA: Project Documerica, the Dustbowl Legacy, and the Quest to Photograph 1970s America.” PhD thesis, The University of Iowa.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-simmons2009"/>Simmons, Jerry. 2009. “DOCUMERICA: Snapshots of Crisis and Cure in the 1970’s.” 
+                        <hi rend="italic">Prologue</hi> 41 (1).
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-stanfield1980"/>Stanfield, Frank. 1980. “Project Documerica in the Southeast: The Use of Documentary Photography by the Environmental Protection Agency to Publicize Environmental Problems in the 1970’s.” Master’s thesis, The University of Georgia.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-taylor2014"/>Taylor, Dorceta E. 2014. 
+                        <hi rend="italic">Toxic Communities: Environmental Racism, Industrial Pollution, and Residential Mobility</hi>. New York: New York University Press.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-vmw2023"/>Visual Media Workshop at the University of Pittsburgh. n.d. “The Socio-Technical Sustainability Roadmap.” 
+                        <ref target="http://sustainingdh.net">http://sustainingdh.net</ref>.
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-whitelaw2015"/>Whitelaw, Mitchell. 2015. “Generous Interfaces for Digital Cultural Collections.” 
+                        <hi rend="italic">Digital Humanities Quarterly</hi> 9 (1).
+                    </bibl>
+                    <bibl rend="Bibliography">
+                        <anchor xml:id="ref-wingo2020"/>Wingo, Rebecca S., Jason A. Heppler, and Paul Schadewald. 2020. 
+                        <hi rend="italic">Digital Community Engagement: Partnering Communities with the Academy</hi>. Cincinnati: University of Cincinnati Press.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

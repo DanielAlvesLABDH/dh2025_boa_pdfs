@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LUCCHESI_Anita_Transcribing_the_Past__Contextualizing_the_Pr">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Transcribing the Past, Contextualizing the Present: AI-Assisted Document Contextualization, Limits, and Opportunities (Workshop)</title>
+                <author>
+                    <persName>
+                        <surname>Lucchesi</surname>
+                        <forename>Anita</forename>
+                    </persName>
+                    <affiliation>Casa de Oswaldo Cruz, Fiocruz, Brazil / Digital Scholar</affiliation>
+                    <email>anita.lucchesi@uni.lu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Takats</surname>
+                        <forename>Sean</forename>
+                    </persName>
+                    <affiliation>Centre for Contemporary and Digital History, C²DH / Digital Scholar</affiliation>
+                    <email>sean.takats@uni.lu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-09T21:03:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Pre-Conference Workshop and Tutorial</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>History</term>
+                    <term>AI</term>
+                    <term>Large Language Model</term>
+                    <term>Metadata Augmentation</term>
+                    <term>Document Contextualization</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>data publishing projects</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>manuscripts description</term>
+                    <term>representation</term>
+                    <term>and analysis</term>
+                    <term>History</term>
+                    <term>Humanities computing</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">The rapid development of artificial intelligence (AI) technologies, particularly machine learning and its applications like large language models (LLMs), is transforming the landscape of historical research in ways yet to be fully explored in recent digital history efforts. With their capacity to automatically transcribe vast troves of textual documents and surface patterns across massive textual corpora, these tools hold immense potential for expanding the scope and depth of scholarly inquiry. Yet they also introduce new ethical and epistemological challenges, reshaping the ways we discover, represent, and interpret historical evidence. </p>
+            <p style="text-align: left; ">Our agenda for the day embraces the proposition that building is a way of knowing, as articulated by Ramsay and Rockwell (2012), who argue that building digital objects is a form of scholarship that allows prototypes to function rhetorically as theoretical discourse. Similarly, Galey and Ruecker (2010) contend that prototypes can embody scholarly inquiry through design and experimentation. By situating participants as both builders and users of AI-assisted workflows, we aim to bridge theory and practice in digital history. In this way, this workshop will encourage participants to think critically about how digital workflows embody arguments and shape knowledge discovery. </p>
+            <p style="text-align: left; ">Our workshop draws inspiration from the
+                <hi rend="italic" xml:space="preserve"> AI Archivist</hi> approach outlined by Błoch, Vasques Filho, and Bojanowski (2022), which showcases the potential of combining traditional archival methods with modern natural language processing (NLP) technologies to reconstruct networks from historical correspondence. While their work focuses on leveraging named entity recognition (NER) and related NLP techniques to identify social entities and reconstruct networks from letters within the early modern Portuguese empire, we aim to extend and adapt this methodology to other types of historical sources. However, rather than targeting dataviz and research evidence, our goal is, in the first place, to enhance source discoverability and metadata augmentation, by prioritizing the structuring and annotation of data. 
+            </p>
+            <div type="div1" rend="DH-Heading1">
+                <head>What participants may expect </head>
+                <p style="text-align: left; ">Through guided tutorials and collaborative experimentation, participants will work with open- source tools, such as Tropy, integrated with handwritten text recognition (HTR) and optical character recognition (OCR) engines for transcription. Once automated transcriptions are reviewed, participants will begin experimenting with large language models (LLMs)—applying techniques such as text summarization and named entity recognition—to enrich item descriptions using notebook-based workflows.</p>
+                <p style="text-align: left; ">Attendees will gain practical experience with multilingual samples of historical sources representing a range of document types and research scenarios. While designing their own pipelines based on what facilitators will introduce, participants will strategize collaboratively about best practices for transparency and reproducibility, considering how to document and share their data alongside workflows that support the FAIR and CARE principles of open science. </p>
+                <p style="text-align: left; ">The workshop further contributes to pressing conversations around AI ethics and data justice by foregrounding questions of power, inclusion, and accountability in the development and application of machine learning tools. Discussing AI-bias and the limits of automation will highlight the expert informed judgments embedded in every computational workflow. Attendees will leave not only with a flexible toolkit for analyzing historical materials as data, but with a critical framework for interrogating how that data is constructed, processed, and mobilized in scholarly arguments. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Agenda </head>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">time</cell>
+                        <cell style="text-align: left;" rend="DH-Default">session</cell>
+                        <cell style="text-align: left;" rend="DH-Default">description</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">9:00–9:15 AM</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Welcome and Setup</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Introduction to the workshop goals and demo project; ensuring participants are technically set up.</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">9:15–9:45 AM</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Working with Transcriptions in Tropy</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Hands-on demonstration of the transcription and note-taking interface in Tropy (HTR/OCR-ready).</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">9:45–10:15 AM</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Descriptive Enrichment with LLMs</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Using LLMs to generate multilingual summaries of items; writing them back as Tropy notes.</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">10:15–10:30 AM</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Break</cell>
+                        <cell style="text-align: left;" rend="DH-Default"/>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">10:30–11:30 AM</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Interactive Experimentation </cell>
+                        <cell style="text-align: left;" rend="DH-Default">Participants work with a notebook environment to access the Tropy API and enrich item descriptions using large language models (LLMs).</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">11:30–12:00 PM</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Natural Language Search &amp; Extensions</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Overview and demo of search capabilities based on LLM-enriched descriptions.</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">12:00–12:30 PM</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Next steps, discussion and Feedback</cell>
+                        <cell style="text-align: left;" rend="DH-Default">Reflections, participant feedback, and Q&amp;A. Includes brief discussion of future applications and ways to stay engaged.</cell>
+                    </row>
+                </table>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Technical Requirements </head>
+                <p style="text-align: left; ">No prior programming experience is required, though basic familiarity with digital humanities tools is recommended. Sample datasets, including handwritten and typed documents, will be supplied, with participants encouraged to bring their own datasets if available. </p>
+                <p style="text-align: left; ">Participants should bring their own laptops. Tropy runs on Windows, Mac and Linux.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Expected Outcomes</head>
+                <p style="text-align: left; ">Participants will leave the workshop with:</p>
+                <list type="unordered">
+                    <item>A practical understanding of how to use LLMs to enrich transcribed historical sources</item>
+                    <item>Hands-on experience with the Tropy API and notebook-based workflows</item>
+                    <item>Access to example datasets, reusable scripts, and shared resources via GitHub</item>
+                    <item>Awareness of ethical considerations and FAIR/CARE principles in AI-enhanced historical research</item>
+                </list>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Błoch, Agata / Vasques Filho, Diego Bastos / Bojanowski, Michał</hi> (2022): “Networks from Archives: Reconstructing Networks of Official Correspondence in the Early Modern Portuguese Empire”, in: Social Networks 69: 123–135. DOI: 10.1016/j.socnet.2020.08.008.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Global Indigenous Data Alliance</hi> (2023): CARE Principles for Indigenous Data Governance, 23 Jan. 2023. https://www.gida-global.org/care [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Galey, Alan / Ruecker, Stan </hi>(2010): “How a Prototype Argues”, in: Literary and Linguistic Computing 25, 4: 405–424. DOI: 10.1093/llc/fqq021.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Ramsay, Stephen / Rockwell, Geoffrey </hi>(2012): “Developing Things: Notes toward an Epistemology of Building in the Digital Humanities”, in: Gold, Matthew K. (ed.): Debates in the Digital Humanities. Minneapolis: University of Minnesota Press.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Unsworth, John </hi>(2000): “Scholarly Primitives: What Methods Do Humanities Researchers Have in Common, and How Might Our Tools Reflect This?”, in: Humanities Computing: Formal Methods, Experimental Practice, London. http://people.lis.illinois.edu/~unsworth/Kings.5-00/primitives.html [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Unsworth, John </hi>(2021): “Scholarly Primitives 20 Years Later”, in: DARIAH-Campus, June 2021. https://campus.dariah.eu/en/resource/posts/scholarly-primitives-20-years-later [05.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold" xml:space="preserve">Wilkinson, Mark D. / Dumontier, Michel / Aalbersberg, IJsbrand J. / Appleton, Gabrielle / Axton, Myles / Baak, Arie / Blomberg, Niklas / Boiten, Jan-Willem / da Silva Santos, Luiz Bonino / Bourne, Philip E. / Bouwman, Jildau / Brookes, Antony J. / Clark, Tim / Crosas, Mercè / Dillo, Ingrid / Dumon, Olivier / Edmunds, Scott / Evelo, Chris T. / Finkers, Richard / Gonzalez-Beltran, Alejandra / Gray, Alasdair J.G. / Groth, Paul / Goble, Carole / Grethe, Jeffrey S. / Heringa, Jaap / ’t Hoen, Peter A.C. / Hooft, Rob / Kuhn, Thomas / Kok, Richard / Kok, Joost / Lusher, Sheri J. / Martone, Maryann E. / Mons, Barend </hi>(2016): “The FAIR Guiding Principles for Scientific Data Management and Stewardship”, in: Scientific Data 3, 1: 160018. DOI: 10.1038/sdata.2016.18.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

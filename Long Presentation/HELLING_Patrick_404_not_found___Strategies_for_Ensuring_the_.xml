@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="HELLING_Patrick_404_not_found___Strategies_for_Ensuring_the_">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>404 not found - Strategies for Ensuring the Sustainable Management of Living Resources in the Digital Humanities</title>
+                <author>
+                    <persName>
+                        <surname>Helling</surname>
+                        <forename>Patrick</forename>
+                    </persName>
+                    <affiliation>Data Center for the Humanities (DCH), University of Cologne, Germany</affiliation>
+                    <email>patrick.helling@uni-koeln.de</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Research Data Management</term>
+                    <term>RDM</term>
+                    <term>Software Management</term>
+                    <term>Living Resources</term>
+                    <term>Sustainability</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>database creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>digital research infrastructures development and analysis</term>
+                    <term>project design</term>
+                    <term>organization</term>
+                    <term>management</term>
+                    <term>sustainable procedures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Research data are a central output of research projects within the (Digital) Humanities and must be made findable, accessible, interoperable and reusable in the sense of the FAIR principles (Wilkinson et al. 2016). Research data management (RDM) counseling services and help desks, as well as infrastructure providers, support researchers in planning and organizing their research data management on both generic and domain-specific levels.<ref n="1" target="ftn1"/>
+            </p>
+            <p>In addition to research data, living resources can also be central research outputs of Digital Humanities research projects. Living resources can include tools or software for analyzing research data, as well as dynamic access points to and representation layers of research data that enable researchers to reuse scientific results within specific contexts. Examples are dynamic websites for data visualization, databases accessible through websites with additional tools for data analysis, or digital scholarly editions. To ensure the long-time accessibility of theses living resources, they must be curated and maintained permanently due to technical and organizational dependencies. Especially as long as the research data are not independently available, living resources need to be made as findable, accessible, interoperable and reusable as research data. </p>
+            <p>Although there are already existing strategies, services and best practices for handling research data (see Minn and Lemaire 2017; Witt et al. 2018), for archiving them (Rau, Helling and Barabucci 2022; Helling and Rau 2024; Helling, Rau and Mollenhauer 2024), also in the context of specific research communities (see Helling, Jung and Pielström 2022; Jung, Helling and Pielström 2023), there are still no standardized workflows and infrastructural services for handling living resources in a sustainable way, except for some services (Suchodoletz et al. 2023). In fact, many living resources, along with their associated research data, are lost shortly after deployment (see below and cf. Helling, Schildkamp and Mathiak 2019).</p>
+            <p>In this paper I will discuss the challenges of handling living resources and relate them to already existing strategies and their vulnerabilities. I will present an approach for managing living resources by considering the responsibilities of different stakeholders – researchers, funding institutions and data centers/libraries – and argue for their orchestration. </p>
+            <div type="div1" rend="DH-Heading1">
+                <head>Reality check – the sustainable management of living resources </head>
+                <p style="text-align: left; ">In general, a lot of different types of living resources with a variety of functionalities are existing. In this chapter, the status quo of the sustainable management of living resources will be exemplified by digital scholarly editions (DSE) (Sahle 2016). </p>
+                <p style="text-align: left; ">The 
+                    <hi rend="italic">catalogue of digital scholarly editions</hi>,<ref n="2" target="ftn2"/> hosted and curated by Patrick Sahle and his team, lists 846 DSEs (as of October 2024). All entries of the catalogue are accessible and reusable in an XML-format.<ref n="3" target="ftn3"/>
+                </p>
+                <figure>
+                    <graphic n="1001" width="16.002cm" height="10.354027777777778cm" url="/tmp/tmpqy8fqjz1/Pictures/819dad86b870b3a9e0ff0e4d2b78b5b2.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">
+                    <hi rend="italic" style="font-size:10pt">Figure 1: Amount of DSEs and their accessibility. (N=789)</hi>
+                </p>
+                <p style="text-align: left; ">An analysis of the accessibility of the DSEs listed in this comprehensive catalogue showed that only 383 of 789 analyzed DSEs are still accessible through their URLs (see fig. 1). There are several reasons why 406 digital scholarly editions are no longer accessible (see fig. 2). More than half of it have been moved permanently, 83 resources were found but are temporarily moved, and 63 resources are no longer findable. Additionally, many other error codes were registered (see fig. 2). </p>
+                <figure>
+                    <graphic n="1002" width="16.002cm" height="17.41311111111111cm" url="/tmp/tmpqy8fqjz1/Pictures/819dad86b870b3a9e0ff0e4d2b78b5b2.png" rend="inline"/>
+                </figure>
+                <p>
+                    <hi rend="italic" style="font-size:10pt">Figure 2: Registered error codes from 406 inaccessible DSEs. (N=406)</hi>
+                </p>
+                <p>Because I am not aware of the extent to which the catalogue is maintained and updated, the number of digital scholarly editions that are not accessible anymore could be high simply because the catalogue outdated. Nonetheless, to ensure the citability and reusability of living resources like digital scholarly editions (as well as research data), they should be stored and made accessible through sustainable infrastructures, which is evidently not often the case. The analysis of the accessibility of digital scholarly editions in Sahle’s catalogue indicates that comprehensive approaches for ensuring the sustainable hosting of living resources are still lacking (Helling et al. 2024). More precisely, each inaccessible resource represents the loss of publicly funded research results and, potentially, the loss of reproducibility of further scholarship, especially if the lost data and resources have already been cited and reused by other researchers. The result is not only a decline in quality and reliability of research, such as when resources cited in journal articles are not accessible anymore, but also the loss of cultural heritage, which should be preserved by the Humanities. </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Existing strategies for the sustainable hosting of living resources</head>
+                <p>There are of course existing strategies for ensuring the long-time accessibility of living resources: 
+                    <hi rend="bold">(1)</hi> investing sufficient money and human resources (Smithies et al. 2019) for data centers, libraries and infrastructures that support researchers with RDM and that offer technical solutions for storing research results and hosting living resources; 
+                    <hi rend="bold">(2)</hi> restricting technology-stacks (Arneil et al. 2019) for developing living resources, ideally on the basis of community-driven de-facto standards (see the discussion in Cugliana and van Zundert 2022: p. 49-50), but also on the basis of competencies and infrastructural facilities offered by data centers, libraries and infrastructural institutions; 
+                    <hi rend="bold">(3)</hi> virtualization (Smithies et al. 2019) through technologies such as Docker; and 
+                    <hi rend="bold">(4)</hi> static hosting of living resources (Arneil et al. 2019) e.g., an HTML version of a resource can reduce the maintenance effort for data centers, libraries and infrastructural institutions as well as for the researchers themselves and allowing easier hosting of multiple living resources. 
+                </p>
+                <p>Nevertheless, all these strategies are individually restrictive: 
+                    <hi rend="bold">(1)</hi> the comprehensive hosting of living resources does not scale well due to the diversity of technology-stacks used. As a result, nearly every living resource needs individual curation, making the investment in money and human resources incalculable. Furthermore, 
+                    <hi rend="bold">(2)</hi> there are only a few community-driven standards and best practices for the development of living resources and a potential restriction of technology-stacks introduced by data centers, libraries and infrastructural institutions can conflict with academic freedom. 
+                    <hi rend="bold">(3)</hi> Technologies like Docker require specialized infrastructure and qualified staff, which can be difficult to find. 
+                    <hi rend="bold">(4)</hi> Static hosting of living resources often results in the loss of functionalities that were developed and implemented trough research projects and that are necessary (cf. Fenlon 2020) for the usability and the accessibility of the research results they contain. 
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Responsibilities of the different stakeholder</head>
+                <p>Existing strategies for ensuring the sustainable accessibility of living resources need to balance scalability, academic freedom, functionality preservation and efficient reusability. However, there is still no approach that minimizes hosting costs, ensures the preservation of substantial functionalities and allows unrestricted planning and development of living resources. </p>
+                <p>As already described by other colleagues (cf. Given, Polkinghorne and Cattlin 2023), different stakeholders bear responsibilities for the sustainable hosting of living resources – 
+                    <hi rend="bold">researchers</hi>, 
+                    <hi rend="bold">funding institutions</hi> and 
+                    <hi rend="bold">data centers</hi>, 
+                    <hi rend="bold">libraries</hi> and 
+                    <hi rend="bold">infrastructural institutions</hi>. 
+                </p>
+                <p>
+                    <hi rend="bold">Researchers</hi> are experts in their respective fields. Given that they are receiving public funding for their research, it is their responsibility to ensure the sustainable availability of their research results and living resources developed during their research projects. To meet this responsibility, researchers need expertise support for planning and developing living resources, as well as sufficient funding for the sustainable development of these resources without cutting the research budget. In addition, researchers must be able to implement concepts for sustainable hosting of living resources after the end of their funding, something which should also be financed by funding institutions.
+                </p>
+                <p>
+                    <hi rend="bold">Funding institutions</hi> are funding research projects with public money. They coordinate the review process for research proposals and should only invest in projects that have concepts for the sustainable development and long-time hosting of living resources. Therefore, concepts of sustainability must be considered in review processes and reviewers need to have the competencies to evaluate them. In addition, funding institutions should allow researchers to apply for funding to support the long-time hosting and archiving of living resources, without reducing the research budget.
+                </p>
+                <p>
+                    <hi rend="bold">Data centers</hi>, 
+                    <hi rend="bold">libraries</hi> and 
+                    <hi rend="bold">infrastructural institutions,</hi> along with 
+                    <hi rend="bold" xml:space="preserve">their hosting institutions </hi>support researchers in questions on research and software management. They often offer RDM counseling and infrastructural services for researchers. These institutions should be able to teach researchers how to manage research data and software sustainably and maintain technical infrastructures for long-time hosting of living resources. Therefore, permanent funding for these institutions is needed. Because not every RDM service institution can address all research data and software management requirements of researchers, there is a need for business models that enable the use of services beyond local, regional, national or institutional borders, too. 
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Summary</head>
+                <p>To ensure the sustainable accessibility of living resources, it is essential that the different stakeholders recognize and act on their responsibilities. Only through close collaboration sustainable concepts for the permanent hosting of living resources can be implemented. </p>
+                <p>Researchers should incorporate the sustainable management of living resources from the very beginning of their research projects. </p>
+                <p>Funding institutions should only accept project proposals with concepts for the sustainable hosting of living resources and make these concepts part of their review processes.</p>
+                <p>Data centers, libraries and infrastructural institutions as well as their hosting institutions should offer specific support for researchers, such as software management plans (Alves et al. 2021), and develop strategies and technical infrastructures for long-time hosting of living resources.</p>
+                <p>In my talk I will elaborate on the responsibilities of the different stakeholders and argue for their orchestration, which will lead to a concept for managing living resources that has the potential to overcome the limitations of existing strategies. </p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                    
+                        <ref target="https://www.forschungsdaten.org/index.php/FDM-Kontakte">https://www.forschungsdaten.org/index.php/FDM-Kontakte</ref>, (last access: 04th October 2024).
+                    
+                </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                        
+                            <ref target="http://www.digitale-edition.de/">www.digitale-edition.de/</ref>, (last access: 04th October 2024).
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                        
+                            <ref target="https://git.uni-wuppertal.de/dhsfu/sde-catalog">https://git.uni-wuppertal.de/dhsfu/sde-catalog</ref>, (last access: 04th October 2024).
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Alves, Renato, Dimitrios Bampalikis, Leyla Jael Castro, José María Fernández, Jennifer Harrow, Mateusz Kuzak, Eva Martin, Fotis E. Psomopoulos, and Allegra Via</hi>. 2021. „ELIXIR Software Management Plan for Life Sciences“. Preprint. BioHackrXiv. 
+                        <ref target="https://doi.org/10.37044/osf.io/k8znb">https://doi.org/10.37044/osf.io/k8znb</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Arneil, Stewart, Martin Holmes, and Greg Newton</hi>. 2019. „Project Endings: Early Impressions From Our Recent Survey On Project Longevity In DH“. DataverseNL. 
+                        <ref target="https://doi.org/10.34894/SIKOBN">https://doi.org/10.34894/SIKOBN</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Cugliana, Elisa and Joris van Zundert</hi>. 2022. “A Computational Turn in Digital Philology.” In: La filologia germanica e il paradigma digitale: modelli, metodi e strumenti per i testi germanici medievali = Germanic philology and the digital paradigm: models, methods and tools for medieval germanics texts. o. J. Milano: Prometheus. S. 40/50.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Fenlon, Katarina Simone</hi>. 2020. „Sustaining Digital Humanities Collections: Challenges and Community-Centred Strategies“. International Journal of Digital Curation 15 (1): 13. 
+                        <ref target="https://doi.org/10.2218/ijdc.v15i1.725">https://doi.org/10.2218/ijdc.v15i1.725</ref>. 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Given, Lisa M., Sarah Polkinghorne, and Joann Cattlin</hi>. 2024. „Structural Elements and Spheres of Expertise: Creating a Healthy Ecosystem for Cultural Data Initatives“. Journal oft he Association for Information Science and Technology 75 (10): 1070-86. 
+                        <ref target="https://doi.org/10.1002/asi.24849">https://doi.org/10.1002/asi.24849</ref>. 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Helling, Patrick, Philip Schildkamp, and Brigitte Mathiak</hi>. (2019). Nachhaltigkeit von Forschungsdateninfrastrukturen am Beispiel von Digitalen Editionen - Was steht noch in 2019?. Zenodo. 
+                        <ref target="https://doi.org/10.5281/zenodo.3480185">https://doi.org/10.5281/zenodo.3480185</ref>. 
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Helling, Patrick, Kerstin Jung, and Steffen Pielström</hi>. 2022. Making Research Data FAIR. Seriously? - Reflections on Research Data Management in the Computational Literary Studies. Digital Humanities 2022 - Responding to Asian Diversity (DH 2022), Tokyo, Japan. 
+                        <ref target="https://doi.org/10.5281/zenodo.6966537">https://doi.org/10.5281/zenodo.6966537</ref>
+                        <hi rend="Hyperlink">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Helling, Patrick, Felix Rau and Elisabeth Mollenhauer</hi>. 2024. Workflow zur Datensicherung &amp; Datenarchivierung: Archivieren am Data Center for the Humanities der Universität zu Köln (1.0.0). Zenodo. 
+                        <ref target="https://doi.org/10.5281/zenodo.13744954">https://doi.org/10.5281/zenodo.13744954</ref>
+                        <hi rend="Hyperlink">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Helling, Patrick and Felix Rau. 2024.</hi> "Ein blinder Fleck in der FDM Versorgungslandschaft? Dark und Cold Archiving Services am Data Center for the Humanities". b.i.t. online 27 (2024) Nr. 1, S. 27–34. 
+                        <ref target="https://www.b-i-t-online.de/heft/2024-01-fachbeitrag-helling.pdf">https://www.b-i-t-online.de/heft/2024-01-fachbeitrag-helling.pdf</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Helling, Patrick, Felix Rau, Philip Schildkamp, Lisa Dieckmann, Johanna Puhl, and Ulrike Henny-Krahmer</hi>. 2024. „Still alive?! - Vom Umgang mit lebenden Systemen in den Digital Humanities“, Februar. 
+                        <ref target="https://doi.org/10.5281/ZENODO.10698430">https://doi.org/10.5281/ZENODO.10698430</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Jung, Kerstin, Patrick Helling, and Steffen Pielström</hi>. 2023. „Forschungsdatenmanagement in den Computational Literary Studies - Bericht über die FDM-Landschaftsvermessung im DFG Schwerpunktprogramm 2207 ‚Computational Literary Studies‘“. Zenodo. 
+                        <ref target="https://doi.org/10.5281/ZENODO.10419199">https://doi.org/10.5281/ZENODO.10419199</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Minn, Gisela and Marina Lemaire</hi>. 2017. „Forschungsdatenmanagement in den Geisteswissenschaften. Eine Planungshilfe für die Erarbeitung eines digitalen Forschungskonzepts und die Erstellung eines Datenmanagementplans“, Universität Trier eSciences Working Papers, Nr. 03. Online: 
+                        <ref target="https://ubt.opus.hbz-nrw.de/opus45ubtr/frontdoor/deliver/index/docld/799/file/WP_03_DMP_final_Juli_2017.pdf">https://ubt.opus.hbz-nrw.de/opus45ubtr/frontdoor/deliver/index/docld/799/file/WP_03_DMP_final_Juli_2017.pdf</ref> (last access: 04th October 2024).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Rau, Felix, Patrick Helling, and Gioele Barabucci</hi>. 2022. Pragmatic Research Data Management in the Humanities: Dark and Cold Archiving at the Data Center for the Humanities. Digital Humanities 2022 - Responding to Asian Diversity (DH 2022), Tokyo, Japan. 
+                        <ref target="https://doi.org/10.5281/zenodo.6967064">https://doi.org/10.5281/zenodo.6967064</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Sahle, Patrick</hi>. 2016. „What is a scholarly digital edition (SDE)?”. In: Driscoll, Matthew James, und Elena Pierazzo, Hrsg. 2016. 
+                        <hi rend="italic">Digital Scholarly Editing: Theories and Practices</hi>. Open Book Publishers. 
+                        <ref target="https://doi.org/10.11647/OBP.0095">https://doi.org/10.11647/OBP.0095</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Smithies, James, Carina Westling, Anna-Maria Sichani, Pam Mellen and Arianna Ciula</hi>. 2019. “Mapping 100 Digital Humanities Projects: Digital Scholarship &amp; Archiving in King’s Digital Lab.” digital humanities quarterly. Online: 
+                        <ref target="http://www.digitalhumanities.org/dhq/vol/13/1/000411/000411.html">http://www.digitalhumanities.org/dhq/vol/13/1/000411/000411.html</ref> (last access: 04th October 2024).
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Suchodoletz, Dirk von, Peter Brettschneider, Alexandra Axtmann, Maximilian Heber, Lars Oberländer, Jan Leendertse, Irene Schumm, et al</hi>. 2023. „Bausteine Forschungsdatenmanagement : 2023, 5Sicherstellung der Reproduzierbarkeit von Forschungsergebnissen durch Bewahrung des Zugriffs auf Forschungssoftware“. Application/pdf, Dezember. 
+                        <ref target="https://doi.org/10.17192/BFDM.2023.5.8555">https://doi.org/10.17192/BFDM.2023.5.8555</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Wilkinson, Mark D., Michel Dumontier, IJsbrand Jan Aalbersberg, Gabrielle Appleton, Myles Axton, Arie Baak, Niklas Blomberg, et. al.</hi> 2016. „The FAIR Guiding Principles for Scientific Data Management and Stewardship“. 
+                        <hi rend="italic">Scientific Data</hi> 3 (1): 160018. 
+                        <ref target="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</ref>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Witt, Andreas, Jonathan Blumtritt, Patrick Helling, Brigitte Mathiak, and Felix Rau</hi>. 2018. „Forschungsdatenmanagement in den Geisteswissenschaften an der Universität zu Köln“. 
+                        <hi rend="italic">o-bib. Das offene Bibliotheksjournal / Herausgeber VDB</hi>, September, 104-117 Seiten. 
+                        <ref target="https://doi.org/10.5282/O-BIB/2018H3S104-117">https://doi.org/10.5282/O-BIB/2018H3S104-117</ref>.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

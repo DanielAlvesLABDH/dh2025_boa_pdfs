@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SEN_Doruk_Framework_for_AI_Driven_Heritage_Research_at_Silah">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Framework for AI-Driven Heritage Research at Silahtarağa Archive</title>
+                <author>
+                    <persName>
+                        <surname>Şen</surname>
+                        <forename>Doruk</forename>
+                    </persName>
+                    <affiliation>Department of Industrial Engineering, Istanbul Bilgi University, Turkey</affiliation>
+                    <email>doruk.sen@bilgi.edu.tr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Gökçen</surname>
+                        <forename>Amed</forename>
+                    </persName>
+                    <affiliation>Silahtarağa Archive, Istanbul Bilgi University, Turkey; Institute for Area Studies, Leiden University, The Netherlands</affiliation>
+                    <email>amed.gokcen@bilgi.edu.tr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Koşanay</surname>
+                        <forename>Başak</forename>
+                    </persName>
+                    <affiliation>Silahtarağa Archive, Istanbul Bilgi University, Turkey; Department of Political Science, Istanbul Bilgi University, Turkey</affiliation>
+                    <email>basak.kosanay@bilgi.edu.tr</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Balkan</surname>
+                        <forename>Ece</forename>
+                    </persName>
+                    <affiliation>Silahtarağa Archive, Istanbul Bilgi University, Turkey; Department of Information and Document Management, Marmara University, Turkey</affiliation>
+                    <email>ece.balkan@bilgi.edu.tr</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-29T20:23:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Artificial Intelligence</term>
+                    <term>Digital Humanities</term>
+                    <term>Archive</term>
+                    <term>Heritage Research</term>
+                    <term>Library and Information Science</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>data modeling</term>
+                    <term>digitization (2D &amp; 3D)</term>
+                    <term>natural language processing</term>
+                    <term>History</term>
+                    <term>Humanities computing</term>
+                    <term>Informatics</term>
+                    <term>Library &amp; information science</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Introduction</p>
+            <p>
+                <anchor xml:id="OLE_LINK1"/>Industrial heritage provides a link to the history of technological and socio-economic development. However, it is at risk due to factors such as environmental degradation, urban redevelopment, neglect, and obsolescence. Therefore, the intersection of heritage and computational methodologies has emerged as a critical study area. These approaches promise to offer innovative solutions for preserving, managing, and interpreting industrial heritage records (Bowker &amp; Star, 1999; Cossons, 2012). Such creative solutions address the complex preservation needs from accessibility, engagement, and long-term sustainability stances to provide new scholarly or public engagement forms (Manovich, 2001).
+            </p>
+            <p>The promise of Silahtarağa Archive, the archive of Silahtarağa Power Plant, is not different. The power plant operated in Istanbul from 1913 to 1983. It was founded with the efforts of several international capital groups, such as Austro-Hungarian Ganz and Belgian Sofina companies. Later, with the integration of machinery and technical know-how provided by Siemens and AEG groups, Silahtarağa Power Plant encompassed the industrial heritage of the late Ottoman Empire and the newly founded Republic of Türkiye. </p>
+            <p>Having first introduced uninterrupted electricity to Istanbul through tram lines, Silahtarağa exponentially expanded electricity distribution in Istanbul over the decades. This drove the process of an immense infrastructure initiative with street lighting and provided electricity to newly founded industries around the plane of Golden Horn, where Silahtarağa also resides, and to an ever-growing number of households. An extensive collection of maps was drawn to plan and display the existing electricity lines installed by Silahtarağa and related state departments over decades, primarily from the 1970s onwards.</p>
+            <p>The archive collection, which consists of layouts, plans, and documents such as reports, periodicals, and correspondences, exhibits the rapid urbanization of Istanbul during this period through electricity infrastructure. The map collection, in particular, differs from other Istanbul city map series’ which were drawn in previous decades by insurance companies, thus showing the ‘surface’ of the city via houses and businesses. Therefore, via the maps in the Silahtarağa Archive collection, the evolution of Istanbul can be observed with the ‘beneath’ of the city, enabling researchers with a broader set of visual data to work with. The site of Silahtarağa Power Plant is repurposed in 2006 as a campus for Istanbul Bilgi University called 
+                <hi rend="bold">santral</hi>istanbul, where Silahtarağa Archive also resides in. In this sense, the industrial heritage of Silahtarağa Power Plant provides both the “intrinsic and evidential value” from the material evidence of the industrial site itself and first-hand documentary sources inherited from the plant, enabling researchers to engage with the industrial heritage in a multifaceted way (Cossons, 2012: 6-7).
+            </p>
+            <p>
+                <hi rend="bold">Digitization Process and Data Preparation</hi>
+            </p>
+            <p>Until recently, archive materials remained in analog formats, accessible only through physical visits. The subtle state of many original documents also hinders their proper and detailed investigation, which must be appropriately addressed. Therefore, digitization is pivotal in transforming physical records into structured, accessed, and interpreted digital assets (Manovich, 2001). The UNESCO Recommendation on Open Science aligns with the ongoing efforts of the Silahtarağa Archive in preserving cultural heritage and knowledge dissemination. As articulated in this policy framework, accessibility and usability of historical data is critical for increased transparency, collaboration, and inclusivity (UNESCO, 2021). In this regard, we have digitized most of this archive to ensure its long-term preservation and expand scholarly access with a practical classification approach (Bowker &amp; Star, 1999). Istanbul maps and texts such as correspondences, periodicals, reports, and more are being digitized and processed at Silahtarağa Archive with the collaboration of Bibliothèque Nationale de France (BnF) and Istanbul Bilgi University, the housing institute of the archive. They are pressed, coded, and digitized with an A0-A1 scanner in different image formats and 300 dpi.</p>
+            <p>This approach resulted in a corpus of high-quality digital images. Each document was assigned an identifier and defined using a metadata schema derived from widely accepted standards but adapted for the archive’s distinctive content. We also recorded language information for textual materials due to the multilingual complexity of the archive. Its linguistic variety reflects Istanbul’s multifaceted historical layers and international connections. This groundwork sets the stage for achieving more dependable automated transcription, indexing, and AI-driven recognition tasks.</p>
+            <p>
+                <hi rend="bold">AI Methodology and Preliminary Workflow</hi>
+            </p>
+            <p>We focused on developing a structured AI methodology along with the digitization process. Before fully implementing these computational tools, we outlined and tested preliminary workflows to ensure feasibility and refine our approach. Therefore, the archive’s AI approach contains four main intended pipelines partially in the planning or implementation stages:</p>
+            <p>
+                <hi rend="italic">Map feature extraction and recreation</hi>
+            </p>
+            <p>Computer vision models such as convolutional neural networks and transformer-based architectures trained on annotated historical maps are instrumental in detecting and categorizing visual features such as roads, waterways, infrastructure, and building footprints. Including geospatial elements within the cartographic analysis permits temporal comparisons to track the evolution of urban layouts over the decades. The preliminary results outline the steps for data annotation, model selection, and iterative refinement of the process with the necessities that come with the maps' historical properties.</p>
+            <p>
+                <hi rend="italic">Text recognition and Multilingual Entity Extraction</hi>
+            </p>
+            <p>The first phase of this research is formed by recognizing multiple scripts and orthographies. The corpus's training sets will inform these models by improving their accuracy beyond that of generic off-the-shelf tools. Building on this foundation, structured techniques such as entity recognition are expected to improve interpretability and reveal the material’s relational value. Preliminary workflows reflect the potential of this research as metadata entries grow in line with the BnF digitization process.</p>
+            <p>
+                <hi rend="italic">Semantic Retrieval and Cross-Lingual Queries</hi>
+            </p>
+            <p>Moving beyond keyword queries, we plan to implement semantic retrieval models that understand conceptual relationships associated with thematic shifts in urbanization. Multilingual embeddings will be generated to fuel this research phase, allowing researchers to provide queries in one language and retrieve relevant documents in another. The research centers on implementing Natural Language Processing models and vector databases to provide semantic search tools that can be integrated incrementally and tested with small pilot datasets.</p>
+            <p>3D Reconstruction</p>
+            <p>This research phase aims to create a comprehensive digital 3D reconstruction of the historic Silahtarağa Power Plant using archived materials. The goal is to preserve its architectural heritage and provide a virtual experience. Advanced technologies like VR and AR are expected to be integrated to increase global reach and impact. Detailed 3D models of the building's facades, machines, and equipment will be developed through in-depth research and analysis to ensure the correct grounds for historical accuracy and authenticity.</p>
+            <p>Conclusion</p>
+            <p>Our work presents a framework for the potential of digital humanities methodologies and Open Science efforts at Silahtarağa Archive. By digitizing over 2 million documents eventually and integrating over 80.000 documents with BnF's Gallica at the first stage of our partnership, we make significant steps toward the long-term preservation and accessibility of historical data. Our AI-driven approach is expected to form a ground for researchers to analyze and explore the evolution of Istanbul's urban landscape through electricity infrastructure.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Bowker, G., &amp; Star, S. L. (1999). Sorting things out. Classification and its consequences, 4.</bibl>
+                    <bibl style="text-align: left; ">Cossons, N. (2012). Why preserve the industrial heritage? In J. Douet (Ed.), Industrial heritage re-tooled: The TICCIH guide to industrial heritage conservation (pp. 6–16). Routledge.</bibl>
+                    <bibl style="text-align: left; ">Manovich, L. (2001). What is new media. The language of new media, 6, 1-15.</bibl>
+                    <bibl style="text-align: left; ">UNESCO (2021). UNESCO Recommendation on Open Science. UNESCO.</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

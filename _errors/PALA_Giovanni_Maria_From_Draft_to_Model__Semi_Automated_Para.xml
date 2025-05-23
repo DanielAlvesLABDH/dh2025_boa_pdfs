@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PALA_Giovanni_Maria_From_Draft_to_Model__Semi_Automated_Para">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>From Draft to Model: Semi-Automated Parametric Extraction of Historical Ship Designs</title>
+                <author>
+                    <persName>
+                        <surname>Pala</surname>
+                        <forename>Giovanni Maria</forename>
+                    </persName>
+                    <affiliation>University of Oxford, United Kingdom</affiliation>
+                    <email>giovanni.pala@history.ox.ac.uk</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Mercuri</surname>
+                        <forename>Marco</forename>
+                    </persName>
+                    <affiliation>Bologna, Italy</affiliation>
+                    <email>marco.mercuri79@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Santi</surname>
+                        <forename>Gian Maria</forename>
+                    </persName>
+                    <affiliation>University of Bologna, Italy</affiliation>
+                    <email>gianmaria.santi2@unibo.it</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Costiner</surname>
+                        <forename>Lisandra</forename>
+                    </persName>
+                    <affiliation>Utrecht University, Netherland</affiliation>
+                    <email>l.costiner@uu.nl</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Parametric reconstruction; Historical ship plans; Data modeling; Digitization; Comparative analysis</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>data modeling</term>
+                    <term>digitization (2D &amp; 3D)</term>
+                    <term>image processing and analysis</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>Computer science</term>
+                    <term>Design studies</term>
+                    <term>History</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">Introduction </p>
+            <p style="text-align: left; ">The standardisation of European ship planning and construction was an important development for major European Atlantic powers during the eighteenth century. While not a novel feature of shipbuilding, the degree and formalisation of shipbuilding reached in countries such as England and France by the end of the Napoleonic Wars (1815) was unprecedented. This movement went hand in hand with experimentation in ship design and a rapid growth of European fleets, both commercial and military (cf. Winfield, 2007; Ferreiro and McGee, 2006; Pritchard, 1987; O'Brien and Duran, 2010).</p>
+            <p style="text-align: left; ">While accounts of individual vessels’ relative sailing performance abound, there is currently a lack of methods to attempt a robust comparison between them, as well as a means to relate plans to models, and models to other models in a semi-automated way. Current approaches are not automatic, require often idiosyncratic choices, and recur to anachronistic techniques such as spline interpolation which make parametric comparisons difficult and are not grounded in the actual historical drawing techniques (for an overview of the literature, see the excellent work by Cannon, 2019). </p>
+            <p style="text-align: left; ">This study proposes an approach that addresses some of these shortcomings, working on a historically informed model of the drawing of the ship. Using exemplar plans from the British admiralty and contemporary sources on plan-making, it constructs an algorithm to extract salient points on specific plane views, attempting a parametric representation of the hull in order to facilitate both comparison and reconstruction. The algorithm segments the ship view, extracts key points, and with minimal user input reconstructs the ship hull. The hull model is then stored as a set of parameters, reducing each hull design to vectorial form. A few downstream options are then explored: model parametric comparison and sailing performance simulation.</p>
+            <p style="text-align: left; ">Data and Historical Sources</p>
+            <p style="text-align: left; ">Our work is based on two historical sources: ship plan drawing instruction manuals and the ship plans themselves. The manuals were authoritative printed books that provided the instructions for constructing a ship plan. They include tables of lengths for different parts, and step by step drawing instructions to create the section and views of the ships with minute geometrical precision. Currently, in the literature, ship sections from the final drawings are used as a starting point for 3D historical ship reconstruction and rendering, but are manually adjusted and do not utilise a systematic generation approach. </p>
+            <p style="text-align: left; ">We use historical manuals for ship plan construction to overcome limitations of current methods. Because plans were constructed on specific proportions and sequential step-by-step procedures, the knowledge of this method allows us to fit on the original ship plans a function to re-create the models and extract the parameters in use (length of specific beams and propositions between them). This allows for a reliable parametrisation of the model, and one that is historically congruent (see for example, Franklin 1989). </p>
+            <p style="text-align: left; ">For our analysis we use a selection of authoritative manuals from the time, which we consult to obtain both the drawing construction method, and the proportions used for each ship type (e.g. Frigate vs. Dutchman). These include works such as Duhamel Du Monceau’s 
+                <hi rend="italic">Elements de l’Architecture Navale</hi> (1763), which was widely circulated and translated in English, and M. Stallkart’s 
+                <hi rend="italic">Naval Architecture</hi> (1797), a difficult to find but extremely rich multivolume treatment of the topic. More details are presented in the table at the end of the abstract. For testing, a selection of ship models’ plans available from the collection of the British National Maritime Museum are used.
+            </p>
+            <p style="text-align: left; ">Method</p>
+            <p style="text-align: left; ">Our method starts from widely available 2D sources, rather than scale models, to reconstruct the final vessel in 3D. We introduce a semi-automatic approach to decode the original drawings. This is achieved by identifying the centres of circular arcs and the positions of straight segments as traced by historical draftsmen. This allows for the parametrization of historical designs, adhering to the original design processes of the era (see Figure 1). </p>
+            <figure>
+                <graphic n="1001" width="9.339791666666667cm" height="10.662708333333333cm" url="/tmp/tmpx5s_33t2/Pictures/a6baf195e290a2083ffd1cf9fd3bc723.jpeg" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">
+                <hi rend="italic bold" xml:space="preserve">Figure </hi>
+                <hi rend="italic bold">1</hi>
+                <hi rend="italic bold">. Construction of Section via Geometric Procedure</hi>
+            </p>
+            <p style="text-align: left; ">The point extraction is achieved via user input: a few key elements and measurement as expressed on the plan are inserted, and the software identifies the typology of hull and parameters using the embedded historical information. The elements include: relative distance of the beams, length of specific portions of the plan, ship size. These are expressed on plans. This user-mediated extraction allows both for the precise re-drawing of the plan digitally, and for subsequent processing. Once the ship’s sections are semi-automatically reconstructed from the 2D drawings, a watertight surface geometry of the hull is generated, ready for hydrodynamic performance simulations (see Figure 2 for the pipeline).</p>
+            <figure>
+                <graphic n="1002" width="15.901458333333334cm" height="3.96875cm" url="/tmp/tmpx5s_33t2/Pictures/a6baf195e290a2083ffd1cf9fd3bc723.jpeg" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">
+                <hi rend="italic" xml:space="preserve">Figure </hi>
+                <hi rend="italic">2</hi>
+                <hi rend="italic">. Extraction and Simulation Pipeline</hi>
+            </p>
+            <p style="text-align: left; ">This pipeline ensures the creation of an accurate model, faithful to the original design, avoiding reconstruction errors inherent to 3D modelling or non-original scale models. These models can then be used for final geometric comparisons and CFD simulation, in line with what has been illustrated in Pala and Costiner, 2024. </p>
+            <p style="text-align: left; ">Outcome and Significance</p>
+            <p style="text-align: left; ">Our model enables the acquisition of important parameters of historical ship designs, which enable their efficient storage, comparability, and replicability. The availability of models in parametric space, make the connection of their shape and design evolution more intuitive, de facto reducing the ship construction to a vector of specific lengths and measures. This, with the added benefit of a historically faithful approach, mimicking the procedure used in the past do draw ship plans.</p>
+            <p style="text-align: left; ">Importantly, our acquisition pipeline allows for the model to be compared in parametric space, and in turn makes the connection between model, ship design, and final sea-ready ship easier to draw and manage (figure 3 for an example of the connection with a hand-mad model). Moreover, we can use a watertight version of the hull for simulation of the ship behaviour, adding possible avenues of historical research to the outcomes of this method.</p>
+            <figure>
+                <graphic n="1003" width="15.875cm" height="7.858125cm" url="/tmp/tmpx5s_33t2/Pictures/a6baf195e290a2083ffd1cf9fd3bc723.jpeg" rend="inline"/>
+            </figure>
+            <p style="text-align: left; ">
+                <hi rend="italic" xml:space="preserve">Figure </hi>
+                <hi rend="italic">3</hi>
+                <hi rend="italic">. Digital Model and Drawings Connection</hi>
+            </p>
+            <p style="text-align: left; ">In constructing this procedurally generated model, we collect for the first time a systematic and step by step account of plan construction in ship drafting during the eighteenth century. This outcome will be of immediate interest to scholars interested in naval, military, and industrial history. </p>
+            <p style="text-align: left; ">TABLE of Ship Manual Sources</p>
+            <table rend="rules">
+                <row>
+                    <cell style="text-align: left;" rend="DH-Default">
+                        <hi rend="bold">Author</hi>
+                    </cell>
+                    <cell style="text-align: left;" rend="DH-Default">
+                        <hi rend="bold">Title</hi>
+                    </cell>
+                    <cell style="text-align: left;" rend="DH-Default">
+                        <hi rend="bold">Year</hi>
+                    </cell>
+                    <cell style="text-align: left;" rend="DH-Default">
+                        <hi rend="bold">Publisher/Location</hi>
+                    </cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;" rend="DH-Default">
+                        <hi rend="bold">Anonymous</hi>
+                    </cell>
+                    <cell style="text-align: left;" rend="DH-Default">ALBUM DE COLBERT</cell>
+                    <cell style="text-align: left;" rend="DH-Default">1670</cell>
+                    <cell style="text-align: left;" rend="DH-Default"/>
+                </row>
+                <row>
+                    <cell style="text-align: left;" rend="DH-Default">
+                        <hi rend="bold">Diderot &amp; D’Alambert</hi>
+                    </cell>
+                    <cell style="text-align: left;" rend="DH-Default">ENCYCLOPEDIE METHODIQUE, MARINE</cell>
+                    <cell style="text-align: left;" rend="DH-Default">1783</cell>
+                    <cell style="text-align: left;" rend="DH-Default"/>
+                </row>
+                <row>
+                    <cell style="text-align: left;" rend="DH-Default">
+                        <hi rend="bold">Duhamel Du Monceau</hi>
+                    </cell>
+                    <cell style="text-align: left;" rend="DH-Default">ELEMENS DE L’ARCHITECTURE NAVALE</cell>
+                    <cell style="text-align: left;" rend="DH-Default">1763</cell>
+                    <cell style="text-align: left;" rend="DH-Default"/>
+                </row>
+                <row>
+                    <cell style="text-align: left;" rend="DH-Default">
+                        <hi rend="bold">Ollivier, B.</hi>
+                    </cell>
+                    <cell style="text-align: left;" rend="DH-Default">TRAITE’ DE CONSTRUCTION</cell>
+                    <cell style="text-align: left;" rend="DH-Default">1736</cell>
+                    <cell style="text-align: left;" rend="DH-Default"/>
+                </row>
+                <row>
+                    <cell style="text-align: left;" rend="DH-Default">
+                        <hi rend="bold">Chapman, F.H. Af</hi>
+                    </cell>
+                    <cell style="text-align: left;" rend="DH-Default">ARCHITECTURA NAVALIS MERCATORIA</cell>
+                    <cell style="text-align: left;" rend="DH-Default">1768</cell>
+                    <cell style="text-align: left;" rend="DH-Default">Stockholm</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;" rend="DH-Default">
+                        <hi rend="bold">Falconer, W.</hi>
+                    </cell>
+                    <cell style="text-align: left;" rend="DH-Default">A NEW UNIVERSAL DICTIONARY OF THE MARINE</cell>
+                    <cell style="text-align: left;" rend="DH-Default">1815</cell>
+                    <cell style="text-align: left;" rend="DH-Default">Cadell and Davies, London</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;" rend="DH-Default">
+                        <hi rend="bold">Ollivier, B.</hi>
+                    </cell>
+                    <cell style="text-align: left;" rend="DH-Default">18th CENTURY SHIP BUILDING, REMARKS ON THE NAVIES OF THE ENGLISH AND THE DUTCH FROM OBSERVATIONS MADE AT THEIR DOCKYARDS I. 1737</cell>
+                    <cell style="text-align: left;" rend="DH-Default"/>
+                    <cell style="text-align: left;" rend="DH-Default"/>
+                </row>
+                <row>
+                    <cell style="text-align: left;" rend="DH-Default">
+                        <hi rend="bold">Steel, D.</hi>
+                    </cell>
+                    <cell style="text-align: left;" rend="DH-Default">THE ELEMENTS AND PRACTICE OF NAVAL ARCHITECTURE</cell>
+                    <cell style="text-align: left;" rend="DH-Default">1805</cell>
+                    <cell style="text-align: left;" rend="DH-Default">London</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;" rend="DH-Default">
+                        <hi rend="bold">Steel, D.</hi>
+                    </cell>
+                    <cell style="text-align: left;" rend="DH-Default">THE SHIPWRIGHT’S VADEMECUM</cell>
+                    <cell style="text-align: left;" rend="DH-Default">1805</cell>
+                    <cell style="text-align: left;" rend="DH-Default">London</cell>
+                </row>
+                <row>
+                    <cell style="text-align: left;" rend="DH-Default">
+                        <hi rend="bold">Stallkart, M.</hi>
+                    </cell>
+                    <cell style="text-align: left;" rend="DH-Default">NAVAL ARCHITECTURE</cell>
+                    <cell style="text-align: left;" rend="DH-Default">1797</cell>
+                    <cell style="text-align: left;" rend="DH-Default"/>
+                </row>
+            </table>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Cannon, S. A. M., 
+                        <hi rend="italic">Engineering analysis of 19th century British merchant ships</hi> (Doctoral dissertation, University of Southampton), (2019).
+                    </bibl>
+                    <bibl style="text-align: left; ">Ferreiro, L.D. and McGee, D., Ships and science: the birth of naval architecture in the scientific revolution, 1600-1800 (2006).</bibl>
+                    <bibl style="text-align: left; ">Franklin, J., Navy Board Ship Models, 1650-1750, (Conway Maritime Press Ltd, London, 1989).</bibl>
+                    <bibl style="text-align: left; ">O'Brien, P., &amp; Duran, X. “Total factor productivity for the Royal Navy from victory at Texal (1653) to triumph at Trafalgar (1805)”, Economic History Working Papers (134/10). Department of Economic History, London School of Economics and Political Science, London, UK, (2010).</bibl>
+                    <bibl style="text-align: left; ">Pala, G. M., and Costiner, L. S., “A Novel Digital Methodology for the Study of Historical Sailing Performance”. In: chap. 
+                        <hi rend="italic">Digital Humanities 2024 Book of Abstracts</hi>, (Zenodo, 2024), pp. 524–5.
+                    </bibl>
+                    <bibl style="text-align: left; ">Pritchard, J., “From shipwright to naval constructor: The professionalization of 18th-Century French Naval Shipbuilders”, Technology and Culture, 28:1 (1987), pp.1-25.</bibl>
+                    <bibl style="text-align: left; ">Winfield, R., British Warships in the Age of Sail 1714-1792: design, Construction, Careers and Fates, 2 Vols (2007).</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="CAFIERO_Florian_A_Riddle_in_a_Haystack__LLM_Detection_of_Int">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>A Riddle in a Haystack. LLM Detection of Intricate Wordplays in Colette and Willy’s novels for authorship attribution</title>
+                <author>
+                    <persName>
+                        <surname>Cafiero</surname>
+                        <forename>Florian</forename>
+                    </persName>
+                    <affiliation>PSL University, France; Centre Jean Mabillon, Ecole nationale des chartes - PSL, France</affiliation>
+                    <email>florian.cafiero@chartes.psl.eu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Puren</surname>
+                        <forename>Marie</forename>
+                    </persName>
+                    <affiliation>Laboratoire de Recherche d'EPITA, EPITA, France; Centre Jean Mabillon, Ecole nationale des chartes - PSL, France</affiliation>
+                    <email>marie.puren@epita.fr</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-07T13:13:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Long Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>computational humor</term>
+                    <term>authorship attribution</term>
+                    <term>French literature</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>attribution studies and stylometric analysis</term>
+                    <term>text mining and analysis</term>
+                    <term>Literary studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="div1" rend="DH-Heading1">
+                <head>
+                    <anchor xml:id="Hlk197528547"/>Introduction
+                </head>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Big computations for small phenomena</head>
+                    <p style="text-align: left; ">Authorship attribution typically achieves better performance by focusing on features that occur frequently within a text, such as character n-grams, most frequent words, parts-of-speech etc. The processing of such features has improved significantly in recent years due to advances in computational methods.</p>
+                    <p style="text-align: left; ">Yet, in this study, we repurpose these computational techniques to address the opposite challenge: rather than analyzing large-scale, high-frequency features, we aim to detect rare and intricate phenomena that may even escape trained human annotators.</p>
+                    <figure>
+                        <graphic n="1001" width="16.002cm" height="10.632722222222222cm" url="/tmp/tmpbsm6p66d/Pictures/3ad7c715c9e87f15026de6e2bc1a4f03.png" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; ">Figure 1. Our pipeline</p>
+                </div>
+                <div xml:id="X7b3a9ef080eb4476967353f68059a4d655991dc" type="div2" rend="DH-Heading2">
+                    <head>Uncovering Women’s Voices: The Case of Colette</head>
+                    <p style="text-align: left; ">In 1900, 
+                        <hi rend="italic">Claudine à l’école</hi> was published under the name Willy. This however marked the literary debut of one of the greatest French authors of the twentieth century, Sidonie Gabrielle Colette, better known as Colette (1873–1954). At the time, she was married to Henry-Gauthier Villars (1859–1931), a.k.a. Willy, widely recognized in literary circles for his work as a music critic, his lighthearted, humorous, and his somewhat risqué novels. 
+                        <hi rend="italic">Claudine</hi>’s sensational success thrust the couple into the spotlight of the Parisian literary scene, with the young Colette perfectly embodying the beautiful and mischievous character of the novel. Three additional novels thus quickly followed: 
+                        <hi rend="italic">Claudine à Paris</hi> (1901), 
+                        <hi rend="italic">Claudine en ménage</hi> (1903), and 
+                        <hi rend="italic">Claudine s’en va : journal d’Annie</hi> (1903).
+                    </p>
+                    <p style="text-align: left; ">In an interview given in 1903, shortly after the 
+                        <hi rend="italic">Claudine</hi> series was published, Colette hesitantly acknowledged her involvement: „[Willy] insists so obstinately on my participation [in the Claudines] that I must give in.“ (Michineau 2008). However, by 1936, in her autobiographical work 
+                        <hi rend="italic">Mes Apprentissages</hi>, and in the years leading up to her death in 1954, Colette altered her narrative. She downplayed Willy’s contribution, ultimately leading to the removal of his name from the covers of the novels (Colette 2004). When asked in 1949 whether Willy had helped her write the series, she replied: „He gave suggestions, perhaps, but that can hardly be called help...“ (Parinaud 1996). This raises the question: which version of Colette’s narrative is most credible?
+                    </p>
+                    <p style="text-align: left; ">Unfortunately, literary historians lack the archival material to answer this question definitively. For example, no drafts from either Colette or Willy exist that might corroborate Colette’s claims or provide evidence of Willy’s involvement in writing the 
+                        <hi rend="italic">Claudine</hi> series.
+                    </p>
+                    <p style="text-align: left; ">Correspondence and a few testimonies, however, offer a glimpse into how 
+                        <hi rend="italic">Claudine</hi> was created. By 1900, it was common knowledge that Willy employed numerous „secretaries“ or „collaborators“ to write „his“ books. Willy’s success as a producer of bestsellers stemmed from his ability to skillfully orchestrate a small team of young, promising writers. Colette herself described their apartment as a „literary workshop“, where several ghostwriters drafted novels that Willy would review, rewrote, or annotate (Caradec 2004).
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>An authorship attribution task without comparison corpus</head>
+                    <p style="text-align: left; ">Willy himself represents a paradox: a writer who did not truly write. He neither considered himself an author nor possessed the temperament to confront a blank page. He could sometimes imprint his personal style on the text by deleting sections, rewriting passages, or adding new content. The completed work was published exclusively under his name, rendering the collective nature of its creation invisible
+                        <anchor xml:id="X43404730592a8a9771b431b5dcefdf3ec07aa29"/>.
+                    </p>
+                    <p style="text-align: left; ">Nonetheless, we do not know exactly which parts of the text were written by Colette and which were rewritten - or even written - by Willy or his collaborators. What role did Willy actually play in the writing of these texts? Apart from a few non-fiction works - which must also be approached with caution, as it remains unclear whether Willy enlisted collaborators - even these examples are insufficient to establish a definitive stylistic fingerprint. To identify passages in Colette’s novels that bear Willy’s influence, previous studies have adopted a profiling method aimed at detecting textual features indicative of what has been termed the „Willy effect“ (Cafiero / Camps 2022; Cafiero / Puren 2022; Puren / Cafiero 2023). The idea was to train an AI to distinguish between texts written by writers within the workshop and those written by the same authors outside of it, thereby attributing the differences between the two to Willy’s influence and the structure of his workshop. However, while this method provides insight into the general influence of this literary institution, it cannot specifically identify direct interventions on the text.</p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>When a bad (word)play reveals your hand</head>
+                    <p style="text-align: left; ">The popularity of novels signed by Willy can, in part, be attributed to their abundance of puns and wordplay, which were highly appreciated by contemporary readers (Caradec 2004), while avoided by Colette. We hypothesize that systematically identifying these humorous elements will allow us to pinpoint passages shaped by Willy’s influence.</p>
+                    <p style="text-align: left; ">The wordplays present in these texts stand out for their subtlety and complexity. They often rely on historical references that are both erudite and dated, making it particularly difficult for contemporary readers to recognize systematically. The objective of this approach is to develop a specific methodology for detecting these features across the entire corpus produced by Willy’s literary workshop.</p>
+                    <p style="text-align: left; ">In this paper, we report on our first attempt at building a pipeline able to detect these sometimes very erudite wordplays, tested here on all the texts written by Colette while working with Willy’s workshop.</p>
+                    <p style="text-align: left; ">To be able to run our procedure without incurring too much cost, we implement a two-step strategy. We first run a commonly adopted (Acheampong et al. 2021) transformer-based emotion detection solution, to eliminate the saddest passages where wordplays are unlikely to appear. We then benchmark LLM annotators and use a combination of two of them to detect wordplays. We post-correct their results, count these confirmed wordplays and compare their position to previous results in the literature. As using humorous names is also a practice that Willy affectionated (Caradec 2004), we run a named entity recognition as well, to analyze ourselves these potential places for puns.</p>
+                    <figure>
+                        <graphic n="1002" width="16.002cm" height="8.128cm" url="/tmp/tmpbsm6p66d/Pictures/3ad7c715c9e87f15026de6e2bc1a4f03.png" rend="inline"/>
+                    </figure>
+                    <p style="text-align: left; ">Figure 2. Smoothed evolution of detected emotions across segments in Colette and possibly Willy’s novel Claudine à l’École. The graph depicts the emotional progression throughout the novel: joy (blue), sadness (orange), disgust (green), anger (red), fear (purple), and surprise (brown).</p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Material and methods</head>
+                <div xml:id="corpus-and-post-correction" type="div2" rend="DH-Heading2">
+                    <head>Corpus and post-correction</head>
+                    <p style="text-align: left; ">We rely on a previously created corpus (Cafiero / Puren 2022) of digitized texts by Colette (and Willy ?) from the time when she was working with Willy’s workshop: six novels and one short story. NER and wordplay detection could be very sensitive to OCR errors. Yet, automated processes would often interfere with wordplays, correcting words that were surprising by literary choice and not by mistake. We thus proceeded to additional manual post-correction.</p>
+                </div>
+                <div xml:id="Xd5bb973a5752cad3ab39e55d94b4dc24ddb37c3" type="div2" rend="DH-Heading2">
+                    <head>Named entity recognition and analysis of the character’s names</head>
+                    <p style="text-align: left; ">Named entity recognition is performed thanks to camembertav2-base-ftb-ner (Antoun et al. 2024), based on a deberta-v2, and trained on the FTB-NER dataset for the task of Named Entity Recognition (NER) (F1 score of 0.94). The character names are then extracted from the list and evaluated by the authors.</p>
+                </div>
+                <div xml:id="X8c91c3a7dc6a5c6803c1b658bf34b41ec815fcf" type="div2" rend="DH-Heading2">
+                    <head>Determination of semantically coherent passages</head>
+                    <p style="text-align: left; ">To detect coherent passages, the input text is first split into overlapping segments of 5 sentences. For each segment, sentence embeddings are extracted using CamemBERTv2 (Antoun et al. 2024) with mean pooling to generate a representative segment embedding. Pairwise cosine similarities between consecutive segment embeddings are computed to identify semantic shifts, with the scores smoothed using a moving average filter. Content boundaries are then detected by locating peaks in the inverted similarity scores - a peak in dissimilarity is interpreted as indicates a significant topic transition. Adjacent segments with high semantic similarity (above a defined threshold) are subsequently merged to ensure coherence.
+                        <anchor xml:id="emotion-detection"/>
+                    </p>
+                </div>
+                <div type="div2" rend="DH-Heading2">
+                    <head>Emotion detection</head>
+                    <p style="text-align: left; ">The dominant emotions within the refined segments are identified using a French emotion classification model fine tuned from camemBERT-base (ac0hik 2024) (Loss: 0.3647 Accuracy: 0.8932). We retain for further analyses all the passages displaying joy and surprise as the dominant emotion, and eliminate the ones where sadness, disgust, anger, fear, which helps us eliminate ca. 50% (Figure 2)</p>
+                    <p style="text-align: left; ">Wordplay detection relying on LLM annotation</p>
+                    <p style="text-align: left; ">Despite numerous efforts and progress, in terms of models or database, the detection of wordplays (Ermakova et al. 2023; Ermakova et al. 2023), especially in century-old novels and in French, would already a complex task. But the sophistication of the wordplays, as well as the fact they often reference past events long forgotten, makes them sometimes difficult to detect even for informed readers of today.</p>
+                    <p style="text-align: left; ">This is why we adopt a few-shot prompting strategy. Examples are taken from previous expert annotations, while the reasoning proposed to detect each wordplay is our own. To be sure that our test would match the properties of our text to annotate, we chose to test the performance on a ground truth established on a sample of 700 sentences of 
+                        <hi rend="italic">Claudine à l’école</hi>. This sample was deliberately chosen rather than selected at random, to be sure of the presence of at least one intricate wordplay. Both authors annotated the passage for wordplays. Intercoder reliability was 1.00. The same prompt and passage were then tested with five models. Only one of them succeeded in detecting wordplays, and one of them only gpt-o1-preview, gave relatively satisfactory performance. gpt-4o et gpt-o1 did not identify the same wordplays. We thus ran both on our text to try at identifying different types of wordplay each model would be more accurate with. To try at enhancing performance, we added the wordplays we used in our test to the examples cited in the final few-shot prompt.
+                    </p>
+                    <table rend="rules">
+                        <row>
+                            <cell style="text-align: left;" rend="DH-Default">Model</cell>
+                            <cell style="text-align: left;" rend="DH-Default">Recall</cell>
+                            <cell style="text-align: left;" rend="DH-Default">Precision</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;" rend="DH-Default">gpt-4o + gpt-o1</cell>
+                            <cell style="text-align: left;" rend="DH-Default">100%</cell>
+                            <cell style="text-align: left;" rend="DH-Default">33%</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;" rend="DH-Default">gpt-4o</cell>
+                            <cell style="text-align: left;" rend="DH-Default">50%</cell>
+                            <cell style="text-align: left;" rend="DH-Default">20%</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;" rend="DH-Default">gpt-o1</cell>
+                            <cell style="text-align: left;" rend="DH-Default">50%</cell>
+                            <cell style="text-align: left;" rend="DH-Default">100%</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;" rend="DH-Default">mistral-large-2</cell>
+                            <cell style="text-align: left;" rend="DH-Default">0%</cell>
+                            <cell style="text-align: left;" rend="DH-Default">/</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;" rend="DH-Default">gemini-1.5-pro</cell>
+                            <cell style="text-align: left;" rend="DH-Default">0%</cell>
+                            <cell style="text-align: left;" rend="DH-Default">/</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;" rend="DH-Default">claude-3.5-sonnet</cell>
+                            <cell style="text-align: left;" rend="DH-Default">0%</cell>
+                            <cell style="text-align: left;" rend="DH-Default">/</cell>
+                        </row>
+                    </table>
+                    <p style="text-align: left; ">Table 1. Performance of various language models in terms of Recall and Precision. Precision values of mistral-large-2 and claude-3.5-sonnet are not defined (denoted as /)</p>
+                    <table rend="rules">
+                        <row>
+                            <cell style="text-align: left;" rend="DH-Default">Work</cell>
+                            <cell style="text-align: left;" rend="DH-Default">Wordplay</cell>
+                            <cell style="text-align: left;" rend="DH-Default">Humorous Names Entities</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;" rend="DH-Default">Claudine à l’École (1900)</cell>
+                            <cell style="text-align: left;" rend="DH-Default">3</cell>
+                            <cell style="text-align: left;" rend="DH-Default">0</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;" rend="DH-Default">Claudine à Paris (1901)</cell>
+                            <cell style="text-align: left;" rend="DH-Default">6</cell>
+                            <cell style="text-align: left;" rend="DH-Default">0</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;" rend="DH-Default">Claudine en Ménage (1902)</cell>
+                            <cell style="text-align: left;" rend="DH-Default">0</cell>
+                            <cell style="text-align: left;" rend="DH-Default">0</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;" rend="DH-Default">Claudine s’en va (1903)</cell>
+                            <cell style="text-align: left;" rend="DH-Default">0</cell>
+                            <cell style="text-align: left;" rend="DH-Default">0</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;" rend="DH-Default">Minne (1904)</cell>
+                            <cell style="text-align: left;" rend="DH-Default">0</cell>
+                            <cell style="text-align: left;" rend="DH-Default">0</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;" rend="DH-Default">Dialogues de bêtes (1904)</cell>
+                            <cell style="text-align: left;" rend="DH-Default">0</cell>
+                            <cell style="text-align: left;" rend="DH-Default">0</cell>
+                        </row>
+                        <row>
+                            <cell style="text-align: left;" rend="DH-Default">Les Égarements de Minne (1905)</cell>
+                            <cell style="text-align: left;" rend="DH-Default">0</cell>
+                            <cell style="text-align: left;" rend="DH-Default">0</cell>
+                        </row>
+                    </table>
+                    <p style="text-align: left; ">
+                        <anchor xml:id="results"/>Table 2. Results
+                    </p>
+                    <p style="text-align: left; ">Among a lot of false positives (41), our process detects 9 wordplays, 3 in Colette’s first novel and 6 in her second novel. In the remaining novels and short story, nothing is detected. Their complexity and erudition matches the description about Willy’s style. One is for instance a wordplay on the double-meaning of "cruche" in French, and the homophony between "caser" and "casser", calling a character "la cruche caSée" ("the well-married airhead"), a reference to 
+                        <hi rend="italic">La Cruche CaSSée</hi> (
+                        <hi rend="italic">The Broken Vessel</hi>), a 1771 painting by Greuze. In a passage not that far in 
+                        <hi rend="italic">Claudine à Paris</hi>, the author reinterprets the phrase: "L’Angleterre prit l’aigle et l’Autriche l’aiglon." ("England took the eagle, and Austria the eaglet.") by Victor Hugo (in 
+                        <hi rend="italic">Les Chants du crépuscule (1835)</hi> to turn it into: "L’Angleterre prit Leygues [...] et l’Autriche : l’Héglon !" ("England took Leygues, and Austria the Héglon."). Leygues (sounding like "L’Aigle") was a French politician of the time, and l’Héglon (homophone to "aiglon"), a Belgian opera singer - references that would be lost to a vast majority of contemporary readers.
+                    </p>
+                </div>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Discussion</head>
+                <p style="text-align: left; ">The imperfection of our detection process can of course be considered as a limitation. Nevertheless, the LLM annotators combined are too eager to detect wordplays, and mostly lacks precision, but rarely miss. Given the scarcity of the phenomena observed, a good recall but some work to sort the LLMs propositions is very manageable. This suggests that the pipeline could and should be scaled to a wider corpus of the novels by the whole workshop.</p>
+                <p style="text-align: left; ">The observation of these very rare events are of course not sufficient to attribute or not a passage to an author, but they could be a valuable additional clue in specific contexts, especially when we lack information and comparison material as in this controversial corpus. But the results tend to confirm previous works doubting of Willy’s direct implication in writing passages of Colette’s first novel, and point to specific paragraphs where his possibly rare interventions could have focused.</p>
+            </div>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <anchor xml:id="Hlk197528874"/>
+                        <hi rend="bold">ac0hik (2024)</hi> : “French emotion detection model”, 
+                        <ref target="https://huggingface.co/ac0hik/emotions_detection_french">https://huggingface.co/ac0hik/emotions_detection_french</ref> [07.05.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Acheampong, Frank A. / Nunoo-Mensah, Henry / Chen, Wenyu (2021)</hi> : “Transformer models for text-based emotion detection: A review of BERT-based approaches”, in: Artificial Intelligence Review 54, 8: 5789–5829.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Antoun, Wissam / Kulumba, Freddy / Touchent, Rian / Clergerie, Éric de la / Sagot, Benoît / Seddah, Djamé (2024)</hi> : “CamemBERT 2.0: A smarter French language model aged to perfection”, 
+                        <ref target="https://arxiv.org/abs/2411.08868">https://arxiv.org/abs/2411.08868</ref> [07.05.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Cafiero, Florian / Camps, Jean-Baptiste (2022)</hi> : Affaires de style. Paris : Le Robert.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Cafiero, Florian / Puren, Marie (2022)</hi> : “Claudine à l’atelier: L’impact de Willy et ses secrétaires sur l’écriture de Colette”, in: Humanistica.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Caradec, François (2004)</hi> : Willy. Le père des Claudine. Paris : Fayard.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Colette (2004)</hi> : Mes apprentissages. Paris : Fayard (nouvelle édition).
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Ermakova, Liana / Bosser, Anne-Gwenn / Jatowt, Adam / Miller, Tristan (2023)</hi> : “The JOKER corpus: English-French parallel data for multilingual wordplay recognition”, in: Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval: 2796–2806.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Ermakova, Liana / Miller, Tristan / Bosser, Anne-Gwenn / Palma-Preciado, Victor Manuel / Sidorov, Grigori / Jatowt, Adam (2023)</hi> : “Overview of JOKER 2023 automatic wordplay analysis task 1 – Pun detection”, in: CLEF (Working Notes): 1785–1803.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Michineau, Stéphanie (2008)</hi> : L’autofiction chez Colette. Paris : Publibook.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Parinaud, André (1996)</hi> : Colette, mes vérités. Entretiens avec André Parinaud. Paris : Écriture.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Puren, Marie / Cafiero, Florian (2023)</hi> : “Colette, Curnonsky, and the Willy Workshop. Assessing relative contributions and influences beyond ‘collaborative authorship’”, in: Proceedings of the Digital Humanities Conference.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

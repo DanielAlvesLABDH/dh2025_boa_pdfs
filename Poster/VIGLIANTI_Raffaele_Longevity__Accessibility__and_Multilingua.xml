@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VIGLIANTI_Raffaele_Longevity__Accessibility__and_Multilingua">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="full">
+                    <title type="main">Longevity, Accessibility, and Multilingual Micro-editions at Scholarly Editing: A Multimedia, Open-access Journal for Recovery Practitioners</title>
+                    <title type="sub"/>
+                </title>
+                <author>
+                    <persName>
+                        <surname>Viglianti</surname>
+                        <forename>Raffaele</forename>
+                    </persName>
+                    <affiliation>University of Maryland, United States of America</affiliation>
+                    <email>rviglian@umd.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Baker</surname>
+                        <forename>Noelle A.</forename>
+                    </persName>
+                    <affiliation>Independent Scholar</affiliation>
+                    <email>noelle.baker@me.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-05T14:24:31.392300134</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from an OASIS Open Document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Poster</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>journal</term>
+                    <term>low infrastructure</term>
+                    <term>digital publishing</term>
+                    <term>scholarly editing</term>
+                    <term>textual scholarship</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>scholarly editing and editions development</term>
+                    <term>analysis</term>
+                    <term>and methods</term>
+                    <term>software development</term>
+                    <term>systems</term>
+                    <term>analysis and methods</term>
+                    <term>sustainable procedures</term>
+                    <term>systems</term>
+                    <term>and methods</term>
+                    <term>text encoding and markup language creation</term>
+                    <term>deployment</term>
+                    <term>and analysis</term>
+                    <term>Communication studies</term>
+                    <term>Education/ pedagogy</term>
+                    <term>Humanities computing</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>
+                <hi rend="italic">Scholarly Editing</hi> is an open-access, peer-reviewed journal committed to the development and advancement of all aspects of textual scholarship, including the recovery of texts and artifacts that represent and celebrate the lives of and contributions from and about Black, Latinx, and Indigenous peoples; Asian Americans and Pacific Islanders; women; LGBTQ+ individuals; and peoples of the Global South.
+            </p>
+            <p>In addition to projects that illustrate the traditional range of editorial methodologies and practices, the journal welcomes those that feature rare or marginal texts, texts that dislodge the single-author model, oral histories and tales, community recovery, creative works of “rememory,” and the decolonizing of artistic works, archives, records, and editions for the discoverability of racialized and underrepresented stories and cultural artifacts. Beginning in 2022, Volumes 39–41 addressed these goals by publishing diverse material including essays, micro-editions (small scale digital editions), interviews (some with audio content), and reviews. </p>
+            <p>This poster will introduce the journal’s purpose and current goals as well as present the journal’s strategies to ensure the longevity of its digital content and facilitate the journal’s mission of recovery and preservation. The website, in particular, was designed with minimal infrastructure and hosting requirements by producing a static website that does not require server side specialized software to remain online. This strategy is becoming a more common practice, spearheaded by Digital Humanities publications such as the Programming Historian (Lincoln et al. 2022). The panel “Missions Accomplished? The Future of Mission-Driven Digital Scholarship Journals in DH” at last year’s ADHO 2024 conference featured a discussion that uncovered this technological convergence.</p>
+            <p>
+                <figure>
+                    <graphic url="/tmp/tmpfh5y8nn4/Pictures/01b830c9c05f77f507e917e94b802cce.png"/>
+                </figure>Figure 1. Sample screenshots from a selection of 
+                <hi rend="italic">Scholarly Editing</hi> micro-editions published using the technological stack that will be introduced by the poster.
+            </p>
+            <p>In addition to essays and interviews, 
+                <hi rend="italic">Scholarly Editing</hi> publishes micro-editions, scholarly editions typically encoded according to the Text Encoding Initiative (TEI) standard. While this isn’t a requirement for publication, we encourage the use of this technology because of its ability to capture—or model—not only the text of one or more sources being edited, but also editorial intervention with a great level of detail. This feature exceeds the capabilities of a transcription produced in MS Word, in HTML, or in Markdown. Supporting TEI introduces a significant challenge in making use of static website technology; the Technical Editor has worked on open source TEI rendering plugins for the static site generator Gatbsy: gatsby-transformer-ceteicean and gatsby-theme-ceteicean, as well as for the newer static site generator Astro (https://github.com/raffazizzi/astro-tei), to which the journal site will migrate in 2026. These tools implement CETEIcean, a JavaScript library that relies on the browser’s DOM processing and HTML5 Custom Elements to publish TEI documents in the browser (Cayless and Viglianti 2018). At the poster session, the presenting author will explain and demonstrate the tools.
+            </p>
+            <p>Volume 42 was published in late Spring 2025; the poster will include details about the publications in this issue as well, particularly highlighting the expansion of the journal into more multimediatic and interactive content, such as a forthcoming micro-edition of a piece of e-literature, multi-modal interviews experimental demonstrations of the ways in which genre can impact the representation(s) and meaning(s) of historical trauma, and creative means of uncovering and preserving cultural materials in the classroom.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend="bold">Cayless, Hugh / Viglianti, Raffaele </hi>(2018). “CETEIcean: TEI in the Browser.” Presented at Balisage: The Markup Conference 2018, Washington, DC, July 31 - August 3, 2018. In Proceedings of Balisage: The Markup Conference 2018. Balisage Series on Markup Technologies, vol. 21 (2018). 
+                        <ptr target="https://doi.org/10.4242/BalisageVol21.Cayless01"/>.
+                    </bibl>
+                    <bibl>
+                        <hi rend="bold">Lincoln, Matthew / Isasi Jennifer / Melton Sarah / Laramée, François Dominic</hi> (2022). “Relocating Complexity: The Programming Historian and Multilingual Static Site Generation.” 
+                        <hi rend="italic">Digital Humanities Quarterly </hi>016 (2).
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

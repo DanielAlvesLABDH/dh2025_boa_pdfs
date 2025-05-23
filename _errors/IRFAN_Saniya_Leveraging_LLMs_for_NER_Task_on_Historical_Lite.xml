@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="IRFAN_Saniya_Leveraging_LLMs_for_NER_Task_on_Historical_Lite">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Leveraging LLMs for NER Task on Historical Literary Data in Urdu as a Low-Resource Right-to-Left Language</title>
+                <author>
+                    <persName>
+                        <surname>Irfan</surname>
+                        <forename>Saniya</forename>
+                    </persName>
+                    <affiliation>Indian Institute of Technology Delhi, India</affiliation>
+                    <email>huz228239@iitd.ac.in</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ghosh</surname>
+                        <forename>Arjun</forename>
+                    </persName>
+                    <affiliation>Indian Institute of Technology Delhi, India</affiliation>
+                    <email>arjunghosh@hss.iitd.ac.in</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Agarwal</surname>
+                        <forename>Sumeet</forename>
+                    </persName>
+                    <affiliation>Indian Institute of Technology Delhi, India</affiliation>
+                    <email>sumeet@scai.iitd.ac.in</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-05-10T22:04:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>Large Language Models (LLMs)</term>
+                    <term>Natural Language Processing (NLP)</term>
+                    <term>Named Entity Recognition (NER)</term>
+                    <term>Urdu Marsiya</term>
+                    <term>Right-to-Left language</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>cultural analytics</term>
+                    <term>natural language processing</term>
+                    <term>open access methods</term>
+                    <term>Humanities computing</term>
+                    <term>Literary studies</term>
+                    <term>South Asian studies</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                    <term>Match where technical expertise is helpful.</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">
+                <hi rend="bold">Introduction:</hi> Named Entity Recognition (NER), a foundational task in Natural Language Processing (NLP), involves the identification of specific entities such as names, locations, and dates within textual corpora and resulting text analyses enable new forms of literary inquiry, such as tracing historical and cultural references, mapping poetic networks, and studying the evolution of symbolic language over time. The recent development of Large Language Models (LLMs) such as ChatGPT, Claude in NLP has provided hope for NER because these models have a good understanding gained through training using a wide range of textual material (Wang et al. 2023; Jiang et al. 2024). LLMs can comprehend and understand the meaning of embedded language which is critical for languages with rich morphology and more syntactic variations. However, their applicability to languages depends on the existence of annotated datasets especially for languages that have limited resources. For instance, LLMs are reported to have performed well for English which is a high resource language but the performance of LLMs on languages that are less known using a different script, have a vast literary background and lack sufficient data such as Urdu language is still uncharted(Arif et al. 2024),(Tahir et al. 2025).
+            </p>
+            <p style="text-align: left; ">
+                <hi rend="bold">Recent related works:</hi> This study aims to fill this crucial research gap by assessing the efficiency of LLMs for the NER task in relation to the Urdu Marsiya, a type of classical poetry that is culturally and religiously significant in the region of South Asia. Current work in Urdu NLP has primarily focused on prose and contemporary datasets, leaving classical poetic forms unexplored. Recent investigations in Urdu NLP utilizing LLMs involve a comprehensive analysis of seven prominent models: GPT-3.5-turbo, Llama 2-7B-Chat, Llama 3.1-8B, Bloomz 3B, Bloomz 7B1, Ministral-8B, and Whisper (in large, medium, and small variants) across 17 tasks employing 22 datasets and 13.8 hours of speech in a zero-shot context, with a comparative evaluation against state-of-the-art models (Tahir et al. 2025a). They utilized various publicly accessible datasets for multiple tasks, including Named Entity Recognition, News Categorization, Hate Speech Detection, Propaganda Detection, Abusive Language Identification, Cyberbullying Detection, Fake News Detection, Hate Speech Categorization, Text Summarization, Sentiment Analysis, and Machine Translation of the Quran and Bible. Nonetheless, all these datasets employ texts from platforms such as Twitter threads, news archives, Wikipedia pages and religious texts. Our literature review concludes that fine-tuned SOTA models surpass existing open and closed large language models in low-resource languages such as Urdu; however, the efficacy of these models is heavily contingent upon meticulously crafted prompts and intelligent post-processing of the outputs. Llama 2 and Bloomz exhibit a significant performance shortfall relative to the state-of-the-art, however the more recent Llama version, Llama 3.1, and GPT 3.5 effectively reduce this disparity to a substantial degree (Tahir et al. 2025a). 
+            </p>
+            <p style="text-align: left; ">Recent studies on LLM usage in German, English, and French, utilizing historical literary data for the Named Entity Recognition (NER) task, indicate that fine-tuned SOTA models have consistently outperformed open-source LLMs. Nonetheless, the findings suggest that these models can aid human annotators. This study also asserts that LLMs are influenced by orthographic modifications. In the German corpus, from 1789 to 1838, Llama-3 identifies just 13% of named things, a percentage that rises to 27% from 1848 to 1898. Nonetheless, there is a significant enhancement in performance for texts published post-1900, demonstrating the capacity to recognize roughly fifty percent of the named things within the corpus. In the English corpus, approximately 30% of named entities prior to the 1900s are accurately identified, while only 20% are recognized in the French corpus (González-Gallardo et al. 2024).</p>
+            <p style="text-align: left; ">Given the complexity of Urdu poetry, characterized by rich metaphoric language and culturally specific references, efficacy of LLMs to such texts needs to be critically evaluated and analysed. The utilisation of presently accessible LLMs does not invariably diminish quality and may, in certain instances, enhance human aid. A criticism of employing ML and LLMs for data annotation is their potential unreliability and lack of replicability, as their outputs may be random. Factors encompass the characteristics of the foundational neural networks and inadequately recorded modifications to cloud services. A pertinent concern is that, like any ML models, LLMs might acquire biases from their training data, which is frequently undisclosed in commercial applications (Karjus 2024).</p>
+            <p style="text-align: left; ">
+                <hi rend="bold">Information on Dataset:</hi> We have selected Urdu Marsiya, a poetically rich form packed with metaphorical allusions to Islamic religious history and culturally embedded in the North-Indian traditional cultural context, for the purpose of this paper. This segment is part of a larger PhD study aimed at analysing the stylistics of the selected poets, Mir Anees (d. 1874) and Mirza Dabeer (d. 1875), renowned contemporaries who composed Urdu Marsiya in 19th century Northern India, namely Lucknow. Currently, we are examining a corpus of Mir Anees' Marsiya poetry collection in this study. The corpus is annotated with Named Entity Recognition (NER) predictions utilising GPT-4o from OpenAI with few-shots prompt method, across the selected categories: Person, Place, Organisation, and Event. This work was previously presented at a DH conference, last year (Irfan 2024). To the best of our knowledge, this is the first-ever study on classical Urdu poetry, Urdu Marsiya specifically, employing LLMs for NLP tasks. The corpus is currently unavailable to the public due to the continuing nature of the research.
+            </p>
+            <p style="text-align: left; ">
+                <hi rend="bold">End goals:</hi> A major obstacle in assessing LLM performance on Urdu Marsiya is the absence of a publicly available human-annotated corpus for historical poetic data. This study seeks to fill this specific research gap by creating a human-annotated Urdu Marsiya dataset tailored for NER tasks and evaluating LLM performance against this newly developed ground-truth dataset. Furthermore, the evaluation of the LLM’s performance against the human-annotated dataset is conducted using statistical metrics, namely, Precision, Recall and F1-Score. 
+            </p>
+            <p style="text-align: left; ">Recent work (Ahmed et al. 2024) on applying NER using LLMs has shown that while LLMs can be useful for NER, dedicated Machine Learning (ML) models trained specifically for the NER task on specific datasets, unlike LLMs which are trained on datasets that are not relevant to the NER task, can outperform LLMs. Therefore, to provide a stronger evaluation of the LLMs’ performance on the NER task of Urdu Marsiya, we aim to train a dedicated ML model on the annotated dataset for the NER task and compare its performance with the LLMs. In recent studies, it was observed that, for each of the chosen languages, monolingual BERT embeddings gave the highest accuracy among all the embedding models. Further, it is also claimed that multilingual NER models trained by pooling data from similar languages can address training data inadequacy and exhibit performance close to that of monolingual models trained with adequate NER-tagged data of a single language (Maurya, Mandal, and Maurya, n.d.). </p>
+            <p style="text-align: left; ">Recent study on language models specifically developed for Urdu data employed four distinct transformer models: multilingual bidirectional encoder representations from transformers (BERT), RoBERTa-Urdu-small, BERT-base-cased, and BERT-large-cased. These models were applied to two datasets for the classification of named entities, which can be accessed for the Urdu named entity recognition task . The study evaluated using Precision, Recall, and F1 score, significantly outperforms existing state-of-the-art DL-based NER methods for the Urdu language (Ullah et al. 2024). Another study has given U-MNER (Urdu-Multimodal NER) framework which integrates textual and visual context using Urdu-BERT for text embeddings and ResNet for visual feature extraction, with a Cross-Modal Fusion Module to align and fuse information. This model achieves state-of- the-art performance on the Twitter2015-Urdu dataset, laying the groundwork for further MNER research in low-resource language (Ahmad, Zeng, and Wan 2025). Other open-source BERT models for Urdu are also publicly available which can be considered to work with among all the abovementioned models. This research intends to employ a monolingual language model for Urdu by training it using our proprietary poetic data, specifically the Urdu Marsiya corpus by Mir Anees. The work is still under progress.</p>
+            <p style="text-align: left; ">To the end, this work aims to provide two research objectives. First, we undertake the creation of a high-quality human-annotated dataset for Urdu Marsiya. The guidelines for annotations are still under progress and will be stated at the stage of project completion. This process involves curating a representative corpus from classical Marsiya collections from 19th century North-India, specifically of Mir Anees. Data curation is followed by manual annotation using standard NER categories such as Person, Location, Data, Number, Time, Organization and Designation. This task is under progress hence, to give an idea, here’s one example of human-annotated NER predictions, undertaken by a team of annotators trained in Urdu literature:</p>
+            <p style="text-align: left; text-align: center;">ہاں غازیو! یہ دن ہے جدال و قتال کا</p>
+            <p style="text-align: left; text-align: center;">یاں خوں بہے گا آج محمد کی آل کا</p>
+            <p style="text-align: left; text-align: center;">چہرہ خوشی سے سرخ ہے زہراؑ کے لال کا</p>
+            <p style="text-align: left; text-align: center;">گذری شبِ فراق دن آیا وصال کا</p>
+            <p style="text-align: left; text-align: center;">ہم وہ ہیں غم کریں گے ملک جن کے واسطے</p>
+            <p style="text-align: left; text-align: center;">راتیں تڑپ کے کاٹی ہیں اس دن کے واسطے</p>
+            <p style="text-align: left; text-align: center;">وہ صبح اور وہ چھاؤں ستاروں کی اور وہ نور</p>
+            <p style="text-align: left; text-align: center;">دیکھے تو غش کرے ارینی گوے اوجِ طور</p>
+            <p style="text-align: left; text-align: center;">پیدا گلوں سے قدرت اللہ کا ظہور</p>
+            <p style="text-align: left; text-align: center;">وہ جابجا درختوں پہ تسبیح خواں طیور</p>
+            <p style="text-align: left; text-align: center;">گلشن خجل تھے دادی مینو اساس سے</p>
+            <p style="text-align: left; text-align: center;">جنگل تھا سب بسا ہوا پھولوں کی پاس سے</p>
+            <p style="text-align: left; ">Highlight codes are given below:</p>
+            <p style="text-align: left; ">Person: Yellow</p>
+            <p style="text-align: left; ">Place: Grey</p>
+            <p style="text-align: left; ">Organisation: Not found here hence not highlighted</p>
+            <p style="text-align: left; ">Event: Green</p>
+            <p style="text-align: left; ">Second, we evaluate state-of-the-art LLMs for NER tasks with the manually annotated Marsiya corpus and further compare their performance with dedicated finetuned models, trained specifically and only for NER in Urdu Marsiya text. This evaluation includes the latest LLM from OpenAI, i.e., GPT-4o and an open source LLM DeepSeek . We benchmark these models using established evaluation metrics such as precision, recall, and F1-score. We further provide a qualitative error analysis which aims to highlight the specific challenges faced by LLMs when processing poetic, symbolic, and contextually dense texts in Urdu. We pay particular attention to language-specific phenomena such as metaphorical expressions commonly found in Urdu Marsiya. Error evaluation metrics are still under progress and based on the recent works in Urdu NLP (Tahir et al. 2025b)(Abdelali et al. 2024)(Ahmed et al. 2024)</p>
+            <p style="text-align: left; ">The challenge in error assessment within a poetry dataset lies in the absence of clear False Positives and False Negatives in the LLM-based annotations, unlike non-poetic prose or contemporary datasets as demonstrated in recent works. For instance, certain entities are designated as NERs while not conforming to either category. The following are examples of errors identified in the annotated dataset:</p>
+            <p style="text-align: left; ">
+                <graphic n="1001" width="11.248319444444444cm" height="5.346094444444445cm" url="/tmp/tmpj11meh1f/Pictures/bbcd3d0a1e1c7dd6e1b4d0ff20287e13.png" rend="inline"/>
+            </p>
+            <p style="text-align: left; ">Figure 1 Error in LLM based NER prediction</p>
+            <p style="text-align: left; ">
+                <graphic n="1002" width="11.272508333333333cm" height="4.716891666666666cm" url="/tmp/tmpj11meh1f/Pictures/bbcd3d0a1e1c7dd6e1b4d0ff20287e13.png" rend="inline"/>
+            </p>
+            <p style="text-align: left; ">Figure 2 Error in LLM based NER prediction</p>
+            <p style="text-align: left; ">
+                <graphic n="1003" width="11.308291666666667cm" height="4.764769444444444cm" url="/tmp/tmpj11meh1f/Pictures/bbcd3d0a1e1c7dd6e1b4d0ff20287e13.png" rend="inline"/>
+            </p>
+            <p style="text-align: left; ">Figure 3 Error in LLM based NER prediction</p>
+            <p style="text-align: left; ">Consequently, the development of the evaluation metric guidelines is ongoing, but it is already informed by existing guidelines for current non-poetic or prose datasets in recent research. We have identified the errors; nevertheless, the accurate classification of error types has to be completed.</p>
+            <p style="text-align: left; ">
+                <hi rend="bold">Conclusion:</hi> To the best of our knowledge, ours would be the first human-annotated NER corpus for Urdu Marsiya, addressing the severe scarcity of resources for computational analysis of Urdu poetic texts. This dataset will be made publicly available to support future research in NLP and Digital Humanities, which is under progress as of yet. We offer a comprehensive evaluation of LLM performance on an Urdu literary dataset, generating valuable insights into model strengths and limitations in processing underrepresented languages such as Urdu and genres such as Urdu Marsiya. Finally, we aim to contribute to Digital Humanities by using computational methods to advance the study of classical Urdu literature. With our analyses, we aim to show the applicability of LLMs for applications such as tracing historical and cultural references in Marsiya texts.
+            </p>
+            <p style="text-align: left; ">With our research, we aim to advance the broader goal of more inclusive, multilingual Digital Humanities research. Our work aims to outline the importance of building digital resources for culturally significant but computationally underrepresented literary artefacts. Finally, our research aims to pave way for the future researchers in Digital Humanities, especially in the South Asian context and researchers working with right-to-left scripts to work with NLP, particularly with LLMs and use them as valuable text analysis tools in their Digital Humanities research.</p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">Abdelali, Ahmed, Hamdy Mubarak, Shammur Absar Chowdhury, Maram Hasanain, Basel Mousi, Sabri Boughorbel, Yassine El Kheir, et al. 2024. ‘LAraBench: Benchmarking Arabic AI with Large Language Models’. arXiv. https://doi.org/10.48550/arXiv.2305.14982.</bibl>
+                    <bibl style="text-align: left; ">Ahmad, Hussain, Qingyang Zeng, and Jing Wan. 2025. ‘A Benchmark Dataset and a Framework for Urdu Multimodal Named Entity Recognition’. arXiv. https://doi.org/10.48550/arXiv.2505.05148.</bibl>
+                    <bibl style="text-align: left; ">Ahmed, Anil, Degen Huang, Syed Yasser Arafat, and Imran Hameed. 2024. ‘Enriching Urdu NER with BERT Embedding, Data Augmentation, and Hybrid Encoder-CNN Architecture’. ACM Transactions on Asian and Low-Resource Language Information Processing 23 (4): 1–38.</bibl>
+                    <bibl style="text-align: left; ">Arif, Samee, Abdul Hameed Azeemi, Agha Ali Raza, and Awais Athar. 2024. ‘Generalists vs. Specialists: Evaluating Large Language Models for Urdu’. arXiv. https://doi.org/10.48550/arXiv.2407.04459.</bibl>
+                    <bibl style="text-align: left; ">González-Gallardo, Carlos-Emiliano, Hanh Thi Hong Tran, Ahmed Hamdi, and Antoine Doucet. 2024. ‘Leveraging Open Large Language Models for Historical Named Entity Recognition’. In Linking Theory and Practice of Digital Libraries, edited by Apostolos Antonacopoulos, Annika Hinze, Benjamin Piwowarski, Mickaël Coustaty, Giorgio Maria Di Nunzio, Francesco Gelati, and Nicholas Vanderschantz, 15177:379–95. Lecture Notes in Computer Science. Cham: Springer Nature Switzerland. https://doi.org/10.1007/978-3-031-72437-4_22.</bibl>
+                    <bibl style="text-align: left; ">Irfan, Saniya. 2024. ‘Developing a TEI-Encoded Digital Archive of 19th-Century Urdu Marsiya: Production and Challenges.” Journal of the Text Encoding Initiative’. Presented at the TEI Annual Event, Argentina. https://doi.org/10.5281/zenodo.13997483.</bibl>
+                    <bibl style="text-align: left; ">Jiang, Guochao, Zepeng Ding, Yuchen Shi, and Deqing Yang. 2024. ‘P-ICL: Point In-Context Learning for Named Entity Recognition with Large Language Models’. arXiv. https://doi.org/10.48550/arXiv.2405.04960.</bibl>
+                    <bibl style="text-align: left; ">Maurya, Muskaan, Anupam Mandal, and Manoj Maurya. n.d. ‘Neural Language Model Embeddings for Named Entity Recognition: A Study from Language Perspective’.</bibl>
+                    <bibl style="text-align: left; ">Tahir, Munief Hassan, Sana Shams, Layba Fiaz, Farah Adeeba, and Sarmad Hussain. n.d. ‘Benchmarking the Performance of Pre-Trained LLMs across Urdu NLP Tasks’.</bibl>
+                    <bibl style="text-align: left; ">Ullah, Fida, Alexander Gelbukh, Muhammad Tayyab Zamir, Edgardo Manuel Felipe Riverόn, and Grigori Sidorov. 2024. ‘Enhancement of Named Entity Recognition in Low-Resource Languages with Data Augmentation and BERT Models: A Case Study on Urdu’. Computers 13 (10): 258. https://doi.org/10.3390/computers13100258.</bibl>
+                    <bibl style="text-align: left; ">Wang, Shuhe, Xiaofei Sun, Xiaoya Li, Rongbin Ouyang, Fei Wu, Tianwei Zhang, Jiwei Li, and Guoyin Wang. 2023. ‘GPT-NER: Named Entity Recognition via Large Language Models’. arXiv. https://doi.org/10.48550/arXiv.2304.10428.</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>

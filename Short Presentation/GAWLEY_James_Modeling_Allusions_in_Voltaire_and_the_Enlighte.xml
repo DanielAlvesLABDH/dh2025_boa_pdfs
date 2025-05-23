@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="GAWLEY_James_Modeling_Allusions_in_Voltaire_and_the_Enlighte">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Modeling Allusions in Voltaire and the Enlightenment with Neural networks (MAVEN)</title>
+                <author>
+                    <persName>
+                        <surname>Gawley</surname>
+                        <forename>James</forename>
+                    </persName>
+                    <affiliation>Sorbonne University, France</affiliation>
+                    <email>james.gawley@gmail.com</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-03-29T17:09:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>intertextuality</term>
+                    <term>classics</term>
+                    <term>literature</term>
+                    <term>language models</term>
+                    <term>artificial intelligence</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>semantic analysis</term>
+                    <term>Literary studies</term>
+                    <term>Philology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Modeling Allusions in Voltaire and the Enlightenment with Neural networks (MAVEN)</p>
+            <p>This short paper will describe the goals of the MAVEN project, explain the steps necessary to meet those goals, and report on initial progress. To date, the connections between French writers of the 18
+                <hi rend="superscript">th</hi> century and their classical predecessors have been insufficiently explored. This is in part because in the modern university system, expertise in Latin and 18
+                <hi rend="superscript">th</hi>-century French are separated into different academic departments. Despite the growing utility of artificial intelligence for translation, an Enlightenment scholar who wishes to compare an 18
+                <hi rend="superscript">th</hi>-century French text against possible Latin source documents faces a lack of effective digital resources, as Latin is an under-resourced language. MAVEN aims to close the NLP gap between Latin and well-resourced modern languages and simultaneously fulfill the need for a digital tool capable of tracing classical Latin ideas in French texts. The ultimate goal of the project is to generate an open-access webtool capable of three research tasks that are not possible with existing resources:
+            </p>
+            <list type="ordered">
+                <item>Automatically locate classical allusions in Enlightenment literature (French-to-Latin).</item>
+                <item>Trace ideas from the classical period down to the Enlightenment (Latin-to-French).</item>
+                <item>Search the canonical Latin texts by subject matter (Latin-to-Latin).</item>
+            </list>
+            <p>These tasks will be possible through a deep-learning model capable of processing both 18
+                <hi rend="superscript">th</hi>-century French and classical Latin. The only existing tool that can be used to explore the dependence of French writing upon classical Latin is called Tesserae-OBVIL, based on the open-source Tesserae project (Gawley 2023). This tool is limited to literary allusions in epic poetry, and its approach is algorithmic rather than AI-based. To improve the recovery of allusions in epic poetry and to expand beyond poetry into other genres, it is necessary to shift from algorithmic approaches to neural-network approaches. This will require several steps. First, a LLM fine-tuned for 18th century French must be trained on sentence vectorization. Second, this language model must be aligned with a LLM of classical Latin (Bamman and Burns 2020), using the knowledge distillation technique (Reimers and Gurevych
+                <hi rend="endnote_reference" xml:space="preserve"> </hi>2020). Finally, this multilingual model will be used to create a cross-language contextualized topic model (Bianchi 
+                <hi rend="italic">et al</hi>. 2021).
+            </p>
+            <p>The first step was accomplished by fine-tuning the DalamBERT model of early modern french. The DalamBERT model was trained on texts from the 16th through early 20th centuries, unlike the more modern CamemBERT (Gabay 
+                <hi rend="italic">et al</hi>. 2022). However, DalamBERT has not been trained on downstream tasks necessary for the MAVEN project, including semantic textual similarity. Therefore to use the model, DalamBERT must be trained in sentence vectorization. This required a custom dataset generated for this project. Pairs of French sentences were culled from the articles of Diderot’s 
+                <hi rend="italic">Encyclopédie</hi>, an 18th-century text featuring articles on thousands of topics. Half of the sentence-pairs were drawn from the same articles in the 
+                <hi rend="italic">Encyclopedie</hi>, and half from unrelated articles. All pairs were hand-rated on a five-point scale of semantic similarity. The DalemBERT model was then trained for sentence vectorization on this dataset using the AnglELoss loss function. The sentence vectorization task was trained on 5,000 hand-rated sentence pairs and validated against 500 hand rated sentence pairs, with a Spearman score of .68. This result is deemed acceptable and the project can now proceed to its next steps.
+            </p>
+        </body>
+        <back>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; "> Bianchi, F., Terragni, S., Hovy, D., Nozza, D., Fersini, E. (2021): "Cross-lingual Contextualized Topic Models with Zero-shot Learning" Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics pp. 1676–1683.</bibl>
+                    <bibl style="text-align: left; "> Bamman, D. and Burns, J. (2020): "Latin BERT: A Contextual Language Model for Classical Philology", ArXiv. doi: https://doi.org/10.48550/arXiv.2009.10053.</bibl>
+                    <bibl style="text-align: left; "> Gabay, S., Suarez, P., Bartz. A., Chagué, A., Bawden, R., Gambette, P., Sagot, B. (2022): "From FreEM to D'AlemBERT: a Large Corpus and a Language Model for Early Modern French" ArXiv: https://doi.org/10.48550/arXiv.2202.09452</bibl>
+                    <bibl style="text-align: left; "> Gawley, J. (2023): “Voltaire Reads Virgil: Using Digital Tools to Investigate the Intertextuality of La Henriade.” 
+                        <hi rend="italic">Revue Voltaire</hi>, Volume 21. http://obvil.huma-num.fr/tesserae-obvil/
+                    </bibl>
+                    <bibl style="text-align: left; "> Reimers, N. and Gurevych, I. (2020): “Making Monolingual Sentence Embeddings Multilingual using Knowledge Distillation” ArXiv. doi: https://arxiv.org/abs/2004.09813</bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>
