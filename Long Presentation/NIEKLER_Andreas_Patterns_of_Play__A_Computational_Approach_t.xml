@@ -105,7 +105,7 @@
                     <hi rend="italic">Patterns in Game Design</hi> database (Björk / Holopainen, 2004). Previous research on mechanics has predominantly relied on qualitative methods, focusing on limited case studies (see for example Sicart, 2008; Zagal et. al., 2008; Braithwaite, 2018). While few examples of computational game studies have focused on genre classification (Jiangh / Zheng, 2023; Faisal / Peltoniemi, 2018) and board game mechanics (Samarasinghe et al., 2021), a data-driven approach to analyzing game mechanics in digital games remains unexplored. To address this gap, we introduce a novel methodology for extracting and analyzing game mechanics at scale from unstructured walkthroughs – textual descriptions of digital games (see Newman, 2011; Nylund, 2015). Understanding game mechanics offers new perspectives on the evolution of games in relation to industry, technology, and culture by identifying quantifiable features and their interactions with these phenomena, that go beyond metadata such as genre descriptions. Our initial experiments examining pattern distribution across genres, temporal pattern trends, and game similarity based on pattern usage demonstrate the potential of this methodology to facilitate novel research directions.
                 </p>
                 <figure>
-                    <graphic n="1001" width="12cm" height="3.2394166666666666cm" url="/tmp/tmple5ofq4y/Pictures/d117516c89e78aa9e67e5eb06eeccb71.png" rend="inline"/>
+                    <graphic n="1001" width="12cm" height="3.2394166666666666cm" url="/tmp/tmpugmjuep0/Pictures/c5f45aa936fcd9eada2f8bdbbb551033.png" rend="inline"/>
                 </figure>
                 <p style="text-align: left; text-align: center;">
                     <anchor xml:id="Ref184371749"/>Figure 1: Detail view from the UMAP visualization of the pattern embeddings.
@@ -119,7 +119,7 @@
                     <hi rend="italic">Civilization</hi>, a turn-based strategy game in which players lead a civilization through the ages by expanding their empire, researching technologies, and interacting with other civilizations to achieve victory. The assigned game mechanics are shown in Table 1.
                 </p>
                 <figure>
-                    <graphic n="1002" width="12.453055555555556cm" height="8.678333333333333cm" url="/tmp/tmple5ofq4y/Pictures/d117516c89e78aa9e67e5eb06eeccb71.png" rend="inline"/>
+                    <graphic n="1002" width="12.453055555555556cm" height="8.678333333333333cm" url="/tmp/tmpugmjuep0/Pictures/1eba5b350c1e113cbba97bc323b4cef5.png" rend="inline"/>
                 </figure>
                 <p style="text-align: left; text-align: center;">
                     <anchor xml:id="Ref184372246"/>Table 1: Game design patterns for the games Civilization and Assassin’s Creed. The weights are the normalized values from the summed pattern similarities.
@@ -129,7 +129,7 @@
                     <hi rend="italic">aim &amp; shoot</hi> in action games, suggesting that these patterns act as trigger mechanics that shape genre characteristics.
                 </p>
                 <figure>
-                    <graphic n="1003" width="15.733888888888888cm" height="3.4219444444444442cm" url="/tmp/tmple5ofq4y/Pictures/d117516c89e78aa9e67e5eb06eeccb71.png" rend="inline"/>
+                    <graphic n="1003" width="15.733888888888888cm" height="3.4219444444444442cm" url="/tmp/tmpugmjuep0/Pictures/307743287c410124c217c4b34d8c2fd0.png" rend="inline"/>
                 </figure>
                 <p style="text-align: left; text-align: center;">
                     <anchor xml:id="mpemq3yjymfg"/>
@@ -143,7 +143,7 @@
                     <hi rend="italic">score</hi> in Figure 2.
                 </p>
                 <figure>
-                    <graphic n="1004" width="15.804444444444444cm" height="5.115277777777778cm" url="/tmp/tmple5ofq4y/Pictures/d117516c89e78aa9e67e5eb06eeccb71.png" rend="inline"/>
+                    <graphic n="1004" width="15.804444444444444cm" height="5.115277777777778cm" url="/tmp/tmpugmjuep0/Pictures/580430270bd7be1c78f57ec64f36d5ab.png" rend="inline"/>
                 </figure>
                 <p style="text-align: left; text-align: center;">
                     <anchor xml:id="Ref184375001"/>Figure 2: Time series analysis of the 
@@ -155,7 +155,7 @@
                     <hi rend="italic">score</hi> declines over time, indicating a shift away from traditional scoring systems. However, employing heatmaps with clustered correlated time series reveal more nuanced trends across numerous mechanics, uncovering practices of game pattern usage within the industry. This approach provides deeper insight into the evolution and interplay of mechanics, as shown in Figure 3.
                 </p>
                 <figure>
-                    <graphic n="1005" width="12.57788611111111cm" height="9.289225cm" url="/tmp/tmple5ofq4y/Pictures/d117516c89e78aa9e67e5eb06eeccb71.png" rend="inline"/>
+                    <graphic n="1005" width="12.57788611111111cm" height="9.289225cm" url="/tmp/tmpugmjuep0/Pictures/7558191d6b995610e1fba601f7e08140.png" rend="inline"/>
                 </figure>
                 <p style="text-align: left; text-align: center;">
                     <anchor xml:id="Ref184375373"/>Figure 3: Heatmap visualizing the temporal prevalence of multiple game design patterns. Color intensity reflects pattern popularity.
@@ -174,13 +174,13 @@
                 <head>Game Similarity and Clustering</head>
                 <p style="text-align: left; ">In addition, our approach allows for similarity comparisons, which is useful for understanding genre boundaries, identifying similar games, and developing novel search functions for game libraries. Using UMAP for dimensionality reduction and DBSCAN clustering (Pedregosa et al., 2011), we show that genre information from the corpus is not consistent with similarities based on game patterns (see Figure 5). This discrepancy highlights a research opportunity to investigate the relationship between game pattern similarities and established genre concepts. Figure 4 demonstrates that pre-selected games with similar functionalities and themes have a small cosine distance, indicating a high degree of similarity.</p>
                 <figure>
-                    <graphic n="1006" width="12.358077777777778cm" height="11.596594444444445cm" url="/tmp/tmple5ofq4y/Pictures/d117516c89e78aa9e67e5eb06eeccb71.png" rend="inline"/>
+                    <graphic n="1006" width="12.358077777777778cm" height="11.596594444444445cm" url="/tmp/tmpugmjuep0/Pictures/f1e64f859e9a82de542f80de13ab9b52.png" rend="inline"/>
                 </figure>
                 <p style="text-align: left; text-align: center;">
                     <anchor xml:id="Ref184378120"/>Figure 4: A distance matrix of pre-selected games reveals that titles with similar genres or gameplay patterns exhibit low distances, indicating that pat-tern vectors capture properties reflecting comparable player experiences.
                 </p>
                 <figure>
-                    <graphic n="1007" width="16.51cm" height="7.161388888888889cm" url="/tmp/tmple5ofq4y/Pictures/d117516c89e78aa9e67e5eb06eeccb71.png" rend="inline"/>
+                    <graphic n="1007" width="16.51cm" height="7.161388888888889cm" url="/tmp/tmpugmjuep0/Pictures/ffce8370c97f5a2f41a276a489a2ec93.png" rend="inline"/>
                 </figure>
                 <p style="text-align: left; text-align: center;">
                     <anchor xml:id="Ref184378135"/>Figure 5: UMAP visualization (5a) colored by genre shows diverse genre distribution across game pattern similarity structures. DBscan clustering (5b) reveals that pattern similarity transcends genre classification.
@@ -192,7 +192,7 @@
                 </head>
                 <p style="text-align: left; ">Analyzing game pattern connections reveals broader mechanical contexts within games. Using game pattern vectors from our corpus, we identify statistically significant co-occurrences of all game patterns and visualize them using force-directed layout graphs, with colors representing potential communities. Graph analysis reveals clusters of highly interconnected patterns, suggesting distinct mechanical systems (see Figure 6). The presence of multiple connected components suggests that our method can reveal broader relationships between game mechanics and design principles. For example, clusters related to resources and information highlight the potential for targeted analysis of specific game design choices and their underlying mechanics. The revealed structure broadly aligns with the chapter organization in Lundgren &amp; Björk’s (2003) book, validating their pattern categorization with our extensive dataset.</p>
                 <figure>
-                    <graphic n="1008" width="15.142308333333334cm" height="18.034cm" url="/tmp/tmple5ofq4y/Pictures/d117516c89e78aa9e67e5eb06eeccb71.png" rend="inline"/>
+                    <graphic n="1008" width="15.142308333333334cm" height="18.034cm" url="/tmp/tmpugmjuep0/Pictures/d117516c89e78aa9e67e5eb06eeccb71.png" rend="inline"/>
                 </figure>
                 <p style="text-align: left; text-align: center;">
                     <anchor xml:id="Ref184378522"/>Figure 6: Graph analysis of game pattern connectivity, with magnified highly connected cliques (modularity).

@@ -122,15 +122,15 @@
             <p style="text-align: left; ">Second, we evaluate state-of-the-art LLMs for NER tasks with the manually annotated Marsiya corpus and further compare their performance with dedicated finetuned models, trained specifically and only for NER in Urdu Marsiya text. This evaluation includes the latest LLM from OpenAI, i.e., GPT-4o and an open source LLM DeepSeek . We benchmark these models using established evaluation metrics such as precision, recall, and F1-score. We further provide a qualitative error analysis which aims to highlight the specific challenges faced by LLMs when processing poetic, symbolic, and contextually dense texts in Urdu. We pay particular attention to language-specific phenomena such as metaphorical expressions commonly found in Urdu Marsiya. Error evaluation metrics are still under progress and based on the recent works in Urdu NLP (Tahir et al. 2025b)(Abdelali et al. 2024)(Ahmed et al. 2024)</p>
             <p style="text-align: left; ">The challenge in error assessment within a poetry dataset lies in the absence of clear False Positives and False Negatives in the LLM-based annotations, unlike non-poetic prose or contemporary datasets as demonstrated in recent works. For instance, certain entities are designated as NERs while not conforming to either category. The following are examples of errors identified in the annotated dataset:</p>
             <p style="text-align: left; ">
-                <graphic n="1001" width="11.248319444444444cm" height="5.346094444444445cm" url="/tmp/tmpj11meh1f/Pictures/bbcd3d0a1e1c7dd6e1b4d0ff20287e13.png" rend="inline"/>
+                <graphic n="1001" width="11.248319444444444cm" height="5.346094444444445cm" url="/tmp/tmpef7bf8dt/Pictures/afe249eb1750794f3697876453ed478a.png" rend="inline"/>
             </p>
             <p style="text-align: left; ">Figure 1 Error in LLM based NER prediction</p>
             <p style="text-align: left; ">
-                <graphic n="1002" width="11.272508333333333cm" height="4.716891666666666cm" url="/tmp/tmpj11meh1f/Pictures/bbcd3d0a1e1c7dd6e1b4d0ff20287e13.png" rend="inline"/>
+                <graphic n="1002" width="11.272508333333333cm" height="4.716891666666666cm" url="/tmp/tmpef7bf8dt/Pictures/213ae33b268d47cd10015dcf6cb0fe15.png" rend="inline"/>
             </p>
             <p style="text-align: left; ">Figure 2 Error in LLM based NER prediction</p>
             <p style="text-align: left; ">
-                <graphic n="1003" width="11.308291666666667cm" height="4.764769444444444cm" url="/tmp/tmpj11meh1f/Pictures/bbcd3d0a1e1c7dd6e1b4d0ff20287e13.png" rend="inline"/>
+                <graphic n="1003" width="11.308291666666667cm" height="4.764769444444444cm" url="/tmp/tmpef7bf8dt/Pictures/bbcd3d0a1e1c7dd6e1b4d0ff20287e13.png" rend="inline"/>
             </p>
             <p style="text-align: left; ">Figure 3 Error in LLM based NER prediction</p>
             <p style="text-align: left; ">Consequently, the development of the evaluation metric guidelines is ongoing, but it is already informed by existing guidelines for current non-poetic or prose datasets in recent research. We have identified the errors; nevertheless, the accurate classification of error types has to be completed.</p>

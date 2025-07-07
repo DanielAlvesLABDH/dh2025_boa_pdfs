@@ -96,7 +96,7 @@
                 <p>The volunteers who recorded the interviews were guided to discuss specific themes -- including religious belief and activity, creating a common narrative structure within the dataset that facilitates comparison of the various trajectories, as demonstrated by the distribution of religious content throughout the testimonies (Figure 1).</p>
                 <p>
                     <figure>
-                        <graphic url="/tmp/tmpnz_efv0h/Pictures/53f3894560bd2bdf54148d74789dec61.jpg"/>
+                        <graphic url="/tmp/tmpuayixaon/Pictures/3ef60ce42d2b390076da35ce231e7c69.jpg"/>
                     </figure>
                 </p>
                 <p>Figure 1: Distribution of all religious content, the distributions that we based the baselines on are according to each label separately.</p>
@@ -109,7 +109,7 @@
                 <p>Extracting the religious trajectory of a given segmented testimony consists of two annotation tasks, followed by prompting and training LLMs for classification. The main steps are: (1) filter religious content, (2) identify practices and beliefs, and (3) measure the valence and intensity of the protagonist's expressed attitude toward religion. See Figure 2.</p>
                 <p>
                     <figure>
-                        <graphic url="/tmp/tmpnz_efv0h/Pictures/53f3894560bd2bdf54148d74789dec61.jpg"/>
+                        <graphic url="/tmp/tmpuayixaon/Pictures/d49830b3da84dcbf684c5cba21853e17.jpg"/>
                     </figure>
                 </p>
                 <p>Figure 2: The general pipeline for identifying the religious trajectories from a set of Holocaust survivor testimonies: (1) Segmentation: segment the testimonies, beginning with question-answer pairs and then merging and dividing them so that the majority length is 50-100 words; (2) Filtration: train and run a classifier to filter all segments containing religious content; (3) Categorization: use LLMs to identify the protagonist's valence of religious practice and/or beliefs in a given segment; (4) Clustering: cluster the resulting trajectories to identify common patterns of evolution of religiosity in the testimony dataset.</p>
@@ -119,7 +119,7 @@
                 <p>The second annotation task is multi-label and consists of identifying the class of each sample and determining the speaker's valence toward the specific class. Each segment in the trajectory is categorized by its content -- practice, belief, or both. The segments are further categorized by their valence toward the specific practice or belief described. Specifically, we map each sample to one or more of these classes or mark it as falsely recognized religious content. An example of the annotation process is illustrated in Figure 3.</p>
                 <p>
                     <figure>
-                        <graphic url="/tmp/tmpnz_efv0h/Pictures/53f3894560bd2bdf54148d74789dec61.jpg"/>
+                        <graphic url="/tmp/tmpuayixaon/Pictures/4be2afc908d4b3244db701df1805d6f0.jpg"/>
                     </figure>
                 </p>
                 <p>Figure 3: An annotation example from the platform we provided the annotators with to identify the survivor’s valence of religious practice and belief in each segment.</p>
@@ -155,7 +155,7 @@
                     <p>For hierarchical clustering, HDBSCAN points out clusters with fair separation that are similar to structure-based ones.</p>
                     <p>
                         <figure>
-                            <graphic url="/tmp/tmpnz_efv0h/Pictures/53f3894560bd2bdf54148d74789dec61.jpg"/>
+                            <graphic url="/tmp/tmpuayixaon/Pictures/53f3894560bd2bdf54148d74789dec61.jpg"/>
                         </figure>
                     </p>
                     <p>Figure 4: Religious Trajectory structure distributions, from left to right: 65% of the practice trajectories have an oscillating structure and 30% are constant-active. The belief trajectories have a similar distribution, with the majority sharing a constant-positive structure (63%) and the rest distributed among oscillating (14%), constant-negative (11%), descending (6%), and ascending (5%). For the intersection of the two aspects, the two large groups cover 61% of the intersection, all have a constant-positive belief structure, while the practice valence varies: 37% oscillate and 24% have a constant-active structure.</p>

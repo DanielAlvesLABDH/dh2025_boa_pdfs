@@ -107,7 +107,7 @@
                     <hi rend="italic">Gallic Wars</hi> was chosen as a case study. A knowledge graph was constructed using English-translated text from the Perseus Digital Library [4], with automated extraction performed by LLMGraphTransformer (LGT) [5], utilizing the GPT-4o model. The resulting knowledge graph was stored in Neo4j, enabling searches through the Cypher query language (Figure 1).
                 </p>
                 <figure>
-                    <graphic n="1001" width="15.000111111111112cm" height="7.129638888888889cm" url="/tmp/tmpxaztoosd/Pictures/3c1be99e5dcd12854a65cd0cbcb342d8.png" rend="inline"/>
+                    <graphic n="1001" width="15.000111111111112cm" height="7.129638888888889cm" url="/tmp/tmp31ytd1gj/Pictures/1d9bcbfa4e01e670bad374e8e2ef6c9e.png" rend="inline"/>
                 </figure>
                 <p style="text-align: center;">
                     <hi rend="bold" style="font-size:10pt">Figure 1:</hi>
@@ -135,7 +135,7 @@
                     <hi style="font-size:10pt">: Questions concerning the interpretation of the text</hi>
                 </p>
                 <figure>
-                    <graphic n="1002" width="13.890625cm" height="3.128147222222222cm" url="/tmp/tmpxaztoosd/Pictures/3c1be99e5dcd12854a65cd0cbcb342d8.png" rend="inline"/>
+                    <graphic n="1002" width="13.890625cm" height="3.128147222222222cm" url="/tmp/tmp31ytd1gj/Pictures/b78610acc289636056984cb259bbc22c.png" rend="inline"/>
                 </figure>
                 <p>Four Roman history experts evaluated the responses based on the following criteria, using a five-point scale:</p>
                 <list type="ordered">
@@ -154,7 +154,7 @@
                 </list>
                 <p>The average scores for each retrieval method are presented in Figure 2.</p>
                 <figure>
-                    <graphic n="1003" width="11.598088888888888cm" height="6.958308333333333cm" url="/tmp/tmpxaztoosd/Pictures/3c1be99e5dcd12854a65cd0cbcb342d8.png" rend="inline"/>
+                    <graphic n="1003" width="11.598088888888888cm" height="6.958308333333333cm" url="/tmp/tmp31ytd1gj/Pictures/5a493595ac70063271eb1ed96bcfeac4.png" rend="inline"/>
                 </figure>
                 <p style="text-align: center;">
                     <hi rend="bold" style="font-size:10pt">Figure 2:</hi>
@@ -167,7 +167,7 @@
                     <hi style="font-size:10pt">Questions concerning the facts in the text</hi>
                 </p>
                 <figure>
-                    <graphic n="1004" width="13.820069444444444cm" height="3.1061638888888887cm" url="/tmp/tmpxaztoosd/Pictures/3c1be99e5dcd12854a65cd0cbcb342d8.png" rend="inline"/>
+                    <graphic n="1004" width="13.820069444444444cm" height="3.1061638888888887cm" url="/tmp/tmp31ytd1gj/Pictures/ccf53d3d6959eda7708cf8607c311420.png" rend="inline"/>
                 </figure>
                 <p>These questions were designed for binary correctness evaluation, with the results summarized in Table 3 (triangles denote partial answers for questions requiring multiple responses).</p>
                 <p style="text-align: center;">
@@ -175,7 +175,7 @@
                     <hi style="font-size:10pt" xml:space="preserve">Comparison between Graph and Vector </hi>
                 </p>
                 <figure>
-                    <graphic n="1005" width="9.525cm" height="4.00445cm" url="/tmp/tmpxaztoosd/Pictures/3c1be99e5dcd12854a65cd0cbcb342d8.png" rend="inline"/>
+                    <graphic n="1005" width="9.525cm" height="4.00445cm" url="/tmp/tmp31ytd1gj/Pictures/68e2edcd14cdefff0bb1f025ec857dd8.png" rend="inline"/>
                 </figure>
                 <p>The results clearly show that Graph Only retrieval currently falls short in accuracy. For example, in Q2, which inquired about individuals holding magistracies in the Aedui tribe, the expected answers—Liscus and Divitiacus—were not retrieved. An analysis of the corresponding graph section revealed the following relationships:</p>
                 <list type="unordered">
@@ -203,7 +203,7 @@
                     <hi style="font-size:10pt" xml:space="preserve"> Evaluation of the nodes contained in the knowledge graph</hi>
                 </p>
                 <figure>
-                    <graphic n="1006" width="12.144375cm" height="4.244908333333333cm" url="/tmp/tmpxaztoosd/Pictures/3c1be99e5dcd12854a65cd0cbcb342d8.png" rend="inline"/>
+                    <graphic n="1006" width="12.144375cm" height="4.244908333333333cm" url="/tmp/tmp31ytd1gj/Pictures/3c1be99e5dcd12854a65cd0cbcb342d8.png" rend="inline"/>
                 </figure>
                 <p>The evaluation revealed consistently low precision and recall for ‘Region,’ whereas ‘Group’ and ‘Person’ demonstrated relatively high accuracy. Moreover, the performance for ‘Settlement’ varied considerably depending on the LLM used for graph construction. These findings indicate that node extraction accuracy serves as a meaningful metric for assessing the quality of knowledge graphs.</p>
             </div>

@@ -78,7 +78,7 @@
                 <hi rend="italic">The Trial</hi>, each featuring the work of a single artist: Bergner (1990), Eidus (2003), and Fosshag (Kafka 2005). These artists added captions to their illustrations, quoting Kafka’s text verbatim and thereby establishing a direct link between word and image. The dataset consists of all 85 images from the three editions that have corresponding text: 21 from Fosshag, and 32 each from Bergner and Eidus.
             </p>
             <figure>
-                <graphic n="1001" width="16.002cm" height="9.496777777777778cm" url="/tmp/tmpjw58e72g/Pictures/b78c5fe5567cd305f598e45a06f909e2.png" rend="inline"/>
+                <graphic n="1001" width="16.002cm" height="9.496777777777778cm" url="/tmp/tmpivsjps6i/Pictures/dfa6a407f7887bbd0a207aa91e5fb2e8.png" rend="inline"/>
             </figure>
             <p style="text-align: left; ">
                 <hi rend="bold">Figure 1.</hi> Distribution of images across chapters in the three illustrated editions of 
@@ -89,7 +89,7 @@
             </p>
             <p style="text-align: left; ">Our next experiment confirmed this hypothesis. We trained two machine learning classifiers to independently classify the chapter for each image using low- and high-level features, respectively. The low-level features—brightness, contrast, sharpness, and edge density—were extracted through grayscale image processing techniques with OpenCV (Bradski 2000). High-level features, capturing abstract patterns in 2,048-dimensional vectors, were extracted using a ResNet50 model pre-trained on ImageNet (He et al. 2016). We classified 81 images into 8 chapters (excluding Chapters 2 and 5, which had only 1 and 3 instances, respectively) using 5-fold cross-validation with a logistic regression model implemented in scikit-learn (Pedregosa et al. 2011).</p>
             <figure>
-                <graphic n="1002" width="16.002cm" height="6.757458333333333cm" url="/tmp/tmpjw58e72g/Pictures/b78c5fe5567cd305f598e45a06f909e2.png" rend="inline"/>
+                <graphic n="1002" width="16.002cm" height="6.757458333333333cm" url="/tmp/tmpivsjps6i/Pictures/896317fceadafc1d4e232125f5bfe5ea.png" rend="inline"/>
             </figure>
             <p style="text-align: left; ">
                 <hi rend="bold">Figure 2.</hi> Heatmaps of chapter classification for low-level and high-level feature classifiers
@@ -103,7 +103,7 @@
                 <hi rend="italic">The Trial</hi>. Using the SentiWS dataset (Remus et al. 2010), a lexicon of German words with associated sentiment scores, we computed the average sentiment score for each caption. We then analyzed the relationship between these sentiment scores, as well as their absolute values, and the visual features of the corresponding images, namely brightness, contrast, sharpness, and edge density.
             </p>
             <figure>
-                <graphic n="1003" width="16.002cm" height="6.910916666666667cm" url="/tmp/tmpjw58e72g/Pictures/b78c5fe5567cd305f598e45a06f909e2.png" rend="inline"/>
+                <graphic n="1003" width="16.002cm" height="6.910916666666667cm" url="/tmp/tmpivsjps6i/Pictures/b78c5fe5567cd305f598e45a06f909e2.png" rend="inline"/>
             </figure>
             <p style="text-align: left; ">
                 <hi rend="bold">Figure 3.</hi> Relationships between visual features of images and sentiment scores and their absolute values of corresponding texts

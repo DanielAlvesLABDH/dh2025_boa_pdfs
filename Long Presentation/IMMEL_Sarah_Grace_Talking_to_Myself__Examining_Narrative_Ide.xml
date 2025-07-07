@@ -95,7 +95,7 @@
             <p>The training dataset consists of virtually every piece of writing the subject had retained, both born-digital and handwritten. It covers nearly two decades of writing and includes casual conversations, creative writing, journals, and a wide variety of essays. The data were cleaned to remove repetitive elements like headings, after which they comprised over 580,000 words (Fig. 1).</p>
             <p>
                 <figure>
-                    <graphic url="/tmp/tmpz8obw8tf/Pictures/199f9ca37685540f23e90087f78c583b.png"/>
+                    <graphic url="/tmp/tmpi_isgdlq/Pictures/dee5c0d77aa12f790dbaf8fa7fa78e08.png"/>
                     <head>A black and blue lineDescription automatically generated, Picture</head>
                 </figure>
             </p>
@@ -105,12 +105,12 @@
             <p>The RAG system functions by converting chunks of her writing into vectors using Thenlper’s GTE-small (Li et al. 2023). This creates a multidimensional “knowledge base” where documents with similar content are grouped near each other in semantic space (Fig. 2). The seven documents closest to a prompt are then added to the template in Fig. 3 as context for a question-and-answer model—namely Qwen2-7B-Instruct (Yang et al. 2024). </p>
             <p>
                 <figure>
-                    <graphic url="/tmp/tmpz8obw8tf/Pictures/199f9ca37685540f23e90087f78c583b.png"/>
+                    <graphic url="/tmp/tmpi_isgdlq/Pictures/46b54bc32168a56629a84540d31176ea.png"/>
                 </figure>Figure 2. A visual representation of the embedded documents, reduced to two dimensions using PaCMAP (Wang et al. 2021). Document chunks are colored by source type, with a sample query “What is the purpose of fiction?” shown as a pink diamond.
             </p>
             <p>
                 <figure>
-                    <graphic url="/tmp/tmpz8obw8tf/Pictures/199f9ca37685540f23e90087f78c583b.png"/>
+                    <graphic url="/tmp/tmpi_isgdlq/Pictures/0061ab0adf8943353d8523ed13b12399.png"/>
                 </figure>
             </p>
             <p>Figure 3. The template used for prompting Qwen2-7B-Instruct, with curly braces (‘{ }’) indicating where the question-specific context and prompt would appear.</p>
@@ -118,12 +118,12 @@
             <p>HALO, a recent hallucination ontology, was then applied to the output content to describe the types of inaccuracies to which each method was prone (Nananukul and Kejriwal 2024). While both models generated frequent factual inconsistencies, they varied in type: the RAG model frequently mismatched events in time or wrongly inferred plausible details, while the fine-tuned model often switched out names of family members with those of pets or fictional characters, or melded phrases together. Logical inconsistencies appeared frequently in the fine-tuned model but less often in RAG outputs. </p>
             <p>
                 <figure>
-                    <graphic url="/tmp/tmpz8obw8tf/Pictures/199f9ca37685540f23e90087f78c583b.png"/>
+                    <graphic url="/tmp/tmpi_isgdlq/Pictures/76867ff1a62bdac1863a02a72630bd37.png"/>
                 </figure>Figure 4. LIWC-22 summary values for the subject’s writing (Me) and GPT-Neo-125m and Qwen2-14B-Instruct before and after personalization, with calculated rows showing relative improvement, or how much closer each model’s scores came to those of the subject after personalization (Rel. Imp.).
             </p>
             <p>
                 <figure>
-                    <graphic url="/tmp/tmpz8obw8tf/Pictures/199f9ca37685540f23e90087f78c583b.png"/>
+                    <graphic url="/tmp/tmpi_isgdlq/Pictures/e7c074bf11e932346cfde99b7ae779b3.png"/>
                 </figure>Figure 5. LIWC-22 summary values for the subject’s writing and GPT-Neo-125m and Qwen2-14B-Instruct before and after personalization, broken down by genre
             </p>
             <p>These methods both emphasize the inconsistency of the outputs of LLM personalization. However, assessing the usefulness of the process of personalization required a more creative approach. To this end, the subject created a website (publicly available at 
@@ -131,7 +131,7 @@
             </p>
             <p>
                 <figure>
-                    <graphic url="/tmp/tmpz8obw8tf/Pictures/199f9ca37685540f23e90087f78c583b.png"/>
+                    <graphic url="/tmp/tmpi_isgdlq/Pictures/199f9ca37685540f23e90087f78c583b.png"/>
                 </figure>Figure 6. Screenshots of datadoppelganger.com, the creative response composed by the subject.
             </p>
             <p>These analyses inform an evaluation of LLM personalization methods for each of de Vries’ three uses of creative AI: representing, creating, and understanding (2020). Representation—accurately and authentically representing one’s identity—seems most limited, due to the models’ inconsistencies. Both models are feasibly able to piece together outputs which function as authentic representations of self: the wide range of source texts allows sufficient context to allow for both congruence (alignment with one’s internal understanding of identity) and coherence (alignment with expressions of that identity across varied contexts) (Vivienne 2016). However, between conflicting associations already present in the base model, conflicting versions of identity in the data across genre and time, and imperfect training, embedding, and/or retrieval of these data, most outputs were misaligned with the subject’s internal and/or expressed understanding of herself.</p>

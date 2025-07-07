@@ -81,7 +81,7 @@
                     <p style="text-align: left; ">Authorship attribution typically achieves better performance by focusing on features that occur frequently within a text, such as character n-grams, most frequent words, parts-of-speech etc. The processing of such features has improved significantly in recent years due to advances in computational methods.</p>
                     <p style="text-align: left; ">Yet, in this study, we repurpose these computational techniques to address the opposite challenge: rather than analyzing large-scale, high-frequency features, we aim to detect rare and intricate phenomena that may even escape trained human annotators.</p>
                     <figure>
-                        <graphic n="1001" width="16.002cm" height="10.632722222222222cm" url="/tmp/tmpbsm6p66d/Pictures/3ad7c715c9e87f15026de6e2bc1a4f03.png" rend="inline"/>
+                        <graphic n="1001" width="16.002cm" height="10.632722222222222cm" url="/tmp/tmp3ohuc8c1/Pictures/9d27eadf23b49866746ec76e70d79436.png" rend="inline"/>
                     </figure>
                     <p style="text-align: left; ">Figure 1. Our pipeline</p>
                 </div>
@@ -119,7 +119,7 @@
                     <p style="text-align: left; ">In this paper, we report on our first attempt at building a pipeline able to detect these sometimes very erudite wordplays, tested here on all the texts written by Colette while working with Willy’s workshop.</p>
                     <p style="text-align: left; ">To be able to run our procedure without incurring too much cost, we implement a two-step strategy. We first run a commonly adopted (Acheampong et al. 2021) transformer-based emotion detection solution, to eliminate the saddest passages where wordplays are unlikely to appear. We then benchmark LLM annotators and use a combination of two of them to detect wordplays. We post-correct their results, count these confirmed wordplays and compare their position to previous results in the literature. As using humorous names is also a practice that Willy affectionated (Caradec 2004), we run a named entity recognition as well, to analyze ourselves these potential places for puns.</p>
                     <figure>
-                        <graphic n="1002" width="16.002cm" height="8.128cm" url="/tmp/tmpbsm6p66d/Pictures/3ad7c715c9e87f15026de6e2bc1a4f03.png" rend="inline"/>
+                        <graphic n="1002" width="16.002cm" height="8.128cm" url="/tmp/tmp3ohuc8c1/Pictures/3ad7c715c9e87f15026de6e2bc1a4f03.png" rend="inline"/>
                     </figure>
                     <p style="text-align: left; ">Figure 2. Smoothed evolution of detected emotions across segments in Colette and possibly Willy’s novel Claudine à l’École. The graph depicts the emotional progression throughout the novel: joy (blue), sadness (orange), disgust (green), anger (red), fear (purple), and surprise (brown).</p>
                 </div>

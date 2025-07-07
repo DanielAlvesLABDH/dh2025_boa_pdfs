@@ -113,26 +113,26 @@
                     <head>Phase 2: Integration into the Knowledge Graph</head>
                     <p>To facilitate the integration of the extracted data, a mapping process was employed, whereby entities were aligned to the classes and properties of OntoExhibit. Figs 1 and 2 illustrate a simplified version of the OntoExhibit model, accompanied by examples for the Art Review and Text Catalog classes. </p>
                     <figure>
-                        <graphic n="1001" width="16.832858333333334cm" height="9.468483333333333cm" url="/tmp/tmphkun4krz/Pictures/b1ff0a4c415613c0c1403431e0e28100.png" rend="inline"/>
+                        <graphic n="1001" width="16.832858333333334cm" height="9.468483333333333cm" url="/tmp/tmp187npvi_/Pictures/68d7ea66ff2fc788f3764c19179e78e0.jpg" rend="inline"/>
                     </figure>
                     <p style="text-align: left;">
                         <hi style="font-size:10pt">Figure 1. OntoExhibit Model Example with the “Art Review” Class. Parent classes are shown in green, while instances are depicted in blue</hi>
                     </p>
                     <figure>
-                        <graphic n="1002" width="16.002cm" height="9.001125cm" url="/tmp/tmphkun4krz/Pictures/b1ff0a4c415613c0c1403431e0e28100.png" rend="inline"/>
+                        <graphic n="1002" width="16.002cm" height="9.001125cm" url="/tmp/tmp187npvi_/Pictures/ebc4cb278b311804397dad9bd60b025d.png" rend="inline"/>
                     </figure>
                     <p style="text-align: left;">
                         <hi style="font-size:10pt">Figure 2. OntoExhibit Model Example with the “Text Catalog” Class. Parent classes are shown in green, while instances are depicted in blue.</hi>
                     </p>
                     <p>The transformation of the structured JSON data into RDF triples was achieved through the use of RML (RED RDF Mapping Language) [4], ensuring adherence to the ontology’s schema. RML was selected for its ability to process heterogeneous data structures, thus surpassing the limitations of traditional R2RML [5]. The RML specifications, along with the JSON data, are processed by an RML engine—in our case, Morph [6]—to generate triples. This triples are then validated and integrated into the knowledge graph by being loaded into the corresponding RDF store. The sequence of steps involved is illustrated in the following diagram (fig. 3):</p>
                     <figure>
-                        <graphic n="1003" width="16.002cm" height="7.962194444444444cm" url="/tmp/tmphkun4krz/Pictures/b1ff0a4c415613c0c1403431e0e28100.png" rend="inline"/>
+                        <graphic n="1003" width="16.002cm" height="7.962194444444444cm" url="/tmp/tmp187npvi_/Pictures/bab741f350f11448c8bed427b3976d2c.png" rend="inline"/>
                     </figure>
                     <p style="text-align: left;">
                         <hi style="font-size:10pt">Figure 3. Transformation process from JSON to RDF triples. Own elaboration</hi>
                     </p>
                     <figure>
-                        <graphic n="1004" width="15.504158333333333cm" height="22.481025cm" url="/tmp/tmphkun4krz/Pictures/b1ff0a4c415613c0c1403431e0e28100.png" rend="inline"/>
+                        <graphic n="1004" width="15.504158333333333cm" height="22.481025cm" url="/tmp/tmp187npvi_/Pictures/c5e69e05967d3ce6ca423e06556a2594.png" rend="inline"/>
                     </figure>
                     <p>
                         <hi style="font-size:10pt">Figure 4. RDF schema</hi>
@@ -146,7 +146,7 @@
                 </head>
                 <p>The result is a SPARQL-interrogable knowledge graph that encompasses not only socio-institutional relationships—such as links between galleries, curators, and artists—but also the narratives and evaluations surrounding exhibitions. Once integrated, the knowledge graph supports advanced queries to extract meaningful insights. For instance, it is possible to identify exhibitions with the highest number of published reviews and, consequently, the greatest media impact. Furthermore, it is possible to list reviews related to a specific artist or museum; or to compile all texts associated with an exhibition for comparative analysis, among other possibilities.</p>
                 <figure>
-                    <graphic n="1005" width="13.00286111111111cm" height="14.914877777777777cm" url="/tmp/tmphkun4krz/Pictures/b1ff0a4c415613c0c1403431e0e28100.png" rend="inline"/>
+                    <graphic n="1005" width="13.00286111111111cm" height="14.914877777777777cm" url="/tmp/tmp187npvi_/Pictures/b1ff0a4c415613c0c1403431e0e28100.png" rend="inline"/>
                 </figure>
                 <p style="text-align: left;">
                     <hi style="font-size:10pt">Figure 5 . RDF schema. Query Example: Comparing Curatorial Narratives and Reviews</hi>

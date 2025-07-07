@@ -280,7 +280,7 @@
                     </formula> that preserve the local structure of the data. The t-SNE algorithm works by measuring the similarity between pairs of images in the original high-dimensional space and finding a configuration in 2D where these similarities are approximately preserved using a heavy-tailed distribution. This process ensures that images with similar visual features remain close together in the 2D scatter plot, while dissimilar images are positioned farther apart. Such a visual representation made it straightforward to detect clusters, identify misclassifications, and iteratively fine-tune our training parameters.
                 </p>
                 <figure>
-                    <graphic n="1001" width="15.24cm" height="7.6065611111111116cm" url="/tmp/tmppmbxjssn/Pictures/4a39af98024927ef8077e4925faddca5.jpeg" rend="inline"/>
+                    <graphic n="1001" width="15.24cm" height="7.6065611111111116cm" url="/tmp/tmpanrnz228/Pictures/16fbab083bbfcac17d53b23bf723b4ee.png" rend="inline"/>
                     <head>Exploring the evaluation of the classification (left) into three production modes (handwriting, print, typewriting) on a manually tagged set, revealed two prominent red error clusters (right). Small red specks were expected (e.g., cursive fonts flagged as handwriting or neat block letters flagged as print. The two large clusters, however, came from non-text objects and pointed to a real gap as they contained non-textual content. That led us to add a fourth class, “Other,” which immediately absorbed those items and later split into the sub-types photograph and drawing. </head>
                 </figure>
             </div>
@@ -289,7 +289,7 @@
                 <p style="text-align: left; ">The Archive catalog was handed to us in the form of a spreadsheet, where each row represented a sub-series in the archive, which in its turn stands for a physical folder in the archive, and a digital directory of images. Our goal was to enable a more refined and exact access to each document in the archive.</p>
                 <p style="text-align: left; ">In the original descriptions, written in different text editors or into software solutions which are no longer available to us, formatting provided clearer delineation of the different items or parts of the description to the human eye. However, in the resulting spreadsheet the inconsistency of using semicolon, numbering or other methods to organize the description internally, made any rule based parsing impossible. We therefore resorted to artificial intelligence. </p>
                 <figure>
-                    <graphic n="1002" width="16.002cm" height="11.33651388888889cm" url="/tmp/tmppmbxjssn/Pictures/4a39af98024927ef8077e4925faddca5.jpeg" rend="inline"/>
+                    <graphic n="1002" width="16.002cm" height="11.33651388888889cm" url="/tmp/tmpanrnz228/Pictures/33bd34b1ce2de4f71a6b457c4930a079.jpeg" rend="inline"/>
                     <head>The folder descriptions contain general descriptions (yellow), item descriptions (green and blue) and listings of themes or named entities (red), with no consistent delineation.</head>
                 </figure>
                 <p style="text-align: left; ">Having automatically parsed the descriptions, the items are machine translated into both German and English, and then sent to classification, based on a system defined by (Netzer and Shuster, 2025) -
@@ -311,7 +311,7 @@
                     <hi rend="color(0E0E0E)"> types capture mostly the diplomatic form offering an orthogonal layer of categorization. Types focus on the physical or structural attributes of a document. This layered approach ensures a detailed, flexible, and systematic representation of archival materials, supporting both human readability and computational analysis.</hi>
                 </p>
                 <figure>
-                    <graphic n="1003" width="16.002cm" height="4.332111111111111cm" url="/tmp/tmppmbxjssn/Pictures/4a39af98024927ef8077e4925faddca5.jpeg" rend="inline"/>
+                    <graphic n="1003" width="16.002cm" height="4.332111111111111cm" url="/tmp/tmpanrnz228/Pictures/4a39af98024927ef8077e4925faddca5.jpeg" rend="inline"/>
                     <head>An example of Class vs. Types assignment of documents. On the second row, a document with the diplomatic form of postcard is classified as a “communication document”, while in the last row, a document of type postcard is classified as Ephemera.</head>
                 </figure>
                 <p style="text-align: left; ">The python code we use to automate classification employs Large Language Models (LLMs), with OpenAI's gpt-4o serving as the primary model to classify the items based on Netzer and Shuster’s schema. To ensure the generated classifications aligned precisely with our specific vocabularies, we utilized Pydantic (Python Library) for enforcing structured output.</p>

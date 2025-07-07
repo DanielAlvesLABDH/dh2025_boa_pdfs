@@ -85,7 +85,7 @@
                 <p style="text-align: left; ">Despite the wealth of digitized stereographs available online, disseminating them proves challenging due to the difficulty of transmitting the depth of information they encode. Traditional viewing through a stereoscope requires physical handling, which risks jeopardizing the fragile artifacts, the dominant form of digital dissemination as side-by-side stereo pairs fail to immerse the observer in their 3D historical contexts, and other popular 3D viewing methods such as anaglyphs are not as compelling as comparable visualization methods (Peixoto et al. 2019). However, Virtual reality, which has become increasingly ubiquitous in personal and museological spheres<ref n="1" target="ftn1"/>, offers avenues towards a renaissance for the stereographic medium.
                 </p>
                 <figure>
-                    <graphic n="1001" width="15.998472222222222cm" height="8.09625cm" url="/tmp/tmpsc7e2_x4/Pictures/6e623b7556627b7f15364780b190d586.png" rend="inline"/>
+                    <graphic n="1001" width="15.998472222222222cm" height="8.09625cm" url="/tmp/tmpj_6fvgmg/Pictures/bead11c119325bb68b938d053198f148.png" rend="inline"/>
                 </figure>
                 <p style="text-align: left; ">
                     <hi rend="italic bold" style="font-size:10pt">Figure 1:</hi>
@@ -106,7 +106,7 @@
                     <head>Restoration</head>
                     <p style="text-align: left; ">Our toolkit’s core is an automatic end-to-end restoration pipeline that prepares digitized stereographs for VR. This involves cropping the two images out of their scanned frames and correcting various sources of discomfort. To this end, we identified eight restoration steps (Gowda-Storz / Kenderdine in press) that must be automated by examining manual stereo restoration and 3D cinema post-processing workflows employed by professionals. These eight steps, described in figure 2, process stereographs for both HMD and screen-based VR systems and are modular, with each step designed to be used in isolation. At its core, the pipeline is based on matching and comparing the two images based on disparity and using one image to correct the other. This, along with a focus on classical rather than generative methods, ensures transparency and minimizes the possibility of our algorithm introducing new, historically inaccurate content. The restoration pipeline is in active development and is shaped by input from the archives and restoration professionals who would benefit from it.</p>
                     <figure>
-                        <graphic n="1002" width="15.998472222222222cm" height="8.060972222222222cm" url="/tmp/tmpsc7e2_x4/Pictures/6e623b7556627b7f15364780b190d586.png" rend="block"/>
+                        <graphic n="1002" width="15.998472222222222cm" height="8.060972222222222cm" url="/tmp/tmpj_6fvgmg/Pictures/6e623b7556627b7f15364780b190d586.png" rend="block"/>
                     </figure>
                     <p style="text-align: left; ">
                         <hi rend="italic" style="font-size:10pt">Figure 2: Overview of the eight sequential stages in our automated stereo-restoration pipeline, from initial frame extraction and disparity alignment through artifact correction and colour correction to the final restored stereograph.</hi>

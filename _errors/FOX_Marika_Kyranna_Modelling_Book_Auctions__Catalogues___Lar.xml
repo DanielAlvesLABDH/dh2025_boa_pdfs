@@ -69,10 +69,10 @@
             <p>Auction prices act as a useful proxy for the cultural value of objects that have both intrinsic and socially perceived value, because they represent how much a buyer is willing to pay at a specific point in time. And since auction houses typically estimate the worth of items pre-sale, the final price can be compared with expert predictions that are based on available information about the item but cannot consider external factors such as personal connections to buyers. This sometimes leads to items failing to meet their minimum price and going unsold- or fetching a price far above the high estimate. See Figure 1 for an example of this occurring in the case of a minuscule prayer book. This project seeks to use computational analysis of large sets of auction price data to eventually build a model that can more accurately predict such prices. </p>
             <figure>
                 <figure>
-                    <graphic n="1001" width="16.51cm" height="6.695722222222222cm" url="/tmp/tmpnn36dvwv/Pictures/495a9f440ef687d3375f6b8b4ba01996.png" rend="inline"/>
+                    <graphic n="1001" width="16.51cm" height="6.695722222222222cm" url="/tmp/tmpy40yzus5/Pictures/e7ff4757db54acea0d6acf8892016e88.png" rend="inline"/>
                 </figure>
                 <figure>
-                    <graphic n="1002" width="16.51cm" height="2.458861111111111cm" url="/tmp/tmpnn36dvwv/Pictures/495a9f440ef687d3375f6b8b4ba01996.png" rend="inline"/>
+                    <graphic n="1002" width="16.51cm" height="2.458861111111111cm" url="/tmp/tmpy40yzus5/Pictures/09b8a04c49f16ea79de50f0db38ebb9f.png" rend="inline"/>
                 </figure>
                 <head>
                     <hi style="font-size:10pt" xml:space="preserve">The catalogue entry (above) for Lot 943 of the Arenberg Auctions December 2021 sale, showing an estimated price of 1000-1500€, compared to the recorded hammer price (below) of 3500€ </hi>
@@ -108,7 +108,7 @@
                 <hi style="font-size:10pt" xml:space="preserve"> for an example of an annotated description.</hi>
             </p>
             <figure>
-                <graphic n="1003" width="16.51cm" height="5.644444444444445cm" url="/tmp/tmpnn36dvwv/Pictures/495a9f440ef687d3375f6b8b4ba01996.png" rend="inline"/>
+                <graphic n="1003" width="16.51cm" height="5.644444444444445cm" url="/tmp/tmpy40yzus5/Pictures/d58e0f244cb250937b24ccd8329bf92e.png" rend="inline"/>
                 <head>An example of a single lot description from the Rare Book Hub (above) and the same description in XML format after the relevant information has been tagged (below) </head>
             </figure>
             <p>Table 1 shows two measures of inter-annotator agreement between the two human annotators and GPT4 for this task, considering the placement of the tags at a character level. The consistently high values show that overall, the use of my written guidelines and GPT4 to curate a usable dataset is a viable method. </p>
@@ -157,7 +157,7 @@
                 <hi style="font-size:10pt" xml:space="preserve"> ).  The other is that the need to place the tags limited the amount of data that could be recorded. For example, many fragments are heavily implied to consist of a single leaf, but there is no explicit statement to that end that could be tagged.</hi>
             </p>
             <figure>
-                <graphic n="1004" width="16.51cm" height="7.657041666666666cm" url="/tmp/tmpnn36dvwv/Pictures/495a9f440ef687d3375f6b8b4ba01996.png" rend="inline"/>
+                <graphic n="1004" width="16.51cm" height="7.657041666666666cm" url="/tmp/tmpy40yzus5/Pictures/a0c6f889f67c1b102cd11e6a999eee97.png" rend="inline"/>
                 <head>Counts of characters contained within each category of tag in my annotations (left) and GPT4's annotations (right). Note that GPT4 included categories for editors and authors, despite the prompt requesting that it use only the same categories as I did</head>
             </figure>
             <p>
@@ -168,7 +168,7 @@
                 <hi style="font-size:10pt" xml:space="preserve"> for an example of this). </hi>
             </p>
             <figure>
-                <graphic n="1005" width="16.51cm" height="3.129138888888889cm" url="/tmp/tmpnn36dvwv/Pictures/495a9f440ef687d3375f6b8b4ba01996.png" rend="inline"/>
+                <graphic n="1005" width="16.51cm" height="3.129138888888889cm" url="/tmp/tmpy40yzus5/Pictures/a1d0c3eb220f7c2966cdaa547056bebe.png" rend="inline"/>
                 <head>
                     <hi style="font-size:10pt">An extract from the annotation guidelines for the leaf_material category, before (above) and after (below) prompt engineering. The addition of the last sentence helped to discourage GPT4 from defaulting to recording "paper" if the description did not specify</hi>
                 </head>
@@ -178,7 +178,7 @@
                 <hi style="font-size:10pt" xml:space="preserve"> provides an overview of the comparison between my and GPT4's annotations for the XML format, the initial run of the JSON format, and the most recent run of the JSON format after some prompt engineering. There is still clearly room for improvement, but GPT4 is proving to be an effective annotation assistant that will be invaluable as I start working with much larger amounts of data.</hi>
             </p>
             <figure>
-                <graphic n="1006" width="16.51cm" height="11.325930555555555cm" url="/tmp/tmpnn36dvwv/Pictures/495a9f440ef687d3375f6b8b4ba01996.png" rend="inline"/>
+                <graphic n="1006" width="16.51cm" height="11.325930555555555cm" url="/tmp/tmpy40yzus5/Pictures/495a9f440ef687d3375f6b8b4ba01996.png" rend="inline"/>
                 <head>The number of entries out of the collection of 100 samples for which I and GPT4 recorded the exact same information for the given category</head>
             </figure>
         </body>

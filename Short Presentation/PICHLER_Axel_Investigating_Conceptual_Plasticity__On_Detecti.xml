@@ -96,7 +96,7 @@
             <p style="text-align: left; ">With the annotated data, we let five different LLMs (GPT-4o, GPT-4.1, o3-mini, Claude Haiku, and Claude Sonnet<ref n="3" target="ftn3"/>) in five runs generate an answer for different prompts that requested them to provide a focalization label for a given paragraph. The prompts differed in the following ways: (i) a prompt with the names of the three labels without further specification of what each label means (Prompt 1), (ii) the labels plus an explanation of what we understand under each label (Prompt 2), which also served as the basis for optimization using DSPy; (iii), the same as prompt 2 with the added information that the given label definitions are re-definitions of the standard focalization interpretation (Prompt 3).
             </p>
             <figure>
-                <graphic n="1001" width="16.002cm" height="21.046722222222222cm" url="/tmp/tmp0fcj0g34/Pictures/427196812d1d4cdc07dae34b0e5b74a8.jpg" rend="inline"/>
+                <graphic n="1001" width="16.002cm" height="21.046722222222222cm" url="/tmp/tmpagkpyx_q/Pictures/a963b571d33d916010c7fcbd64b07fd9.jpg" rend="inline"/>
             </figure>
             <p>
                 <hi style="font-size:10pt">Figure 1: Evaluation results for all models, given a specific prompt. Shown are weighted F1 score, precision, recall and accuracy.</hi>
@@ -108,7 +108,7 @@
             <p style="text-align: left; ">In order to check if the differences in performance between the prompts are above chance level, we conducted McNemar’s test and report the results in table 2.<ref n="4" target="ftn4"/> We consider a p-value of 0.05 or lower as evidence for the rejection of the null hypothesis.
             </p>
             <figure>
-                <graphic n="1002" width="14.358055555555556cm" height="6.208888888888889cm" url="/tmp/tmp0fcj0g34/Pictures/427196812d1d4cdc07dae34b0e5b74a8.jpg" rend="inline"/>
+                <graphic n="1002" width="14.358055555555556cm" height="6.208888888888889cm" url="/tmp/tmpagkpyx_q/Pictures/427196812d1d4cdc07dae34b0e5b74a8.jpg" rend="inline"/>
             </figure>
             <p>
                 <hi style="font-size:10pt">Figure 2: Number of statistically significant differences in pairwise McNemar tests across models, separated by comparisons involving optimized prompts (</hi>

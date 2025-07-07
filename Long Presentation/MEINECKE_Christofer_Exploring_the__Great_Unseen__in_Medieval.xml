@@ -100,14 +100,14 @@
             <p>We combine zero-shot segmentation in a custom labeling interface where both legacy annotations can be reused, enhanced or ignored and segmentation masks can be created with few easy interactions. The masks can be labeled using the legacy vocabulary via drag-and-drop, or extended to new labels. Our system uses the SAM2 (Ravi et al. 2024) model for zero-shot segmentation, which can be used without any user input to generate a segmentation of a whole image. It can be used as a starting point by filtering automatically generated polygons that are not of interest. To ensure annotation reliability, the whole process is semi-automatic and all segmentations undergo human validation. On the one hand, the system can be thought of as the logical extension of previous labeling methods, except that precise localization for a given label is now possible, and on the other hand, it allows the extension and enriching of annotations about medieval visual content in a much more granular and inclusive way. </p>
             <p>
                 <figure>
-                    <graphic url="/tmp/tmpcw_xnkz7/Pictures/c5e7943ab5e9ca07b8541ac18f796e65.png"/>
+                    <graphic url="/tmp/tmp_e2a35fw/Pictures/909917daad771969a8312d111b380c2c.png"/>
                 </figure>
                 <hi rend="bold">Figure 1: </hi>An image of our annotation interface. At upper left, point prompts are used to define detailed segmentation masks (blue are positive, and red are negative). The segmentation is generated and labeled (e.g., rocher/rock). Existing labels can be used, as seen in the bas de page medallions (e.g., codex) and new annotations can be created (e.g., auréole/halo). The manuscript depicted here is Paris, Bibliothèque nationale de France, Latin 18, folio 53v.
             </p>
             <p>In terms of interactions, the user can draw a box prompt, defining an area of interest for the segmentation model. Additional control over the segmentation is provided by point prompts, for selecting several points of the image as positive or negative examples in order to segment one polygon of interest (Figure 1). We have found this method most useful to distinguish between parts of an image or to focus on image borders, for example, to the inside of a historiated initial and the letter itself. By setting several positive points, it is also possible to segment several objects of interest at once, although the complex overlapping content of medieval manuscripts renders this difficult. Drag-and-drop of existing annotations allows labeling a polygon, with the polygon consumed the most by the text label in case of overlap. Words can also be moved to other polygons to change the target of the annotation.</p>
             <p>
                 <figure>
-                    <graphic url="/tmp/tmpcw_xnkz7/Pictures/c5e7943ab5e9ca07b8541ac18f796e65.png"/>
+                    <graphic url="/tmp/tmp_e2a35fw/Pictures/40c651574dc0c1f7c945eb6b55de389f.png"/>
                 </figure>
             </p>
             <p>
@@ -116,7 +116,7 @@
             <p>Previous work has noted the tensions between object- and narrative- or action-centered iconographic vocabulary (Meinecke et al, 2024); here, in order to extend and enrich annotations, we focus on the non-narrative, non-action-centered labels. In doing so, we try to mitigate the difficulties that come with annotation judgments and what is actually automatically identifiable by diffusing the hierarchical distinctions that typically accompany iconographic labeling. We also flatten distinctions usually made in art historical analysis between marginalia, decorative elements and historiated initials in favor of more universal forms. One way to approach such difficulties of iconographic labeling is to think of it as a hierarchy of forms and actions. In Figure 2, objects such as a table, a bench, a sword, a crown, a human being, a crozier or a miter are forms that are easy to identify and label. However, identifying a bishop requires some interpretation, or, in other words, the combination of three of the objects previously identified to create meaning, or requiring context provided by the manuscript’s text, while the identification of the action of preaching requires additional interpretative scenes, such as the presence of a crowd, itself dependent on the presence of lower-level objects (multiple human beings identified as the clergy based on context) (Figure 3). We have not decided how to define such hierarchies at present and our goal is not to evacuate meaning from such objects; instead, we conceive of instance-level segmentation and tagging as a first step to constructing a grammar of low level objects and to facilitate computationally modeled iconography.</p>
             <p>
                 <figure>
-                    <graphic url="/tmp/tmpcw_xnkz7/Pictures/c5e7943ab5e9ca07b8541ac18f796e65.png"/>
+                    <graphic url="/tmp/tmp_e2a35fw/Pictures/c5e7943ab5e9ca07b8541ac18f796e65.png"/>
                 </figure>
             </p>
             <p>

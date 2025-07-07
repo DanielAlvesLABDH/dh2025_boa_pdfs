@@ -106,7 +106,7 @@
                 <p>The model proved to be quite successful, reaching an average accuracy between 79% and 95% (depending on training data splits). The model was then trained and evaluated 10,000 times—each time on a random 80:20 train/test set, reaching an average accuracy of about 88%. For each word, the cumulative sum of misclassifications was calculated, and the words were ranked according to the number of errors across all 10,000 iterations. In that cumulative run most words were well classified, but about 20% were often prone to misclassification (Fig. 1). </p>
                 <p>
                     <figure>
-                        <graphic url="/tmp/tmpnsqjiugy/Pictures/51f09421be9a5725ceeef005006fedd5.png"/>
+                        <graphic url="/tmp/tmp3dyf9vl0/Pictures/834968f7c84cce044f7f0a65781d4085.png"/>
                         <head>
                             <hi rend="background-color(#ffffff)">Cumulative errors after 10,000 classifier runs. Word origin is indicated by color, order is by total number of errors.</hi>
                             <hi rend="background-color(#ffffff)"> </hi>
@@ -116,7 +116,7 @@
                 <p>The analysis of SHAP (SHapley Additive exPlanations) coefficients showed that no predictor (i.e. no vector dimension) stands out with a particularly high impact on the model output (Fig. 2). Even the most important predictor has limited importance in the range [-0.08, +0.08]. This appears to indicate that the predictive power is distributed fairly evenly across the embedding space, rather than being concentrated in a few vector ‘directions’. However, the SHAP analysis shows clearly that some vectors in the latent space have strong bidirectional association with word origin, confirming that the embedding is capturing this information from context. Moreover, the same classifier trained on a dataset without these words prone to misclassification achieved an average accuracy of about 97%.</p>
                 <p>
                     <figure>
-                        <graphic url="/tmp/tmpnsqjiugy/Pictures/51f09421be9a5725ceeef005006fedd5.png"/>
+                        <graphic url="/tmp/tmp3dyf9vl0/Pictures/476ae9e6391848d8362edb5229679462.png"/>
                         <head>SHAP coefficients showing predictors’ impact on the model output.</head>
                     </figure>
                 </p>
@@ -134,7 +134,7 @@
                 <p>It is puzzling that despite the low accuracy at very low values of n, the model started to perform well trained on only the first 50 dimensions of the vectors, with an accuracy slightly above 80%. After this point the accuracy curve flattens out and grows slowly as the number of predictors, that is, the number of vector dimensions, increases (Fig. 3).</p>
                 <p>
                     <figure>
-                        <graphic url="/tmp/tmpnsqjiugy/Pictures/51f09421be9a5725ceeef005006fedd5.png"/>
+                        <graphic url="/tmp/tmp3dyf9vl0/Pictures/75676556e9cb143a9a281e0d2d72b470.png"/>
                         <head>Model accuracy when trained on subsets of the full embedding space.</head>
                     </figure>
                 </p>
@@ -144,7 +144,7 @@
                 </p>
                 <p>
                     <figure>
-                        <graphic url="/tmp/tmpnsqjiugy/Pictures/51f09421be9a5725ceeef005006fedd5.png"/>
+                        <graphic url="/tmp/tmp3dyf9vl0/Pictures/51f09421be9a5725ceeef005006fedd5.png"/>
                         <head>Model accuracy when trained on random subsets of the full embedding space.</head>
                     </figure>
                 </p>

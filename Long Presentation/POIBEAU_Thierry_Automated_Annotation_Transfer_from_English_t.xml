@@ -118,7 +118,7 @@
                     <head>Aligning Texts at the Sentence Level</head>
                     <p style="text-align: left; ">After locating the texts, alignment at the sentence level was necessary to enable a precise transfer of linguistic annotations between languages. Several algorithms and tools can be used to create a parallel corpus. Even if the most common case is one sentence in the target corresponding to a sentence inn the source language, a sentence in the source language can occasionally give rise to several sentences in the target language, and vice versa (Figure 1). </p>
                     <figure>
-                        <graphic n="1001" width="16.002cm" height="7.891638888888889cm" url="/tmp/tmpi4ktkvun/Pictures/ff6bd135e910c57053ef90d8f735dc82.jpg" rend="inline"/>
+                        <graphic n="1001" width="16.002cm" height="7.891638888888889cm" url="/tmp/tmpl2_gnfql/Pictures/7a04081ff0b6e18007d50b238855a7d5.jpg" rend="inline"/>
                     </figure>
                     <p rend="Style1" style="text-align: center; ">
                         <hi rend="bold">Figure 1:</hi> Sentence alignment can be complex (
@@ -130,7 +130,7 @@
                     </p>
                     <p style="text-align: left; ">While Hunalign performed well in most cases, it struggled with certain alignments (see figure 2), These issues highlighted the need for more advanced solutions.</p>
                     <figure>
-                        <graphic n="1002" width="15.275525cm" height="5.2034722222222225cm" url="/tmp/tmpi4ktkvun/Pictures/ff6bd135e910c57053ef90d8f735dc82.jpg" rend="inline"/>
+                        <graphic n="1002" width="15.275525cm" height="5.2034722222222225cm" url="/tmp/tmpl2_gnfql/Pictures/3e4b71ca58d7dc9ddcb5b1fc4aee28c6.jpg" rend="inline"/>
                     </figure>
                     <p style="text-align: center;">
                         <hi rend="bold" style="font-size:10pt">Figure 2.</hi>
@@ -143,7 +143,7 @@
                     <head>Incorporating Annotations in a Unique File</head>
                     <p style="text-align: left; ">Before trying to transfer annotations to French, the alignments and original English annotations were merged in the table representing the parallel corpus, such that for each English entity start and end indexes were between the start and end English phrase indexes, resulting in a table similar to the one in fig. 5. </p>
                     <figure>
-                        <graphic n="1003" width="16.002cm" height="6.658680555555556cm" url="/tmp/tmpi4ktkvun/Pictures/ff6bd135e910c57053ef90d8f735dc82.jpg" rend="inline"/>
+                        <graphic n="1003" width="16.002cm" height="6.658680555555556cm" url="/tmp/tmpl2_gnfql/Pictures/9de80f24f3c8c7133989666cdeaafe3b.jpg" rend="inline"/>
                     </figure>
                     <p style="text-align: left; ">
                         <hi rend="bold" xml:space="preserve">Figure 3: </hi>the aligned corpus with English annotations integrated
@@ -164,7 +164,7 @@
                 <head>Assessing the Method</head>
                 <p style="text-align: left; ">At this stage, we have developed a method capable of transferring annotations from English to French, resulting in high-quality corpora. This resource is invaluable for training models and has enabled the creation of a repository of comprehensively annotated novels—a resource that has not previously existed for French. An example extract from the resulting corpus is presented in Figure 4. </p>
                 <figure>
-                    <graphic n="1004" width="10.688402777777778cm" height="6.305594444444444cm" url="/tmp/tmpi4ktkvun/Pictures/ff6bd135e910c57053ef90d8f735dc82.jpg" rend="inline"/>
+                    <graphic n="1004" width="10.688402777777778cm" height="6.305594444444444cm" url="/tmp/tmpl2_gnfql/Pictures/eaa7ca8e367f3e63b2cd618c36c94939.jpg" rend="inline"/>
                 </figure>
                 <p style="text-align: left; ">
                     <hi rend="bold" xml:space="preserve">Figure 4: </hi>An example of successfully aligned text and annotations
@@ -189,7 +189,7 @@
                     </head>
                     <p style="text-align: left; ">In grey: novels for which we have a translation in French and which are copyright free and directly usable. </p>
                     <figure>
-                        <graphic n="1005" width="15.134166666666667cm" height="25.200680555555557cm" url="/tmp/tmpi4ktkvun/Pictures/ff6bd135e910c57053ef90d8f735dc82.jpg" rend="inline"/>
+                        <graphic n="1005" width="15.134166666666667cm" height="25.200680555555557cm" url="/tmp/tmpl2_gnfql/Pictures/d45c661d69f4136b3f1a814ae0cad534.jpg" rend="inline"/>
                     </figure>
                     <p style="text-align: left; ">So far, we have successfully transferred the annotations for 9 of the 17 novels: 
                         <hi rend="italic">Northanger Abbey</hi>, 
@@ -207,14 +207,14 @@
                     <head>Annex 2 : Details on the post-processing techniques applied after utilizing Hunalign and Gemini for sentence alignment</head>
                     <p style="text-align: left; ">Both Hunalign and Gemini presented distinct challenges in their text processing workflows due to their differing methods of handling text segmentation. Hunalign divides text into sequences based on line breaks, often removing \n characters and inserting random markers such as ~~~ (see fig.5). This preprocessing, while effective in most cases, can disrupt alignment when the segmentation does not respect natural sentence boundaries or introduces artificial splits.</p>
                     <figure>
-                        <graphic n="1006" width="16.002cm" height="5.649736111111111cm" url="/tmp/tmpi4ktkvun/Pictures/ff6bd135e910c57053ef90d8f735dc82.jpg" rend="inline"/>
+                        <graphic n="1006" width="16.002cm" height="5.649736111111111cm" url="/tmp/tmpl2_gnfql/Pictures/a9a5e022b79d6bbdcba8c838cf04e2e1.jpg" rend="inline"/>
                     </figure>
                     <p style="text-align: left; ">
                         <hi rend="bold" xml:space="preserve">Figure 5: </hi>Examples of Hunalign spurious insertions in the text
                     </p>
                     <p style="text-align: left; ">Gemini, on the other hand, occasionally alters sentences by adding or removing words, leading to hallucinated alignments or changes in phrasing. For example, the model might generate a response like “No direct equivalent in text” even when prompted to use the specific output “None” for non-aligned cases. These variations make it difficult to maintain the original token indexes of the source text (both English and French) and hinder token-level alignment. </p>
                     <figure>
-                        <graphic n="1007" width="16.002cm" height="2.3054027777777777cm" url="/tmp/tmpi4ktkvun/Pictures/ff6bd135e910c57053ef90d8f735dc82.jpg" rend="inline"/>
+                        <graphic n="1007" width="16.002cm" height="2.3054027777777777cm" url="/tmp/tmpl2_gnfql/Pictures/ff6bd135e910c57053ef90d8f735dc82.jpg" rend="inline"/>
                     </figure>
                     <p style="text-align: left; ">Words in red correspond to the original text, while words in green correspond to the adjusted Gemini text (note that this is an extreme example, and things remained manageable overall). </p>
                 </div>

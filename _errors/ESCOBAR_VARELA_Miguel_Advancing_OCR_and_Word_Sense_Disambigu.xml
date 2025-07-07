@@ -131,7 +131,7 @@
                 <p> A rule-based system (which would render بنتڠ as “bntng”.</p>
                 <p>A disambiguation system, which would convert forms such as “bntng” into the correct words (“bentang”, “bintang”, etc.).</p>
                 <figure>
-                    <graphic n="1001" width="15.910277777777777cm" height="3.242027777777778cm" url="/tmp/tmp5pbjjdex/Pictures/16876197a08a0d8d4829e8607fce0dd1.png" rend="inline"/>
+                    <graphic n="1001" width="15.910277777777777cm" height="3.242027777777778cm" url="/tmp/tmpee0aylfv/Pictures/16876197a08a0d8d4829e8607fce0dd1.png" rend="inline"/>
                 </figure>
                 <p>Figure 1. A diagrammatic representation of our research pipeline</p>
                 <p>Task 2.1 is relatively straightforward, so in this paper, we focus on task 1 and task 2.2, which present several challenges. While there is a wealth of resources for Arabic OCR, these systems don’t work well for Jawi. The second task, transcribing Jawi into Rumi, also presents unique problems. As noted earlier, the script typically omits short vowel markers, leading to significant ambiguity in interpretation. These characteristics, combined with the historical nature of many Jawi documents, and changes in spelling conventions, make traditional approaches for OCR and transcription inadequate for the Jawi context. For example, Arnia et al (2019) report a 94% accuracy rate in detecting individual Jawi letters using a relatively straightforward algorithm (which they call the Tree Root algorithm). Razali at al. (2024) were also reportedly able to achieve a 94.9% accuracy ret using RestNet34 on individual Jawi letters. However, the problem of these approaches is that they don’t scale well to longer texts.</p>

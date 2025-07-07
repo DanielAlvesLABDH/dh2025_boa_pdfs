@@ -117,7 +117,7 @@
                 <head>Applied Text as Graph (ATAG)</head>
                 <p>Labeled-property graphs (LPG) allow for the representation of complex relationships and multidimensional aspects. They consist of nodes, edges, and properties, providing a flexible framework for text elements and their connections (Kuczera 2022: 103). The ATAG approach expands this by segmenting text into manageable units within a graph structure. Each character is transformed into a node with a unique identifier, connected sequentially by edges that define their relationships and order (Kuczera 2024).</p>
                 <figure>
-                    <graphic n="1001" width="16.002cm" height="10.14236111111111cm" url="/tmp/tmpgvw72442/Pictures/0f393d0e0a92df92271e05a685d11e9e.png" rend="inline"/>
+                    <graphic n="1001" width="16.002cm" height="10.14236111111111cm" url="/tmp/tmpscda88lf/Pictures/5604488a29f2db1bc1759519beb66394.png" rend="inline"/>
                     <head>A LPG visualizing the text "Eugenio" with letters as orange nodes connected by edges to green annotation nodes, which are linked to the central text node R2 (Kuczera 2024: 2).</head>
                 </figure>
                 <p>Figure 1 shows a graph fragment for the text "Eugenio" with associated annotations. Orange nodes represent individual characters linked sequentially, while green nodes indicate annotations tied to the text chain, illustrating their relationships and scope. A central blue node integrates all elements, reflecting the character sequence and text properties. Each node is uniquely referenced by a UUID, enabling multiple points of connection in a networked structure.</p>
@@ -128,7 +128,7 @@
                     <hi rend="italic">The Socinian Correspondence</hi>, we introduced dynamic placement of text markers and the creation of citation links, as illustrated in Figure 2. These permanent links enable access to both the broader context and the specifically cited text passage. When the link is used, the relevant page in the edition opens and automatically navigates to the marked section. This method is also applicable to annotations and other objects within the edition, leveraging their persistent identifiers.
                 </p>
                 <figure>
-                    <graphic n="1002" width="16.002cm" height="5.834944444444444cm" url="/tmp/tmpgvw72442/Pictures/0f393d0e0a92df92271e05a685d11e9e.png" rend="inline"/>
+                    <graphic n="1002" width="16.002cm" height="5.834944444444444cm" url="/tmp/tmpscda88lf/Pictures/39922b0a93fa26e88c80702fd5f10ed1.png" rend="inline"/>
                     <head>Screenshot of the "Citation" feature in the digital edition 
                         <hi rend="italic">The Socinian Correspondence</hi>, demonstrating the creation of permanent references to specific text passages.
                     </head>
@@ -138,7 +138,7 @@
                     <hi rend="bold">Explicitly Notated Citations (ENC)</hi> method is an advancement in citation practices for digital editions (Enns/Kuczera 2025). ENC replaces traditional start- and end-index parameters with unique character identifiers from the ATAG chain. Each citation uses the UUIDs of the first and last characters in the marked section, along with a hash parameter that encodes the entire ATAG chain for integrity verification. If the UUIDs or hash do not match, it indicates a change in the referenced text, and users are notified accordingly. Figure 3 illustrates the structure of an ENC-link compared to the previously mentioned citation link.
                 </p>
                 <figure>
-                    <graphic n="1003" width="16.002cm" height="3.1996944444444444cm" url="/tmp/tmpgvw72442/Pictures/0f393d0e0a92df92271e05a685d11e9e.png" rend="inline"/>
+                    <graphic n="1003" width="16.002cm" height="3.1996944444444444cm" url="/tmp/tmpscda88lf/Pictures/0f393d0e0a92df92271e05a685d11e9e.png" rend="inline"/>
                     <head>Overview of the structure of a citation link using indices compared to an ENC-link, which utilizes unique identifiers instead of indices and includes a hash for verification.</head>
                 </figure>
                 <p>ENC resolves key issues in digital citation by creating stable, dynamic, and granular links. These links point not only to the specific ATAG chain but also to its broader textual context. To ensure persistence, the referenced text and its annotations can be exported in JSON format and versioned using Git, with commit hashes added to the citation link. This allows previous text states to be retrieved and referenced, ensuring that citations remain valid even after changes to the source text. By supporting ENC-links as endpoints for cited texts and annotations in machine-readable formats like JSON, ENC unlocks new possibilities for algorithmic editions. This capability enables automated processing, deeper analysis, and integration with computational tools, advancing the scope of digital scholarly work.</p>

@@ -78,7 +78,7 @@
             <p style="text-align: left; ">We first segmented each epitaph verse into terms by dividing each four-character phrase into two two-character terms, leveraging the verses’ strict format. Next, we evaluated the performance of four Transformer-based models pretrained on large collections of classical Chinese texts: SikuBERT (D. Wang et al. 2022), bert-ancient-chinese (P. Wang / Ren 2022), and GuwenBERT (base and large models, https://github.com/Ethan-yt/guwenbert). For evaluation, we generated embeddings—numerical representations that capture the semantic meaning of text—for each term, calculated the 30 terms with the highest cosine similarity scores, and manually assessed whether they were semantically similar in their respective contexts. We found that the GuwenBERT-base model demonstrated the best performance and subsequently used it for the remaining tasks.</p>
             <p style="text-align: left; ">In the first experiment, we generated embeddings for the full text of each epitaph verse, and compared the average cosine similarity scores among male epitaphs, among female epitaphs, and between male and female epitaphs.</p>
             <figure>
-                <graphic n="1001" width="9.728219444444445cm" height="7.797816666666667cm" url="/tmp/tmp3xumw2e4/Pictures/8debe2a70b1139b73f80c143f2f867c0.png" rend="inline"/>
+                <graphic n="1001" width="9.728219444444445cm" height="7.797816666666667cm" url="/tmp/tmpq0foqi9n/Pictures/800328d0c2cbad9f42650162b528e587.png" rend="inline"/>
             </figure>
             <p style="text-align: left; ">
                 <hi rend="bold">Figure 1.</hi> Average similarity among and between male and female epitaph verses
@@ -92,7 +92,7 @@
                 <hi rend="italic">zheren</hi> <hi rend="Chinese">哲人</hi>) in female epitaph verses. Traditionally used in Chinese classics to describe male scholars—originally referring to Confucius—the term is particularly noteworthy in the context of female epitaphs. We compared the average cosine similarity scores between the embedding of each of its three occurrences in female epitaph verses and the embeddings of all 36 occurrences in male epitaph verses.
             </p>
             <figure>
-                <graphic n="1002" width="16.002cm" height="12.481277777777779cm" url="/tmp/tmp3xumw2e4/Pictures/8debe2a70b1139b73f80c143f2f867c0.png" rend="inline"/>
+                <graphic n="1002" width="16.002cm" height="12.481277777777779cm" url="/tmp/tmpq0foqi9n/Pictures/3a8b09080b34517eefcd196e675b7127.png" rend="inline"/>
             </figure>
             <p style="text-align: left; ">
                 <hi rend="bold">Figure 2.</hi> Average similarity of “wise person” in female epitaph verses to male epitaph verses
@@ -120,7 +120,7 @@
                 <hi rend="italic">Book of Songs</hi> shows greater similarity to female epitaph verses. We further visualized the differences in average similarity between each passage of the three classics and male and female epitaph verses. Dots above the red line represent passages semantically closer to male epitaph verses, while those below represent passages resembling female epitaph verses.
             </p>
             <figure>
-                <graphic n="1003" width="16.002cm" height="11.618736111111112cm" url="/tmp/tmp3xumw2e4/Pictures/8debe2a70b1139b73f80c143f2f867c0.png" rend="inline"/>
+                <graphic n="1003" width="16.002cm" height="11.618736111111112cm" url="/tmp/tmpq0foqi9n/Pictures/8debe2a70b1139b73f80c143f2f867c0.png" rend="inline"/>
             </figure>
             <p style="text-align: left; ">
                 <hi rend="bold">Figure 3.</hi> Differences in average similarity between passages of classics and male and female epitaph verses

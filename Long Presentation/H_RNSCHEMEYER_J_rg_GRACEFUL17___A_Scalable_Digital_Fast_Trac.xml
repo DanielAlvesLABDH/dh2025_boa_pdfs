@@ -80,7 +80,7 @@
                 <p style="text-align: left; ">This paper introduces a DH workflow and technology stack tailored to efficiently collect, structure, store, search, and analyze early modern serial sources related to church administration. The Vatican Archives contain vast amounts of material, spanning meters of documents, which record in concise Latin entries who was permitted to hold specific offices across the entire global jurisdiction of the Catholic Church in the premodern era (see Image 1). These sources represent the manifestation of a centrally organized job market, offering invaluable insights for church, administrative, and social history. Until today, these sources have remained largely unexplored—not least because their sheer volume has rendered systematic study seemingly impossible. The multinational project GRACEFUL17 is attempting to unfold this pre-modern mode of governance for the first time in its entirety.<ref n="1" target="ftn1"/>
                 </p>
                 <figure>
-                    <graphic n="1001" width="15.769166666666667cm" height="11.147777777777778cm" url="/tmp/tmpvut5p3yg/Pictures/65b69330b53b77f7bb41a4c6cfa0bb70.png" rend="inline"/>
+                    <graphic n="1001" width="15.769166666666667cm" height="11.147777777777778cm" url="/tmp/tmp_hul60af/Pictures/027117e79be7f22aea775a5cbe568222.png" rend="inline"/>
                     <head>An example of a volume with records from the Vatican Archive. The so-called apostolic provisions recorded therein are the immediate testimony of a decision made by the apostolic dataria, a Roman office dedicated to the assignment and provision of lower church offices.</head>
                 </figure>
             </div>
@@ -118,7 +118,7 @@
                     </list>
                     <p style="text-align: left; ">Both pipelines incorporate active learning, continuously retraining the models based on validated ground truth to improve performance and adaptability. Historians continuously review and validate AI results—we employ AI solely to streamline and accelerate manual processes. The underlying ML frameworks are trained on expected results, replacing time-costly and complex rule-based mechanisms. From a social engineering perspective, this methodology has proven to be more pragmatic and efficient than collaboratively defining axioms, rules, and constraints explicitly.</p>
                     <figure>
-                        <graphic n="1002" width="15.910277777777777cm" height="5.785555555555556cm" url="/tmp/tmpvut5p3yg/Pictures/65b69330b53b77f7bb41a4c6cfa0bb70.png" rend="inline"/>
+                        <graphic n="1002" width="15.910277777777777cm" height="5.785555555555556cm" url="/tmp/tmp_hul60af/Pictures/42d2bece09f068fd3a445b57280d9221.png" rend="inline"/>
                         <head>An example of a NER structured transcription of a record entry. Colors match overarching entity groups, such as dates, names, places, types. Labels written in bold after the marked span capture custom relevant information contained in the tokens. Spans are linked to real-world entities and thesaurus terms in a second automated step, not shown in this rendering.</head>
                     </figure>
                 </div>
@@ -140,7 +140,7 @@
                         <hi rend="bold">Wikidata, EarthWorks, GND, Germania Sacra</hi>) to enrich the dataset with categorical, biographical, temporal or spatial metadata.<ref n="10" target="ftn10"/> This metadata, among other things, enables real-time geographic exploration through dynamic geospatial queries performed live (“search for locations within some boundary” etc).
                     </p>
                     <figure>
-                        <graphic n="1003" width="12.417777777777777cm" height="21.060833333333335cm" url="/tmp/tmpvut5p3yg/Pictures/65b69330b53b77f7bb41a4c6cfa0bb70.png" rend="inline"/>
+                        <graphic n="1003" width="12.417777777777777cm" height="21.060833333333335cm" url="/tmp/tmp_hul60af/Pictures/f10554e555be66b884eb349bd286ea9a.png" rend="inline"/>
                         <head>An example of a geospatial query made in the Sparnatural query builder GUI and shown as SPARQL code and on a map. It counts the number of benefices (i.e. positions) given to institutions located within a custom polygon spanning across the Western Europe.</head>
                     </figure>
                 </div>
@@ -161,19 +161,19 @@
                         <hi rend="bold">Pandas</hi> directly through its API, complemented a dataria Python Package using SPARQL queries to create data input and employing these analytical methods. These integrations empower non-expert historians to adjust parameters without programming.
                     </p>
                     <figure>
-                        <graphic n="1004" width="11.25361111111111cm" height="9.66611111111111cm" url="/tmp/tmpvut5p3yg/Pictures/65b69330b53b77f7bb41a4c6cfa0bb70.png" rend="inline"/>
+                        <graphic n="1004" width="11.25361111111111cm" height="9.66611111111111cm" url="/tmp/tmp_hul60af/Pictures/bccacc23dc1ecdf20b916fd611932e18.png" rend="inline"/>
                         <head>An example of Natural Breaks clustering of ‘administrative efficiency’ of various dioceses, correlating their distances to Rome with median time deltas between vacancy and decision dates of single provisions.</head>
                     </figure>
                     <figure>
-                        <graphic n="1005" width="12.3825cm" height="9.807222222222222cm" url="/tmp/tmpvut5p3yg/Pictures/65b69330b53b77f7bb41a4c6cfa0bb70.png" rend="inline"/>
+                        <graphic n="1005" width="12.3825cm" height="9.807222222222222cm" url="/tmp/tmp_hul60af/Pictures/06e43b56d0a507b64cb38094741fef2f.png" rend="inline"/>
                         <head>An example of temporal analysis of provisions, with rolling time windows and trend detection.</head>
                     </figure>
                     <figure>
-                        <graphic n="1006" width="10.900833333333333cm" height="8.960555555555555cm" url="/tmp/tmpvut5p3yg/Pictures/65b69330b53b77f7bb41a4c6cfa0bb70.png" rend="inline"/>
+                        <graphic n="1006" width="10.900833333333333cm" height="8.960555555555555cm" url="/tmp/tmp_hul60af/Pictures/ee1e92c1c3a5ed26e3810d082c7a30d6.png" rend="inline"/>
                         <head>A Pearson correlation result (r-Values) between taxation and categorical metadata for provisions of church offices</head>
                     </figure>
                     <figure>
-                        <graphic n="1007" width="13.158611111111112cm" height="9.313333333333333cm" url="/tmp/tmpvut5p3yg/Pictures/65b69330b53b77f7bb41a4c6cfa0bb70.png" rend="inline"/>
+                        <graphic n="1007" width="13.158611111111112cm" height="9.313333333333333cm" url="/tmp/tmp_hul60af/Pictures/65b69330b53b77f7bb41a4c6cfa0bb70.png" rend="inline"/>
                         <head>A set intersection UpSet plot for categorical data of relevant church offices in a diocese.</head>
                     </figure>
                 </div>

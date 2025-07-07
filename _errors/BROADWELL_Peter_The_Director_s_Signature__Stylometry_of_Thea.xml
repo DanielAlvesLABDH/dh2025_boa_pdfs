@@ -112,7 +112,7 @@
                     <ref target="http://github.com/sul-cidr/mime">github.com/sul-cidr/mime</ref>), which provides a web-based video pose timeline exploration interface and is built upon a Postgres database using the pgvector extension to enable fast similarity searching of pose and action vectors and coordinates (Figure 1).
                 </p>
                 <figure>
-                    <graphic n="1001" width="15.134166666666667cm" height="9.278055555555556cm" url="/tmp/tmp9hog0aw4/Pictures/ea782cb3885a8b8909b4985579dbbcec.png" rend="inline"/>
+                    <graphic n="1001" width="15.134166666666667cm" height="9.278055555555556cm" url="/tmp/tmpcah22qq4/Pictures/b1e123359272ccb3002dbdbcfcc063b2.png" rend="inline"/>
                 </figure>
                 <p style="text-align: left; ">
                     <hi rend="bold">Figure 1.</hi> The MIME interface’s timeline view, displaying pose and motion data for a full performance, with details and inferred 3D body armatures for a selected frame.
@@ -187,15 +187,15 @@
                     <hi rend="bold">Table 1.</hi> Accuracies of performance-to-director classifiers by method (rows) and input features (columns). 33% accuracy is expected by chance. Input features are based on mean values of component elements across performances (median values resulted in slightly lower accuracies).
                 </p>
                 <figure>
-                    <graphic n="1002" width="6.773333333333333cm" height="6.138333333333334cm" url="/tmp/tmp9hog0aw4/Pictures/ea782cb3885a8b8909b4985579dbbcec.png" rend="inline"/>
-                    <graphic n="1003" width="6.773333333333333cm" height="6.138333333333334cm" url="/tmp/tmp9hog0aw4/Pictures/ea782cb3885a8b8909b4985579dbbcec.png" rend="inline"/>
+                    <graphic n="1002" width="6.773333333333333cm" height="6.138333333333334cm" url="/tmp/tmpcah22qq4/Pictures/fa275c27b136b6fdb96caee2018c8ce7.png" rend="inline"/>
+                    <graphic n="1003" width="6.773333333333333cm" height="6.138333333333334cm" url="/tmp/tmpcah22qq4/Pictures/4b5849264d012dd764779178fafd2a46.png" rend="inline"/>
                 </figure>
                 <p style="text-align: left; ">
                     <hi rend="bold">Figure 2.</hi> Confusion matrices of directorial classifications of 30 performances using a “leave one out” train/test split across 10 runs with different random seeds.
                 </p>
                 <figure>
-                    <graphic n="1004" width="6.773333333333333cm" height="5.044722222222222cm" url="/tmp/tmp9hog0aw4/Pictures/ea782cb3885a8b8909b4985579dbbcec.png" rend="inline"/>
-                    <graphic n="1005" width="6.773333333333333cm" height="5.044722222222222cm" url="/tmp/tmp9hog0aw4/Pictures/ea782cb3885a8b8909b4985579dbbcec.png" rend="inline"/>
+                    <graphic n="1004" width="6.773333333333333cm" height="5.044722222222222cm" url="/tmp/tmpcah22qq4/Pictures/76d0f8dc0595fe048bb4b9a026c76b50.png" rend="inline"/>
+                    <graphic n="1005" width="6.773333333333333cm" height="5.044722222222222cm" url="/tmp/tmpcah22qq4/Pictures/fb63adb6a3a86ac35f7d61bb665c32be.png" rend="inline"/>
                 </figure>
                 <p style="text-align: left; ">
                     <hi rend="bold">Figure 3.</hi> Feature importances from “random forest” classifiers based on motion and distance (left) and pose embeddings (right).
@@ -207,7 +207,7 @@
                     <hi rend="italic">genre</hi> between their oeuvres, rather than specific directorial styles: the performances in our corpus directed by Jones are dance works, while the others’ tend to be from more static genres, particularly opera. Yet comparing average pose embeddings was largely successful at differentiating between all three directors (see Figure 2, right). Average action embeddings performed similarly (Table 1). This may be due to the tendency of embedding spaces to accentuate semantic differences that are “baked in” during pre-training – which also suggests why comparing the raw global 3D pose data was not as successful, as it does not incorporate such learned biases. The drop-off in accuracy of the embedding-based classifiers during 10-fold cross-validation does however imply that they struggle when the training set is reduced.
                 </p>
                 <figure>
-                    <graphic n="1006" width="8.643055555555556cm" height="8.537222222222223cm" url="/tmp/tmp9hog0aw4/Pictures/ea782cb3885a8b8909b4985579dbbcec.png" rend="inline"/>
+                    <graphic n="1006" width="8.643055555555556cm" height="8.537222222222223cm" url="/tmp/tmpcah22qq4/Pictures/ea782cb3885a8b8909b4985579dbbcec.png" rend="inline"/>
                 </figure>
                 <p style="text-align: left; ">
                     <hi rend="bold">Figure 4.</hi> UMAP projection of the POEM embeddings of a 1% sample of poses in the corpus, color-coded by director, showing the locations of the average embedding for each director and sample poses with high similarity to these embeddings.

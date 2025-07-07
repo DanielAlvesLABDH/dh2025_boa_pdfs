@@ -193,7 +193,7 @@
                     <hi rend="italic">SPARQLModelAdapter</hi> employs a query constructor mechanism to dynamically modify the incoming SPARQL query - for instance, by injecting certain clauses and subqueries to implement purely SPARQL-based pagination. The modified query is then executed against the triplestore’s endpoint, and the resulting SPARQL response is delegated to a mapping component, which is responsible for reshaping the SPARQL result row data by projecting it onto the given Pydantic model definition.
                 </p>
                 <figure>
-                    <graphic n="1001" width="16.002cm" height="8.800041666666667cm" url="/tmp/tmpu9039iw0/Pictures/fcdb2d64c0d390ed2df204b1b60a74dd.png" rend="inline"/>
+                    <graphic n="1001" width="16.002cm" height="8.800041666666667cm" url="/tmp/tmpts5uz1zl/Pictures/f85e34569a0401d7d447aedb690601e6.png" rend="inline"/>
                     <head>Figure 1: SPARQLModelAdapter Architecture: Dynamic Query Construction and Result Mapping in RDFProxy</head>
                 </figure>
                 <p>The RDFProxy shapes mapping facility handles the instantiation of Pydantic model objects by mapping the SPARQL result row bindings to corresponding Pydantic model fields. By default, SPARQL variable names are mapped directly to Pydantic field names, with aliasing being supported through explicit annotation of a field type using 
@@ -207,7 +207,7 @@
                 <p>Building on this brief technical overview, the remainder of the section showcases a practical implementation of an RDFProxy-based FastAPI route, highlighting the role of shape definitions using Pydantic models to structure and organize the retrieved SPARQL result sets.</p>
                 <p>The example query below uses a VALUES clause to statically define a solution sequence and thus retrieves a set of four result rows expressing basic author/work data from any SPARQL 1.1 endpoint:</p>
                 <figure>
-                    <graphic n="1002" width="16.002cm" height="5.279319444444444cm" url="/tmp/tmpu9039iw0/Pictures/fcdb2d64c0d390ed2df204b1b60a74dd.png" rend="inline"/>
+                    <graphic n="1002" width="16.002cm" height="5.279319444444444cm" url="/tmp/tmpts5uz1zl/Pictures/9a7d7a615e57dc5eca8655cde1dcdd53.png" rend="inline"/>
                     <head>Listing 1: Static SPARQL query retrieving basic author/work data</head>
                 </figure>
                 <p>Note how this illustrates the previously outlined problem of SPARQL result sets representing conceptually composed (or generally 
@@ -215,7 +215,7 @@
                 </p>
                 <p>Given the result rows retrieved by the example query, to represent the shape of an Author entity associated with one or more Work entities, where each Work can have multiple values for a single field, one can come up with the following Pydantic model definition:</p>
                 <figure>
-                    <graphic n="1003" width="16.002cm" height="9.039930555555555cm" url="/tmp/tmpu9039iw0/Pictures/fcdb2d64c0d390ed2df204b1b60a74dd.png" rend="inline"/>
+                    <graphic n="1003" width="16.002cm" height="9.039930555555555cm" url="/tmp/tmpts5uz1zl/Pictures/a3d6be19037c6258ff2a58027567c6f3.png" rend="inline"/>
                     <head>Listing 2: RDFProxy/Pydantic model definition for Author/Work data</head>
                 </figure>
                 <p>Here, the 
@@ -232,7 +232,7 @@
                     <hi rend="italic">rdfproxy.SPARQLModelAdapter</hi> object targeting an arbitrary SPARQL 1.1 endpoint can be instantiated and directly used in a FastAPI route.
                 </p>
                 <figure>
-                    <graphic n="1004" width="16.002cm" height="7.598833333333333cm" url="/tmp/tmpu9039iw0/Pictures/fcdb2d64c0d390ed2df204b1b60a74dd.png" rend="inline"/>
+                    <graphic n="1004" width="16.002cm" height="7.598833333333333cm" url="/tmp/tmpts5uz1zl/Pictures/ed2b5415579f0adb2544961e03702795.png" rend="inline"/>
                     <head>Listing 3: FastAPI route definition using a SPARQLModelAdapter instance</head>
                 </figure>
                 <p>FastAPI query parameters (i.e. route function parameters not corresponding to any path parameter definitions) are expected to be passed along to the 
@@ -253,7 +253,7 @@
                 <p>Currently, RDFProxy is being developed at the Austrian Centre for Digital Humanities and Cultural Heritage (ACDH-CH) and will serve as the backend solution for the Releven project at University of Vienna. (Andrews et al. 2024) The Releven project, with its intricate and highly reified CRM-based STAR model, presents an excellent and challenging initial trial for RDFProxy’s practical capabilities.</p>
                 <p>By aligning the strengths of RDF Knowledge Graphs with the accessibility of contemporary standards-based REST APIs, RDFProxy aspires to make semantic data sets more accessible, usable, and impactful in the context of Digital Humanities and beyond.</p>
                 <figure>
-                    <graphic n="1005" width="16.002cm" height="19.053527777777777cm" url="/tmp/tmpu9039iw0/Pictures/fcdb2d64c0d390ed2df204b1b60a74dd.png" rend="inline"/>
+                    <graphic n="1005" width="16.002cm" height="19.053527777777777cm" url="/tmp/tmpts5uz1zl/Pictures/fcdb2d64c0d390ed2df204b1b60a74dd.png" rend="inline"/>
                     <head>Listing 4: JSON response from the FastAPI route defined in Listing 3</head>
                 </figure>
             </div>

@@ -85,13 +85,13 @@
                 <p>The overall corpora that we aim to analyse consist of 200 texts, 100 from Spain and 100 from Latin America. The sources of these corpora are ELTeC-spa (Navarro Colorado 2021) and Conha19 (Henny-Krahmer 2021). The texts were published 1840–1920, are chosen to represent ranges of 20 years in a balanced way, and include texts of many different authors. We annotated 20 randomly chosen chapters of 20 novels manually with a category set for natural and artificial places and objects that we defined using the annotation tool CATMA (Gius et al. 2024). There are six categories (CONTAINER-ARTEFACT, CONTAINER-NATURAL, CONTAINER-REGION, CONTAINER-SETTLEMENT, OBJECT-ARTEFACT, OBJECT-NATURAL) exemplified in the sentences in Fig. 1.</p>
                 <p>
                     <figure>
-                        <graphic url="/tmp/tmphc88p3ip/Pictures/edf42f22b18d106794fa471747d80f6c.png"/>
+                        <graphic url="/tmp/tmpz1bw3g39/Pictures/82fa1314e7168535e7539d28db70e263.png"/>
                     </figure>Figure 1: Example sentences with annotation categories for natural places and artefacts.
                 </p>
                 <p>Two people annotated the 20 chapters and a gold standard annotation was derived from the two annotation layers. The resulting ground truth that forms the basis for training a corresponding model is shown in Fig. 2.</p>
                 <p>
                     <figure>
-                        <graphic url="/tmp/tmphc88p3ip/Pictures/edf42f22b18d106794fa471747d80f6c.png"/>
+                        <graphic url="/tmp/tmpz1bw3g39/Pictures/d1436555e5a7387d82bf520587b7241f.png"/>
                     </figure>Figure 2: Ground truth for natural places and artefacts in Spanish texts.
                 </p>
                 <p>A first observation that we can make from the manually annotated data is that artificial containers and objects are about two times more frequent than natural containers and objects, which is a finding that we did not expect beforehand.</p>
@@ -102,14 +102,14 @@
                 </p>
                 <p>
                     <figure>
-                        <graphic url="/tmp/tmphc88p3ip/Pictures/edf42f22b18d106794fa471747d80f6c.png"/>
+                        <graphic url="/tmp/tmpz1bw3g39/Pictures/6ca921b85af18c65d6da83eeb5045d04.png"/>
                     </figure>Figure 3: Training course of the model for recognizing natural places and artefacts.
                 </p>
                 <p>So far, we have used the model to predict the references to places and objects in 195 texts.<ref n="2" target="ftn2"/> The top five artefacts and natural containers and objects mentioned in the texts are shown in Fig. 4.
                 </p>
                 <p>
                     <figure>
-                        <graphic url="/tmp/tmphc88p3ip/Pictures/edf42f22b18d106794fa471747d80f6c.png"/>
+                        <graphic url="/tmp/tmpz1bw3g39/Pictures/edf42f22b18d106794fa471747d80f6c.png"/>
                     </figure>Figure 4: Top five artefacts and natural containers and objects.
                 </p>
                 <p>No significant differences could be found so far between the sub-corpora from Spain and Latin America. Looking at the literary movements, it can be stated that spatial references are more frequent overall in the peak phase of Realism and Naturalism (around 1880–1900) than before and after.</p>

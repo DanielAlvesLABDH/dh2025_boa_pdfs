@@ -131,20 +131,20 @@
             <p>In this study, we tested three different approaches to printshop classification, building on recent work in computational analysis of historical print (Seuret et al., 2019; Im et al., 2022). Initial experiments used a ConvNext Base architecture for full-page analysis, following successful applications of pre-trained architectures to historical font classification. This approach achieved 84% accuracy (F1=0.80) in classifying printshop origins. However, Grad-CAM (Selvaraju et al., 2020) visualizations revealed the model primarily focused on page margins rather than typographic content can unreliable feature that could be affected by scanning or preservation conditions.</p>
             <p>To address this limitation, we adopted the approach from Seuret et al., 2019 of training on random page cutouts, forcing the model to look beyond margins. A Swin S3 Base-224 model (Liu et al., 2021) achieved the highest performance (96.3% accuracy, F1=0.96), visual inspection revealed the model relied on seemingly random or uninterpretable features. This highlighted our core challenge: how to develop models that not only classify accurately but reveal meaningful visual patterns that can inform humanities research. 
                 <figure>
-                    <graphic url="/tmp/tmp6xmtgs0b/Pictures/4a6fe0bf37ca812da47547a7874b200a.png"/>
+                    <graphic url="/tmp/tmp92iqi1pq/Pictures/bfe7509873487415cbb544fe9a96d48d.png"/>
                     <head>Figure 1: Two examples of full page images that were correctly identified and their Grad-CAM rollout.</head>
                 </figure>
             </p>
             <p>
                 <figure>
-                    <graphic url="/tmp/tmp6xmtgs0b/Pictures/4a6fe0bf37ca812da47547a7874b200a.png"/>
+                    <graphic url="/tmp/tmp92iqi1pq/Pictures/1941022577b5e9ca66feb0150af03bfe.png"/>
                     <head>Figure 2: Two examples of random page cutouts that were correctly identified with their Grad-CAM rollout.</head>
                 </figure>
             </p>
             <p>Multiple Instance Learning (MIL) proved most suitable for our task, achieving 92% accuracy (F1=0.92). Originally developed for medical image analysis to help both classify and locate malignant parts of cells such as tumors in diagnostic images, MIL’s dual focus on accuracy and interpretable localization directly parallels our needs in humanities research. We adapted an attribute-driven attention-based MIL model (Cai et al. 2024) that processes each page as a “bag of instances” - acknowledging that not all parts of an image are equally informative. The model’s architecture incorporates two specialized constraints that enhance interpretability. A spatial attribute constraint enforces consistency by encouraging similar attribute scores for adjacent patches that share visual features. This helps maintain coherent attention patterns across regions with similar typographic or layout characteristics. The attribute ranking constraint ensures features receive higher scores only when they are truly distinctive of a particular printshop rather than common across all facilities. This helps the model focus on elements that meaningfully distinguish one printshop from another, rather than generic features of printed pages. Together, these constraints allow us to not only achieve accurate classification but also understand which visual elements (e.g. typographical) separate each printshop’s output.</p>
             <p>
                 <figure>
-                    <graphic url="/tmp/tmp6xmtgs0b/Pictures/4a6fe0bf37ca812da47547a7874b200a.png"/>
+                    <graphic url="/tmp/tmp92iqi1pq/Pictures/4a6fe0bf37ca812da47547a7874b200a.png"/>
                     <head>Figure 3: Multi Instance Learning pipeline.</head>
                 </figure>
             </p>

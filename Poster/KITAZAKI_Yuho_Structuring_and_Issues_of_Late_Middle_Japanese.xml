@@ -113,18 +113,18 @@
                 <hi rend="italic">Nyogetsu Juin</hi> as a model case and created the text data. It is a collection of 261 Chinese poems with Japanese commentaries and explanations. Figure 1 shows a part of this material as an example. The green frame shows the title and author information, the blue frame shows part of the Chinese poetry quotation, and the orange frame shows a commentary on the Chinese poetry quotation.
             </p>
             <figure>
-                <graphic n="1001" width="11.248569444444444cm" height="8.921783333333334cm" url="/tmp/tmpffe9cu1n/Pictures/bffcbd17f1812725c951d02a95ca197f.png" rend="inline"/>
+                <graphic n="1001" width="11.248569444444444cm" height="8.921783333333334cm" url="/tmp/tmpkwtcqwjx/Pictures/037f44a4af9e1b3fd763c98d9304b84e.png" rend="inline"/>
             </figure>
             <p style="text-align: left; ">Figure 1 Structure of 
                 <hi rend="italic">Chūka Jakuboku Shishō</hi>
             </p>
             <p style="text-align: left; ">First, we assembled multiple manuscripts and printed editions to establish a reliable main text, which was then converted into textual data. Next, we implemented XML markup, partly referring to the TEI (Text Encoding Initiative guidelines for encoding digital texts) guidelines, to distinguish between multiple text elements, such as the original Chinese text, Japanese commentaries, and metadata. We used the Oxygen XML Editor to assist with the XML markup. Figure 2 shows the XML schema and Figure 3 shows an annotation example. Furthermore, we augmented this XML data with morphological information (e.g., tokenization and part-of-speech classification) using a dictionary trained from non-Shōmono materials. Morphological information is provided as standoff annotations linked to the XML documents.</p>
             <figure>
-                <graphic n="1002" width="10.931069444444445cm" height="5.294375cm" url="/tmp/tmpffe9cu1n/Pictures/bffcbd17f1812725c951d02a95ca197f.png" rend="inline"/>
+                <graphic n="1002" width="10.931069444444445cm" height="5.294375cm" url="/tmp/tmpkwtcqwjx/Pictures/4a3a794790807cd3cec593ac50cbe6ea.png" rend="inline"/>
             </figure>
             <p style="text-align: left; ">Figure 2 XML schema for Shōmono</p>
             <figure>
-                <graphic n="1003" width="9.631375cm" height="7.735452777777778cm" url="/tmp/tmpffe9cu1n/Pictures/bffcbd17f1812725c951d02a95ca197f.png" rend="inline"/>
+                <graphic n="1003" width="9.631375cm" height="7.735452777777778cm" url="/tmp/tmpkwtcqwjx/Pictures/bffcbd17f1812725c951d02a95ca197f.png" rend="inline"/>
             </figure>
             <p style="text-align: left; ">Figure 3 Part of the corpus (XML)</p>
             <p style="text-align: left; ">One of the primary challenges in developing a corpus of Shōmono texts is addressing the complex interplay of multiple writing styles and languages within a text. Shōmono texts coexist with quotations from Chinese poetries, their vernacular readings (direct translations into written Japanese), and annotations and commentaries in spoken Late Middle Japanese. This stylistic feature complicates the application of uniform morphological analysis. To address this issue, we propose a markup system that distinguishes quoted and annotated sections. By focusing on the morphological analysis of annotations, we can preserve the structural integrity of texts while facilitating linguistic research. For annotations, we also need to mark the correspondence between the commentary and Chinese source text. Therefore, this study also addresses a methodological approach to systematically documenting text-annotation correspondences.</p>

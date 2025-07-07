@@ -146,7 +146,7 @@
                     <hi rend="italic">Pirandello Nazionale</hi> (D’Agata et al. 2022, Sichera et al. 2019)<ref n="5" target="ftn5"/>, envisages text as a complex, multidimensional object managed through an editorial process<ref n="6" target="ftn6"/>. The CHROMA model encompasses a series of activities defined through a double articulation: representation formats on one hand, and multiple tasks on the other. Specifically, the model makes available the digital surrogate of the primary source (IIIF), and represents structural and semantic phenomena using generic languages like XML/TEI and RDF or domain-specific languages (DSLs). Encoding is supported by harmonization strategies<ref n="7" target="ftn7"/>, integrating linguistic and lexicographic analyses. These data gain significance through knowledge graphs, linked to authority records via LOD. The edition is further enriched with interactive visualization tools that enhance accessibility and user engagement.
                 </p>
                 <figure>
-                    <graphic n="1001" width="6.773347222222222cm" height="6.519347222222223cm" url="/tmp/tmpwu011m0m/Pictures/1e8784ebb180248e358089a1473e3502.png" rend="inline"/>
+                    <graphic n="1001" width="6.773347222222222cm" height="6.519347222222223cm" url="/tmp/tmppevjwpwj/Pictures/2759a7c7df77607022b144f33fb20fea.png" rend="inline"/>
                     <head>Diagrammatic representation of the CHROMA model.</head>
                 </figure>
             </div>
@@ -156,16 +156,16 @@
                     <hi rend="italic">TEI</hi> (TEI Consortium 2024) and was developed based on the fundamental distinction between creative works and archival documents. Based on this differentiation, named entities were encoded for archival documents, along with technical terms or unusual words, using the open-source platform LEAF (figure 2).
                 </p>
                 <figure>
-                    <graphic n="1002" width="15.179591666666667cm" height="5.644911111111111cm" url="/tmp/tmpwu011m0m/Pictures/1e8784ebb180248e358089a1473e3502.png" rend="inline"/>
+                    <graphic n="1002" width="15.179591666666667cm" height="5.644911111111111cm" url="/tmp/tmppevjwpwj/Pictures/af89d50bd8f94a1a1381c8a32c846f30.jpg" rend="inline"/>
                     <head>LEAF interface displaying the encoding of a letter.</head>
                 </figure>
                 <p style="text-align: left; ">Texts were subsequently revised to mark their structure and add notes through a different editor: the text of the critical edition was therefore placed within the &lt;body&gt; in the &lt;text&gt; element, encoding the structure, named entities, lexicon, and notes. For creative works, the documentary dimension of the manuscripts was also represented, through various &lt;sourceDoc&gt; elements, each containing one or more &lt;surface&gt; elements. Within these, handwritten lines were marked with the &lt;line&gt; tag, while corrective phenomena were encoded with &lt;del&gt;, &lt;add&gt;, &lt;mod&gt;, &lt;delSpan&gt;. The various levels of encoding are summarized in figure 3, and an example of the encoding of a witness is provided in figure 4.</p>
                 <figure>
-                    <graphic n="1003" width="16.002cm" height="9.145763888888888cm" url="/tmp/tmpwu011m0m/Pictures/1e8784ebb180248e358089a1473e3502.png" rend="inline"/>
+                    <graphic n="1003" width="16.002cm" height="9.145763888888888cm" url="/tmp/tmppevjwpwj/Pictures/ec23752680c44a9196b2074fdbc7f445.png" rend="inline"/>
                     <head>Representation of levels in &lt;sourceDoc&gt; and &lt;text&gt;.</head>
                 </figure>
                 <figure>
-                    <graphic n="1004" width="16.002cm" height="6.628694444444444cm" url="/tmp/tmpwu011m0m/Pictures/1e8784ebb180248e358089a1473e3502.png" rend="inline"/>
+                    <graphic n="1004" width="16.002cm" height="6.628694444444444cm" url="/tmp/tmppevjwpwj/Pictures/8efac8f68b9baf563c3568693fc56a02.png" rend="inline"/>
                     <head>Encoding of surface 1r of the FE5I.41 witness (poem “Paesaggio [IV]” from “Lavorare stanca”, 1936).</head>
                 </figure>
             </div>
@@ -175,7 +175,7 @@
                     <hi rend="italic">PaveseInTesto</hi>, a digital platform developed using the open-source software TEI Publisher<ref n="8" target="ftn8"/>. TEI Publisher enables the creation of scholarly digital editions of Pavese’s works with maximum adaptability to the unique features of each textual typology, without imposing the constraints of a ‘one-size-fits-all’ framework. Specifically, for archival documents, a full-text layout has been designed, allowing access to comments and explanatory notes, chronological connections between contemporary works by the author, intertextual citations, bibliographic references, and a list of named entities (referred to as the ‘text and comment’ mode). For the edition of creative works, additional features include a viewing mode that combines facsimiles with ‘diplomatic’ transcriptions (figure 5)<ref n="9" target="ftn9"/> and a ‘collation’ mode, which allows users to juxtapose various drafts of the same textual unit with the critical edition in a customizable order.
                 </p>
                 <figure>
-                    <graphic n="1005" width="16.001997222222222cm" height="6.561022222222222cm" url="/tmp/tmpwu011m0m/Pictures/1e8784ebb180248e358089a1473e3502.png" rend="inline"/>
+                    <graphic n="1005" width="16.001997222222222cm" height="6.561022222222222cm" url="/tmp/tmppevjwpwj/Pictures/55cd81708a58f3fd94047d08713041fa.jpg" rend="inline"/>
                     <head>TEI Publisher interface for the ‘facsimile + diplomatic transcription’ viewing mode.</head>
                 </figure>
                 <p style="text-align: left; ">In regard to the 
@@ -190,7 +190,7 @@
                     <hi rend="italic">PaveseInTesto</hi>, working in synergy with it, and allowing on-demand switching between the views offered by both.
                 </p>
                 <figure>
-                    <graphic n="1006" width="16.002cm" height="8.988777777777777cm" url="/tmp/tmpwu011m0m/Pictures/1e8784ebb180248e358089a1473e3502.png" rend="inline"/>
+                    <graphic n="1006" width="16.002cm" height="8.988777777777777cm" url="/tmp/tmppevjwpwj/Pictures/1e8784ebb180248e358089a1473e3502.png" rend="inline"/>
                     <head>The visual interface of (an early prototype version of) OntoPavesePathExplorer.</head>
                 </figure>
             </div>

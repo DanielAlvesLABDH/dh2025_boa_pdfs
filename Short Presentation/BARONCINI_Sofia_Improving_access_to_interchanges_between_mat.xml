@@ -119,7 +119,7 @@
                     <hi rend="bold">Req4</hi>: relate the object to its contemporary cultural context to enhance understanding of modifications, establishing connections between cultural traits and object changes.
                 </p>
                 <figure>
-                    <graphic n="1001" width="11.694791666666667cm" height="12.078230555555555cm" url="/tmp/tmp7h6nak9h/Pictures/fbebb8455d49b7acfdcd95343d03fe89.png" rend="inline"/>
+                    <graphic n="1001" width="11.694791666666667cm" height="12.078230555555555cm" url="/tmp/tmpbs1hlfjh/Pictures/4f95048ba63cdd6ab7a4fc441502c769.png" rend="inline"/>
                     <head>Model representing the case study requirements.</head>
                 </figure>
                 <p style="text-align: left; ">Following ontology development good practices (Carriero et al. 2020), we evaluate whether existing domain-related ontologies effectively express the features outlined in our requirements (Fig. 1), considering key standards from the museum and library communities: CRM (Bekiari et al. 2024a) and FRBR through the extension LRMoo (Bekiari et al. 2024b), aligning the two models. We also consider domain-specific models, such as ICON (Baroncini 2024; Sartini et al. 2023) for subjects and cultural phenomena and Storylines (van den Heuvel/Zamborlini 2021) for object evolution over time. Classes and properties that completely or partially fulfil the requirements, presented in Figs. 2-3, are discussed below.</p>
@@ -132,7 +132,7 @@
                 <p style="text-align: left; ">FRBR describes a creative work according to four layers (i.e., Work, Expression, Manifestation, and Item), from the conceptual creation to the physical item, to represent the variations among editions in the library domain. In the last decades, several works applied the model to the arts (Bacca/Clarke 2007; Nakasone 2023). Nevertheless, the particular case of restorations changing the artwork's conceptual level was not fully formalized (Macaluso 2024).</p>
                 <p style="text-align: left; ">In our case, a physical modification (crm:E79_Part_Addition) adds new attributes to the physical object (crm: E24_Human-Made_Object, see Fig. 2), creating a new Manifestation and Expression, as the subject changes from Isis to Ceres. Nevertheless, LRMoo does not include descriptions of physical modifications influencing immaterial classes. Furthermore, the physical variation cannot be expressed by a Manifestation, which has an abstract nature, unlike the class crm:E81 Transformation. </p>
                 <figure>
-                    <graphic n="1002" width="15.92cm" height="8.1327cm" url="/tmp/tmp7h6nak9h/Pictures/fbebb8455d49b7acfdcd95343d03fe89.png" rend="inline"/>
+                    <graphic n="1002" width="15.92cm" height="8.1327cm" url="/tmp/tmpbs1hlfjh/Pictures/7f015f2173998d4d8e8144cf3c732fe3.png" rend="inline"/>
                     <head>Representation of physical modifications with CRM (Req2)</head>
                 </figure>
                 <p style="text-align: left; ">
@@ -144,7 +144,7 @@
                 </p>
                 <p style="text-align: left; ">Add a new class HistoricalFrame, subclass of crm:E92_Spacetime_Volume, that spatiotemporally encompasses cultural contexts including heterogeneous phenomena. The class icon:CulturalValue is suitable for expressing the cultural traits of a context.</p>
                 <figure>
-                    <graphic n="1003" width="15.999580555555555cm" height="13.815388888888888cm" url="/tmp/tmp7h6nak9h/Pictures/fbebb8455d49b7acfdcd95343d03fe89.png" rend="inline"/>
+                    <graphic n="1003" width="15.999580555555555cm" height="13.815388888888888cm" url="/tmp/tmpbs1hlfjh/Pictures/fbebb8455d49b7acfdcd95343d03fe89.png" rend="inline"/>
                     <head>Modeling of the Isis sculpture with existing ontologies (proposed classes and properties in orange)</head>
                 </figure>
             </div>

@@ -549,13 +549,13 @@
                 </table>
                 <p style="text-align: left; ">Table 4 shows the performance of various prompt/model combinations for the three-class task. The performance is a lot worse than for the binary task. Notably, the models answer “equal” much less often than human annotators (consensus dataset: 42% “equal”, sonnet-3.5 + Base prompt: 13% “equal”), unless prompted to consider this option more often (sonnet-3.5 + Reinforce Equal prompt: 44% “equal”), which does not, however, improve average performance. The ensemble methods perform slightly better than the base prompt on the "overall" dimension, but no better on the mean.</p>
                 <figure>
-                    <graphic n="1001" width="13.043958333333334cm" height="10.63823611111111cm" url="/tmp/tmp1jykbxyn/Pictures/28958ccca70ab3d76103fd4b9800586a.png" rend="inline"/>
+                    <graphic n="1001" width="13.043958333333334cm" height="10.63823611111111cm" url="/tmp/tmpzr56lq8r/Pictures/86df034dbe55072b7a4d5efafe791247.png" rend="inline"/>
                 </figure>
                 <p style="text-align: left; ">Figure 1: Pearson correlation of predicted similarity dimensions and overall similarity.</p>
                 <p style="text-align: left; ">We found that the improvement of Sonnet-3.5 over the 2022 results is highly correlated with the inter-annotator agreement (r=0.92). Therefore, in the following, we investigate how the behavior of the models matches human behavior.</p>
                 <p style="text-align: left; ">Figure 1 shows how strongly the model responses for each similarity dimension correlate with the responses for the overall dimension. In most cases, content correlates most strongly, followed by emotion, while style and form correlate less strongly, but still positively. The models resemble human judgement from this perspective.</p>
                 <figure>
-                    <graphic n="1002" width="11.456458333333334cm" height="11.284480555555556cm" url="/tmp/tmp1jykbxyn/Pictures/28958ccca70ab3d76103fd4b9800586a.png" rend="inline"/>
+                    <graphic n="1002" width="11.456458333333334cm" height="11.284480555555556cm" url="/tmp/tmpzr56lq8r/Pictures/28958ccca70ab3d76103fd4b9800586a.png" rend="inline"/>
                 </figure>
                 <p style="text-align: left; ">Figure 2: Balanced accuracy scores on subset of poem triples (n=35) where expert and majority annotation disagree. A1-A6: Student annotators.</p>
                 <p style="text-align: left; ">We want to investigate if the judgement of the LLMs resemble the perspective of an expert or are more similar to “crowd-wisdom”. Therefore we look at cases, combining all similarity dimensions, where the majority of annotators is in conflict with an expert reader of poetry (a professor of German-language literature). We find that the commercial models gpt-o1, gpt-4o and sonnet-3.5 are leaning towards the majority vote, while aya-expanse-32B is more in line with the expert (see Fig. 2).</p>

@@ -96,7 +96,7 @@
                 <p>In a corpus, these dependencies accumulate to a terrifying degree. The frequency of the conjunction ‘a’ alone is sufficient to distinguish iambs from trochees, even in relatively small samples (Figure 1a). The effect cascades through other levels of linguistic abstraction, influencing the frequencies of parts of speech and the general distributions of word lengths. Quite remarkably, the proportions of monosyllabic and disyllabic words can easily differentiate samples from all four major metrical forms in Czech: iambs, trochees, dactyls, and amphibrachs (Figure 1b).</p>
                 <p>
                     <figure>
-                        <graphic url="/tmp/tmp94enq1c1/Pictures/66280e330fa3d24b13afeab6a1a51832.png"/>
+                        <graphic url="/tmp/tmp9emqtrsx/Pictures/ba805e9f1615939945785a07696ef4fe.png"/>
                         <head>
                             <hi rend="bold">a. </hi>Stacked dot plot showing distribution of Czech ‘a’ across samples; 
                             <hi rend="bold">b. </hi>Scatter plot showing relationships between frequencies of monosyllabic and disyllabic words. 60 independent random samples of 100 lines for each meterwere used.
@@ -166,7 +166,7 @@
                 <p>The main result, illustrated in Figure 2, is clear: all features, even the weakest performers, reveal meter to some extent. With sufficiently large samples, many features achieve perfect or near-perfect predictions. Even in the challenging task of distinguishing between metrical forms performance remains surprisingly high. This finding confirms that the same prosodic pattern, when implemented in lines of different lengths, produces distinct morpho-syntactic affordances and linguistic profiles, since a line generally gravitates to form a complete clause, or a syntactic period.</p>
                 <p>As expected, word lengths in Czech—being the feature most closely tied to prosodic regulation—are the strongest predictor of foot type, demonstrating high efficiency even in small samples (~0.95 mean accuracy for N = 100). Generally, our setups exceed random baselines even with the smallest, highly restrictive values of N, corresponding to sample sizes as small as single lyrical poems (Shelya / Sobchuk 2017).
                     <figure>
-                        <graphic url="/tmp/tmp94enq1c1/Pictures/66280e330fa3d24b13afeab6a1a51832.png"/>
+                        <graphic url="/tmp/tmp9emqtrsx/Pictures/66280e330fa3d24b13afeab6a1a51832.png"/>
                         <head>Results of the RF classification. Horizontal dotted lines correspond to random baselines for each language.</head>
                     </figure>
                 </p>
