@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="KAV_I__Alenka_Debating_Regional_Challenges__Insights_into_th">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Debating Regional Challenges: Insights into the Carniolan Provincial Assembly in the Austro-Hungarian Empire</title>
+                <author>
+                    <persName>
+                        <surname>Kavčič</surname>
+                        <forename>Alenka</forename>
+                    </persName>
+                    <affiliation>University of Ljubljana, Slovenia</affiliation>
+                    <email>alenka.kavcic@fri.uni-lj.si</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Marolt</surname>
+                        <forename>Matija</forename>
+                    </persName>
+                    <affiliation>University of Ljubljana, Slovenia</affiliation>
+                    <email>matija.marolt@fri.uni-lj.si</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Fišer</surname>
+                        <forename>Darja</forename>
+                    </persName>
+                    <affiliation>Institute of Contemporary History, Slovenia</affiliation>
+                    <email>darja.fiser@inz.si</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2025-04-30T13:00:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Alliance of Digital Humanities Organizations</publisher>
+                <authority>Stichting ADHO Foundation</authority>
+                <address>
+                    <addrLine>Oudezijds Achterburgwal 185, 1012DK</addrLine>
+                    <addrLine>Amsterdam</addrLine>
+                    <addrLine>Netherlands</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident="DHCONVALIDATOR" version="1.22">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme="ConfTool" n="category">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="subcategory">
+                    <term>Short Presentation</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="keywords">
+                    <term>parliamentary corpus</term>
+                    <term>topic analysis</term>
+                    <term>dynamic topic modeling</term>
+                    <term>Carniolan Provincial Assembly</term>
+                </keywords>
+                <keywords scheme="ConfTool" n="topics">
+                    <term>artificial intelligence and machine learning</term>
+                    <term>digital libraries creation</term>
+                    <term>management</term>
+                    <term>and analysis</term>
+                    <term>natural language processing</term>
+                    <term>text mining and analysis</term>
+                    <term>Computer science</term>
+                    <term>History</term>
+                    <term>Sociology</term>
+                    <term>I plan to attend the conference on-site in Lisbon</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p style="text-align: left; ">Abstract: We use BERTopic to analyse themes in the bilingual speeches of the Carniolan Provincial Assembly. We examine common topics discussed in the sessions and how they change over time to gain insight into the key societal issues at the regional level in the Austro-Hungarian Empire at the turn of the 19th century.</p>
+            <div type="div1" rend="DH-Heading1">
+                <head>Introduction</head>
+                <p style="text-align: left; ">Parliamentary debates are an invaluable resource for research across disciplines, offering insight into the key societal issues and distribution of social power of their era. In Digital Humanities research, they have been utilised with dynamic topic modelling tools to analyse the history of infrastructure in the British empire (Guldi 2019), track changes in discussions and legitimization of energy policy over time in the German parliament (Müller-Hansen et al. 2021) and study the impact of the COVID-19 pandemic on the agenda setting in the Slovenian parliament (Pretnar Žagar et al. 2022).</p>
+                <p style="text-align: left; ">This abstract presents an analysis of the topics that were discussed in the Carniolan Provincial Assembly during its 11 terms from 1861 to 1913. The Carniolan Provincial Assembly was the highest legislative body in the Duchy of Carniola, a Habsburg territory later part of the Austro-Hungarian Empire. Established in 1861, it was active for twelve legislative terms until the empire’s collapse after World War I. The assembly's legislative powers were limited to administrative provincial matters, including agriculture, public buildings, charitable institutions, the provincial budget, education, municipal administration, ecclesiastical issues, and local military affairs (Cvirn 2006).</p>
+                <p style="text-align: left; ">The assembly’s bilingual (Slovenian and German) meeting records are available in the Parla‑CLARIN TEI format (Erjavec / Pančur 2022) as a historical parliamentary corpus Kranjska 1.0 (Kavčič et al. 2023). The corpus covers 694 sessions of the Carniolan Provincial Assembly, 15353 pages in total, and contains about 10 million words. The methodology underlying the compilation of the source corpus, including the selection criteria and the reasons for the authors’ decisions, is explained in (Marolt et al. 2023). To date, the corpus has not yet been the subject of published analytical studies.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Process and results</head>
+                <p style="text-align: left; ">To extract the topics covered by the assembly’s meetings, we first used the probabilistic topic model LDA (Blei et al. 2003) in both Gensim<ref n="1" target="ftn1"/> and Mallet<ref n="2" target="ftn2"/> implementations. We tried various settings (e.g. generating the documents at the level of utterances, sentences or lemmas; generating separate documents for Slovenian and German texts or for both languages together; removing stop-words; restricting to lemmas of nouns and verbs; removing hapax legomena) and various number of topics (i.e. 3, 5, 10, 50), but the results were not satisfying. Several terms were found in almost all topics and the topics did not show any coherence. Mallet gave somehow better results, but still not satisfactory. LDA makes several unrealistic assumptions: it treats the document as a “bag of words”, assuming that the order of the words in the document does not matter and that the order of documents does not matter neither (Blei 2012). Besides, the number of topics is assumed to be known in advance and fixed.
+                </p>
+                <p style="text-align: left; ">Alternatively, we used the embedding approach with BERTopic (Grootendorst 2022; Kumar 2024), a transformer-based architecture to generate embeddings for words. We tried three options for constructing the documents: sentences, utterances (i.e. one or more sentences of one speech) or whole meeting proceedings. We got good results already with a basic use of BERTopic. However, we also experimented with different input documents (sentence vs. utterance vs. session as a document; using only lemmas to construct a sentence; limiting to lemmas of nouns and verbs; removing stop-words), use of different embedding models (we experimented with different multilingual models, but got similar results; thus we decided to use the default transformer model 
+                    <hi rend="italic">paraphrase-multilingual-MiniLM-L12-v2</hi>), use of different seeds when reducing the dimensionality with UMAP<ref n="3" target="ftn3"/> (the resulting topics are similar, only their order/ranking is often changed), and fine-tuning of the topic representations using only unigrams and removing stop-words as well as rare words (that appear in only one document).
+                </p>
+                <p style="text-align: left; ">Results show that BERTopic tends to give better results when documents are individual utterances that contain full sentences (without pre-processing) instead of word lemmas, as the underlying transformer-based embedding models are designed to capture the semantic meaning of entire sentences, rather than individual words or isolated tokens. This way we managed to extract meaningful and coherent topics. However, to avoid word variations, the resulting lists of topic keywords was further filtered to merge variations of the same root word. Post-processing applied lemmatization to topic keywords and removed stop-words, thus improving clarity and reducing redundancy in the output. This approach leverages the strengths of contextual embeddings while keeping the final topics concise and interpretable.</p>
+                <p style="text-align: left; ">The results of the process are summarized in Table 1. Ten relevant topics are presented, omitting the topics related to the functioning of the assembly (e.g. financial reports, resolutions, voting, protocols, administrative procedures, etc.).</p>
+                <table rend="rules">
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">No.</cell>
+                        <cell style="text-align: center;" rend="DH-Default">
+                            <hi style="font-size:10pt">Topic name</hi>
+                        </cell>
+                        <cell style="text-align: center;" rend="DH-Default">Keywords (original)</cell>
+                        <cell style="text-align: center;" rend="DH-Default">Keywords (English translation)</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">1</cell>
+                        <cell style="text-align: left;" rend="DH-Default">schools</cell>
+                        <cell style="text-align: left;" rend="DH-Default">
+                            <hi style="font-size:10pt">šola, schule, učitelj, lehrer, šolski</hi>
+                        </cell>
+                        <cell style="text-align: left;" rend="DH-Default">school, teacher, of school</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">2</cell>
+                        <cell style="text-align: left;" rend="DH-Default">roads</cell>
+                        <cell style="text-align: left;" rend="DH-Default">
+                            <hi style="font-size:10pt">cesta, straße, okrajen</hi>
+                        </cell>
+                        <cell style="text-align: left;" rend="DH-Default">road, district-related</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">3</cell>
+                        <cell style="text-align: left;" rend="DH-Default">water</cell>
+                        <cell style="text-align: left;" rend="DH-Default">voda, vodovod, vasi, načrt, naprava</cell>
+                        <cell style="text-align: left;" rend="DH-Default">water, water supply, villages, plan, facility</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">4</cell>
+                        <cell style="text-align: left;" rend="DH-Default">railways</cell>
+                        <cell style="text-align: left;" rend="DH-Default">
+                            <hi style="font-size:10pt">železnica, promet, proga, bahn</hi>
+                        </cell>
+                        <cell style="text-align: left;" rend="DH-Default">railroad, transport, rail line, railway</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">5</cell>
+                        <cell style="text-align: left;" rend="DH-Default">hospitals</cell>
+                        <cell style="text-align: left;" rend="DH-Default">bolnica, zdravnik, bolnik</cell>
+                        <cell style="text-align: left;" rend="DH-Default">hospital, doctor, patient</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">6</cell>
+                        <cell style="text-align: left;" rend="DH-Default">alms</cell>
+                        <cell style="text-align: left;" rend="DH-Default">
+                            <hi style="font-size:10pt">miloščina, gnadengabe, leto, pokojnina, udova, witwe</hi>
+                        </cell>
+                        <cell style="text-align: left;" rend="DH-Default">alms, year, pension, widow</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">7</cell>
+                        <cell style="text-align: left;" rend="DH-Default">veterinary</cell>
+                        <cell style="text-align: left;" rend="DH-Default">živinozdravnik, živina, bik, živinoreja</cell>
+                        <cell style="text-align: left;" rend="DH-Default">veterinarian, livestock, bull, livestock farming</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">8</cell>
+                        <cell style="text-align: left;" rend="DH-Default">wine</cell>
+                        <cell style="text-align: left;" rend="DH-Default">
+                            <hi style="font-size:10pt">vinograd, weingärten, vinogradnik, trta, vino, uš</hi>
+                        </cell>
+                        <cell style="text-align: left;" rend="DH-Default">vineyard, vintner, vine, wine, pest</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">9</cell>
+                        <cell style="text-align: left;" rend="DH-Default">farmers</cell>
+                        <cell style="text-align: left;" rend="DH-Default">kmet, družba, kmetijstvo, živinoreja, živina, zadruga</cell>
+                        <cell style="text-align: left;" rend="DH-Default">farmer, society, agriculture, livestock farming, livestock, cooperative</cell>
+                    </row>
+                    <row>
+                        <cell style="text-align: left;" rend="DH-Default">10</cell>
+                        <cell style="text-align: left;" rend="DH-Default">bridges</cell>
+                        <cell style="text-align: left;" rend="DH-Default">
+                            <hi style="font-size:10pt">most, zgradba, sava, promet, brod, mostarina, mostnina, prošnja</hi>
+                        </cell>
+                        <cell style="text-align: left;" rend="DH-Default">bridge, structure, Sava River, transport, ferry, bridge toll, petition</cell>
+                    </row>
+                </table>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">Table 1. Keywords for 10 relevant topics. The results were obtained using BERTopic with default multilingual transformer model. The documents were utterances of speakers (one or more full sentences of one speech). The resulting keywords were converted to lowercase and filtered by lemma to remove variations of the same root word.</hi>
+                </p>
+                <p style="text-align: left; ">The topics associated with the functioning of the assembly predominantly feature keywords in both Slovenian and German, with the latter being more prevalent. Conversely, keywords related to issues concerning the local population—such as water, hospitals, veterinary, farmers, and bridges—are primarily in Slovenian. This suggests that Slovenian members of the assembly demonstrated a stronger focus on addressing the needs and interests of local citizens in the Carniola region, as evidenced by the greater frequency of speeches on these topics.</p>
+                <p style="text-align: left; ">Although language played a central role in Slovenian nationalism and was frequently discussed in parliamentary debates, this importance is not reflected in the topics identified by the model. The topic of language and nationalism—characterised by the key terms 
+                    <hi rend="italic">Slovene (slovenski)</hi>, 
+                    <hi rend="italic">nation (narod)</hi>, and 
+                    <hi rend="italic">language (jezik)</hi>—appears in less than 0.2% of all speeches and ranks only 50th among the most frequent topics. This is surprising given the widely recognised role of the Slovenian language in the overall struggle for cultural equality and recognition within the Austro-Hungarian Empire, where it served as a cornerstone of Slovenian national identity and consciousness (Mikolič 2000). A likely explanation lies in the practical orientation of Slovenian national politics at the time, which focussed primarily on concrete demands, such as the right to use Slovenian in schools and public offices (Zwitter 1967). The subtle, fragmented and pragmatic way in which language issues were expressed probably reduced their visibility as a distinct and coherent topic. These discussions may have been spread across different debates and expressed in different linguistic forms, making it more difficult for the model to identify them as a coherent, dense cluster. Instead, the language-related content may have been absorbed into more general topics such as education or administration. However, further research is needed to clarify this pattern.
+                </p>
+                <p style="text-align: left; ">Changes over time reveal that topics related to agriculture and livestock farming are present throughout the entire period but are not highly emphasized, whereas education is much more prominent across the same timeframe. Roads were a frequent topic of discussion, especially after 1885, a period that also saw a marked increase in debates about railways and hospitals.</p>
+                <figure>
+                    <graphic n="1001" width="16.002cm" height="5.263444444444445cm" url="/tmp/tmplbsyrpk1/Pictures/ece87e24002ea0d44040e74551c97450.png" rend="inline"/>
+                </figure>
+                <p style="text-align: left; ">
+                    <hi style="font-size:10pt">Figure 1. Ten relevant topics (from Table 1) over time period 1861–1913.</hi>
+                </p>
+                <p style="text-align: left; ">If we, as an example, examine the topic of water and its representation over the years in greater detail, we observe that until the late 1880s, it is less prominent and primarily focuses on flooding and the damage it caused, as well as on fishing, water scarcity, and dams. After 1890, however, the topic of water becomes more frequent and shifts its focus to water supply systems. This coincides with the accelerated construction of water supply systems across the Carniola region.</p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Conclusion</head>
+                <p style="text-align: left; ">In this study, we have analysed the topics in the speeches of the Carniolan Provincial Assembly, compiled in the Kranjska corpus. The programming scripts that support our analysis are publicly available in the GitHub<ref n="4" target="ftn4"/> repository. We find that in the first 25 years, education was the dominant topic. After that, the topics were more mixed, with infrastructural issues being the most prevalent.
+                </p>
+            </div>
+            <div type="div1" rend="DH-Heading1">
+                <head>Acknowledgements</head>
+                <p style="text-align: left; ">The work was supported by the Slovenian Research Agency research programme P6-0436: Digital Humanities: resources, tools and methods (2022–2027).</p>
+            </div>
+        </body>
+        <back>
+<div type="notes">
+<note rend="footnote text" xml:id="ftn1" n="1">
+                        
+                            <hi style="font-size:10pt">https://radimrehurek.com/gensim/</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn2" n="2">
+                        
+                            <hi style="font-size:10pt">https://mimno.github.io/Mallet/</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn3" n="3">
+                        
+                            <hi style="font-size:10pt">https://umap-learn.readthedocs.io/en/latest</hi>
+                        
+                    </note>
+<note rend="footnote text" xml:id="ftn4" n="4">
+                        
+                            <hi style="font-size:10pt">https://github.com/UL-FRI-LGM/Kranjska-Topics</hi>
+                        
+                    </note></div>
+            <div type="bibliogr">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Blei, David M.</hi> (2012): “Probabilistic Topic Models”, in: 
+                        <hi rend="italic">Communications of the ACM</hi> 55, 4: 77–84.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Blei, David M. / Ng, Andrew Y. / Jordan, Michael I.</hi> (2003): “Latent Dirichlet Allocation”, in: 
+                        <hi rend="italic">Journal of Machine Learning Research</hi> 3, 4–5: 993–1022. DOI:10.1162/jmlr.2003.3.4-5.993.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Cvirn, Janez</hi> (2006): 
+                        <hi rend="italic">Razvoj ustavnosti in parlamentarizma v Habsburški monarhiji: Dunajski državni zbor in Slovenci (1848–1918)</hi>. Ljubljana: Filozofska fakulteta, Oddelek za zgodovino.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Erjavec, Tomaž / Pančur, Andrej</hi> (2022): “The Parla-CLARIN Recommendations for Encoding Corpora of Parliamentary Proceedings”, in: 
+                        <hi rend="italic">Journal of the Text Encoding Initiative</hi> 14. DOI:10.4000/jtei.4133.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Grootendorst, Maarten</hi> (2022): “BERTopic: Neural topic modeling with a class-based TF-IDF procedure”, in: 
+                        <hi rend="italic">arXiv</hi>:2203.05794v1. DOI:10.48550/arXiv.2203.05794.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Guldi, Jo</hi> (2019): “Parliament's Debates about Infrastructure: An Exercise in Using Dynamic Topic Models to Synthesize Historical Change”, in: 
+                        <hi rend="italic">Technology and Culture</hi> 60, 1: 1–33. DOI:10.1353/tech.2019.0000.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kavčič, Alenka / Mundjar, Aleksander / Marolt, Matija</hi> (2023): “Carniolan Provincial Assembly corpus Kranjska 1.0”, Slovenian language resource repository CLARIN.SI, ISSN 2820-4042 &lt;http://hdl.handle.net/11356/1824&gt; [09.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Kumar, Dhanush</hi> (2024): “Topic Modelling with BERTopic” &lt;https://medium.com/@danushidk507/topic-modelling-with-bertopic-249095144555&gt; [09.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Marolt, Matija / Gašparič, Jure / Mundjar, Aleksander / Kavčič, Alenka / Fišer, Darja / Pančur, Andrej</hi> (2023): “Turning the Carniolan regional assembly proceedings into an enriched historical corpus”, in: 
+                        <hi rend="italic">Digital Humanities 2023. Collaboration as Opportunity (DH2023)</hi>, Graz, Austria. DOI: 10.5281/zenodo.8108048.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Mikolič, Vesna G.</hi> (2000): “Povezanost narodne in jezikovne zavesti”, in: 
+                        <hi rend="italic">Jezik in slovstvo</hi> 45, 5: 173–185 &lt;http://www.dlib.si/details/URN:NBN:SI:doc-5BD79SLS&gt; [28.04.2025].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Müller-Hansen, Finn / Callaghan, Max W. / Lee, Yuan Ting / Leipprand, Anna / Flachsland, Christian / Minx, Jan C.</hi> (2021): “Who cares about coal? Analyzing 70 years of German parliamentary debates on coal with dynamic topic modeling”, in: 
+                        <hi rend="italic">Energy Research &amp; Social Science</hi> 72, 101869. DOI: 10.1016/j.erss.2020.101869.
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Pretnar Žagar, Ajda / Pahor de Maiti, Kristina / Fišer, Darja</hi> (2022): 
+                        <hi rend="italic">What's on the agenda? Topic modelling parliamentary debates before and during the COVID-19 pandemic</hi>. Institute of Contemporary History, Ljubljana. &lt;https://sidih.github.io/agenda/index.html&gt; [09.12.2024].
+                    </bibl>
+                    <bibl style="text-align: left; ">
+                        <hi rend="bold">Zwitter, Fran</hi> (1967): “Slovenci in Habsburška monarhija”, in: 
+                        <hi rend="italic">Zgodovinski časopis</hi> 21: 49–67. &lt;https://hdl.handle.net/11686/file73&gt; [28.04.2025].
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>
